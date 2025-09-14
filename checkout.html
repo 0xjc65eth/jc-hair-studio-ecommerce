@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - JC Hair Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .step-indicator {
+            transition: all 0.3s ease;
+        }
+        .step-indicator.active {
+            background-color: #ec4899;
+            color: white;
+        }
+        .step-indicator.completed {
+            background-color: #10b981;
+            color: white;
+        }
+        .payment-method {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .payment-method.selected {
+            border-color: #ec4899;
+            background-color: #fce7f3;
+        }
+        .loading-spinner {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-pink-600">JC Hair Studio</div>
+                <div class="flex items-center space-x-4">
+                    <a href="produtos.html" class="text-gray-700 hover:text-pink-600">
+                        <i class="fas fa-arrow-left mr-2"></i>Voltar às Compras
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Progress Steps -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex justify-center items-center space-x-4 md:space-x-8">
+            <div class="flex items-center">
+                <div class="step-indicator completed w-10 h-10 rounded-full flex items-center justify-center font-bold">
+                    <i class="fas fa-check"></i>
+                </div>
+                <span class="ml-2 text-sm md:text-base">Carrinho</span>
+            </div>
+            <div class="w-8 md:w-16 h-0.5 bg-gray-300"></div>
+            <div class="flex items-center">
+                <div id="step2" class="step-indicator active w-10 h-10 rounded-full flex items-center justify-center font-bold">
+                    2
+                </div>
+                <span class="ml-2 text-sm md:text-base">Dados</span>
+            </div>
+            <div class="w-8 md:w-16 h-0.5 bg-gray-300"></div>
+            <div class="flex items-center">
+                <div id="step3" class="step-indicator w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center font-bold">
+                    3
+                </div>
+                <span class="ml-2 text-sm md:text-base">Pagamento</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 pb-12">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Checkout Form -->
+            <div class="md:col-span-2">
+                <!-- Personal Data Section -->
+                <div id="personalDataSection" class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-xl font-bold mb-4">Dados Pessoais</h2>
+                    <form id="personalForm">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nome Completo *</label>
+                                <input type="text" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">CPF *</label>
+                                <input type="text" required placeholder="000.000.000-00" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">E-mail *</label>
+                                <input type="email" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Telefone *</label>
+                                <input type="tel" required placeholder="(11) 99999-9999" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-lg font-semibold mt-6 mb-3">Endereço de Entrega</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">CEP *</label>
+                                <input type="text" required placeholder="00000-000" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Rua *</label>
+                                <input type="text" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Número *</label>
+                                <input type="text" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Complemento</label>
+                                <input type="text" placeholder="Apto, Bloco, etc" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Bairro *</label>
+                                <input type="text" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Cidade *</label>
+                                <input type="text" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Estado *</label>
+                                <select required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                                    <option value="">Selecione</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="ES">Espírito Santo</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="mt-6 w-full bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition">
+                            Continuar para Pagamento
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Payment Section -->
+                <div id="paymentSection" class="bg-white rounded-lg shadow-md p-6 hidden">
+                    <h2 class="text-xl font-bold mb-4">Forma de Pagamento</h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Credit Card -->
+                        <div class="payment-method border-2 rounded-lg p-4" data-method="credit">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <i class="fas fa-credit-card text-2xl text-pink-600 mr-3"></i>
+                                    <div>
+                                        <h3 class="font-semibold">Cartão de Crédito</h3>
+                                        <p class="text-sm text-gray-600">Parcelamento em até 12x</p>
+                                    </div>
+                                </div>
+                                <input type="radio" name="payment" value="credit" class="w-4 h-4">
+                            </div>
+                            
+                            <div id="creditCardForm" class="mt-4 hidden">
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div class="md:col-span-2">
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Número do Cartão</label>
+                                        <input type="text" placeholder="0000 0000 0000 0000" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Nome no Cartão</label>
+                                        <input type="text" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <div class="flex-1">
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">Validade</label>
+                                            <input type="text" placeholder="MM/AA" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                                        </div>
+                                        <div class="flex-1">
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">CVV</label>
+                                            <input type="text" placeholder="000" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                                        </div>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">Parcelas</label>
+                                        <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                                            <option>1x de R$ 280,50 sem juros</option>
+                                            <option>2x de R$ 140,25 sem juros</option>
+                                            <option>3x de R$ 93,50 sem juros</option>
+                                            <option>4x de R$ 70,13 sem juros</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PIX -->
+                        <div class="payment-method border-2 rounded-lg p-4" data-method="pix">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <i class="fas fa-qrcode text-2xl text-pink-600 mr-3"></i>
+                                    <div>
+                                        <h3 class="font-semibold">PIX</h3>
+                                        <p class="text-sm text-gray-600">Pagamento instantâneo com 5% de desconto</p>
+                                    </div>
+                                </div>
+                                <input type="radio" name="payment" value="pix" class="w-4 h-4">
+                            </div>
+                        </div>
+
+                        <!-- Boleto -->
+                        <div class="payment-method border-2 rounded-lg p-4" data-method="boleto">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <i class="fas fa-barcode text-2xl text-pink-600 mr-3"></i>
+                                    <div>
+                                        <h3 class="font-semibold">Boleto Bancário</h3>
+                                        <p class="text-sm text-gray-600">Vencimento em 3 dias úteis</p>
+                                    </div>
+                                </div>
+                                <input type="radio" name="payment" value="boleto" class="w-4 h-4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="finishOrder" class="mt-6 w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">
+                        Finalizar Pedido
+                    </button>
+                </div>
+
+                <!-- Success Message -->
+                <div id="successSection" class="bg-white rounded-lg shadow-md p-8 text-center hidden">
+                    <div class="text-green-500 text-6xl mb-4">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2">Pedido Realizado com Sucesso!</h2>
+                    <p class="text-gray-600 mb-4">Número do pedido: #2024001</p>
+                    <p class="text-gray-600 mb-6">Você receberá um e-mail com os detalhes do seu pedido.</p>
+                    <div class="space-y-2">
+                        <a href="produtos.html" class="block bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition">
+                            Continuar Comprando
+                        </a>
+                        <button class="block w-full bg-gray-200 text-gray-700 py-3 rounded-lg hover:bg-gray-300 transition">
+                            Ver Meus Pedidos
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="md:col-span-1">
+                <div class="bg-white rounded-lg shadow-md p-6 sticky top-4">
+                    <h2 class="text-xl font-bold mb-4">Resumo do Pedido</h2>
+                    
+                    <div id="orderItems" class="space-y-3 mb-4 max-h-64 overflow-y-auto">
+                        <!-- Items will be loaded here -->
+                    </div>
+                    
+                    <div class="border-t pt-4 space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">R$ 0,00</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span>Frete:</span>
+                            <span id="shipping">R$ 15,00</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-green-600">
+                            <span>Desconto:</span>
+                            <span id="discount">- R$ 0,00</span>
+                        </div>
+                        <div class="border-t pt-2 flex justify-between font-bold text-lg">
+                            <span>Total:</span>
+                            <span id="total" class="text-pink-600">R$ 0,00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Cupom de Desconto</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="couponInput" placeholder="Digite o código" 
+                                   class="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:border-pink-600">
+                            <button id="applyCoupon" class="px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition">
+                                Aplicar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample cart data (would come from localStorage or session)
+        let cartItems = [
+            { id: 1, name: "Shampoo Reconstrutor", price: 45.90, quantity: 2 },
+            { id: 2, name: "Máscara Capilar Nutritiva", price: 89.90, quantity: 1 },
+            { id: 3, name: "Óleo Reparador", price: 78.90, quantity: 1 }
+        ];
+
+        let currentStep = 2;
+        let selectedPaymentMethod = null;
+        let discountApplied = 0;
+
+        // Initialize
+        function init() {
+            loadOrderSummary();
+            setupEventListeners();
+        }
+
+        // Load order summary
+        function loadOrderSummary() {
+            const orderItemsDiv = document.getElementById('orderItems');
+            orderItemsDiv.innerHTML = cartItems.map(item => `
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-sm font-medium">${item.name}</p>
+                        <p class="text-xs text-gray-500">Qtd: ${item.quantity}</p>
+                    </div>
+                    <span class="text-sm font-semibold">R$ ${(item.price * item.quantity).toFixed(2)}</span>
+                </div>
+            `).join('');
+            
+            calculateTotal();
+        }
+
+        // Calculate total
+        function calculateTotal() {
+            const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const shipping = 15.00;
+            const discount = discountApplied;
+            const total = subtotal + shipping - discount;
+            
+            document.getElementById('subtotal').textContent = `R$ ${subtotal.toFixed(2)}`;
+            document.getElementById('shipping').textContent = `R$ ${shipping.toFixed(2)}`;
+            document.getElementById('discount').textContent = `- R$ ${discount.toFixed(2)}`;
+            document.getElementById('total').textContent = `R$ ${total.toFixed(2)}`;
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Personal form submission
+            document.getElementById('personalForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                moveToPayment();
+            });
+
+            // Payment method selection
+            document.querySelectorAll('.payment-method').forEach(method => {
+                method.addEventListener('click', () => selectPaymentMethod(method));
+            });
+
+            // Finish order
+            document.getElementById('finishOrder').addEventListener('click', finishOrder);
+
+            // Apply coupon
+            document.getElementById('applyCoupon').addEventListener('click', applyCoupon);
+        }
+
+        // Move to payment step
+        function moveToPayment() {
+            document.getElementById('personalDataSection').classList.add('hidden');
+            document.getElementById('paymentSection').classList.remove('hidden');
+            
+            // Update steps
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step2').classList.add('completed');
+            document.getElementById('step2').innerHTML = '<i class="fas fa-check"></i>';
+            document.getElementById('step3').classList.add('active');
+            document.getElementById('step3').classList.remove('bg-gray-300');
+            
+            currentStep = 3;
+            window.scrollTo(0, 0);
+        }
+
+        // Select payment method
+        function selectPaymentMethod(method) {
+            // Remove previous selection
+            document.querySelectorAll('.payment-method').forEach(m => {
+                m.classList.remove('selected');
+            });
+            
+            // Add selection to clicked method
+            method.classList.add('selected');
+            method.querySelector('input[type="radio"]').checked = true;
+            selectedPaymentMethod = method.dataset.method;
+            
+            // Show credit card form if needed
+            document.getElementById('creditCardForm').classList.toggle('hidden', selectedPaymentMethod !== 'credit');
+            
+            // Apply PIX discount
+            if (selectedPaymentMethod === 'pix') {
+                discountApplied = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0) * 0.05;
+            } else {
+                discountApplied = 0;
+            }
+            calculateTotal();
+        }
+
+        // Apply coupon
+        function applyCoupon() {
+            const couponCode = document.getElementById('couponInput').value.toUpperCase();
+            
+            if (couponCode === 'PRIMEIRACOMPRA') {
+                discountApplied = 20;
+                showNotification('Cupom aplicado com sucesso!', 'success');
+            } else if (couponCode === 'JCHAIR10') {
+                discountApplied = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0) * 0.10;
+                showNotification('Cupom de 10% aplicado!', 'success');
+            } else {
+                showNotification('Cupom inválido!', 'error');
+            }
+            
+            calculateTotal();
+        }
+
+        // Finish order
+        function finishOrder() {
+            if (!selectedPaymentMethod) {
+                showNotification('Por favor, selecione uma forma de pagamento', 'error');
+                return;
+            }
+            
+            // Show loading
+            const button = document.getElementById('finishOrder');
+            button.innerHTML = '<i class="fas fa-spinner loading-spinner"></i> Processando...';
+            button.disabled = true;
+            
+            // Simulate payment processing
+            setTimeout(() => {
+                document.getElementById('paymentSection').classList.add('hidden');
+                document.getElementById('successSection').classList.remove('hidden');
+                
+                // Update step indicator
+                document.getElementById('step3').classList.remove('active');
+                document.getElementById('step3').classList.add('completed');
+                document.getElementById('step3').innerHTML = '<i class="fas fa-check"></i>';
+                
+                // Clear cart
+                cartItems = [];
+                localStorage.removeItem('cart');
+                
+                window.scrollTo(0, 0);
+            }, 2000);
+        }
+
+        // Show notification
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            const bgColor = type === 'success' ? 'bg-green-500' : 'bg-red-500';
+            notification.className = `fixed top-20 right-4 ${bgColor} text-white px-6 py-3 rounded-lg shadow-lg z-50`;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Initialize on load
+        init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo - Carrossel Avançado | 62 Beauty</title>
+    <meta name="description" content="Exemplo de implementação do carrossel avançado de produtos">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- CSS do Carrossel -->
+    <link rel="stylesheet" href="./public/css/advanced-carousel.css">
+    
+    <!-- Estilos adicionais para a página de exemplo -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .page-header h1 {
+            color: #d4af37;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .feature strong {
+            color: #d4af37;
+        }
+
+        .carousel-wrapper {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .carousel-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .carousel-description {
+            color: #666;
+            text-align: center;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .controls-demo {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+
+        .controls-demo h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .control-button {
+            background: #d4af37;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .control-button:hover {
+            background: #b8941f;
+            transform: translateY(-2px);
+        }
+
+        .status-display {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .instructions {
+            background: #e3f2fd;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            border-left: 4px solid #2196f3;
+        }
+
+        .instructions h3 {
+            color: #1976d2;
+            margin-bottom: 1rem;
+        }
+
+        .instructions ul {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .instructions ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .carousel-wrapper {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header da Página -->
+        <header class="page-header">
+            <h1>🎠 Carrossel Avançado de Produtos</h1>
+            <p>Sistema completo de carrossel para e-commerce com todas as funcionalidades modernas</p>
+            
+            <div class="features-list">
+                <div class="feature">
+                    <strong>🔍 Zoom</strong><br>
+                    Hover e modal fullscreen
+                </div>
+                <div class="feature">
+                    <strong>📱 Touch/Swipe</strong><br>
+                    Navegação mobile otimizada
+                </div>
+                <div class="feature">
+                    <strong>🎬 Vídeos</strong><br>
+                    Suporte nativo a vídeos
+                </div>
+                <div class="feature">
+                    <strong>⚡ Lazy Loading</strong><br>
+                    Carregamento otimizado
+                </div>
+                <div class="feature">
+                    <strong>🔄 Auto-play</strong><br>
+                    Reprodução automática
+                </div>
+                <div class="feature">
+                    <strong>♿ Acessível</strong><br>
+                    ARIA e navegação por teclado
+                </div>
+            </div>
+        </header>
+
+        <!-- Carrossel Principal -->
+        <section class="carousel-wrapper">
+            <h2 class="carousel-title">Produtos Premium 62 Beauty</h2>
+            <p class="carousel-description">
+                Navegue pela nossa coleção de produtos de beleza premium brasileiros. 
+                Use as setas, dots, miniaturas ou gestos touch para navegar.
+            </p>
+            
+            <!-- Container do Carrossel -->
+            <div id="productCarousel" class="advanced-carousel" data-carousel></div>
+        </section>
+
+        <!-- Controles de Demonstração -->
+        <section class="controls-demo">
+            <h3>🎮 Controles de Demonstração</h3>
+            <p>Use estes botões para testar as funcionalidades do carrossel via API:</p>
+            
+            <div class="control-buttons">
+                <button class="control-button" onclick="carouselDemo.goToFirst()">⏮️ Primeiro</button>
+                <button class="control-button" onclick="carouselDemo.goToPrevious()">⏪ Anterior</button>
+                <button class="control-button" onclick="carouselDemo.goToNext()">⏩ Próximo</button>
+                <button class="control-button" onclick="carouselDemo.goToLast()">⏭️ Último</button>
+                <button class="control-button" onclick="carouselDemo.toggleAutoplay()">⏯️ Auto-play</button>
+                <button class="control-button" onclick="carouselDemo.openFullscreen()">🔍 Fullscreen</button>
+                <button class="control-button" onclick="carouselDemo.addMedia()">➕ Adicionar</button>
+                <button class="control-button" onclick="carouselDemo.removeMedia()">➖ Remover</button>
+            </div>
+
+            <div class="status-display" id="carouselStatus">
+                Status do carrossel será exibido aqui...
+            </div>
+        </section>
+
+        <!-- Instruções de Uso -->
+        <section class="instructions">
+            <h3>📋 Como Usar</h3>
+            <ul>
+                <li><strong>Navegação:</strong> Use as setas, clique nos dots ou miniaturas</li>
+                <li><strong>Mobile:</strong> Deslize para esquerda/direita (swipe)</li>
+                <li><strong>Teclado:</strong> Setas esquerda/direita, Espaço para auto-play</li>
+                <li><strong>Zoom:</strong> Clique em qualquer imagem para visualização fullscreen</li>
+                <li><strong>Auto-play:</strong> Use o botão "Auto" ou pressione Espaço</li>
+                <li><strong>Velocidade:</strong> Clique no botão de velocidade "⚡" para alterar</li>
+                <li><strong>Vídeos:</strong> Reproduzem automaticamente no modal fullscreen</li>
+                <li><strong>Acessibilidade:</strong> Navegação completa por teclado e screen readers</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- JavaScript do Carrossel -->
+    <script src="./public/js/advanced-carousel.js"></script>
+
+    <!-- Script de Demonstração -->
+    <script>
+        // Dados de exemplo específicos para a demonstração
+        const demoMediaData = [
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&h=800&fit=crop&q=80',
+                alt: 'Progressiva Brasileira Premium - Redução de Volume',
+                lazy: false,
+                thumbnail: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=100&h=100&fit=crop&q=80'
+            },
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=800&fit=crop&q=80',
+                alt: 'Kit Alisamento Profissional - Cabelos Sedosos',
+                lazy: true,
+                thumbnail: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=100&h=100&fit=crop&q=80'
+            },
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=800&fit=crop&q=80',
+                alt: 'Tratamento Capilar Intensivo - Nutrição Profunda',
+                lazy: true,
+                thumbnail: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=100&h=100&fit=crop&q=80'
+            },
+            {
+                type: 'video',
+                src: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+                alt: 'Vídeo demonstrativo - Como aplicar a progressiva',
+                poster: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&h=800&fit=crop&q=80',
+                thumbnail: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=100&h=100&fit=crop&q=80'
+            },
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=800&fit=crop&q=80',
+                alt: 'Escova Progressiva Orgânica - Sem Formol',
+                lazy: true,
+                thumbnail: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=100&h=100&fit=crop&q=80'
+            },
+            {
+                type: 'image',
+                src: 'https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=800&h=800&fit=crop&q=80',
+                alt: 'Ampola de Tratamento - Reconstrução Total',
+                lazy: true,
+                thumbnail: 'https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=100&h=100&fit=crop&q=80'
+            }
+        ];
+
+        // Inicializar carrossel
+        let carousel;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('productCarousel');
+            
+            carousel = new AdvancedCarousel(container, {
+                media: demoMediaData,
+                autoplay: false,
+                autoplaySpeed: 4000,
+                enableTouch: true,
+                enableZoom: true,
+                enableLazyLoad: true,
+                enableFullscreen: true,
+                enableKeyboard: true,
+                preloadNext: 2,
+                progressBar: true
+            });
+
+            // Event listeners para demonstração
+            carousel.on('init', (e) => {
+                console.log('Carrossel inicializado!', e.detail);
+                updateStatus();
+            });
+
+            carousel.on('change', (e) => {
+                console.log('Slide alterado:', e.detail);
+                updateStatus();
+            });
+
+            carousel.on('autoplay:toggle', (e) => {
+                console.log('Autoplay alterado:', e.detail);
+                updateStatus();
+            });
+
+            carousel.on('modal:open', (e) => {
+                console.log('Modal aberto:', e.detail);
+            });
+
+            carousel.on('modal:close', (e) => {
+                console.log('Modal fechado:', e.detail);
+            });
+
+            // Atualizar status inicial
+            setTimeout(updateStatus, 100);
+        });
+
+        // Funções de demonstração
+        const carouselDemo = {
+            goToFirst() {
+                carousel.goToSlide(0);
+            },
+            
+            goToPrevious() {
+                carousel.prevSlide();
+            },
+            
+            goToNext() {
+                carousel.nextSlide();
+            },
+            
+            goToLast() {
+                const state = carousel.getState();
+                carousel.goToSlide(state.totalSlides - 1);
+            },
+            
+            toggleAutoplay() {
+                carousel.toggleAutoplay();
+            },
+            
+            openFullscreen() {
+                carousel.openFullscreen();
+            },
+            
+            addMedia() {
+                const newMedia = {
+                    type: 'image',
+                    src: `https://picsum.photos/800/800?random=${Date.now()}`,
+                    alt: `Nova imagem adicionada - ${new Date().toLocaleTimeString()}`,
+                    thumbnail: `https://picsum.photos/100/100?random=${Date.now()}`
+                };
+                carousel.addMedia(newMedia);
+                updateStatus();
+            },
+            
+            removeMedia() {
+                const state = carousel.getState();
+                if (state.totalSlides > 1) {
+                    carousel.removeMedia(state.currentIndex);
+                    updateStatus();
+                } else {
+                    alert('Não é possível remover a última imagem!');
+                }
+            }
+        };
+
+        // Atualizar display de status
+        function updateStatus() {
+            const statusEl = document.getElementById('carouselStatus');
+            if (!carousel || !statusEl) return;
+            
+            const state = carousel.getState();
+            statusEl.innerHTML = `
+                <strong>Status do Carrossel:</strong><br>
+                📍 Slide atual: ${state.currentIndex + 1} de ${state.totalSlides}<br>
+                ⏯️ Auto-play: ${state.isAutoplay ? 'Ativo' : 'Inativo'}<br>
+                ⚡ Velocidade: ${state.autoplaySpeed / 1000}s<br>
+                🖼️ Mídia atual: ${state.currentMedia ? state.currentMedia.alt : 'N/A'}<br>
+                🔍 Modal: ${state.isModalOpen ? 'Aberto' : 'Fechado'}
+            `;
+        }
+
+        // Permitir controle via console para debugging
+        window.carousel = carousel;
+        window.carouselDemo = carouselDemo;
+    </script>
+</body>
+</html>

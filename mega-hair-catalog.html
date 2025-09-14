@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>62 Beauty - Mega Hair Premium Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #d4af37;
+            --secondary-gold: #f4e4c1;
+            --dark: #1a1a1a;
+            --light: #f9f9f9;
+            --shadow: 0 2px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Hero Carousel */
+        .hero-carousel {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 200;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .hero-cta {
+            padding: 18px 50px;
+            background: var(--primary-gold);
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            transition: var(--transition);
+            border: 2px solid var(--primary-gold);
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .hero-cta:hover {
+            background: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 60px;
+            height: 3px;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .indicator.active {
+            background: rgba(255,255,255,0.5);
+        }
+
+        .indicator.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: var(--primary-gold);
+            animation: progress 5s linear;
+        }
+
+        @keyframes progress {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            gap: 50px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 200;
+            font-style: italic;
+            color: var(--dark);
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 40px;
+            flex: 1;
+        }
+
+        .nav-item {
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: var(--primary-gold);
+        }
+
+        .nav-item.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-gold);
+        }
+
+        .cart-counter {
+            background: var(--primary-gold);
+            color: white;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 50%;
+            margin-left: 5px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 200;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        /* Filter Section */
+        .filter-section {
+            background: linear-gradient(135deg, var(--light) 0%, white 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .filter-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            text-align: center;
+            color: var(--dark);
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .filter-group {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .filter-group h4 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 13px;
+            border-radius: 25px;
+            flex: 0 0 auto;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-gold);
+            color: white;
+            border-color: var(--primary-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary-gold);
+            color: white;
+            padding: 8px 15px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            z-index: 2;
+            border-radius: 25px;
+            text-transform: uppercase;
+        }
+
+        .length-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(26, 26, 26, 0.9);
+            color: white;
+            padding: 8px 15px;
+            font-size: 13px;
+            font-weight: 500;
+            z-index: 2;
+            border-radius: 25px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-type {
+            color: var(--primary-gold);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: var(--dark);
+            line-height: 1.4;
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .product-price {
+            margin-bottom: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--primary-gold);
+            letter-spacing: 1px;
+        }
+
+        .price-per {
+            font-size: 12px;
+            color: #999;
+            display: block;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-add-cart {
+            width: 100%;
+            padding: 15px;
+            background: var(--dark);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 2px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .btn-add-cart:hover {
+            background: var(--primary-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+
+        /* Cart Notification */
+        .cart-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-gold);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            z-index: 1001;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+        }
+
+        .cart-notification.show {
+            transform: translateX(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 25px;
+            }
+
+            .filter-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Carousel -->
+    <div class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="images/mega-hair/mega-hair-1.jpg" alt="Mega Hair Premium" class="carousel-image">
+                <div class="carousel-overlay">
+                    <h1 class="hero-title">MEGA HAIR PREMIUM</h1>
+                    <p class="hero-subtitle">Cabelos 100% Naturais Importados</p>
+                    <a href="#products" class="hero-cta">EXPLORAR COLEÇÃO</a>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <img src="images/mega-hair/mega-hair-2.jpg" alt="Qualidade Superior" class="carousel-image">
+                <div class="carousel-overlay">
+                    <h1 class="hero-title">QUALIDADE EUROPEIA</h1>
+                    <p class="hero-subtitle">Seleção Premium com Garantia de Origem</p>
+                    <a href="#products" class="hero-cta">VER PRODUTOS</a>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <img src="images/mega-hair/mega-hair-3.jpg" alt="Variedade" class="carousel-image">
+                <div class="carousel-overlay">
+                    <h1 class="hero-title">TODOS OS ESTILOS</h1>
+                    <p class="hero-subtitle">Liso, Ondulado, Cacheado - De 30cm a 90cm</p>
+                    <a href="#products" class="hero-cta">COMPRAR AGORA</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="changeSlide(0)"></span>
+            <span class="indicator" onclick="changeSlide(1)"></span>
+            <span class="indicator" onclick="changeSlide(2)"></span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">62</a>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-item">Início</a>
+                <a href="../index.html#produtos" class="nav-item">Produtos</a>
+                <a href="mega-hair-catalog.html" class="nav-item active">Mega Hair</a>
+                <a href="../index.html#cuidados" class="nav-item">Cuidados & Beleza</a>
+                <a href="../index.html#sobre" class="nav-item">Sobre Nós</a>
+                <a href="#" class="nav-item">Carrinho <span class="cart-counter" id="cartCounter">0</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Products Section -->
+    <div class="main-container" id="products">
+        <h2 class="section-title">COLEÇÃO MEGA HAIR</h2>
+        <p class="section-subtitle">Cabelos premium selecionados - Entrega em toda Europa</p>
+
+        <!-- Filters -->
+        <div class="filter-section">
+            <h3 class="filter-title">Encontre seu Mega Hair Perfeito</h3>
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <h4>Textura</h4>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="type" data-value="todos">Todos</button>
+                        <button class="filter-btn" data-filter="type" data-value="liso">Liso</button>
+                        <button class="filter-btn" data-filter="type" data-value="ondulado">Ondulado</button>
+                        <button class="filter-btn" data-filter="type" data-value="cacheado">Cacheado</button>
+                        <button class="filter-btn" data-filter="type" data-value="crespo">Crespo</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Cor</h4>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="color" data-value="todos">Todos</button>
+                        <button class="filter-btn" data-filter="color" data-value="loiro">Loiro</button>
+                        <button class="filter-btn" data-filter="color" data-value="castanho">Castanho</button>
+                        <button class="filter-btn" data-filter="color" data-value="preto">Preto</button>
+                        <button class="filter-btn" data-filter="color" data-value="ruivo">Ruivo</button>
+                        <button class="filter-btn" data-filter="color" data-value="ombre">Ombré</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Comprimento</h4>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="length" data-value="todos">Todos</button>
+                        <button class="filter-btn" data-filter="length" data-value="30">30cm</button>
+                        <button class="filter-btn" data-filter="length" data-value="40">40cm</button>
+                        <button class="filter-btn" data-filter="length" data-value="50">50cm</button>
+                        <button class="filter-btn" data-filter="length" data-value="60">60cm</button>
+                        <button class="filter-btn" data-filter="length" data-value="70">70cm</button>
+                        <button class="filter-btn" data-filter="length" data-value="80">80cm</button>
+                        <button class="filter-btn" data-filter="length" data-value="90">90cm</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <button id="clearFilters" class="hero-cta" style="background: var(--dark); border-color: var(--dark);">
+                    Limpar Filtros
+                </button>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div id="productGrid" class="product-grid">
+            <!-- Products will be generated by JavaScript -->
+        </div>
+
+        <div id="noResults" style="display: none; text-align: center; padding: 60px;">
+            <h3 style="color: #999; font-weight: 300; margin-bottom: 20px;">
+                Nenhum produto encontrado com os filtros selecionados.
+            </h3>
+            <button onclick="clearAllFilters()" class="hero-cta">Limpar Filtros</button>
+        </div>
+    </div>
+
+    <!-- Cart Notification -->
+    <div id="cartNotification" class="cart-notification">
+        <div id="notificationText">Produto adicionado ao carrinho!</div>
+    </div>
+
+    <script>
+        // Product data structure and generation
+        const hairTypes = ['liso', 'ondulado', 'cacheado', 'crespo'];
+        const hairColors = ['loiro', 'castanho', 'preto', 'ruivo', 'ombre'];
+        const lengths = [30, 40, 50, 60, 70, 80, 90];
+        const badges = ['MAIS VENDIDO', 'PREMIUM', 'EXCLUSIVO', 'NOVO', 'LUXO'];
+
+        const priceTable = {
+            30: 60.00,
+            40: 78.00,
+            50: 101.40,
+            60: 131.82,
+            70: 171.37,
+            80: 222.78,
+            90: 289.61
+        };
+
+        // Generate all 76 products
+        function generateProducts() {
+            const products = [];
+
+            for (let i = 1; i <= 76; i++) {
+                const typeIndex = (i - 1) % hairTypes.length;
+                const colorIndex = (i - 1) % hairColors.length;
+                const lengthIndex = (i - 1) % lengths.length;
+                const badgeIndex = (i - 1) % badges.length;
+
+                const colorNames = {
+                    'loiro': ['Platinado', 'Dourado', 'Mel', 'Champagne', 'Acinzentado'],
+                    'castanho': ['Claro', 'Médio', 'Escuro', 'Chocolate', 'Caramelo'],
+                    'preto': ['Natural', 'Azulado', 'Intenso', 'Ébano', 'Profundo'],
+                    'ruivo': ['Acobreado', 'Cereja', 'Borgonha', 'Natural', 'Flamejante'],
+                    'ombre': ['Loiro', 'Caramelo', 'Rose Gold', 'Cinza', 'Platinado']
+                };
+
+                const typeNames = {
+                    'liso': 'Liso',
+                    'ondulado': 'Ondulado',
+                    'cacheado': 'Cacheado',
+                    'crespo': 'Crespo'
+                };
+
+                const colorVariant = colorNames[hairColors[colorIndex]][(i - 1) % 5];
+
+                products.push({
+                    id: i,
+                    name: `Mega Hair ${typeNames[hairTypes[typeIndex]]} ${colorVariant}`,
+                    type: hairTypes[typeIndex],
+                    color: hairColors[colorIndex],
+                    length: lengths[lengthIndex],
+                    price: priceTable[lengths[lengthIndex]],
+                    image: `images/mega-hair/mega-hair-${i}.jpg`,
+                    badge: Math.random() > 0.3 ? badges[badgeIndex] : null,
+                    inStock: Math.random() > 0.1
+                });
+            }
+
+            return products;
+        }
+
+        // State management
+        let allProducts = [];
+        let filteredProducts = [];
+        let filters = {
+            type: 'todos',
+            color: 'todos',
+            length: 'todos'
+        };
+        let cart = JSON.parse(localStorage.getItem('megaHairCart') || '[]');
+
+        // Update cart counter
+        function updateCartCounter() {
+            const counter = document.getElementById('cartCounter');
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            counter.textContent = totalItems;
+        }
+
+        // Add to cart function
+        function addToCart(productId) {
+            const product = allProducts.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingItem = cart.find(item => item.id === productId);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: productId,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: 1
+                });
+            }
+
+            localStorage.setItem('megaHairCart', JSON.stringify(cart));
+            updateCartCounter();
+            showCartNotification(product.name);
+
+            // Update button temporarily
+            const button = document.getElementById(`add-btn-${productId}`);
+            if (button) {
+                const originalText = button.textContent;
+                button.textContent = 'Adicionado ✓';
+                button.style.background = '#28a745';
+
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '';
+                }, 1500);
+            }
+        }
+
+        // Show cart notification
+        function showCartNotification(productName) {
+            const notification = document.getElementById('cartNotification');
+            const text = document.getElementById('notificationText');
+
+            text.textContent = `${productName} foi adicionado ao carrinho!`;
+            notification.classList.add('show');
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Render products
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            const noResults = document.getElementById('noResults');
+
+            if (filteredProducts.length === 0) {
+                grid.style.display = 'none';
+                noResults.style.display = 'block';
+                return;
+            }
+
+            grid.style.display = 'grid';
+            noResults.style.display = 'none';
+
+            grid.innerHTML = filteredProducts.map(product => `
+                <div class="product-card">
+                    ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
+                    <span class="length-badge">${product.length} cm</span>
+                    <img src="${product.image}" alt="${product.name}" class="product-image"
+                         onerror="this.src='images/mega-hair/mega-hair-1.jpg'">
+                    <div class="product-info">
+                        <div class="product-type">${product.type.charAt(0).toUpperCase() + product.type.slice(1)} • Europa</div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <div class="product-specs">
+                            <span class="spec-item">📏 ${product.length}cm</span>
+                            <span class="spec-item">⚖️ 100g</span>
+                            <span class="spec-item">🎨 Premium</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">€${product.price.toFixed(2)}</span>
+                            <span class="price-per">Por 100g + Frete</span>
+                        </div>
+                        <button
+                            id="add-btn-${product.id}"
+                            class="btn-add-cart"
+                            onclick="addToCart(${product.id})"
+                            ${!product.inStock ? 'disabled style="background: #ccc; cursor: not-allowed;"' : ''}
+                        >
+                            ${product.inStock ? 'Adicionar ao Carrinho' : 'Indisponível'}
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Filter products
+        function filterProducts() {
+            filteredProducts = allProducts.filter(product => {
+                return (filters.type === 'todos' || product.type === filters.type) &&
+                       (filters.color === 'todos' || product.color === filters.color) &&
+                       (filters.length === 'todos' || product.length.toString() === filters.length);
+            });
+            renderProducts();
+        }
+
+        // Handle filter buttons
+        function setupFilters() {
+            document.querySelectorAll('.filter-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const filterType = this.dataset.filter;
+                    const filterValue = this.dataset.value;
+
+                    // Update active state
+                    this.parentElement.querySelectorAll('.filter-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+
+                    // Update filters and re-render
+                    filters[filterType] = filterValue;
+                    filterProducts();
+                });
+            });
+        }
+
+        // Clear all filters
+        function clearAllFilters() {
+            filters = {
+                type: 'todos',
+                color: 'todos',
+                length: 'todos'
+            };
+
+            // Reset active states
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.value === 'todos') {
+                    btn.classList.add('active');
+                }
+            });
+
+            filterProducts();
+        }
+
+        // Carousel functionality
+        let currentSlide = 0;
+
+        function changeSlide(index) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const indicators = document.querySelectorAll('.indicator');
+
+            slides[currentSlide].classList.remove('active');
+            indicators[currentSlide].classList.remove('active');
+
+            currentSlide = index;
+
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+        }
+
+        // Auto-play carousel
+        setInterval(() => {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const nextSlide = (currentSlide + 1) % slides.length;
+            changeSlide(nextSlide);
+        }, 5000);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            allProducts = generateProducts();
+            filteredProducts = [...allProducts];
+            renderProducts();
+            setupFilters();
+            updateCartCounter();
+
+            // Setup clear filters button
+            document.getElementById('clearFilters').addEventListener('click', clearAllFilters);
+
+            // Smooth scroll for CTA buttons
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

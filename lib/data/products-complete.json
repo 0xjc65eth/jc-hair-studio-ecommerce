@@ -1,0 +1,1446 @@
+{
+  "categories": [
+    {
+      "id": "progressivas-btx",
+      "name": "Progressivas e BTX",
+      "slug": "progressivas-btx",
+      "description": "Progressivas, BTX e tratamentos de alisamento profissionais",
+      "icon": "💫",
+      "products": [
+        {
+          "id": "cadiveu-professional-brasil-cacau",
+          "name": "Cadiveu Professional Brasil Cacau Alisante",
+          "slug": "cadiveu-professional-brasil-cacau",
+          "brand": "Cadiveu",
+          "shortDesc": "Progressiva profissional com óleo de cacau para cabelos lisos e sedosos",
+          "description": "Tratamento alisante profissional com óleo de cacau que proporciona cabelos lisos, sedosos e com brilho intenso. Reduz o volume e elimina o frizz por até 4 meses.",
+          "price": 89.90,
+          "comparePrice": 119.90,
+          "sku": "CAD-BC-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "tags": ["profissional", "longa duração", "cacau", "anti-frizz"],
+          "rating": 4.8,
+          "reviewsCount": 342,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 1000,
+          "dimensions": "20x8x8cm",
+          "labels": ["DESTAQUE", "PROFISSIONAL"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=800&fit=crop",
+              "alt": "Cadiveu Brasil Cacau",
+              "isMain": true
+            }
+          ],
+          "variants": [
+            { "size": "1L", "price": 89.90, "stock": 25 },
+            { "size": "300ml", "price": 39.90, "stock": 15 }
+          ]
+        },
+        {
+          "id": "forever-liss-professional-btx-zero",
+          "name": "Forever Liss BTX Zero Formol",
+          "slug": "forever-liss-btx-zero-formol",
+          "brand": "Forever Liss",
+          "shortDesc": "BTX capilar sem formol para alisamento natural e reconstrução",
+          "description": "Botox capilar zero formol que alisa, reconstrói e hidrata profundamente os fios. Resultado natural com redução de volume e frizz.",
+          "price": 65.90,
+          "comparePrice": 85.90,
+          "sku": "FL-BTX-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX",
+          "tags": ["sem formol", "reconstrução", "natural", "hidratação"],
+          "rating": 4.7,
+          "reviewsCount": 198,
+          "inStock": true,
+          "stockQuantity": 30,
+          "weight": 900,
+          "labels": ["NOVO", "SEM FORMOL"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=800&fit=crop",
+              "alt": "Forever Liss BTX Zero",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "inoar-ghair-alemanha",
+          "name": "Inoar GHair Progressiva Alemã",
+          "slug": "inoar-ghair-progressiva-alema",
+          "brand": "Inoar",
+          "shortDesc": "Progressiva alemã com tecnologia avançada para alisamento perfeito",
+          "description": "Progressiva desenvolvida com tecnologia alemã que proporciona alisamento perfeito, brilho intenso e proteção térmica. Durabilidade de até 5 meses.",
+          "price": 129.90,
+          "comparePrice": 159.90,
+          "sku": "INO-GH-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "tags": ["alemã", "tecnologia avançada", "longa duração", "proteção térmica"],
+          "rating": 4.9,
+          "reviewsCount": 267,
+          "inStock": true,
+          "stockQuantity": 18,
+          "weight": 1000,
+          "labels": ["PREMIUM", "TECNOLOGIA ALEMÃ"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=800&fit=crop",
+              "alt": "Inoar GHair Alemanha",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "zap-alisamentos-progressiva-intense",
+          "name": "ZAP Progressiva Intense Professional",
+          "slug": "zap-progressiva-intense-professional",
+          "brand": "ZAP",
+          "shortDesc": "Progressiva profissional para cabelos resistentes e crespos",
+          "description": "Progressiva de alta performance desenvolvida especialmente para cabelos resistentes, crespos e afro. Alisamento intenso com proteção e nutrição.",
+          "price": 75.90,
+          "comparePrice": 95.90,
+          "sku": "ZAP-PI-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "tags": ["cabelos crespos", "alta performance", "proteção", "nutrição"],
+          "rating": 4.6,
+          "reviewsCount": 145,
+          "inStock": true,
+          "stockQuantity": 22,
+          "weight": 1000,
+          "labels": ["CABELOS CRESPOS"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&h=800&fit=crop",
+              "alt": "ZAP Progressiva Intense",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "honma-tokyo-h-brush-premium",
+          "name": "Honma Tokyo H-Brush Premium Botox",
+          "slug": "honma-tokyo-h-brush-premium",
+          "brand": "Honma Tokyo",
+          "shortDesc": "Botox capilar premium japonês com tecnologia H-Brush",
+          "description": "Botox capilar japonês com tecnologia exclusiva H-Brush que reconstrói, alisa e proporciona brilho diamante aos cabelos. Fórmula livre de formol.",
+          "price": 159.90,
+          "comparePrice": 199.90,
+          "sku": "HT-HB-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX",
+          "tags": ["japonês", "premium", "brilho diamante", "livre de formol"],
+          "rating": 4.9,
+          "reviewsCount": 89,
+          "inStock": true,
+          "stockQuantity": 12,
+          "weight": 1000,
+          "labels": ["PREMIUM", "JAPONÊS"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&h=800&fit=crop",
+              "alt": "Honma Tokyo H-Brush",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "felps-professional-omega-zero",
+          "name": "Felps Professional Ômega Zero",
+          "slug": "felps-professional-omega-zero",
+          "brand": "Felps",
+          "shortDesc": "Progressiva profissional com ômega 3, 6 e 9 sem formol",
+          "description": "Progressiva enriquecida com ômega 3, 6 e 9 que alisa, nutre e protege os fios. Fórmula livre de formol com resultados duradouros.",
+          "price": 79.90,
+          "comparePrice": 99.90,
+          "sku": "FLP-OZ-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "tags": ["ômega", "nutrição", "sem formol", "proteção"],
+          "rating": 4.7,
+          "reviewsCount": 156,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 1000,
+          "labels": ["ÔMEGA", "SEM FORMOL"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&h=800&fit=crop",
+              "alt": "Felps Ômega Zero",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "plastica-dos-fios-btox-capilar",
+          "name": "Plástica dos Fios Btox Capilar",
+          "slug": "plastica-dos-fios-btox-capilar",
+          "brand": "Plástica dos Fios",
+          "shortDesc": "Botox capilar reconstrutivo para cabelos danificados",
+          "description": "Tratamento reconstrutivo intensivo que recupera cabelos danificados, proporcionando alisamento natural e brilho intenso. Rico em aminoácidos.",
+          "price": 55.90,
+          "comparePrice": 75.90,
+          "sku": "PDF-BC-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX",
+          "tags": ["reconstrutivo", "aminoácidos", "cabelos danificados", "natural"],
+          "rating": 4.5,
+          "reviewsCount": 112,
+          "inStock": true,
+          "stockQuantity": 35,
+          "weight": 900,
+          "labels": ["RECONSTRUTIVO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&h=800&fit=crop",
+              "alt": "Plástica dos Fios Btox",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "professional-hair-botox-extreme",
+          "name": "Professional Hair Botox Extreme",
+          "slug": "professional-hair-botox-extreme",
+          "brand": "Professional Hair",
+          "shortDesc": "Botox capilar extremo para cabelos muito danificados",
+          "description": "Tratamento intensivo para cabelos extremamente danificados. Reconstrução profunda com alisamento natural e proteção térmica avançada.",
+          "price": 69.90,
+          "comparePrice": 89.90,
+          "sku": "PH-BE-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX",
+          "tags": ["intensivo", "extremo", "reconstrução profunda", "proteção térmica"],
+          "rating": 4.6,
+          "reviewsCount": 87,
+          "inStock": true,
+          "stockQuantity": 20,
+          "weight": 1000,
+          "labels": ["INTENSIVO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1526045431048-f857369baa09?w=800&h=800&fit=crop",
+              "alt": "Professional Hair Botox Extreme",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "sophia-organics-progressiva-organica",
+          "name": "Sophia Organics Progressiva Orgânica",
+          "slug": "sophia-organics-progressiva-organica",
+          "brand": "Sophia Organics",
+          "shortDesc": "Progressiva 100% orgânica com ingredientes naturais",
+          "description": "Progressiva totalmente orgânica com extratos naturais que alisa respeitando a estrutura natural dos fios. Livre de químicos agressivos.",
+          "price": 95.90,
+          "comparePrice": 125.90,
+          "sku": "SO-PO-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "tags": ["orgânica", "natural", "sem químicos", "sustentável"],
+          "rating": 4.8,
+          "reviewsCount": 134,
+          "inStock": true,
+          "stockQuantity": 16,
+          "weight": 900,
+          "labels": ["ORGÂNICA", "NATURAL"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&h=800&fit=crop",
+              "alt": "Sophia Organics Progressiva",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "keune-keratin-smooth-treatment",
+          "name": "Keune Keratin Smooth Treatment",
+          "slug": "keune-keratin-smooth-treatment",
+          "brand": "Keune",
+          "shortDesc": "Tratamento de queratina holandês para alisamento duradouro",
+          "description": "Tratamento de queratina premium desenvolvido na Holanda que proporciona alisamento duradouro, reduz frizz e adiciona brilho intenso aos cabelos.",
+          "price": 145.90,
+          "comparePrice": 179.90,
+          "sku": "KEU-KS-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Queratina",
+          "tags": ["holandês", "queratina", "premium", "anti-frizz"],
+          "rating": 4.9,
+          "reviewsCount": 67,
+          "inStock": true,
+          "stockQuantity": 10,
+          "weight": 1000,
+          "labels": ["PREMIUM", "HOLANDÊS"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&h=800&fit=crop",
+              "alt": "Keune Keratin Smooth",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "matrix-opti-smooth-keratin",
+          "name": "Matrix Opti Smooth Keratin",
+          "slug": "matrix-opti-smooth-keratin",
+          "brand": "Matrix",
+          "shortDesc": "Sistema de alisamento Matrix com queratina e óleo de abacate",
+          "description": "Sistema profissional de alisamento com queratina e óleo de abacate que proporciona cabelos lisos, macios e com proteção contra danos futuros.",
+          "price": 115.90,
+          "comparePrice": 145.90,
+          "sku": "MTX-OS-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Queratina",
+          "tags": ["matriz", "abacate", "proteção", "maciez"],
+          "rating": 4.7,
+          "reviewsCount": 98,
+          "inStock": true,
+          "stockQuantity": 14,
+          "weight": 1000,
+          "labels": ["MATRIX PROFESSIONAL"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=800&h=800&fit=crop",
+              "alt": "Matrix Opti Smooth",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "redken-chemistry-treatment",
+          "name": "Redken Chemistry Treatment",
+          "slug": "redken-chemistry-treatment",
+          "brand": "Redken",
+          "shortDesc": "Tratamento químico Redken para transformação capilar completa",
+          "description": "Sistema de transformação capilar com tecnologia Chemistry que proporciona alisamento, força e brilho em uma única aplicação.",
+          "price": 169.90,
+          "comparePrice": 209.90,
+          "sku": "RDK-CT-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Tratamentos Químicos",
+          "tags": ["redken", "chemistry", "transformação", "força"],
+          "rating": 4.8,
+          "reviewsCount": 45,
+          "inStock": true,
+          "stockQuantity": 8,
+          "weight": 1000,
+          "labels": ["REDKEN", "CHEMISTRY"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&h=800&fit=crop",
+              "alt": "Redken Chemistry",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "schwarzkopf-fibreplex-treatment",
+          "name": "Schwarzkopf Fibreplex Treatment",
+          "slug": "schwarzkopf-fibreplex-treatment",
+          "brand": "Schwarzkopf",
+          "shortDesc": "Tratamento Fibreplex para reconstrução e alisamento simultâneo",
+          "description": "Tecnologia Fibreplex que reconstrói as ligações internas do cabelo enquanto alisa, proporcionando cabelos mais fortes e saudáveis.",
+          "price": 185.90,
+          "comparePrice": 229.90,
+          "sku": "SCH-FT-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Tratamentos Químicos",
+          "tags": ["fibreplex", "reconstrução", "ligações", "alemão"],
+          "rating": 4.9,
+          "reviewsCount": 34,
+          "inStock": true,
+          "stockQuantity": 6,
+          "weight": 1000,
+          "labels": ["PREMIUM", "ALEMÃO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&h=800&fit=crop",
+              "alt": "Schwarzkopf Fibreplex",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "alfaparf-lisse-design-keratin",
+          "name": "Alfaparf Lisse Design Keratin Therapy",
+          "slug": "alfaparf-lisse-design-keratin",
+          "brand": "Alfaparf",
+          "shortDesc": "Terapia italiana de queratina para alisamento profissional",
+          "description": "Terapia de queratina italiana que proporciona alisamento duradouro com proteção térmica e nutrição profunda. Resultado profissional de salão.",
+          "price": 135.90,
+          "comparePrice": 169.90,
+          "sku": "ALF-LD-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Queratina",
+          "tags": ["italiano", "terapia", "proteção térmica", "profissional"],
+          "rating": 4.8,
+          "reviewsCount": 76,
+          "inStock": true,
+          "stockQuantity": 12,
+          "weight": 1000,
+          "labels": ["ITALIANO", "PROFISSIONAL"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1631730225619-7c12c675e9c0?w=800&h=800&fit=crop",
+              "alt": "Alfaparf Lisse Design",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "olaplex-no4-bond-maintenance",
+          "name": "Olaplex No.4 Bond Maintenance",
+          "slug": "olaplex-no4-bond-maintenance",
+          "brand": "Olaplex",
+          "shortDesc": "Sistema Olaplex para manutenção e reconstrução das ligações capilares",
+          "description": "Sistema revolucionário que reconstrói as ligações quebradas do cabelo, proporcionando força, brilho e proteção contra danos químicos.",
+          "price": 199.90,
+          "comparePrice": 249.90,
+          "sku": "OLP-N4-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Reconstrução",
+          "tags": ["olaplex", "ligações", "revolucionário", "proteção"],
+          "rating": 4.9,
+          "reviewsCount": 156,
+          "inStock": true,
+          "stockQuantity": 15,
+          "weight": 250,
+          "labels": ["OLAPLEX", "REVOLUCIONÁRIO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1519456264917-42d0aa2e0625?w=800&h=800&fit=crop",
+              "alt": "Olaplex No.4",
+              "isMain": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tratamentos-capilares",
+      "name": "Tratamentos Capilares",
+      "slug": "tratamentos-capilares", 
+      "description": "Máscaras, ampolas e tratamentos intensivos para todos os tipos de cabelo",
+      "icon": "✨",
+      "products": [
+        {
+          "id": "maria-escandalosa-mascara-bomba",
+          "name": "Maria Escandalosa Máscara Bomba",
+          "slug": "maria-escandalosa-mascara-bomba",
+          "brand": "Maria Escandalosa",
+          "shortDesc": "Máscara reconstrutiva intensiva para cabelos danificados",
+          "description": "Máscara de tratamento intensivo que reconstrói cabelos danificados, ressecados e com química. Fórmula com queratina e aminoácidos.",
+          "price": 35.90,
+          "comparePrice": 45.90,
+          "sku": "ME-MB-001",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Máscaras",
+          "tags": ["reconstrutiva", "queratina", "aminoácidos", "intensiva"],
+          "rating": 4.7,
+          "reviewsCount": 289,
+          "inStock": true,
+          "stockQuantity": 45,
+          "weight": 500,
+          "labels": ["BEST SELLER", "RECONSTRUTIVA"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=800&fit=crop",
+              "alt": "Maria Escandalosa Máscara Bomba",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "karseell-maca-treatment-mask",
+          "name": "Karseell Máscara de Tratamento Maca",
+          "slug": "karseell-mascara-tratamento-maca",
+          "brand": "Karseell",
+          "shortDesc": "Máscara nutritiva com extrato de maca peruana",
+          "description": "Máscara capilar enriquecida com extrato de maca peruana que nutre profundamente, repara danos e proporciona brilho natural aos cabelos.",
+          "price": 42.90,
+          "comparePrice": 55.90,
+          "sku": "KAR-MT-001",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Máscaras",
+          "tags": ["maca peruana", "nutritiva", "brilho natural", "reparadora"],
+          "rating": 4.6,
+          "reviewsCount": 167,
+          "inStock": true,
+          "stockQuantity": 32,
+          "weight": 500,
+          "labels": ["NUTRITIVA", "MACA"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=800&h=800&fit=crop",
+              "alt": "Karseell Máscara Maca",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "truss-miracle-treatment",
+          "name": "TRUSS Miracle Treatment",
+          "slug": "truss-miracle-treatment",
+          "brand": "TRUSS",
+          "shortDesc": "Tratamento milagroso para cabelos extremamente danificados",
+          "description": "Tratamento intensivo que age em cabelos extremamente danificados, proporcionando recuperação imediata e duradoura com tecnologia avançada.",
+          "price": 65.90,
+          "comparePrice": 85.90,
+          "sku": "TRS-MT-001",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Tratamentos Intensivos",
+          "tags": ["milagroso", "recuperação imediata", "tecnologia avançada", "extremamente danificados"],
+          "rating": 4.8,
+          "reviewsCount": 134,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 650,
+          "labels": ["MIRACLE", "RECUPERAÇÃO IMEDIATA"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505944270255-72b8c68c6a70?w=800&h=800&fit=crop",
+              "alt": "TRUSS Miracle Treatment",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "felps-profissional-omega-hair-mask",
+          "name": "Felps Profissional Ômega Hair Mask",
+          "slug": "felps-omega-hair-mask",
+          "brand": "Felps",
+          "shortDesc": "Máscara capilar com ômega 3, 6 e 9 para nutrição intensa",
+          "description": "Máscara nutritiva enriquecida com ômega 3, 6 e 9 que proporciona nutrição intensa, maciez e brilho excepcional aos cabelos.",
+          "price": 39.90,
+          "comparePrice": 49.90,
+          "sku": "FLP-OM-001",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Máscaras",
+          "tags": ["ômega", "nutrição intensa", "maciez", "brilho excepcional"],
+          "rating": 4.7,
+          "reviewsCount": 201,
+          "inStock": true,
+          "stockQuantity": 38,
+          "weight": 500,
+          "labels": ["ÔMEGA", "NUTRIÇÃO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=800&fit=crop",
+              "alt": "Felps Ômega Hair Mask",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "lowell-complex-care-ampola",
+          "name": "Lowell Complex Care Ampola",
+          "slug": "lowell-complex-care-ampola",
+          "brand": "Lowell",
+          "shortDesc": "Ampola de tratamento intensivo com complexo reparador",
+          "description": "Ampola de choque com complexo reparador que age profundamente na fibra capilar, restaurando a saúde e vitalidade dos cabelos em uma única aplicação.",
+          "price": 25.90,
+          "comparePrice": 32.90,
+          "sku": "LOW-CC-001",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Ampolas",
+          "tags": ["choque", "complexo reparador", "fibra capilar", "uma aplicação"],
+          "rating": 4.6,
+          "reviewsCount": 89,
+          "inStock": true,
+          "stockQuantity": 55,
+          "weight": 15,
+          "labels": ["AMPOLA", "CHOQUE"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1609166473836-0b10963ed1c7?w=800&h=800&fit=crop",
+              "alt": "Lowell Complex Care Ampola",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "kerastase-resistance-masque",
+          "name": "Kérastase Résistance Masque",
+          "slug": "kerastase-resistance-masque",
+          "brand": "Kérastase",
+          "shortDesc": "Máscara francesa premium para cabelos fragilizados",
+          "description": "Máscara de tratamento francesa que fortalece cabelos fragilizados e com tendência à quebra, proporcionando resistência e flexibilidade.",
+          "price": 189.90,
+          "comparePrice": 229.90,
+          "sku": "KER-RM-001",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Máscaras Premium",
+          "tags": ["francesa", "premium", "fortalece", "resistência"],
+          "rating": 4.9,
+          "reviewsCount": 67,
+          "inStock": true,
+          "stockQuantity": 12,
+          "weight": 500,
+          "labels": ["PREMIUM", "FRANCÊS"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1620734089038-eef53ee7990c?w=800&h=800&fit=crop",
+              "alt": "Kérastase Résistance Masque",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "moroccanoil-intense-hydrating-mask",
+          "name": "Moroccanoil Intense Hydrating Mask",
+          "slug": "moroccanoil-intense-hydrating-mask",
+          "brand": "Moroccanoil",
+          "shortDesc": "Máscara hidratante intensiva com óleo de argan",
+          "description": "Máscara intensamente hidratante com óleo de argan que transforma cabelos secos e danificados em fios sedosos, macios e brilhantes.",
+          "price": 165.90,
+          "comparePrice": 199.90,
+          "sku": "MOR-IH-001",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Máscaras Premium",
+          "tags": ["óleo de argan", "hidratante intensiva", "sedosos", "transformação"],
+          "rating": 4.8,
+          "reviewsCount": 98,
+          "inStock": true,
+          "stockQuantity": 18,
+          "weight": 500,
+          "labels": ["ARGAN", "PREMIUM"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1611348586804-61bf6c080437?w=800&h=800&fit=crop",
+              "alt": "Moroccanoil Intense Hydrating",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "schwarzkopf-bc-repair-rescue",
+          "name": "Schwarzkopf BC Repair Rescue",
+          "slug": "schwarzkopf-bc-repair-rescue",
+          "brand": "Schwarzkopf",
+          "shortDesc": "Tratamento reparador alemão para cabelos severamente danificados",
+          "description": "Sistema de reparo profissional alemão que reconstrói cabelos severamente danificados, selando cutículas e restaurando a integridade capilar.",
+          "price": 89.90,
+          "comparePrice": 115.90,
+          "sku": "SCH-RR-001",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Tratamentos Reparadores",
+          "tags": ["alemão", "reparador", "severamente danificados", "integridade capilar"],
+          "rating": 4.7,
+          "reviewsCount": 145,
+          "inStock": true,
+          "stockQuantity": 22,
+          "weight": 750,
+          "labels": ["ALEMÃO", "REPAIR"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=800&h=800&fit=crop",
+              "alt": "Schwarzkopf BC Repair Rescue",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "wella-sp-luxe-oil-keratin",
+          "name": "Wella SP LuxeOil Keratin Restore",
+          "slug": "wella-sp-luxe-oil-keratin",
+          "brand": "Wella",
+          "shortDesc": "Tratamento de luxo com óleos preciosos e queratina",
+          "description": "Tratamento de luxo que combina óleos preciosos e queratina para restaurar cabelos danificados, proporcionando maciez, brilho e proteção.",
+          "price": 125.90,
+          "comparePrice": 155.90,
+          "sku": "WEL-LO-001",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Tratamentos de Luxo",
+          "tags": ["luxo", "óleos preciosos", "queratina", "proteção"],
+          "rating": 4.8,
+          "reviewsCount": 78,
+          "inStock": true,
+          "stockQuantity": 16,
+          "weight": 400,
+          "labels": ["LUXO", "ÓLEOS PRECIOSOS"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&h=800&fit=crop",
+              "alt": "Wella SP LuxeOil",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "redken-extreme-mega-mask",
+          "name": "Redken Extreme Mega Mask",
+          "slug": "redken-extreme-mega-mask",
+          "brand": "Redken",
+          "shortDesc": "Mega máscara para cabelos extremamente danificados",
+          "description": "Máscara intensiva que proporciona força e reparação para cabelos extremamente danificados, fragilizados e processados quimicamente.",
+          "price": 145.90,
+          "comparePrice": 179.90,
+          "sku": "RDK-EM-001",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Máscaras Intensivas",
+          "tags": ["extremamente danificados", "força", "reparação", "processados quimicamente"],
+          "rating": 4.8,
+          "reviewsCount": 112,
+          "inStock": true,
+          "stockQuantity": 14,
+          "weight": 500,
+          "labels": ["REDKEN", "EXTREME"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=800&fit=crop",
+              "alt": "Redken Extreme Mega Mask",
+              "isMain": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shampoos-condicionadores",
+      "name": "Shampoos e Condicionadores",
+      "slug": "shampoos-condicionadores",
+      "description": "Shampoos e condicionadores para todos os tipos de cabelo",
+      "icon": "🧴",
+      "products": [
+        {
+          "id": "natura-ekos-castanha-shampoo",
+          "name": "Natura Ekos Castanha Shampoo",
+          "slug": "natura-ekos-castanha-shampoo",
+          "brand": "Natura",
+          "shortDesc": "Shampoo vegano com óleo de castanha para cabelos ressecados",
+          "description": "Shampoo vegano enriquecido com óleo de castanha que limpa suavemente e hidrata profundamente cabelos ressecados e sem vida.",
+          "price": 28.90,
+          "comparePrice": 35.90,
+          "sku": "NAT-EC-001",
+          "category": "Shampoos e Condicionadores",
+          "subcategory": "Shampoos",
+          "tags": ["vegano", "castanha", "hidratante", "cabelos ressecados"],
+          "rating": 4.6,
+          "reviewsCount": 234,
+          "inStock": true,
+          "stockQuantity": 45,
+          "weight": 300,
+          "labels": ["VEGANO", "NATURAL"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1556228578-dd2370d290b7?w=800&h=800&fit=crop",
+              "alt": "Natura Ekos Castanha",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "bio-extratus-pos-quimica-kit",
+          "name": "Bio Extratus Pós Química Kit",
+          "slug": "bio-extratus-pos-quimica-kit",
+          "brand": "Bio Extratus",
+          "shortDesc": "Kit pós química com shampoo e condicionador reparador",
+          "description": "Kit completo pós química que neutraliza resíduos alcalinos e reconstrói cabelos após procedimentos químicos. Shampoo + Condicionador.",
+          "price": 45.90,
+          "comparePrice": 59.90,
+          "sku": "BIO-PQ-001",
+          "category": "Shampoos e Condicionadores",
+          "subcategory": "Kits",
+          "tags": ["pós química", "neutraliza", "reconstrói", "kit completo"],
+          "rating": 4.8,
+          "reviewsCount": 189,
+          "inStock": true,
+          "stockQuantity": 32,
+          "weight": 600,
+          "labels": ["PÓS QUÍMICA", "KIT"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=800&fit=crop",
+              "alt": "Bio Extratus Pós Química",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "boticario-nativa-spa-quinoa",
+          "name": "O Boticário Nativa SPA Quinoa",
+          "slug": "boticario-nativa-spa-quinoa",
+          "brand": "O Boticário",
+          "shortDesc": "Linha capilar com quinoa real para nutrição e força",
+          "description": "Shampoo e condicionador com quinoa real que nutre profundamente, fortalece e proporciona brilho natural aos cabelos fragilizados.",
+          "price": 52.90,
+          "comparePrice": 69.90,
+          "sku": "BOT-NS-001",
+          "category": "Shampoos e Condicionadores", 
+          "subcategory": "Linhas Premium",
+          "tags": ["quinoa real", "nutrição", "força", "brilho natural"],
+          "rating": 4.7,
+          "reviewsCount": 156,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 700,
+          "labels": ["QUINOA", "PREMIUM"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&h=800&fit=crop",
+              "alt": "Boticário Nativa SPA Quinoa",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "elseve-cicatri-renov-kit",
+          "name": "Elsève Cicatri Renov Kit Reparação",
+          "slug": "elseve-cicatri-renov-kit",
+          "brand": "L'Oréal",
+          "shortDesc": "Kit reparador para cabelos muito danificados",
+          "description": "Sistema reparador que reconstrói cabelos muito danificados desde a primeira aplicação. Fórmula com Pro-Queratina e Ceramidas.",
+          "price": 38.90,
+          "comparePrice": 49.90,
+          "sku": "LOR-CR-001",
+          "category": "Shampoos e Condicionadores",
+          "subcategory": "Reparação",
+          "tags": ["muito danificados", "pro-queratina", "ceramidas", "primeira aplicação"],
+          "rating": 4.5,
+          "reviewsCount": 267,
+          "inStock": true,
+          "stockQuantity": 38,
+          "weight": 650,
+          "labels": ["REPARAÇÃO", "PRO-QUERATINA"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1615971677499-5467cea2d7c8?w=800&h=800&fit=crop",
+              "alt": "Elsève Cicatri Renov",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "pantene-hidro-cauterizacao",
+          "name": "Pantene Hidro Cauterização",
+          "slug": "pantene-hidro-cauterizacao",
+          "brand": "Pantene",
+          "shortDesc": "Sistema de hidro cauterização para cabelos ressecados",
+          "description": "Tecnologia exclusiva que hidrata e sela as cutículas dos cabelos, proporcionando hidratação duradoura e proteção contra ressecamento.",
+          "price": 32.90,
+          "comparePrice": 42.90,
+          "sku": "PAN-HC-001",
+          "category": "Shampoos e Condicionadores",
+          "subcategory": "Hidratação",
+          "tags": ["hidro cauterização", "sela cutículas", "hidratação duradoura", "proteção"],
+          "rating": 4.6,
+          "reviewsCount": 198,
+          "inStock": true,
+          "stockQuantity": 42,
+          "weight": 600,
+          "labels": ["HIDRO", "CAUTERIZAÇÃO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a473?w=800&h=800&fit=crop",
+              "alt": "Pantene Hidro Cauterização",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "tresemme-keratin-smooth-kit",
+          "name": "TRESemmé Keratin Smooth Kit",
+          "slug": "tresemme-keratin-smooth-kit",
+          "brand": "TRESemmé",
+          "shortDesc": "Kit profissional com queratina para alisamento e brilho",
+          "description": "Kit profissional enriquecido com queratina que proporciona cabelos lisos, controlados e com brilho intenso por até 72 horas.",
+          "price": 29.90,
+          "comparePrice": 39.90,
+          "sku": "TRE-KS-001",
+          "category": "Shampoos e Condicionadores",
+          "subcategory": "Alisamento",
+          "tags": ["profissional", "queratina", "72 horas", "brilho intenso"],
+          "rating": 4.4,
+          "reviewsCount": 312,
+          "inStock": true,
+          "stockQuantity": 55,
+          "weight": 600,
+          "labels": ["PROFISSIONAL", "72H"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1619451334792-150cbfb0ccd9?w=800&h=800&fit=crop",
+              "alt": "TRESemmé Keratin Smooth",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "aussie-curls-cachos-kit",
+          "name": "Aussie Curls Cachos Perfeitos Kit",
+          "slug": "aussie-curls-cachos-kit",
+          "brand": "Aussie",
+          "shortDesc": "Kit especializado para definição e cuidado de cachos",
+          "description": "Kit desenvolvido especialmente para cabelos cacheados que define, hidrata e proporciona cachos perfeitos sem frizz.",
+          "price": 41.90,
+          "comparePrice": 54.90,
+          "sku": "AUS-CC-001",
+          "category": "Shampoos e Condicionadores",
+          "subcategory": "Cachos",
+          "tags": ["cachos", "define", "sem frizz", "especializado"],
+          "rating": 4.7,
+          "reviewsCount": 145,
+          "inStock": true,
+          "stockQuantity": 35,
+          "weight": 650,
+          "labels": ["CACHOS", "SEM FRIZZ"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1617117337717-d4c6a6ecbdc8?w=800&h=800&fit=crop",
+              "alt": "Aussie Curls Cachos",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "seda-boom-reconstrucao-kit",
+          "name": "Seda Boom Reconstrução Kit",
+          "slug": "seda-boom-reconstrucao-kit",
+          "brand": "Seda",
+          "shortDesc": "Kit reconstrutor para cabelos quebrados e fragilizados",
+          "description": "Sistema de reconstrução que repara cabelos quebrados e fragilizados, devolvendo força, resistência e elasticidade natural.",
+          "price": 26.90,
+          "comparePrice": 34.90,
+          "sku": "SED-BR-001",
+          "category": "Shampoos e Condicionadores",
+          "subcategory": "Reconstrução",
+          "tags": ["reconstrutor", "quebrados", "força", "elasticidade"],
+          "rating": 4.5,
+          "reviewsCount": 278,
+          "inStock": true,
+          "stockQuantity": 48,
+          "weight": 600,
+          "labels": ["RECONSTRUÇÃO", "FORÇA"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&h=800&fit=crop",
+              "alt": "Seda Boom Reconstrução",
+              "isMain": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maquiagem",
+      "name": "Maquiagem",
+      "slug": "maquiagem",
+      "description": "Produtos de maquiagem profissional e para o dia a dia",
+      "icon": "💄",
+      "products": [
+        {
+          "id": "mari-maria-base-liquida-hd",
+          "name": "Mari Maria Base Líquida HD",
+          "slug": "mari-maria-base-liquida-hd",
+          "brand": "Mari Maria",
+          "shortDesc": "Base líquida alta definição com cobertura natural",
+          "description": "Base líquida de alta definição que proporciona cobertura natural, longa duração e acabamento sedoso. Disponível em diversos tons.",
+          "price": 45.90,
+          "comparePrice": 59.90,
+          "sku": "MM-BL-001",
+          "category": "Maquiagem",
+          "subcategory": "Base",
+          "tags": ["alta definição", "cobertura natural", "longa duração", "diversos tons"],
+          "rating": 4.7,
+          "reviewsCount": 189,
+          "inStock": true,
+          "stockQuantity": 35,
+          "weight": 30,
+          "labels": ["HD", "LONGA DURAÇÃO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&h=800&fit=crop",
+              "alt": "Mari Maria Base HD",
+              "isMain": true
+            }
+          ],
+          "variants": [
+            { "shade": "Bege Claro", "stock": 12 },
+            { "shade": "Bege Médio", "stock": 15 },
+            { "shade": "Bege Escuro", "stock": 8 }
+          ]
+        },
+        {
+          "id": "boca-rosa-batom-matte",
+          "name": "Boca Rosa Batom Matte Líquido",
+          "slug": "boca-rosa-batom-matte",
+          "brand": "Boca Rosa",
+          "shortDesc": "Batom líquido matte com alta pigmentação",
+          "description": "Batom líquido matte de alta pigmentação que proporciona cor intensa, longa duração e conforto durante o uso. Não resseca os lábios.",
+          "price": 35.90,
+          "comparePrice": 45.90,
+          "sku": "BR-BM-001",
+          "category": "Maquiagem",
+          "subcategory": "Lábios",
+          "tags": ["matte", "alta pigmentação", "cor intensa", "não resseca"],
+          "rating": 4.8,
+          "reviewsCount": 267,
+          "inStock": true,
+          "stockQuantity": 45,
+          "weight": 8,
+          "labels": ["MATTE", "ALTA PIGMENTAÇÃO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=800&h=800&fit=crop",
+              "alt": "Boca Rosa Batom Matte",
+              "isMain": true
+            }
+          ],
+          "variants": [
+            { "shade": "Nude Rosado", "stock": 15 },
+            { "shade": "Vermelho Clássico", "stock": 18 },
+            { "shade": "Rosa Intenso", "stock": 12 }
+          ]
+        },
+        {
+          "id": "vult-paleta-sombras-urban",
+          "name": "Vult Paleta de Sombras Urban",
+          "slug": "vult-paleta-sombras-urban",
+          "brand": "Vult",
+          "shortDesc": "Paleta de sombras com 12 tons urbanos e modernos",
+          "description": "Paleta com 12 tons cuidadosamente selecionados para criar looks urbanos e modernos. Sombras de alta pigmentação e fácil esfumado.",
+          "price": 55.90,
+          "comparePrice": 69.90,
+          "sku": "VUL-PS-001",
+          "category": "Maquiagem",
+          "subcategory": "Olhos",
+          "tags": ["12 tons", "urbanos", "alta pigmentação", "fácil esfumado"],
+          "rating": 4.6,
+          "reviewsCount": 134,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 15,
+          "labels": ["12 TONS", "URBAN"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=800&fit=crop",
+              "alt": "Vult Paleta Urban",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "ruby-rose-blush-compacto",
+          "name": "Ruby Rose Blush Compacto",
+          "slug": "ruby-rose-blush-compacto",
+          "brand": "Ruby Rose",
+          "shortDesc": "Blush compacto com cor natural e longa fixação",
+          "description": "Blush compacto que proporciona cor natural às bochechas com longa fixação. Textura sedosa e fácil aplicação.",
+          "price": 22.90,
+          "comparePrice": 29.90,
+          "sku": "RR-BC-001",
+          "category": "Maquiagem",
+          "subcategory": "Blush",
+          "tags": ["cor natural", "longa fixação", "textura sedosa", "fácil aplicação"],
+          "rating": 4.5,
+          "reviewsCount": 198,
+          "inStock": true,
+          "stockQuantity": 42,
+          "weight": 10,
+          "labels": ["NATURAL", "LONGA FIXAÇÃO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=800&fit=crop",
+              "alt": "Ruby Rose Blush",
+              "isMain": true
+            }
+          ],
+          "variants": [
+            { "shade": "Rosa Natural", "stock": 15 },
+            { "shade": "Pêssego", "stock": 12 },
+            { "shade": "Coral Suave", "stock": 15 }
+          ]
+        },
+        {
+          "id": "payot-po-compacto-translucido",
+          "name": "Payot Pó Compacto Translúcido",
+          "slug": "payot-po-compacto-translucido",
+          "brand": "Payot",
+          "shortDesc": "Pó compacto translúcido para selagem e matificação",
+          "description": "Pó compacto translúcido que sela a maquiagem e controla a oleosidade, proporcionando acabamento matte e natural por horas.",
+          "price": 38.90,
+          "comparePrice": 48.90,
+          "sku": "PAY-PC-001",
+          "category": "Maquiagem",
+          "subcategory": "Pó",
+          "tags": ["translúcido", "sela maquiagem", "controla oleosidade", "acabamento matte"],
+          "rating": 4.7,
+          "reviewsCount": 156,
+          "inStock": true,
+          "stockQuantity": 32,
+          "weight": 12,
+          "labels": ["TRANSLÚCIDO", "MATTE"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1631730225619-7c12c675e9c0?w=800&h=800&fit=crop",
+              "alt": "Payot Pó Translúcido",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "catharine-hill-primer-facial",
+          "name": "Catharine Hill Primer Facial",
+          "slug": "catharine-hill-primer-facial",
+          "brand": "Catharine Hill",
+          "shortDesc": "Primer facial profissional para preparação da pele",
+          "description": "Primer profissional que prepara a pele para a maquiagem, minimiza poros, controla oleosidade e prolonga a duração da make.",
+          "price": 42.90,
+          "comparePrice": 55.90,
+          "sku": "CH-PF-001",
+          "category": "Maquiagem",
+          "subcategory": "Primer",
+          "tags": ["profissional", "minimiza poros", "controla oleosidade", "prolonga duração"],
+          "rating": 4.8,
+          "reviewsCount": 89,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 30,
+          "labels": ["PROFISSIONAL", "PRIMER"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1609166473836-0b10963ed1c7?w=800&h=800&fit=crop",
+              "alt": "Catharine Hill Primer",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "eudora-mascara-cilios-mega",
+          "name": "Eudora Máscara de Cílios Mega Volume",
+          "slug": "eudora-mascara-cilios-mega",
+          "brand": "Eudora",
+          "shortDesc": "Máscara de cílios para volume e alongamento extremo",
+          "description": "Máscara que proporciona volume e alongamento extremo aos cílios, com fórmula à prova d'água e aplicador exclusivo para máximo resultado.",
+          "price": 32.90,
+          "comparePrice": 42.90,
+          "sku": "EUD-MC-001",
+          "category": "Maquiagem",
+          "subcategory": "Olhos",
+          "tags": ["volume extremo", "alongamento", "à prova d'água", "aplicador exclusivo"],
+          "rating": 4.6,
+          "reviewsCount": 234,
+          "inStock": true,
+          "stockQuantity": 38,
+          "weight": 8,
+          "labels": ["MEGA VOLUME", "À PROVA D'ÁGUA"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1620734089038-eef53ee7990c?w=800&h=800&fit=crop",
+              "alt": "Eudora Máscara Mega Volume",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "dailus-delineador-gel",
+          "name": "Dailus Delineador em Gel",
+          "slug": "dailus-delineador-gel",
+          "brand": "Dailus",
+          "shortDesc": "Delineador em gel de alta precisão e durabilidade",
+          "description": "Delineador em gel que permite traços precisos e definidos, com alta durabilidade e resistência à água. Acompanha pincel aplicador.",
+          "price": 25.90,
+          "comparePrice": 32.90,
+          "sku": "DAI-DG-001",
+          "category": "Maquiagem",
+          "subcategory": "Olhos",
+          "tags": ["gel", "alta precisão", "resistente à água", "pincel incluso"],
+          "rating": 4.5,
+          "reviewsCount": 167,
+          "inStock": true,
+          "stockQuantity": 35,
+          "weight": 5,
+          "labels": ["GEL", "ALTA PRECISÃO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=800&fit=crop",
+              "alt": "Dailus Delineador Gel",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "quem-disse-berenice-gloss",
+          "name": "Quem Disse Berenice? Gloss Labial",
+          "slug": "quem-disse-berenice-gloss",
+          "brand": "Quem Disse Berenice?",
+          "shortDesc": "Gloss labial com brilho intenso e hidratação",
+          "description": "Gloss labial que proporciona brilho intenso e hidratação aos lábios. Fórmula não pegajosa com aplicador exclusivo para distribuição uniforme.",
+          "price": 28.90,
+          "comparePrice": 36.90,
+          "sku": "QDB-GL-001",
+          "category": "Maquiagem",
+          "subcategory": "Lábios",
+          "tags": ["brilho intenso", "hidratação", "não pegajoso", "aplicador exclusivo"],
+          "rating": 4.4,
+          "reviewsCount": 145,
+          "inStock": true,
+          "stockQuantity": 42,
+          "weight": 8,
+          "labels": ["BRILHO INTENSO", "HIDRATANTE"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1576426863848-c21f53c60b19?w=800&h=800&fit=crop",
+              "alt": "QDB Gloss Labial",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "bt-skin-corretivo-liquido",
+          "name": "BT Skin Corretivo Líquido",
+          "slug": "bt-skin-corretivo-liquido",
+          "brand": "BT Skin",
+          "shortDesc": "Corretivo líquido de alta cobertura para imperfeições",
+          "description": "Corretivo líquido de alta cobertura que disfarça imperfeições, olheiras e manchas com acabamento natural. Fórmula de longa duração.",
+          "price": 33.90,
+          "comparePrice": 42.90,
+          "sku": "BTS-CL-001",
+          "category": "Maquiagem",
+          "subcategory": "Corretivo",
+          "tags": ["alta cobertura", "imperfeições", "olheiras", "longa duração"],
+          "rating": 4.7,
+          "reviewsCount": 123,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 10,
+          "labels": ["ALTA COBERTURA", "LONGA DURAÇÃO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1611348586804-61bf6c080437?w=800&h=800&fit=crop",
+              "alt": "BT Skin Corretivo",
+              "isMain": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ferramentas",
+      "name": "Ferramentas Profissionais",
+      "slug": "ferramentas",
+      "description": "Ferramentas e equipamentos profissionais para cabelo",
+      "icon": "⚒️",
+      "products": [
+        {
+          "id": "taiff-secador-turbo-ion",
+          "name": "Taiff Secador Turbo Ion Professional",
+          "slug": "taiff-secador-turbo-ion",
+          "brand": "Taiff",
+          "shortDesc": "Secador profissional com tecnologia íon e motor AC",
+          "description": "Secador profissional com tecnologia íon que reduz o frizz e proporciona brilho intenso. Motor AC de longa durabilidade e 2000W de potência.",
+          "price": 189.90,
+          "comparePrice": 239.90,
+          "sku": "TAI-ST-001",
+          "category": "Ferramentas Profissionais",
+          "subcategory": "Secadores",
+          "tags": ["profissional", "tecnologia íon", "motor AC", "2000W"],
+          "rating": 4.8,
+          "reviewsCount": 167,
+          "inStock": true,
+          "stockQuantity": 15,
+          "weight": 800,
+          "labels": ["PROFISSIONAL", "ÍON"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=800&fit=crop",
+              "alt": "Taiff Secador Turbo Ion",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "mq-professional-chapinha-titanium",
+          "name": "MQ Professional Chapinha Titanium",
+          "slug": "mq-professional-chapinha-titanium",
+          "brand": "MQ Professional",
+          "shortDesc": "Chapinha profissional com placas de titânio e display digital",
+          "description": "Chapinha profissional com placas de titânio que proporcionam alisamento perfeito e duradouro. Display digital com controle de temperatura até 230°C.",
+          "price": 159.90,
+          "comparePrice": 199.90,
+          "sku": "MQ-CT-001",
+          "category": "Ferramentas Profissionais",
+          "subcategory": "Chapinhas",
+          "tags": ["titânio", "display digital", "230°C", "alisamento perfeito"],
+          "rating": 4.7,
+          "reviewsCount": 134,
+          "inStock": true,
+          "stockQuantity": 18,
+          "weight": 600,
+          "labels": ["TITÂNIO", "DIGITAL"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=800&fit=crop",
+              "alt": "MQ Professional Chapinha",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "gama-modelador-cachos-ceramic",
+          "name": "GA.MA Modelador de Cachos Ceramic",
+          "slug": "gama-modelador-cachos-ceramic",
+          "brand": "GA.MA",
+          "shortDesc": "Modelador italiano com revestimento cerâmico para cachos perfeitos",
+          "description": "Modelador de cachos italiano com revestimento cerâmico que distribui calor uniformemente, criando cachos definidos e duradouros sem danificar os fios.",
+          "price": 145.90,
+          "comparePrice": 179.90,
+          "sku": "GAM-MC-001",
+          "category": "Ferramentas Profissionais",
+          "subcategory": "Modeladores",
+          "tags": ["italiano", "cerâmico", "cachos perfeitos", "calor uniforme"],
+          "rating": 4.6,
+          "reviewsCount": 89,
+          "inStock": true,
+          "stockQuantity": 12,
+          "weight": 400,
+          "labels": ["ITALIANO", "CERÂMICO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=800&h=800&fit=crop",
+              "alt": "GA.MA Modelador Cachos",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "babyliss-escova-rotativa-pro",
+          "name": "BabyLiss Escova Rotativa Pro",
+          "slug": "babyliss-escova-rotativa-pro",
+          "brand": "BabyLiss",
+          "shortDesc": "Escova rotativa profissional para volume e alisamento",
+          "description": "Escova rotativa com cerdas mistas e íons que proporciona volume, alisamento e brilho em uma única ferramenta. Tecnologia francesa.",
+          "price": 199.90,
+          "comparePrice": 249.90,
+          "sku": "BAB-ER-001",
+          "category": "Ferramentas Profissionais",
+          "subcategory": "Escovas",
+          "tags": ["rotativa", "cerdas mistas", "íons", "francesa"],
+          "rating": 4.8,
+          "reviewsCount": 112,
+          "inStock": true,
+          "stockQuantity": 10,
+          "weight": 700,
+          "labels": ["ROTATIVA", "FRANCESA"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1505944270255-72b8c68c6a70?w=800&h=800&fit=crop",
+              "alt": "BabyLiss Escova Rotativa",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "philco-prancha-vapor-ceramic",
+          "name": "Philco Prancha a Vapor Ceramic",
+          "slug": "philco-prancha-vapor-ceramic",
+          "brand": "Philco",
+          "shortDesc": "Prancha com tecnologia a vapor e placas cerâmicas",
+          "description": "Prancha inovadora com tecnologia a vapor que hidrata enquanto alisa. Placas cerâmicas que proporcionam deslizamento suave e proteção aos fios.",
+          "price": 179.90,
+          "comparePrice": 219.90,
+          "sku": "PHI-PV-001",
+          "category": "Ferramentas Profissionais",
+          "subcategory": "Pranchas",
+          "tags": ["vapor", "hidrata", "cerâmicas", "proteção"],
+          "rating": 4.5,
+          "reviewsCount": 78,
+          "inStock": true,
+          "stockQuantity": 14,
+          "weight": 650,
+          "labels": ["VAPOR", "HIDRATAÇÃO"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=800&fit=crop",
+              "alt": "Philco Prancha Vapor",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "lizz-professional-escova-progressive",
+          "name": "Lizz Professional Escova Progressive",
+          "slug": "lizz-escova-progressive",
+          "brand": "Lizz",
+          "shortDesc": "Escova alisadora com tecnologia progressiva e íons",
+          "description": "Escova alisadora com tecnologia progressiva que alisa gradualmente com uso contínuo. Emite íons negativos para reduzir frizz e adicionar brilho.",
+          "price": 129.90,
+          "comparePrice": 159.90,
+          "sku": "LIZ-EP-001",
+          "category": "Ferramentas Profissionais",
+          "subcategory": "Escovas Alisadoras",
+          "tags": ["progressiva", "íons negativos", "uso contínuo", "reduz frizz"],
+          "rating": 4.4,
+          "reviewsCount": 145,
+          "inStock": true,
+          "stockQuantity": 22,
+          "weight": 500,
+          "labels": ["PROGRESSIVA", "ÍONS"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&h=800&fit=crop",
+              "alt": "Lizz Escova Progressive",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "mondial-kit-manicure-profissional",
+          "name": "Mondial Kit Manicure Profissional",
+          "slug": "mondial-kit-manicure",
+          "brand": "Mondial",
+          "shortDesc": "Kit completo de manicure com lima elétrica e acessórios",
+          "description": "Kit profissional completo para manicure contendo lima elétrica, alicates, espátulas e todos os acessórios necessários para um trabalho perfeito.",
+          "price": 89.90,
+          "comparePrice": 119.90,
+          "sku": "MON-KM-001",
+          "category": "Ferramentas Profissionais",
+          "subcategory": "Manicure",
+          "tags": ["kit completo", "lima elétrica", "alicates", "profissional"],
+          "rating": 4.6,
+          "reviewsCount": 98,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 800,
+          "labels": ["KIT COMPLETO", "ELÉTRICA"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&h=800&fit=crop",
+              "alt": "Mondial Kit Manicure",
+              "isMain": true
+            }
+          ]
+        },
+        {
+          "id": "parlux-secador-eco-friendly",
+          "name": "Parlux Secador Eco Friendly",
+          "slug": "parlux-secador-eco-friendly",
+          "brand": "Parlux",
+          "shortDesc": "Secador italiano eco-friendly com motor K-Lamination",
+          "description": "Secador italiano sustentável com motor K-Lamination de última geração. Baixo consumo energético, alta performance e materiais recicláveis.",
+          "price": 349.90,
+          "comparePrice": 429.90,
+          "sku": "PAR-EF-001",
+          "category": "Ferramentas Profissionais",
+          "subcategory": "Secadores Premium",
+          "tags": ["eco-friendly", "k-lamination", "baixo consumo", "italiano"],
+          "rating": 4.9,
+          "reviewsCount": 45,
+          "inStock": true,
+          "stockQuantity": 8,
+          "weight": 900,
+          "labels": ["ECO-FRIENDLY", "PREMIUM"],
+          "images": [
+            {
+              "url": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a473?w=800&h=800&fit=crop",
+              "alt": "Parlux Eco Friendly",
+              "isMain": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

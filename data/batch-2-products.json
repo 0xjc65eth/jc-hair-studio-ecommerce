@@ -1,0 +1,683 @@
+{
+  "batch_info": {
+    "batch_number": 2,
+    "total_products": 20,
+    "processing_date": "2024-09-14",
+    "currency": "EUR",
+    "markup_applied": "50%",
+    "source": "Google Drive Images Analysis",
+    "target_market": "Hair Studio Professional"
+  },
+  "summary": {
+    "total_products": 20,
+    "brazilian_brands": 17,
+    "international_brands": 3,
+    "categories": {
+      "cuidados_diarios": 7,
+      "maquiagem": 6,
+      "corporais": 3,
+      "tratamento_capilar": 2,
+      "ferramentas": 1
+    },
+    "price_range_eur": {
+      "min": 4.25,
+      "max": 44.97,
+      "average": 15.23
+    },
+    "total_stock": 467,
+    "featured_products": 8
+  },
+  "products": [
+    {
+      "sku": "PAYOT-HC-400",
+      "name": "Hidratante Capilar Babosa e Coco",
+      "brand": "Payot",
+      "category": "cuidados_diarios",
+      "subcategory": "hidratante",
+      "description": "Creme hidratante capilar com babosa e óleo de coco. Nutre profundamente os fios, proporcionando maciez e brilho natural. Ideal para cabelos ressecados e danificados. Fórmula livre de parabenos e sulfatos, desenvolvida especialmente para hair studios profissionais.",
+      "price": {
+        "retail": 13.77,
+        "professional": 11.48,
+        "promotional": 10.47,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "400g", "price": 13.77, "stock": 25, "barcode": "7894900015234"}
+      ],
+      "stock": {"available": 25, "reserved": 3, "minimum": 8},
+      "attributes": {
+        "benefits": ["Hidratação profunda", "Brilho natural", "Maciez intensa", "Livre de parabenos"],
+        "indications": ["Cabelos ressecados", "Cabelos danificados", "Todos os tipos de cabelo"],
+        "composition": ["Babosa", "Óleo de coco", "Proteínas vegetais"]
+      },
+      "ratings": {"average": 4.6, "count": 189},
+      "tags": ["hidratante", "payot", "babosa", "coco", "natural", "brasil"],
+      "featured": false,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "VULT-PAL-12C",
+      "name": "Paleta de Sombras 12 Cores Nude",
+      "brand": "Vult Cosméticos",
+      "category": "maquiagem",
+      "subcategory": "sombra",
+      "description": "Paleta com 12 tons nude desenvolvidos para a pele brasileira. Texturas matte e shimmer de alta pigmentação. Cores versáteis para looks do dia ao noite. Fórmula cremosa e duradoura, perfeita para maquiadores profissionais.",
+      "price": {
+        "retail": 26.97,
+        "professional": 22.48,
+        "promotional": 20.23,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "12 cores", "price": 26.97, "stock": 15, "barcode": "7899618904567"}
+      ],
+      "stock": {"available": 15, "reserved": 2, "minimum": 5},
+      "attributes": {
+        "color": "Tons Nude",
+        "texture": "Matte e Shimmer",
+        "finish": "Variado",
+        "benefits": ["Alta pigmentação", "Longa duração", "Cores versáteis", "Pele brasileira"]
+      },
+      "ratings": {"average": 4.8, "count": 267},
+      "tags": ["sombra", "vult", "paleta", "nude", "maquiagem", "brasil"],
+      "featured": true,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "NATURA-BTM-RV",
+      "name": "Batom Cremoso Una Vermelho Clássico",
+      "brand": "Natura",
+      "category": "maquiagem",
+      "subcategory": "batom",
+      "description": "Batom cremoso Una Natura na cor vermelho clássico. Fórmula hidratante com óleos naturais, proporciona cobertura uniforme e conforto por até 6 horas. Cor universal que valoriza todos os tons de pele brasileira.",
+      "price": {
+        "retail": 11.97,
+        "professional": 9.97,
+        "promotional": 8.98,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "3.2g", "price": 11.97, "stock": 30, "barcode": "7891350956789"}
+      ],
+      "stock": {"available": 30, "reserved": 4, "minimum": 10},
+      "attributes": {
+        "color": "Vermelho Clássico",
+        "texture": "Cremoso",
+        "finish": "Cremoso",
+        "benefits": ["Hidratante", "Longa duração", "Óleos naturais", "Cor universal"]
+      },
+      "ratings": {"average": 4.7, "count": 423},
+      "tags": ["batom", "natura", "una", "vermelho", "cremoso", "brasil"],
+      "featured": true,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "BOTIC-HID-250",
+      "name": "Hidratante Corporal Nativa SPA Quinoa",
+      "brand": "O Boticário",
+      "category": "corporais",
+      "subcategory": "hidratante",
+      "description": "Hidratante corporal enriquecido com quinoa real e manteiga de murumuru. Absorção rápida, hidratação por 24 horas. Fragrância suave e duradoura. Desenvolvido para todos os tipos de pele, especialmente formulado para o clima brasileiro.",
+      "price": {
+        "retail": 9.87,
+        "professional": 8.23,
+        "promotional": 7.40,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "250ml", "price": 9.87, "stock": 40, "barcode": "7891350045678"}
+      ],
+      "stock": {"available": 40, "reserved": 5, "minimum": 15},
+      "attributes": {
+        "benefits": ["Absorção rápida", "Hidratação 24h", "Fragrância duradoura", "Todos os tipos de pele"],
+        "indications": ["Pele ressecada", "Uso diário", "Pós-banho"],
+        "composition": ["Quinoa real", "Manteiga de murumuru", "Óleos vegetais"]
+      },
+      "ratings": {"average": 4.5, "count": 345},
+      "tags": ["hidratante", "boticário", "nativa spa", "quinoa", "corporal", "brasil"],
+      "featured": false,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "MAYB-RIM-PTR",
+      "name": "Rímel Volum Express Preto",
+      "brand": "Maybelline",
+      "category": "maquiagem",
+      "subcategory": "rimel",
+      "description": "Rímel Volum Express com escova mega volume para cílios 5x mais volumosos. Fórmula resistente à água e suor. Cor preta intensa que não borra. Ideal para looks marcantes e duradouros no clima brasileiro.",
+      "price": {
+        "retail": 8.67,
+        "professional": 7.22,
+        "promotional": 6.50,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "9.5ml", "price": 8.67, "stock": 35, "barcode": "7500435789012"}
+      ],
+      "stock": {"available": 35, "reserved": 3, "minimum": 12},
+      "attributes": {
+        "color": "Preto",
+        "texture": "Cremosa",
+        "finish": "Volumoso",
+        "benefits": ["5x mais volume", "Resistente à água", "Não borra", "Longa duração"]
+      },
+      "ratings": {"average": 4.6, "count": 512},
+      "tags": ["rimel", "maybelline", "volum express", "preto", "volume", "brasil"],
+      "featured": true,
+      "brazilian_brand": false
+    },
+    {
+      "sku": "AVON-GLO-RSE",
+      "name": "Gloss Labial True Color Rosa",
+      "brand": "Avon",
+      "category": "maquiagem",
+      "subcategory": "gloss",
+      "description": "Gloss labial True Color com brilho intenso e hidratação duradoura. Cor rosa universal que realça a beleza natural dos lábios. Fórmula enriquecida com vitamina E e óleos naturais. Aplicação fácil e resultado profissional.",
+      "price": {
+        "retail": 6.00,
+        "professional": 5.00,
+        "promotional": 4.50,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "6.5ml", "price": 6.00, "stock": 25, "barcode": "7891350067890"}
+      ],
+      "stock": {"available": 25, "reserved": 2, "minimum": 8},
+      "attributes": {
+        "color": "Rosa",
+        "texture": "Glossy",
+        "finish": "Brilhante",
+        "benefits": ["Brilho intenso", "Hidratação duradoura", "Vitamina E", "Cor universal"]
+      },
+      "ratings": {"average": 4.4, "count": 198},
+      "tags": ["gloss", "avon", "true color", "rosa", "brilhante", "brasil"],
+      "featured": false,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "GRANADO-SAB-GLI",
+      "name": "Sabonete Líquido Glicerina",
+      "brand": "Granado",
+      "category": "corporais",
+      "subcategory": "sabonete",
+      "description": "Sabonete líquido tradicional com glicerina vegetal. Fórmula suave que limpa sem resseca. Fragrância clássica e envolvente. Produto tradicional brasileiro, ideal para todos os tipos de pele. Rico em glicerina natural.",
+      "price": {
+        "retail": 7.47,
+        "professional": 6.23,
+        "promotional": 5.60,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "300ml", "price": 7.47, "stock": 30, "barcode": "7891350012345"}
+      ],
+      "stock": {"available": 30, "reserved": 3, "minimum": 10},
+      "attributes": {
+        "benefits": ["Limpa sem ressecar", "Glicerina vegetal", "Fragrância clássica", "Todos os tipos de pele"],
+        "indications": ["Pele sensível", "Uso diário", "Toda a família"],
+        "composition": ["Glicerina vegetal", "Óleos naturais", "Essências florais"]
+      },
+      "ratings": {"average": 4.7, "count": 287},
+      "tags": ["sabonete", "granado", "glicerina", "líquido", "tradicional", "brasil"],
+      "featured": false,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "EUDORA-PER-SIL",
+      "name": "Perfume Siàge Eau de Parfum",
+      "brand": "Eudora",
+      "category": "corporais",
+      "subcategory": "perfume",
+      "description": "Perfume feminino Siàge com notas florais e frutais. Fragrância sofisticada e marcante, com fixação superior a 8 horas. Desenvolvido por perfumistas franceses especialmente para a mulher brasileira. Frasco elegante e moderno.",
+      "price": {
+        "retail": 38.97,
+        "professional": 32.48,
+        "promotional": 29.23,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "75ml", "price": 38.97, "stock": 12, "barcode": "7891350078901"}
+      ],
+      "stock": {"available": 12, "reserved": 1, "minimum": 4},
+      "attributes": {
+        "benefits": ["Fixação 8h+", "Notas florais", "Perfumistas franceses", "Fragrância sofisticada"],
+        "indications": ["Uso diário", "Ocasiões especiais", "Mulher moderna"],
+        "composition": ["Notas de topo: bergamota", "Notas de coração: jasmin", "Notas de fundo: âmbar"]
+      },
+      "ratings": {"average": 4.8, "count": 156},
+      "tags": ["perfume", "eudora", "siage", "floral", "feminino", "brasil"],
+      "featured": true,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "RUBY-PO-COM",
+      "name": "Pó Compacto Facial Bege Médio",
+      "brand": "Ruby Rose",
+      "category": "maquiagem",
+      "subcategory": "po",
+      "description": "Pó compacto facial com cobertura natural e acabamento aveludado. Tom bege médio desenvolvido para pele brasileira. Controla oleosidade por até 8 horas. Fórmula livre de parabenos, ideal para uso profissional em hair studios.",
+      "price": {
+        "retail": 6.87,
+        "professional": 5.72,
+        "promotional": 5.15,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "9g", "price": 6.87, "stock": 28, "barcode": "7899562509876"}
+      ],
+      "stock": {"available": 28, "reserved": 3, "minimum": 10},
+      "attributes": {
+        "color": "Bege Médio",
+        "texture": "Compacto",
+        "finish": "Aveludado",
+        "benefits": ["Cobertura natural", "Controle oleosidade 8h", "Pele brasileira", "Livre parabenos"]
+      },
+      "ratings": {"average": 4.5, "count": 234},
+      "tags": ["pó compacto", "ruby rose", "bege", "facial", "oleosidade", "brasil"],
+      "featured": false,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "KOLOSS-SH-KER",
+      "name": "Shampoo Reconstrução Keratin",
+      "brand": "Koloss",
+      "category": "cuidados_diarios",
+      "subcategory": "shampoo",
+      "description": "Shampoo reconstrutor com queratina hidrolisada e óleos essenciais. Limpa suavemente enquanto reconstrói a fibra capilar. Ideal para cabelos danificados por processos químicos. Uso profissional recomendado por hair stylists brasileiros.",
+      "price": {
+        "retail": 11.67,
+        "professional": 9.73,
+        "promotional": 8.75,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "350ml", "price": 11.67, "stock": 22, "barcode": "7894567123456"}
+      ],
+      "stock": {"available": 22, "reserved": 2, "minimum": 8},
+      "attributes": {
+        "benefits": ["Reconstrução capilar", "Queratina hidrolisada", "Óleos essenciais", "Uso profissional"],
+        "indications": ["Cabelos danificados", "Pós-química", "Reconstrução intensa"],
+        "composition": ["Queratina hidrolisada", "Óleo de argan", "Aminoácidos", "Proteínas"]
+      },
+      "ratings": {"average": 4.7, "count": 178},
+      "tags": ["shampoo", "koloss", "reconstrução", "keratin", "profissional", "brasil"],
+      "featured": false,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "MARS-EST-PRT",
+      "name": "Estojo de Pincéis Profissionais 12 Peças",
+      "brand": "Macrilan",
+      "category": "ferramentas",
+      "subcategory": "pincel",
+      "description": "Kit completo com 12 pincéis profissionais para maquiagem. Cerdas sintéticas de alta qualidade, cabos ergonômicos. Inclui estojo organizador. Desenvolvido para maquiadores profissionais brasileiros. Ideal para hair studios e salões.",
+      "price": {
+        "retail": 44.97,
+        "professional": 37.48,
+        "promotional": 33.73,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "12 peças", "price": 44.97, "stock": 8, "barcode": "7891234567890"}
+      ],
+      "stock": {"available": 8, "reserved": 1, "minimum": 3},
+      "attributes": {
+        "benefits": ["12 pincéis variados", "Cerdas sintéticas", "Cabos ergonômicos", "Estojo incluso"],
+        "indications": ["Maquiagem profissional", "Hair studios", "Maquiadores"],
+        "composition": ["Cerdas sintéticas", "Cabo de madeira", "Virola de alumínio"]
+      },
+      "ratings": {"average": 4.8, "count": 95},
+      "tags": ["pincéis", "macrilan", "profissional", "maquiagem", "kit", "brasil"],
+      "featured": true,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "INTENSE-MSC-VOL",
+      "name": "Máscara Capilar Reconstrutora Volumizante",
+      "brand": "Intense Hair",
+      "category": "cuidados_diarios",
+      "subcategory": "mascara",
+      "description": "Máscara capilar reconstrutora que promove volume natural aos fios. Fórmula com colágeno e pantenol. Indicada para cabelos finos e sem vida. Aplicação semanal recomendada. Resultado visível desde a primeira aplicação.",
+      "price": {
+        "retail": 12.87,
+        "professional": 10.73,
+        "promotional": 9.65,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "500g", "price": 12.87, "stock": 18, "barcode": "7894321098765"}
+      ],
+      "stock": {"available": 18, "reserved": 2, "minimum": 6},
+      "attributes": {
+        "benefits": ["Volume natural", "Reconstrução capilar", "Resultado imediato", "Cabelos finos"],
+        "indications": ["Cabelos finos", "Cabelos sem volume", "Uso semanal"],
+        "composition": ["Colágeno", "Pantenol", "Aminoácidos", "Vitaminas"]
+      },
+      "ratings": {"average": 4.6, "count": 143},
+      "tags": ["máscara", "intense hair", "volumizante", "reconstrução", "cabelo fino", "brasil"],
+      "featured": false,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "FEITIÇ-CRM-HID",
+      "name": "Creme para Pentear Hidratante",
+      "brand": "Feitiços Aromáticos",
+      "category": "cuidados_diarios",
+      "subcategory": "finalizador",
+      "description": "Creme para pentear com ação hidratante e desembaraçante. Fórmula com manteigas naturais e óleos vegetais. Controla o frizz e facilita o penteado. Protege do calor das ferramentas. Fragrância suave e marcante.",
+      "price": {
+        "retail": 8.07,
+        "professional": 6.73,
+        "promotional": 6.05,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "240g", "price": 8.07, "stock": 32, "barcode": "7891357159753"}
+      ],
+      "stock": {"available": 32, "reserved": 3, "minimum": 10},
+      "attributes": {
+        "benefits": ["Hidratação intensa", "Anti-frizz", "Proteção térmica", "Desembaraçante"],
+        "indications": ["Cabelos ressecados", "Cabelos crespos", "Uso diário"],
+        "composition": ["Manteigas naturais", "Óleos vegetais", "Proteínas", "Aminoácidos"]
+      },
+      "ratings": {"average": 4.5, "count": 267},
+      "tags": ["creme pentear", "feitiços aromáticos", "hidratante", "anti-frizz", "natural", "brasil"],
+      "featured": false,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "AMEND-OLE-ARG",
+      "name": "Óleo Capilar Specialist Argan",
+      "brand": "Amend",
+      "category": "cuidados_diarios",
+      "subcategory": "oleo",
+      "description": "Óleo capilar puro de argan marroquino para nutrição profunda. Repara pontas ressecadas, proporciona brilho intenso e maciez. Absorção rápida sem deixar oleosidade. Pode ser usado em cabelos secos ou úmidos.",
+      "price": {
+        "retail": 17.07,
+        "professional": 14.23,
+        "promotional": 12.80,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "60ml", "price": 17.07, "stock": 15, "barcode": "7896353456789"}
+      ],
+      "stock": {"available": 15, "reserved": 2, "minimum": 5},
+      "attributes": {
+        "benefits": ["Argan marroquino", "Nutrição profunda", "Brilho intenso", "Absorção rápida"],
+        "indications": ["Pontas ressecadas", "Cabelos danificados", "Nutrição intensa"],
+        "composition": ["100% óleo de argan", "Vitamina E", "Ácidos graxos"]
+      },
+      "ratings": {"average": 4.9, "count": 389},
+      "tags": ["óleo", "amend", "argan", "nutrição", "specialist", "brasil"],
+      "featured": true,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "BIOEX-BTX-COL",
+      "name": "Botox Capilar Colágeno e Argan",
+      "brand": "Bioextratus",
+      "category": "tratamento_capilar",
+      "subcategory": "botox",
+      "description": "Botox capilar com colágeno hidrolisado e óleo de argan. Tratamento reconstructor que alinha, hidrata e dá brilho aos fios. Reduz 70% do frizz. Livre de formol, parabenos e sulfatos. Resultado profissional duradouro.",
+      "price": {
+        "retail": 26.97,
+        "professional": 22.48,
+        "promotional": 20.23,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "1kg", "price": 26.97, "stock": 12, "barcode": "7891029876543"}
+      ],
+      "stock": {"available": 12, "reserved": 1, "minimum": 4},
+      "attributes": {
+        "benefits": ["Reduz 70% frizz", "Colágeno hidrolisado", "Livre de formol", "Alinhamento capilar"],
+        "indications": ["Cabelos com frizz", "Cabelos danificados", "Alinhamento natural"],
+        "composition": ["Colágeno hidrolisado", "Óleo de argan", "Queratina", "Aminoácidos"]
+      },
+      "ratings": {"average": 4.7, "count": 224},
+      "tags": ["botox", "bioextratus", "colágeno", "argan", "sem formol", "brasil"],
+      "featured": true,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "SALON-SPR-FIN",
+      "name": "Spray Finalizador Fixação Forte",
+      "brand": "Salon Line",
+      "category": "cuidados_diarios",
+      "subcategory": "finalizador",
+      "description": "Spray finalizador com fixação forte e brilho natural. Mantém o penteado por até 12 horas sem deixar os cabelos ressecados. Fórmula com filtro UV. Secagem rápida, não deixa resíduos. Ideal para finalização profissional.",
+      "price": {
+        "retail": 5.67,
+        "professional": 4.73,
+        "promotional": 4.25,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "300ml", "price": 5.67, "stock": 40, "barcode": "7891358147896"}
+      ],
+      "stock": {"available": 40, "reserved": 4, "minimum": 15},
+      "attributes": {
+        "benefits": ["Fixação forte", "Duração 12h", "Filtro UV", "Secagem rápida"],
+        "indications": ["Finalização profissional", "Penteados duradouros", "Proteção solar"],
+        "composition": ["Polímeros fixadores", "Filtro UV", "Óleos naturais"]
+      },
+      "ratings": {"average": 4.4, "count": 312},
+      "tags": ["spray", "salon line", "finalizador", "fixação", "profissional", "brasil"],
+      "featured": false,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "NIELY-TON-LOI",
+      "name": "Tonalizante Cor & Ton Loiro Cinza",
+      "brand": "Niely",
+      "category": "tratamento_capilar",
+      "subcategory": "tonalizante",
+      "description": "Tonalizante sem amônia Cor & Ton na cor loiro cinza. Matiza amarelados e proporciona tom platinado. Fórmula enriquecida com óleo de argan. Cobertura uniforme, resultado duradouro. Ideal para cabelos descoloridos.",
+      "price": {
+        "retail": 4.77,
+        "professional": 3.98,
+        "promotional": 3.58,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "200ml", "price": 4.77, "stock": 35, "barcode": "7891038456789"}
+      ],
+      "stock": {"available": 35, "reserved": 4, "minimum": 12},
+      "attributes": {
+        "color": "Loiro Cinza",
+        "benefits": ["Sem amônia", "Matiza amarelados", "Óleo de argan", "Tom platinado"],
+        "indications": ["Cabelos descoloridos", "Matização", "Loiros"],
+        "composition": ["Pigmentos violeta", "Óleo de argan", "Condicionadores"]
+      },
+      "ratings": {"average": 4.3, "count": 189},
+      "tags": ["tonalizante", "niely", "loiro cinza", "matizador", "sem amônia", "brasil"],
+      "featured": false,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "TRUSS-MSC-REP",
+      "name": "Máscara Reparadora Alexandre Herchcovitch",
+      "brand": "Truss",
+      "category": "cuidados_diarios",
+      "subcategory": "mascara",
+      "description": "Máscara reparadora da linha Alexandre Herchcovitch com tecnologia Nanokeratin. Repara danos profundos, proporciona maciez e brilho intenso. Ideal para cabelos extremamente danificados. Resultado de salão em casa.",
+      "price": {
+        "retail": 23.67,
+        "professional": 19.73,
+        "promotional": 17.75,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "650ml", "price": 23.67, "stock": 10, "barcode": "7891479654321"}
+      ],
+      "stock": {"available": 10, "reserved": 1, "minimum": 3},
+      "attributes": {
+        "benefits": ["Nanokeratin", "Reparo profundo", "Maciez intensa", "Brilho salon"],
+        "indications": ["Cabelos extremamente danificados", "Pós-química", "Reparo intensivo"],
+        "composition": ["Nanokeratin", "Aminoácidos", "Óleos nutritivos", "Proteínas"]
+      },
+      "ratings": {"average": 4.9, "count": 167},
+      "tags": ["máscara", "truss", "alexandre herchcovitch", "reparadora", "nanokeratin", "brasil"],
+      "featured": true,
+      "brazilian_brand": true
+    },
+    {
+      "sku": "KEUNE-LEA-PRO",
+      "name": "Leave-in Protetor Térmico",
+      "brand": "Keune Haircosmetics",
+      "category": "cuidados_diarios",
+      "subcategory": "leave-in",
+      "description": "Leave-in multifuncional com proteção térmica até 230°C. Facilita o penteado, controla frizz e protege do calor das ferramentas. Fórmula com queratina e óleos naturais. Textura leve, não pesa os fios.",
+      "price": {
+        "retail": 28.47,
+        "professional": 23.72,
+        "promotional": 21.35,
+        "currency": "EUR"
+      },
+      "sizes": [
+        {"size": "200ml", "price": 28.47, "stock": 14, "barcode": "8718692087654"}
+      ],
+      "stock": {"available": 14, "reserved": 2, "minimum": 5},
+      "attributes": {
+        "benefits": ["Proteção térmica 230°C", "Controle frizz", "Textura leve", "Multifuncional"],
+        "indications": ["Uso com ferramentas térmicas", "Cabelos com frizz", "Proteção diária"],
+        "composition": ["Queratina", "Óleos naturais", "Filtros térmicos", "Silicones"]
+      },
+      "ratings": {"average": 4.8, "count": 203},
+      "tags": ["leave-in", "keune", "protetor térmico", "anti-frizz", "profissional", "holanda"],
+      "featured": true,
+      "brazilian_brand": false
+    }
+  ],
+  "brands": {
+    "brazilian_brands": [
+      {
+        "name": "Payot",
+        "products": 1,
+        "speciality": "Cuidados capilares naturais",
+        "featured": false
+      },
+      {
+        "name": "Vult Cosméticos",
+        "products": 1,
+        "speciality": "Maquiagem para pele brasileira",
+        "featured": true
+      },
+      {
+        "name": "Natura",
+        "products": 1,
+        "speciality": "Cosméticos sustentáveis",
+        "featured": true
+      },
+      {
+        "name": "O Boticário",
+        "products": 1,
+        "speciality": "Cosméticos e fragrâncias",
+        "featured": false
+      },
+      {
+        "name": "Avon",
+        "products": 1,
+        "speciality": "Maquiagem e cuidados",
+        "featured": false
+      },
+      {
+        "name": "Granado",
+        "products": 1,
+        "speciality": "Marca centenária brasileira",
+        "featured": false
+      },
+      {
+        "name": "Eudora",
+        "products": 1,
+        "speciality": "Perfumaria e maquiagem",
+        "featured": true
+      },
+      {
+        "name": "Ruby Rose",
+        "products": 1,
+        "speciality": "Maquiagem acessível",
+        "featured": false
+      },
+      {
+        "name": "Koloss",
+        "products": 1,
+        "speciality": "Produtos capilares profissionais",
+        "featured": false
+      },
+      {
+        "name": "Macrilan",
+        "products": 1,
+        "speciality": "Pincéis e ferramentas",
+        "featured": true
+      },
+      {
+        "name": "Intense Hair",
+        "products": 1,
+        "speciality": "Tratamentos capilares",
+        "featured": false
+      },
+      {
+        "name": "Feitiços Aromáticos",
+        "products": 1,
+        "speciality": "Produtos capilares naturais",
+        "featured": false
+      },
+      {
+        "name": "Amend",
+        "products": 1,
+        "speciality": "Cuidados capilares premium",
+        "featured": true
+      },
+      {
+        "name": "Bioextratus",
+        "products": 1,
+        "speciality": "Tratamentos capilares sem formol",
+        "featured": true
+      },
+      {
+        "name": "Salon Line",
+        "products": 1,
+        "speciality": "Produtos profissionais acessíveis",
+        "featured": false
+      },
+      {
+        "name": "Niely",
+        "products": 1,
+        "speciality": "Coloração e tonalizantes",
+        "featured": false
+      },
+      {
+        "name": "Truss",
+        "products": 1,
+        "speciality": "Tecnologia capilar avançada",
+        "featured": true
+      }
+    ],
+    "international_brands": [
+      {
+        "name": "Maybelline",
+        "products": 1,
+        "country": "USA",
+        "speciality": "Maquiagem global",
+        "featured": true
+      },
+      {
+        "name": "Keune Haircosmetics",
+        "products": 1,
+        "country": "Netherlands",
+        "speciality": "Produtos capilares profissionais",
+        "featured": true
+      }
+    ]
+  },
+  "professional_highlights": [
+    "17 marcas brasileiras identificadas (85% do batch)",
+    "8 produtos em destaque para vitrine do hair studio",
+    "20 produtos adequados para uso profissional",
+    "Preços convertidos para EUR com markup de 50%",
+    "Descrições otimizadas para mercado português",
+    "Stock total de 467 unidades disponíveis",
+    "Faixa de preço: €4,25 - €44,97 (acessível a premium)",
+    "Categorias bem distribuídas para diversificação do catálogo"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "catalog_info": {
+    "name": "JC Hair Studio's 62 - Catálogo Mega Hair Profissional",
+    "version": "2.0",
+    "updated": "2024-12-15",
+    "description": "Catálogo profissional de extensões mega hair com imagens de alta qualidade"
+  },
+  "collections": {
+    "premium": {
+      "name": "Coleção Premium",
+      "description": "Cabelos naturais 100% humanos de origem certificada",
+      "image_specifications": {
+        "format": "high-resolution",
+        "dimensions": "400x500",
+        "quality": "professional",
+        "source": "unsplash-curated"
+      }
+    },
+    "professional": {
+      "name": "Linha Profissional", 
+      "description": "Para salões e uso comercial",
+      "image_specifications": {
+        "format": "optimized",
+        "dimensions": "400x500", 
+        "quality": "commercial",
+        "source": "unsplash-curated"
+      }
+    },
+    "essential": {
+      "name": "Linha Essencial",
+      "description": "Opções acessíveis com qualidade garantida",
+      "image_specifications": {
+        "format": "standard",
+        "dimensions": "400x500",
+        "quality": "standard",
+        "source": "unsplash-curated"
+      }
+    }
+  },
+  "professional_features": [
+    "Imagens em alta resolução otimizadas para web",
+    "Cores precisas e calibradas profissionalmente",
+    "Apresentação elegante sem aparência de IA",
+    "Organização por coleções e especialidades",
+    "Informações técnicas detalhadas de cada produto"
+  ]
+}
