@@ -1,4 +1,4 @@
-// Cart coupon API endpoints for JC Hair Studio's 62 E-commerce
+// Cart coupon API endpoints for JC Hair Studio's 62's 62 E-commerce
 import { NextRequest, NextResponse } from 'next/server';
 import { CartService } from '../../../../lib/services/cartService';
 import { withOptionalAuth, withSecurityHeaders, withRateLimit, withValidation } from '../../../../lib/auth/middleware';

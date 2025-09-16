@@ -1,6 +1,6 @@
 /**
  * Order Schema - MongoDB with Zod validation
- * JC Hair Studio's 62 E-commerce
+ * JC Hair Studio's 62's 62 E-commerce
  */
 
 import { Schema, model, models, Document } from 'mongoose';
@@ -448,7 +448,7 @@ OrderSchema.set('toObject', { virtuals: true });
 OrderSchema.methods.generateOrderNumber = function(): string {
   const timestamp = Date.now().toString(36).toUpperCase();
   const random = Math.random().toString(36).substring(2, 8).toUpperCase();
-  const orderNumber = `JC${timestamp}${random}`;
+  const orderNumber = `62B${timestamp}${random}`;
   this.orderNumber = orderNumber;
   return orderNumber;
 };

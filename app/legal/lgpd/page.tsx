@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Política LGPD | JC Hair Studio\'s 62',
+  title: 'Política LGPD | 62 Beauty\'s 62',
   description: 'Conformidade com a Lei Geral de Proteção de Dados do Brasil para clientes brasileiros',
 }
 
@@ -26,7 +26,7 @@ export default function LGPD() {
               <strong>Última atualização:</strong> 12 de setembro de 2025<br/>
               <strong>Versão:</strong> 1.0 - LGPD Compliant<br/>
               <strong>Lei de Referência:</strong> Lei nº 13.709/2018 (LGPD)<br/>
-              <strong>Controlador:</strong> JC Hair Studio's 62, Lda.
+              <strong>Controlador:</strong> 62 Beauty's 62, Lda.
             </p>
           </header>
 
@@ -39,7 +39,7 @@ export default function LGPD() {
                 <p className="font-semibold text-green-800 mb-4">COMPROMISSO COM A PROTEÇÃO DE DADOS PESSOAIS DOS BRASILEIROS</p>
                 <div className="space-y-3">
                   <p><strong>1.1. APLICABILIDADE:</strong> Esta política aplica-se especificamente ao tratamento de dados pessoais de residentes no Brasil, em cumprimento da Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
-                  <p><strong>1.2. CONTROLADOR:</strong> JC Hair Studio's 62, Lda., empresa portuguesa que opera e-commerce internacional, atua como controlador de dados para clientes brasileiros.</p>
+                  <p><strong>1.2. CONTROLADOR:</strong> 62 Beauty's 62, Lda., empresa portuguesa que opera e-commerce internacional, atua como controlador de dados para clientes brasileiros.</p>
                   <p><strong>1.3. TRATAMENTO TRANSFRONTEIRIÇO:</strong> Os dados coletados no Brasil são transferidos e processados em Portugal (União Europeia), país com nível adequado de proteção segundo a ANPD.</p>
                   <p><strong>1.4. COMPLEMENTARIDADE:</strong> Esta política complementa nossa <a href="/legal/politica-privacidade" className="text-green-600 hover:text-green-800 underline">Política de Privacidade GDPR</a>, oferecendo proteções específicas aos titulares brasileiros.</p>
                 </div>
@@ -704,7 +704,7 @@ export default function LGPD() {
                   </div>
 
                   <div className="border-t border-green-300 pt-4 space-y-2">
-                    <p className="text-sm">© 2025 JC Hair Studio's 62, Lda. | Todos os direitos reservados</p>
+                    <p className="text-sm">© 2025 62 Beauty's 62, Lda. | Todos os direitos reservados</p>
                     <p className="text-xs">LGPD Compliant | Lei nº 13.709/2018 | Versão 1.0 | Válida a partir de 12/09/2025</p>
                     <div className="flex justify-center space-x-4 text-xs">
                       <a href="/legal/politica-privacidade" className="hover:text-green-200 transition-colors">Política de Privacidade GDPR</a>

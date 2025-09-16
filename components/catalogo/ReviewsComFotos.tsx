@@ -271,7 +271,7 @@ export default function ReviewsComFotos({
                       <span className="font-medium text-gray-900">
                         {review.user.name || 'Cliente Anônimo'}
                       </span>
-                      <Verified className="w-4 h-4 text-green-500" title="Compra verificada" />
+                      <Verified className="w-4 h-4 text-green-500" />
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-500">
                       {renderStars(review.rating, 'sm')}

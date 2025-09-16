@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { Download, FileText, Image, Video, Mail, Phone, Calendar, Award, TrendingUp, Users, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Imprensa - JC Hair Studio\'s 62',
-  description: 'Kit de imprensa completo da JC Hair Studio\'s 62: press releases, logos, fotos oficiais, biografias e materiais para download para jornalistas e mídia.',
+  title: 'Imprensa - 62 Beauty\'s 62',
+  description: 'Kit de imprensa completo da 62 Beauty\'s 62: press releases, logos, fotos oficiais, biografias e materiais para download para jornalistas e mídia.',
   keywords: [
-    'imprensa JC Hair Studio',
+    'imprensa 62 Beauty',
     'press kit cabelo',
     'materiais imprensa',
     'releases empresa',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'fotos oficiais'
   ],
   openGraph: {
-    title: 'Kit de Imprensa - JC Hair Studio\'s 62',
+    title: 'Kit de Imprensa - 62 Beauty\'s 62',
     description: 'Materiais oficiais para imprensa: logos, fotos, releases e informações da líder europeia em extensões premium.',
     type: 'website',
   },
@@ -25,21 +25,21 @@ export const metadata: Metadata = {
 const pressReleases = [
   {
     date: "15 de Janeiro, 2024",
-    title: "JC Hair Studio's 62 Anuncia Crescimento de 40% em 2023 e Expansão para Novos Mercados",
+    title: "62 Beauty's 62 Anuncia Crescimento de 40% em 2023 e Expansão para Novos Mercados",
     excerpt: "A empresa líder em extensões de cabelo premium na Europa registra seu melhor ano de vendas e prepara entrada nos mercados norte-americano e asiático.",
     category: "Resultados",
     downloadUrl: "/press/release-crescimento-2024.pdf"
   },
   {
     date: "3 de Dezembro, 2023",
-    title: "Lançamento da Linha Sustentável: JC Hair Studio's 62 Pioneira em Extensões 100% Eco-Friendly",
+    title: "Lançamento da Linha Sustentável: 62 Beauty's 62 Pioneira em Extensões 100% Eco-Friendly",
     excerpt: "Nova linha de produtos utiliza exclusivamente cabelos naturais certificados e embalagens biodegradáveis, reforçando compromisso ambiental da empresa.",
     category: "Produto",
     downloadUrl: "/press/release-sustentavel-2023.pdf"
   },
   {
     date: "20 de Setembro, 2023", 
-    title: "JC Hair Studio's 62 Conquista Prêmio 'Excelência Europeia em Beleza 2023'",
+    title: "62 Beauty's 62 Conquista Prêmio 'Excelência Europeia em Beleza 2023'",
     excerpt: "Reconhecimento internacional destaca inovação, qualidade e atendimento premium que posicionam a empresa como referência no setor.",
     category: "Premiação",
     downloadUrl: "/press/release-premio-2023.pdf"
@@ -53,7 +53,7 @@ const pressReleases = [
   },
   {
     date: "12 de Março, 2023",
-    title: "JC Hair Studio's 62 Lança Programa de Formação para Profissionais de Beleza",
+    title: "62 Beauty's 62 Lança Programa de Formação para Profissionais de Beleza",
     excerpt: "Iniciativa oferece certificações gratuitas em aplicação de extensões premium para cabeleireiros europeus, fortalecendo rede de parceiros.",
     category: "Educação",
     downloadUrl: "/press/release-formacao-2023.pdf"
@@ -151,7 +151,7 @@ const founderBio = {
   name: "Júlio César",
   role: "Fundador e CEO",
   experience: "30+ anos",
-  biography: "Júlio César é o visionário fundador da JC Hair Studio's 62, empresa que nasceu de sua paixão pela beleza capilar e evolução das técnicas de extensões. Com mais de três décadas de experiência no setor, transformou um pequeno salão local numa das principais referências europeias em extensões premium. Sua filosofia de 'nunca comprometer a qualidade' guiou a empresa através de todas as fases de crescimento, desde os primeiros anos em Portugal até a expansão internacional atual. Reconhecido como pioneiro em técnicas inovadoras de aplicação e especialista em cabelos naturais, Júlio César continua liderando a empresa com visão estratégica voltada para sustentabilidade e excelência no atendimento."
+  biography: "Júlio César é o visionário fundador da 62 Beauty's 62, empresa que nasceu de sua paixão pela beleza capilar e evolução das técnicas de extensões. Com mais de três décadas de experiência no setor, transformou um pequeno salão local numa das principais referências europeias em extensões premium. Sua filosofia de 'nunca comprometer a qualidade' guiou a empresa através de todas as fases de crescimento, desde os primeiros anos em Portugal até a expansão internacional atual. Reconhecido como pioneiro em técnicas inovadoras de aplicação e especialista em cabelos naturais, Júlio César continua liderando a empresa com visão estratégica voltada para sustentabilidade e excelência no atendimento."
 };
 
 const mediaAppearances = [
@@ -179,7 +179,7 @@ const mediaAppearances = [
   {
     outlet: "Público - Economia",
     date: "Setembro 2023",
-    title: "JC Hair Studio's 62 Conquista Prémio Europeu",
+    title: "62 Beauty's 62 Conquista Prémio Europeu",
     type: "Jornal",
     link: "#"
   }
@@ -220,7 +220,7 @@ export default function ImprensaPage() {
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Materiais oficiais para jornalistas, blogueiros e profissionais de mídia. 
               Encontre press releases, logos em alta resolução, fotos oficiais, 
-              biografias e dados atualizados sobre a JC Hair Studio's 62.
+              biografias e dados atualizados sobre a 62 Beauty's 62.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 

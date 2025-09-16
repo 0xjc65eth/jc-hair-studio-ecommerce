@@ -1,6 +1,6 @@
 /**
  * Product Service
- * JC Hair Studio's 62 E-commerce
+ * JC Hair Studio's 62's 62 E-commerce
  */
 
 import { Prisma } from '../generated/prisma';
@@ -269,17 +269,31 @@ export class ProductService {
   }
 
   /**
+   * Get category by slug
+   */
+  static async getCategoryBySlug(slug: string) {
+    return await prisma.category.findUnique({
+      where: { slug }
+    });
+  }
+
+  /**
    * Get products by category
    */
   static async getProductsByCategory(categorySlug: string, limit = 12): Promise<ProductWithDetails[]> {
+    // First find the category by slug
+    const category = await prisma.category.findUnique({
+      where: { slug: categorySlug }
+    });
+
+    if (!category) {
+      return [];
+    }
+
     const products = await prisma.product.findMany({
       where: {
-        categories: {
-          some: {
-            category: {
-              slug: categorySlug
-            }
-          }
+        categoryIds: {
+          has: category.id
         },
         status: 'ACTIVE'
       },
@@ -290,11 +304,6 @@ export class ProductService {
         variants: {
           where: { isActive: true },
           orderBy: { displayOrder: 'asc' }
-        },
-        categories: {
-          include: {
-            category: true
-          }
         },
         tags: {
           include: {

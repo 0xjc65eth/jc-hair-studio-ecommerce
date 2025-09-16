@@ -3,10 +3,10 @@ import { Suspense } from 'react';
 import CheckoutPage from '../../components/checkout/CheckoutPage';
 
 export const metadata: Metadata = {
-  title: 'Checkout - JC Hair Studio\'s 62',
+  title: 'Checkout - 62 Beauty\'s 62',
   description: 'Complete sua compra de forma segura e rápida.',
   openGraph: {
-    title: 'Checkout - JC Hair Studio\'s 62',
+    title: 'Checkout - 62 Beauty\'s 62',
     description: 'Complete sua compra de forma segura e rápida.',
     images: ['/og-checkout.jpg'],
   },

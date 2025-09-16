@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import WhatsAppButton from '../../components/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'Acessórios Profissionais - Ferramentas e Produtos Premium | JC Hair Studio\'s 62',
+  title: 'Acessórios Profissionais - Ferramentas e Produtos Premium | 62 Beauty\'s 62',
   description: 'Acessórios profissionais para extensões: ferramentas de aplicação, produtos de cuidado, equipamentos de styling. Qualidade premium para profissionais.',
   keywords: [
     'acessórios cabelo',
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     'lisboa portugal'
   ],
   openGraph: {
-    title: 'Acessórios Profissionais - JC Hair Studio\'s 62',
+    title: 'Acessórios Profissionais - 62 Beauty\'s 62',
     description: 'Ferramentas e produtos premium para cuidado e styling de extensões',
     images: ['/images/acessorios-hero.jpg'],
   },
@@ -441,15 +442,12 @@ export default function AcessoriosPage() {
                       </span>
                     </div>
                     
-                    <button
-                      onClick={() => {
-                        const message = `🛠️ Olá! Tenho interesse no ${item.name} - ${item.brand} (${item.price}). Gostaria de mais informações sobre disponibilidade, especificações técnicas e formas de pagamento.`
-                        window.open(`https://wa.me/32470032758?text=${encodeURIComponent(message)}`, '_blank')
-                      }}
+                    <WhatsAppButton
+                      message={`🛠️ Olá! Tenho interesse no ${item.name} - ${item.brand} (${item.price}). Gostaria de mais informações sobre disponibilidade, especificações técnicas e formas de pagamento.`}
                       className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-2.5 rounded-lg hover:from-purple-600 hover:to-purple-700 transition-all duration-300 font-medium text-sm"
                     >
                       Consultar Especialista
-                    </button>
+                    </WhatsAppButton>
                   </div>
                 </div>
               ))}
@@ -498,15 +496,12 @@ export default function AcessoriosPage() {
                   <div className="text-green-600 font-medium">Economia de €{kit.savings}</div>
                 </div>
                 
-                <button
-                  onClick={() => {
-                    const message = `🎁 Olá! Tenho interesse no ${kit.name} (${kit.price}). Gostaria de mais informações sobre os produtos inclusos e formas de pagamento.`
-                    window.open(`https://wa.me/32470032758?text=${encodeURIComponent(message)}`, '_blank')
-                  }}
+                <WhatsAppButton
+                  message={`🎁 Olá! Tenho interesse no ${kit.name} (${kit.price}). Gostaria de mais informações sobre os produtos inclusos e formas de pagamento.`}
                   className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-2.5 rounded-lg hover:from-purple-600 hover:to-purple-700 transition-all duration-300 font-medium"
                 >
                   Solicitar Kit
-                </button>
+                </WhatsAppButton>
               </div>
             ))}
           </div>

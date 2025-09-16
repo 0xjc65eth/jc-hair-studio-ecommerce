@@ -1,4 +1,4 @@
-// Logout endpoint for JC Hair Studio's 62 E-commerce
+// Logout endpoint for JC Hair Studio's 62's 62 E-commerce
 import { NextRequest, NextResponse } from 'next/server';
 import { withAuth, withSecurityHeaders } from '../../../../lib/auth/middleware';
 

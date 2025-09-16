@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import WhatsAppButton from '../../components/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'Extensões Naturais Premium - Cabelo 100% Humano Remy | JC Hair Studio\'s 62',
+  title: 'Extensões Naturais Premium - Cabelo 100% Humano Remy | 62 Beauty\'s 62',
   description: 'Extensões de cabelo 100% natural Remy premium. Clip-in, Tape-in, Micro Ring. Qualidade superior, cores perfeitas, durabilidade garantida. Lisboa, Portugal.',
   keywords: [
     'extensões naturais',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     'lisboa portugal'
   ],
   openGraph: {
-    title: 'Extensões Naturais Premium - JC Hair Studio\'s 62',
+    title: 'Extensões Naturais Premium - 62 Beauty\'s 62',
     description: 'Cabelo 100% humano Remy premium com qualidade superior e durabilidade garantida',
     images: ['/images/extensoes-naturais-hero.jpg'],
   },
@@ -393,15 +394,12 @@ export default function ExtensoesNaturaisPage() {
                     </span>
                   </div>
                   
-                  <button
-                    onClick={() => {
-                      const message = `🌿 Olá! Tenho interesse em ${type.name}. Gostaria de agendar uma consulta para avaliação e orçamento personalizado.`
-                      window.open(`https://wa.me/32470032758?text=${encodeURIComponent(message)}`, '_blank')
-                    }}
+                  <WhatsAppButton
+                    message={`🌿 Olá! Tenho interesse em ${type.name}. Gostaria de agendar uma consulta para avaliação e orçamento personalizado.`}
                     className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-2.5 rounded-xl font-medium hover:from-green-600 hover:to-green-700 transition-all duration-300 text-sm"
                   >
                     Consultar Especialista
-                  </button>
+                  </WhatsAppButton>
                 </div>
               </div>
             ))}
@@ -435,15 +433,12 @@ export default function ExtensoesNaturaisPage() {
               Nossa especialista analisa seu cabelo sob diferentes luzes e cria o blend perfeito 
               para integração invisível, incluindo mechas e reflexos naturais.
             </p>
-            <button
-              onClick={() => {
-                const message = "🎨 Olá! Gostaria de agendar um color matching personalizado para encontrar a cor perfeita das minhas extensões."
-                window.open(`https://wa.me/32470032758?text=${encodeURIComponent(message)}`, '_blank')
-              }}
+            <WhatsAppButton
+              message="🎨 Olá! Gostaria de agendar um color matching personalizado para encontrar a cor perfeita das minhas extensões."
               className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm"
             >
               Agendar Color Matching
-            </button>
+            </WhatsAppButton>
           </div>
         </div>
 
@@ -507,15 +502,12 @@ export default function ExtensoesNaturaisPage() {
           
           <div className="mt-8 text-center">
             <p className="text-gray-600 mb-4">Quer aprender pessoalmente? Oferecemos workshops práticos!</p>
-            <button
-              onClick={() => {
-                const message = "📚 Olá! Tenho interesse em participar de um workshop de aplicação de extensões. Quando será o próximo?"
-                window.open(`https://wa.me/32470032758?text=${encodeURIComponent(message)}`, '_blank')
-              }}
+            <WhatsAppButton
+              message="📚 Olá! Tenho interesse em participar de um workshop de aplicação de extensões. Quando será o próximo?"
               className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-colors"
             >
               Info sobre Workshops
-            </button>
+            </WhatsAppButton>
           </div>
         </div>
 

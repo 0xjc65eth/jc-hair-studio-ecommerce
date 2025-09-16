@@ -71,7 +71,24 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Video Hero Carousel */}
-      <VideoHeroCarousel />
+      <VideoHeroCarousel
+        videos={[
+          {
+            src: '/videos/hero-video-1.mp4',
+            title: 'Beleza Premium Brasileira',
+            subtitle: 'Os melhores produtos capilares e cosméticos do Brasil para toda a Europa',
+            cta: 'Explorar Produtos',
+            ctaLink: '/produtos'
+          },
+          {
+            src: '/videos/hero-video-2.mp4',
+            title: 'Transforme seu Visual',
+            subtitle: 'Cosméticos profissionais e produtos de mega hair de alta qualidade',
+            cta: 'Ver Catálogo',
+            ctaLink: '/catalogo-brasileiro'
+          }
+        ]}
+      />
 
       {/* Featured Products */}
       <FeaturedProducts />
@@ -156,7 +173,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/cuidados-beleza" className="group relative h-96 bg-black rounded-2xl overflow-hidden">
+            <Link href="/cosmeticos" className="group relative h-96 bg-black rounded-2xl overflow-hidden">
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=400&fit=crop')] bg-cover bg-center opacity-70 group-hover:opacity-50 transition-opacity"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
               <div className="relative z-10 flex flex-col justify-end h-full p-8 text-white">

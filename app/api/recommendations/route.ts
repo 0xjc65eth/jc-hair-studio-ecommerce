@@ -1,4 +1,4 @@
-// Recommendations API endpoint for JC Hair Studio's 62 E-commerce
+// Recommendations API endpoint for JC Hair Studio's 62's 62 E-commerce
 import { NextRequest, NextResponse } from 'next/server';
 import { RecommendationService } from '../../../lib/services/recommendationService';
 import { withOptionalAuth, withSecurityHeaders, withRateLimit } from '../../../lib/auth/middleware';

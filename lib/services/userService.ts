@@ -1,8 +1,16 @@
-// User service for JC Hair Studio's 62 E-commerce
+// User service for JC Hair Studio's 62's 62 E-commerce
 import { PrismaClient } from '@prisma/client';
 import { hashPassword, comparePassword } from '../auth/jwt';
 
-const prisma = new PrismaClient();
+// Lazy initialization of Prisma client
+let prisma: PrismaClient | null = null;
+
+function getPrismaClient() {
+  if (!prisma) {
+    prisma = new PrismaClient();
+  }
+  return prisma;
+}
 
 export interface UserProfile {
   id: string;
@@ -86,7 +94,7 @@ export class UserService {
    * Get user profile with full details
    */
   static async getUserProfile(userId: string): Promise<UserProfile | null> {
-    const user = await prisma.user.findUnique({
+    const user = await getPrismaClient().user.findUnique({
       where: { id: userId },
       include: {
         addresses: {
@@ -166,7 +174,7 @@ export class UserService {
 
     // Update name if firstName or lastName changed
     if (data.firstName !== undefined || data.lastName !== undefined) {
-      const user = await prisma.user.findUnique({
+      const user = await getPrismaClient().user.findUnique({
         where: { id: userId },
         select: { firstName: true, lastName: true }
       });
@@ -176,7 +184,7 @@ export class UserService {
       updateData.name = `${firstName} ${lastName}`.trim() || null;
     }
 
-    await prisma.user.update({
+    await getPrismaClient().user.update({
       where: { id: userId },
       data: updateData
     });
@@ -194,7 +202,7 @@ export class UserService {
    * Change user password
    */
   static async changePassword(userId: string, data: ChangePasswordData): Promise<void> {
-    const user = await prisma.user.findUnique({
+    const user = await getPrismaClient().user.findUnique({
       where: { id: userId },
       select: { password: true }
     });
@@ -213,7 +221,7 @@ export class UserService {
     const hashedPassword = await hashPassword(data.newPassword);
 
     // Update password
-    await prisma.user.update({
+    await getPrismaClient().user.update({
       where: { id: userId },
       data: { password: hashedPassword }
     });
@@ -223,7 +231,7 @@ export class UserService {
    * Get user addresses
    */
   static async getUserAddresses(userId: string): Promise<UserAddress[]> {
-    const addresses = await prisma.address.findMany({
+    const addresses = await getPrismaClient().address.findMany({
       where: { 
         userId,
         isActive: true
@@ -258,7 +266,7 @@ export class UserService {
   static async createAddress(userId: string, data: CreateAddressData): Promise<UserAddress> {
     // If this is set as default, unset other defaults
     if (data.isDefault) {
-      await prisma.address.updateMany({
+      await getPrismaClient().address.updateMany({
         where: { 
           userId,
           isActive: true
@@ -267,7 +275,7 @@ export class UserService {
       });
     }
 
-    const address = await prisma.address.create({
+    const address = await getPrismaClient().address.create({
       data: {
         userId,
         type: data.type,
@@ -313,7 +321,7 @@ export class UserService {
     data: Partial<CreateAddressData>
   ): Promise<UserAddress> {
     // Verify address belongs to user
-    const existingAddress = await prisma.address.findFirst({
+    const existingAddress = await getPrismaClient().address.findFirst({
       where: { id: addressId, userId, isActive: true }
     });
 
@@ -323,7 +331,7 @@ export class UserService {
 
     // If setting as default, unset other defaults
     if (data.isDefault) {
-      await prisma.address.updateMany({
+      await getPrismaClient().address.updateMany({
         where: { 
           userId,
           id: { not: addressId },
@@ -333,7 +341,7 @@ export class UserService {
       });
     }
 
-    const address = await prisma.address.update({
+    const address = await getPrismaClient().address.update({
       where: { id: addressId },
       data: {
         ...data,
@@ -363,7 +371,7 @@ export class UserService {
    * Delete address (soft delete)
    */
   static async deleteAddress(userId: string, addressId: string): Promise<void> {
-    const address = await prisma.address.findFirst({
+    const address = await getPrismaClient().address.findFirst({
       where: { id: addressId, userId, isActive: true }
     });
 
@@ -371,14 +379,14 @@ export class UserService {
       throw new Error('Address not found');
     }
 
-    await prisma.address.update({
+    await getPrismaClient().address.update({
       where: { id: addressId },
       data: { isActive: false }
     });
 
     // If deleted address was default, set another as default
     if (address.isDefault) {
-      const nextAddress = await prisma.address.findFirst({
+      const nextAddress = await getPrismaClient().address.findFirst({
         where: { 
           userId,
           id: { not: addressId },
@@ -388,7 +396,7 @@ export class UserService {
       });
 
       if (nextAddress) {
-        await prisma.address.update({
+        await getPrismaClient().address.update({
           where: { id: nextAddress.id },
           data: { isDefault: true }
         });
@@ -417,7 +425,7 @@ export class UserService {
     const offset = (page - 1) * limit;
 
     const [orders, totalCount] = await Promise.all([
-      prisma.order.findMany({
+      getPrismaClient().order.findMany({
         where: { userId },
         include: {
           items: {
@@ -441,7 +449,7 @@ export class UserService {
         skip: offset,
         take: limit
       }),
-      prisma.order.count({
+      getPrismaClient().order.count({
         where: { userId }
       })
     ]);
@@ -486,7 +494,7 @@ export class UserService {
    * Get user wishlist
    */
   static async getUserWishlist(userId: string): Promise<any[]> {
-    const wishlistItems = await prisma.wishlistItem.findMany({
+    const wishlistItems = await getPrismaClient().wishlistItem.findMany({
       where: { userId },
       include: {
         product: {
@@ -535,7 +543,7 @@ export class UserService {
    */
   private static async getUserStats(userId: string): Promise<UserStats> {
     const [orderStats, wishlistCount, reviewStats] = await Promise.all([
-      prisma.order.aggregate({
+      getPrismaClient().order.aggregate({
         where: { 
           userId,
           status: { in: ['DELIVERED', 'CONFIRMED'] }
@@ -544,10 +552,10 @@ export class UserService {
         _sum: { total: true },
         _avg: { total: true }
       }),
-      prisma.wishlistItem.count({
+      getPrismaClient().wishlistItem.count({
         where: { userId }
       }),
-      prisma.review.aggregate({
+      getPrismaClient().review.aggregate({
         where: { userId },
         _count: true,
         _avg: { rating: true }
@@ -570,7 +578,7 @@ export class UserService {
    * Deactivate user account
    */
   static async deactivateAccount(userId: string): Promise<void> {
-    await prisma.user.update({
+    await getPrismaClient().user.update({
       where: { id: userId },
       data: { isActive: false }
     });
@@ -584,20 +592,20 @@ export class UserService {
     // In production, you might want to anonymize data instead
     
     // Delete related data
-    await prisma.$transaction([
-      prisma.wishlistItem.deleteMany({ where: { userId } }),
-      prisma.cartItem.deleteMany({ where: { userId } }),
-      prisma.review.deleteMany({ where: { userId } }),
-      prisma.address.deleteMany({ where: { userId } }),
+    await getPrismaClient().$transaction([
+      getPrismaClient().wishlistItem.deleteMany({ where: { userId } }),
+      getPrismaClient().cartItem.deleteMany({ where: { userId } }),
+      getPrismaClient().review.deleteMany({ where: { userId } }),
+      getPrismaClient().address.deleteMany({ where: { userId } }),
       // Orders are kept for legal/accounting purposes but anonymized
-      prisma.order.updateMany({ 
+      getPrismaClient().order.updateMany({ 
         where: { userId }, 
         data: { 
           userId: null,
           email: 'deleted-user@example.com'
         }
       }),
-      prisma.user.delete({ where: { id: userId } })
+      getPrismaClient().user.delete({ where: { id: userId } })
     ]);
   }
 }

@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { Calendar, MapPin, Users, Award, TrendingUp, Globe2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Nossa História - JC Hair Studio\'s 62',
-  description: 'A jornada de mais de 30 anos da JC Hair Studio\'s 62: dos primeiros passos como pequeno salão até se tornar líder em extensões premium na Europa.',
+  title: 'Nossa História - 62 Beauty\'s 62',
+  description: 'A jornada de mais de 30 anos da 62 Beauty\'s 62: dos primeiros passos como pequeno salão até se tornar líder em extensões premium na Europa.',
   keywords: [
-    'história JC Hair Studio',
+    'história 62 Beauty',
     'cronologia empresa',
     'evolução extensões cabelo',
     'crescimento internacional',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     '30 anos experiência'
   ],
   openGraph: {
-    title: 'Nossa História - JC Hair Studio\'s 62',
+    title: 'Nossa História - 62 Beauty\'s 62',
     description: 'Conheça a inspiradora jornada de três décadas: do sonho local ao reconhecimento internacional em extensões premium.',
     type: 'article',
   },
@@ -31,7 +31,7 @@ const timelineData = [
     events: [
       {
         year: "1990",
-        title: "Fundação da JC Hair Studio",
+        title: "Fundação da 62 Beauty",
         description: "Júlio César abre um pequeno salão especializado em extensões de cabelo em Portugal, com foco na qualidade artesanal e atendimento personalizado."
       },
       {

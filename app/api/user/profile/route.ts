@@ -1,4 +1,4 @@
-// User profile API endpoints for JC Hair Studio's 62 E-commerce
+// User profile API endpoints for JC Hair Studio's 62's 62 E-commerce
 import { NextRequest, NextResponse } from 'next/server';
 import { UserService } from '../../../../lib/services/userService';
 import { withAuth, withSecurityHeaders, withRateLimit, withValidation } from '../../../../lib/auth/middleware';
@@ -99,10 +99,19 @@ const GET = withSecurityHeaders(
   )
 );
 
+// FIXED: Create wrapper function to match expected signature
+const putProfileWrapper = async (request: AuthenticatedRequest) => {
+  // Extract validated data from request - this is a simplified approach
+  // In practice, the validation should happen before this point
+  const body = await request.json();
+  const parsed = updateProfileSchema.parse(body);
+  return updateProfileHandler(request, parsed);
+};
+
 const PUT = withSecurityHeaders(
   withRateLimit(
     withValidation(
-      withAuth(updateProfileHandler),
+      withAuth(putProfileWrapper),
       (data) => {
         try {
           const parsed = updateProfileSchema.parse(data);

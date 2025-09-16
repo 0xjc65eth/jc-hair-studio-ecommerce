@@ -66,7 +66,7 @@ async function seedProducts(categories: any[]) {
           quantity: productData.stockQuantity,
           lowStockAlert: Math.ceil(productData.stockQuantity * 0.2),
           status: productData.inStock ? 'ACTIVE' : 'OUT_OF_STOCK',
-          metaTitle: `${productData.name} | JC Hair Studio`,
+          metaTitle: `${productData.name} | JC Hair Studio's 62`,
           metaDescription: productData.shortDesc,
           keywords: productData.tags.join(', '),
           isFeatured: productData.labels.includes('DESTAQUE') || productData.labels.includes('BEST SELLER'),

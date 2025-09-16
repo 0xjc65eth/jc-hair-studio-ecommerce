@@ -1,8 +1,16 @@
-// Advanced search service for JC Hair Studio's 62 E-commerce
+// Advanced search service for JC Hair Studio's 62's 62 E-commerce
 import { PrismaClient } from '@prisma/client';
 import { Prisma } from '@prisma/client';
 
-const prisma = new PrismaClient();
+// Lazy initialization of Prisma client
+let prisma: PrismaClient | null = null;
+
+function getPrismaClient() {
+  if (!prisma) {
+    prisma = new PrismaClient();
+  }
+  return prisma;
+}
 
 export interface SearchFilters {
   query?: string;
@@ -196,7 +204,7 @@ export class SearchService {
 
     // Execute main search query
     const [products, totalCount] = await Promise.all([
-      prisma.product.findMany({
+      getPrismaClient().product.findMany({
         where: { ...where, ...ratingFilter },
         include: {
           categories: {
@@ -227,7 +235,7 @@ export class SearchService {
         skip: offset,
         take: limit
       }),
-      prisma.product.count({
+      getPrismaClient().product.count({
         where: { ...where, ...ratingFilter }
       })
     ]);
@@ -308,7 +316,7 @@ export class SearchService {
     if (!query || query.length < 2) return [];
 
     const [products, categories] = await Promise.all([
-      prisma.product.findMany({
+      getPrismaClient().product.findMany({
         where: {
           status: 'ACTIVE',
           OR: [
@@ -320,7 +328,7 @@ export class SearchService {
         select: { name: true, hairColor: true },
         take: limit
       }),
-      prisma.category.findMany({
+      getPrismaClient().category.findMany({
         where: {
           isActive: true,
           name: { contains: query, mode: 'insensitive' }
@@ -356,7 +364,7 @@ export class SearchService {
   static async searchCategories(query: string, limit = 5): Promise<any[]> {
     if (!query || query.length < 2) return [];
 
-    const categories = await prisma.category.findMany({
+    const categories = await getPrismaClient().category.findMany({
       where: {
         isActive: true,
         OR: [
@@ -388,7 +396,7 @@ export class SearchService {
    */
   private static async getFacets(baseWhere: Prisma.ProductWhereInput) {
     // Get available categories
-    const categoriesWithCounts = await prisma.category.findMany({
+    const categoriesWithCounts = await getPrismaClient().category.findMany({
       where: {
         isActive: true,
         products: {
@@ -414,14 +422,14 @@ export class SearchService {
     });
 
     // Get price range
-    const priceAgg = await prisma.product.aggregate({
+    const priceAgg = await getPrismaClient().product.aggregate({
       where: baseWhere,
       _min: { price: true },
       _max: { price: true }
     });
 
     // Get hair types with counts
-    const hairTypes = await prisma.product.groupBy({
+    const hairTypes = await getPrismaClient().product.groupBy({
       by: ['hairType'],
       where: { ...baseWhere, hairType: { not: null } },
       _count: true,
@@ -429,7 +437,7 @@ export class SearchService {
     });
 
     // Get hair textures with counts
-    const hairTextures = await prisma.product.groupBy({
+    const hairTextures = await getPrismaClient().product.groupBy({
       by: ['hairTexture'],
       where: { ...baseWhere, hairTexture: { not: null } },
       _count: true,
@@ -437,7 +445,7 @@ export class SearchService {
     });
 
     // Get hair colors with counts
-    const hairColors = await prisma.product.groupBy({
+    const hairColors = await getPrismaClient().product.groupBy({
       by: ['hairColor'],
       where: { ...baseWhere, hairColor: { not: null } },
       _count: true,
@@ -445,7 +453,7 @@ export class SearchService {
     });
 
     // Get lengths with counts
-    const lengths = await prisma.product.groupBy({
+    const lengths = await getPrismaClient().product.groupBy({
       by: ['length'],
       where: { ...baseWhere, length: { not: null } },
       _count: true,

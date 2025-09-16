@@ -1,7 +1,15 @@
-// Recommendation service for JC Hair Studio's 62 E-commerce
+// Recommendation service for JC Hair Studio's 62's 62 E-commerce
 import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+// Lazy initialization of Prisma client
+let prisma: PrismaClient | null = null;
+
+function getPrismaClient() {
+  if (!prisma) {
+    prisma = new PrismaClient();
+  }
+  return prisma;
+}
 
 export interface RecommendationOptions {
   userId?: string;
@@ -37,7 +45,7 @@ export class RecommendationService {
 
     try {
       // Get user's order history
-      const userOrders = await prisma.order.findMany({
+      const userOrders = await getPrismaClient().order.findMany({
         where: {
           userId,
           status: { in: ['DELIVERED', 'CONFIRMED'] }
@@ -60,7 +68,7 @@ export class RecommendationService {
       });
 
       // Get user's wishlist
-      const wishlistItems = await prisma.wishlistItem.findMany({
+      const wishlistItems = await getPrismaClient().wishlistItem.findMany({
         where: { userId },
         include: {
           product: {
@@ -102,7 +110,7 @@ export class RecommendationService {
   ): Promise<ProductRecommendation[]> {
     const { limit = 6, excludeProductIds = [] } = options;
     
-    const baseProduct = await prisma.product.findUnique({
+    const baseProduct = await getPrismaClient().product.findUnique({
       where: { id: productId },
       include: {
         categories: { include: { category: true } },
@@ -117,7 +125,7 @@ export class RecommendationService {
     const categoryIds = baseProduct.categories.map(pc => pc.categoryId);
 
     // Find similar products
-    const similarProducts = await prisma.product.findMany({
+    const similarProducts = await getPrismaClient().product.findMany({
       where: {
         id: { not: productId, notIn: excludeProductIds },
         status: 'ACTIVE',
@@ -206,7 +214,7 @@ export class RecommendationService {
     const { limit = 4, excludeProductIds = [] } = options;
 
     // Find orders containing the base product
-    const ordersWithProduct = await prisma.order.findMany({
+    const ordersWithProduct = await getPrismaClient().order.findMany({
       where: {
         items: {
           some: { productId }
@@ -270,7 +278,7 @@ export class RecommendationService {
   ): Promise<ProductRecommendation[]> {
     const { limit = 8, excludeProductIds = [] } = options;
 
-    const products = await prisma.product.findMany({
+    const products = await getPrismaClient().product.findMany({
       where: {
         id: { notIn: excludeProductIds },
         status: 'ACTIVE',
@@ -305,7 +313,7 @@ export class RecommendationService {
   ): Promise<ProductRecommendation[]> {
     const { limit = 8, excludeProductIds = [] } = options;
 
-    const products = await prisma.product.findMany({
+    const products = await getPrismaClient().product.findMany({
       where: {
         id: { notIn: excludeProductIds },
         status: 'ACTIVE'
@@ -429,7 +437,7 @@ export class RecommendationService {
       };
     }
 
-    const products = await prisma.product.findMany({
+    const products = await getPrismaClient().product.findMany({
       where,
       include: {
         categories: { include: { category: true } },

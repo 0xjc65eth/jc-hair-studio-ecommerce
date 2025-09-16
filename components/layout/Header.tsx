@@ -39,7 +39,9 @@ export default function Header({ className = '' }: HeaderProps) {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
+  const [isCosmeticsDropdownOpen, setIsCosmeticsDropdownOpen] = useState(false);
   const [isMobileProductsDropdownOpen, setIsMobileProductsDropdownOpen] = useState(false);
+  const [isMobileCosmeticsDropdownOpen, setIsMobileCosmeticsDropdownOpen] = useState(false);
   
   // Get cart data
   const { itemsCount } = useCart();
@@ -74,7 +76,6 @@ export default function Header({ className = '' }: HeaderProps) {
       ]
     },
     { name: 'Mega Hair', href: '/mega-hair', active: pathname === '/mega-hair' },
-    { name: 'Cuidados & Beleza', href: '/cuidados-beleza', active: pathname === '/cuidados-beleza' },
     { name: 'Sobre Nós', href: '/sobre', active: pathname === '/sobre' },
   ];
 
@@ -113,6 +114,7 @@ export default function Header({ className = '' }: HeaderProps) {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
     setIsMobileProductsDropdownOpen(false);
+    setIsMobileCosmeticsDropdownOpen(false);
   };
 
   return (
@@ -151,14 +153,28 @@ export default function Header({ className = '' }: HeaderProps) {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center lg:space-x-4 xl:space-x-8">
               {navigationItems.map((item) => (
                 <div key={item.href} className="relative">
                   {item.hasDropdown ? (
                     <div
                       className="relative"
-                      onMouseEnter={() => setIsProductsDropdownOpen(true)}
-                      onMouseLeave={() => setIsProductsDropdownOpen(false)}
+                      onMouseEnter={() => {
+                        // Use different states for different dropdowns
+                        if (item.name === 'Produtos Capilares') {
+                          setIsProductsDropdownOpen(true);
+                        } else if (item.name === 'Cosméticos') {
+                          setIsCosmeticsDropdownOpen(true);
+                        }
+                      }}
+                      onMouseLeave={() => {
+                        // Close the appropriate dropdown
+                        if (item.name === 'Produtos Capilares') {
+                          setIsProductsDropdownOpen(false);
+                        } else if (item.name === 'Cosméticos') {
+                          setIsCosmeticsDropdownOpen(false);
+                        }
+                      }}
                     >
                       <Link
                         href={item.href}
@@ -167,8 +183,11 @@ export default function Header({ className = '' }: HeaderProps) {
                         <span>{item.name}</span>
                         <ChevronDown className="w-3 h-3" />
                       </Link>
-                      
-                      {isProductsDropdownOpen && item.dropdownItems && (
+
+                      {/* Show dropdown based on specific state */}
+                      {((item.name === 'Produtos Capilares' && isProductsDropdownOpen) ||
+                        (item.name === 'Cosméticos' && isCosmeticsDropdownOpen)) &&
+                        item.dropdownItems && (
                         <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
                           {item.dropdownItems.map((dropdownItem) => (
                             <Link
@@ -363,18 +382,32 @@ export default function Header({ className = '' }: HeaderProps) {
                   {item.hasDropdown ? (
                     <div>
                       <button
-                        onClick={() => setIsMobileProductsDropdownOpen(!isMobileProductsDropdownOpen)}
+                        onClick={() => {
+                          // Use different states for different mobile dropdowns
+                          if (item.name === 'Produtos Capilares') {
+                            setIsMobileProductsDropdownOpen(!isMobileProductsDropdownOpen);
+                          } else if (item.name === 'Cosméticos') {
+                            setIsMobileCosmeticsDropdownOpen(!isMobileCosmeticsDropdownOpen);
+                          }
+                        }}
                         className={`w-full flex items-center justify-between px-4 py-3 text-base font-medium rounded-lg transition-colors ${
-                          item.active 
-                            ? 'bg-gray-100 text-black' 
+                          item.active
+                            ? 'bg-gray-100 text-black'
                             : 'text-gray-700 hover:bg-gray-50 hover:text-black'
                         }`}
                       >
                         <span>{item.name}</span>
-                        <ChevronDown className={`w-4 h-4 transition-transform ${isMobileProductsDropdownOpen ? 'rotate-180' : ''}`} />
+                        <ChevronDown className={`w-4 h-4 transition-transform ${
+                          (item.name === 'Produtos Capilares' && isMobileProductsDropdownOpen) ||
+                          (item.name === 'Cosméticos' && isMobileCosmeticsDropdownOpen)
+                            ? 'rotate-180' : ''
+                        }`} />
                       </button>
-                      
-                      {isMobileProductsDropdownOpen && item.dropdownItems && (
+
+                      {/* Show dropdown based on specific mobile state */}
+                      {((item.name === 'Produtos Capilares' && isMobileProductsDropdownOpen) ||
+                        (item.name === 'Cosméticos' && isMobileCosmeticsDropdownOpen)) &&
+                        item.dropdownItems && (
                         <div className="ml-4 mt-2 space-y-1">
                           {item.dropdownItems.map((dropdownItem) => (
                             <Link
@@ -393,8 +426,8 @@ export default function Header({ className = '' }: HeaderProps) {
                     <Link
                       href={item.href}
                       className={`block px-4 py-3 text-base font-medium rounded-lg transition-colors ${
-                        item.active 
-                          ? 'bg-gray-100 text-black' 
+                        item.active
+                          ? 'bg-gray-100 text-black'
                           : 'text-gray-700 hover:bg-gray-50 hover:text-black'
                       }`}
                       onClick={closeMobileMenu}

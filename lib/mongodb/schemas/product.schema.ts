@@ -1,6 +1,6 @@
 /**
  * Product Schema - MongoDB with Zod validation
- * JC Hair Studio's 62 E-commerce
+ * JC Hair Studio's 62's 62 E-commerce
  */
 
 import { Schema, model, models, Document, Types } from 'mongoose';

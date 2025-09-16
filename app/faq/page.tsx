@@ -177,7 +177,7 @@ export default function FaqPage() {
     ],
     geral: [
       {
-        question: "A JC Hair Studio's 62 é uma empresa confiável?",
+        question: "A 62 Beauty's 62 é uma empresa confiável?",
         answer: "Sim, somos empresa registrada em Portugal e Bélgica há mais de 10 anos. Temos milhares de clientes satisfeitos na Europa, certificações de qualidade e cumprimos todas regulamentações GDPR e direitos do consumidor UE."
       },
       {

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Ferramentas profissionais para cabeleireiros: secadores, chapinhas, babyliss, escovas e acessórios de alta qualidade para salões de beleza.',
   keywords: ['ferramentas profissionais', 'secador', 'chapinha', 'babyliss', 'escova', 'equipamentos salão'],
   openGraph: {
-    title: 'Ferramentas Profissionais - JC Hair Studio\'s 62',
+    title: 'Ferramentas Profissionais - 62 Beauty\'s 62',
     description: 'Equipamentos e ferramentas profissionais de alta qualidade para cabeleireiros e salões de beleza.',
     images: ['/og-ferramentas.jpg'],
   },
@@ -264,12 +264,14 @@ function ProductGrid({ products }: { products: Product[] }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {products.map((product) => (
-        <ProductCard 
-          key={product.id} 
+        <ProductCard
+          key={product.id}
           product={{
             ...product,
-            compareAtPrice: product.comparePrice || undefined
-          }} 
+            compareAtPrice: product.comparePrice || undefined,
+            images: product.images.map(img => typeof img === 'string' ? img : img.url),
+            category: product.category || 'ferramentas-profissionais'
+          }}
           variant="default"
           showQuickActions={true}
           showProfessionalPrice={true}
@@ -394,7 +396,9 @@ export default function FerramentasProfissionaisPage() {
           {/* Sidebar */}
           <aside className="w-64 flex-shrink-0 hidden lg:block">
             <div className="sticky top-8">
-              <FilterSidebar filters={categoryFilters} />
+              <Suspense fallback={<div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>}>
+                <FilterSidebar filters={categoryFilters} />
+              </Suspense>
             </div>
           </aside>
 

@@ -1,6 +1,6 @@
 /**
  * Unified Shopping Cart Store - Zustand
- * JC Hair Studio's 62 E-commerce
+ * JC Hair Studio's 62's 62 E-commerce
  *
  * Combines functionality from both cartStore and enhancedCartStore
  * to provide a single, consistent cart experience across the app.

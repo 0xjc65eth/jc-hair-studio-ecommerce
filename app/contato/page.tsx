@@ -76,9 +76,9 @@ const contactChannels = [
 
 const socialMedia = [
   { name: "Instagram", handle: "@jchairstudios62", link: "https://instagram.com/jchairstudios62" },
-  { name: "Facebook", handle: "JC Hair Studios 62", link: "https://facebook.com/jchairstudios62" },
+  { name: "Facebook", handle: "62 Beautys 62", link: "https://facebook.com/jchairstudios62" },
   { name: "TikTok", handle: "@jchairstudios62", link: "https://tiktok.com/@jchairstudios62" },
-  { name: "YouTube", handle: "JC Hair Studios 62", link: "https://youtube.com/@jchairstudios62" }
+  { name: "YouTube", handle: "62 Beautys 62", link: "https://youtube.com/@jchairstudios62" }
 ];
 
 const faqItems = [

@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import WhatsAppButton from '../../components/WhatsAppButton'
 
 export const metadata: Metadata = {
-  title: 'Kits Completos Premium - Soluções Integradas | JC Hair Studio\'s 62',
+  title: 'Kits Completos Premium - Soluções Integradas | 62 Beauty\'s 62',
   description: 'Kits completos para extensões: iniciante, profissional, styling. Soluções integradas com economia garantida. Mega hair, progressiva, acessórios premium.',
   keywords: [
     'kits completos',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     'lisboa portugal'
   ],
   openGraph: {
-    title: 'Kits Completos Premium - JC Hair Studio\'s 62',
+    title: 'Kits Completos Premium - 62 Beauty\'s 62',
     description: 'Soluções completas para transformação total com economia garantida',
     images: ['/images/kits-completos-hero.jpg'],
   },
@@ -423,16 +424,13 @@ export default function KitsCompletosPage() {
                 
                 {/* CTA */}
                 <div className="mt-6 pt-6 border-t border-gray-200">
-                  <button
-                    onClick={() => {
-                      const message = `🎁 Olá! Tenho interesse no ${kit.name} (€${kit.salePrice}). Gostaria de mais informações sobre disponibilidade, formas de pagamento e prazo de entrega.`
-                      window.open(`https://wa.me/32470032758?text=${encodeURIComponent(message)}`, '_blank')
-                    }}
+                  <WhatsAppButton
+                    message={`🎁 Olá! Tenho interesse no ${kit.name} (€${kit.salePrice}). Gostaria de mais informações sobre disponibilidade, formas de pagamento e prazo de entrega.`}
                     className="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 text-white py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
                   >
                     <span>📱</span>
                     <span>Consultar Disponibilidade</span>
-                  </button>
+                  </WhatsAppButton>
                 </div>
               </div>
             </div>

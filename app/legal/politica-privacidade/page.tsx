@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Política de Privacidade | JC Hair Studio\'s 62',
+  title: 'Política de Privacidade | 62 Beauty\'s 62',
   description: 'Política de Privacidade em conformidade com o GDPR e proteção de dados pessoais',
 }
 
@@ -17,7 +17,7 @@ export default function PoliticaPrivacidade() {
             <p className="text-gray-600 text-lg">
               <strong>Última atualização:</strong> 12 de setembro de 2025<br/>
               <strong>Versão:</strong> 2.1 - GDPR Compliant<br/>
-              <strong>Controlador de Dados:</strong> JC Hair Studio's 62
+              <strong>Controlador de Dados:</strong> 62 Beauty's 62
             </p>
           </header>
 
@@ -27,12 +27,12 @@ export default function PoliticaPrivacidade() {
             <section>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">1. Identificação do Controlador de Dados</h2>
               <div className="bg-blue-50 p-4 rounded-lg">
-                <p><strong>Denominação Social:</strong> JC Hair Studio's 62, Lda.</p>
+                <p><strong>Denominação Social:</strong> 62 Beauty's 62, Lda.</p>
                 <p><strong>NIPC/NIF:</strong> [A completar com número oficial]</p>
                 <p><strong>Morada:</strong> [Endereço completo em Portugal]</p>
                 <p><strong>Email de Contacto:</strong> info@jchairstudio62.com</p>
                 <p><strong>Data Protection Officer (DPO):</strong> privacy@jchairstudio62.com</p>
-                <p><strong>Representante na UE:</strong> JC Hair Studio's 62, Lda.</p>
+                <p><strong>Representante na UE:</strong> 62 Beauty's 62, Lda.</p>
               </div>
             </section>
 
@@ -385,7 +385,7 @@ export default function PoliticaPrivacidade() {
                   Para questões sobre esta Política de Privacidade: <a href="mailto:privacy@jchairstudio62.com" className="text-purple-600 hover:text-purple-800">privacy@jchairstudio62.com</a>
                 </p>
                 <p className="text-xs text-gray-500">
-                  © 2025 JC Hair Studio's 62, Lda. Todos os direitos reservados. | GDPR Compliant
+                  © 2025 62 Beauty's 62, Lda. Todos os direitos reservados. | GDPR Compliant
                 </p>
               </div>
             </footer>

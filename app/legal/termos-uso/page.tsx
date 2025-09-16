@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Termos de Uso | JC Hair Studio\'s 62',
+  title: 'Termos de Uso | 62 Beauty\'s 62',
   description: 'Termos e Condições de Uso juridicamente blindados para e-commerce internacional',
 }
 
@@ -17,7 +17,7 @@ export default function TermosUso() {
             <p className="text-gray-600 text-lg">
               <strong>Última atualização:</strong> 12 de setembro de 2025<br/>
               <strong>Versão:</strong> 3.0 - Proteção Legal Máxima<br/>
-              <strong>Entidade:</strong> JC Hair Studio's 62, Lda.
+              <strong>Entidade:</strong> 62 Beauty's 62, Lda.
             </p>
           </header>
 
@@ -32,7 +32,7 @@ export default function TermosUso() {
                   <p><strong>1.1.</strong> Ao aceder, navegar ou utilizar este website (www.jchairstudio62.com), VOCÊ CONFIRMA que leu, compreendeu e aceita ficar vinculado a estes Termos e Condições de Uso ("Termos").</p>
                   <p><strong>1.2.</strong> Se NÃO CONCORDAR com qualquer parte destes Termos, deve CESSAR IMEDIATAMENTE a utilização do website e serviços.</p>
                   <p><strong>1.3.</strong> A utilização continuada após alterações aos Termos constitui aceitação das mesmas.</p>
-                  <p><strong>1.4.</strong> Estes Termos formam um contrato legalmente vinculativo entre você e JC Hair Studio's 62, Lda.</p>
+                  <p><strong>1.4.</strong> Estes Termos formam um contrato legalmente vinculativo entre você e 62 Beauty's 62, Lda.</p>
                 </div>
               </div>
             </section>
@@ -44,7 +44,7 @@ export default function TermosUso() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="font-semibold text-blue-800 mb-2">Dados da Empresa</h3>
-                    <p><strong>Denominação Social:</strong> JC Hair Studio's 62, Lda.</p>
+                    <p><strong>Denominação Social:</strong> 62 Beauty's 62, Lda.</p>
                     <p><strong>NIPC/NIF:</strong> [Número de identificação fiscal]</p>
                     <p><strong>Conservatória:</strong> [Localização do registo comercial]</p>
                     <p><strong>Capital Social:</strong> [Valor em euros]</p>
@@ -64,7 +64,7 @@ export default function TermosUso() {
             <section>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">3. Descrição dos Serviços Oferecidos</h2>
               <div className="space-y-4">
-                <p><strong>3.1. OBJETO:</strong> A JC Hair Studio's 62 opera uma plataforma de e-commerce especializada na venda de produtos para cabelo, extensões, mega hair e acessórios de beleza.</p>
+                <p><strong>3.1. OBJETO:</strong> A 62 Beauty's 62 opera uma plataforma de e-commerce especializada na venda de produtos para cabelo, extensões, mega hair e acessórios de beleza.</p>
                 
                 <h3 className="text-xl font-semibold text-purple-700 mt-6 mb-3">Produtos Disponíveis:</h3>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -168,7 +168,7 @@ export default function TermosUso() {
                     <li>Layout, design, estrutura de navegação</li>
                     <li>Compilações, traduções, e obras derivadas</li>
                   </ul>
-                  <p className="mt-3 font-semibold">São propriedade exclusiva da JC Hair Studio's 62 ou dos seus licenciadores, protegidos por leis de direitos autorais, marcas registadas e outras leis de propriedade intelectual.</p>
+                  <p className="mt-3 font-semibold">São propriedade exclusiva da 62 Beauty's 62 ou dos seus licenciadores, protegidos por leis de direitos autorais, marcas registadas e outras leis de propriedade intelectual.</p>
                 </div>
 
                 <div className="bg-orange-50 p-6 rounded-lg">
@@ -495,7 +495,7 @@ export default function TermosUso() {
                   <p className="font-semibold text-lg">DECLARAÇÃO DE ACEITAÇÃO</p>
                   <p>Ao utilizar este website e serviços, VOCÊ RECONHECE que leu, compreendeu e aceita ficar vinculado a estes Termos e Condições de Uso na sua totalidade.</p>
                   <div className="border-t border-gray-600 pt-4 mt-4">
-                    <p className="text-sm">© 2025 JC Hair Studio's 62, Lda. | Todos os direitos reservados</p>
+                    <p className="text-sm">© 2025 62 Beauty's 62, Lda. | Todos os direitos reservados</p>
                     <p className="text-sm">Documento juridicamente blindado | Versão 3.0 | Última atualização: 12/09/2025</p>
                   </div>
                 </div>

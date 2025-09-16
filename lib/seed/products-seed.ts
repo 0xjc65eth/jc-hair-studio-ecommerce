@@ -21,7 +21,7 @@ const sampleProducts = [
     quantity: 25,
     status: "ACTIVE",
     isFeatured: true,
-    metaTitle: "Mega Hair Loiro Platinado 613 - 50cm | JC Hair Studio",
+    metaTitle: "Mega Hair Loiro Platinado 613 - 50cm | JC Hair Studio's 62",
     metaDescription: "Extensão de cabelo loiro platinado premium, 100% humano Remy europeu. Transforme seu visual com qualidade profissional.",
     images: [
       {
@@ -50,7 +50,7 @@ const sampleProducts = [
     quantity: 30,
     status: "ACTIVE",
     isFeatured: true,
-    metaTitle: "Mega Hair Castanho Natural - 55cm | JC Hair Studio",
+    metaTitle: "Mega Hair Castanho Natural - 55cm | JC Hair Studio's 62",
     metaDescription: "Extensão de cabelo castanho natural premium, 100% humano brasileiro. Volume e comprimento perfeitos.",
     images: [
       {
@@ -79,7 +79,7 @@ const sampleProducts = [
     quantity: 20,
     status: "ACTIVE",
     isFeatured: false,
-    metaTitle: "Mega Hair Ondulado Bob Style - 35cm | JC Hair Studio",
+    metaTitle: "Mega Hair Ondulado Bob Style - 35cm | JC Hair Studio's 62",
     metaDescription: "Extensão de cabelo ondulado natural, padrão 2A, perfeito para cortes Bob modernos.",
     images: [
       {
@@ -108,7 +108,7 @@ const sampleProducts = [
     quantity: 15,
     status: "ACTIVE",
     isFeatured: false,
-    metaTitle: "Mega Hair Cacheado Natural - 40cm | JC Hair Studio",
+    metaTitle: "Mega Hair Cacheado Natural - 40cm | JC Hair Studio's 62",
     metaDescription: "Extensão de cabelo cacheado 3B natural, definição perfeita para cabelos cacheados.",
     images: [
       {
@@ -137,7 +137,7 @@ const sampleProducts = [
     quantity: 25,
     status: "ACTIVE",
     isFeatured: true,
-    metaTitle: "Mega Hair Preto Premium - 55cm | JC Hair Studio",
+    metaTitle: "Mega Hair Preto Premium - 55cm | JC Hair Studio's 62",
     metaDescription: "Extensão de cabelo preto premium sedoso, brilho diamante, densidade máxima.",
     images: [
       {
@@ -166,7 +166,7 @@ const sampleProducts = [
     quantity: 10,
     status: "ACTIVE",
     isFeatured: false,
-    metaTitle: "Mega Hair Ruivo Natural - 45cm | JC Hair Studio",
+    metaTitle: "Mega Hair Ruivo Natural - 45cm | JC Hair Studio's 62",
     metaDescription: "Extensão de cabelo ruivo natural vibrante, tom exclusivo para looks únicos.",
     images: [
       {
@@ -195,7 +195,7 @@ const sampleProducts = [
     quantity: 8,
     status: "ACTIVE",
     isFeatured: true,
-    metaTitle: "Mega Hair Gold Premium - 75cm | JC Hair Studio",
+    metaTitle: "Mega Hair Gold Premium - 75cm | JC Hair Studio's 62",
     metaDescription: "Extensão de cabelo coleção Gold exclusiva, 75cm premium para transformações dramáticas.",
     images: [
       {
@@ -224,7 +224,7 @@ const sampleProducts = [
     quantity: 5,
     status: "ACTIVE",
     isFeatured: true,
-    metaTitle: "Mega Hair Rapunzel Collection - 90cm | JC Hair Studio",
+    metaTitle: "Mega Hair Rapunzel Collection - 90cm | JC Hair Studio's 62",
     metaDescription: "Extensão de cabelo Rapunzel exclusiva, 90cm de comprimento extremo para looks dramáticos.",
     images: [
       {

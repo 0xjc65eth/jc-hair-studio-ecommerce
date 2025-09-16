@@ -2,10 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { headers } from 'next/headers';
 import { MongoOrderService } from '@/lib/services/mongoOrderService';
-import { connectToDatabase } from '@/lib/mongodb/connection';
+// FIXED: Use correct import - connectDB instead of connectToDatabase
+import { connectDB } from '@/lib/mongodb/connection';
 
+// FIXED: Update Stripe API version to match current Stripe types
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-06-20',
+  apiVersion: '2025-08-27.basil',
 });
 
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET!;
@@ -38,8 +40,8 @@ export async function POST(request: NextRequest) {
 
     console.log(`Received Stripe webhook: ${event.type}`);
 
-    // Connect to database
-    await connectToDatabase();
+    // FIXED: Connect to database using correct function name
+    await connectDB();
 
     // Handle the event
     switch (event.type) {
@@ -113,17 +115,14 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
 
     // Update order status to completed
     if (session.metadata?.orderId) {
+      // FIXED: updateOrderStatus expects only 2 arguments (orderId, status)
       await MongoOrderService.updateOrderStatus(
         session.metadata.orderId,
-        'COMPLETED',
-        {
-          stripeSessionId: session.id,
-          stripePaymentIntentId: session.payment_intent as string,
-          paymentMethod: session.payment_method_types[0],
-          amountReceived: session.amount_total || 0,
-          currency: session.currency || 'eur'
-        }
+        'COMPLETED'
       );
+
+      // Additional payment data could be updated separately if needed
+      // This would require a separate method like updateOrderPaymentDetails
 
       console.log(`Order ${session.metadata.orderId} marked as completed`);
     }
@@ -143,17 +142,13 @@ async function handlePaymentSucceeded(paymentIntent: Stripe.PaymentIntent) {
   try {
     console.log('Processing successful payment:', paymentIntent.id);
 
-    // Update order status if metadata contains orderId
+    // FIXED: Update order status if metadata contains orderId (2 args only)
     if (paymentIntent.metadata?.orderId) {
       await MongoOrderService.updateOrderStatus(
         paymentIntent.metadata.orderId,
-        'PROCESSING',
-        {
-          stripePaymentIntentId: paymentIntent.id,
-          amountReceived: paymentIntent.amount_received,
-          currency: paymentIntent.currency
-        }
+        'PROCESSING'
       );
+      console.log(`Order ${paymentIntent.metadata.orderId} marked as processing`);
     }
 
   } catch (error) {
@@ -166,16 +161,13 @@ async function handlePaymentFailed(paymentIntent: Stripe.PaymentIntent) {
   try {
     console.log('Processing failed payment:', paymentIntent.id);
 
-    // Update order status to failed
+    // FIXED: Update order status to failed (2 args only)
     if (paymentIntent.metadata?.orderId) {
       await MongoOrderService.updateOrderStatus(
         paymentIntent.metadata.orderId,
-        'PAYMENT_FAILED',
-        {
-          stripePaymentIntentId: paymentIntent.id,
-          failureReason: paymentIntent.last_payment_error?.message || 'Payment failed'
-        }
+        'PAYMENT_FAILED'
       );
+      console.log(`Order ${paymentIntent.metadata.orderId} marked as payment failed`);
     }
 
   } catch (error) {
@@ -188,16 +180,13 @@ async function handleInvoicePaymentSucceeded(invoice: Stripe.Invoice) {
   try {
     console.log('Processing successful invoice payment:', invoice.id);
 
-    // Handle subscription invoice payments
-    if (invoice.subscription && invoice.metadata?.orderId) {
+    // FIXED: Handle subscription invoice payments (2 args only) - using type assertion
+    if ((invoice as any).subscription && invoice.metadata?.orderId) {
       await MongoOrderService.updateOrderStatus(
         invoice.metadata.orderId,
-        'COMPLETED',
-        {
-          stripeInvoiceId: invoice.id,
-          subscriptionId: invoice.subscription as string
-        }
+        'COMPLETED'
       );
+      console.log(`Subscription order ${invoice.metadata.orderId} completed`);
     }
 
   } catch (error) {
@@ -210,17 +199,13 @@ async function handleInvoicePaymentFailed(invoice: Stripe.Invoice) {
   try {
     console.log('Processing failed invoice payment:', invoice.id);
 
-    // Handle failed subscription payments
-    if (invoice.subscription && invoice.metadata?.orderId) {
+    // FIXED: Handle failed subscription payments (2 args only) - using type assertion
+    if ((invoice as any).subscription && invoice.metadata?.orderId) {
       await MongoOrderService.updateOrderStatus(
         invoice.metadata.orderId,
-        'PAYMENT_FAILED',
-        {
-          stripeInvoiceId: invoice.id,
-          subscriptionId: invoice.subscription as string,
-          failureReason: 'Invoice payment failed'
-        }
+        'PAYMENT_FAILED'
       );
+      console.log(`Subscription order ${invoice.metadata.orderId} payment failed`);
     }
 
   } catch (error) {

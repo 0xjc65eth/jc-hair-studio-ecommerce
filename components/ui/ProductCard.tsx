@@ -185,12 +185,18 @@ export function ProductCard({
         <div className={imageVariants[variant]}>
           {/* Main Product Image */}
           <Image
-            src={getImageUrl(product.images[currentImageIndex] || product.images[0], {
-              width: 400,
-              height: variant === 'compact' ? 400 : 500,
-              quality: 85,
-              format: 'webp'
-            })}
+            src={getImageUrl(
+              // DEFENSIVE VALIDATION: Ensure images array exists and has at least one item
+              (product.images && product.images.length > 0)
+                ? (product.images[currentImageIndex] || product.images[0])
+                : '/placeholder-product.jpg', // Fallback image
+              {
+                width: 400,
+                height: variant === 'compact' ? 400 : 500,
+                quality: 85,
+                format: 'webp'
+              }
+            )}
             alt={product.name}
             fill
             className={`object-cover transition-all duration-500 ${
@@ -201,7 +207,8 @@ export function ProductCard({
           />
           
           {/* Additional Images on Hover */}
-          {product.images.length > 1 && (
+          {/* DEFENSIVE VALIDATION: Check if images array exists and has multiple items */}
+          {(product.images && product.images.length > 1) && (
             <div className="absolute bottom-2 left-2 flex space-x-1 opacity-0 group-hover:opacity-100 transition-opacity">
               {product.images.slice(0, 4).map((_, index) => (
                 <button

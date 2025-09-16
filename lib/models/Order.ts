@@ -174,7 +174,7 @@ OrderSchema.pre('save', function(next) {
   if (!this.orderNumber) {
     const timestamp = Date.now().toString();
     const random = Math.random().toString(36).substring(2, 8).toUpperCase();
-    this.orderNumber = `JC${timestamp.slice(-6)}${random}`;
+    this.orderNumber = `62B${timestamp.slice(-6)}${random}`;
   }
   next();
 });

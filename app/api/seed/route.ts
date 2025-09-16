@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import connectDB from '@/lib/prisma';
+// FIXED: Import connectDB from correct MongoDB connection file
+import { connectDB } from '@/lib/mongodb/connection';
 import { Product } from '@/lib/models/Product';
 import { Category } from '@/lib/models/Category';
 

@@ -3,10 +3,10 @@ import { Suspense } from 'react';
 import CartPage from '../../components/cart/CartPage';
 
 export const metadata: Metadata = {
-  title: 'Carrinho - JC Hair Studio\'s 62',
+  title: 'Carrinho - 62 Beauty\'s 62',
   description: 'Revise seus produtos selecionados e proceda para o checkout.',
   openGraph: {
-    title: 'Carrinho - JC Hair Studio\'s 62',
+    title: 'Carrinho - 62 Beauty\'s 62',
     description: 'Revise seus produtos selecionados e proceda para o checkout.',
     images: ['/og-cart.jpg'],
   },

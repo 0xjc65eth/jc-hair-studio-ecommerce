@@ -2,7 +2,7 @@
 
 /**
  * Cosmetics Products Seeder Script
- * JC Hair Studio's 62 E-commerce
+ * JC Hair Studio's 62's 62 E-commerce
  *
  * This script imports all cosmetic products from batches 2, 3, and 4 into the database
  * Run: npx ts-node scripts/seed-cosmetics.ts
@@ -11,7 +11,7 @@
 import { seedAllCosmeticsProducts } from '../lib/seeders/cosmetics-unified-seeder';
 
 async function main() {
-  console.log('🎨 Starting JC Hair Studio\'s 62 Cosmetics Import');
+  console.log('🎨 Starting JC Hair Studio's 62\'s 62 Cosmetics Import');
   console.log('=' .repeat(60));
 
   try {

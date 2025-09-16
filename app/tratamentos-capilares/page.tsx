@@ -4,7 +4,7 @@ import CategoryPage from '@/components/category/CategoryPage';
 import { beautyCategories } from '@/lib/data/categories';
 
 export const metadata: Metadata = {
-  title: 'Tratamentos Capilares - JC Hair Studio\'s 62',
+  title: 'Tratamentos Capilares - 62 Beauty\'s 62',
   description: 'Máscaras, ampolas e tratamentos intensivos para todos os tipos de cabelo. Produtos profissionais para reparação e nutrição capilar.',
   keywords: [
     'tratamentos capilares',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'sérum capilar'
   ],
   openGraph: {
-    title: 'Tratamentos Capilares - JC Hair Studio\'s 62',
+    title: 'Tratamentos Capilares - 62 Beauty\'s 62',
     description: 'Máscaras, ampolas e tratamentos intensivos para todos os tipos de cabelo',
     images: ['/images/categories/tratamentos.jpg'],
   },

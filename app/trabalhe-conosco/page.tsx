@@ -212,7 +212,7 @@ const testimonials = [
   {
     name: "Ana Silva",
     role: "Consultora Senior há 3 anos",
-    text: "A JC Hair Studio me proporcionou crescimento profissional que eu nunca imaginei. Trabalhar com produtos premium e clientes exigentes me tornou uma profissional muito mais capacitada.",
+    text: "A 62 Beauty me proporcionou crescimento profissional que eu nunca imaginei. Trabalhar com produtos premium e clientes exigentes me tornou uma profissional muito mais capacitada.",
     location: "Lisboa"
   },
   {
@@ -688,7 +688,7 @@ export default function TrabalheConoscoPage() {
               </div>
               <h3 className="font-medium mb-2">LinkedIn</h3>
               <a href="#" className="text-gray-300 hover:text-white">
-                JC Hair Studio's 62
+                62 Beauty's 62
               </a>
             </div>
           </div>

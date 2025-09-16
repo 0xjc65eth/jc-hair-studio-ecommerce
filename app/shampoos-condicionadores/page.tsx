@@ -4,7 +4,7 @@ import CategoryPage from '@/components/category/CategoryPage';
 import { beautyCategories } from '@/lib/data/categories';
 
 export const metadata: Metadata = {
-  title: 'Shampoos e Condicionadores Profissionais - JC Hair Studio\'s 62',
+  title: 'Shampoos e Condicionadores Profissionais - 62 Beauty\'s 62',
   description: 'Produtos de limpeza e condicionamento profissionais para todos os tipos de cabelo. Shampoos e condicionadores das melhores marcas.',
   keywords: [
     'shampoos profissionais',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'produtos capilares'
   ],
   openGraph: {
-    title: 'Shampoos e Condicionadores Profissionais - JC Hair Studio\'s 62',
+    title: 'Shampoos e Condicionadores Profissionais - 62 Beauty\'s 62',
     description: 'Produtos de limpeza e condicionamento profissionais para todos os tipos de cabelo',
     images: ['/images/categories/shampoos.jpg'],
   },

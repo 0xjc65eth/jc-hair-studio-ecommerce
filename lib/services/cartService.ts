@@ -1,7 +1,15 @@
-// Cart service for JC Hair Studio's 62 E-commerce
+// Cart service for JC Hair Studio's 62's 62 E-commerce
 import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+// Lazy initialization of Prisma client
+let prisma: PrismaClient | null = null;
+
+function getPrismaClient() {
+  if (!prisma) {
+    prisma = new PrismaClient();
+  }
+  return prisma;
+}
 
 export interface CartItem {
   id: string;
@@ -70,7 +78,7 @@ export class CartService {
       throw new Error('Either userId or sessionId is required');
     }
 
-    const cartItems = await prisma.cartItem.findMany({
+    const cartItems = await getPrismaClient().cartItem.findMany({
       where: {
         OR: [
           userId ? { userId } : {},
@@ -174,7 +182,7 @@ export class CartService {
     const { productId, variantId, quantity } = data;
 
     // Verify product exists and is available
-    const product = await prisma.product.findUnique({
+    const product = await getPrismaClient().product.findUnique({
       where: { id: productId },
       include: {
         variants: {
@@ -214,7 +222,7 @@ export class CartService {
     }
 
     // Check if item already exists in cart
-    const existingItem = await prisma.cartItem.findFirst({
+    const existingItem = await getPrismaClient().cartItem.findFirst({
       where: {
         AND: [
           { productId },
@@ -234,7 +242,7 @@ export class CartService {
         throw new Error(`Only ${availableStock} items available (you have ${existingItem.quantity} in cart)`);
       }
 
-      cartItem = await prisma.cartItem.update({
+      cartItem = await getPrismaClient().cartItem.update({
         where: { id: existingItem.id },
         data: { quantity: newQuantity },
         include: {
@@ -248,7 +256,7 @@ export class CartService {
       });
     } else {
       // Create new cart item
-      cartItem = await prisma.cartItem.create({
+      cartItem = await getPrismaClient().cartItem.create({
         data: {
           productId,
           variantId,
@@ -325,7 +333,7 @@ export class CartService {
     }
 
     // Find cart item
-    const cartItem = await prisma.cartItem.findFirst({
+    const cartItem = await getPrismaClient().cartItem.findFirst({
       where: {
         id: cartItemId,
         OR: [
@@ -349,7 +357,7 @@ export class CartService {
 
     if (quantity === 0) {
       // Remove item from cart
-      await prisma.cartItem.delete({
+      await getPrismaClient().cartItem.delete({
         where: { id: cartItemId }
       });
       
@@ -368,7 +376,7 @@ export class CartService {
     }
 
     // Update quantity
-    const updatedItem = await prisma.cartItem.update({
+    const updatedItem = await getPrismaClient().cartItem.update({
       where: { id: cartItemId },
       data: { quantity },
       include: {
@@ -433,7 +441,7 @@ export class CartService {
       throw new Error('Either userId or sessionId is required');
     }
 
-    const deleted = await prisma.cartItem.deleteMany({
+    const deleted = await getPrismaClient().cartItem.deleteMany({
       where: {
         id: cartItemId,
         OR: [
@@ -456,7 +464,7 @@ export class CartService {
       throw new Error('Either userId or sessionId is required');
     }
 
-    await prisma.cartItem.deleteMany({
+    await getPrismaClient().cartItem.deleteMany({
       where: {
         OR: [
           userId ? { userId } : {},
@@ -471,13 +479,13 @@ export class CartService {
    */
   static async mergeCart(userId: string, sessionId: string): Promise<CartSummary> {
     // Get guest cart items
-    const guestItems = await prisma.cartItem.findMany({
+    const guestItems = await getPrismaClient().cartItem.findMany({
       where: { sessionId },
       include: { product: true }
     });
 
     // Get user cart items
-    const userItems = await prisma.cartItem.findMany({
+    const userItems = await getPrismaClient().cartItem.findMany({
       where: { userId },
       include: { product: true }
     });
@@ -492,7 +500,7 @@ export class CartService {
 
       if (existingUserItem) {
         // Update quantity
-        await prisma.cartItem.update({
+        await getPrismaClient().cartItem.update({
           where: { id: existingUserItem.id },
           data: { 
             quantity: existingUserItem.quantity + guestItem.quantity
@@ -500,7 +508,7 @@ export class CartService {
         });
       } else {
         // Transfer guest item to user
-        await prisma.cartItem.update({
+        await getPrismaClient().cartItem.update({
           where: { id: guestItem.id },
           data: { 
             userId,
@@ -511,7 +519,7 @@ export class CartService {
     }
 
     // Delete any remaining guest items
-    await prisma.cartItem.deleteMany({
+    await getPrismaClient().cartItem.deleteMany({
       where: { sessionId }
     });
 
@@ -528,7 +536,7 @@ export class CartService {
     sessionId?: string
   ): Promise<{ discount: number; message: string }> {
     // Find coupon
-    const coupon = await prisma.coupon.findUnique({
+    const coupon = await getPrismaClient().coupon.findUnique({
       where: { code: couponCode.toUpperCase() }
     });
 

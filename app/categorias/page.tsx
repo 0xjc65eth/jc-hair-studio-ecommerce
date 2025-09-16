@@ -6,7 +6,7 @@ import { ArrowRight, Star, TrendingUp, Package } from 'lucide-react';
 import { beautyCategories } from '@/lib/data/categories';
 
 export const metadata: Metadata = {
-  title: 'Categorias de Beleza - JC Hair Studio\'s 62',
+  title: 'Categorias de Beleza - 62 Beauty\'s 62',
   description: 'Explore todas as categorias de produtos de beleza: progressivas, tratamentos capilares, maquiagem brasileira e muito mais.',
   keywords: [
     'categorias beleza',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'e-commerce beleza'
   ],
   openGraph: {
-    title: 'Categorias de Beleza - JC Hair Studio\'s 62',
+    title: 'Categorias de Beleza - 62 Beauty\'s 62',
     description: 'Explore todas as categorias de produtos de beleza disponíveis',
     images: ['/images/categories-overview.jpg'],
   },

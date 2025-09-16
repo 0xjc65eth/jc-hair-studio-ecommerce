@@ -21,13 +21,13 @@ import { ProductCard } from '@/components/ui/ProductCard';
 import { SearchBar } from '@/components/ui/SearchBar';
 import { useInView } from 'react-intersection-observer';
 
-// Dynamic imports for performance
-const HeroBanner = dynamic(() => import('@/components/sections/HeroBanner'), {
-  loading: () => <HeroBannerSkeleton />,
-});
-const CategoryGrid = dynamic(() => import('@/components/sections/CategoryGrid'));
-const TestimonialSlider = dynamic(() => import('@/components/sections/TestimonialSlider'));
-const Newsletter = dynamic(() => import('@/components/sections/Newsletter'));
+// Dynamic imports for performance - DISABLED: Components don't exist yet
+// const HeroBanner = dynamic(() => import('@/components/sections/HeroBanner'), {
+//   loading: () => <HeroBannerSkeleton />,
+// });
+// const CategoryGrid = dynamic(() => import('@/components/sections/CategoryGrid'));
+// const TestimonialSlider = dynamic(() => import('@/components/sections/TestimonialSlider'));
+// const Newsletter = dynamic(() => import('@/components/sections/Newsletter'));
 
 // Animation variants
 const fadeInUp = {
@@ -73,14 +73,14 @@ export default function HomePage() {
       
       {/* Testimonials */}
       <Suspense fallback={<div className="h-96 bg-gray-50" />}>
-        <TestimonialSlider />
+        {/* <TestimonialSlider /> */}
       </Suspense>
       
       {/* Professional Section */}
       <ProfessionalSection />
       
       {/* Newsletter */}
-      <Newsletter />
+      {/* <Newsletter /> */}
     </div>
   );
 }
@@ -326,8 +326,8 @@ function FeaturedProductsSection() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
   
   const { data: products, isLoading } = useQuery({
-    queryKey: API_KEYS.productList({ featured: true, limit: 8 }),
-    queryFn: () => productApi.getProducts({ featured: true, limit: 8 }),
+    queryKey: API_KEYS.productList({ limit: 8 }),
+    queryFn: () => productApi.getProducts({ limit: 8 }),
     enabled: inView,
   });
   
@@ -361,7 +361,7 @@ function FeaturedProductsSection() {
               </div>
             ))
           ) : (
-            products?.products?.map((product: any, index: number) => (
+            products?.data?.products?.map((product: any, index: number) => (
               <motion.div
                 key={product.id}
                 variants={fadeInUp}
@@ -557,7 +557,7 @@ function FeaturesSection() {
       <div className="container-custom">
         <motion.div variants={fadeInUp} className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Por Que Escolher JC Hair Studio?
+            Por Que Escolher 62 Beauty?
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Mais de 30 anos de experiência garantem qualidade e confiança em cada produto

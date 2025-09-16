@@ -19,11 +19,12 @@ import {
   Palette,
   X
 } from 'lucide-react';
-import { HairColor, TechnicalDifficulty } from '@/types/hairColor';
-import { getColorByCode } from '@/lib/data/hairColors';
+import { HairColor, HairColorDifficulty } from '@/types/hairColor';
+import { COLOR_INDEX_BY_CODE } from '@/lib/data/hairColors';
 import { calculateMegaHairPrice, TechnicalComplexity, HairQuality, HairOrigin } from '@/lib/pricing';
 import { useCart } from '@/lib/stores/unifiedCartStore';
 import ColorSelector from './ColorSelector';
+import { getWorkingImageUrl, handleImageError } from '@/lib/utils/imageUtils';
 
 interface MegaHairProduct {
   id: number;
@@ -102,14 +103,14 @@ export default function EnhancedProductCard({
   // Get hair color information
   const hairColor = useMemo(() => {
     if (!product.colorCode) return null;
-    return getColorByCode(product.colorCode);
+    return COLOR_INDEX_BY_CODE(product.colorCode);
   }, [product.colorCode]);
 
   // Calculate dynamic pricing based on selections
   const calculatedPrice = useMemo(() => {
     if (!selectedColor) return product.price;
 
-    const complexityMap: Record<TechnicalDifficulty, TechnicalComplexity> = {
+    const complexityMap: Record<HairColorDifficulty, TechnicalComplexity> = {
       basic: TechnicalComplexity.BASIC,
       intermediate: TechnicalComplexity.INTERMEDIATE,
       advanced: TechnicalComplexity.ADVANCED,
@@ -181,10 +182,14 @@ export default function EnhancedProductCard({
           {/* Product Image */}
           <div className="relative w-32 h-32 flex-shrink-0">
             <Image
-              src={product.image}
+              src={getWorkingImageUrl(product.image, product.id)}
               alt={product.name}
               fill
               className="object-cover rounded-lg"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = handleImageError(product.id);
+              }}
             />
             {product.badge && (
               <span className={`absolute -top-2 -right-2 px-2 py-1 text-xs font-bold rounded-full ${
@@ -303,10 +308,14 @@ export default function EnhancedProductCard({
       {/* Product Image */}
       <div className="relative aspect-[4/5] overflow-hidden rounded-t-xl">
         <Image
-          src={product.image}
+          src={getWorkingImageUrl(product.image, product.id)}
           alt={product.name}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"
+          onError={(e) => {
+            const target = e.target as HTMLImageElement;
+            target.src = handleImageError(product.id);
+          }}
         />
 
         {/* Badges */}
@@ -490,11 +499,15 @@ export default function EnhancedProductCard({
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <Image
-                      src={product.image}
+                      src={getWorkingImageUrl(product.image, product.id)}
                       alt={product.name}
                       width={400}
                       height={500}
                       className="w-full h-auto rounded-lg"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = handleImageError(product.id);
+                      }}
                     />
                   </div>
 

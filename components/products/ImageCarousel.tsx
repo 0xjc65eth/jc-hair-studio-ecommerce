@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { handleImageError } from '../../lib/utils/imageUtils';
 
 interface ImageCarouselProps {
   images: string[];
@@ -35,7 +36,11 @@ export default function ImageCarousel({ images, productName, className = '' }: I
             alt={productName}
             fill
             className="object-cover"
-            onError={() => setImageErrors(prev => ({ ...prev, [images[0]]: true }))}
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = handleImageError(0);
+              setImageErrors(prev => ({ ...prev, [images[0]]: true }));
+            }}
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">

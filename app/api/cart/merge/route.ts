@@ -1,4 +1,4 @@
-// Cart merge API endpoint for JC Hair Studio's 62 E-commerce
+// Cart merge API endpoint for JC Hair Studio's 62's 62 E-commerce
 import { NextRequest, NextResponse } from 'next/server';
 import { CartService } from '../../../../lib/services/cartService';
 import { withAuth, withSecurityHeaders, withRateLimit } from '../../../../lib/auth/middleware';

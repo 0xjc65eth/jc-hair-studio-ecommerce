@@ -317,7 +317,7 @@ export default function TrocasDevolucoesPage() {
         {/* Quality Guarantee */}
         <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-2xl p-8 mb-8">
           <h3 className="text-2xl font-bold mb-6 text-center">
-            🏆 Garantia de Qualidade JC Hair Studio's 62
+            🏆 Garantia de Qualidade 62 Beauty's 62
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -302,7 +302,7 @@ const convertToProductData = (product: any, batchNumber: number) => {
     quantity: product.stock.available,
     lowStockAlert: product.stock.minimum || 5,
     status: product.isActive ? 'ACTIVE' : 'DRAFT',
-    metaTitle: product.seo?.metaTitle || `${product.name} - JC Hair Studio`,
+    metaTitle: product.seo?.metaTitle || `${product.name} - JC Hair Studio's 62`,
     metaDescription: product.seo?.metaDescription || product.description.substring(0, 160),
     keywords: Array.isArray(product.seo?.keywords) ?
               product.seo.keywords.join(', ') :

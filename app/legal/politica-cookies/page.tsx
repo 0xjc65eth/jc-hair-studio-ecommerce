@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Política de Cookies | JC Hair Studio\'s 62',
+  title: 'Política de Cookies | 62 Beauty\'s 62',
   description: 'Política de Cookies em conformidade com a ePrivacy Directive e GDPR',
 }
 
@@ -17,7 +17,7 @@ export default function PoliticaCookies() {
             <p className="text-gray-600 text-lg">
               <strong>Última atualização:</strong> 12 de setembro de 2025<br/>
               <strong>Versão:</strong> 2.0 - ePrivacy Directive Compliant<br/>
-              <strong>Controlador:</strong> JC Hair Studio's 62, Lda.
+              <strong>Controlador:</strong> 62 Beauty's 62, Lda.
             </p>
           </header>
 
@@ -538,7 +538,7 @@ export default function PoliticaCookies() {
                     em pleno cumprimento da ePrivacy Directive e GDPR.
                   </p>
                   <div className="border-t border-blue-300 pt-4 space-y-2">
-                    <p className="text-sm">© 2025 JC Hair Studio's 62, Lda. | Todos os direitos reservados</p>
+                    <p className="text-sm">© 2025 62 Beauty's 62, Lda. | Todos os direitos reservados</p>
                     <p className="text-xs">ePrivacy Directive Compliant | GDPR Compliant | Versão 2.0</p>
                     <div className="flex justify-center space-x-4 text-xs">
                       <button className="hover:text-blue-200 transition-colors">Gerir Cookies</button>

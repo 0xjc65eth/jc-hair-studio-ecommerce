@@ -18,8 +18,8 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: 'JC Hair Studio\'s 62 - Extensões de Cabelo Premium',
-    template: '%s | JC Hair Studio\'s 62',
+    default: '62 Beauty\'s 62 - Extensões de Cabelo Premium',
+    template: '%s | 62 Beauty\'s 62',
   },
   description: 'E-commerce especializado em extensões de cabelo de alta qualidade. Mega hair, progressiva vogue e produtos capilares premium com entrega em toda a Europa.',
   keywords: [
@@ -28,15 +28,15 @@ export const metadata: Metadata = {
     'progressiva vogue',
     'cabelo natural',
     'hair extensions',
-    'JC Hair Studio',
+    '62 Beauty',
     'e-commerce cabelo',
     'europa',
     'portugal',
     'bélgica'
   ],
-  authors: [{ name: 'JC Hair Studio' }],
-  creator: 'JC Hair Studio',
-  publisher: 'JC Hair Studio',
+  authors: [{ name: '62 Beauty' }],
+  creator: '62 Beauty',
+  publisher: '62 Beauty',
   robots: {
     index: true,
     follow: true,
@@ -53,21 +53,21 @@ export const metadata: Metadata = {
     locale: 'pt_PT',
     alternateLocale: ['en_US', 'es_ES', 'fr_FR'],
     url: 'https://jchairstudios62.xyz',
-    siteName: 'JC Hair Studio\'s 62',
-    title: 'JC Hair Studio\'s 62 - Extensões de Cabelo Premium',
+    siteName: '62 Beauty\'s 62',
+    title: '62 Beauty\'s 62 - Extensões de Cabelo Premium',
     description: 'E-commerce especializado em extensões de cabelo de alta qualidade com entrega em toda a Europa.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'JC Hair Studio\'s 62 - Extensões de Cabelo Premium',
+        alt: '62 Beauty\'s 62 - Extensões de Cabelo Premium',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JC Hair Studio\'s 62 - Extensões de Cabelo Premium',
+    title: '62 Beauty\'s 62 - Extensões de Cabelo Premium',
     description: 'E-commerce especializado em extensões de cabelo de alta qualidade com entrega em toda a Europa.',
     images: ['/twitter-image.jpg'],
   },
@@ -126,10 +126,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="preload" href="/images/hero-bg.jpg" as="image" />
         
         {/* PWA Configuration */}
-        <meta name="application-name" content="JC Hair Studio's 62" />
+        <meta name="application-name" content="62 Beauty's 62" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="JC Hair Studio's 62" />
+        <meta name="apple-mobile-web-app-title" content="62 Beauty's 62" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
@@ -137,7 +137,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="msapplication-tap-highlight" content="no" />
         
         {/* Schema.org markup for Google+ */}
-        <meta itemProp="name" content="JC Hair Studio's 62" />
+        <meta itemProp="name" content="62 Beauty's 62" />
         <meta itemProp="description" content="E-commerce especializado em extensões de cabelo de alta qualidade" />
         <meta itemProp="image" content="/og-image.jpg" />
         
@@ -231,7 +231,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'OnlineStore',
-              name: "JC Hair Studio's 62",
+              name: "62 Beauty's 62",
               description: 'E-commerce especializado em extensões de cabelo de alta qualidade',
               url: 'https://jchairstudios62.xyz',
               logo: 'https://jchairstudios62.xyz/logo.png',

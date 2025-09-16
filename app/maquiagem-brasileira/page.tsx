@@ -4,7 +4,7 @@ import CategoryPage from '@/components/category/CategoryPage';
 import { beautyCategories } from '@/lib/data/categories';
 
 export const metadata: Metadata = {
-  title: 'Maquiagem Brasileira - JC Hair Studio\'s 62',
+  title: 'Maquiagem Brasileira - 62 Beauty\'s 62',
   description: 'As melhores marcas brasileiras de maquiagem. Bases, batons, sombras e muito mais com qualidade e preços acessíveis.',
   keywords: [
     'maquiagem brasileira',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'make brasileiro'
   ],
   openGraph: {
-    title: 'Maquiagem Brasileira - JC Hair Studio\'s 62',
+    title: 'Maquiagem Brasileira - 62 Beauty\'s 62',
     description: 'As melhores marcas brasileiras de maquiagem com qualidade e preços acessíveis',
     images: ['/images/categories/maquiagem.jpg'],
   },

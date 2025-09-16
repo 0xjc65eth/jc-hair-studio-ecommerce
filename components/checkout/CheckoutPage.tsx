@@ -169,7 +169,7 @@ export default function CheckoutPage() {
         // Cart Items
         items: items.map(item => ({
           productId: item.productId,
-          variantId: item.variantId,
+          variantId: item.variant?.id,
           quantity: item.quantity
         })),
         
@@ -580,7 +580,7 @@ export default function CheckoutPage() {
                     
                     <div className="space-y-4 mb-6">
                       {items.map((item) => {
-                        const mainImage = item.product.images.find(img => img.isMain) || item.product.images[0];
+                        const mainImage = item.product.images?.find(img => img.isMain) || item.product.images?.[0];
                         const itemPrice = item.variant?.price || item.product.price;
                         const itemTotal = itemPrice * item.quantity;
 

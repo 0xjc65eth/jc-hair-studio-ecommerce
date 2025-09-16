@@ -104,7 +104,7 @@ export default function CartPage() {
             {/* Cart Items */}
             <div className="lg:col-span-2 space-y-6">
               {items.map((item) => {
-                const mainImage = item.product.images.find(img => img.isMain) || item.product.images[0];
+                const mainImage = item.product.images?.find(img => img.isMain) || item.product.images?.[0];
                 const itemPrice = item.variant?.price || item.product.price;
                 const itemTotal = itemPrice * item.quantity;
 

@@ -290,9 +290,9 @@ export default function ProdutosPageAdvanced() {
       <div className="max-w-7xl mx-auto px-4 py-6">
         {/* Filtros Avançados */}
         <div className="mb-8">
-          <AdvancedFilters 
-            products={productsWithRating}
-            onFilterChange={setFilteredProducts}
+          <AdvancedFilters
+            products={productsWithRating as any}
+            onFilterChange={setFilteredProducts as any}
             onLoadingChange={setIsLoading}
           />
         </div>

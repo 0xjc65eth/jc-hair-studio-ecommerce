@@ -208,17 +208,22 @@ export function getImageUrl(
     fit?: 'cover' | 'contain' | 'fill' | 'inside' | 'outside';
   }
 ): string {
-  if (!src) return '';
-  
+  // DEFENSIVE VALIDATION: Ensure src is a non-empty string to prevent startsWith() errors
+  if (!src || typeof src !== 'string') return '';
+
+  // Ensure src is trimmed to avoid issues with whitespace
+  const cleanSrc = src.trim();
+  if (!cleanSrc) return '';
+
   // If it's a relative path, return as is
-  if (src.startsWith('/')) return src;
-  
+  if (cleanSrc.startsWith('/')) return cleanSrc;
+
   // If it's already a full URL, return as is
-  if (src.startsWith('http')) return src;
+  if (cleanSrc.startsWith('http')) return cleanSrc;
   
   // For Cloudinary or other CDN URLs, add transformations
-  if (src.includes('cloudinary.com') || src.includes('res.cloudinary.com')) {
-    const url = new URL(src);
+  if (cleanSrc.includes('cloudinary.com') || cleanSrc.includes('res.cloudinary.com')) {
+    const url = new URL(cleanSrc);
     const pathParts = url.pathname.split('/');
     
     if (transformations) {
@@ -239,7 +244,8 @@ export function getImageUrl(
     return url.toString();
   }
   
-  return src;
+  // Return the cleaned source as fallback
+  return cleanSrc;
 }
 
 // Check if device is mobile
@@ -430,7 +436,7 @@ export function generateMetaTags(data: {
   const defaultImage = `${baseUrl}/og-image.jpg`;
   
   return {
-    title: data.title || "JC Hair Studio's 62 - Extensões de Cabelo Premium",
+    title: data.title || "JC Hair Studio's 62 - Produtos Premium do Brasil para Europa",
     description: data.description || 'E-commerce especializado em extensões de cabelo de alta qualidade.',
     keywords: data.keywords?.join(', ') || 'extensões de cabelo, mega hair, progressiva vogue',
     openGraph: {

@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { Award, Users, Globe, Heart, Leaf, Shield } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Sobre Nós - JC Hair Studio\'s 62',
-  description: 'Conheça a história de mais de 30 anos da JC Hair Studio\'s 62, líder em extensões de cabelo premium na Europa. Missão, valores e compromisso com a excelência.',
+  title: 'Sobre Nós - 62 Beauty\'s 62',
+  description: 'Conheça a história de mais de 30 anos da 62 Beauty\'s 62, líder em extensões de cabelo premium na Europa. Missão, valores e compromisso com a excelência.',
   keywords: [
-    'sobre JC Hair Studio',
+    'sobre 62 Beauty',
     'história empresa',
     'extensões cabelo europa',
     'empresa cabelo premium',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'certificações qualidade'
   ],
   openGraph: {
-    title: 'Sobre Nós - JC Hair Studio\'s 62',
+    title: 'Sobre Nós - 62 Beauty\'s 62',
     description: 'Mais de 30 anos de experiência em extensões de cabelo premium. Conheça nossa história, missão e compromisso com a excelência.',
     type: 'article',
   },
@@ -82,7 +82,7 @@ const teamMembers = [
   {
     name: "Júlio César",
     role: "Fundador & CEO",
-    description: "Visionário por trás da JC Hair Studio, com mais de 30 anos dedicados à beleza capilar premium.",
+    description: "Visionário por trás da 62 Beauty, com mais de 30 anos dedicados à beleza capilar premium.",
     experience: "30+ anos"
   },
   {
@@ -126,7 +126,7 @@ export default function SobrePage() {
               <span className="italic"> sonhos em realidade</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl">
-              Somos a JC Hair Studio's 62, pioneiros em extensões de cabelo premium na Europa. 
+              Somos a 62 Beauty's 62, pioneiros em extensões de cabelo premium na Europa. 
               Nossa jornada começou com uma paixão: realizar o sonho de cabelos perfeitos para 
               mulheres exigentes em todo o continente.
             </p>
@@ -365,7 +365,7 @@ export default function SobrePage() {
             Faça Parte da Nossa História
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Descubra por que milhares de mulheres em toda a Europa confiam na JC Hair Studio's 62 
+            Descubra por que milhares de mulheres em toda a Europa confiam na 62 Beauty's 62 
             para realizar seus sonhos capilares.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -2,12 +2,32 @@
 
 import React from 'react';
 import ProductCard from './ProductCard';
-import { products, featuredProducts } from '../../src/data/products';
+import cosmeticsUrls from '../../drive_urls_converted.json';
+import { getWorkingImageUrl } from '../../lib/utils/imageUtils';
 
 export default function FeaturedProducts() {
-  const featuredProductsData = products.filter(product => 
-    featuredProducts.includes(product.id)
-  );
+  // Generate featured products from Google Drive images with deterministic pricing
+  // Fixed pricing to prevent hydration mismatch - using index-based deterministic values
+  const featuredProductsData = cosmeticsUrls.successful.slice(0, 8).map((imageData, index) => {
+    const brands = ['Boca Rosa Beauty', 'O Boticário Make B', 'Eudora', 'Natura', 'Vult'];
+    const categories = ['Batom Premium', 'Base Líquida', 'Sombra Paleta', 'Esmalte Cremoso', 'Blush Matte'];
+
+    // Deterministic pricing based on index to avoid hydration mismatch
+    const basePricesBRL = [45, 52, 38, 68, 35, 72, 41, 59]; // Fixed prices for each index
+    const basePricesEUR = [12, 15, 10, 18, 9, 20, 11, 16]; // Corresponding EUR prices
+
+    return {
+      id: `featured-${index + 1}`,
+      nome: `${categories[index % categories.length]} ${index + 1}`,
+      marca: brands[index % brands.length],
+      descricao: 'Produto premium de cosmético brasileiro para Europa',
+      preco_brl: basePricesBRL[index] || 45, // Fallback to 45 if index exceeds array
+      preco_eur: basePricesEUR[index] || 12, // Fallback to 12 if index exceeds array
+      imagens: [getWorkingImageUrl(imageData.direct_url, index)],
+      badge: index < 2 ? 'BEST SELLER' : index < 4 ? 'NOVO' : null,
+      destaque: true
+    };
+  });
 
   if (!featuredProductsData.length) {
     return (

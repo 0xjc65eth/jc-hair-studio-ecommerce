@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Shampoos e condicionadores para todos os tipos de cabelo. Produtos de limpeza e hidratação para o cuidado diário dos seus cabelos.',
   keywords: ['shampoo', 'condicionador', 'limpeza', 'hidratação', 'cuidado diário', 'cabelo'],
   openGraph: {
-    title: 'Shampoos e Condicionadores - JC Hair Studio\'s 62',
+    title: 'Shampoos e Condicionadores - 62 Beauty\'s 62',
     description: 'Produtos essenciais para o cuidado diário: shampoos e condicionadores para todos os tipos de cabelo.',
     images: ['/og-shampoos.jpg'],
   },
@@ -268,11 +268,13 @@ function ProductGrid({ products }: { products: Product[] }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {products.map((product) => (
-        <ProductCard 
-          key={product.id} 
+        <ProductCard
+          key={product.id}
           product={{
             ...product,
-            compareAtPrice: product.comparePrice || undefined
+            compareAtPrice: product.comparePrice || undefined,
+            images: product.images.map(img => typeof img === 'string' ? img : img.url),
+            category: product.category || 'shampoos-condicionadores'
           }} 
           variant="default"
           showQuickActions={true}
@@ -401,7 +403,9 @@ export default function ShampoosCondicionadoresPage() {
           {/* Sidebar */}
           <aside className="w-64 flex-shrink-0 hidden lg:block">
             <div className="sticky top-8">
-              <FilterSidebar filters={categoryFilters} />
+              <Suspense fallback={<div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>}>
+                <FilterSidebar filters={categoryFilters} />
+              </Suspense>
             </div>
           </aside>
 

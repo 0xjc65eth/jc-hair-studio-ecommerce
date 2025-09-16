@@ -76,7 +76,7 @@ export default function ForgotPasswordPage() {
             {/* Logo */}
             <div className="text-center mb-8">
               <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                JC Hair Studio
+                62 Beauty
               </h1>
             </div>
 
@@ -149,7 +149,7 @@ export default function ForgotPasswordPage() {
           {/* Logo */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              JC Hair Studio
+              62 Beauty
             </h1>
             <p className="text-gray-600">
               Recuperar senha

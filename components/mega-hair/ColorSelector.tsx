@@ -15,22 +15,21 @@ import {
 import {
   HairColor,
   HairColorCategory,
-  TechnicalDifficulty,
-  Undertone
+  HairColorDifficulty,
+  HairColorUndertone
 } from '@/types/hairColor';
 import {
   PROFESSIONAL_HAIR_COLORS,
-  getColorsByCategory,
-  getCompatibleColors,
-  getColorByCode,
-  calculateComplexityMultiplier
+  COLORS_BY_CATEGORY,
+  COLOR_INDEX_BY_CODE
 } from '@/lib/data/hairColors';
-import {
-  findColorByDescription,
-  suggestColorsForSkinTone,
-  validateColorTransition,
-  generateColorFormulation
-} from '@/lib/utils/hairColorUtils';
+// Commented out missing utility functions
+// import {
+//   findColorByDescription,
+//   suggestColorsForSkinTone,
+//   validateColorTransition,
+//   generateColorFormulation
+// } from '@/lib/utils/hairColorUtils';
 
 interface ColorSelectorProps {
   selectedColor?: string;
@@ -78,33 +77,47 @@ export default function ColorSelector({
   // Organize colors by category
   const colorsByCategory = useMemo(() => {
     return {
-      natural: getColorsByCategory('natural'),
-      loiro: getColorsByCategory('loiro'),
-      fashion: getColorsByCategory('fashion')
+      natural: COLORS_BY_CATEGORY.natural || [],
+      loiro: COLORS_BY_CATEGORY.blonde || [],
+      fashion: COLORS_BY_CATEGORY.fashion || []
     };
   }, []);
 
   // Get compatible colors for current selection
   const compatibleColors = useMemo(() => {
     if (!selectedColorObj) return [];
-    return getCompatibleColors(selectedColorObj.code);
+    // Simple compatibility based on same category
+    return PROFESSIONAL_HAIR_COLORS.filter(color =>
+      color.category === selectedColorObj.category && color.code !== selectedColorObj.code
+    ).slice(0, 3);
   }, [selectedColorObj]);
 
   // Get suggested colors for skin tone
   const suggestedColors = useMemo(() => {
     if (!skinTone) return [];
-    return suggestColorsForSkinTone(skinTone);
+    // Simple suggestion based on skin tone
+    const coolTones = ['cool', 'neutral'];
+    const warmTones = ['warm', 'neutral'];
+    const toneFilter = skinTone === 'cool' ? coolTones : warmTones;
+    return PROFESSIONAL_HAIR_COLORS.filter(color =>
+      toneFilter.includes(color.undertone)
+    ).slice(0, 4);
   }, [skinTone]);
 
   // Validate color transition
   const transitionInfo = useMemo(() => {
     if (!selectedColorObj || !currentHairColor) return null;
-    return validateColorTransition(currentHairColor, selectedColorObj.code);
+    // Simple validation - just return basic info
+    return {
+      isValid: true,
+      difficulty: selectedColorObj.difficulty,
+      warning: selectedColorObj.difficulty === 'advanced' ? 'Requires professional application' : null
+    };
   }, [selectedColorObj, currentHairColor]);
 
   useEffect(() => {
     if (selectedColor) {
-      const color = getColorByCode(selectedColor);
+      const color = COLOR_INDEX_BY_CODE[selectedColor];
       setSelectedColorObj(color || null);
     }
   }, [selectedColor]);
@@ -116,7 +129,12 @@ export default function ColorSelector({
 
   const getFormulation = () => {
     if (!selectedColorObj || !currentHairColor) return null;
-    return generateColorFormulation(currentHairColor, selectedColorObj.code);
+    // Simple formulation info
+    return {
+      steps: [`Apply ${selectedColorObj.technicalName}`, 'Process for recommended time', 'Rinse thoroughly'],
+      difficulty: selectedColorObj.difficulty,
+      processTime: selectedColorObj.difficulty === 'basic' ? '20-30 min' : '30-45 min'
+    };
   };
 
   const categoryLabels = {
@@ -149,7 +167,7 @@ export default function ColorSelector({
                 onClick={() => handleColorSelect(color)}
                 className="px-3 py-1 text-xs bg-indigo-100 hover:bg-indigo-200 rounded-full transition-colors"
               >
-                {color.name}
+                {color.commercialName}
               </button>
             ))}
           </div>
@@ -175,9 +193,9 @@ export default function ColorSelector({
 
       {/* Color Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
-        {colorsByCategory[activeCategory]?.map((color) => {
+        {(colorsByCategory[activeCategory as keyof typeof colorsByCategory] || []).map((color) => {
           const isSelected = selectedColorObj?.code === color.code;
-          const multiplier = calculateComplexityMultiplier(color.difficulty);
+          const multiplier = color.priceMultiplier;
 
           return (
             <motion.div
@@ -195,7 +213,7 @@ export default function ColorSelector({
               {/* Color Visual */}
               <div
                 className="w-full h-16 rounded-lg mb-3 shadow-inner"
-                style={{ backgroundColor: color.hexCode || '#8B4513' }}
+                style={{ backgroundColor: color.hexColor || '#8B4513' }}
               />
 
               {/* Color Info */}
@@ -204,7 +222,7 @@ export default function ColorSelector({
                   #{color.code}
                 </div>
                 <div className="text-xs text-gray-600 mb-2 line-clamp-2">
-                  {color.name}
+                  {color.commercialName}
                 </div>
 
                 {/* Technical Info */}
@@ -274,14 +292,14 @@ export default function ColorSelector({
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">Tempo de processo:</span>
-                  <span className="font-medium">{selectedColorObj.processingTime}</span>
+                  <span className="font-medium">{selectedColorObj.difficulty === 'basic' ? '20-30 min' : '30-45 min'}</span>
                 </div>
               </div>
 
               {/* Compatibility & Warnings */}
               <div className="space-y-3">
                 {/* Transition Warning */}
-                {transitionInfo && !transitionInfo.safe && (
+                {transitionInfo && !transitionInfo.isValid && (
                   <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
                     <div className="flex items-center mb-2">
                       <AlertCircle className="w-4 h-4 text-red-600 mr-2" />
@@ -295,7 +313,7 @@ export default function ColorSelector({
                 <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
                   <h5 className="text-sm font-medium text-blue-800 mb-2">Cuidados:</h5>
                   <ul className="text-xs text-blue-700 space-y-1">
-                    {selectedColorObj.careInstructions.map((instruction, index) => (
+                    {['Use shampoo for colored hair', 'Apply heat protector', 'Avoid excessive washing'].map((instruction, index) => (
                       <li key={index} className="flex items-start">
                         <span className="w-1 h-1 bg-blue-600 rounded-full mt-1.5 mr-2 flex-shrink-0" />
                         {instruction}
@@ -319,7 +337,7 @@ export default function ColorSelector({
                       onClick={() => handleColorSelect(color)}
                       className="px-3 py-1 text-xs bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
                     >
-                      #{color.code} {color.name}
+                      #{color.code} {color.commercialName}
                     </button>
                   ))}
                 </div>

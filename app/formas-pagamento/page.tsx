@@ -74,7 +74,7 @@ export default function FormasPagamentoPage() {
                   <div><strong>Banco:</strong> KBC Bank (Bélgica)</div>
                   <div><strong>IBAN:</strong> BE## #### #### ####</div>
                   <div><strong>BIC:</strong> KREDBEBB</div>
-                  <div><strong>Titular:</strong> JC Hair Studio's 62</div>
+                  <div><strong>Titular:</strong> 62 Beauty's 62</div>
                 </div>
               </div>
               

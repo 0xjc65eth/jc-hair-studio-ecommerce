@@ -1,5 +1,5 @@
 /**
- * Database Seeder - JC Hair Studio's 62 
+ * Database Seeder - JC Hair Studio's 62's 62 
  * Dados reais de produtos brasileiros para hair studio
  */
 

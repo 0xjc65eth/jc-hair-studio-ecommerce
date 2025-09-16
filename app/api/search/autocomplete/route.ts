@@ -1,4 +1,4 @@
-// Autocomplete endpoint for JC Hair Studio's 62 E-commerce
+// Autocomplete endpoint for JC Hair Studio's 62's 62 E-commerce
 import { NextRequest, NextResponse } from 'next/server';
 import { SearchService } from '../../../../lib/services/searchService';
 import { withOptionalAuth, withSecurityHeaders, withRateLimit } from '../../../../lib/auth/middleware';

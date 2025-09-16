@@ -1,4 +1,4 @@
-// Authentication middleware for JC Hair Studio's 62 E-commerce
+// Authentication middleware for JC Hair Studio's 62's 62 E-commerce
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyToken, extractTokenFromRequest, hasRole, JWTPayload } from './jwt';
 

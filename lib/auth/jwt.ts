@@ -1,4 +1,4 @@
-// JWT Authentication utilities for JC Hair Studio's 62 E-commerce
+// JWT Authentication utilities for JC Hair Studio's 62's 62 E-commerce
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import { NextRequest } from 'next/server';

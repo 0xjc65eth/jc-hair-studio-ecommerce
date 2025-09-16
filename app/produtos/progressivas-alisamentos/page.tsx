@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Progressivas, alisamentos e tratamentos químicos profissionais para cabelos. Produtos de alta qualidade para resultados duradouros.',
   keywords: ['progressiva', 'alisamento', 'tratamento químico', 'cabelo liso', 'profissional'],
   openGraph: {
-    title: 'Progressivas e Alisamentos - JC Hair Studio\'s 62',
+    title: 'Progressivas e Alisamentos - 62 Beauty\'s 62',
     description: 'Produtos profissionais para progressivas e alisamentos. Transforme seus cabelos com qualidade premium.',
     images: ['/og-progressivas.jpg'],
   },
@@ -200,11 +200,13 @@ function ProductGrid({ products }: { products: Product[] }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {products.map((product) => (
-        <ProductCard 
-          key={product.id} 
+        <ProductCard
+          key={product.id}
           product={{
             ...product,
-            compareAtPrice: product.comparePrice || undefined
+            compareAtPrice: product.comparePrice || undefined,
+            images: product.images.map(img => typeof img === 'string' ? img : img.url),
+            category: product.category || 'progressivas-alisamentos'
           }} 
           variant="default"
           showQuickActions={true}
@@ -274,7 +276,9 @@ export default function ProgressivasAlisamentosPage() {
           {/* Sidebar */}
           <aside className="w-64 flex-shrink-0 hidden lg:block">
             <div className="sticky top-8">
-              <FilterSidebar filters={categoryFilters} />
+              <Suspense fallback={<div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>}>
+                <FilterSidebar filters={categoryFilters} />
+              </Suspense>
             </div>
           </aside>
 

@@ -216,13 +216,16 @@ export async function POST(request: NextRequest) {
         minStock: validatedData.lowStockAlert,
         trackStock: validatedData.trackQuantity,
         weight: validatedData.weight,
-        characteristics: {
-          hairType: validatedData.hairType,
-          hairTexture: validatedData.hairTexture,
-          hairColor: validatedData.hairColor,
-          hairOrigin: validatedData.hairOrigin,
-          length: validatedData.length
-        },
+        // FIXED: Filter out undefined values to match Record<string, string> type
+        characteristics: Object.fromEntries(
+          Object.entries({
+            hairType: validatedData.hairType,
+            hairTexture: validatedData.hairTexture,
+            hairColor: validatedData.hairColor,
+            hairOrigin: validatedData.hairOrigin,
+            length: validatedData.length?.toString() // Convert number to string
+          }).filter(([_, value]) => value !== undefined && value !== null)
+        ) as Record<string, string>,
         seo: {
           title: validatedData.metaTitle || validatedData.name,
           description: validatedData.metaDescription || validatedData.shortDesc || validatedData.description?.substring(0, 160) || '',

@@ -4,7 +4,7 @@ import CategoryPage from '@/components/category/CategoryPage';
 import { beautyCategories } from '@/lib/data/categories';
 
 export const metadata: Metadata = {
-  title: 'Progressivas e BTX Capilares - JC Hair Studio\'s 62',
+  title: 'Progressivas e BTX Capilares - 62 Beauty\'s 62',
   description: 'Progressivas e tratamentos de botox capilar para alisamento e nutrição profunda. Produtos de alta qualidade com resultados duradouros.',
   keywords: [
     'progressiva',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'redução de volume'
   ],
   openGraph: {
-    title: 'Progressivas e BTX Capilares - JC Hair Studio\'s 62',
+    title: 'Progressivas e BTX Capilares - 62 Beauty\'s 62',
     description: 'Progressivas e tratamentos de botox capilar para alisamento e nutrição profunda',
     images: ['/images/categories/progressivas-btx.jpg'],
   },

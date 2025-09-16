@@ -308,7 +308,7 @@ export default function ComoComprarPage() {
               <div className="p-4 bg-blue-50 rounded-lg">
                 <h4 className="font-semibold text-blue-800 mb-2">🇵🇹 Sede Portugal</h4>
                 <p className="text-sm text-gray-700">
-                  JC Hair Studio's 62<br />
+                  62 Beauty's 62<br />
                   Lisboa, Portugal<br />
                   NIF: PT###.###.###<br />
                   Registro de Empresa Europeu
@@ -318,7 +318,7 @@ export default function ComoComprarPage() {
               <div className="p-4 bg-green-50 rounded-lg">
                 <h4 className="font-semibold text-green-800 mb-2">🇧🇪 Filial Bélgica</h4>
                 <p className="text-sm text-gray-700">
-                  JC Hair Studio's 62 BVBA<br />
+                  62 Beauty's 62 BVBA<br />
                   Bruxelas, Bélgica<br />
                   VAT: BE#########<br />
                   Licença de Importação UE

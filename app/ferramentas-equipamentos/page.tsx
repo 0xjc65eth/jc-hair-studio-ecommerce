@@ -4,7 +4,7 @@ import CategoryPage from '@/components/category/CategoryPage';
 import { beautyCategories } from '@/lib/data/categories';
 
 export const metadata: Metadata = {
-  title: 'Ferramentas e Equipamentos - JC Hair Studio\'s 62',
+  title: 'Ferramentas e Equipamentos - 62 Beauty\'s 62',
   description: 'Ferramentas profissionais para cabeleireiros e uso doméstico. Chapinhas, secadores, modeladores e pincéis das melhores marcas.',
   keywords: [
     'ferramentas cabeleireiro',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'ferramentas beauty'
   ],
   openGraph: {
-    title: 'Ferramentas e Equipamentos - JC Hair Studio\'s 62',
+    title: 'Ferramentas e Equipamentos - 62 Beauty\'s 62',
     description: 'Ferramentas profissionais para cabeleireiros e uso doméstico das melhores marcas',
     images: ['/images/categories/ferramentas.jpg'],
   },

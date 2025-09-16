@@ -1,6 +1,6 @@
 /**
  * MongoDB Seed Script
- * JC Hair Studio's 62 E-commerce
+ * JC Hair Studio's 62's 62 E-commerce
  * 
  * Seeds the MongoDB database with real product and category data
  */
@@ -15,7 +15,7 @@ const categories = [
     slug: 'mega-hair-liso',
     description: 'Extensões de cabelo liso 100% natural, diversos comprimentos e cores',
     seo: {
-      title: 'Mega Hair Liso Premium - JC Hair Studio',
+      title: 'Mega Hair Liso Premium - JC Hair Studio's 62',
       description: 'Extensões de cabelo liso natural de alta qualidade. Diversos comprimentos e cores.',
       keywords: ['mega hair liso', 'extensões lisas', 'cabelo natural']
     },
@@ -27,7 +27,7 @@ const categories = [
     slug: 'mega-hair-ondulado',
     description: 'Extensões de cabelo ondulado natural, padrões 2A, 2B e 2C',
     seo: {
-      title: 'Mega Hair Ondulado - JC Hair Studio',
+      title: 'Mega Hair Ondulado - JC Hair Studio's 62',
       description: 'Extensões de cabelo ondulado natural, padrões variados para looks naturais.',
       keywords: ['mega hair ondulado', 'cabelo ondulado', 'extensões naturais']
     },
@@ -39,7 +39,7 @@ const categories = [
     slug: 'mega-hair-cacheado',
     description: 'Extensões de cabelo cacheado natural, padrões 3A, 3B e 4A',
     seo: {
-      title: 'Mega Hair Cacheado - JC Hair Studio',
+      title: 'Mega Hair Cacheado - JC Hair Studio's 62',
       description: 'Extensões de cabelo cacheado natural para cachos perfeitos e autênticos.',
       keywords: ['mega hair cacheado', 'cabelo cacheado', 'cachos naturais']
     },
@@ -51,7 +51,7 @@ const categories = [
     slug: 'colecoes-especiais',
     description: 'Coleções exclusivas e edições limitadas premium',
     seo: {
-      title: 'Coleções Especiais Premium - JC Hair Studio',
+      title: 'Coleções Especiais Premium - JC Hair Studio's 62',
       description: 'Coleções exclusivas de extensões premium para ocasiões especiais.',
       keywords: ['coleções especiais', 'premium', 'exclusivo']
     },
@@ -87,7 +87,7 @@ const products = [
       length: 50
     },
     seo: {
-      title: 'Mega Hair Loiro Platinado 613 - 50cm | JC Hair Studio',
+      title: 'Mega Hair Loiro Platinado 613 - 50cm | JC Hair Studio's 62',
       description: 'Extensão de cabelo loiro platinado premium, 100% humano Remy europeu. Transforme seu visual com qualidade profissional.',
       keywords: ['mega hair loiro', 'cabelo platinado', 'extensões loiras'],
       slug: 'mega-hair-liso-loiro-platinado-613-50cm'
@@ -124,7 +124,7 @@ const products = [
       length: 55
     },
     seo: {
-      title: 'Mega Hair Castanho Natural - 55cm | JC Hair Studio',
+      title: 'Mega Hair Castanho Natural - 55cm | JC Hair Studio's 62',
       description: 'Extensão de cabelo castanho natural premium, 100% humano brasileiro. Volume e comprimento perfeitos.',
       keywords: ['mega hair castanho', 'cabelo natural', 'extensões brasileiras'],
       slug: 'mega-hair-liso-castanho-natural-1-55cm'
@@ -161,7 +161,7 @@ const products = [
       length: 90
     },
     seo: {
-      title: 'Mega Hair Rapunzel Collection - 90cm | JC Hair Studio',
+      title: 'Mega Hair Rapunzel Collection - 90cm | JC Hair Studio's 62',
       description: 'Extensão de cabelo Rapunzel exclusiva, 90cm de comprimento extremo para looks dramáticos.',
       keywords: ['rapunzel collection', 'cabelo longo', 'extensões premium'],
       slug: 'mega-hair-rapunzel-collection-24-90cm'
@@ -198,7 +198,7 @@ const products = [
       length: 45
     },
     seo: {
-      title: 'Mega Hair Ondulado Castanho - 45cm | JC Hair Studio',
+      title: 'Mega Hair Ondulado Castanho - 45cm | JC Hair Studio's 62',
       description: 'Extensão ondulada natural, textura 2B perfeita para volume com movimento.',
       keywords: ['mega hair ondulado', 'cabelo ondulado', 'textura natural'],
       slug: 'mega-hair-ondulado-natural-6-45cm'
@@ -235,7 +235,7 @@ const products = [
       length: 40
     },
     seo: {
-      title: 'Mega Hair Cacheado 3C - 40cm | JC Hair Studio',
+      title: 'Mega Hair Cacheado 3C - 40cm | JC Hair Studio's 62',
       description: 'Extensão cacheada padrão 3C, movimento spiral definido e natural.',
       keywords: ['mega hair cacheado', 'cabelo cacheado', 'textura 3C'],
       slug: 'mega-hair-cacheado-3c-40cm'
@@ -272,7 +272,7 @@ const products = [
       length: 60
     },
     seo: {
-      title: 'Mega Hair Preto Intenso - 60cm | JC Hair Studio',
+      title: 'Mega Hair Preto Intenso - 60cm | JC Hair Studio's 62',
       description: 'Extensão de cabelo preto natural premium, 60cm de comprimento e densidade superior.',
       keywords: ['mega hair preto', 'cabelo preto natural', 'extensões longas'],
       slug: 'mega-hair-liso-preto-intenso-1b-60cm'

@@ -2,7 +2,15 @@ import { PrismaClient } from '@prisma/client';
 import { batch4Products, batch4Stats } from './batch-4-products';
 import { CreateProductData } from '../../types/product';
 
-const prisma = new PrismaClient();
+// Lazy initialization of Prisma client
+let prisma: PrismaClient | null = null;
+
+function getPrismaClient() {
+  if (!prisma) {
+    prisma = new PrismaClient();
+  }
+  return prisma;
+}
 
 // Mapping das categorias do batch 4 para categorias do sistema
 const categoryMapping = {
@@ -98,7 +106,7 @@ export async function seedBatch4Products() {
   console.log('\n📋 Verificando categorias...');
 
   for (const categorySlug of requiredCategories) {
-    const existingCategory = await prisma.category.findUnique({
+    const existingCategory = await getPrismaClient().category.findUnique({
       where: { slug: categorySlug }
     });
 
@@ -112,7 +120,7 @@ export async function seedBatch4Products() {
         'acessorios': 'Acessórios'
       };
 
-      await prisma.category.create({
+      await getPrismaClient().category.create({
         data: {
           name: categoryNames[categorySlug as keyof typeof categoryNames] || categorySlug,
           slug: categorySlug,
@@ -141,7 +149,7 @@ export async function seedBatch4Products() {
           const { images, variants, categories, ...baseProduct } = productData;
 
           // Buscar categoria ID
-          const category = await prisma.category.findUnique({
+          const category = await getPrismaClient().category.findUnique({
             where: { slug: categories[0] }
           });
 
@@ -150,7 +158,7 @@ export async function seedBatch4Products() {
           }
 
           // Verificar se produto já existe
-          const existingProduct = await prisma.product.findUnique({
+          const existingProduct = await getPrismaClient().product.findUnique({
             where: { slug: productData.slug }
           });
 
@@ -160,7 +168,7 @@ export async function seedBatch4Products() {
           }
 
           // Criar produto
-          const createdProduct = await prisma.product.create({
+          const createdProduct = await getPrismaClient().product.create({
             data: {
               ...baseProduct,
               images: {
@@ -220,7 +228,7 @@ export async function clearBatch4Products() {
   const batch4SKUs = batch4Products.map(p => p.sku);
 
   // Remover imagens
-  await prisma.productImage.deleteMany({
+  await getPrismaClient().productImage.deleteMany({
     where: {
       product: {
         sku: {
@@ -231,7 +239,7 @@ export async function clearBatch4Products() {
   });
 
   // Remover variantes
-  await prisma.productVariant.deleteMany({
+  await getPrismaClient().productVariant.deleteMany({
     where: {
       product: {
         sku: {
@@ -242,7 +250,7 @@ export async function clearBatch4Products() {
   });
 
   // Remover categorias dos produtos
-  await prisma.productCategory.deleteMany({
+  await getPrismaClient().productCategory.deleteMany({
     where: {
       product: {
         sku: {
@@ -253,7 +261,7 @@ export async function clearBatch4Products() {
   });
 
   // Remover produtos
-  const deletedProducts = await prisma.product.deleteMany({
+  const deletedProducts = await getPrismaClient().product.deleteMany({
     where: {
       sku: {
         in: batch4SKUs
@@ -276,6 +284,6 @@ if (require.main === module) {
       process.exit(1);
     })
     .finally(async () => {
-      await prisma.$disconnect();
+      await getPrismaClient().$disconnect();
     });
 }
