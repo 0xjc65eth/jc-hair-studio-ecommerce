@@ -39,9 +39,7 @@ export default function Header({ className = '' }: HeaderProps) {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
-  const [isCosmeticsDropdownOpen, setIsCosmeticsDropdownOpen] = useState(false);
   const [isMobileProductsDropdownOpen, setIsMobileProductsDropdownOpen] = useState(false);
-  const [isMobileCosmeticsDropdownOpen, setIsMobileCosmeticsDropdownOpen] = useState(false);
   
   // Get cart data
   const { itemsCount } = useCart();
@@ -60,19 +58,6 @@ export default function Header({ className = '' }: HeaderProps) {
         { name: 'Tratamentos Capilares', href: '/categoria/tratamentos-capilares' },
         { name: 'Shampoos & Condicionadores', href: '/categoria/shampoos-condicionadores' },
         { name: 'Ferramentas Profissionais', href: '/categoria/ferramentas-profissionais' },
-      ]
-    },
-    {
-      name: 'Cosméticos',
-      href: '/cosmeticos',
-      active: pathname === '/cosmeticos' || pathname.startsWith('/categoria/cosmeticos'),
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'Maquiagem para Rosto', href: '/categoria/cosmeticos?category=maquiagem-rosto' },
-        { name: 'Maquiagem para Olhos', href: '/categoria/cosmeticos?category=maquiagem-olhos' },
-        { name: 'Esmaltes & Unhas', href: '/categoria/cosmeticos?category=esmaltes-unhas' },
-        { name: 'Pincéis & Acessórios', href: '/categoria/cosmeticos?category=pinceis-acessorios' },
-        { name: 'Ver Todos os Cosméticos', href: '/cosmeticos' },
       ]
     },
     { name: 'Mega Hair', href: '/mega-hair', active: pathname === '/mega-hair' },
@@ -114,7 +99,6 @@ export default function Header({ className = '' }: HeaderProps) {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
     setIsMobileProductsDropdownOpen(false);
-    setIsMobileCosmeticsDropdownOpen(false);
   };
 
   return (
@@ -163,16 +147,12 @@ export default function Header({ className = '' }: HeaderProps) {
                         // Use different states for different dropdowns
                         if (item.name === 'Produtos Capilares') {
                           setIsProductsDropdownOpen(true);
-                        } else if (item.name === 'Cosméticos') {
-                          setIsCosmeticsDropdownOpen(true);
                         }
                       }}
                       onMouseLeave={() => {
                         // Close the appropriate dropdown
                         if (item.name === 'Produtos Capilares') {
                           setIsProductsDropdownOpen(false);
-                        } else if (item.name === 'Cosméticos') {
-                          setIsCosmeticsDropdownOpen(false);
                         }
                       }}
                     >
@@ -185,8 +165,7 @@ export default function Header({ className = '' }: HeaderProps) {
                       </Link>
 
                       {/* Show dropdown based on specific state */}
-                      {((item.name === 'Produtos Capilares' && isProductsDropdownOpen) ||
-                        (item.name === 'Cosméticos' && isCosmeticsDropdownOpen)) &&
+                      {(item.name === 'Produtos Capilares' && isProductsDropdownOpen) &&
                         item.dropdownItems && (
                         <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
                           {item.dropdownItems.map((dropdownItem) => (
@@ -386,8 +365,6 @@ export default function Header({ className = '' }: HeaderProps) {
                           // Use different states for different mobile dropdowns
                           if (item.name === 'Produtos Capilares') {
                             setIsMobileProductsDropdownOpen(!isMobileProductsDropdownOpen);
-                          } else if (item.name === 'Cosméticos') {
-                            setIsMobileCosmeticsDropdownOpen(!isMobileCosmeticsDropdownOpen);
                           }
                         }}
                         className={`w-full flex items-center justify-between px-4 py-3 text-base font-medium rounded-lg transition-colors ${
@@ -398,15 +375,13 @@ export default function Header({ className = '' }: HeaderProps) {
                       >
                         <span>{item.name}</span>
                         <ChevronDown className={`w-4 h-4 transition-transform ${
-                          (item.name === 'Produtos Capilares' && isMobileProductsDropdownOpen) ||
-                          (item.name === 'Cosméticos' && isMobileCosmeticsDropdownOpen)
+                          (item.name === 'Produtos Capilares' && isMobileProductsDropdownOpen)
                             ? 'rotate-180' : ''
                         }`} />
                       </button>
 
                       {/* Show dropdown based on specific mobile state */}
-                      {((item.name === 'Produtos Capilares' && isMobileProductsDropdownOpen) ||
-                        (item.name === 'Cosméticos' && isMobileCosmeticsDropdownOpen)) &&
+                      {(item.name === 'Produtos Capilares' && isMobileProductsDropdownOpen) &&
                         item.dropdownItems && (
                         <div className="ml-4 mt-2 space-y-1">
                           {item.dropdownItems.map((dropdownItem) => (

@@ -159,7 +159,7 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link href="/produtos" className="group relative h-96 bg-black rounded-2xl overflow-hidden">
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=400&fit=crop')] bg-cover bg-center opacity-70 group-hover:opacity-50 transition-opacity"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -169,19 +169,6 @@ export default function HomePage() {
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
                   Progressivas, tratamentos e produtos capilares
-                </p>
-              </div>
-            </Link>
-
-            <Link href="/cosmeticos" className="group relative h-96 bg-black rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=400&fit=crop')] bg-cover bg-center opacity-70 group-hover:opacity-50 transition-opacity"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-              <div className="relative z-10 flex flex-col justify-end h-full p-8 text-white">
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-amber-400 transition-colors">
-                  Cuidados & Beleza
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Maquiagem brasileira e produtos de beleza
                 </p>
               </div>
             </Link>

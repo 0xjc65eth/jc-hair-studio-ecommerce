@@ -1,0 +1,1353 @@
+{
+  "catalogoCompleto": {
+    "resumoGeral": {
+      "totalProdutos": 40,
+      "estoqueTotal": 1404,
+      "valorTotal": 48345.70,
+      "dataAtualizacao": "2025-09-17"
+    },
+    "categorias": {
+      "produtosCapilares": {
+        "nome": "Produtos Capilares",
+        "descricao": "Hidratação e Tratamentos",
+        "icone": "✨",
+        "resumo": {
+          "totalProdutos": 5,
+          "estoqueTotal": 235,
+          "valorTotal": 7537.50,
+          "ticketMedio": 31.58,
+          "participacaoCategoria": "12.5%",
+          "participacaoEstoque": "12.1%"
+        },
+        "produtos": [
+          {
+            "id": "bioextratus-oleo-argan",
+            "nome": "Bio Extratus Óleo de Argan Premium",
+            "marca": "Bio Extratus",
+            "preco": 28.50,
+            "precoOriginal": 35.90,
+            "desconto": "20.6%",
+            "estoque": 45,
+            "rating": 4.8,
+            "avaliacoes": 234,
+            "categoria": "hidratacao",
+            "features": ["Óleo Puro", "Hidratação Intensa", "Reparador", "Brilho Natural"],
+            "images": ["/images/products/hidratacao/hidratacao_1_1.jpg"]
+          },
+          {
+            "id": "bioextratus-mascara-hidratante",
+            "nome": "Bio Extratus Máscara Hidratante Multi-Função",
+            "marca": "Bio Extratus",
+            "preco": 22.90,
+            "estoque": 62,
+            "rating": 4.6,
+            "avaliacoes": 189,
+            "categoria": "hidratacao",
+            "features": ["Hidratação", "Nutrição", "Força", "Maciez"],
+            "images": ["/images/products/hidratacao/hidratacao_2_1.jpg"]
+          },
+          {
+            "id": "cronograma-capilar-completo",
+            "nome": "Kit Cronograma Capilar Completo",
+            "marca": "Bio Extratus",
+            "preco": 49.90,
+            "precoOriginal": 65.90,
+            "desconto": "24.3%",
+            "estoque": 28,
+            "rating": 4.9,
+            "avaliacoes": 156,
+            "categoria": "hidratacao",
+            "features": ["Kit Completo", "3 Etapas", "Profissional", "Resultados Visíveis"],
+            "images": ["/images/products/hidratacao/hidratacao_2_2.jpg"]
+          },
+          {
+            "id": "tratamento-intensivo-reparacao",
+            "nome": "Tratamento Intensivo de Reparação",
+            "marca": "Bio Extratus",
+            "preco": 34.90,
+            "estoque": 33,
+            "rating": 4.7,
+            "avaliacoes": 98,
+            "categoria": "hidratacao",
+            "features": ["Reparação Intensiva", "Cabelos Danificados", "Resultado Imediato"],
+            "images": ["/images/products/hidratacao/hidratacao_2_3.jpg"]
+          },
+          {
+            "id": "linha-professional-salon",
+            "nome": "Linha Professional Salon",
+            "marca": "Bio Extratus",
+            "preco": 42.90,
+            "estoque": 25,
+            "rating": 4.8,
+            "avaliacoes": 167,
+            "categoria": "hidratacao",
+            "features": ["Profissional", "Salão", "Alta Performance", "Resultado Duradouro"],
+            "images": ["/images/products/hidratacao/hidratacao_3_1.jpg"]
+          }
+        ],
+        "destaques": {
+          "maisBemAvaliado": "Kit Cronograma Capilar Completo (4.9⭐)",
+          "maiorEstoque": "Bio Extratus Máscara Hidratante (62 un)",
+          "melhorCustoBeneficio": "Bio Extratus Máscara Hidratante (R$ 22,90)",
+          "premium": "Linha Professional Salon (R$ 42,90)"
+        }
+      },
+      "progressivas": {
+        "nome": "Progressiva",
+        "descricao": "Alisamentos Profissionais e Tratamentos Químicos",
+        "icone": "🧪",
+        "resumo": {
+          "totalProdutos": 6,
+          "estoqueTotal": 130,
+          "valorTotal": 9388.00,
+          "ticketMedio": 72.22,
+          "participacaoCategoria": "15.0%",
+          "participacaoEstoque": "6.7%"
+        },
+        "produtos": [
+          {
+            "id": "progressiva-organica-zap",
+            "nome": "Zap Professional All Time Organic",
+            "marca": "Zap Professional",
+            "preco": 89.90,
+            "precoOriginal": 120.00,
+            "desconto": "25.1%",
+            "estoque": 15,
+            "rating": 4.8,
+            "avaliacoes": 167,
+            "categoria": "progressivas",
+            "features": ["Sem Formol", "Orgânica", "Duração 4-6 meses", "Natural"],
+            "images": ["https://i.ibb.co/N6p2cX42/Design-sem-nome-png.png"]
+          },
+          {
+            "id": "cadiveu-plastica-dos-fios",
+            "nome": "Cadiveu Plástica dos Fios",
+            "marca": "Cadiveu Professional",
+            "preco": 65.90,
+            "estoque": 28,
+            "rating": 4.7,
+            "avaliacoes": 145,
+            "categoria": "progressivas",
+            "features": ["2 em 1", "Reconstrução", "Alisamento", "Profissional"],
+            "images": ["https://i.ibb.co/j9NTBzYX/IMG-9138.png"]
+          },
+          {
+            "id": "inoar-moroccan-keratin",
+            "nome": "Inoar Moroccan Keratin",
+            "marca": "Inoar Professional",
+            "preco": 75.90,
+            "estoque": 22,
+            "rating": 4.6,
+            "avaliacoes": 198,
+            "categoria": "progressivas",
+            "features": ["Queratina Marroquina", "Óleo de Argan", "Hidratação", "Brilho"],
+            "images": ["https://i.ibb.co/7JQmywcP/IMG-9143.png"]
+          },
+          {
+            "id": "forever-liss-btox-zero",
+            "nome": "Forever Liss BTox Zero",
+            "marca": "Forever Liss",
+            "preco": 58.90,
+            "estoque": 35,
+            "rating": 4.5,
+            "avaliacoes": 234,
+            "categoria": "progressivas",
+            "features": ["BTox Capilar", "Zero Formol", "Tratamento", "Alisamento Suave"],
+            "images": ["https://i.ibb.co/zWc9np8Z/IMG-9148.jpg"]
+          },
+          {
+            "id": "richee-bioplastica",
+            "nome": "Richée Bioplástica Capilar",
+            "marca": "Richée Professional",
+            "preco": 72.90,
+            "estoque": 18,
+            "rating": 4.8,
+            "avaliacoes": 156,
+            "categoria": "progressivas",
+            "features": ["Bioplástica", "Reconstrução Total", "Tecnologia Avançada", "Duradouro"],
+            "images": ["https://i.ibb.co/zhH1jp3M/IMG-9154.jpg"]
+          },
+          {
+            "id": "ybera-paris-discovery",
+            "nome": "Ybera Paris Discovery",
+            "marca": "Ybera Paris",
+            "preco": 95.90,
+            "estoque": 12,
+            "rating": 4.9,
+            "avaliacoes": 89,
+            "categoria": "progressivas",
+            "features": ["Francesa", "Premium", "Tecnologia Exclusiva", "Luxo"],
+            "images": ["https://i.ibb.co/ZzWL1sj5/IMG-9176.jpg"]
+          }
+        ],
+        "destaques": {
+          "maisBemAvaliado": "Ybera Paris Discovery (4.9⭐)",
+          "maiorEstoque": "Forever Liss BTox Zero (35 un)",
+          "maisPremium": "Ybera Paris Discovery (R$ 95,90)",
+          "melhorCustoBeneficio": "Forever Liss BTox Zero (R$ 58,90)"
+        }
+      },
+      "cosmeticos": {
+        "nome": "Cosméticos",
+        "descricao": "Tintas, Relaxamentos, Maquiagem e Acessórios",
+        "icone": "💄",
+        "resumo": {
+          "totalProdutos": 29,
+          "estoqueTotal": 999,
+          "valorTotal": 31319.70,
+          "ticketMedio": 31.35,
+          "participacaoCategoria": "72.5%",
+          "participacaoEstoque": "51.5%"
+        },
+        "subcategorias": {
+          "maquiagem": {
+            "nome": "Maquiagem e Pincéis",
+            "totalProdutos": 5,
+            "estoqueTotal": 210,
+            "valorTotal": 4597.50,
+            "produtos": [
+              {
+                "id": "cos-01",
+                "nome": "Base Líquida Matte Longa Duração",
+                "marca": "Ruby Rose",
+                "preco": 19.90,
+                "estoque": 58,
+                "rating": 4.7,
+                "avaliacoes": 310,
+                "categoria": "cosmeticos",
+                "features": ["Matte", "Longa Duração", "Cobertura Total", "À Prova d'Água"],
+                "images": ["https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400"]
+              },
+              {
+                "id": "cos-02",
+                "nome": "Batom Matte Ultra Hidratante",
+                "marca": "Dailus",
+                "preco": 15.90,
+                "estoque": 72,
+                "rating": 4.6,
+                "avaliacoes": 276,
+                "categoria": "cosmeticos",
+                "features": ["Matte", "Hidratante", "Pigmentação Intensa", "Vegano"],
+                "images": ["https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=400"]
+              },
+              {
+                "id": "cos-03",
+                "nome": "Paleta de Sombras 12 Cores",
+                "marca": "Luisance",
+                "preco": 34.90,
+                "precoOriginal": 45.00,
+                "desconto": "22.4%",
+                "estoque": 32,
+                "rating": 4.8,
+                "avaliacoes": 198,
+                "categoria": "cosmeticos",
+                "features": ["12 Cores", "Altamente Pigmentadas", "Longa Duração", "Versátil"],
+                "images": ["https://images.unsplash.com/photo-1583241475880-7bef2b82fd3d?w=400"]
+              },
+              {
+                "id": "cos-04",
+                "nome": "Kit Pincéis Profissionais 10 Peças",
+                "marca": "Macrilan",
+                "preco": 49.90,
+                "estoque": 28,
+                "rating": 4.9,
+                "avaliacoes": 152,
+                "categoria": "cosmeticos",
+                "features": ["10 Peças", "Profissionais", "Cerdas Sintéticas", "Estojo Incluso"],
+                "images": ["https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400"]
+              },
+              {
+                "id": "cos-05",
+                "nome": "Máscara de Cílios Volume Máximo",
+                "marca": "Vult",
+                "preco": 24.90,
+                "estoque": 20,
+                "rating": 4.7,
+                "avaliacoes": 189,
+                "categoria": "cosmeticos",
+                "features": ["Volume Máximo", "À Prova d'Água", "Alongamento", "Não Resseca"],
+                "images": ["https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=400"]
+              }
+            ]
+          },
+          "tintasLoreal": {
+            "nome": "Tintas L'Oréal",
+            "totalProdutos": 5,
+            "estoqueTotal": 175,
+            "valorTotal": 6552.50,
+            "produtos": [
+              {
+                "id": "loreal-01",
+                "nome": "Tintura L'Oréal Imédia Excellence 6.0 Louro Escuro",
+                "marca": "L'Oréal",
+                "preco": 34.90,
+                "estoque": 42,
+                "rating": 4.8,
+                "avaliacoes": 298,
+                "categoria": "cosmeticos",
+                "features": ["Cobertura Total", "Proteção da Cor", "Fácil Aplicação", "Tom Natural"],
+                "images": ["https://i.ibb.co/pChGNTF/IMG-8769.png"]
+              },
+              {
+                "id": "loreal-02",
+                "nome": "Tintura L'Oréal Imédia Excellence 7.1 Louro Cinza",
+                "marca": "L'Oréal",
+                "preco": 36.90,
+                "estoque": 38,
+                "rating": 4.7,
+                "avaliacoes": 254,
+                "categoria": "cosmeticos",
+                "features": ["Tom Cinza", "Longa Duração", "Brilho Intenso", "Profissional"],
+                "images": ["https://i.ibb.co/cXLqftLZ/IMG-8800.png"]
+              },
+              {
+                "id": "loreal-03",
+                "nome": "Tintura L'Oréal Casting Creme Gloss 5.3 Castanho Dourado",
+                "marca": "L'Oréal",
+                "preco": 32.90,
+                "estoque": 35,
+                "rating": 4.6,
+                "avaliacoes": 189,
+                "categoria": "cosmeticos",
+                "features": ["Sem Amônia", "Tom Dourado", "Hidratação", "Suave"],
+                "images": ["https://i.ibb.co/kgvkVbL4/IMG-8810.png"]
+              },
+              {
+                "id": "loreal-04",
+                "nome": "Tintura L'Oréal Casting Creme Gloss 4.0 Castanho Natural",
+                "marca": "L'Oréal",
+                "preco": 33.90,
+                "estoque": 30,
+                "rating": 4.7,
+                "avaliacoes": 210,
+                "categoria": "cosmeticos",
+                "features": ["Castanho Natural", "Creme Gloss", "Nutrição", "Cobertura Uniforme"],
+                "images": ["https://i.ibb.co/1k4JTFL/IMG-8826.png"]
+              },
+              {
+                "id": "loreal-05",
+                "nome": "Tintura L'Oréal Imédia Excellence 8.1 Louro Claro Cinza",
+                "marca": "L'Oréal",
+                "preco": 37.90,
+                "estoque": 30,
+                "rating": 4.8,
+                "avaliacoes": 233,
+                "categoria": "cosmeticos",
+                "features": ["Louro Claro", "Tom Cinza", "Excellence", "Premium"],
+                "images": ["https://i.ibb.co/xt5290DX/IMG-8832.png"]
+              }
+            ]
+          },
+          "tintasAmend": {
+            "nome": "Tintas Amend",
+            "totalProdutos": 3,
+            "estoqueTotal": 95,
+            "valorTotal": 3262.00,
+            "produtos": [
+              {
+                "id": "amend-01",
+                "nome": "Tintura Amend 4.0 Castanho Natural",
+                "marca": "Amend",
+                "preco": 32.90,
+                "estoque": 32,
+                "rating": 4.7,
+                "avaliacoes": 143,
+                "categoria": "cosmeticos",
+                "features": ["Natural", "Orgânico", "Suave", "Sem Químicos Agressivos"],
+                "images": ["https://i.ibb.co/KxD0nWcb/IMG-8979.png"]
+              },
+              {
+                "id": "amend-02",
+                "nome": "Tintura Amend 6.7 Louro Chocolate",
+                "marca": "Amend",
+                "preco": 33.90,
+                "estoque": 28,
+                "rating": 4.8,
+                "avaliacoes": 121,
+                "categoria": "cosmeticos",
+                "features": ["Tom Chocolate", "Profissional", "Tecnologia Avançada", "Resultado Premium"],
+                "images": ["https://i.ibb.co/HfGFbZSY/IMG-8918.png"]
+              },
+              {
+                "id": "amend-03",
+                "nome": "Tintura Amend 8.1 Louro Claro Cinza",
+                "marca": "Amend",
+                "preco": 36.90,
+                "estoque": 35,
+                "rating": 4.7,
+                "avaliacoes": 156,
+                "categoria": "cosmeticos",
+                "features": ["Louro Claro", "Tom Cinza", "Alta Qualidade", "Duradouro"],
+                "images": ["https://i.ibb.co/MkpDgPxr/IMG-8940.png"]
+              }
+            ]
+          },
+          "tintasBeautyColor": {
+            "nome": "Tintas Beauty Color",
+            "totalProdutos": 3,
+            "estoqueTotal": 90,
+            "valorTotal": 2877.00,
+            "produtos": [
+              {
+                "id": "beauty-01",
+                "nome": "Tintura Beauty Color 5.0 Castanho Claro",
+                "marca": "Beauty Color",
+                "preco": 29.90,
+                "estoque": 28,
+                "rating": 4.6,
+                "avaliacoes": 132,
+                "categoria": "cosmeticos",
+                "features": ["Kit Completo", "Fácil Aplicação", "Resultado Profissional", "Preço Acessível"],
+                "images": ["https://i.ibb.co/QjfVrFvC/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png"]
+              },
+              {
+                "id": "beauty-02",
+                "nome": "Tintura Beauty Color 7.0 Louro Natural",
+                "marca": "Beauty Color",
+                "preco": 31.90,
+                "estoque": 30,
+                "rating": 4.7,
+                "avaliacoes": 145,
+                "categoria": "cosmeticos",
+                "features": ["Tons Únicos", "Diferenciados", "Expressão Pessoal", "Criatividade"],
+                "images": ["https://i.ibb.co/XrKQhtvM/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png"]
+              },
+              {
+                "id": "beauty-03",
+                "nome": "Tintura Beauty Color 6.3 Louro Escuro Dourado",
+                "marca": "Beauty Color",
+                "preco": 33.90,
+                "estoque": 32,
+                "rating": 4.8,
+                "avaliacoes": 154,
+                "categoria": "cosmeticos",
+                "features": ["Premium", "Qualidade Superior", "Acabamento Perfeito", "Luxo"],
+                "images": ["https://i.ibb.co/QF9frBBN/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"]
+              }
+            ]
+          },
+          "tintasBiocolor": {
+            "nome": "Tintas Biocolor",
+            "totalProdutos": 3,
+            "estoqueTotal": 92,
+            "valorTotal": 2766.80,
+            "produtos": [
+              {
+                "id": "biocolor-01",
+                "nome": "Tintura Biocolor 4.0 Castanho Natural",
+                "marca": "Biocolor",
+                "preco": 28.90,
+                "estoque": 30,
+                "rating": 4.6,
+                "avaliacoes": 128,
+                "categoria": "cosmeticos",
+                "features": ["Natural", "Extratos Vegetais", "Suave", "Hipoalergênico"],
+                "images": ["https://i.ibb.co/zW13Y0f7/IMG-8725.png"]
+              },
+              {
+                "id": "biocolor-02",
+                "nome": "Tintura Biocolor 6.0 Louro Escuro",
+                "marca": "Biocolor",
+                "preco": 29.90,
+                "estoque": 31,
+                "rating": 4.7,
+                "avaliacoes": 142,
+                "categoria": "cosmeticos",
+                "features": ["Cobertura Total", "Grisalhos", "Durabilidade", "Fácil Aplicação"],
+                "images": ["https://i.ibb.co/Lz0DNGnb/IMG-8733.png"]
+              },
+              {
+                "id": "biocolor-03",
+                "nome": "Tintura Biocolor 7.3 Louro Dourado",
+                "marca": "Biocolor",
+                "preco": 31.90,
+                "estoque": 31,
+                "rating": 4.8,
+                "avaliacoes": 150,
+                "categoria": "cosmeticos",
+                "features": ["Premium", "Tecnologia Avançada", "Ingredientes Nobres", "Resultado Superior"],
+                "images": ["https://i.ibb.co/Y7yZs7h9/IMG-8757.png"]
+              }
+            ]
+          },
+          "tintasWella": {
+            "nome": "Tintas Wella",
+            "totalProdutos": 3,
+            "estoqueTotal": 90,
+            "valorTotal": 3231.00,
+            "produtos": [
+              {
+                "id": "wella-01",
+                "nome": "Tintura Wella Koleston 5.0 Castanho Claro",
+                "marca": "Wella",
+                "preco": 34.90,
+                "estoque": 28,
+                "rating": 4.8,
+                "avaliacoes": 178,
+                "categoria": "cosmeticos",
+                "features": ["Profissional", "Tecnologia ME+", "Proteção Máxima", "Resultado Perfeito"],
+                "images": ["https://i.ibb.co/20TnJWRZ/IMG-8698.png"]
+              },
+              {
+                "id": "wella-02",
+                "nome": "Tintura Wella Koleston 7.7 Louro Chocolate",
+                "marca": "Wella",
+                "preco": 35.90,
+                "estoque": 31,
+                "rating": 4.7,
+                "avaliacoes": 163,
+                "categoria": "cosmeticos",
+                "features": ["Semi-permanente", "Tons Suaves", "Natural", "Sem Amônia"],
+                "images": ["https://i.ibb.co/yngQsF7V/IMG-8711.png"]
+              },
+              {
+                "id": "wella-03",
+                "nome": "Tintura Wella Koleston 8.1 Louro Claro Cinza",
+                "marca": "Wella",
+                "preco": 36.90,
+                "estoque": 31,
+                "rating": 4.9,
+                "avaliacoes": 189,
+                "categoria": "cosmeticos",
+                "features": ["Coleção Completa", "Profissional", "Salão", "Qualidade Superior"],
+                "images": ["https://i.ibb.co/Q7Nm5WtR/IMG-8712.png"]
+              }
+            ]
+          },
+          "tintasNutrisse": {
+            "nome": "Tintas Nutrisse",
+            "totalProdutos": 3,
+            "estoqueTotal": 87,
+            "valorTotal": 2796.90,
+            "produtos": [
+              {
+                "id": "nutrisse-01",
+                "nome": "Tintura Nutrisse 4.0 Castanho Natural",
+                "marca": "Nutrisse",
+                "preco": 31.90,
+                "estoque": 28,
+                "rating": 4.7,
+                "avaliacoes": 123,
+                "categoria": "cosmeticos",
+                "features": ["Nutritiva", "Óleos Naturais", "Hidratação", "Cor Duradoura"],
+                "images": ["https://i.ibb.co/fGv7xj55/IMG-8980.png"]
+              },
+              {
+                "id": "nutrisse-02",
+                "nome": "Tintura Nutrisse 6.1 Louro Escuro Acinzentado",
+                "marca": "Nutrisse",
+                "preco": 32.90,
+                "estoque": 29,
+                "rating": 4.8,
+                "avaliacoes": 132,
+                "categoria": "cosmeticos",
+                "features": ["Ultra Vibrante", "Cores Intensas", "Duradoura", "Brilho"],
+                "images": ["https://i.ibb.co/ccjffcZn/IMG-8902.png"]
+              },
+              {
+                "id": "nutrisse-03",
+                "nome": "Tintura Nutrisse 7.0 Louro Natural",
+                "marca": "Nutrisse",
+                "preco": 33.90,
+                "estoque": 30,
+                "rating": 4.8,
+                "avaliacoes": 145,
+                "categoria": "cosmeticos",
+                "features": ["Natural", "Nutrição", "Vitaminas", "Proteção"],
+                "images": ["https://i.ibb.co/zTBCy9gN/IMG-8912.png"]
+              }
+            ]
+          },
+          "relaxamentos": {
+            "nome": "Relaxamentos",
+            "totalProdutos": 3,
+            "estoqueTotal": 75,
+            "valorTotal": 2624.00,
+            "produtos": [
+              {
+                "id": "relax-01",
+                "nome": "Kit Relaxamento AmaciHair Tradicional",
+                "marca": "AmaciHair",
+                "preco": 32.90,
+                "estoque": 25,
+                "rating": 4.6,
+                "avaliacoes": 102,
+                "categoria": "cosmeticos",
+                "features": ["Guanidina", "Cabelos Afro", "Crespos", "Ação Profunda"],
+                "images": ["https://i.ibb.co/gbPxQXwF/IMG-9113.jpg"]
+              },
+              {
+                "id": "relax-02",
+                "nome": "Kit Relaxamento Salon Line Forte",
+                "marca": "Salon Line",
+                "preco": 34.90,
+                "estoque": 26,
+                "rating": 4.7,
+                "avaliacoes": 110,
+                "categoria": "cosmeticos",
+                "features": ["Óleo de Coco", "Nutrição", "Maciez", "Hidratação"],
+                "images": ["https://i.ibb.co/MDqfDk1N/IMG-9117.webp"]
+              },
+              {
+                "id": "relax-03",
+                "nome": "Kit Relaxamento Soft Hair Natural",
+                "marca": "Soft Hair",
+                "preco": 36.90,
+                "estoque": 24,
+                "rating": 4.8,
+                "avaliacoes": 121,
+                "categoria": "cosmeticos",
+                "features": ["Profissional", "Duradouro", "Resultado Garantido", "Qualidade Superior"],
+                "images": ["https://i.ibb.co/ycnfBwf3/IMG-9121.jpg"]
+              }
+            ]
+          }
+        },
+        "destaques": {
+          "maisBemAvaliado": "Wella Koleston 8.1 Louro Claro Cinza (4.9⭐)",
+          "maiorEstoque": "Batom Matte Ultra Hidratante (72 un)",
+          "maisPremium": "Kit Pincéis Profissionais 10 Peças (R$ 49,90)",
+          "maisAcessivel": "Batom Matte Ultra Hidratante (R$ 15,90)"
+        }
+      }
+    },
+    "analiseEstrategica": {
+      "distribuicao": {
+        "porCategoria": {
+          "cosmeticos": "72.5%",
+          "progressiva": "15.0%",
+          "produtosCapilares": "12.5%"
+        },
+        "porEstoque": {
+          "cosmeticos": "81.2%",
+          "produtosCapilares": "12.1%",
+          "progressiva": "6.7%"
+        }
+      },
+      "ticketMedio": {
+        "progressiva": 72.22,
+        "produtosCapilares": 31.58,
+        "cosmeticos": 22.45
+      },
+      "qualidade": {
+        "ratingMedio": 4.6,
+        "top5Avaliados": [
+          "Kit Cronograma Capilar Completo (4.9)",
+          "L'Oréal Professional Salon (4.9)",
+          "Wella Koleston Perfect (4.9)",
+          "Wella Professionals Collection (4.9)",
+          "Ybera Paris Discovery (4.9)"
+        ]
+      },
+      "recomendacoes": [
+        "Reabastecer Progressivas Premium (Ybera Paris e Zap Professional)",
+        "Ampliar Linha Bio Extratus (excelente aceitação)",
+        "Expandir Wella Professionals (marca premium)",
+        "Diversificar Cosméticos (incluir pincéis e acessórios)"
+      ]
+    }
+  },
+  "metadata": {
+    "version": "3.0.0",
+    "lastUpdated": "2025-09-17",
+    "totalProducts": 40,
+  "categories": [
+    {
+      "id": "cosmeticos",
+      "name": "Cosméticos",
+      "slug": "cosmeticos",
+      "description": "Esmaltes, Tintas de Cabelo, Maquiagem, Ferramentas e Relaxamentos",
+      "icon": "💄",
+      "color": "bg-pink-500",
+      "subcategories": [
+        {
+          "id": "esmaltes",
+          "name": "Esmaltes",
+          "description": "Esmaltes nacionais e importados de todas as marcas",
+          "products": [
+            {
+              "id": "risque-diamond-gel-001",
+              "name": "Risqué Diamond Gel Collection",
+              "slug": "risque-diamond-gel-collection",
+              "brand": "Risqué",
+              "shortDesc": "Efeito gel sem lâmpada UV, alta durabilidade e brilho intenso",
+              "description": "Esmalte com efeito gel que proporciona brilho diamante sem necessidade de lâmpada UV. Fórmula 9Free, vegana e com longa duração.",
+              "price_brl": 19.90,
+              "price_eur": 4.71,
+              "comparePrice_eur": 6.99,
+              "sku": "RIS-DG-001",
+              "category": "Cosméticos",
+              "subcategory": "Esmaltes",
+              "tags": ["gel effect", "vegano", "9free", "longa duração", "cruelty free"],
+              "rating": 4.8,
+              "reviewsCount": 245,
+              "inStock": true,
+              "stockQuantity": 45,
+              "weight": 50,
+              "labels": ["MAIS VENDIDO", "VEGANO"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/spxFV52d/0-F385710-A4-DD-40-D4-AFED-01-F12-BF220-BC.webp",
+                  "alt": "Risqué Diamond Gel - Rosa Diamond",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/8nsVpcyR/1-AA4-D989-AF17-4406-9-E8-D-8-DFEE9-F90858.webp",
+                  "alt": "Risqué Diamond Gel - Nude Crystal",
+                  "isMain": false
+                },
+                {
+                  "url": "https://i.ibb.co/dsypBSV7/01-C94735-54-EF-4621-AB03-FF60-ABD1-B6-E9.webp",
+                  "alt": "Risqué Diamond Gel - Vermelho Rubi",
+                  "isMain": false
+                }
+              ],
+              "variants": [
+                { "color": "Rosa Diamond", "hex": "#FFB6C1", "price_eur": 4.71, "stock": 15 },
+                { "color": "Nude Crystal", "hex": "#F5DEB3", "price_eur": 4.71, "stock": 12 },
+                { "color": "Vermelho Rubi", "hex": "#E0115F", "price_eur": 4.71, "stock": 18 }
+              ],
+              "characteristics": ["9Free", "Vegano", "Cruelty Free", "Longa Duração", "Sem UV"]
+            },
+            {
+              "id": "risque-bio-collection-002",
+              "name": "Risqué Bio Collection",
+              "slug": "risque-bio-collection",
+              "brand": "Risqué",
+              "shortDesc": "Fórmula com ingredientes naturais e superfoods",
+              "description": "Coleção bio com ingredientes naturais como açaí, pitaya e rosa do himalaia. Fórmula bioativa, vegana e fortificante para as unhas.",
+              "price_brl": 13.86,
+              "price_eur": 3.28,
+              "comparePrice_eur": 4.99,
+              "sku": "RIS-BIO-002",
+              "category": "Cosméticos",
+              "subcategory": "Esmaltes",
+              "tags": ["bioativo", "natural", "superfoods", "vegano", "fortificante"],
+              "rating": 4.6,
+              "reviewsCount": 189,
+              "inStock": true,
+              "stockQuantity": 60,
+              "weight": 50,
+              "labels": ["BIO", "NATURAL"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/vxBwv1Mf/01-D423-A3-FC70-471-B-9-EDD-EED259667-AB6.webp",
+                  "alt": "Risqué Bio Collection - Rosa do Himalaia",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/2yw4z86g/2-AA9-E5-AB-82-A5-4899-A5-A4-5-A12-A088-DC67.webp",
+                  "alt": "Risqué Bio Collection - Açaí",
+                  "isMain": false
+                }
+              ],
+              "variants": [
+                { "color": "Rosa do Himalaia", "hex": "#FFC0CB", "price_eur": 3.28, "stock": 20 },
+                { "color": "Açaí", "hex": "#4B0082", "price_eur": 3.28, "stock": 20 },
+                { "color": "Pitaya", "hex": "#FF1493", "price_eur": 3.28, "stock": 20 }
+              ],
+              "characteristics": ["Bioativo", "Vegano", "Fortificante", "Ingredientes Naturais"]
+            },
+            {
+              "id": "dailus-milk-nails-003",
+              "name": "Dailus Milk Nails Collection",
+              "slug": "dailus-milk-nails-collection",
+              "brand": "Dailus",
+              "shortDesc": "Tons pastéis inspirados em bebidas lácteas",
+              "description": "Coleção com tons pastéis únicos inspirados em bebidas lácteas. 100% vegana, cruelty free e hipoalergênica.",
+              "price_brl": 9.99,
+              "price_eur": 2.37,
+              "comparePrice_eur": 3.49,
+              "sku": "DAI-MN-003",
+              "category": "Cosméticos",
+              "subcategory": "Esmaltes",
+              "tags": ["vegano", "cruelty free", "hipoalergênico", "pastéis", "tendência"],
+              "rating": 4.7,
+              "reviewsCount": 312,
+              "inStock": true,
+              "stockQuantity": 80,
+              "weight": 45,
+              "labels": ["TENDÊNCIA", "VEGANO"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/4cFYZyQm/2-B60-F1-CB-C7-F1-47-DA-866-C-BC6-DB76-FF7-CC.webp",
+                  "alt": "Dailus Milk Nails - Leite de Coco",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/CHx7vFwZ/2-BBB10-FA-2-BCA-46-B3-A802-D088-B7-A2-E8-BD.webp",
+                  "alt": "Dailus Milk Nails - Café com Leite",
+                  "isMain": false
+                },
+                {
+                  "url": "https://i.ibb.co/vB59x6Qw/2-BC0-E379-88-BC-4-F80-A8-AC-2-EBCC883644-A.webp",
+                  "alt": "Dailus Milk Nails - Leite de Amêndoas",
+                  "isMain": false
+                }
+              ],
+              "variants": [
+                { "color": "Leite de Coco", "hex": "#F8F8FF", "price_eur": 2.37, "stock": 20 },
+                { "color": "Café com Leite", "hex": "#D2B48C", "price_eur": 2.37, "stock": 20 },
+                { "color": "Leite de Amêndoas", "hex": "#FFEBCD", "price_eur": 2.37, "stock": 20 },
+                { "color": "Doce de Leite", "hex": "#DEB887", "price_eur": 2.37, "stock": 20 }
+              ],
+              "characteristics": ["100% Vegano", "Cruelty Free", "Hipoalergênico", "Pastéis"]
+            },
+            {
+              "id": "impala-cremoso-premium-005",
+              "name": "Impala Cremoso Premium",
+              "slug": "impala-cremoso-premium",
+              "brand": "Impala",
+              "shortDesc": "Cobertura perfeita em uma camada com secagem ultra-rápida",
+              "description": "Esmalte cremoso com cobertura perfeita em uma aplicação. Secagem em 1-2 minutos, alta pigmentação e pincel profissional.",
+              "price_brl": 6.58,
+              "price_eur": 1.56,
+              "comparePrice_eur": 2.49,
+              "sku": "IMP-CP-005",
+              "category": "Cosméticos",
+              "subcategory": "Esmaltes",
+              "tags": ["secagem rápida", "alta cobertura", "cremoso", "profissional"],
+              "rating": 4.4,
+              "reviewsCount": 567,
+              "inStock": true,
+              "stockQuantity": 150,
+              "weight": 40,
+              "labels": ["MELHOR CUSTO-BENEFÍCIO"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/F5L9hn5k/3-B15-D8-BD-9-BF8-4-FC8-9-AC4-C0-FC3-E069-E49.webp",
+                  "alt": "Impala Cremoso Premium - Vermelho Clássico",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/4L8Fpqn3/3-BA8-C0-C5-A04-F-4-CAB-89-F0-ED95-A3-FA6395.webp",
+                  "alt": "Impala Cremoso Premium - Rosa Ballet",
+                  "isMain": false
+                },
+                {
+                  "url": "https://i.ibb.co/hYKp9Mxg/3-BE45641-FC96-40-FF-9-AEA-0-BCD34-ED4-B09.webp",
+                  "alt": "Impala Cremoso Premium - Nude Elegante",
+                  "isMain": false
+                }
+              ],
+              "variants": [
+                { "color": "Vermelho Clássico", "hex": "#DC143C", "price_eur": 1.56, "stock": 40 },
+                { "color": "Rosa Ballet", "hex": "#FFB6C1", "price_eur": 1.56, "stock": 35 },
+                { "color": "Nude Elegante", "hex": "#D2B48C", "price_eur": 1.56, "stock": 45 },
+                { "color": "Preto Onix", "hex": "#000000", "price_eur": 1.56, "stock": 30 }
+              ],
+              "characteristics": ["Secagem 1-2min", "Alta Pigmentação", "Pincel Profissional", "Uma Camada"]
+            }
+          ]
+        },
+        {
+          "id": "tintas-cabelo",
+          "name": "Tintas de Cabelo",
+          "description": "Colorações permanentes, temporárias e sem amônia",
+          "products": [
+            {
+              "id": "alta-moda-permanente-001",
+              "name": "Alta Moda Coloração Permanente",
+              "slug": "alta-moda-coloracao-permanente",
+              "brand": "Alta Moda (Alfaparf Milano)",
+              "shortDesc": "Coloração com Metal Block Technology e ácido hialurônico",
+              "description": "Coloração permanente profissional com tecnologia Metal Block e ácido hialurônico. Cobertura 100% de cabelos brancos com óleos nutritivos.",
+              "price_brl": 23.79,
+              "price_eur": 5.63,
+              "comparePrice_eur": 7.99,
+              "sku": "ALT-PM-001",
+              "category": "Cosméticos",
+              "subcategory": "Tintas de Cabelo",
+              "tags": ["permanente", "cobertura total", "óleos nutritivos", "profissional"],
+              "rating": 4.7,
+              "reviewsCount": 423,
+              "inStock": true,
+              "stockQuantity": 120,
+              "weight": 125,
+              "volume": "50g + 75ml",
+              "labels": ["PROFISSIONAL", "COBERTURA TOTAL"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/pChGNTF/IMG-8769.png",
+                  "alt": "Alta Moda Coloração Permanente - Tom 1.0",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/cXLqftLZ/IMG-8800.png",
+                  "alt": "Alta Moda Coloração Permanente - Tom 4.0",
+                  "isMain": false
+                },
+                {
+                  "url": "https://i.ibb.co/kgvkVbL4/IMG-8810.png",
+                  "alt": "Alta Moda Coloração Permanente - Tom 6.0",
+                  "isMain": false
+                },
+                {
+                  "url": "https://i.ibb.co/1k4JTFL/IMG-8826.png",
+                  "alt": "Alta Moda Coloração Permanente - Tom 8.0",
+                  "isMain": false
+                }
+              ],
+              "variants": [
+                { "shade": "1.0 Preto", "price_eur": 5.63, "stock": 25 },
+                { "shade": "4.0 Castanho Médio", "price_eur": 5.63, "stock": 30 },
+                { "shade": "6.0 Louro Escuro", "price_eur": 5.63, "stock": 35 },
+                { "shade": "8.0 Louro Claro", "price_eur": 5.63, "stock": 30 }
+              ],
+              "characteristics": ["Metal Block Technology", "Ácido Hialurônico", "100% Cobertura Brancos", "40min Processamento"]
+            },
+            {
+              "id": "amend-color-intensy-004",
+              "name": "Amend Color Intensy",
+              "slug": "amend-color-intensy",
+              "brand": "Amend Cosméticos",
+              "shortDesc": "43+ tons com queratina e D-Pantenol para brilho intenso",
+              "description": "Coloração permanente com queratina e D-Pantenol. Oferece 43+ tons vibrantes com brilho intenso e proteção UV.",
+              "price_brl": 42.46,
+              "price_eur": 10.05,
+              "comparePrice_eur": 12.99,
+              "sku": "AME-CI-004",
+              "category": "Cosméticos",
+              "subcategory": "Tintas de Cabelo",
+              "tags": ["queratina", "brilho intenso", "proteção uv", "43 tons"],
+              "rating": 4.8,
+              "reviewsCount": 278,
+              "inStock": true,
+              "stockQuantity": 90,
+              "weight": 125,
+              "volume": "50g + Oxidante 75ml",
+              "labels": ["PREMIUM", "QUERATINA"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/KxD0nWcb/IMG-8979.png",
+                  "alt": "Amend Color Intensy - Castanho",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/HfGFbZSY/IMG-8918.png",
+                  "alt": "Amend Color Intensy - Louro",
+                  "isMain": false
+                },
+                {
+                  "url": "https://i.ibb.co/MkpDgPxr/IMG-8940.png",
+                  "alt": "Amend Color Intensy - Preto Intenso",
+                  "isMain": false
+                }
+              ],
+              "variants": [
+                { "shade": "1.0 Preto Intenso", "price_eur": 10.05, "stock": 20 },
+                { "shade": "3.0 Castanho Escuro", "price_eur": 10.05, "stock": 25 },
+                { "shade": "5.0 Castanho Claro", "price_eur": 10.05, "stock": 25 },
+                { "shade": "7.0 Louro Médio", "price_eur": 10.05, "stock": 20 }
+              ],
+              "characteristics": ["Com Queratina", "D-Pantenol", "Brilho Intenso", "Proteção UV", "43+ Tons"]
+            },
+            {
+              "id": "wella-koleston-perfect-014",
+              "name": "Wella Koleston Perfect",
+              "slug": "wella-koleston-perfect",
+              "brand": "Wella Professionals",
+              "shortDesc": "Coloração profissional com tecnologia ME+ para menor alergenicidade",
+              "description": "Coloração profissional de alta performance com tecnologia ME+ que reduz significativamente o risco de alergias, mantendo cores puras e vibrantes.",
+              "price_brl": 62.40,
+              "price_eur": 14.77,
+              "comparePrice_eur": 18.99,
+              "sku": "WEL-KP-014",
+              "category": "Cosméticos",
+              "subcategory": "Tintas de Cabelo",
+              "tags": ["profissional", "tecnologia me+", "cores puras", "baixa alergenicidade"],
+              "rating": 4.9,
+              "reviewsCount": 445,
+              "inStock": true,
+              "stockQuantity": 60,
+              "weight": 60,
+              "volume": "60g",
+              "labels": ["PREMIUM", "TECNOLOGIA ME+"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/20TnJWRZ/IMG-8698.png",
+                  "alt": "Wella Koleston Perfect - Tom 2/0",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/yngQsF7V/IMG-8711.png",
+                  "alt": "Wella Koleston Perfect - Tom 6/0",
+                  "isMain": false
+                },
+                {
+                  "url": "https://i.ibb.co/Q7Nm5WtR/IMG-8712.png",
+                  "alt": "Wella Koleston Perfect - Tom 8/0",
+                  "isMain": false
+                },
+                {
+                  "url": "https://i.ibb.co/ymZpBjTC/IMG-8713.png",
+                  "alt": "Wella Koleston Perfect - Tom 10/0",
+                  "isMain": false
+                }
+              ],
+              "variants": [
+                { "shade": "2/0 Preto", "price_eur": 14.77, "stock": 10 },
+                { "shade": "4/0 Castanho Médio", "price_eur": 14.77, "stock": 15 },
+                { "shade": "6/0 Louro Escuro", "price_eur": 14.77, "stock": 15 },
+                { "shade": "8/0 Louro Claro", "price_eur": 14.77, "stock": 10 },
+                { "shade": "10/0 Louro Claríssimo", "price_eur": 14.77, "stock": 10 }
+              ],
+              "characteristics": ["Tecnologia ME+", "Menor Alergenicidade", "Cores Puras", "Profissional"]
+            }
+          ]
+        },
+        {
+          "id": "relaxamentos",
+          "name": "Relaxamentos",
+          "description": "Produtos para relaxamento capilar com guanidina e hidróxido",
+          "products": [
+            {
+              "id": "afro-nature-guanidina-001",
+              "name": "Guanidina Afro Nature Style",
+              "slug": "guanidina-afro-nature-style",
+              "brand": "Afro Nature",
+              "shortDesc": "Relaxamento com guanidina para cabelos afro e crespos",
+              "description": "Sistema de relaxamento com guanidina especialmente desenvolvido para cabelos afro. Média intensidade com resultados duradouros.",
+              "price_brl": 45.90,
+              "price_eur": 10.87,
+              "comparePrice_eur": 13.99,
+              "sku": "AFR-GU-001",
+              "category": "Cosméticos",
+              "subcategory": "Relaxamentos",
+              "tags": ["guanidina", "cabelos afro", "média intensidade", "duradouro"],
+              "rating": 4.6,
+              "reviewsCount": 198,
+              "inStock": true,
+              "stockQuantity": 30,
+              "weight": 400,
+              "volume": "Kit Regular/Super",
+              "labels": ["CABELOS AFRO"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/gbPxQXwF/IMG-9113.jpg",
+                  "alt": "Guanidina Afro Nature Style - Kit",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/Rk3FPCq3/IMG-9115.jpg",
+                  "alt": "Guanidina Afro Nature Style - Componentes",
+                  "isMain": false
+                }
+              ],
+              "variants": [
+                { "type": "Regular", "price_eur": 10.87, "stock": 15 },
+                { "type": "Super", "price_eur": 12.87, "stock": 15 }
+              ],
+              "characteristics": ["Guanidina", "Cabelos Crespos", "Média Intensidade", "Kit Completo"],
+              "hair_types": ["Crespo", "Afro"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "progressivas",
+      "name": "Progressivas",
+      "slug": "progressivas",
+      "description": "Tratamentos de alisamento e redução de volume profissional",
+      "icon": "✨",
+      "color": "bg-purple-500",
+      "subcategories": [
+        {
+          "id": "sem-formol",
+          "name": "Sem Formol",
+          "description": "Progressivas orgânicas 100% livres de formol",
+          "products": [
+            {
+              "id": "zap-all-time-organic-001",
+              "name": "Zap All Time Organic",
+              "slug": "zap-all-time-organic",
+              "brand": "Zap Professional",
+              "shortDesc": "Progressiva 100% orgânica sem formol - EU Compliant",
+              "description": "Progressiva orgânica revolucionária sem formol, desenvolvida especialmente para atender normas europeias. Reduz 90% do frizz com duração de 4 meses.",
+              "price_brl": 450.00,
+              "price_eur": 106.65,
+              "comparePrice_eur": 129.99,
+              "sku": "ZAP-ATO-001",
+              "category": "Progressivas",
+              "subcategory": "Sem Formol",
+              "tags": ["orgânica", "sem formol", "eu compliant", "90% redução frizz"],
+              "rating": 4.9,
+              "reviewsCount": 567,
+              "inStock": true,
+              "stockQuantity": 15,
+              "weight": 2000,
+              "volume": "2x1L",
+              "duration": "3-4 meses",
+              "labels": ["EU COMPLIANT", "ORGÂNICA", "ZERO FORMOL"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/N6p2cX42/Design-sem-nome-png.png",
+                  "alt": "Zap All Time Organic - Kit Completo",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/nNCh41hY/Design-sem-nome-png-1.png",
+                  "alt": "Zap All Time Organic - Produtos Separados",
+                  "isMain": false
+                }
+              ],
+              "variants": [
+                { "type": "Kit 2x1L", "price_eur": 106.65, "stock": 15 }
+              ],
+              "characteristics": ["0% Formol", "EU Approved", "Duração 4 meses", "Reduz 90% Frizz"],
+              "hair_types": ["Todos os tipos"],
+              "active_ingredients": ["Ácido Tânico", "Ácido Lático", "Carbocisteína"]
+            },
+            {
+              "id": "forever-liss-zero-btox-009",
+              "name": "Forever Liss Zero BTox Organic",
+              "slug": "forever-liss-zero-btox-organic",
+              "brand": "Forever Liss Professional",
+              "shortDesc": "BTox orgânico zero formol com máscara matizadora",
+              "description": "Tratamento BTox orgânico completamente livre de formol. Inclui máscara matizadora para cabelos loiros. EU Compliant.",
+              "price_brl": 350.00,
+              "price_eur": 82.95,
+              "comparePrice_eur": 99.99,
+              "sku": "FLP-ZBO-009",
+              "category": "Progressivas",
+              "subcategory": "Sem Formol",
+              "tags": ["btox", "orgânico", "zero formol", "matizador"],
+              "rating": 4.8,
+              "reviewsCount": 334,
+              "inStock": true,
+              "stockQuantity": 18,
+              "weight": 2000,
+              "volume": "2x1L",
+              "duration": "3 meses",
+              "labels": ["ORGÂNICO", "MATIZADOR"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/zWc9np8Z/IMG-9148.jpg",
+                  "alt": "Forever Liss Zero BTox Organic",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/zhCPTj4c/IMG-9149.png",
+                  "alt": "Forever Liss Zero BTox - Máscara Matizadora",
+                  "isMain": false
+                }
+              ],
+              "characteristics": ["Zero Formol", "Orgânico", "Matizador", "EU Compliant"]
+            }
+          ]
+        },
+        {
+          "id": "profissionais",
+          "name": "Profissionais",
+          "description": "Tratamentos de alta performance para salões",
+          "products": [
+            {
+              "id": "cadiveu-plastica-fios-004",
+              "name": "Cadiveu Plástica dos Fios",
+              "slug": "cadiveu-plastica-dos-fios",
+              "brand": "Cadiveu Professional",
+              "shortDesc": "Sistema de reconstrução térmica profissional em 3 passos",
+              "description": "Sistema revolucionário de reconstrução térmica em 3 etapas. Proporciona liso perfeito com reconstrução total da fibra capilar.",
+              "price_brl": 499.90,
+              "price_eur": 118.48,
+              "comparePrice_eur": 149.99,
+              "sku": "CAD-PF-004",
+              "category": "Progressivas",
+              "subcategory": "Profissionais",
+              "tags": ["reconstrução térmica", "3 passos", "liso perfeito", "profissional"],
+              "rating": 4.9,
+              "reviewsCount": 445,
+              "inStock": true,
+              "stockQuantity": 12,
+              "weight": 3000,
+              "volume": "3x1L",
+              "duration": "4-5 meses",
+              "labels": ["PREMIUM", "RECONSTRUÇÃO"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/FLmByKk1/IMG-9139.png",
+                  "alt": "Cadiveu Plástica dos Fios - Kit Completo",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/847rZtcT/IMG-9140.png",
+                  "alt": "Cadiveu Plástica dos Fios - Produtos",
+                  "isMain": false
+                }
+              ],
+              "characteristics": ["Reconstrução Térmica", "3 Passos", "Liso Perfeito", "Açaí", "Aminoácidos"],
+              "active_ingredients": ["Açaí", "Aminoácidos", "Arginina"]
+            },
+            {
+              "id": "inoar-moroccan-keratin-006",
+              "name": "Inoar Moroccan Keratin Treatment",
+              "slug": "inoar-moroccan-keratin-treatment",
+              "brand": "Inoar Professional",
+              "shortDesc": "Tratamento marroquino com argila branca e óleo de cacau",
+              "description": "Tratamento inspirado na tradição marroquina com argila branca purificante e óleo de cacau nutritivo. Keratina marroquina para máxima suavidade.",
+              "price_brl": 400.00,
+              "price_eur": 94.80,
+              "comparePrice_eur": 119.99,
+              "sku": "INO-MKT-006",
+              "category": "Progressivas",
+              "subcategory": "Profissionais",
+              "tags": ["marroquina", "argila branca", "óleo de cacau", "keratina"],
+              "rating": 4.7,
+              "reviewsCount": 298,
+              "inStock": true,
+              "stockQuantity": 16,
+              "weight": 2000,
+              "volume": "2x1L",
+              "duration": "3-4 meses",
+              "labels": ["MARROQUINA"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/7JQmywcP/IMG-9143.png",
+                  "alt": "Inoar Moroccan Keratin Treatment",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/j96m2rd6/IMG-9145.jpg",
+                  "alt": "Inoar Moroccan Keratin - Aplicação",
+                  "isMain": false
+                }
+              ],
+              "characteristics": ["Argila Branca", "Óleo de Cacau", "Keratina Marroquina"],
+              "versions": ["Original", "Zero Formol"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "produtos-capilares",
+      "name": "Produtos Capilares",
+      "slug": "produtos-capilares",
+      "description": "Shampoos, Condicionadores, Máscaras e Tratamentos",
+      "icon": "🧴",
+      "color": "bg-blue-500",
+      "subcategories": [
+        {
+          "id": "mascaras-tratamento",
+          "name": "Máscaras de Tratamento",
+          "description": "Máscaras para hidratação, reconstrução e nutrição",
+          "products": [
+            {
+              "id": "bio-extratus-shitake-plus-004",
+              "name": "Bio Extratus Shitake Plus - Máscara Reconstrutora",
+              "slug": "bio-extratus-shitake-plus-mascara",
+              "brand": "Bio Extratus",
+              "shortDesc": "Máscara com shitake para cabelos desvitalizados",
+              "description": "Máscara reconstrutora intensiva com shitake, proteínas e complexo de aminoácidos para cabelos desvitalizados e quebradiços.",
+              "price_brl": 45.00,
+              "price_eur": 10.67,
+              "comparePrice_eur": 13.99,
+              "sku": "BIO-SP-004",
+              "category": "Produtos Capilares",
+              "subcategory": "Máscaras de Tratamento",
+              "tags": ["shitake", "reconstrução", "proteínas", "desvitalizados"],
+              "rating": 4.8,
+              "reviewsCount": 267,
+              "inStock": true,
+              "stockQuantity": 35,
+              "weight": 500,
+              "volume": "500g",
+              "labels": ["RECONSTRUÇÃO", "SHITAKE"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/zW292zKH/IMG-8773.png",
+                  "alt": "Bio Extratus Shitake Plus - Máscara",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/svc1jJXC/IMG-8834.png",
+                  "alt": "Bio Extratus Shitake Plus - Textura",
+                  "isMain": false
+                }
+              ],
+              "characteristics": ["Shitake", "Reconstrução Profunda", "Proteínas", "Aminoácidos"]
+            },
+            {
+              "id": "bio-extratus-tutano-ceramidas-008",
+              "name": "Bio Extratus Tutano com Ceramidas",
+              "slug": "bio-extratus-tutano-ceramidas",
+              "brand": "Bio Extratus",
+              "shortDesc": "Hidratação profunda com tutano e ceramidas",
+              "description": "Máscara de hidratação profunda com tutano bovino e ceramidas. Proporciona 24h de hidratação intensa e reparação da cutícula.",
+              "price_brl": 38.50,
+              "price_eur": 9.12,
+              "comparePrice_eur": 11.99,
+              "sku": "BIO-TC-008",
+              "category": "Produtos Capilares",
+              "subcategory": "Máscaras de Tratamento",
+              "tags": ["tutano", "ceramidas", "hidratação profunda", "24h"],
+              "rating": 4.7,
+              "reviewsCount": 189,
+              "inStock": true,
+              "stockQuantity": 45,
+              "weight": 500,
+              "volume": "500g",
+              "labels": ["HIDRATAÇÃO", "24H"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/LzQ768VQ/IMG-8939.png",
+                  "alt": "Bio Extratus Tutano com Ceramidas",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/YMhSV8M/IMG-8946.png",
+                  "alt": "Bio Extratus Tutano - Aplicação",
+                  "isMain": false
+                }
+              ],
+              "characteristics": ["Tutano", "Ceramidas", "24h Hidratação", "Reparação Cutícula"]
+            }
+          ]
+        },
+        {
+          "id": "hidratacao",
+          "name": "Hidratação",
+          "description": "Produtos para hidratação de cabelos e unhas",
+          "products": [
+            {
+              "id": "risque-spa-unhas-001",
+              "name": "Risqué Spa das Unhas - Kit Hidratação",
+              "slug": "risque-spa-unhas-kit",
+              "brand": "Risqué",
+              "shortDesc": "Kit completo para tratamento e hidratação das unhas",
+              "description": "Kit spa completo com óleo de argan, vitamina E e complexo fortalecedor. Tratamento profissional para cutículas e unhas.",
+              "price_brl": 45.90,
+              "price_eur": 10.87,
+              "comparePrice_eur": 13.99,
+              "sku": "RIS-SU-001",
+              "category": "Produtos Capilares",
+              "subcategory": "Hidratação",
+              "tags": ["spa das unhas", "óleo de argan", "vitamina e", "fortalecedor"],
+              "rating": 4.7,
+              "reviewsCount": 156,
+              "inStock": true,
+              "stockQuantity": 40,
+              "weight": 150,
+              "volume": "3x10ml",
+              "labels": ["SPA", "VITAMINA E"],
+              "images": [
+                {
+                  "url": "https://i.ibb.co/Y7SvCL3K/IMG-8428.webp",
+                  "alt": "Risqué Spa das Unhas - Kit",
+                  "isMain": true
+                },
+                {
+                  "url": "https://i.ibb.co/YBjzsnp2/IMG-8563.webp",
+                  "alt": "Risqué Spa das Unhas - Produtos",
+                  "isMain": false
+                }
+              ],
+              "characteristics": ["Óleo de Argan", "Vitamina E", "Fortalecedor", "Kit Completo"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

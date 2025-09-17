@@ -1,0 +1,5125 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "lastUpdated": "2025-09-17T17:11:54.833Z",
+    "totalCategories": 36,
+    "totalProducts": 242,
+    "totalImages": 528,
+    "description": "Catálogo completo consolidado com TODOS os produtos importados"
+  },
+  "categories": {
+    "hidratacao": {
+      "name": "Produtos de Hidratação",
+      "icon": "💧",
+      "products": [
+        {
+          "id": "bioextratus-oleo-argan",
+          "name": "Bio Extratus Óleo de Argan Premium",
+          "brand": "Bio Extratus",
+          "description": "Óleo de argan puro para hidratação profunda e reparação dos fios danificados",
+          "price": 28.5,
+          "originalPrice": 35.9,
+          "images": [
+            "/images/products/hidratacao/hidratacao_1_1.jpg"
+          ],
+          "features": [
+            "Óleo Puro",
+            "Hidratação Intensa",
+            "Reparador",
+            "Brilho Natural"
+          ],
+          "stock": 45,
+          "rating": 4.8,
+          "reviews": 234
+        },
+        {
+          "id": "bioextratus-mascara-hidratante",
+          "name": "Bio Extratus Máscara Hidratante Multi-Função",
+          "brand": "Bio Extratus",
+          "description": "Máscara hidratante para todos os tipos de cabelo com múltiplos benefícios",
+          "price": 22.9,
+          "images": [
+            "/images/products/hidratacao/hidratacao_2_1.jpg"
+          ],
+          "features": [
+            "Hidratação",
+            "Nutrição",
+            "Força",
+            "Maciez"
+          ],
+          "stock": 62,
+          "rating": 4.6,
+          "reviews": 189
+        },
+        {
+          "id": "cronograma-capilar-completo",
+          "name": "Kit Cronograma Capilar Completo",
+          "brand": "Bio Extratus",
+          "description": "Kit completo para cronograma capilar com hidratação, nutrição e reconstrução",
+          "price": 49.9,
+          "originalPrice": 65.9,
+          "images": [
+            "/images/products/hidratacao/hidratacao_2_2.jpg"
+          ],
+          "features": [
+            "Kit Completo",
+            "3 Etapas",
+            "Profissional",
+            "Resultados Visíveis"
+          ],
+          "stock": 28,
+          "rating": 4.9,
+          "reviews": 156
+        },
+        {
+          "id": "tratamento-intensivo-reparacao",
+          "name": "Tratamento Intensivo de Reparação",
+          "brand": "Bio Extratus",
+          "description": "Tratamento intensivo para cabelos muito danificados e ressecados",
+          "price": 34.9,
+          "images": [
+            "/images/products/hidratacao/hidratacao_2_3.jpg"
+          ],
+          "features": [
+            "Reparação Intensiva",
+            "Cabelos Danificados",
+            "Resultado Imediato"
+          ],
+          "stock": 33,
+          "rating": 4.7,
+          "reviews": 98
+        },
+        {
+          "id": "linha-professional-salon",
+          "name": "Linha Professional Salon",
+          "brand": "Bio Extratus",
+          "description": "Linha profissional para salões com produtos de alta performance",
+          "price": 42.9,
+          "images": [
+            "/images/products/hidratacao/hidratacao_3_1.jpg"
+          ],
+          "features": [
+            "Profissional",
+            "Salão",
+            "Alta Performance",
+            "Resultado Duradouro"
+          ],
+          "stock": 25,
+          "rating": 4.8,
+          "reviews": 167
+        }
+      ]
+    },
+    "tintas-loreal": {
+      "name": "Tintas L'Oréal",
+      "icon": "🎨",
+      "products": [
+        {
+          "id": "loreal-coloracao-premium",
+          "name": "L'Oréal Coloração Premium Excellence",
+          "brand": "L'Oréal Paris",
+          "description": "Coloração profissional com cobertura total e proteção da cor",
+          "price": 24.9,
+          "originalPrice": 32.9,
+          "images": [
+            "https://i.ibb.co/pChGNTF/IMG-8769.png",
+            "https://i.ibb.co/cXLqftLZ/IMG-8800.png",
+            "https://i.ibb.co/kgvkVbL4/IMG-8810.png",
+            "https://i.ibb.co/1k4JTFL/IMG-8826.png",
+            "https://i.ibb.co/xt5290DX/IMG-8832.png"
+          ],
+          "features": [
+            "Cobertura Total",
+            "Longa Duração",
+            "Proteção da Cor",
+            "Fácil Aplicação"
+          ],
+          "stock": 78,
+          "rating": 4.7,
+          "reviews": 289
+        },
+        {
+          "id": "loreal-tons-naturais",
+          "name": "L'Oréal Tons Naturais Collection",
+          "brand": "L'Oréal Paris",
+          "description": "Coleção de tons naturais para um resultado perfeito e natural",
+          "price": 22.5,
+          "images": [
+            "https://i.ibb.co/rKvbq7kV/IMG-8846.png",
+            "https://i.ibb.co/5xGHG0Wt/IMG-8852.png",
+            "https://i.ibb.co/NgRgPT6d/IMG-8857.png",
+            "https://i.ibb.co/G4B23S9L/IMG-8861.png",
+            "https://i.ibb.co/mr4HdZSf/IMG-8862.png"
+          ],
+          "features": [
+            "Tons Naturais",
+            "Sem Amônia",
+            "Suave",
+            "Cobertura Uniforme"
+          ],
+          "stock": 65,
+          "rating": 4.5,
+          "reviews": 201
+        },
+        {
+          "id": "loreal-tons-fashion",
+          "name": "L'Oréal Fashion Colors",
+          "brand": "L'Oréal Paris",
+          "description": "Cores vibrantes e modernas para um visual contemporâneo",
+          "price": 26.9,
+          "images": [
+            "https://i.ibb.co/C5hpKfQF/IMG-8868.png",
+            "https://i.ibb.co/HfGvrbG0/IMG-8869.png",
+            "https://i.ibb.co/M5gRqJQZ/IMG-8872.png",
+            "https://i.ibb.co/SDyrg5K0/IMG-8877.png",
+            "https://i.ibb.co/5xcWxQzb/IMG-8880.png"
+          ],
+          "features": [
+            "Cores Vibrantes",
+            "Tendência",
+            "Longa Fixação",
+            "Brilho Intenso"
+          ],
+          "stock": 52,
+          "rating": 4.6,
+          "reviews": 167
+        },
+        {
+          "id": "loreal-professional-salon",
+          "name": "L'Oréal Professional Salon Collection",
+          "brand": "L'Oréal Professional",
+          "description": "Linha profissional para resultados de salão em casa",
+          "price": 35.9,
+          "originalPrice": 45.9,
+          "images": [
+            "https://i.ibb.co/0VjSdG2g/IMG-8885.png",
+            "https://i.ibb.co/dw7bBWvx/IMG-8898.png",
+            "https://i.ibb.co/R4h8scgD/IMG-8900.png",
+            "https://i.ibb.co/B19ym0R/IMG-8901.png"
+          ],
+          "features": [
+            "Profissional",
+            "Tecnologia Avançada",
+            "Resultado Salão",
+            "Premium"
+          ],
+          "stock": 34,
+          "rating": 4.9,
+          "reviews": 145
+        },
+        {
+          "id": "loreal-platinados-especiais",
+          "name": "L'Oréal Platinados Especiais",
+          "brand": "L'Oréal Paris",
+          "description": "Tons platinados especiais para cabelos loiros sofisticados",
+          "price": 29.9,
+          "images": [
+            "https://i.ibb.co/qLM9xjFz/IMG-8966.png",
+            "https://i.ibb.co/Pvt5yz3H/IMG-8977.png",
+            "https://i.ibb.co/nNFjvQwc/IMG-8985.png",
+            "https://i.ibb.co/84b6SJ2J/IMG-8986.png",
+            "https://i.ibb.co/chFRvhH0/IMG-8987.png"
+          ],
+          "features": [
+            "Platinados",
+            "Loiros Especiais",
+            "Matização",
+            "Anti-amarelado"
+          ],
+          "stock": 41,
+          "rating": 4.4,
+          "reviews": 89
+        },
+        {
+          "id": "loreal-classic-collection",
+          "name": "L'Oréal Classic Collection",
+          "brand": "L'Oréal Paris",
+          "description": "Coleção clássica com tons tradicionais e atemporais",
+          "price": 21.9,
+          "images": [
+            "https://i.ibb.co/1fmwWJ8J/IMG-9008.png",
+            "https://i.ibb.co/Z1WbCcGZ/IMG-9032.png",
+            "https://i.ibb.co/DH9stKJQ/IMG-9036.png",
+            "https://i.ibb.co/1Y2mvH1L/IMG-9043.png",
+            "https://i.ibb.co/KjmK22sf/IMG-9053.png"
+          ],
+          "features": [
+            "Clássicos",
+            "Atemporais",
+            "Confiável",
+            "Tradicional"
+          ],
+          "stock": 87,
+          "rating": 4.3,
+          "reviews": 278
+        }
+      ]
+    },
+    "tintas-amend": {
+      "name": "Tintas Amend",
+      "icon": "🌿",
+      "products": [
+        {
+          "id": "amend-naturals-collection",
+          "name": "Amend Naturals Collection",
+          "brand": "Amend",
+          "description": "Coloração natural com ingredientes orgânicos e fórmula suave",
+          "price": 18.9,
+          "originalPrice": 24.9,
+          "images": [
+            "https://i.ibb.co/KxD0nWcb/IMG-8979.png",
+            "https://i.ibb.co/HfGFbZSY/IMG-8918.png",
+            "https://i.ibb.co/MkpDgPxr/IMG-8940.png",
+            "https://i.ibb.co/GfD8BYFK/IMG-8953.png",
+            "https://i.ibb.co/mVwfs0n0/IMG-8973.png"
+          ],
+          "features": [
+            "Natural",
+            "Orgânico",
+            "Suave",
+            "Sem Químicos Agressivos"
+          ],
+          "stock": 56,
+          "rating": 4.6,
+          "reviews": 198
+        },
+        {
+          "id": "amend-professional-line",
+          "name": "Amend Professional Line",
+          "brand": "Amend Professional",
+          "description": "Linha profissional com tecnologia avançada para salões",
+          "price": 22.5,
+          "images": [
+            "https://i.ibb.co/77BS7Pq/IMG-8976.png"
+          ],
+          "features": [
+            "Profissional",
+            "Tecnologia Avançada",
+            "Resultado Premium"
+          ],
+          "stock": 32,
+          "rating": 4.7,
+          "reviews": 124
+        }
+      ]
+    },
+    "tintas-beauty-color": {
+      "name": "Tintas Beauty Color",
+      "icon": "💎",
+      "products": [
+        {
+          "id": "beauty-color-kit-coloracao",
+          "name": "Beauty Color Kit Coloração Completo",
+          "brand": "Beauty Color",
+          "description": "Kit completo de coloração com todos os acessórios necessários",
+          "price": 16.9,
+          "originalPrice": 22.9,
+          "images": [
+            "https://i.ibb.co/QjfVrFvC/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png",
+            "https://i.ibb.co/XrKQhtvM/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png",
+            "https://i.ibb.co/QF9frBBN/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png",
+            "https://i.ibb.co/gLNRw72m/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png",
+            "https://i.ibb.co/Xfqsf4NR/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 95,
+          "rating": 4.4,
+          "reviews": 312
+        },
+        {
+          "id": "beauty-color-tons-especiais",
+          "name": "Beauty Color Tons Especiais",
+          "brand": "Beauty Color",
+          "description": "Tons especiais e únicos para looks diferenciados",
+          "price": 19.9,
+          "images": [
+            "https://i.ibb.co/mCsznqv5/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png",
+            "https://i.ibb.co/xSJSWWDt/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png",
+            "https://i.ibb.co/1G9tvWtL/155-B6-F03-6326-45-F1-B128-C98-F218-F2-A23.png",
+            "https://i.ibb.co/DfRJ0yVF/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"
+          ],
+          "features": [
+            "Tons Únicos",
+            "Diferenciados",
+            "Expressão Pessoal",
+            "Criatividade"
+          ],
+          "stock": 67,
+          "rating": 4.3,
+          "reviews": 187
+        },
+        {
+          "id": "beauty-color-basicos-essenciais",
+          "name": "Beauty Color Básicos Essenciais",
+          "brand": "Beauty Color",
+          "description": "Tons básicos e essenciais para o dia a dia",
+          "price": 14.9,
+          "images": [
+            "https://i.ibb.co/q3dDbvng/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png",
+            "https://i.ibb.co/WWv1cSB5/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png",
+            "https://i.ibb.co/d08g0cGf/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png",
+            "https://i.ibb.co/h1d0ppPm/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"
+          ],
+          "features": [
+            "Básicos",
+            "Dia a Dia",
+            "Essenciais",
+            "Versáteis"
+          ],
+          "stock": 124,
+          "rating": 4.2,
+          "reviews": 245
+        },
+        {
+          "id": "beauty-color-premium-line",
+          "name": "Beauty Color Premium Line",
+          "brand": "Beauty Color",
+          "description": "Linha premium com qualidade superior e acabamento perfeito",
+          "price": 24.9,
+          "images": [
+            "https://i.ibb.co/k6S2V543/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png",
+            "https://i.ibb.co/4ZC5k1Bh/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png",
+            "https://i.ibb.co/QF6TSw5p/E56-EA869-F48-B-4925-A000-3-D712-D35-B1-C2.png",
+            "https://i.ibb.co/840Q1Sf8/E50589-AE-AFCE-4-FD5-8-D43-C27-A34-DDEEE0.png",
+            "https://i.ibb.co/YThRbmcZ/EE902623-2-BC1-445-D-9-D31-071404310-ADE.png"
+          ],
+          "features": [
+            "Premium",
+            "Qualidade Superior",
+            "Acabamento Perfeito",
+            "Luxo"
+          ],
+          "stock": 43,
+          "rating": 4.8,
+          "reviews": 156
+        }
+      ]
+    },
+    "tintas-biocolor": {
+      "name": "Tintas Biocolor",
+      "icon": "🌱",
+      "products": [
+        {
+          "id": "biocolor-natural-collection",
+          "name": "Biocolor Natural Collection",
+          "brand": "Biocolor",
+          "description": "Coloração natural com extratos vegetais e fórmula suave",
+          "price": 12.9,
+          "images": [
+            "https://i.ibb.co/zW13Y0f7/IMG-8725.png",
+            "https://i.ibb.co/Lz0DNGnb/IMG-8733.png",
+            "https://i.ibb.co/Y7yZs7h9/IMG-8757.png",
+            "https://i.ibb.co/JSy1VBq/IMG-8766.png",
+            "https://i.ibb.co/0jNTwTC1/IMG-8777.png"
+          ],
+          "features": [
+            "Natural",
+            "Extratos Vegetais",
+            "Suave",
+            "Hipoalergênico"
+          ],
+          "stock": 89,
+          "rating": 4.3,
+          "reviews": 267
+        },
+        {
+          "id": "biocolor-cobertura-total",
+          "name": "Biocolor Cobertura Total",
+          "brand": "Biocolor",
+          "description": "Coloração com cobertura total especialmente para cabelos grisalhos",
+          "price": 15.9,
+          "images": [
+            "https://i.ibb.co/Df6SZDyG/IMG-8780.png",
+            "https://i.ibb.co/nvwpJqr/IMG-8819.png",
+            "https://i.ibb.co/MxkH2BkK/IMG-8820.png",
+            "https://i.ibb.co/MDhnJB7P/IMG-8829.png",
+            "https://i.ibb.co/sMwFxSv/IMG-8830.png"
+          ],
+          "features": [
+            "Cobertura Total",
+            "Grisalhos",
+            "Durabilidade",
+            "Fácil Aplicação"
+          ],
+          "stock": 72,
+          "rating": 4.5,
+          "reviews": 198
+        },
+        {
+          "id": "biocolor-tons-escuros",
+          "name": "Biocolor Tons Escuros",
+          "brand": "Biocolor",
+          "description": "Coloração para tons escuros com brilho intenso e cor duradoura",
+          "price": 13.9,
+          "images": [
+            "https://i.ibb.co/C32ZCt4B/IMG-8831.png",
+            "https://i.ibb.co/TDCL11yb/IMG-8845.png",
+            "https://i.ibb.co/B2W6hyYG/IMG-8853.png",
+            "https://i.ibb.co/W4CxTc47/IMG-8855.png",
+            "https://i.ibb.co/mVd7LtHs/IMG-8858.png"
+          ],
+          "features": [
+            "Tons Escuros",
+            "Brilho Intenso",
+            "Duradouro",
+            "Proteção"
+          ],
+          "stock": 65,
+          "rating": 4.4,
+          "reviews": 234
+        },
+        {
+          "id": "biocolor-linha-premium",
+          "name": "Biocolor Linha Premium",
+          "brand": "Biocolor",
+          "description": "Linha premium com tecnologia avançada e ingredientes nobres",
+          "price": 18.9,
+          "images": [
+            "https://i.ibb.co/1t7xSX4T/IMG-8875.png",
+            "https://i.ibb.co/nq5nf4nb/IMG-8882.png",
+            "https://i.ibb.co/N0NqBpC/IMG-8883.png",
+            "https://i.ibb.co/WWMMNj1Q/IMG-8903.png",
+            "https://i.ibb.co/qL1ZjHXh/IMG-8904.png"
+          ],
+          "features": [
+            "Premium",
+            "Tecnologia Avançada",
+            "Ingredientes Nobres",
+            "Resultado Superior"
+          ],
+          "stock": 38,
+          "rating": 4.6,
+          "reviews": 167
+        },
+        {
+          "id": "biocolor-especiais-festas",
+          "name": "Biocolor Especiais para Festas",
+          "brand": "Biocolor",
+          "description": "Cores especiais para ocasiões festivas e eventos especiais",
+          "price": 16.9,
+          "images": [
+            "https://i.ibb.co/Zzkmtbyj/IMG-9020.png",
+            "https://i.ibb.co/fzFgTp8F/IMG-9023.png",
+            "https://i.ibb.co/1tRtSSBn/IMG-9055.png"
+          ],
+          "features": [
+            "Festas",
+            "Eventos Especiais",
+            "Cores Vibrantes",
+            "Temporário"
+          ],
+          "stock": 29,
+          "rating": 4.2,
+          "reviews": 89
+        }
+      ]
+    },
+    "tintas-wella": {
+      "name": "Tintas Wella",
+      "icon": "⭐",
+      "products": [
+        {
+          "id": "wella-koleston-perfect",
+          "name": "Wella Koleston Perfect",
+          "brand": "Wella Professionals",
+          "description": "Coloração profissional com tecnologia ME+ para máxima proteção",
+          "price": 32.9,
+          "originalPrice": 42.9,
+          "images": [
+            "https://i.ibb.co/20TnJWRZ/IMG-8698.png",
+            "https://i.ibb.co/yngQsF7V/IMG-8711.png",
+            "https://i.ibb.co/Q7Nm5WtR/IMG-8712.png",
+            "https://i.ibb.co/ymZpBjTC/IMG-8713.png",
+            "https://i.ibb.co/93SRy4c2/IMG-8716.png"
+          ],
+          "features": [
+            "Profissional",
+            "Tecnologia ME+",
+            "Proteção Máxima",
+            "Resultado Perfeito"
+          ],
+          "stock": 45,
+          "rating": 4.9,
+          "reviews": 298
+        },
+        {
+          "id": "wella-color-touch",
+          "name": "Wella Color Touch",
+          "brand": "Wella Professionals",
+          "description": "Coloração semi-permanente para tons suaves e naturais",
+          "price": 28.9,
+          "images": [
+            "https://i.ibb.co/B5wVv2Vw/IMG-8718.png",
+            "https://i.ibb.co/YBx8vTv5/IMG-8720.png",
+            "https://i.ibb.co/xkzjyBc/IMG-8727.png",
+            "https://i.ibb.co/93s8gtKH/IMG-8734.png",
+            "https://i.ibb.co/39sx2rq9/IMG-8737.png"
+          ],
+          "features": [
+            "Semi-permanente",
+            "Tons Suaves",
+            "Natural",
+            "Sem Amônia"
+          ],
+          "stock": 67,
+          "rating": 4.7,
+          "reviews": 234
+        },
+        {
+          "id": "wella-illumina-color",
+          "name": "Wella Illumina Color",
+          "brand": "Wella Professionals",
+          "description": "Coloração com tecnologia Microlight para brilho excepcional",
+          "price": 35.9,
+          "images": [
+            "https://i.ibb.co/HD2zFVj5/IMG-8739.png",
+            "https://i.ibb.co/nqGbbHDq/IMG-8740.png",
+            "https://i.ibb.co/T91tgPy/IMG-8741.png",
+            "https://i.ibb.co/FTng1yq/IMG-8748.png",
+            "https://i.ibb.co/8ngLNnV3/IMG-8752.png"
+          ],
+          "features": [
+            "Tecnologia Microlight",
+            "Brilho Excepcional",
+            "Luminosidade",
+            "Premium"
+          ],
+          "stock": 34,
+          "rating": 4.8,
+          "reviews": 187
+        },
+        {
+          "id": "wella-blondor-multi",
+          "name": "Wella Blondor Multi Blonde",
+          "brand": "Wella Professionals",
+          "description": "Pó descolorante profissional para loiros perfeitos",
+          "price": 24.9,
+          "images": [
+            "https://i.ibb.co/xKkNXRFg/IMG-8753.png",
+            "https://i.ibb.co/XfB0kV1b/IMG-8758.png",
+            "https://i.ibb.co/DPH8VQvL/IMG-8759.png",
+            "https://i.ibb.co/ymjhf1Ss/IMG-8761.png",
+            "https://i.ibb.co/C3w3M4KC/IMG-8764.png"
+          ],
+          "features": [
+            "Descolorante",
+            "Loiros Perfeitos",
+            "Profissional",
+            "Multi Blonde"
+          ],
+          "stock": 52,
+          "rating": 4.6,
+          "reviews": 156
+        },
+        {
+          "id": "wella-professionals-collection",
+          "name": "Wella Professionals Collection",
+          "brand": "Wella Professionals",
+          "description": "Coleção completa de produtos profissionais para salões",
+          "price": 38.9,
+          "images": [
+            "https://i.ibb.co/7dCTBc2Y/IMG-8767.png",
+            "https://i.ibb.co/Z6ntcKdk/IMG-8768.png",
+            "https://i.ibb.co/Rp0NVTG1/IMG-8770.png",
+            "https://i.ibb.co/tp8qRbbt/IMG-8774.png",
+            "https://i.ibb.co/C5B5wp17/IMG-8778.png"
+          ],
+          "features": [
+            "Coleção Completa",
+            "Profissional",
+            "Salão",
+            "Qualidade Superior"
+          ],
+          "stock": 28,
+          "rating": 4.9,
+          "reviews": 145
+        }
+      ]
+    },
+    "tintas-nutrisse": {
+      "name": "Tintas Nutrisse Garnier",
+      "icon": "🥑",
+      "products": [
+        {
+          "id": "garnier-nutrisse-creme",
+          "name": "Garnier Nutrisse Creme",
+          "brand": "Garnier",
+          "description": "Coloração nutritiva com óleos de abacate, oliva e karité",
+          "price": 19.9,
+          "originalPrice": 26.9,
+          "images": [
+            "https://i.ibb.co/fGv7xj55/IMG-8980.png",
+            "https://i.ibb.co/ccjffcZn/IMG-8902.png",
+            "https://i.ibb.co/zTBCy9gN/IMG-8912.png",
+            "https://i.ibb.co/1YM6B6ss/IMG-8923.png",
+            "https://i.ibb.co/WWRH4DkL/IMG-8933.png"
+          ],
+          "features": [
+            "Nutritiva",
+            "Óleos Naturais",
+            "Hidratação",
+            "Cor Duradoura"
+          ],
+          "stock": 78,
+          "rating": 4.5,
+          "reviews": 289
+        },
+        {
+          "id": "garnier-nutrisse-ultra-color",
+          "name": "Garnier Nutrisse Ultra Color",
+          "brand": "Garnier",
+          "description": "Coloração ultra vibrante para cores intensas e duradouras",
+          "price": 22.9,
+          "images": [
+            "https://i.ibb.co/TDR4hKkK/IMG-8961.png",
+            "https://i.ibb.co/NR6DhZK/IMG-8962.png",
+            "https://i.ibb.co/hxbN06Jt/IMG-8965.png",
+            "https://i.ibb.co/QhwwMTN/IMG-8981.png",
+            "https://i.ibb.co/xSftt8Rv/IMG-8984.png"
+          ],
+          "features": [
+            "Ultra Vibrante",
+            "Cores Intensas",
+            "Duradoura",
+            "Brilho"
+          ],
+          "stock": 56,
+          "rating": 4.6,
+          "reviews": 201
+        }
+      ]
+    },
+    "progressivas": {
+      "name": "Progressivas e Alisamentos",
+      "icon": "✨",
+      "products": [
+        {
+          "id": "progressiva-organica-zap",
+          "name": "Zap Professional All Time Organic",
+          "brand": "Zap Professional",
+          "description": "Progressiva orgânica sem formol para alisamento natural e duradouro",
+          "price": 89.9,
+          "originalPrice": 120,
+          "images": [
+            "https://i.ibb.co/N6p2cX42/Design-sem-nome-png.png",
+            "https://i.ibb.co/nNCh41hY/Design-sem-nome-png-1.png",
+            "https://i.ibb.co/Z1zxy8b0/Design-sem-nome-png-2.png",
+            "https://i.ibb.co/wZXx5GW1/Design-sem-nome-png-3.png"
+          ],
+          "features": [
+            "Sem Formol",
+            "Orgânica",
+            "Duração 4-6 meses",
+            "Natural"
+          ],
+          "stock": 15,
+          "rating": 4.8,
+          "reviews": 167
+        },
+        {
+          "id": "cadiveu-plastica-dos-fios",
+          "name": "Cadiveu Plástica dos Fios",
+          "brand": "Cadiveu Professional",
+          "description": "Reconstrução e alisamento em um só produto",
+          "price": 65.9,
+          "images": [
+            "https://i.ibb.co/j9NTBzYX/IMG-9138.png",
+            "https://i.ibb.co/FLmByKk1/IMG-9139.png",
+            "https://i.ibb.co/847rZtcT/IMG-9140.png",
+            "https://i.ibb.co/vvB1pZNS/IMG-9141.png",
+            "https://i.ibb.co/6KRYTh0/IMG-9142.jpg"
+          ],
+          "features": [
+            "2 em 1",
+            "Reconstrução",
+            "Alisamento",
+            "Profissional"
+          ],
+          "stock": 28,
+          "rating": 4.7,
+          "reviews": 145
+        },
+        {
+          "id": "inoar-moroccan-keratin",
+          "name": "Inoar Moroccan Keratin",
+          "brand": "Inoar Professional",
+          "description": "Progressiva com queratina marroquina e óleo de argan",
+          "price": 75.9,
+          "images": [
+            "https://i.ibb.co/7JQmywcP/IMG-9143.png",
+            "https://i.ibb.co/j96m2rd6/IMG-9145.jpg",
+            "https://i.ibb.co/Rpym1cYy/IMG-9146.jpg",
+            "https://i.ibb.co/sv2hz4Zz/IMG-9147.jpg"
+          ],
+          "features": [
+            "Queratina Marroquina",
+            "Óleo de Argan",
+            "Hidratação",
+            "Brilho"
+          ],
+          "stock": 22,
+          "rating": 4.6,
+          "reviews": 198
+        },
+        {
+          "id": "forever-liss-btox-zero",
+          "name": "Forever Liss BTox Zero",
+          "brand": "Forever Liss",
+          "description": "Botox capilar sem formol para alisamento e tratamento",
+          "price": 58.9,
+          "images": [
+            "https://i.ibb.co/zWc9np8Z/IMG-9148.jpg",
+            "https://i.ibb.co/zhCPTj4c/IMG-9149.png",
+            "https://i.ibb.co/PsDzqbP9/IMG-9150.jpg",
+            "https://i.ibb.co/6JNYTbPx/IMG-9151.jpg"
+          ],
+          "features": [
+            "BTox Capilar",
+            "Zero Formol",
+            "Tratamento",
+            "Alisamento Suave"
+          ],
+          "stock": 35,
+          "rating": 4.5,
+          "reviews": 234
+        },
+        {
+          "id": "richee-bioplastica",
+          "name": "Richée Bioplástica Capilar",
+          "brand": "Richée Professional",
+          "description": "Bioplástica capilar para reconstrução total dos fios",
+          "price": 72.9,
+          "images": [
+            "https://i.ibb.co/zhH1jp3M/IMG-9154.jpg",
+            "https://i.ibb.co/4ZHMdCg3/IMG-9158.png",
+            "https://i.ibb.co/pBWwcTb5/IMG-9164.jpg",
+            "https://i.ibb.co/kggMPwm6/IMG-9165.jpg"
+          ],
+          "features": [
+            "Bioplástica",
+            "Reconstrução Total",
+            "Tecnologia Avançada",
+            "Duradouro"
+          ],
+          "stock": 18,
+          "rating": 4.8,
+          "reviews": 156
+        },
+        {
+          "id": "ybera-paris-discovery",
+          "name": "Ybera Paris Discovery",
+          "brand": "Ybera Paris",
+          "description": "Progressiva francesa premium com tecnologia exclusiva",
+          "price": 95.9,
+          "images": [
+            "https://i.ibb.co/ZzWL1sj5/IMG-9176.jpg",
+            "https://i.ibb.co/fzRG4yC2/IMG-9177.jpg",
+            "https://i.ibb.co/B2xJb3St/IMG-9182.webp",
+            "https://i.ibb.co/9kMKynBT/Untitled-design.png"
+          ],
+          "features": [
+            "Francesa",
+            "Premium",
+            "Tecnologia Exclusiva",
+            "Luxo"
+          ],
+          "stock": 12,
+          "rating": 4.9,
+          "reviews": 89
+        }
+      ]
+    },
+    "relaxamentos": {
+      "name": "Relaxamentos",
+      "icon": "🌊",
+      "products": [
+        {
+          "id": "afro-nature-guanidina",
+          "name": "Afro Nature Guanidina Super",
+          "brand": "Afro Nature",
+          "description": "Relaxamento com guanidina especial para cabelos afro e crespos",
+          "price": 32.9,
+          "images": [
+            "https://i.ibb.co/gbPxQXwF/IMG-9113.jpg",
+            "https://i.ibb.co/Rk3FPCq3/IMG-9115.jpg"
+          ],
+          "features": [
+            "Guanidina",
+            "Cabelos Afro",
+            "Crespos",
+            "Ação Profunda"
+          ],
+          "stock": 25,
+          "rating": 4.6,
+          "reviews": 134
+        },
+        {
+          "id": "salon-line-relaxamento",
+          "name": "Salon Line Relaxamento Óleo de Coco",
+          "brand": "Salon Line",
+          "description": "Relaxamento enriquecido com óleo de coco para nutrição",
+          "price": 28.9,
+          "images": [
+            "https://i.ibb.co/MDqfDk1N/IMG-9117.webp",
+            "https://i.ibb.co/Swj30w7R/IMG-9120.png"
+          ],
+          "features": [
+            "Óleo de Coco",
+            "Nutrição",
+            "Maciez",
+            "Hidratação"
+          ],
+          "stock": 42,
+          "rating": 4.4,
+          "reviews": 189
+        },
+        {
+          "id": "soft-hair-olive",
+          "name": "Soft Hair Relaxamento Olive",
+          "brand": "Soft Hair",
+          "description": "Relaxamento com azeite de oliva para suavidade extrema",
+          "price": 26.9,
+          "images": [
+            "https://i.ibb.co/ycnfBwf3/IMG-9121.jpg",
+            "https://i.ibb.co/jk1yRLdj/IMG-9123.webp"
+          ],
+          "features": [
+            "Azeite de Oliva",
+            "Suavidade",
+            "Natural",
+            "Brilho"
+          ],
+          "stock": 38,
+          "rating": 4.3,
+          "reviews": 167
+        },
+        {
+          "id": "embelleze-novex",
+          "name": "Embelleze Novex Relaxamento",
+          "brand": "Embelleze",
+          "description": "Relaxamento com proteção anti-quebra e força extra",
+          "price": 24.9,
+          "images": [
+            "https://i.ibb.co/JwpGZr2h/IMG-9124.png",
+            "https://i.ibb.co/TDh3MNgj/IMG-9126.png",
+            "https://i.ibb.co/ccxPK5qY/IMG-9127.png"
+          ],
+          "features": [
+            "Anti-quebra",
+            "Força Extra",
+            "Proteção",
+            "Resistência"
+          ],
+          "stock": 56,
+          "rating": 4.5,
+          "reviews": 234
+        },
+        {
+          "id": "tcb-professional",
+          "name": "TCB Professional Relaxamento",
+          "brand": "TCB",
+          "description": "Relaxamento profissional para resultados duradouros",
+          "price": 35.9,
+          "images": [
+            "https://i.ibb.co/Z6BtP7cx/IMG-9133.png",
+            "https://i.ibb.co/xSjg77BQ/IMG-9134.jpg"
+          ],
+          "features": [
+            "Profissional",
+            "Duradouro",
+            "Resultado Garantido",
+            "Qualidade Superior"
+          ],
+          "stock": 29,
+          "rating": 4.7,
+          "reviews": 145
+        }
+      ]
+    },
+    "bioextratus": {
+      "name": "Bioextratus",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "bioextratus-cronograma-1",
+          "name": "Cronograma 1 - Bioextratus",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Bioextratus com qualidade excepcional.",
+          "price": 27.77,
+          "images": [
+            "/images/products/bioextratus/cronograma-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 53,
+          "rating": 4.5,
+          "reviews": 60
+        },
+        {
+          "id": "bioextratus-jaborandi-1",
+          "name": "Jaborandi 1 - Bioextratus",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Bioextratus com qualidade excepcional.",
+          "price": 29.99,
+          "images": [
+            "/images/products/bioextratus/jaborandi-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 20,
+          "rating": 4.2,
+          "reviews": 231
+        }
+      ]
+    },
+    "boca-rosa": {
+      "name": "Boca Rosa",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "boca-rosa-base-1",
+          "name": "Base 1 - Boca Rosa",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Boca Rosa com qualidade excepcional.",
+          "price": 21.08,
+          "images": [
+            "/images/products/boca-rosa/base-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 40,
+          "rating": 4.4,
+          "reviews": 215
+        },
+        {
+          "id": "boca-rosa-base-2",
+          "name": "Base 2 - Boca Rosa",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Boca Rosa com qualidade excepcional.",
+          "price": 21.85,
+          "images": [
+            "/images/products/boca-rosa/base-2.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 29,
+          "rating": 4.4,
+          "reviews": 124
+        },
+        {
+          "id": "boca-rosa-base-3",
+          "name": "Base 3 - Boca Rosa",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Boca Rosa com qualidade excepcional.",
+          "price": 30.72,
+          "images": [
+            "/images/products/boca-rosa/base-3.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 14,
+          "rating": 4.1,
+          "reviews": 231
+        },
+        {
+          "id": "boca-rosa-base-4",
+          "name": "Base 4 - Boca Rosa",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Boca Rosa com qualidade excepcional.",
+          "price": 30.62,
+          "images": [
+            "/images/products/boca-rosa/base-4.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 11,
+          "rating": 4,
+          "reviews": 143
+        }
+      ]
+    },
+    "cadiveu": {
+      "name": "Cadiveu",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "cadiveu-cadiveu-1",
+          "name": "Cadiveu 1 - Cadiveu",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Cadiveu com qualidade excepcional.",
+          "price": 34.94,
+          "images": [
+            "/images/products/cadiveu/cadiveu-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 53,
+          "rating": 5,
+          "reviews": 177
+        },
+        {
+          "id": "cadiveu-cadiveu-2",
+          "name": "Cadiveu 2 - Cadiveu",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Cadiveu com qualidade excepcional.",
+          "price": 23.23,
+          "images": [
+            "/images/products/cadiveu/cadiveu-2.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 46,
+          "rating": 5,
+          "reviews": 181
+        },
+        {
+          "id": "cadiveu-cadiveu-3",
+          "name": "Cadiveu 3 - Cadiveu",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Cadiveu com qualidade excepcional.",
+          "price": 26,
+          "images": [
+            "/images/products/cadiveu/cadiveu-3.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 30,
+          "rating": 4.5,
+          "reviews": 158
+        },
+        {
+          "id": "cadiveu-cadiveu-4",
+          "name": "Cadiveu 4 - Cadiveu",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Cadiveu com qualidade excepcional.",
+          "price": 41.86,
+          "images": [
+            "/images/products/cadiveu/cadiveu-4.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 10,
+          "rating": 4.1,
+          "reviews": 114
+        },
+        {
+          "id": "cadiveu-cadiveu-5",
+          "name": "Cadiveu 5 - Cadiveu",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Cadiveu com qualidade excepcional.",
+          "price": 36.17,
+          "images": [
+            "/images/products/cadiveu/cadiveu-5.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 52,
+          "rating": 4,
+          "reviews": 132
+        },
+        {
+          "id": "cadiveu-cadiveu-6",
+          "name": "Cadiveu 6 - Cadiveu",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Cadiveu com qualidade excepcional.",
+          "price": 47.03,
+          "images": [
+            "/images/products/cadiveu/cadiveu-6.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 35,
+          "rating": 4.1,
+          "reviews": 153
+        }
+      ]
+    },
+    "esmaltes": {
+      "name": "Esmaltes e Unhas",
+      "icon": "💅",
+      "products": [
+        {
+          "id": "esmaltes-01c94735-54ef-4621-ab03-ff60abd1b6e9",
+          "name": "01C94735 54EF 4621 AB03 FF60ABD1B6E9 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 27.09,
+          "images": [
+            "/images/products/esmaltes/01C94735-54EF-4621-AB03-FF60ABD1B6E9.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 56,
+          "rating": 4.5,
+          "reviews": 52
+        },
+        {
+          "id": "esmaltes-01d423a3-fc70-471b-9edd-eed259667ab6",
+          "name": "01D423A3 FC70 471B 9EDD EED259667AB6 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 28.13,
+          "images": [
+            "/images/products/esmaltes/01D423A3-FC70-471B-9EDD-EED259667AB6.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 57,
+          "rating": 4.5,
+          "reviews": 195
+        },
+        {
+          "id": "esmaltes-0441bd0a-2d73-4011-9b98-351c9be5d302",
+          "name": "0441BD0A 2D73 4011 9B98 351C9BE5D302 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 39.56,
+          "images": [
+            "/images/products/esmaltes/0441BD0A-2D73-4011-9B98-351C9BE5D302.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 35,
+          "rating": 4,
+          "reviews": 228
+        },
+        {
+          "id": "esmaltes-046cc81e-4f62-4e3b-adc6-89ee3d1c612d",
+          "name": "046CC81E 4F62 4E3B ADC6 89EE3D1C612D - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 46.56,
+          "images": [
+            "/images/products/esmaltes/046CC81E-4F62-4E3B-ADC6-89EE3D1C612D.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 42,
+          "rating": 4.4,
+          "reviews": 198
+        },
+        {
+          "id": "esmaltes-06384a63-9ac4-4bbd-be35-a54004c96a72",
+          "name": "06384A63 9AC4 4BBD BE35 A54004C96A72 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 53.85,
+          "images": [
+            "/images/products/esmaltes/06384A63-9AC4-4BBD-BE35-A54004C96A72.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 13,
+          "rating": 4.1,
+          "reviews": 207
+        },
+        {
+          "id": "esmaltes-0971ad8c-6356-4572-850e-e1a52c1282df",
+          "name": "0971AD8C 6356 4572 850E E1A52C1282DF - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 51.05,
+          "images": [
+            "/images/products/esmaltes/0971AD8C-6356-4572-850E-E1A52C1282DF.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 44,
+          "rating": 5,
+          "reviews": 83
+        },
+        {
+          "id": "esmaltes-0f385710-a4dd-40d4-afed-01f12bf220bc",
+          "name": "0F385710 A4DD 40D4 AFED 01F12BF220BC - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 56.58,
+          "images": [
+            "/images/products/esmaltes/0F385710-A4DD-40D4-AFED-01F12BF220BC.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 32,
+          "rating": 4.5,
+          "reviews": 71
+        },
+        {
+          "id": "esmaltes-10dd776f-42d0-414b-a863-6d1f8e7f998e",
+          "name": "10DD776F 42D0 414B A863 6D1F8E7F998E - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 68.39,
+          "images": [
+            "/images/products/esmaltes/10DD776F-42D0-414B-A863-6D1F8E7F998E.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 22,
+          "rating": 4.7,
+          "reviews": 233
+        },
+        {
+          "id": "esmaltes-1196e418-c864-4ba5-8f53-5372a51e040b",
+          "name": "1196E418 C864 4BA5 8F53 5372A51E040B - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 58.6,
+          "images": [
+            "/images/products/esmaltes/1196E418-C864-4BA5-8F53-5372A51E040B.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 46,
+          "rating": 4.6,
+          "reviews": 168
+        },
+        {
+          "id": "esmaltes-12010ae1-4ccd-4991-a039-b56a388d481f",
+          "name": "12010AE1 4CCD 4991 A039 B56A388D481F - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 73.8,
+          "images": [
+            "/images/products/esmaltes/12010AE1-4CCD-4991-A039-B56A388D481F.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 49,
+          "rating": 5,
+          "reviews": 137
+        },
+        {
+          "id": "esmaltes-12626cf5-11e4-4310-b16f-f8fb273b65e5",
+          "name": "12626CF5 11E4 4310 B16F F8FB273B65E5 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 66.29,
+          "images": [
+            "/images/products/esmaltes/12626CF5-11E4-4310-B16F-F8FB273B65E5.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 15,
+          "rating": 4.7,
+          "reviews": 226
+        },
+        {
+          "id": "esmaltes-126b48c2-129c-480d-b584-d54c0ca2fd33",
+          "name": "126B48C2 129C 480D B584 D54C0CA2FD33 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 81.53,
+          "images": [
+            "/images/products/esmaltes/126B48C2-129C-480D-B584-D54C0CA2FD33.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 56,
+          "rating": 4.3,
+          "reviews": 231
+        },
+        {
+          "id": "esmaltes-13994cb9-1705-4df2-9857-84e08fb34222",
+          "name": "13994CB9 1705 4DF2 9857 84E08FB34222 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 93.65,
+          "images": [
+            "/images/products/esmaltes/13994CB9-1705-4DF2-9857-84E08FB34222.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 40,
+          "rating": 4.2,
+          "reviews": 213
+        },
+        {
+          "id": "esmaltes-144b8848-8661-47bd-a90e-ac168e68f6cd",
+          "name": "144B8848 8661 47BD A90E AC168E68F6CD - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 98.8,
+          "images": [
+            "/images/products/esmaltes/144B8848-8661-47BD-A90E-AC168E68F6CD.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 43,
+          "rating": 4.8,
+          "reviews": 160
+        },
+        {
+          "id": "esmaltes-14b3a747-7b52-4af9-ade7-a8f071191113",
+          "name": "14B3A747 7B52 4AF9 ADE7 A8F071191113 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 104.25,
+          "images": [
+            "/images/products/esmaltes/14B3A747-7B52-4AF9-ADE7-A8F071191113.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 39,
+          "rating": 4.1,
+          "reviews": 114
+        },
+        {
+          "id": "esmaltes-17906656-1000-440b-9069-b9bbfbaaf424",
+          "name": "17906656 1000 440B 9069 B9BBFBAAF424 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 105.47,
+          "images": [
+            "/images/products/esmaltes/17906656-1000-440B-9069-B9BBFBAAF424.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 44,
+          "rating": 4.9,
+          "reviews": 248
+        },
+        {
+          "id": "esmaltes-1860682d-1080-40db-9e83-4726399b9324",
+          "name": "1860682D 1080 40DB 9E83 4726399B9324 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 105.27,
+          "images": [
+            "/images/products/esmaltes/1860682D-1080-40DB-9E83-4726399B9324.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 52,
+          "rating": 4.3,
+          "reviews": 241
+        },
+        {
+          "id": "esmaltes-19dd4a98-a876-44ef-bf9b-41721c24efec",
+          "name": "19DD4A98 A876 44EF BF9B 41721C24EFEC - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 118.48,
+          "images": [
+            "/images/products/esmaltes/19DD4A98-A876-44EF-BF9B-41721C24EFEC.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 54,
+          "rating": 4,
+          "reviews": 187
+        },
+        {
+          "id": "esmaltes-1aa4d989-af17-4406-9e8d-8dfee9f90858",
+          "name": "1AA4D989 AF17 4406 9E8D 8DFEE9F90858 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 108.01,
+          "images": [
+            "/images/products/esmaltes/1AA4D989-AF17-4406-9E8D-8DFEE9F90858.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 32,
+          "rating": 4.4,
+          "reviews": 191
+        },
+        {
+          "id": "esmaltes-1ebddd15-6b15-4cbf-b090-a42cf19a29f2",
+          "name": "1EBDDD15 6B15 4CBF B090 A42CF19A29F2 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 113.47,
+          "images": [
+            "/images/products/esmaltes/1EBDDD15-6B15-4CBF-B090-A42CF19A29F2.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 49,
+          "rating": 4.3,
+          "reviews": 242
+        },
+        {
+          "id": "esmaltes-1ff873a1-2eb7-4360-b430-b78f114ba4b8",
+          "name": "1FF873A1 2EB7 4360 B430 B78F114BA4B8 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 118.33,
+          "images": [
+            "/images/products/esmaltes/1FF873A1-2EB7-4360-B430-B78F114BA4B8.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 33,
+          "rating": 4.3,
+          "reviews": 153
+        },
+        {
+          "id": "esmaltes-249c0570-552b-4ef8-a2da-8b5e8fb51611",
+          "name": "249C0570 552B 4EF8 A2DA 8B5E8FB51611 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 139.99,
+          "images": [
+            "/images/products/esmaltes/249C0570-552B-4EF8-A2DA-8B5E8FB51611.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 49,
+          "rating": 4.6,
+          "reviews": 124
+        },
+        {
+          "id": "esmaltes-27aee554-6537-4223-9ec1-427a34679538",
+          "name": "27AEE554 6537 4223 9EC1 427A34679538 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 132.73,
+          "images": [
+            "/images/products/esmaltes/27AEE554-6537-4223-9EC1-427A34679538.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 43,
+          "rating": 5,
+          "reviews": 206
+        },
+        {
+          "id": "esmaltes-27bdd597-ae82-4880-8f9e-a5839ad5ba30",
+          "name": "27BDD597 AE82 4880 8F9E A5839AD5BA30 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 130.18,
+          "images": [
+            "/images/products/esmaltes/27BDD597-AE82-4880-8F9E-A5839AD5BA30.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 16,
+          "rating": 4,
+          "reviews": 157
+        },
+        {
+          "id": "esmaltes-2bc090b2-80ef-46fd-8c50-fd0747312fa4",
+          "name": "2BC090B2 80EF 46FD 8C50 FD0747312FA4 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 143.57,
+          "images": [
+            "/images/products/esmaltes/2BC090B2-80EF-46FD-8C50-FD0747312FA4.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 17,
+          "rating": 4.8,
+          "reviews": 135
+        },
+        {
+          "id": "esmaltes-2e2a38c9-a19e-41dc-9fdd-93736c96f174",
+          "name": "2E2A38C9 A19E 41DC 9FDD 93736C96F174 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 153.04,
+          "images": [
+            "/images/products/esmaltes/2E2A38C9-A19E-41DC-9FDD-93736C96F174.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 17,
+          "rating": 4.2,
+          "reviews": 61
+        },
+        {
+          "id": "esmaltes-2f9da343-d439-47e2-900c-e76dedea6654",
+          "name": "2F9DA343 D439 47E2 900C E76DEDEA6654 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 155.64,
+          "images": [
+            "/images/products/esmaltes/2F9DA343-D439-47E2-900C-E76DEDEA6654.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 57,
+          "rating": 4.5,
+          "reviews": 89
+        },
+        {
+          "id": "esmaltes-3153a865-1947-43fa-a464-13837239af89",
+          "name": "3153A865 1947 43FA A464 13837239AF89 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 169.16,
+          "images": [
+            "/images/products/esmaltes/3153A865-1947-43FA-A464-13837239AF89.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 45,
+          "rating": 4.5,
+          "reviews": 122
+        },
+        {
+          "id": "esmaltes-372cd7a8-264e-4f61-8e27-ee9781b89346",
+          "name": "372CD7A8 264E 4F61 8E27 EE9781B89346 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 163.5,
+          "images": [
+            "/images/products/esmaltes/372CD7A8-264E-4F61-8E27-EE9781B89346.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 46,
+          "rating": 4,
+          "reviews": 178
+        },
+        {
+          "id": "esmaltes-3885c3c6-cce5-4ecf-9c94-29ac3d28bd95",
+          "name": "3885C3C6 CCE5 4ECF 9C94 29AC3D28BD95 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 175.47,
+          "images": [
+            "/images/products/esmaltes/3885C3C6-CCE5-4ECF-9C94-29AC3D28BD95.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 18,
+          "rating": 4,
+          "reviews": 64
+        },
+        {
+          "id": "esmaltes-3b6db09b-16fd-4c36-a85f-1bf97bfb21e9",
+          "name": "3B6DB09B 16FD 4C36 A85F 1BF97BFB21E9 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 165.85,
+          "images": [
+            "/images/products/esmaltes/3B6DB09B-16FD-4C36-A85F-1BF97BFB21E9.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 39,
+          "rating": 4.1,
+          "reviews": 128
+        },
+        {
+          "id": "esmaltes-3c80f075-5334-4f06-9c54-cdd00b81166f",
+          "name": "3C80F075 5334 4F06 9C54 CDD00B81166F - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 183.94,
+          "images": [
+            "/images/products/esmaltes/3C80F075-5334-4F06-9C54-CDD00B81166F.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 20,
+          "rating": 4.7,
+          "reviews": 144
+        },
+        {
+          "id": "esmaltes-3e2a0a2b-ab11-420e-bbcd-ffaec18527ab",
+          "name": "3E2A0A2B AB11 420E BBCD FFAEC18527AB - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 185.49,
+          "images": [
+            "/images/products/esmaltes/3E2A0A2B-AB11-420E-BBCD-FFAEC18527AB.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 34,
+          "rating": 4.3,
+          "reviews": 59
+        },
+        {
+          "id": "esmaltes-3e64fb19-1755-451c-a9e0-8fbca6a5dc9c",
+          "name": "3E64FB19 1755 451C A9E0 8FBCA6A5DC9C - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 188.02,
+          "images": [
+            "/images/products/esmaltes/3E64FB19-1755-451C-A9E0-8FBCA6A5DC9C.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 52,
+          "rating": 4.1,
+          "reviews": 176
+        },
+        {
+          "id": "esmaltes-3e6c1b3f-ceb7-4143-bd70-7fed74f45b3f",
+          "name": "3E6C1B3F CEB7 4143 BD70 7FED74F45B3F - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 191.63,
+          "images": [
+            "/images/products/esmaltes/3E6C1B3F-CEB7-4143-BD70-7FED74F45B3F.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 24,
+          "rating": 4.1,
+          "reviews": 63
+        },
+        {
+          "id": "esmaltes-43cca3ee-832d-4fa5-bd73-ebb02ad1fac0",
+          "name": "43CCA3EE 832D 4FA5 BD73 EBB02AD1FAC0 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 198.64,
+          "images": [
+            "/images/products/esmaltes/43CCA3EE-832D-4FA5-BD73-EBB02AD1FAC0.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 21,
+          "rating": 4.2,
+          "reviews": 121
+        },
+        {
+          "id": "esmaltes-4410b395-ead5-4a81-84c0-2eca2f9aba4a",
+          "name": "4410B395 EAD5 4A81 84C0 2ECA2F9ABA4A - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 214.45,
+          "images": [
+            "/images/products/esmaltes/4410B395-EAD5-4A81-84C0-2ECA2F9ABA4A.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 56,
+          "rating": 4.6,
+          "reviews": 151
+        },
+        {
+          "id": "esmaltes-4477464c-0a43-4993-9314-fe2b1dfce9f9",
+          "name": "4477464C 0A43 4993 9314 FE2B1DFCE9F9 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 202.67,
+          "images": [
+            "/images/products/esmaltes/4477464C-0A43-4993-9314-FE2B1DFCE9F9.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 19,
+          "rating": 4.4,
+          "reviews": 90
+        },
+        {
+          "id": "esmaltes-4bfd7492-7127-4ee8-b14c-f383757d21e7",
+          "name": "4BFD7492 7127 4EE8 B14C F383757D21E7 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 220.76,
+          "images": [
+            "/images/products/esmaltes/4BFD7492-7127-4EE8-B14C-F383757D21E7.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 32,
+          "rating": 4.6,
+          "reviews": 141
+        },
+        {
+          "id": "esmaltes-4dec7f56-7fa2-4e7f-9f42-9a8076c32141",
+          "name": "4DEC7F56 7FA2 4E7F 9F42 9A8076C32141 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 221.77,
+          "images": [
+            "/images/products/esmaltes/4DEC7F56-7FA2-4E7F-9F42-9A8076C32141.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 31,
+          "rating": 4.4,
+          "reviews": 199
+        },
+        {
+          "id": "esmaltes-4f2e7255-cbb9-4e34-806c-c9a1a06e16da",
+          "name": "4F2E7255 CBB9 4E34 806C C9A1A06E16DA - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 223.16,
+          "images": [
+            "/images/products/esmaltes/4F2E7255-CBB9-4E34-806C-C9A1A06E16DA.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 22,
+          "rating": 4.5,
+          "reviews": 149
+        },
+        {
+          "id": "esmaltes-50178b81-d3f1-4fc5-ac8b-e15fea82baee",
+          "name": "50178B81 D3F1 4FC5 AC8B E15FEA82BAEE - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 221.42,
+          "images": [
+            "/images/products/esmaltes/50178B81-D3F1-4FC5-AC8B-E15FEA82BAEE.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 38,
+          "rating": 4.5,
+          "reviews": 142
+        },
+        {
+          "id": "esmaltes-546a9c23-35aa-46f4-a018-ddd000840b2f",
+          "name": "546A9C23 35AA 46F4 A018 DDD000840B2F - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 231.93,
+          "images": [
+            "/images/products/esmaltes/546A9C23-35AA-46F4-A018-DDD000840B2F.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 22,
+          "rating": 4.8,
+          "reviews": 127
+        },
+        {
+          "id": "esmaltes-58257860-5eeb-45b5-8ae0-9a14961231a8",
+          "name": "58257860 5EEB 45B5 8AE0 9A14961231A8 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 232.5,
+          "images": [
+            "/images/products/esmaltes/58257860-5EEB-45B5-8AE0-9A14961231A8.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 20,
+          "rating": 4.7,
+          "reviews": 242
+        },
+        {
+          "id": "esmaltes-5a679c42-ea23-42ed-80d4-c48c1771f297",
+          "name": "5A679C42 EA23 42ED 80D4 C48C1771F297 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 248.86,
+          "images": [
+            "/images/products/esmaltes/5A679C42-EA23-42ED-80D4-C48C1771F297.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 39,
+          "rating": 4.5,
+          "reviews": 190
+        },
+        {
+          "id": "esmaltes-5beb77e5-6e1a-4656-807d-eb2f92c14ab5",
+          "name": "5BEB77E5 6E1A 4656 807D EB2F92C14AB5 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 246.87,
+          "images": [
+            "/images/products/esmaltes/5BEB77E5-6E1A-4656-807D-EB2F92C14AB5.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 18,
+          "rating": 4.2,
+          "reviews": 143
+        },
+        {
+          "id": "esmaltes-5db99621-1dc8-4164-a39a-d945dad0e183",
+          "name": "5DB99621 1DC8 4164 A39A D945DAD0E183 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 260.47,
+          "images": [
+            "/images/products/esmaltes/5DB99621-1DC8-4164-A39A-D945DAD0E183.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 47,
+          "rating": 4.1,
+          "reviews": 101
+        },
+        {
+          "id": "esmaltes-5e5cc46b-75d7-445f-9a74-389f12ba5b50",
+          "name": "5E5CC46B 75D7 445F 9A74 389F12BA5B50 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 266.84,
+          "images": [
+            "/images/products/esmaltes/5E5CC46B-75D7-445F-9A74-389F12BA5B50.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 25,
+          "rating": 4.7,
+          "reviews": 205
+        },
+        {
+          "id": "esmaltes-618b3e23-21e2-4b18-b82b-e04b3db4a5ea",
+          "name": "618B3E23 21E2 4B18 B82B E04B3DB4A5EA - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 263.16,
+          "images": [
+            "/images/products/esmaltes/618B3E23-21E2-4B18-B82B-E04B3DB4A5EA.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 32,
+          "rating": 4.1,
+          "reviews": 92
+        },
+        {
+          "id": "esmaltes-66d2374b-22ed-47a6-b78b-8cf67353cf3f",
+          "name": "66D2374B 22ED 47A6 B78B 8CF67353CF3F - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 268.43,
+          "images": [
+            "/images/products/esmaltes/66D2374B-22ED-47A6-B78B-8CF67353CF3F.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 38,
+          "rating": 4.4,
+          "reviews": 242
+        },
+        {
+          "id": "esmaltes-67a98565-e7b7-460d-bba3-b46fca546536",
+          "name": "67A98565 E7B7 460D BBA3 B46FCA546536 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 273.49,
+          "images": [
+            "/images/products/esmaltes/67A98565-E7B7-460D-BBA3-B46FCA546536.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 42,
+          "rating": 4,
+          "reviews": 141
+        },
+        {
+          "id": "esmaltes-67e8a5ba-4647-45e9-bdbd-b526c6a79030",
+          "name": "67E8A5BA 4647 45E9 BDBD B526C6A79030 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 283.81,
+          "images": [
+            "/images/products/esmaltes/67E8A5BA-4647-45E9-BDBD-B526C6A79030.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 27,
+          "rating": 4.8,
+          "reviews": 160
+        },
+        {
+          "id": "esmaltes-6872c88f-1801-4426-bf74-c8cb82b51000",
+          "name": "6872C88F 1801 4426 BF74 C8CB82B51000 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 288.2,
+          "images": [
+            "/images/products/esmaltes/6872C88F-1801-4426-BF74-C8CB82B51000.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 13,
+          "rating": 4.9,
+          "reviews": 95
+        },
+        {
+          "id": "esmaltes-6a22b282-6691-4861-8975-d317c9e46c01",
+          "name": "6A22B282 6691 4861 8975 D317C9E46C01 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 292.24,
+          "images": [
+            "/images/products/esmaltes/6A22B282-6691-4861-8975-D317C9E46C01.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 54,
+          "rating": 5,
+          "reviews": 122
+        },
+        {
+          "id": "esmaltes-719865c1-3de4-4c84-b85b-8a3d4c12b197",
+          "name": "719865C1 3DE4 4C84 B85B 8A3D4C12B197 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 294.89,
+          "images": [
+            "/images/products/esmaltes/719865C1-3DE4-4C84-B85B-8A3D4C12B197.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 43,
+          "rating": 4.8,
+          "reviews": 63
+        },
+        {
+          "id": "esmaltes-7253e170-d0cb-4682-b18a-e21b6bdc0d8d",
+          "name": "7253E170 D0CB 4682 B18A E21B6BDC0D8D - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 292.31,
+          "images": [
+            "/images/products/esmaltes/7253E170-D0CB-4682-B18A-E21B6BDC0D8D.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 44,
+          "rating": 4.8,
+          "reviews": 133
+        },
+        {
+          "id": "esmaltes-76df81da-d656-4f56-a68e-ddae762d9145",
+          "name": "76DF81DA D656 4F56 A68E DDAE762D9145 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 313.43,
+          "images": [
+            "/images/products/esmaltes/76DF81DA-D656-4F56-A68E-DDAE762D9145.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 32,
+          "rating": 4.2,
+          "reviews": 179
+        },
+        {
+          "id": "esmaltes-77456202-bc42-43ab-8f21-ae6e7d21c795",
+          "name": "77456202 BC42 43AB 8F21 AE6E7D21C795 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 311.12,
+          "images": [
+            "/images/products/esmaltes/77456202-BC42-43AB-8F21-AE6E7D21C795.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 47,
+          "rating": 4.5,
+          "reviews": 175
+        },
+        {
+          "id": "esmaltes-7c5acb08-d7c4-4cea-84b2-f8495645cd5e",
+          "name": "7C5ACB08 D7C4 4CEA 84B2 F8495645CD5E - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 321.26,
+          "images": [
+            "/images/products/esmaltes/7C5ACB08-D7C4-4CEA-84B2-F8495645CD5E.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 32,
+          "rating": 4.4,
+          "reviews": 248
+        },
+        {
+          "id": "esmaltes-7e4c5d19-5841-4c45-a23f-d693121c5324",
+          "name": "7E4C5D19 5841 4C45 A23F D693121C5324 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 324.69,
+          "images": [
+            "/images/products/esmaltes/7E4C5D19-5841-4C45-A23F-D693121C5324.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 23,
+          "rating": 4.6,
+          "reviews": 147
+        },
+        {
+          "id": "esmaltes-7f108682-69c5-4369-8b05-aaf08fc5e4b1",
+          "name": "7F108682 69C5 4369 8B05 AAF08FC5E4B1 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 328.2,
+          "images": [
+            "/images/products/esmaltes/7F108682-69C5-4369-8B05-AAF08FC5E4B1.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 58,
+          "rating": 4.2,
+          "reviews": 154
+        },
+        {
+          "id": "esmaltes-8079d161-a63c-4e13-8d71-21b44618d112",
+          "name": "8079D161 A63C 4E13 8D71 21B44618D112 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 331.62,
+          "images": [
+            "/images/products/esmaltes/8079D161-A63C-4E13-8D71-21B44618D112.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 30,
+          "rating": 4.7,
+          "reviews": 183
+        },
+        {
+          "id": "esmaltes-83bc6c2a-3dc8-45e0-ae4d-a6b8299d49e1",
+          "name": "83BC6C2A 3DC8 45E0 AE4D A6B8299D49E1 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 327.29,
+          "images": [
+            "/images/products/esmaltes/83BC6C2A-3DC8-45E0-AE4D-A6B8299D49E1.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 54,
+          "rating": 4.9,
+          "reviews": 50
+        },
+        {
+          "id": "esmaltes-8418d3df-29c6-4e8f-8e16-9da97641190b",
+          "name": "8418D3DF 29C6 4E8F 8E16 9DA97641190B - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 341.32,
+          "images": [
+            "/images/products/esmaltes/8418D3DF-29C6-4E8F-8E16-9DA97641190B.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 24,
+          "rating": 4.3,
+          "reviews": 123
+        },
+        {
+          "id": "esmaltes-887d8b11-5556-4ace-a341-43d720ad0776",
+          "name": "887D8B11 5556 4ACE A341 43D720AD0776 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 341.4,
+          "images": [
+            "/images/products/esmaltes/887D8B11-5556-4ACE-A341-43D720AD0776.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 29,
+          "rating": 4.6,
+          "reviews": 136
+        },
+        {
+          "id": "esmaltes-8addcc8b-e795-43bd-a897-50bfad501c7a",
+          "name": "8ADDCC8B E795 43BD A897 50BFAD501C7A - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 344.35,
+          "images": [
+            "/images/products/esmaltes/8ADDCC8B-E795-43BD-A897-50BFAD501C7A.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 26,
+          "rating": 4.3,
+          "reviews": 131
+        },
+        {
+          "id": "esmaltes-8b3f3342-5757-4d01-a67c-30d7a974b86d",
+          "name": "8B3F3342 5757 4D01 A67C 30D7A974B86D - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 360.03,
+          "images": [
+            "/images/products/esmaltes/8B3F3342-5757-4D01-A67C-30D7A974B86D.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 37,
+          "rating": 4.4,
+          "reviews": 187
+        },
+        {
+          "id": "esmaltes-8da0b1d0-affa-4330-8871-4f4717273f87",
+          "name": "8DA0B1D0 AFFA 4330 8871 4F4717273F87 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 353.58,
+          "images": [
+            "/images/products/esmaltes/8DA0B1D0-AFFA-4330-8871-4F4717273F87.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 26,
+          "rating": 4.8,
+          "reviews": 122
+        },
+        {
+          "id": "esmaltes-8e9aed6c-eab7-4208-aefd-14047366bfc0",
+          "name": "8E9AED6C EAB7 4208 AEFD 14047366BFC0 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 369.32,
+          "images": [
+            "/images/products/esmaltes/8E9AED6C-EAB7-4208-AEFD-14047366BFC0.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 42,
+          "rating": 5,
+          "reviews": 188
+        },
+        {
+          "id": "esmaltes-8ef72bea-7536-469a-b0b3-22134b18d3d6",
+          "name": "8EF72BEA 7536 469A B0B3 22134B18D3D6 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 376.45,
+          "images": [
+            "/images/products/esmaltes/8EF72BEA-7536-469A-B0B3-22134B18D3D6.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 35,
+          "rating": 4.2,
+          "reviews": 132
+        },
+        {
+          "id": "esmaltes-8f7caf1e-5bb8-440b-8705-becf7b3a7579",
+          "name": "8F7CAF1E 5BB8 440B 8705 BECF7B3A7579 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 382.13,
+          "images": [
+            "/images/products/esmaltes/8F7CAF1E-5BB8-440B-8705-BECF7B3A7579.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 52,
+          "rating": 4.8,
+          "reviews": 221
+        },
+        {
+          "id": "esmaltes-8f9c8742-bb72-4541-839f-275f628f15fa",
+          "name": "8F9C8742 BB72 4541 839F 275F628F15FA - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 372.9,
+          "images": [
+            "/images/products/esmaltes/8F9C8742-BB72-4541-839F-275F628F15FA.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 52,
+          "rating": 4.8,
+          "reviews": 154
+        },
+        {
+          "id": "esmaltes-914e8fad-b25d-4ecb-8d56-a5c4ea974d58",
+          "name": "914E8FAD B25D 4ECB 8D56 A5C4EA974D58 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 389.83,
+          "images": [
+            "/images/products/esmaltes/914E8FAD-B25D-4ECB-8D56-A5C4EA974D58.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 59,
+          "rating": 5,
+          "reviews": 57
+        },
+        {
+          "id": "esmaltes-9231cc0e-6101-4e6c-b66c-f3f857c89b5b",
+          "name": "9231CC0E 6101 4E6C B66C F3F857C89B5B - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 393.94,
+          "images": [
+            "/images/products/esmaltes/9231CC0E-6101-4E6C-B66C-F3F857C89B5B.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 59,
+          "rating": 4.5,
+          "reviews": 151
+        },
+        {
+          "id": "esmaltes-951aaace-3e7a-416a-bc74-8b146a077415",
+          "name": "951AAACE 3E7A 416A BC74 8B146A077415 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 401.93,
+          "images": [
+            "/images/products/esmaltes/951AAACE-3E7A-416A-BC74-8B146A077415.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 42,
+          "rating": 4.5,
+          "reviews": 203
+        },
+        {
+          "id": "esmaltes-95757652-c6b2-4d9a-b878-10a31b5ee52f",
+          "name": "95757652 C6B2 4D9A B878 10A31B5EE52F - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 403.38,
+          "images": [
+            "/images/products/esmaltes/95757652-C6B2-4D9A-B878-10A31B5EE52F.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 38,
+          "rating": 5,
+          "reviews": 186
+        },
+        {
+          "id": "esmaltes-959fb631-743b-4e15-875f-49bca6fdeee8",
+          "name": "959FB631 743B 4E15 875F 49BCA6FDEEE8 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 402.39,
+          "images": [
+            "/images/products/esmaltes/959FB631-743B-4E15-875F-49BCA6FDEEE8.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 18,
+          "rating": 5,
+          "reviews": 106
+        },
+        {
+          "id": "esmaltes-95ec7147-e1d5-45b5-a2a5-0b9503b11c74",
+          "name": "95EC7147 E1D5 45B5 A2A5 0B9503B11C74 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 402.11,
+          "images": [
+            "/images/products/esmaltes/95EC7147-E1D5-45B5-A2A5-0B9503B11C74.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 25,
+          "rating": 4.1,
+          "reviews": 89
+        },
+        {
+          "id": "esmaltes-96fdf7aa-2558-466f-84e1-8363c5fd29ee",
+          "name": "96FDF7AA 2558 466F 84E1 8363C5FD29EE - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 423.3,
+          "images": [
+            "/images/products/esmaltes/96FDF7AA-2558-466F-84E1-8363C5FD29EE.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 50,
+          "rating": 4.5,
+          "reviews": 54
+        },
+        {
+          "id": "esmaltes-9729e872-b9e0-44e5-b1a8-11f77d59b23e",
+          "name": "9729E872 B9E0 44E5 B1A8 11F77D59B23E - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 415.16,
+          "images": [
+            "/images/products/esmaltes/9729E872-B9E0-44E5-B1A8-11F77D59B23E.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 32,
+          "rating": 4.4,
+          "reviews": 170
+        },
+        {
+          "id": "esmaltes-9887498b-2835-4044-a80a-9ba255000876",
+          "name": "9887498B 2835 4044 A80A 9BA255000876 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 433.94,
+          "images": [
+            "/images/products/esmaltes/9887498B-2835-4044-A80A-9BA255000876.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 22,
+          "rating": 4.5,
+          "reviews": 78
+        },
+        {
+          "id": "esmaltes-9bab784f-d06a-4aa0-b53b-dab452d30e93",
+          "name": "9BAB784F D06A 4AA0 B53B DAB452D30E93 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 437.3,
+          "images": [
+            "/images/products/esmaltes/9BAB784F-D06A-4AA0-B53B-DAB452D30E93.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 49,
+          "rating": 4.3,
+          "reviews": 228
+        },
+        {
+          "id": "esmaltes-9fc409d5-1d53-4041-9b50-3e6ffcfb0f45",
+          "name": "9FC409D5 1D53 4041 9B50 3E6FFCFB0F45 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 434.84,
+          "images": [
+            "/images/products/esmaltes/9FC409D5-1D53-4041-9B50-3E6FFCFB0F45.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 18,
+          "rating": 4.9,
+          "reviews": 219
+        },
+        {
+          "id": "esmaltes-a203ff20-c0cc-4871-93f4-d6079a0c9334",
+          "name": "A203FF20 C0CC 4871 93F4 D6079A0C9334 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 448.68,
+          "images": [
+            "/images/products/esmaltes/A203FF20-C0CC-4871-93F4-D6079A0C9334.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 18,
+          "rating": 4.7,
+          "reviews": 242
+        },
+        {
+          "id": "esmaltes-a5f138c9-934f-4151-b059-22df3e34c98c",
+          "name": "A5F138C9 934F 4151 B059 22DF3E34C98C - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 451.05,
+          "images": [
+            "/images/products/esmaltes/A5F138C9-934F-4151-B059-22DF3E34C98C.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 58,
+          "rating": 4.3,
+          "reviews": 119
+        },
+        {
+          "id": "esmaltes-a956b423-7a5d-498b-96cf-0539aafb899b",
+          "name": "A956B423 7A5D 498B 96CF 0539AAFB899B - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 442.42,
+          "images": [
+            "/images/products/esmaltes/A956B423-7A5D-498B-96CF-0539AAFB899B.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 31,
+          "rating": 4.7,
+          "reviews": 240
+        },
+        {
+          "id": "esmaltes-abe9c775-fae4-4700-927f-72aa44d56736",
+          "name": "ABE9C775 FAE4 4700 927F 72AA44D56736 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 461.04,
+          "images": [
+            "/images/products/esmaltes/ABE9C775-FAE4-4700-927F-72AA44D56736.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 26,
+          "rating": 4.5,
+          "reviews": 211
+        },
+        {
+          "id": "esmaltes-ac01f8a4-2562-4fb0-8722-f460df627984",
+          "name": "AC01F8A4 2562 4FB0 8722 F460DF627984 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 465.59,
+          "images": [
+            "/images/products/esmaltes/AC01F8A4-2562-4FB0-8722-F460DF627984.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 45,
+          "rating": 5,
+          "reviews": 179
+        },
+        {
+          "id": "esmaltes-ad551ad2-2e12-4bb2-bd35-2b599c6747ec",
+          "name": "AD551AD2 2E12 4BB2 BD35 2B599C6747EC - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 473.55,
+          "images": [
+            "/images/products/esmaltes/AD551AD2-2E12-4BB2-BD35-2B599C6747EC.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 43,
+          "rating": 4,
+          "reviews": 73
+        },
+        {
+          "id": "esmaltes-ae8f140a-d9ab-4c4d-bea4-51d6ebdad8b7",
+          "name": "AE8F140A D9AB 4C4D BEA4 51D6EBDAD8B7 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 472.58,
+          "images": [
+            "/images/products/esmaltes/AE8F140A-D9AB-4C4D-BEA4-51D6EBDAD8B7.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 34,
+          "rating": 4.3,
+          "reviews": 175
+        },
+        {
+          "id": "esmaltes-aef007b1-594c-44b6-a93d-0118cc620110",
+          "name": "AEF007B1 594C 44B6 A93D 0118CC620110 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 469.02,
+          "images": [
+            "/images/products/esmaltes/AEF007B1-594C-44B6-A93D-0118CC620110.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 23,
+          "rating": 4.7,
+          "reviews": 64
+        },
+        {
+          "id": "esmaltes-af90245e-12ee-4126-ae27-574a2200a302",
+          "name": "AF90245E 12EE 4126 AE27 574A2200A302 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 480.05,
+          "images": [
+            "/images/products/esmaltes/AF90245E-12EE-4126-AE27-574A2200A302.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 14,
+          "rating": 4.3,
+          "reviews": 166
+        },
+        {
+          "id": "esmaltes-b453f234-f729-46c5-a164-5daf0900d115",
+          "name": "B453F234 F729 46C5 A164 5DAF0900D115 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 491.2,
+          "images": [
+            "/images/products/esmaltes/B453F234-F729-46C5-A164-5DAF0900D115.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 47,
+          "rating": 4.3,
+          "reviews": 134
+        },
+        {
+          "id": "esmaltes-b49560dd-a413-416d-840f-6df62e0afbf5",
+          "name": "B49560DD A413 416D 840F 6DF62E0AFBF5 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 493.23,
+          "images": [
+            "/images/products/esmaltes/B49560DD-A413-416D-840F-6DF62E0AFBF5.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 19,
+          "rating": 4.2,
+          "reviews": 53
+        },
+        {
+          "id": "esmaltes-b541ed7a-d6df-48ef-a622-9fa1097f5f26",
+          "name": "B541ED7A D6DF 48EF A622 9FA1097F5F26 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 487.44,
+          "images": [
+            "/images/products/esmaltes/B541ED7A-D6DF-48EF-A622-9FA1097F5F26.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 27,
+          "rating": 4.5,
+          "reviews": 194
+        },
+        {
+          "id": "esmaltes-b5903fed-7c9e-42de-940c-2e544dd43b06",
+          "name": "B5903FED 7C9E 42DE 940C 2E544DD43B06 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 506.39,
+          "images": [
+            "/images/products/esmaltes/B5903FED-7C9E-42DE-940C-2E544DD43B06.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 15,
+          "rating": 4.8,
+          "reviews": 96
+        },
+        {
+          "id": "esmaltes-b64ac589-0102-4c38-a3e2-257d41359047",
+          "name": "B64AC589 0102 4C38 A3E2 257D41359047 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 503.16,
+          "images": [
+            "/images/products/esmaltes/B64AC589-0102-4C38-A3E2-257D41359047.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 28,
+          "rating": 4.8,
+          "reviews": 164
+        },
+        {
+          "id": "esmaltes-b8f52c93-e617-4526-9b3a-d0537bff6a41",
+          "name": "B8F52C93 E617 4526 9B3A D0537BFF6A41 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 510.31,
+          "images": [
+            "/images/products/esmaltes/B8F52C93-E617-4526-9B3A-D0537BFF6A41.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 10,
+          "rating": 4.1,
+          "reviews": 166
+        },
+        {
+          "id": "esmaltes-bb56f3af-40e2-43a5-bcb8-304a42d4d931",
+          "name": "BB56F3AF 40E2 43A5 BCB8 304A42D4D931 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 524.91,
+          "images": [
+            "/images/products/esmaltes/BB56F3AF-40E2-43A5-BCB8-304A42D4D931.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 59,
+          "rating": 4.1,
+          "reviews": 179
+        },
+        {
+          "id": "esmaltes-bb7d6508-d81e-4913-9731-faabc9840431",
+          "name": "BB7D6508 D81E 4913 9731 FAABC9840431 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 510.18,
+          "images": [
+            "/images/products/esmaltes/BB7D6508-D81E-4913-9731-FAABC9840431.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 27,
+          "rating": 4.2,
+          "reviews": 80
+        },
+        {
+          "id": "esmaltes-bc452a5b-e9e4-43cc-af3d-7bcdfa1421a4",
+          "name": "BC452A5B E9E4 43CC AF3D 7BCDFA1421A4 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 517.07,
+          "images": [
+            "/images/products/esmaltes/BC452A5B-E9E4-43CC-AF3D-7BCDFA1421A4.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 12,
+          "rating": 4.4,
+          "reviews": 73
+        },
+        {
+          "id": "esmaltes-be5835ae-852f-45a5-8c3b-367ac1a08786",
+          "name": "BE5835AE 852F 45A5 8C3B 367AC1A08786 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 529.26,
+          "images": [
+            "/images/products/esmaltes/BE5835AE-852F-45A5-8C3B-367AC1A08786.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 31,
+          "rating": 4.3,
+          "reviews": 91
+        },
+        {
+          "id": "esmaltes-c1a40948-f1f1-4693-be16-06dcdf811df5",
+          "name": "C1A40948 F1F1 4693 BE16 06DCDF811DF5 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 529.6,
+          "images": [
+            "/images/products/esmaltes/C1A40948-F1F1-4693-BE16-06DCDF811DF5.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 39,
+          "rating": 4.6,
+          "reviews": 198
+        },
+        {
+          "id": "esmaltes-c1b7eab7-b30b-4c45-8f0c-69989028756b",
+          "name": "C1B7EAB7 B30B 4C45 8F0C 69989028756B - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 540.84,
+          "images": [
+            "/images/products/esmaltes/C1B7EAB7-B30B-4C45-8F0C-69989028756B.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 59,
+          "rating": 5,
+          "reviews": 121
+        },
+        {
+          "id": "esmaltes-c1df3ab0-ddd1-427d-ae62-9dc005ad4ed9",
+          "name": "C1DF3AB0 DDD1 427D AE62 9DC005AD4ED9 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 547.2,
+          "images": [
+            "/images/products/esmaltes/C1DF3AB0-DDD1-427D-AE62-9DC005AD4ED9.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 45,
+          "rating": 4.1,
+          "reviews": 207
+        },
+        {
+          "id": "esmaltes-c3d09f52-6ca7-4dff-908b-c16b96101abd",
+          "name": "C3D09F52 6CA7 4DFF 908B C16B96101ABD - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 557.79,
+          "images": [
+            "/images/products/esmaltes/C3D09F52-6CA7-4DFF-908B-C16B96101ABD.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 45,
+          "rating": 4.7,
+          "reviews": 73
+        },
+        {
+          "id": "esmaltes-c413fde6-8b18-4508-b022-64c1e37d8bc1",
+          "name": "C413FDE6 8B18 4508 B022 64C1E37D8BC1 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 549.11,
+          "images": [
+            "/images/products/esmaltes/C413FDE6-8B18-4508-B022-64C1E37D8BC1.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 53,
+          "rating": 4.1,
+          "reviews": 154
+        },
+        {
+          "id": "esmaltes-ca441a3c-2567-48dc-8ab0-b968dec94387",
+          "name": "CA441A3C 2567 48DC 8AB0 B968DEC94387 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 563.72,
+          "images": [
+            "/images/products/esmaltes/CA441A3C-2567-48DC-8AB0-B968DEC94387.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 31,
+          "rating": 4.7,
+          "reviews": 149
+        },
+        {
+          "id": "esmaltes-cb8becdb-f100-4bd3-a26a-869861609a7e",
+          "name": "CB8BECDB F100 4BD3 A26A 869861609A7E - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 556.6,
+          "images": [
+            "/images/products/esmaltes/CB8BECDB-F100-4BD3-A26A-869861609A7E.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 45,
+          "rating": 4.4,
+          "reviews": 189
+        },
+        {
+          "id": "esmaltes-ce07d68b-48ba-4ae3-aa35-8c5bcadd7cc2",
+          "name": "CE07D68B 48BA 4AE3 AA35 8C5BCADD7CC2 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 577.76,
+          "images": [
+            "/images/products/esmaltes/CE07D68B-48BA-4AE3-AA35-8C5BCADD7CC2.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 19,
+          "rating": 4.7,
+          "reviews": 110
+        },
+        {
+          "id": "esmaltes-d067d35c-b2fd-4d48-8860-c9929d1806ad",
+          "name": "D067D35C B2FD 4D48 8860 C9929D1806AD - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 574.49,
+          "images": [
+            "/images/products/esmaltes/D067D35C-B2FD-4D48-8860-C9929D1806AD.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 38,
+          "rating": 4.9,
+          "reviews": 76
+        },
+        {
+          "id": "esmaltes-d3f5bd75-b931-462a-9ebc-b4db7e8927b4",
+          "name": "D3F5BD75 B931 462A 9EBC B4DB7E8927B4 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 575.56,
+          "images": [
+            "/images/products/esmaltes/D3F5BD75-B931-462A-9EBC-B4DB7E8927B4.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 42,
+          "rating": 4.2,
+          "reviews": 162
+        },
+        {
+          "id": "esmaltes-d8eb3d6f-3d0c-490f-a713-6867a8e3c9d2",
+          "name": "D8EB3D6F 3D0C 490F A713 6867A8E3C9D2 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 578.33,
+          "images": [
+            "/images/products/esmaltes/D8EB3D6F-3D0C-490F-A713-6867A8E3C9D2.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 45,
+          "rating": 4.3,
+          "reviews": 92
+        },
+        {
+          "id": "esmaltes-da7cd650-6748-42ea-94fc-caa48bf862d7",
+          "name": "DA7CD650 6748 42EA 94FC CAA48BF862D7 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 595.01,
+          "images": [
+            "/images/products/esmaltes/DA7CD650-6748-42EA-94FC-CAA48BF862D7.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 52,
+          "rating": 4.5,
+          "reviews": 107
+        },
+        {
+          "id": "esmaltes-dac497a1-0592-48ba-a844-0c3dbbebae35",
+          "name": "DAC497A1 0592 48BA A844 0C3DBBEBAE35 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 587.51,
+          "images": [
+            "/images/products/esmaltes/DAC497A1-0592-48BA-A844-0C3DBBEBAE35.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 37,
+          "rating": 4.9,
+          "reviews": 226
+        },
+        {
+          "id": "esmaltes-dc016939-c4f4-45e6-b41a-1273349c8c9a",
+          "name": "DC016939 C4F4 45E6 B41A 1273349C8C9A - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 607.32,
+          "images": [
+            "/images/products/esmaltes/DC016939-C4F4-45E6-B41A-1273349C8C9A.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 16,
+          "rating": 4.7,
+          "reviews": 89
+        },
+        {
+          "id": "esmaltes-dc632fbe-8188-4452-bc43-621d2abdfc1a",
+          "name": "DC632FBE 8188 4452 BC43 621D2ABDFC1A - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 603.34,
+          "images": [
+            "/images/products/esmaltes/DC632FBE-8188-4452-BC43-621D2ABDFC1A.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 52,
+          "rating": 4.3,
+          "reviews": 248
+        },
+        {
+          "id": "esmaltes-de160f5d-71d8-49ee-b0c9-f766da5ce5b4",
+          "name": "DE160F5D 71D8 49EE B0C9 F766DA5CE5B4 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 603.22,
+          "images": [
+            "/images/products/esmaltes/DE160F5D-71D8-49EE-B0C9-F766DA5CE5B4.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 51,
+          "rating": 4.6,
+          "reviews": 68
+        },
+        {
+          "id": "esmaltes-e1e3fe89-9790-46b7-b261-4cdd3fda6c87",
+          "name": "E1E3FE89 9790 46B7 B261 4CDD3FDA6C87 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 607.82,
+          "images": [
+            "/images/products/esmaltes/E1E3FE89-9790-46B7-B261-4CDD3FDA6C87.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 44,
+          "rating": 4.8,
+          "reviews": 199
+        },
+        {
+          "id": "esmaltes-e2eed52b-976c-4d4b-86e8-2216a023c664",
+          "name": "E2EED52B 976C 4D4B 86E8 2216A023C664 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 611.87,
+          "images": [
+            "/images/products/esmaltes/E2EED52B-976C-4D4B-86E8-2216A023C664.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 58,
+          "rating": 4.3,
+          "reviews": 148
+        },
+        {
+          "id": "esmaltes-e8ffa1f2-18e0-4ff7-98f9-e3134c3fabea",
+          "name": "E8FFA1F2 18E0 4FF7 98F9 E3134C3FABEA - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 630.63,
+          "images": [
+            "/images/products/esmaltes/E8FFA1F2-18E0-4FF7-98F9-E3134C3FABEA.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 27,
+          "rating": 4.2,
+          "reviews": 101
+        },
+        {
+          "id": "esmaltes-eea6de5f-bfbd-431d-90c5-26bb23e3987f",
+          "name": "EEA6DE5F BFBD 431D 90C5 26BB23E3987F - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 626.9,
+          "images": [
+            "/images/products/esmaltes/EEA6DE5F-BFBD-431D-90C5-26BB23E3987F.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 17,
+          "rating": 4.7,
+          "reviews": 81
+        },
+        {
+          "id": "esmaltes-f2c0c00a-55c0-430e-92bd-875db4e54c5d",
+          "name": "F2C0C00A 55C0 430E 92BD 875DB4E54C5D - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 643.92,
+          "images": [
+            "/images/products/esmaltes/F2C0C00A-55C0-430E-92BD-875DB4E54C5D.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 42,
+          "rating": 4.3,
+          "reviews": 191
+        },
+        {
+          "id": "esmaltes-f3f23236-6928-4dfd-a460-105f6e23cb7a",
+          "name": "F3F23236 6928 4DFD A460 105F6E23CB7A - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 640.98,
+          "images": [
+            "/images/products/esmaltes/F3F23236-6928-4DFD-A460-105F6E23CB7A.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 54,
+          "rating": 4.2,
+          "reviews": 184
+        },
+        {
+          "id": "esmaltes-f6c3d90c-252e-4377-a103-53bcab16e7b6",
+          "name": "F6C3D90C 252E 4377 A103 53BCAB16E7B6 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 650.35,
+          "images": [
+            "/images/products/esmaltes/F6C3D90C-252E-4377-A103-53BCAB16E7B6.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 20,
+          "rating": 5,
+          "reviews": 158
+        },
+        {
+          "id": "esmaltes-f955b57c-07e2-461f-af72-42d904aa5a0a",
+          "name": "F955B57C 07E2 461F AF72 42D904AA5A0A - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 658.93,
+          "images": [
+            "/images/products/esmaltes/F955B57C-07E2-461F-AF72-42D904AA5A0A.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 56,
+          "rating": 4.1,
+          "reviews": 86
+        },
+        {
+          "id": "esmaltes-fc28279b-6c11-4144-a7d5-280f188a59d1",
+          "name": "FC28279B 6C11 4144 A7D5 280F188A59D1 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 648.69,
+          "images": [
+            "/images/products/esmaltes/FC28279B-6C11-4144-A7D5-280F188A59D1.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 47,
+          "rating": 4.8,
+          "reviews": 113
+        },
+        {
+          "id": "esmaltes-fcd31bf7-7e21-4ecd-8e42-5c49203964f8",
+          "name": "FCD31BF7 7E21 4ECD 8E42 5C49203964F8 - Esmaltes e Unhas",
+          "brand": "Nail Pro",
+          "description": "Produto premium da categoria Esmaltes e Unhas com qualidade excepcional.",
+          "price": 659.46,
+          "images": [
+            "/images/products/esmaltes/FCD31BF7-7E21-4ECD-8E42-5C49203964F8.JPG"
+          ],
+          "features": [
+            "Longa Duração",
+            "Brilho Intenso",
+            "Secagem Rápida",
+            "Cores Vibrantes"
+          ],
+          "stock": 37,
+          "rating": 4.3,
+          "reviews": 159
+        }
+      ]
+    },
+    "felps": {
+      "name": "Felps",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "felps-felps-1",
+          "name": "Felps 1 - Felps",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Felps com qualidade excepcional.",
+          "price": 29.84,
+          "images": [
+            "/images/products/felps/felps-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 56,
+          "rating": 4.6,
+          "reviews": 211
+        },
+        {
+          "id": "felps-felps-sos-1",
+          "name": "Felps Sos 1 - Felps",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Felps com qualidade excepcional.",
+          "price": 28.77,
+          "images": [
+            "/images/products/felps/felps-sos-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 39,
+          "rating": 4.9,
+          "reviews": 76
+        }
+      ]
+    },
+    "forever-liss": {
+      "name": "Forever Liss",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "forever-liss-cauterizacao-1",
+          "name": "Cauterizacao 1 - Forever Liss",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Forever Liss com qualidade excepcional.",
+          "price": 27.83,
+          "images": [
+            "/images/products/forever-liss/cauterizacao-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 13,
+          "rating": 4.1,
+          "reviews": 75
+        },
+        {
+          "id": "forever-liss-forever-liss-1",
+          "name": "Forever Liss 1 - Forever Liss",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Forever Liss com qualidade excepcional.",
+          "price": 28.35,
+          "images": [
+            "/images/products/forever-liss/forever-liss-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 21,
+          "rating": 4.7,
+          "reviews": 111
+        },
+        {
+          "id": "forever-liss-forever-liss-2",
+          "name": "Forever Liss 2 - Forever Liss",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Forever Liss com qualidade excepcional.",
+          "price": 40.86,
+          "images": [
+            "/images/products/forever-liss/forever-liss-2.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 37,
+          "rating": 4.3,
+          "reviews": 88
+        },
+        {
+          "id": "forever-liss-forever-liss-3",
+          "name": "Forever Liss 3 - Forever Liss",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Forever Liss com qualidade excepcional.",
+          "price": 36.7,
+          "images": [
+            "/images/products/forever-liss/forever-liss-3.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 52,
+          "rating": 4.4,
+          "reviews": 87
+        }
+      ]
+    },
+    "g-hair": {
+      "name": "G Hair",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "g-hair-g-hair-1",
+          "name": "G Hair 1 - G Hair",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria G Hair com qualidade excepcional.",
+          "price": 15.85,
+          "images": [
+            "/images/products/g-hair/g-hair-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 23,
+          "rating": 4.4,
+          "reviews": 227
+        },
+        {
+          "id": "g-hair-g-hair-2",
+          "name": "G Hair 2 - G Hair",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria G Hair com qualidade excepcional.",
+          "price": 38.27,
+          "images": [
+            "/images/products/g-hair/g-hair-2.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 43,
+          "rating": 4.9,
+          "reviews": 140
+        },
+        {
+          "id": "g-hair-g-hair-3",
+          "name": "G Hair 3 - G Hair",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria G Hair com qualidade excepcional.",
+          "price": 41.94,
+          "images": [
+            "/images/products/g-hair/g-hair-3.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 31,
+          "rating": 4,
+          "reviews": 98
+        },
+        {
+          "id": "g-hair-g-hair-4",
+          "name": "G Hair 4 - G Hair",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria G Hair com qualidade excepcional.",
+          "price": 47.04,
+          "images": [
+            "/images/products/g-hair/g-hair-4.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 11,
+          "rating": 4.7,
+          "reviews": 144
+        },
+        {
+          "id": "g-hair-g-hair-5",
+          "name": "G Hair 5 - G Hair",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria G Hair com qualidade excepcional.",
+          "price": 48.51,
+          "images": [
+            "/images/products/g-hair/g-hair-5.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 28,
+          "rating": 4.7,
+          "reviews": 248
+        },
+        {
+          "id": "g-hair-g-hair-6",
+          "name": "G Hair 6 - G Hair",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria G Hair com qualidade excepcional.",
+          "price": 43.65,
+          "images": [
+            "/images/products/g-hair/g-hair-6.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 38,
+          "rating": 4.8,
+          "reviews": 101
+        }
+      ]
+    },
+    "honma-tokyo": {
+      "name": "Honma Tokyo",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "honma-tokyo-honma-1",
+          "name": "Honma 1 - Honma Tokyo",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Honma Tokyo com qualidade excepcional.",
+          "price": 28.32,
+          "images": [
+            "/images/products/honma-tokyo/honma-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 36,
+          "rating": 4.3,
+          "reviews": 70
+        },
+        {
+          "id": "honma-tokyo-honma-2",
+          "name": "Honma 2 - Honma Tokyo",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Honma Tokyo com qualidade excepcional.",
+          "price": 33.87,
+          "images": [
+            "/images/products/honma-tokyo/honma-2.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 40,
+          "rating": 4,
+          "reviews": 161
+        },
+        {
+          "id": "honma-tokyo-honma-3",
+          "name": "Honma 3 - Honma Tokyo",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Honma Tokyo com qualidade excepcional.",
+          "price": 41.12,
+          "images": [
+            "/images/products/honma-tokyo/honma-3.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 24,
+          "rating": 4.9,
+          "reviews": 109
+        },
+        {
+          "id": "honma-tokyo-honma-4",
+          "name": "Honma 4 - Honma Tokyo",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Honma Tokyo com qualidade excepcional.",
+          "price": 37.3,
+          "images": [
+            "/images/products/honma-tokyo/honma-4.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 36,
+          "rating": 4.6,
+          "reviews": 107
+        }
+      ]
+    },
+    "inoar": {
+      "name": "Inoar",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "inoar-inoar-1",
+          "name": "Inoar 1 - Inoar",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Inoar com qualidade excepcional.",
+          "price": 18.97,
+          "images": [
+            "/images/products/inoar/inoar-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 43,
+          "rating": 4.7,
+          "reviews": 230
+        }
+      ]
+    },
+    "karssel": {
+      "name": "Karssel",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "karssel-karssel-1",
+          "name": "Karssel 1 - Karssel",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Karssel com qualidade excepcional.",
+          "price": 20.19,
+          "images": [
+            "/images/products/karssel/karssel-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 52,
+          "rating": 4.4,
+          "reviews": 159
+        }
+      ]
+    },
+    "mari-maria": {
+      "name": "Mari Maria",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "mari-maria-mari-maria-1",
+          "name": "Mari Maria 1 - Mari Maria",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Mari Maria com qualidade excepcional.",
+          "price": 31,
+          "images": [
+            "/images/products/mari-maria/mari-maria-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 33,
+          "rating": 4.2,
+          "reviews": 191
+        },
+        {
+          "id": "mari-maria-mari-maria-2",
+          "name": "Mari Maria 2 - Mari Maria",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Mari Maria com qualidade excepcional.",
+          "price": 21.48,
+          "images": [
+            "/images/products/mari-maria/mari-maria-2.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 57,
+          "rating": 4.4,
+          "reviews": 114
+        },
+        {
+          "id": "mari-maria-mari-maria-3",
+          "name": "Mari Maria 3 - Mari Maria",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Mari Maria com qualidade excepcional.",
+          "price": 40.19,
+          "images": [
+            "/images/products/mari-maria/mari-maria-3.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 10,
+          "rating": 4.5,
+          "reviews": 118
+        }
+      ]
+    },
+    "maria-escandalosa": {
+      "name": "Maria Escandalosa",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "maria-escandalosa-maria-1",
+          "name": "Maria 1 - Maria Escandalosa",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Maria Escandalosa com qualidade excepcional.",
+          "price": 30.97,
+          "images": [
+            "/images/products/maria-escandalosa/maria-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 15,
+          "rating": 4,
+          "reviews": 50
+        }
+      ]
+    },
+    "salvatore": {
+      "name": "Salvatore",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "salvatore-salvatore-1",
+          "name": "Salvatore 1 - Salvatore",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Salvatore com qualidade excepcional.",
+          "price": 19.96,
+          "images": [
+            "/images/products/salvatore/salvatore-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 56,
+          "rating": 4.4,
+          "reviews": 155
+        }
+      ]
+    },
+    "tinta-alta-moda": {
+      "name": "Tintas Alta Moda",
+      "icon": "👑",
+      "products": [
+        {
+          "id": "tinta-alta-moda-img",
+          "name": "IMG - Tintas Alta Moda",
+          "brand": "Alta Moda",
+          "description": "Produto premium da categoria Tintas Alta Moda com qualidade excepcional.",
+          "price": 21.93,
+          "originalPrice": 31.93,
+          "images": [
+            "/images/products/tinta-alta-moda/IMG_8769.PNG",
+            "/images/products/tinta-alta-moda/IMG_8800.PNG",
+            "/images/products/tinta-alta-moda/IMG_8810.PNG",
+            "/images/products/tinta-alta-moda/IMG_8826.PNG",
+            "/images/products/tinta-alta-moda/IMG_8832.PNG",
+            "/images/products/tinta-alta-moda/IMG_8846.PNG",
+            "/images/products/tinta-alta-moda/IMG_8852.PNG",
+            "/images/products/tinta-alta-moda/IMG_8857.PNG",
+            "/images/products/tinta-alta-moda/IMG_8861.PNG",
+            "/images/products/tinta-alta-moda/IMG_8862.PNG",
+            "/images/products/tinta-alta-moda/IMG_8868.PNG",
+            "/images/products/tinta-alta-moda/IMG_8869.PNG",
+            "/images/products/tinta-alta-moda/IMG_8872.PNG",
+            "/images/products/tinta-alta-moda/IMG_8877.PNG",
+            "/images/products/tinta-alta-moda/IMG_8880.PNG",
+            "/images/products/tinta-alta-moda/IMG_8885.PNG",
+            "/images/products/tinta-alta-moda/IMG_8898.PNG",
+            "/images/products/tinta-alta-moda/IMG_8900.PNG",
+            "/images/products/tinta-alta-moda/IMG_8901.PNG",
+            "/images/products/tinta-alta-moda/IMG_8966.PNG",
+            "/images/products/tinta-alta-moda/IMG_8977.PNG",
+            "/images/products/tinta-alta-moda/IMG_8985.PNG",
+            "/images/products/tinta-alta-moda/IMG_8986.PNG",
+            "/images/products/tinta-alta-moda/IMG_8987.PNG",
+            "/images/products/tinta-alta-moda/IMG_9008.PNG",
+            "/images/products/tinta-alta-moda/IMG_9032.PNG",
+            "/images/products/tinta-alta-moda/IMG_9036.PNG",
+            "/images/products/tinta-alta-moda/IMG_9043.PNG",
+            "/images/products/tinta-alta-moda/IMG_9053.PNG"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 52,
+          "rating": 4.9,
+          "reviews": 180
+        }
+      ]
+    },
+    "tinta-amend": {
+      "name": "Tintas Amend",
+      "icon": "🌿",
+      "products": [
+        {
+          "id": "tinta-amend-img",
+          "name": "IMG - Tintas Amend",
+          "brand": "Amend",
+          "description": "Produto premium da categoria Tintas Amend com qualidade excepcional.",
+          "price": 26.78,
+          "originalPrice": 36.78,
+          "images": [
+            "/images/products/tinta-amend/IMG_8918.PNG",
+            "/images/products/tinta-amend/IMG_8940.PNG",
+            "/images/products/tinta-amend/IMG_8953.PNG",
+            "/images/products/tinta-amend/IMG_8973.PNG",
+            "/images/products/tinta-amend/IMG_8976.PNG",
+            "/images/products/tinta-amend/IMG_8979.PNG"
+          ],
+          "features": [
+            "Natural",
+            "Orgânico",
+            "Suave",
+            "Sem Químicos Agressivos"
+          ],
+          "stock": 43,
+          "rating": 4.2,
+          "reviews": 53
+        }
+      ]
+    },
+    "tinta-beauty-color": {
+      "name": "Tintas Beauty Color",
+      "icon": "💎",
+      "products": [
+        {
+          "id": "tinta-beauty-color-0605bfb8-97d1-4eaa-8eeb-ad95ad1657b7",
+          "name": "0605BFB8 97D1 4EAA 8EEB AD95AD1657B7 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 27.84,
+          "images": [
+            "/images/products/tinta-beauty-color/0605BFB8-97D1-4EAA-8EEB-AD95AD1657B7.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 24,
+          "rating": 4.7,
+          "reviews": 110
+        },
+        {
+          "id": "tinta-beauty-color-155b6f03-6326-45f1-b128-c98f218f2a23",
+          "name": "155B6F03 6326 45F1 B128 C98F218F2A23 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 23.72,
+          "images": [
+            "/images/products/tinta-beauty-color/155B6F03-6326-45F1-B128-C98F218F2A23.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 54,
+          "rating": 4.7,
+          "reviews": 146
+        },
+        {
+          "id": "tinta-beauty-color-16b50655-4465-477a-95c5-48fc08aaeac1",
+          "name": "16B50655 4465 477A 95C5 48FC08AAEAC1 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 41.89,
+          "images": [
+            "/images/products/tinta-beauty-color/16B50655-4465-477A-95C5-48FC08AAEAC1.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 46,
+          "rating": 5,
+          "reviews": 115
+        },
+        {
+          "id": "tinta-beauty-color-2a39e03e-0a0d-4f86-8d5d-f92d6dfe0df8",
+          "name": "2A39E03E 0A0D 4F86 8D5D F92D6DFE0DF8 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 48.94,
+          "images": [
+            "/images/products/tinta-beauty-color/2A39E03E-0A0D-4F86-8D5D-F92D6DFE0DF8.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 37,
+          "rating": 4.1,
+          "reviews": 141
+        },
+        {
+          "id": "tinta-beauty-color-34e687f6-9783-48dd-bcef-03743d43fd26",
+          "name": "34E687F6 9783 48DD BCEF 03743D43FD26 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 41.71,
+          "images": [
+            "/images/products/tinta-beauty-color/34E687F6-9783-48DD-BCEF-03743D43FD26.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 39,
+          "rating": 4.7,
+          "reviews": 210
+        },
+        {
+          "id": "tinta-beauty-color-4a0cb406-3afe-43b6-afab-6d330f38323d",
+          "name": "4A0CB406 3AFE 43B6 AFAB 6D330F38323D - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 49.08,
+          "images": [
+            "/images/products/tinta-beauty-color/4A0CB406-3AFE-43B6-AFAB-6D330F38323D.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 31,
+          "rating": 4.6,
+          "reviews": 204
+        },
+        {
+          "id": "tinta-beauty-color-4effa98f-1ffa-4a43-97ca-ce7080d29a94",
+          "name": "4EFFA98F 1FFA 4A43 97CA CE7080D29A94 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 54.31,
+          "images": [
+            "/images/products/tinta-beauty-color/4EFFA98F-1FFA-4A43-97CA-CE7080D29A94.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 58,
+          "rating": 4.1,
+          "reviews": 74
+        },
+        {
+          "id": "tinta-beauty-color-514342f6-ccd2-48b5-96ce-2a3e48f4485d",
+          "name": "514342F6 CCD2 48B5 96CE 2A3E48F4485D - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 68.77,
+          "images": [
+            "/images/products/tinta-beauty-color/514342F6-CCD2-48B5-96CE-2A3E48F4485D.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 23,
+          "rating": 4.9,
+          "reviews": 176
+        },
+        {
+          "id": "tinta-beauty-color-65408488-2f2b-4c34-8265-4953fbf033c8",
+          "name": "65408488 2F2B 4C34 8265 4953FBF033C8 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 61.74,
+          "images": [
+            "/images/products/tinta-beauty-color/65408488-2F2B-4C34-8265-4953FBF033C8.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 17,
+          "rating": 4.1,
+          "reviews": 248
+        },
+        {
+          "id": "tinta-beauty-color-70845531-b3eb-40fa-a4d3-d29350848b87",
+          "name": "70845531 B3EB 40FA A4D3 D29350848B87 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 60.5,
+          "images": [
+            "/images/products/tinta-beauty-color/70845531-B3EB-40FA-A4D3-D29350848B87.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 58,
+          "rating": 4.2,
+          "reviews": 249
+        },
+        {
+          "id": "tinta-beauty-color-8af9eb77-a783-417b-82e8-0b1d0268da00",
+          "name": "8AF9EB77 A783 417B 82E8 0B1D0268DA00 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 83.43,
+          "images": [
+            "/images/products/tinta-beauty-color/8AF9EB77-A783-417B-82E8-0B1D0268DA00.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 16,
+          "rating": 4.7,
+          "reviews": 247
+        },
+        {
+          "id": "tinta-beauty-color-96e697a3-2080-4a09-a985-2be379f8d8c0",
+          "name": "96E697A3 2080 4A09 A985 2BE379F8D8C0 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 72.42,
+          "images": [
+            "/images/products/tinta-beauty-color/96E697A3-2080-4A09-A985-2BE379F8D8C0.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 40,
+          "rating": 4.2,
+          "reviews": 78
+        },
+        {
+          "id": "tinta-beauty-color-a34cfba7-444d-42d8-999f-f0f4cbcc9fde",
+          "name": "A34CFBA7 444D 42D8 999F F0F4CBCC9FDE - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 76.8,
+          "images": [
+            "/images/products/tinta-beauty-color/A34CFBA7-444D-42D8-999F-F0F4CBCC9FDE.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 15,
+          "rating": 4.8,
+          "reviews": 248
+        },
+        {
+          "id": "tinta-beauty-color-c169e200-8976-49a0-a11d-1ce29d126301",
+          "name": "C169E200 8976 49A0 A11D 1CE29D126301 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 85.82,
+          "images": [
+            "/images/products/tinta-beauty-color/C169E200-8976-49A0-A11D-1CE29D126301.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 44,
+          "rating": 4.1,
+          "reviews": 115
+        },
+        {
+          "id": "tinta-beauty-color-cec1a0bb-3dc0-4b31-ad8b-b89a11a599ad",
+          "name": "CEC1A0BB 3DC0 4B31 AD8B B89A11A599AD - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 95.36,
+          "images": [
+            "/images/products/tinta-beauty-color/CEC1A0BB-3DC0-4B31-AD8B-B89A11A599AD.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 37,
+          "rating": 4.7,
+          "reviews": 158
+        },
+        {
+          "id": "tinta-beauty-color-e50589ae-afce-4fd5-8d43-c27a34ddeee0",
+          "name": "E50589AE AFCE 4FD5 8D43 C27A34DDEEE0 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 107.78,
+          "images": [
+            "/images/products/tinta-beauty-color/E50589AE-AFCE-4FD5-8D43-C27A34DDEEE0.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 13,
+          "rating": 4.1,
+          "reviews": 105
+        },
+        {
+          "id": "tinta-beauty-color-e56ea869-f48b-4925-a000-3d712d35b1c2",
+          "name": "E56EA869 F48B 4925 A000 3D712D35B1C2 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 105.02,
+          "images": [
+            "/images/products/tinta-beauty-color/E56EA869-F48B-4925-A000-3D712D35B1C2.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 54,
+          "rating": 4.2,
+          "reviews": 223
+        },
+        {
+          "id": "tinta-beauty-color-ee902623-2bc1-445d-9d31-071404310ade",
+          "name": "EE902623 2BC1 445D 9D31 071404310ADE - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 102.1,
+          "images": [
+            "/images/products/tinta-beauty-color/EE902623-2BC1-445D-9D31-071404310ADE.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 30,
+          "rating": 5,
+          "reviews": 74
+        },
+        {
+          "id": "tinta-beauty-color-fc6f1ebd-26e9-43ae-a6b0-de61e04d0849",
+          "name": "FC6F1EBD 26E9 43AE A6B0 DE61E04D0849 - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 115.49,
+          "images": [
+            "/images/products/tinta-beauty-color/FC6F1EBD-26E9-43AE-A6B0-DE61E04D0849.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 11,
+          "rating": 4.3,
+          "reviews": 134
+        },
+        {
+          "id": "tinta-beauty-color-img",
+          "name": "IMG - Tintas Beauty Color",
+          "brand": "Beauty Color",
+          "description": "Produto premium da categoria Tintas Beauty Color com qualidade excepcional.",
+          "price": 115.62,
+          "originalPrice": 125.62,
+          "images": [
+            "/images/products/tinta-beauty-color/IMG_8776.PNG",
+            "/images/products/tinta-beauty-color/IMG_8794.PNG",
+            "/images/products/tinta-beauty-color/IMG_8850.PNG",
+            "/images/products/tinta-beauty-color/IMG_8856.PNG",
+            "/images/products/tinta-beauty-color/IMG_8878.PNG",
+            "/images/products/tinta-beauty-color/IMG_8897.PNG",
+            "/images/products/tinta-beauty-color/IMG_8906.PNG",
+            "/images/products/tinta-beauty-color/IMG_8908.PNG",
+            "/images/products/tinta-beauty-color/IMG_8949.PNG",
+            "/images/products/tinta-beauty-color/IMG_8974.PNG",
+            "/images/products/tinta-beauty-color/IMG_8997.PNG",
+            "/images/products/tinta-beauty-color/IMG_8998.PNG",
+            "/images/products/tinta-beauty-color/IMG_8999.PNG",
+            "/images/products/tinta-beauty-color/IMG_9003.PNG",
+            "/images/products/tinta-beauty-color/IMG_9004.PNG",
+            "/images/products/tinta-beauty-color/IMG_9009.PNG",
+            "/images/products/tinta-beauty-color/IMG_9017.PNG",
+            "/images/products/tinta-beauty-color/IMG_9025.PNG",
+            "/images/products/tinta-beauty-color/IMG_9026.PNG",
+            "/images/products/tinta-beauty-color/IMG_9027.PNG",
+            "/images/products/tinta-beauty-color/IMG_9030.PNG",
+            "/images/products/tinta-beauty-color/IMG_9031.PNG",
+            "/images/products/tinta-beauty-color/IMG_9033.PNG",
+            "/images/products/tinta-beauty-color/IMG_9037.PNG",
+            "/images/products/tinta-beauty-color/IMG_9044.PNG",
+            "/images/products/tinta-beauty-color/IMG_9045.PNG",
+            "/images/products/tinta-beauty-color/IMG_9047.PNG"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 42,
+          "rating": 4.9,
+          "reviews": 196
+        }
+      ]
+    },
+    "tinta-biocolor": {
+      "name": "Tintas Biocolor",
+      "icon": "🌱",
+      "products": [
+        {
+          "id": "tinta-biocolor-img",
+          "name": "IMG - Tintas Biocolor",
+          "brand": "Biocolor",
+          "description": "Produto premium da categoria Tintas Biocolor com qualidade excepcional.",
+          "price": 33.38,
+          "originalPrice": 43.38,
+          "images": [
+            "/images/products/tinta-biocolor/IMG_8725.PNG",
+            "/images/products/tinta-biocolor/IMG_8733.PNG",
+            "/images/products/tinta-biocolor/IMG_8757.PNG",
+            "/images/products/tinta-biocolor/IMG_8766.PNG",
+            "/images/products/tinta-biocolor/IMG_8777.PNG",
+            "/images/products/tinta-biocolor/IMG_8780.PNG",
+            "/images/products/tinta-biocolor/IMG_8819.PNG",
+            "/images/products/tinta-biocolor/IMG_8820.PNG",
+            "/images/products/tinta-biocolor/IMG_8829.PNG",
+            "/images/products/tinta-biocolor/IMG_8830.PNG",
+            "/images/products/tinta-biocolor/IMG_8831.PNG",
+            "/images/products/tinta-biocolor/IMG_8845.PNG",
+            "/images/products/tinta-biocolor/IMG_8853.PNG",
+            "/images/products/tinta-biocolor/IMG_8855.PNG",
+            "/images/products/tinta-biocolor/IMG_8858.PNG",
+            "/images/products/tinta-biocolor/IMG_8875.PNG",
+            "/images/products/tinta-biocolor/IMG_8882.PNG",
+            "/images/products/tinta-biocolor/IMG_8883.PNG",
+            "/images/products/tinta-biocolor/IMG_8903.PNG",
+            "/images/products/tinta-biocolor/IMG_8904.PNG",
+            "/images/products/tinta-biocolor/IMG_9020.PNG",
+            "/images/products/tinta-biocolor/IMG_9023.PNG",
+            "/images/products/tinta-biocolor/IMG_9055.PNG"
+          ],
+          "features": [
+            "Natural",
+            "Extratos Vegetais",
+            "Suave",
+            "Hipoalergênico"
+          ],
+          "stock": 38,
+          "rating": 4.2,
+          "reviews": 240
+        }
+      ]
+    },
+    "tinta-ecllusiv": {
+      "name": "Tintas Ecllusiv",
+      "icon": "💜",
+      "products": [
+        {
+          "id": "tinta-ecllusiv-img",
+          "name": "IMG - Tintas Ecllusiv",
+          "brand": "Ecllusiv",
+          "description": "Produto premium da categoria Tintas Ecllusiv com qualidade excepcional.",
+          "price": 29.38,
+          "originalPrice": 39.38,
+          "images": [
+            "/images/products/tinta-ecllusiv/IMG_8749.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8772.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8799.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8817.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8821.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8822.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8847.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8910.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8914.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8924.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8927.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8934.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8944.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8945.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8952.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8957.PNG",
+            "/images/products/tinta-ecllusiv/IMG_8967.PNG",
+            "/images/products/tinta-ecllusiv/IMG_9019.PNG",
+            "/images/products/tinta-ecllusiv/IMG_9028.PNG",
+            "/images/products/tinta-ecllusiv/IMG_9039.PNG",
+            "/images/products/tinta-ecllusiv/IMG_9048.PNG",
+            "/images/products/tinta-ecllusiv/IMG_9049.PNG",
+            "/images/products/tinta-ecllusiv/IMG_9056.PNG",
+            "/images/products/tinta-ecllusiv/IMG_9059.PNG"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 44,
+          "rating": 4.6,
+          "reviews": 117
+        }
+      ]
+    },
+    "tinta-loreal": {
+      "name": "Tintas L'Oréal",
+      "icon": "🎨",
+      "products": [
+        {
+          "id": "tinta-loreal-img",
+          "name": "IMG - Tintas L'Oréal",
+          "brand": "L'Oréal Paris",
+          "description": "Produto premium da categoria Tintas L'Oréal com qualidade excepcional.",
+          "price": 20.95,
+          "originalPrice": 30.95,
+          "images": [
+            "/images/products/tinta-loreal/IMG_8692.PNG",
+            "/images/products/tinta-loreal/IMG_8694.PNG",
+            "/images/products/tinta-loreal/IMG_8696.PNG",
+            "/images/products/tinta-loreal/IMG_8697.PNG",
+            "/images/products/tinta-loreal/IMG_8699.PNG",
+            "/images/products/tinta-loreal/IMG_8701.PNG",
+            "/images/products/tinta-loreal/IMG_8703.PNG",
+            "/images/products/tinta-loreal/IMG_8704.PNG",
+            "/images/products/tinta-loreal/IMG_8707.PNG",
+            "/images/products/tinta-loreal/IMG_8710.PNG",
+            "/images/products/tinta-loreal/IMG_8717.PNG",
+            "/images/products/tinta-loreal/IMG_8719.PNG",
+            "/images/products/tinta-loreal/IMG_8724.PNG",
+            "/images/products/tinta-loreal/IMG_8827.PNG",
+            "/images/products/tinta-loreal/IMG_8867.PNG",
+            "/images/products/tinta-loreal/IMG_8871.PNG",
+            "/images/products/tinta-loreal/IMG_8917.PNG",
+            "/images/products/tinta-loreal/IMG_8921.PNG",
+            "/images/products/tinta-loreal/IMG_8922.PNG",
+            "/images/products/tinta-loreal/IMG_8926.PNG",
+            "/images/products/tinta-loreal/IMG_8932.PNG"
+          ],
+          "features": [
+            "Cobertura Total",
+            "Longa Duração",
+            "Proteção da Cor",
+            "Fácil Aplicação"
+          ],
+          "stock": 58,
+          "rating": 4.5,
+          "reviews": 141
+        }
+      ]
+    },
+    "tinta-nutrisse": {
+      "name": "Tintas Nutrisse Garnier",
+      "icon": "🥑",
+      "products": [
+        {
+          "id": "tinta-nutrisse-img",
+          "name": "IMG - Tintas Nutrisse Garnier",
+          "brand": "Garnier",
+          "description": "Produto premium da categoria Tintas Nutrisse Garnier com qualidade excepcional.",
+          "price": 32.59,
+          "originalPrice": 42.59,
+          "images": [
+            "/images/products/tinta-nutrisse/IMG_8902.PNG",
+            "/images/products/tinta-nutrisse/IMG_8912.PNG",
+            "/images/products/tinta-nutrisse/IMG_8923.PNG",
+            "/images/products/tinta-nutrisse/IMG_8933.PNG",
+            "/images/products/tinta-nutrisse/IMG_8961.PNG",
+            "/images/products/tinta-nutrisse/IMG_8962.PNG",
+            "/images/products/tinta-nutrisse/IMG_8980.PNG",
+            "/images/products/tinta-nutrisse/IMG_8981.PNG",
+            "/images/products/tinta-nutrisse/IMG_8984.PNG"
+          ],
+          "features": [
+            "Nutritiva",
+            "Óleos Naturais",
+            "Hidratação",
+            "Cor Duradoura"
+          ],
+          "stock": 22,
+          "rating": 4.8,
+          "reviews": 78
+        }
+      ]
+    },
+    "tinta-wella": {
+      "name": "Tintas Wella",
+      "icon": "⭐",
+      "products": [
+        {
+          "id": "tinta-wella-img",
+          "name": "IMG - Tintas Wella",
+          "brand": "Wella Professionals",
+          "description": "Produto premium da categoria Tintas Wella com qualidade excepcional.",
+          "price": 27.74,
+          "originalPrice": 37.74,
+          "images": [
+            "/images/products/tinta-wella/IMG_8698.PNG",
+            "/images/products/tinta-wella/IMG_8711.PNG",
+            "/images/products/tinta-wella/IMG_8712.PNG",
+            "/images/products/tinta-wella/IMG_8713.PNG",
+            "/images/products/tinta-wella/IMG_8716.PNG",
+            "/images/products/tinta-wella/IMG_8718.PNG",
+            "/images/products/tinta-wella/IMG_8720.PNG",
+            "/images/products/tinta-wella/IMG_8727.PNG",
+            "/images/products/tinta-wella/IMG_8734.PNG",
+            "/images/products/tinta-wella/IMG_8737.PNG",
+            "/images/products/tinta-wella/IMG_8739.PNG",
+            "/images/products/tinta-wella/IMG_8740.PNG",
+            "/images/products/tinta-wella/IMG_8741.PNG",
+            "/images/products/tinta-wella/IMG_8748.PNG",
+            "/images/products/tinta-wella/IMG_8752.PNG",
+            "/images/products/tinta-wella/IMG_8753.PNG",
+            "/images/products/tinta-wella/IMG_8758.PNG",
+            "/images/products/tinta-wella/IMG_8759(1).PNG",
+            "/images/products/tinta-wella/IMG_8759.PNG",
+            "/images/products/tinta-wella/IMG_8761.PNG",
+            "/images/products/tinta-wella/IMG_8764.PNG",
+            "/images/products/tinta-wella/IMG_8767.PNG",
+            "/images/products/tinta-wella/IMG_8768.PNG",
+            "/images/products/tinta-wella/IMG_8770.PNG",
+            "/images/products/tinta-wella/IMG_8774.PNG",
+            "/images/products/tinta-wella/IMG_8778.PNG",
+            "/images/products/tinta-wella/IMG_8784.PNG",
+            "/images/products/tinta-wella/IMG_8785.PNG",
+            "/images/products/tinta-wella/IMG_8786.PNG",
+            "/images/products/tinta-wella/IMG_8787.PNG",
+            "/images/products/tinta-wella/IMG_8791.PNG",
+            "/images/products/tinta-wella/IMG_8792.PNG",
+            "/images/products/tinta-wella/IMG_8818.PNG",
+            "/images/products/tinta-wella/IMG_8828.PNG",
+            "/images/products/tinta-wella/IMG_8841.PNG",
+            "/images/products/tinta-wella/IMG_8848.PNG",
+            "/images/products/tinta-wella/IMG_8891.PNG",
+            "/images/products/tinta-wella/IMG_8896.PNG",
+            "/images/products/tinta-wella/IMG_8939.PNG",
+            "/images/products/tinta-wella/IMG_8946.PNG",
+            "/images/products/tinta-wella/IMG_8971.PNG",
+            "/images/products/tinta-wella/IMG_8972.PNG",
+            "/images/products/tinta-wella/IMG_8975.PNG"
+          ],
+          "features": [
+            "Profissional",
+            "Tecnologia Avançada",
+            "Resultado Superior",
+            "Qualidade Premium"
+          ],
+          "stock": 28,
+          "rating": 4,
+          "reviews": 154
+        }
+      ]
+    },
+    "troia": {
+      "name": "Troia",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "troia-troia-1",
+          "name": "Troia 1 - Troia",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Troia com qualidade excepcional.",
+          "price": 16.11,
+          "images": [
+            "/images/products/troia/troia-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 26,
+          "rating": 4.6,
+          "reviews": 224
+        }
+      ]
+    },
+    "troia-hair": {
+      "name": "Troia Hair",
+      "icon": "🎯",
+      "products": []
+    },
+    "truss": {
+      "name": "Truss",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "truss-truss-1",
+          "name": "Truss 1 - Truss",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Truss com qualidade excepcional.",
+          "price": 32.15,
+          "images": [
+            "/images/products/truss/truss-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 20,
+          "rating": 4.1,
+          "reviews": 95
+        },
+        {
+          "id": "truss-truss-2",
+          "name": "Truss 2 - Truss",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Truss com qualidade excepcional.",
+          "price": 22.79,
+          "images": [
+            "/images/products/truss/truss-2.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 44,
+          "rating": 4.3,
+          "reviews": 78
+        },
+        {
+          "id": "truss-truss-3",
+          "name": "Truss 3 - Truss",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Truss com qualidade excepcional.",
+          "price": 36.75,
+          "images": [
+            "/images/products/truss/truss-3.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 13,
+          "rating": 4.1,
+          "reviews": 218
+        },
+        {
+          "id": "truss-truss-4",
+          "name": "Truss 4 - Truss",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Truss com qualidade excepcional.",
+          "price": 41.69,
+          "images": [
+            "/images/products/truss/truss-4.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 24,
+          "rating": 4,
+          "reviews": 226
+        },
+        {
+          "id": "truss-truss-5",
+          "name": "Truss 5 - Truss",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Truss com qualidade excepcional.",
+          "price": 38.27,
+          "images": [
+            "/images/products/truss/truss-5.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 57,
+          "rating": 4.3,
+          "reviews": 63
+        },
+        {
+          "id": "truss-truss-6",
+          "name": "Truss 6 - Truss",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Truss com qualidade excepcional.",
+          "price": 41.84,
+          "images": [
+            "/images/products/truss/truss-6.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 51,
+          "rating": 4,
+          "reviews": 118
+        }
+      ]
+    },
+    "vogue": {
+      "name": "Vogue",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "vogue-vogue-1",
+          "name": "Vogue 1 - Vogue",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Vogue com qualidade excepcional.",
+          "price": 26.2,
+          "images": [
+            "/images/products/vogue/vogue-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 37,
+          "rating": 5,
+          "reviews": 241
+        },
+        {
+          "id": "vogue-vogue-2",
+          "name": "Vogue 2 - Vogue",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Vogue com qualidade excepcional.",
+          "price": 36.89,
+          "images": [
+            "/images/products/vogue/vogue-2.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 29,
+          "rating": 4.5,
+          "reviews": 226
+        },
+        {
+          "id": "vogue-vogue-3",
+          "name": "Vogue 3 - Vogue",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Vogue com qualidade excepcional.",
+          "price": 42.76,
+          "images": [
+            "/images/products/vogue/vogue-3.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 10,
+          "rating": 4.3,
+          "reviews": 73
+        },
+        {
+          "id": "vogue-vogue-4",
+          "name": "Vogue 4 - Vogue",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Vogue com qualidade excepcional.",
+          "price": 36.21,
+          "images": [
+            "/images/products/vogue/vogue-4.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 21,
+          "rating": 4.2,
+          "reviews": 168
+        }
+      ]
+    },
+    "zap": {
+      "name": "Zap",
+      "icon": "🎯",
+      "products": [
+        {
+          "id": "zap-zap-1",
+          "name": "Zap 1 - Zap",
+          "brand": "Premium Brand",
+          "description": "Produto premium da categoria Zap com qualidade excepcional.",
+          "price": 23.56,
+          "images": [
+            "/images/products/zap/zap-1.png"
+          ],
+          "features": [
+            "Qualidade Premium",
+            "Resultado Profissional",
+            "Fácil Aplicação",
+            "Duradouro"
+          ],
+          "stock": 52,
+          "rating": 4.5,
+          "reviews": 102
+        }
+      ]
+    },
+    "zap-all-time": {
+      "name": "Zap All Time",
+      "icon": "🎯",
+      "products": []
+    }
+  }
+}
