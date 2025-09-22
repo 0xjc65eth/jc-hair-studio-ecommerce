@@ -72,7 +72,7 @@ export function ProductStructuredData({ product }: { product: Product }) {
         '@type': 'Organization',
         name: 'JC Hair Studio\'s 62'
       },
-      priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+      priceValidUntil: '2025-12-31'
     },
     aggregateRating: product.reviews?.length ? {
       '@type': 'AggregateRating',

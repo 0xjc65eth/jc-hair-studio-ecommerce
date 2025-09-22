@@ -13,14 +13,14 @@ import {
   Share2,
   Zap
 } from 'lucide-react';
-import { Product } from '@/lib/store';
+import { ProductWithDetails as Product } from '@/types/product';
 import {
   useWishlistStore,
   useComparisonStore,
   useUserStore,
   useUIStore
 } from '@/lib/store';
-import { useCart } from '@/lib/stores/unifiedCartStore';
+import { useCart } from '@/lib/stores/cartStore';
 import { 
   formatCurrency, 
   calculateDiscountPercentage,
@@ -57,13 +57,6 @@ export function ProductCard({
   const isInComparisonState = isInComparison(product.id);
   const isProfessional = user?.isProProfessional;
   
-  const discountPercentage = product.compareAtPrice 
-    ? calculateDiscountPercentage(product.compareAtPrice, product.price)
-    : 0;
-    
-  const professionalPrice = isProfessional && showProfessionalPrice
-    ? calculateProfessionalPrice(product.price, user.discountPercentage)
-    : null;
   
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -76,8 +69,6 @@ export function ProductCard({
         name: product.name,
         slug: product.slug,
         brand: product.brand,
-        price: professionalPrice || product.price,
-        comparePrice: product.compareAtPrice,
         images: product.images?.map(img => ({ url: img, alt: product.name, isMain: true })) || [],
         category: product.category,
         weight: 0.1
@@ -234,11 +225,6 @@ export function ProductCard({
                 Esgotado
               </span>
             )}
-            {discountPercentage > 0 && (
-              <span className="bg-green-500 text-white text-xs px-2 py-1 rounded">
-                -{discountPercentage}%
-              </span>
-            )}
             {isProfessional && (
               <span className="bg-purple-500 text-white text-xs px-2 py-1 rounded flex items-center space-x-1">
                 <Zap className="w-3 h-3" />
@@ -357,31 +343,8 @@ export function ProductCard({
             </div>
           )}
           
-          {/* Price */}
-          <div className="flex items-center justify-between">
-            <div className="flex flex-col">
-              {product.compareAtPrice && (
-                <span className="text-sm text-gray-500 line-through">
-                  {formatCurrency(product.compareAtPrice)}
-                </span>
-              )}
-              
-              <div className="flex items-center space-x-2">
-                <span className={`font-bold text-gray-900 ${
-                  variant === 'compact' ? 'text-lg' : 'text-xl'
-                }`}>
-                  {formatCurrency(product.price)}
-                </span>
-                
-                {professionalPrice && (
-                  <span className="text-sm font-semibold text-purple-600">
-                    PRO: {formatCurrency(professionalPrice)}
-                  </span>
-                )}
-              </div>
-            </div>
-            
-            {/* Stock Status */}
+          {/* Stock Status */}
+          <div className="flex items-center justify-end">
             {!product.inStock && (
               <span className="text-xs text-red-500 font-medium">
                 Esgotado

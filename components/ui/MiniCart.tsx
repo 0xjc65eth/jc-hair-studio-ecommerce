@@ -13,7 +13,8 @@ import {
   Package,
   Sparkles
 } from 'lucide-react';
-import { useCartStore, useUserStore } from '@/lib/store';
+import { useCart } from '@/lib/stores/cartStore';
+import { useUserStore } from '@/lib/store';
 import { formatCurrency, getImageUrl, calculateProfessionalPrice } from '@/lib/utils';
 
 interface MiniCartProps {
@@ -29,7 +30,7 @@ export function MiniCart({ isOpen, onClose, className = '' }: MiniCartProps) {
     removeItem, 
     getTotalItems, 
     getTotalPrice 
-  } = useCartStore();
+  } = useCart();
   const { user } = useUserStore();
   
   const [isUpdating, setIsUpdating] = useState<Set<string>>(new Set());
@@ -394,7 +395,8 @@ interface MiniCartTriggerProps {
 }
 
 export function MiniCartTrigger({ onClick, className = '' }: MiniCartTriggerProps) {
-  const totalItems = useCartStore(state => state.getTotalItems());
+  const { getTotalItems } = useCart();
+  const totalItems = getTotalItems();
   
   return (
     <button

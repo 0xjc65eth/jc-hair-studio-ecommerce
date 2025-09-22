@@ -175,11 +175,12 @@ const UserSchema = new Schema<IUser>({
 });
 
 // Índices
-UserSchema.index({ email: 1 }, { unique: true });
-UserSchema.index({ cpf: 1 }, { unique: true, sparse: true });
-UserSchema.index({ type: 1 });
-UserSchema.index({ 'loyalty.tier': 1 });
-UserSchema.index({ isActive: 1 });
+// Índices removidos - já definidos no schema
+// UserSchema.index({ email: 1 }, { unique: true });
+// UserSchema.index({ cpf: 1 }, { unique: true, sparse: true });
+// UserSchema.index({ type: 1 });
+// UserSchema.index({ 'loyalty.tier': 1 });
+// UserSchema.index({ isActive: 1 });
 
 // Middleware para atualizar tier baseado no total gasto
 UserSchema.pre('save', function(next) {

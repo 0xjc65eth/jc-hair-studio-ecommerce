@@ -168,154 +168,6 @@ export class CartService {
   }
 
   /**
-   * Add item to cart
-   */
-  static async addToCart(
-    data: AddToCartData,
-    userId?: string,
-    sessionId?: string
-  ): Promise<CartItem> {
-    if (!userId && !sessionId) {
-      throw new Error('Either userId or sessionId is required');
-    }
-
-    const { productId, variantId, quantity } = data;
-
-    // Verify product exists and is available
-    const product = await getPrismaClient().product.findUnique({
-      where: { id: productId },
-      include: {
-        variants: {
-          where: { isActive: true }
-        },
-        images: {
-          where: { isMain: true },
-          take: 1
-        }
-      }
-    });
-
-    if (!product) {
-      throw new Error('Product not found');
-    }
-
-    if (product.status !== 'ACTIVE') {
-      throw new Error('Product is not available');
-    }
-
-    // Check variant if specified
-    let variant = null;
-    if (variantId) {
-      variant = product.variants.find(v => v.id === variantId);
-      if (!variant) {
-        throw new Error('Product variant not found');
-      }
-      if (!variant.isActive) {
-        throw new Error('Product variant is not available');
-      }
-    }
-
-    // Check stock availability
-    const availableStock = variant ? variant.quantity : product.quantity;
-    if (product.trackQuantity && availableStock < quantity) {
-      throw new Error(`Only ${availableStock} items available`);
-    }
-
-    // Check if item already exists in cart
-    const existingItem = await getPrismaClient().cartItem.findFirst({
-      where: {
-        AND: [
-          { productId },
-          variantId ? { variantId } : { variantId: null },
-          userId ? { userId } : { sessionId }
-        ]
-      }
-    });
-
-    let cartItem;
-
-    if (existingItem) {
-      // Update quantity
-      const newQuantity = existingItem.quantity + quantity;
-      
-      if (product.trackQuantity && availableStock < newQuantity) {
-        throw new Error(`Only ${availableStock} items available (you have ${existingItem.quantity} in cart)`);
-      }
-
-      cartItem = await getPrismaClient().cartItem.update({
-        where: { id: existingItem.id },
-        data: { quantity: newQuantity },
-        include: {
-          product: {
-            include: {
-              images: { where: { isMain: true }, take: 1 },
-              variants: { where: { isActive: true } }
-            }
-          }
-        }
-      });
-    } else {
-      // Create new cart item
-      cartItem = await getPrismaClient().cartItem.create({
-        data: {
-          productId,
-          variantId,
-          quantity,
-          userId,
-          sessionId
-        },
-        include: {
-          product: {
-            include: {
-              images: { where: { isMain: true }, take: 1 },
-              variants: { where: { isActive: true } }
-            }
-          }
-        }
-      });
-    }
-
-    // Format response
-    const selectedVariant = variantId 
-      ? cartItem.product.variants.find(v => v.id === variantId)
-      : undefined;
-
-    const price = selectedVariant?.price ? Number(selectedVariant.price) : Number(cartItem.product.price);
-    const subtotal = price * cartItem.quantity;
-
-    return {
-      id: cartItem.id,
-      productId: cartItem.productId,
-      variantId: cartItem.variantId || undefined,
-      quantity: cartItem.quantity,
-      product: {
-        id: cartItem.product.id,
-        name: cartItem.product.name,
-        slug: cartItem.product.slug,
-        price: Number(cartItem.product.price),
-        comparePrice: cartItem.product.comparePrice ? Number(cartItem.product.comparePrice) : undefined,
-        image: cartItem.product.images[0]?.url,
-        sku: cartItem.product.sku,
-        quantity: cartItem.product.quantity,
-        status: cartItem.product.status,
-        hairType: cartItem.product.hairType || undefined,
-        hairColor: cartItem.product.hairColor || undefined,
-        length: cartItem.product.length || undefined,
-      },
-      variant: selectedVariant ? {
-        id: selectedVariant.id,
-        name: selectedVariant.name,
-        sku: selectedVariant.sku,
-        price: selectedVariant.price ? Number(selectedVariant.price) : undefined,
-        size: selectedVariant.size || undefined,
-        color: selectedVariant.color || undefined,
-        quantity: selectedVariant.quantity,
-      } : undefined,
-      subtotal
-    };
-  }
-
-  /**
    * Update cart item quantity
    */
   static async updateCartItem(
@@ -427,51 +279,6 @@ export class CartService {
       } : undefined,
       subtotal
     };
-  }
-
-  /**
-   * Remove item from cart
-   */
-  static async removeFromCart(
-    cartItemId: string,
-    userId?: string,
-    sessionId?: string
-  ): Promise<void> {
-    if (!userId && !sessionId) {
-      throw new Error('Either userId or sessionId is required');
-    }
-
-    const deleted = await getPrismaClient().cartItem.deleteMany({
-      where: {
-        id: cartItemId,
-        OR: [
-          userId ? { userId } : {},
-          sessionId ? { sessionId } : {}
-        ].filter(Boolean)
-      }
-    });
-
-    if (deleted.count === 0) {
-      throw new Error('Cart item not found');
-    }
-  }
-
-  /**
-   * Clear entire cart
-   */
-  static async clearCart(userId?: string, sessionId?: string): Promise<void> {
-    if (!userId && !sessionId) {
-      throw new Error('Either userId or sessionId is required');
-    }
-
-    await getPrismaClient().cartItem.deleteMany({
-      where: {
-        OR: [
-          userId ? { userId } : {},
-          sessionId ? { sessionId } : {}
-        ].filter(Boolean)
-      }
-    });
   }
 
   /**
@@ -589,6 +396,352 @@ export class CartService {
       discount: Math.round(discount * 100) / 100,
       message: `Coupon "${coupon.name}" applied successfully`
     };
+  }
+
+  /**
+   * Get cart summary (alias for getCart for API compatibility)
+   */
+  static async getCartSummary(userOrSessionId: string): Promise<CartSummary> {
+    // Check if it's a MongoDB ObjectId (user ID) or session ID
+    const isUserId = userOrSessionId.length === 24 && /^[0-9a-fA-F]+$/.test(userOrSessionId);
+
+    if (isUserId) {
+      return this.getCart(userOrSessionId, undefined);
+    } else {
+      return this.getCart(undefined, userOrSessionId);
+    }
+  }
+
+  /**
+   * Add to cart (simplified interface for API)
+   */
+  static async addToCart(data: {
+    userId: string | null;
+    sessionId: string;
+    productId: string;
+    variantId?: string;
+    quantity: number;
+    customization?: any;
+  }): Promise<{ success: boolean; message: string; item?: CartItem }> {
+    try {
+      const item = await this.addToCartItem(
+        { productId: data.productId, variantId: data.variantId, quantity: data.quantity },
+        data.userId || undefined,
+        data.sessionId
+      );
+
+      return {
+        success: true,
+        message: 'Item added to cart successfully',
+        item
+      };
+    } catch (error: any) {
+      return {
+        success: false,
+        message: error.message || 'Failed to add item to cart'
+      };
+    }
+  }
+
+  /**
+   * Add item to cart (renamed to avoid conflict)
+   */
+  static async addToCartItem(
+    data: AddToCartData,
+    userId?: string,
+    sessionId?: string
+  ): Promise<CartItem> {
+    // Original addToCart implementation
+    if (!userId && !sessionId) {
+      throw new Error('Either userId or sessionId is required');
+    }
+
+    const { productId, variantId, quantity } = data;
+
+    // Rest of the original addToCart code...
+    // (keeping the existing implementation from line 185-316)
+    const product = await getPrismaClient().product.findUnique({
+      where: { id: productId },
+      include: {
+        variants: {
+          where: { isActive: true }
+        },
+        images: {
+          where: { isMain: true },
+          take: 1
+        }
+      }
+    });
+
+    if (!product) {
+      throw new Error('Product not found');
+    }
+
+    if (product.status !== 'ACTIVE') {
+      throw new Error('Product is not available');
+    }
+
+    let variant = null;
+    if (variantId) {
+      variant = product.variants.find(v => v.id === variantId);
+      if (!variant) {
+        throw new Error('Product variant not found');
+      }
+      if (!variant.isActive) {
+        throw new Error('Product variant is not available');
+      }
+    }
+
+    const availableStock = variant ? variant.quantity : product.quantity;
+    if (product.trackQuantity && availableStock < quantity) {
+      throw new Error(`Only ${availableStock} items available`);
+    }
+
+    const existingItem = await getPrismaClient().cartItem.findFirst({
+      where: {
+        AND: [
+          { productId },
+          variantId ? { variantId } : { variantId: null },
+          userId ? { userId } : { sessionId }
+        ]
+      }
+    });
+
+    let cartItem;
+
+    if (existingItem) {
+      const newQuantity = existingItem.quantity + quantity;
+
+      if (product.trackQuantity && availableStock < newQuantity) {
+        throw new Error(`Only ${availableStock} items available (you have ${existingItem.quantity} in cart)`);
+      }
+
+      cartItem = await getPrismaClient().cartItem.update({
+        where: { id: existingItem.id },
+        data: { quantity: newQuantity },
+        include: {
+          product: {
+            include: {
+              images: { where: { isMain: true }, take: 1 },
+              variants: { where: { isActive: true } }
+            }
+          }
+        }
+      });
+    } else {
+      cartItem = await getPrismaClient().cartItem.create({
+        data: {
+          productId,
+          variantId,
+          quantity,
+          userId,
+          sessionId
+        },
+        include: {
+          product: {
+            include: {
+              images: { where: { isMain: true }, take: 1 },
+              variants: { where: { isActive: true } }
+            }
+          }
+        }
+      });
+    }
+
+    const selectedVariant = variantId
+      ? cartItem.product.variants.find(v => v.id === variantId)
+      : undefined;
+
+    const price = selectedVariant?.price ? Number(selectedVariant.price) : Number(cartItem.product.price);
+    const subtotal = price * cartItem.quantity;
+
+    return {
+      id: cartItem.id,
+      productId: cartItem.productId,
+      variantId: cartItem.variantId || undefined,
+      quantity: cartItem.quantity,
+      product: {
+        id: cartItem.product.id,
+        name: cartItem.product.name,
+        slug: cartItem.product.slug,
+        price: Number(cartItem.product.price),
+        comparePrice: cartItem.product.comparePrice ? Number(cartItem.product.comparePrice) : undefined,
+        image: cartItem.product.images[0]?.url,
+        sku: cartItem.product.sku,
+        quantity: cartItem.product.quantity,
+        status: cartItem.product.status,
+        hairType: cartItem.product.hairType || undefined,
+        hairColor: cartItem.product.hairColor || undefined,
+        length: cartItem.product.length || undefined,
+      },
+      variant: selectedVariant ? {
+        id: selectedVariant.id,
+        name: selectedVariant.name,
+        sku: selectedVariant.sku,
+        price: selectedVariant.price ? Number(selectedVariant.price) : undefined,
+        size: selectedVariant.size || undefined,
+        color: selectedVariant.color || undefined,
+        quantity: selectedVariant.quantity,
+      } : undefined,
+      subtotal
+    };
+  }
+
+  /**
+   * Remove from cart (simplified interface for API)
+   */
+  static async removeFromCart(
+    userOrSessionId: string,
+    productId: string,
+    variantId?: string
+  ): Promise<{ success: boolean; message: string }> {
+    try {
+      const isUserId = userOrSessionId.length === 24 && /^[0-9a-fA-F]+$/.test(userOrSessionId);
+
+      const cartItem = await getPrismaClient().cartItem.findFirst({
+        where: {
+          productId,
+          variantId: variantId || null,
+          OR: [
+            isUserId ? { userId: userOrSessionId } : {},
+            !isUserId ? { sessionId: userOrSessionId } : {}
+          ].filter(Boolean)
+        }
+      });
+
+      if (cartItem) {
+        await this.removeFromCartById(
+          cartItem.id,
+          isUserId ? userOrSessionId : undefined,
+          !isUserId ? userOrSessionId : undefined
+        );
+      }
+
+      return {
+        success: true,
+        message: 'Item removed from cart'
+      };
+    } catch (error: any) {
+      return {
+        success: false,
+        message: error.message || 'Failed to remove item'
+      };
+    }
+  }
+
+  /**
+   * Update cart item quantity (simplified interface for API)
+   */
+  static async updateCartItemQuantity(
+    userOrSessionId: string,
+    productId: string,
+    quantity: number,
+    variantId?: string
+  ): Promise<{ success: boolean; message: string }> {
+    try {
+      const isUserId = userOrSessionId.length === 24 && /^[0-9a-fA-F]+$/.test(userOrSessionId);
+
+      const cartItem = await getPrismaClient().cartItem.findFirst({
+        where: {
+          productId,
+          variantId: variantId || null,
+          OR: [
+            isUserId ? { userId: userOrSessionId } : {},
+            !isUserId ? { sessionId: userOrSessionId } : {}
+          ].filter(Boolean)
+        }
+      });
+
+      if (!cartItem) {
+        throw new Error('Cart item not found');
+      }
+
+      await this.updateCartItem(
+        cartItem.id,
+        quantity,
+        isUserId ? userOrSessionId : undefined,
+        !isUserId ? userOrSessionId : undefined
+      );
+
+      return {
+        success: true,
+        message: 'Cart item updated'
+      };
+    } catch (error: any) {
+      return {
+        success: false,
+        message: error.message || 'Failed to update cart item'
+      };
+    }
+  }
+
+  /**
+   * Clear cart (simplified interface for API)
+   */
+  static async clearCart(userOrSessionId: string): Promise<{ success: boolean; message: string }> {
+    try {
+      const isUserId = userOrSessionId.length === 24 && /^[0-9a-fA-F]+$/.test(userOrSessionId);
+
+      await this.clearUserCart(
+        isUserId ? userOrSessionId : undefined,
+        !isUserId ? userOrSessionId : undefined
+      );
+
+      return {
+        success: true,
+        message: 'Cart cleared successfully'
+      };
+    } catch (error: any) {
+      return {
+        success: false,
+        message: error.message || 'Failed to clear cart'
+      };
+    }
+  }
+
+  /**
+   * Remove item from cart by ID (renamed from removeFromCart)
+   */
+  static async removeFromCartById(
+    cartItemId: string,
+    userId?: string,
+    sessionId?: string
+  ): Promise<void> {
+    if (!userId && !sessionId) {
+      throw new Error('Either userId or sessionId is required');
+    }
+
+    const deleted = await getPrismaClient().cartItem.deleteMany({
+      where: {
+        id: cartItemId,
+        OR: [
+          userId ? { userId } : {},
+          sessionId ? { sessionId } : {}
+        ].filter(Boolean)
+      }
+    });
+
+    if (deleted.count === 0) {
+      throw new Error('Cart item not found');
+    }
+  }
+
+  /**
+   * Clear entire user cart (renamed from clearCart)
+   */
+  static async clearUserCart(userId?: string, sessionId?: string): Promise<void> {
+    if (!userId && !sessionId) {
+      throw new Error('Either userId or sessionId is required');
+    }
+
+    await getPrismaClient().cartItem.deleteMany({
+      where: {
+        OR: [
+          userId ? { userId } : {},
+          sessionId ? { sessionId } : {}
+        ].filter(Boolean)
+      }
+    });
   }
 
   /**

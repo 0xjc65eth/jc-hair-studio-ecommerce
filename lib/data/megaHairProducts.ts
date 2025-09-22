@@ -674,23 +674,57 @@ export function searchProducts(query: string): MegaHairProduct[] {
 
 // Função para compatibilidade com interface antiga do mega-hair/page.tsx
 export function getLegacyCompatibleProducts() {
-  const catalog = generateUnifiedCatalog();
+  // Gerar produtos usando as 76 imagens mega-hair únicas disponíveis
+  const products = [];
 
-  return catalog.map((product, index) => ({
-    id: index + 1,
-    name: product.name,
-    type: product.type!,
-    color: product.color!,
-    length: product.length,
-    price: product.price,
-    image: product.image!,
-    badge: product.badge,
-    rating: product.rating,
-    reviews: product.reviews,
-    inStock: product.inStock,
-    origin: product.originCountry,
-    weight: product.weight
-  }));
+  // Base de cores e tipos para variar os produtos
+  const colors = [
+    { name: 'Loiro Platinado', code: '#613', category: 'loiro' },
+    { name: 'Castanho Natural', code: '#1', category: 'castanho' },
+    { name: 'Preto Natural', code: '#3', category: 'preto' },
+    { name: 'Ruivo Natural', code: '#16', category: 'ruivo' },
+    { name: 'Mel Dourado', code: '#27', category: 'loiro' },
+    { name: 'Castanho Médio', code: '#4', category: 'castanho' },
+    { name: 'Castanho Escuro', code: '#2', category: 'castanho' },
+    { name: 'Loiro Médio', code: '#22', category: 'loiro' }
+  ];
+
+  const types = ['liso', 'ondulado', 'cacheado'];
+  const lengths = [35, 40, 45, 50, 55, 60, 65, 70];
+
+  // Gerar produtos para as 76 imagens únicas disponíveis (evitando duplicatas)
+  for (let i = 1; i <= 76; i++) {
+    // Usar formato com zero padding que existe
+    const imageNumber = String(i).padStart(3, '0');
+    const color = colors[(i - 1) % colors.length];
+    const type = types[(i - 1) % types.length];
+    const length = lengths[(i - 1) % lengths.length];
+
+    // Preços baseados no comprimento e tipo
+    const basePrice = 50 + (length - 35) * 2;
+    const typeMultiplier = type === 'liso' ? 1 : type === 'ondulado' ? 1.1 : 1.2;
+    const price = Math.round(basePrice * typeMultiplier);
+
+    products.push({
+      id: `mega-hair-${imageNumber}`,
+      name: `Mega Hair ${type.charAt(0).toUpperCase() + type.slice(1)} ${color.name} - ${length}cm`,
+      description: `Extensão de cabelo ${type} ${color.name.toLowerCase()} com ${length}cm de comprimento. Cabelo 100% humano de alta qualidade, ideal para volume e comprimento natural.`,
+      price,
+      image: `/images/mega-hair/mega-hair-${imageNumber}.jpg`,
+      type,
+      color: color.category,
+      length,
+      weight: Math.round(length * 1.5),
+      inStock: true,
+      rating: 4.2 + Math.random() * 0.8,
+      reviews: Math.floor(Math.random() * 50) + 10,
+      featured: i <= 15, // Primeiros 15 como destaque
+      new: i > 65, // Últimos 11 como novos
+      badge: i <= 8 ? 'Mais Vendido' : i > 68 ? 'Novo' : undefined
+    });
+  }
+
+  return products;
 }
 
 // Exportar catálogo completo como default

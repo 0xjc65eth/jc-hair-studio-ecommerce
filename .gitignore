@@ -4,6 +4,7 @@ node_modules
 .env
 .env.local
 .env.production
+.env.*
 
 # Build outputs
 .next/
@@ -49,3 +50,40 @@ ehthumbs.db
 
 # Prisma
 /lib/generated/prisma
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+temp/
+temp_*
+*.tmp
+analyze_*.sh
+consolidate_*.sh
+master_analyzer.sh
+organize_*.sh
+
+# Test files in root
+test-*.js
+test_*.js
+debug_*.js
+
+# Backup files
+*.backup
+*.bak
+backup-*
+
+# Python files
+*.py
+__pycache__/
+
+# Build info files
+*.tsbuildinfo
+build.log
+
+# Downloaded/processed files
+*_converted.csv
+*_converted.json
+download_*.txt
+drive_urls_*

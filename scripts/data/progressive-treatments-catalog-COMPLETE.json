@@ -1,0 +1,492 @@
+{
+  "progressivas": {
+    "name": "Tratamentos Progressivos Diversos",
+    "icon": "⚡",
+    "products": [
+      {
+        "id": "cocochoco-professional-original",
+        "name": "CocoCHOCO Professional Original Premium Keratin Treatment",
+        "brand": "CocoCHOCO",
+        "description": "Tratamento premium de queratina brasileira com chocolate para alisamento e brilho profissionais. Fórmula livre de formaldeído para resultados seguros e duradouros.",
+        "price_brl": 320.00,
+        "price_eur": 61.32,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_1.JPG"
+        ],
+        "colors": ["Marrom"],
+        "features": [
+          "Queratina Brasileira",
+          "Premium Treatment",
+          "Livre de Formaldeído",
+          "Resultado Profissional",
+          "Chocolate Hair Care",
+          "1000ml Professional"
+        ],
+        "stock": 15,
+        "rating": 4.9,
+        "reviews": 347
+      },
+      {
+        "id": "cocochoco-professional-gold",
+        "name": "CocoCHOCO Professional Gold Extra Shine",
+        "brand": "CocoCHOCO",
+        "description": "Tratamento premium de queratina dourado com brilho extra. Enriquecido com ouro 24k para máximo brilho e suavidade, ideal para resultados profissionais.",
+        "price_brl": 380.00,
+        "price_eur": 71.84,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_2.JPG",
+          "/images/products/progressivas_diversas/progressivas_diversas_4.JPG"
+        ],
+        "colors": ["Dourado"],
+        "features": [
+          "Ouro 24k",
+          "Extra Shine",
+          "Premium Keratin",
+          "Brilho Máximo",
+          "250ml + 1000ml",
+          "Uso Profissional"
+        ],
+        "stock": 12,
+        "rating": 4.8,
+        "reviews": 289
+      },
+      {
+        "id": "tzaha-diamante-total-liss",
+        "name": "T'ZAHA Diamante Total Liss Therapy 3D",
+        "brand": "T'ZAHA",
+        "description": "Kit completo de terapia capilar 3D com shampoo e gloss. Tratamento sem formol com tecnologia Diamante para alisamento e brilho intenso.",
+        "price_brl": 180.50,
+        "price_eur": 35.64,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_3.JPG"
+        ],
+        "colors": ["Preto/Dourado"],
+        "features": [
+          "Therapy 3D",
+          "Kit Shampoo + Gloss",
+          "Sem Formol",
+          "Tecnologia Diamante",
+          "Alisamento Intenso",
+          "Brilho Profissional"
+        ],
+        "stock": 28,
+        "rating": 4.7,
+        "reviews": 156
+      },
+      {
+        "id": "brazilicious-honey-therapy-3-steps",
+        "name": "Brazilicious Honey Therapy 3 Steps Treatment",
+        "brand": "Brazilicious",
+        "description": "Sistema completo de 3 etapas com mel do Iêmen, óleo de oliva e manteiga de murumuru. Enriquecido com provitaminas A, B e D12 para nutrição profunda.",
+        "price_brl": 385.00,
+        "price_eur": 72.77,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_5.JPG"
+        ],
+        "colors": ["Preto/Dourado"],
+        "features": [
+          "3 Steps System",
+          "Mel do Iêmen",
+          "Óleo de Oliva",
+          "Manteiga Murumuru",
+          "Provitaminas A, B, D12",
+          "100ml x 3"
+        ],
+        "stock": 18,
+        "rating": 4.9,
+        "reviews": 423
+      },
+      {
+        "id": "la-grace-alinhamento-capilar",
+        "name": "La Grace Alinhamento Capilar Condicionador Termoativado",
+        "brand": "La Grace",
+        "description": "Condicionador termoativado para alinhamento capilar profundo. Restauração dos fios danificados com tecnologia de recuperação e hidratação intensiva.",
+        "price_brl": 145.90,
+        "price_eur": 29.15,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_6.JPG"
+        ],
+        "colors": ["Preto"],
+        "features": [
+          "Termoativado",
+          "Alinhamento Capilar",
+          "Restauração Profunda",
+          "Para Fios Danificados",
+          "Hidratação Intensiva",
+          "1L Professional"
+        ],
+        "stock": 31,
+        "rating": 4.6,
+        "reviews": 198
+      },
+      {
+        "id": "amazon-oil-one-step-kit",
+        "name": "Amazon Oil One Step Zero Complex Kit",
+        "brand": "Amazon Oil",
+        "description": "Kit de tratamento em uma única etapa com óleo de açaí e buriti. Fórmula orgânica sem químicas agressivas para alisamento natural e hidratação.",
+        "price_brl": 220.00,
+        "price_eur": 42.50,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_7.PNG"
+        ],
+        "colors": ["Verde"],
+        "features": [
+          "One Step",
+          "Zero Complex",
+          "Óleo de Açaí",
+          "Óleo de Buriti",
+          "Fórmula Orgânica",
+          "Kit Duplo 1L"
+        ],
+        "stock": 24,
+        "rating": 4.7,
+        "reviews": 267
+      },
+      {
+        "id": "prohall-burix-one-molecular",
+        "name": "Prohall Burix One Reestruturação Molecular",
+        "brand": "Prohall",
+        "description": "Máscara de tratamento e realinhamento capilar com sistema Lumini. Óleo de buriti, biotina e ácido tânico para reconstrução molecular profunda.",
+        "price_brl": 165.80,
+        "price_eur": 32.45,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_8.PNG"
+        ],
+        "colors": ["Marrom/Verde"],
+        "features": [
+          "Reestruturação Molecular",
+          "Sistema Lumini",
+          "Óleo de Buriti",
+          "Biotina",
+          "Ácido Tânico",
+          "1L Professional"
+        ],
+        "stock": 19,
+        "rating": 4.8,
+        "reviews": 145
+      },
+      {
+        "id": "plastica-dos-fios-sem-plastic-surprise",
+        "name": "Plástica dos Fios Sem Plastic Surprise 3 Steps",
+        "brand": "Plástica dos Fios",
+        "description": "Sistema completo de 3 etapas para plástica capilar sem formol. Cabelos disciplinados e escovados com tecnologia limpeza profunda e selagem térmica.",
+        "price_brl": 195.50,
+        "price_eur": 38.55,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_9.png"
+        ],
+        "colors": ["Roxo"],
+        "features": [
+          "3 Steps System",
+          "Sem Formol",
+          "Plástica Capilar",
+          "Limpeza Profunda",
+          "Selagem Térmica",
+          "300ml x 3"
+        ],
+        "stock": 26,
+        "rating": 4.6,
+        "reviews": 234
+      },
+      {
+        "id": "i-belo-capelo-torrano-nanoplastia",
+        "name": "I Belo Capelo Torrano Nanoplastia Organic Liquid",
+        "brand": "I Belo Capelo",
+        "description": "Nanoplastia orgânica líquida com proteínas, ácido hialurônico e óleo vegetal. Fórmula orgânica para alisamento natural sem agressão aos fios.",
+        "price_brl": 210.00,
+        "price_eur": 40.73,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_10.png"
+        ],
+        "colors": ["Azul"],
+        "features": [
+          "Nanoplastia Orgânica",
+          "Proteínas",
+          "Ácido Hialurônico",
+          "Óleo Vegetal",
+          "Organic Liquid",
+          "530ml Professional"
+        ],
+        "stock": 22,
+        "rating": 4.7,
+        "reviews": 178
+      },
+      {
+        "id": "probelle-extreme-expert-kit",
+        "name": "Probelle EXTREME Expert Kit Professional",
+        "brand": "Probelle",
+        "description": "Kit profissional de alisamento extremo com tecnologia avançada. Fórmula exclusiva para cabelos resistentes com proteínas e queratina hidrolisada.",
+        "price_brl": 186.55,
+        "price_eur": 36.62,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_11.JPG"
+        ],
+        "colors": ["Branco/Dourado"],
+        "features": [
+          "Alisamento Extremo",
+          "Kit Professional",
+          "Tecnologia Avançada",
+          "Para Cabelos Resistentes",
+          "Proteínas + Queratina",
+          "1000ml Kit"
+        ],
+        "stock": 14,
+        "rating": 4.8,
+        "reviews": 198
+      },
+      {
+        "id": "nuance-liso-perfect-escova",
+        "name": "Nuance Liso Perfect Escova Progressiva",
+        "brand": "Nuance",
+        "description": "Escova progressiva orgânica brasileira com queratina e D'pantenol. Fórmula com ácidos frutados para alisamento e maciez duradoura sem danos aos fios.",
+        "price_brl": 95.90,
+        "price_eur": 20.23,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_12.PNG"
+        ],
+        "colors": ["Rosa"],
+        "features": [
+          "Escova Orgânica",
+          "Queratina + D'pantenol",
+          "Ácidos Frutados",
+          "Alisamento Natural",
+          "Maciez Duradoura",
+          "1000ml"
+        ],
+        "stock": 32,
+        "rating": 4.4,
+        "reviews": 167
+      },
+      {
+        "id": "forever-liss-definitiva-shampoo-gloss",
+        "name": "Forever Liss Definitiva Professional Shampoo + Gloss Premium",
+        "brand": "Forever Liss",
+        "description": "Sistema definitivo profissional com shampoo clarifying e gloss premium. Tecnologia advanced para alisamento duradouro e brilho intenso com proteínas.",
+        "price_brl": 142.80,
+        "price_eur": 28.85,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_13.png"
+        ],
+        "colors": ["Branco"],
+        "features": [
+          "Sistema Definitivo",
+          "Shampoo Clarifying",
+          "Gloss Premium",
+          "Tecnologia Advanced",
+          "Alisamento Duradouro",
+          "1000ml Duplo"
+        ],
+        "stock": 21,
+        "rating": 4.6,
+        "reviews": 234
+      },
+      {
+        "id": "inya-keratin-smooth-treatment",
+        "name": "Inya Professional Keratin Smooth Clarifying + Treatment",
+        "brand": "Inya",
+        "description": "Kit profissional de queratina smooth com shampoo clarifying e smoothing treatment. Sistema 2 steps para alisamento profissional com proteção térmica.",
+        "price_brl": 158.90,
+        "price_eur": 31.34,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_14.png"
+        ],
+        "colors": ["Azul/Rosa"],
+        "features": [
+          "Keratin Smooth",
+          "2 Steps System",
+          "Shampoo Clarifying",
+          "Smoothing Treatment",
+          "Proteção Térmica",
+          "1000ml Kit"
+        ],
+        "stock": 18,
+        "rating": 4.5,
+        "reviews": 189
+      },
+      {
+        "id": "ft-cosmetics-tratamento-avancado",
+        "name": "FT Cosmetics Tratamento Avançado 2 Steps",
+        "brand": "FT Cosmetics",
+        "description": "Sistema avançado de 2 etapas com shampoo antirresíduos e tratamento com complexo de vitaminas e aminoácidos. Para uso profissional exclusivo.",
+        "price_brl": 175.90,
+        "price_eur": 34.62,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_15.PNG"
+        ],
+        "colors": ["Prateado/Roxo"],
+        "features": [
+          "2 Steps System",
+          "Shampoo Antirresíduos",
+          "Complexo Vitaminas",
+          "Aminoácidos",
+          "Uso Profissional",
+          "Kit 1L Duplo"
+        ],
+        "stock": 29,
+        "rating": 4.5,
+        "reviews": 167
+      },
+      {
+        "id": "roffer-ultra-liss-effect",
+        "name": "Roffer Ultra Liss Effect Escova Progressiva Professional",
+        "brand": "Roffer",
+        "description": "Escova progressiva profissional Ultra Liss Effect com tecnologia cabelo lambido 100%. Fórmula avançada para alisamento extremo e brilho espelhado.",
+        "price_brl": 186.55,
+        "price_eur": 36.62,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_16.png"
+        ],
+        "colors": ["Preto/Dourado"],
+        "features": [
+          "Ultra Liss Effect",
+          "Cabelo Lambido 100%",
+          "Alisamento Extremo",
+          "Brilho Espelhado",
+          "Tecnologia Avançada",
+          "1L Professional"
+        ],
+        "stock": 16,
+        "rating": 4.7,
+        "reviews": 145
+      },
+      {
+        "id": "luxury-professional-superliss-kit",
+        "name": "Luxury Professional SuperLiss Shampoo + Máscara Restore",
+        "brand": "Luxury Professional",
+        "description": "Kit profissional SuperLiss com shampoo tratamento e máscara restore. Revitalização dos fios danificados com brilho intenso e movimento natural.",
+        "price_brl": 128.50,
+        "price_eur": 25.82,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_17.PNG"
+        ],
+        "colors": ["Branco/Marrom"],
+        "features": [
+          "Kit SuperLiss",
+          "Shampoo Tratamento",
+          "Máscara Restore",
+          "Revitalização",
+          "Brilho Intenso",
+          "1L Kit Duplo"
+        ],
+        "stock": 24,
+        "rating": 4.4,
+        "reviews": 178
+      },
+      {
+        "id": "cadiveu-brasil-cacau-eco-keratin",
+        "name": "Cadiveu Brasil Cacau Eco Keratin Professional",
+        "brand": "Cadiveu",
+        "description": "Tratamento de queratina brasileira nº1 no Brasil com fórmula eco keratin. Alisamento orgânico livre de formol para todos os tipos de cabelo.",
+        "price_brl": 298.50,
+        "price_eur": 57.23,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_18.png"
+        ],
+        "colors": ["Bronze"],
+        "features": [
+          "Nº1 no Brasil",
+          "Eco Keratin",
+          "Orgânico Livre Formol",
+          "Todos Tipos Cabelo",
+          "Queratina Brasileira",
+          "110ml x 3"
+        ],
+        "stock": 13,
+        "rating": 4.9,
+        "reviews": 356
+      },
+      {
+        "id": "richee-bioplastica-capilar-kit",
+        "name": "Richée Bioplástica Capilar Kit Professional",
+        "brand": "Richée",
+        "description": "Kit de bioplástica capilar com shampoo antirresíduo e ativo antifrizz. Tratamento orgânico que promove liso natural com selagem molecular.",
+        "price_brl": 135.90,
+        "price_eur": 27.22,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_19.png"
+        ],
+        "colors": ["Branco/Roxo"],
+        "features": [
+          "Bioplástica Capilar",
+          "Shampoo Antirresíduo",
+          "Ativo Antifrizz",
+          "Tratamento Orgânico",
+          "Liso Natural",
+          "1L Kit"
+        ],
+        "stock": 27,
+        "rating": 4.6,
+        "reviews": 203
+      },
+      {
+        "id": "bonequinha-anti-residuos-mascara",
+        "name": "Bonequinha Kit Shampoo Anti-Resíduos + Máscara Capilar",
+        "brand": "Bonequinha",
+        "description": "Kit profissional com shampoo anti-resíduos e máscara capilar hidratante. Fórmula com queratina hidrolisada para tratamento intensivo e preservação da integridade dos fios.",
+        "price_brl": 155.00,
+        "price_eur": 30.73,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_20.png"
+        ],
+        "colors": ["Azul/Rosa"],
+        "features": [
+          "Kit Shampoo + Máscara",
+          "Anti-Resíduos",
+          "Queratina Hidrolisada",
+          "Tratamento Intensivo",
+          "Preserva Integridade",
+          "1000ml x 2"
+        ],
+        "stock": 33,
+        "rating": 4.4,
+        "reviews": 312
+      },
+      {
+        "id": "maria-escandalosa-shampoo-mascara",
+        "name": "Maria Escandalosa Kit Shampoo + Máscara Escova Progressiva",
+        "brand": "Maria Escandalosa",
+        "description": "Kit escova progressiva com shampoo e máscara capilar termoativada. Fórmula brasileira para alisamento natural com movimento e brilho intenso.",
+        "price_brl": 118.90,
+        "price_eur": 24.27,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_21.JPG"
+        ],
+        "colors": ["Azul/Rosa"],
+        "features": [
+          "Kit Brasileiro",
+          "Shampoo + Máscara",
+          "Termoativada",
+          "Alisamento Natural",
+          "Movimento e Brilho",
+          "1000ml Kit"
+        ],
+        "stock": 29,
+        "rating": 4.3,
+        "reviews": 245
+      },
+      {
+        "id": "empodera-perfect-liss-kit",
+        "name": "Empodera Perfect Liss Kit Realinhamento + Hidratação",
+        "brand": "Empodera",
+        "description": "Kit Perfect Liss com shampoo antirresíduo e tratamento orgânico. Ação antifrizz e nutrição para realinhamento capilar com efeito detox e hidratação.",
+        "price_brl": 142.50,
+        "price_eur": 28.79,
+        "images": [
+          "/images/products/progressivas_diversas/progressivas_diversas_22.JPG"
+        ],
+        "colors": ["Branco/Rosa"],
+        "features": [
+          "Perfect Liss",
+          "Realinhamento + Hidratação",
+          "Ação Antifrizz",
+          "Efeito Detox",
+          "Tratamento Orgânico",
+          "1L Kit"
+        ],
+        "stock": 22,
+        "rating": 4.5,
+        "reviews": 189
+      }
+    ]
+  }
+}

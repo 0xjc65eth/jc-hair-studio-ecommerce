@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, Heart, Share2, ShoppingBag, Star, Truck, Shield, RotateCcw, Award } from 'lucide-react';
-import { products } from '../../../src/data/products';
+import { useProductData } from '../../../lib/hooks/useProductData';
 import ImageCarousel from '../../../components/products/ImageCarousel';
 
 export default function ProductDetailPage() {
@@ -13,8 +13,9 @@ export default function ProductDetailPage() {
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
   const [selectedVariant, setSelectedVariant] = useState(0);
-  
-  const product = products.find(p => p.id === params.id);
+
+  const { getProductById, getAllProducts } = useProductData();
+  const product = getProductById(params.id as string);
 
   if (!product) {
     return (
@@ -74,11 +75,11 @@ export default function ProductDetailPage() {
             <span className="text-gray-400">/</span>
             <Link href="/produtos" className="text-gray-500 hover:text-gray-700">Produtos</Link>
             <span className="text-gray-400">/</span>
-            <Link href={`/categoria/${product.subcategoria.toLowerCase().replace(/\s+/g, '-')}`} className="text-gray-500 hover:text-gray-700">
-              {product.subcategoria}
+            <Link href={`/categoria/${product.category?.toLowerCase().replace(/\s+/g, '-') || 'produto'}`} className="text-gray-500 hover:text-gray-700">
+              {product.category || 'Produto'}
             </Link>
             <span className="text-gray-400">/</span>
-            <span className="text-gray-900 font-medium">{product.nome}</span>
+            <span className="text-gray-900 font-medium">{product.name}</span>
           </div>
         </div>
       </div>
@@ -89,23 +90,23 @@ export default function ProductDetailPage() {
           <div className="space-y-4">
             <div className="aspect-square bg-gray-50 rounded-xl overflow-hidden">
               <ImageCarousel
-                images={product.imagens}
-                productName={product.nome}
+                images={product.images || ['/placeholder-product.jpg']}
+                productName={product.name}
                 className="w-full h-full"
               />
             </div>
             
             {/* Miniaturas */}
-            {product.imagens.length > 1 && (
+            {product.images && product.images.length > 1 && (
               <div className="flex gap-2 overflow-x-auto pb-2">
-                {product.imagens.map((image, index) => (
+                {product.images.map((image, index) => (
                   <button
                     key={index}
                     className="flex-shrink-0 w-16 h-16 bg-gray-50 rounded-lg overflow-hidden border-2 border-transparent hover:border-amber-500 transition-colors"
                   >
                     <Image
                       src={image}
-                      alt={`${product.nome} - ${index + 1}`}
+                      alt={`${product.name} - ${index + 1}`}
                       width={64}
                       height={64}
                       className="w-full h-full object-cover"
@@ -152,7 +153,6 @@ export default function ProductDetailPage() {
                   €{product.preco_eur.toFixed(2)}
                 </span>
                 <span className="text-lg text-gray-500">
-                  (R$ {product.preco_brl.toFixed(2)})
                 </span>
               </div>
               <p className="text-sm text-gray-600">

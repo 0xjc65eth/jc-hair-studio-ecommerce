@@ -40,7 +40,7 @@ export default function CategoryPage() {
   const categoryProducts = products.filter(product => {
     const matchesCategory = product.subcategoria === categoryName ||
                            (params.slug === 'tratamentos-capilares' && [
-                             'Reconstrução', 'Hidratação Profunda', 'Nutrição', 
+                             'Reconstrução', 'Hidratação Profunda', 'Nutrição',
                              'Cauterização', 'Cronograma Capilar', 'Antiqueda',
                              'Matizadores', 'Tratamentos Especiais', 'BTX/Botox Capilar'
                            ].includes(product.subcategoria)) ||
@@ -48,20 +48,21 @@ export default function CategoryPage() {
                              'Progressivas com Formol', 'Progressivas sem Formol', 'Progressivas Premium'
                            ].includes(product.subcategoria));
 
-    const matchesSearch = searchTerm === '' || 
+    const matchesSearch = searchTerm === '' ||
                          product.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          product.marca.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          product.descricao.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     return matchesCategory && matchesSearch;
   });
+
 
   const sortedProducts = [...categoryProducts].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return a.preco_eur - b.preco_eur;
+        return (a.preco || 0) - (b.preco || 0);
       case 'price-high':
-        return b.preco_eur - a.preco_eur;
+        return (b.preco || 0) - (a.preco || 0);
       case 'name':
         return a.nome.localeCompare(b.nome);
       default:
@@ -213,12 +214,18 @@ export default function CategoryPage() {
                 nome={product.nome}
                 marca={product.marca}
                 descricao={product.descricao}
-                preco_brl={product.preco_brl}
-                preco_eur={product.preco_eur}
-                imagens={product.imagens}
+                imagens={product.imagem ? [product.imagem] : ['/placeholder-product.jpg']}
                 badge={product.badge}
                 destaque={product.destaque}
                 viewMode={viewMode}
+                pricing={{
+                  basePrice: product.precoOriginal || product.preco,
+                  ourPrice: product.preco,
+                  discountPrice: product.preco,
+                  savings: (product.precoOriginal || product.preco) - product.preco,
+                  margin: '36%',
+                  competitive: 'Baseado em produtos europeus'
+                }}
               />
             ))}
           </div>

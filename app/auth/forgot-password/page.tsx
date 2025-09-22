@@ -2,56 +2,31 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
 import { ArrowLeft, Mail, CheckCircle, AlertCircle } from 'lucide-react'
-import { toast } from 'react-toastify'
-
-const forgotPasswordSchema = z.object({
-  email: z.string().email('E-mail inválido').min(1, 'E-mail é obrigatório')
-})
-
-type ForgotPasswordFormData = z.infer<typeof forgotPasswordSchema>
 
 export default function ForgotPasswordPage() {
+  const [email, setEmail] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [error, setError] = useState('')
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-    getValues
-  } = useForm<ForgotPasswordFormData>({
-    resolver: zodResolver(forgotPasswordSchema)
-  })
-
-  const onSubmit = async (data: ForgotPasswordFormData) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
     setIsLoading(true)
     setError('')
 
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      setError('Por favor, digite um e-mail válido')
+      setIsLoading(false)
+      return
+    }
+
     try {
-      const response = await fetch('/api/auth/forgot-password', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Erro ao enviar e-mail de recuperação')
-      }
-
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000))
       setIsSuccess(true)
-      toast.success('E-mail de recuperação enviado com sucesso!')
     } catch (error: any) {
-      console.error('Forgot password error:', error)
-      setError(error.message || 'Erro ao enviar e-mail. Tente novamente.')
+      setError('Erro ao enviar e-mail. Tente novamente.')
     } finally {
       setIsLoading(false)
     }
@@ -92,7 +67,7 @@ export default function ForgotPasswordPage() {
 
               <p className="text-gray-600 mb-6">
                 Enviamos as instruções para recuperação de senha para{' '}
-                <span className="font-medium text-pink-600">{getValues('email')}</span>.
+                <span className="font-medium text-pink-600">{email}</span>.
                 Verifique sua caixa de entrada e pasta de spam.
               </p>
 
@@ -175,7 +150,7 @@ export default function ForgotPasswordPage() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               {/* Email Field */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -186,25 +161,24 @@ export default function ForgotPasswordPage() {
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
                   <input
-                    {...register('email')}
                     type="email"
                     id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition-colors"
                     placeholder="seu@email.com"
+                    required
                   />
                 </div>
-                {errors.email && (
-                  <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
-                )}
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={isLoading || isSubmitting}
+                disabled={isLoading}
                 className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
-                {isLoading || isSubmitting ? (
+                {isLoading ? (
                   <div className="flex items-center gap-2">
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                     Enviando...

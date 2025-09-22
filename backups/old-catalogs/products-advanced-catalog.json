@@ -1,0 +1,2924 @@
+{
+  "metadata": {
+    "version": "4.0.0",
+    "type": "advanced_analysis",
+    "generated": "2025-09-18T02:36:45.976069",
+    "totalCategories": 14,
+    "totalProducts": 70,
+    "totalImages": 287,
+    "webScrapingEnabled": true,
+    "realTimePricing": true,
+    "description": "Catálogo avançado com web scraping e análise detalhada",
+    "lastUpdated": "2025-09-19T10:56:28.967Z"
+  },
+  "categories": {
+    "tinta_amend": {
+      "metadata": {
+        "category": "tinta_amend",
+        "brand": "Amend",
+        "type": "Coloração Capilar",
+        "analyzed": "2025-09-18T00:34:24.126Z",
+        "totalProducts": 6,
+        "totalImages": 6,
+        "exchangeRate": 0.159,
+        "scrapingEnabled": true
+      },
+      "products": []
+    },
+    "bio_extratus_produtos_": {
+      "metadata": {
+        "category": "bio_extratus_produtos_",
+        "brand": "Bio Extratus",
+        "type": "Produtos Capilares",
+        "analyzed": "2025-09-18T00:34:38.415Z",
+        "totalProducts": 14,
+        "totalImages": 14,
+        "exchangeRate": 0.159,
+        "scrapingEnabled": true
+      },
+      "products": []
+    },
+    "tinta_nutrisse": {
+      "metadata": {
+        "category": "tinta_nutrisse",
+        "brand": "Garnier Nutrisse",
+        "type": "Coloração Capilar",
+        "analyzed": "2025-09-18T00:34:40.335Z",
+        "totalProducts": 10,
+        "totalImages": 10,
+        "exchangeRate": 0.159,
+        "scrapingEnabled": true
+      },
+      "products": []
+    },
+    "tinta_alta_moda_": {
+      "metadata": {
+        "category": "tinta_alta_moda_",
+        "brand": "Alta Moda",
+        "type": "Coloração Capilar",
+        "analyzed": "2025-09-18T00:35:09.036Z",
+        "totalProducts": 29,
+        "totalImages": 29,
+        "exchangeRate": 0.159,
+        "scrapingEnabled": true
+      },
+      "products": []
+    },
+    "tinta_beauty_color": {
+      "metadata": {
+        "category": "tinta_beauty_color",
+        "brand": "Beauty Color",
+        "type": "Coloração Capilar",
+        "analyzed": "2025-09-18T00:35:47.812Z",
+        "totalProducts": 46,
+        "totalImages": 46,
+        "exchangeRate": 0.159,
+        "scrapingEnabled": true
+      },
+      "products": []
+    },
+    "tinta_excllusiv": {
+      "metadata": {
+        "category": "tinta_excllusiv",
+        "brand": "Excllusiv",
+        "type": "Coloração Capilar",
+        "analyzed": "2025-09-18T00:35:04.536Z",
+        "totalProducts": 24,
+        "totalImages": 24,
+        "exchangeRate": 0.159,
+        "scrapingEnabled": true
+      },
+      "products": []
+    },
+    "tinta_biocolor": {
+      "metadata": {
+        "category": "tinta_biocolor",
+        "brand": "Biocolor",
+        "type": "Coloração Capilar",
+        "analyzed": "2025-09-18T00:35:01.567Z",
+        "totalProducts": 23,
+        "totalImages": 23,
+        "exchangeRate": 0.159,
+        "scrapingEnabled": true
+      },
+      "products": []
+    },
+    "tinta_wella": {
+      "metadata": {
+        "category": "tinta_wella",
+        "brand": "Wella Professionals",
+        "type": "Coloração Capilar",
+        "analyzed": "2025-09-18T00:35:49.622Z",
+        "totalProducts": 43,
+        "totalImages": 43,
+        "exchangeRate": 0.159,
+        "scrapingEnabled": true
+      },
+      "products": []
+    },
+    "tinta_loreal": {
+      "metadata": {
+        "category": "tinta_loreal",
+        "brand": "L'Oréal Paris",
+        "type": "Coloração Capilar",
+        "analyzed": "2025-09-18T00:35:02.556Z",
+        "totalProducts": 22,
+        "totalImages": 22,
+        "exchangeRate": 0.159,
+        "scrapingEnabled": true
+      },
+      "products": []
+    },
+    "progressivas": {
+      "metadata": {
+        "category": "progressivas",
+        "brand": "Diversos",
+        "type": "Tratamentos Progressivos Diversos",
+        "analyzed": "2025-09-19T02:04:46.281Z",
+        "totalProducts": 21,
+        "description": "Tratamentos Progressivos Diversos"
+      },
+      "products": [
+        {
+          "id": "cocochoco-professional-original",
+          "name": "CocoCHOCO Professional Original Premium Keratin Treatment",
+          "brand": "CocoCHOCO",
+          "priceBRL": 320,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_1.JPG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_1.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 81,
+          "description": "Tratamento premium de queratina brasileira com chocolate para alisamento e brilho profissionais. Fórmula livre de formaldeído para resultados seguros e duradouros.",
+          "features": [
+            "Queratina Brasileira",
+            "Premium Treatment",
+            "Livre de Formaldeído",
+            "Resultado Profissional",
+            "Chocolate Hair Care",
+            "1000ml Professional"
+          ],
+          "colors": [
+            "Marrom"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "CocoCHOCO",
+            "features": [
+              "Queratina Brasileira",
+              "Premium Treatment",
+              "Livre de Formaldeído",
+              "Resultado Profissional",
+              "Chocolate Hair Care",
+              "1000ml Professional"
+            ]
+          }
+        },
+        {
+          "id": "cocochoco-professional-gold",
+          "name": "CocoCHOCO Professional Gold Extra Shine",
+          "brand": "CocoCHOCO",
+          "priceBRL": 380,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_2.JPG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_2.JPG",
+            "/images/products/progressivas_diversas/progressivas_diversas_4.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 74,
+          "description": "Tratamento premium de queratina dourado com brilho extra. Enriquecido com ouro 24k para máximo brilho e suavidade, ideal para resultados profissionais.",
+          "features": [
+            "Ouro 24k",
+            "Extra Shine",
+            "Premium Keratin",
+            "Brilho Máximo",
+            "250ml + 1000ml",
+            "Uso Profissional"
+          ],
+          "colors": [
+            "Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "CocoCHOCO",
+            "features": [
+              "Ouro 24k",
+              "Extra Shine",
+              "Premium Keratin",
+              "Brilho Máximo",
+              "250ml + 1000ml",
+              "Uso Profissional"
+            ]
+          }
+        },
+        {
+          "id": "tzaha-diamante-total-liss",
+          "name": "T'ZAHA Diamante Total Liss Therapy 3D",
+          "brand": "T'ZAHA",
+          "priceBRL": 180.5,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_3.JPG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_3.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 55,
+          "description": "Kit completo de terapia capilar 3D com shampoo e gloss. Tratamento sem formol com tecnologia Diamante para alisamento e brilho intenso.",
+          "features": [
+            "Therapy 3D",
+            "Kit Shampoo + Gloss",
+            "Sem Formol",
+            "Tecnologia Diamante",
+            "Alisamento Intenso",
+            "Brilho Profissional"
+          ],
+          "colors": [
+            "Preto/Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "T'ZAHA",
+            "features": [
+              "Therapy 3D",
+              "Kit Shampoo + Gloss",
+              "Sem Formol",
+              "Tecnologia Diamante",
+              "Alisamento Intenso",
+              "Brilho Profissional"
+            ]
+          }
+        },
+        {
+          "id": "brazilicious-honey-therapy-3-steps",
+          "name": "Brazilicious Honey Therapy 3 Steps Treatment",
+          "brand": "Brazilicious",
+          "priceBRL": 385,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_5.JPG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_5.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 35,
+          "description": "Sistema completo de 3 etapas com mel do Iêmen, óleo de oliva e manteiga de murumuru. Enriquecido com provitaminas A, B e D12 para nutrição profunda.",
+          "features": [
+            "3 Steps System",
+            "Mel do Iêmen",
+            "Óleo de Oliva",
+            "Manteiga Murumuru",
+            "Provitaminas A, B, D12",
+            "100ml x 3"
+          ],
+          "colors": [
+            "Preto/Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Brazilicious",
+            "features": [
+              "3 Steps System",
+              "Mel do Iêmen",
+              "Óleo de Oliva",
+              "Manteiga Murumuru",
+              "Provitaminas A, B, D12",
+              "100ml x 3"
+            ]
+          }
+        },
+        {
+          "id": "la-grace-alinhamento-capilar",
+          "name": "La Grace Alinhamento Capilar Condicionador Termoativado",
+          "brand": "La Grace",
+          "priceBRL": 145.9,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_6.JPG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_6.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 65,
+          "description": "Condicionador termoativado para alinhamento capilar profundo. Restauração dos fios danificados com tecnologia de recuperação e hidratação intensiva.",
+          "features": [
+            "Termoativado",
+            "Alinhamento Capilar",
+            "Restauração Profunda",
+            "Para Fios Danificados",
+            "Hidratação Intensiva",
+            "1L Professional"
+          ],
+          "colors": [
+            "Preto"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "La Grace",
+            "features": [
+              "Termoativado",
+              "Alinhamento Capilar",
+              "Restauração Profunda",
+              "Para Fios Danificados",
+              "Hidratação Intensiva",
+              "1L Professional"
+            ]
+          }
+        },
+        {
+          "id": "amazon-oil-one-step-kit",
+          "name": "Amazon Oil One Step Zero Complex Kit",
+          "brand": "Amazon Oil",
+          "priceBRL": 220,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_7.PNG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_7.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 57,
+          "description": "Kit de tratamento em uma única etapa com óleo de açaí e buriti. Fórmula orgânica sem químicas agressivas para alisamento natural e hidratação.",
+          "features": [
+            "One Step",
+            "Zero Complex",
+            "Óleo de Açaí",
+            "Óleo de Buriti",
+            "Fórmula Orgânica",
+            "Kit Duplo 1L"
+          ],
+          "colors": [
+            "Verde"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Amazon Oil",
+            "features": [
+              "One Step",
+              "Zero Complex",
+              "Óleo de Açaí",
+              "Óleo de Buriti",
+              "Fórmula Orgânica",
+              "Kit Duplo 1L"
+            ]
+          }
+        },
+        {
+          "id": "prohall-burix-one-molecular",
+          "name": "Prohall Burix One Reestruturação Molecular",
+          "brand": "Prohall",
+          "priceBRL": 165.8,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_8.PNG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_8.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 15,
+          "description": "Máscara de tratamento e realinhamento capilar com sistema Lumini. Óleo de buriti, biotina e ácido tânico para reconstrução molecular profunda.",
+          "features": [
+            "Reestruturação Molecular",
+            "Sistema Lumini",
+            "Óleo de Buriti",
+            "Biotina",
+            "Ácido Tânico",
+            "1L Professional"
+          ],
+          "colors": [
+            "Marrom/Verde"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Prohall",
+            "features": [
+              "Reestruturação Molecular",
+              "Sistema Lumini",
+              "Óleo de Buriti",
+              "Biotina",
+              "Ácido Tânico",
+              "1L Professional"
+            ]
+          }
+        },
+        {
+          "id": "plastica-dos-fios-sem-plastic-surprise",
+          "name": "Plástica dos Fios Sem Plastic Surprise 3 Steps",
+          "brand": "Plástica dos Fios",
+          "priceBRL": 195.5,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_9.png",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_9.png"
+          ],
+          "rating": 4.5,
+          "reviews": 12,
+          "description": "Sistema completo de 3 etapas para plástica capilar sem formol. Cabelos disciplinados e escovados com tecnologia limpeza profunda e selagem térmica.",
+          "features": [
+            "3 Steps System",
+            "Sem Formol",
+            "Plástica Capilar",
+            "Limpeza Profunda",
+            "Selagem Térmica",
+            "300ml x 3"
+          ],
+          "colors": [
+            "Roxo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Plástica dos Fios",
+            "features": [
+              "3 Steps System",
+              "Sem Formol",
+              "Plástica Capilar",
+              "Limpeza Profunda",
+              "Selagem Térmica",
+              "300ml x 3"
+            ]
+          }
+        },
+        {
+          "id": "i-belo-capelo-torrano-nanoplastia",
+          "name": "I Belo Capelo Torrano Nanoplastia Organic Liquid",
+          "brand": "I Belo Capelo",
+          "priceBRL": 210,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_10.png",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_10.png"
+          ],
+          "rating": 4.5,
+          "reviews": 19,
+          "description": "Nanoplastia orgânica líquida com proteínas, ácido hialurônico e óleo vegetal. Fórmula orgânica para alisamento natural sem agressão aos fios.",
+          "features": [
+            "Nanoplastia Orgânica",
+            "Proteínas",
+            "Ácido Hialurônico",
+            "Óleo Vegetal",
+            "Organic Liquid",
+            "530ml Professional"
+          ],
+          "colors": [
+            "Azul"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "I Belo Capelo",
+            "features": [
+              "Nanoplastia Orgânica",
+              "Proteínas",
+              "Ácido Hialurônico",
+              "Óleo Vegetal",
+              "Organic Liquid",
+              "530ml Professional"
+            ]
+          }
+        },
+        {
+          "id": "probelle-extreme-expert-kit",
+          "name": "Probelle EXTREME Expert Kit Professional",
+          "brand": "Probelle",
+          "priceBRL": 186.55,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_11.JPG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_11.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 91,
+          "description": "Kit profissional de alisamento extremo com tecnologia avançada. Fórmula exclusiva para cabelos resistentes com proteínas e queratina hidrolisada.",
+          "features": [
+            "Alisamento Extremo",
+            "Kit Professional",
+            "Tecnologia Avançada",
+            "Para Cabelos Resistentes",
+            "Proteínas + Queratina",
+            "1000ml Kit"
+          ],
+          "colors": [
+            "Branco/Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Probelle",
+            "features": [
+              "Alisamento Extremo",
+              "Kit Professional",
+              "Tecnologia Avançada",
+              "Para Cabelos Resistentes",
+              "Proteínas + Queratina",
+              "1000ml Kit"
+            ]
+          }
+        },
+        {
+          "id": "nuance-liso-perfect-escova",
+          "name": "Nuance Liso Perfect Escova Progressiva",
+          "brand": "Nuance",
+          "priceBRL": 95.9,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_12.PNG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_12.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 35,
+          "description": "Escova progressiva orgânica brasileira com queratina e D'pantenol. Fórmula com ácidos frutados para alisamento e maciez duradoura sem danos aos fios.",
+          "features": [
+            "Escova Orgânica",
+            "Queratina + D'pantenol",
+            "Ácidos Frutados",
+            "Alisamento Natural",
+            "Maciez Duradoura",
+            "1000ml"
+          ],
+          "colors": [
+            "Rosa"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Nuance",
+            "features": [
+              "Escova Orgânica",
+              "Queratina + D'pantenol",
+              "Ácidos Frutados",
+              "Alisamento Natural",
+              "Maciez Duradoura",
+              "1000ml"
+            ]
+          }
+        },
+        {
+          "id": "forever-liss-definitiva-shampoo-gloss",
+          "name": "Forever Liss Definitiva Professional Shampoo + Gloss Premium",
+          "brand": "Forever Liss",
+          "priceBRL": 142.8,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_13.png",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_13.png"
+          ],
+          "rating": 4.5,
+          "reviews": 55,
+          "description": "Sistema definitivo profissional com shampoo clarifying e gloss premium. Tecnologia advanced para alisamento duradouro e brilho intenso com proteínas.",
+          "features": [
+            "Sistema Definitivo",
+            "Shampoo Clarifying",
+            "Gloss Premium",
+            "Tecnologia Advanced",
+            "Alisamento Duradouro",
+            "1000ml Duplo"
+          ],
+          "colors": [
+            "Branco"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Forever Liss",
+            "features": [
+              "Sistema Definitivo",
+              "Shampoo Clarifying",
+              "Gloss Premium",
+              "Tecnologia Advanced",
+              "Alisamento Duradouro",
+              "1000ml Duplo"
+            ]
+          }
+        },
+        {
+          "id": "inya-keratin-smooth-treatment",
+          "name": "Inya Professional Keratin Smooth Clarifying + Treatment",
+          "brand": "Inya",
+          "priceBRL": 158.9,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_14.png",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_14.png"
+          ],
+          "rating": 4.5,
+          "reviews": 53,
+          "description": "Kit profissional de queratina smooth com shampoo clarifying e smoothing treatment. Sistema 2 steps para alisamento profissional com proteção térmica.",
+          "features": [
+            "Keratin Smooth",
+            "2 Steps System",
+            "Shampoo Clarifying",
+            "Smoothing Treatment",
+            "Proteção Térmica",
+            "1000ml Kit"
+          ],
+          "colors": [
+            "Azul/Rosa"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Inya",
+            "features": [
+              "Keratin Smooth",
+              "2 Steps System",
+              "Shampoo Clarifying",
+              "Smoothing Treatment",
+              "Proteção Térmica",
+              "1000ml Kit"
+            ]
+          }
+        },
+        {
+          "id": "ft-cosmetics-tratamento-avancado",
+          "name": "FT Cosmetics Tratamento Avançado 2 Steps",
+          "brand": "FT Cosmetics",
+          "priceBRL": 175.9,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_15.PNG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_15.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 95,
+          "description": "Sistema avançado de 2 etapas com shampoo antirresíduos e tratamento com complexo de vitaminas e aminoácidos. Para uso profissional exclusivo.",
+          "features": [
+            "2 Steps System",
+            "Shampoo Antirresíduos",
+            "Complexo Vitaminas",
+            "Aminoácidos",
+            "Uso Profissional",
+            "Kit 1L Duplo"
+          ],
+          "colors": [
+            "Prateado/Roxo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "FT Cosmetics",
+            "features": [
+              "2 Steps System",
+              "Shampoo Antirresíduos",
+              "Complexo Vitaminas",
+              "Aminoácidos",
+              "Uso Profissional",
+              "Kit 1L Duplo"
+            ]
+          }
+        },
+        {
+          "id": "roffer-ultra-liss-effect",
+          "name": "Roffer Ultra Liss Effect Escova Progressiva Professional",
+          "brand": "Roffer",
+          "priceBRL": 186.55,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_16.png",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_16.png"
+          ],
+          "rating": 4.5,
+          "reviews": 17,
+          "description": "Escova progressiva profissional Ultra Liss Effect com tecnologia cabelo lambido 100%. Fórmula avançada para alisamento extremo e brilho espelhado.",
+          "features": [
+            "Ultra Liss Effect",
+            "Cabelo Lambido 100%",
+            "Alisamento Extremo",
+            "Brilho Espelhado",
+            "Tecnologia Avançada",
+            "1L Professional"
+          ],
+          "colors": [
+            "Preto/Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Roffer",
+            "features": [
+              "Ultra Liss Effect",
+              "Cabelo Lambido 100%",
+              "Alisamento Extremo",
+              "Brilho Espelhado",
+              "Tecnologia Avançada",
+              "1L Professional"
+            ]
+          }
+        },
+        {
+          "id": "luxury-professional-superliss-kit",
+          "name": "Luxury Professional SuperLiss Shampoo + Máscara Restore",
+          "brand": "Luxury Professional",
+          "priceBRL": 128.5,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_17.PNG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_17.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 85,
+          "description": "Kit profissional SuperLiss com shampoo tratamento e máscara restore. Revitalização dos fios danificados com brilho intenso e movimento natural.",
+          "features": [
+            "Kit SuperLiss",
+            "Shampoo Tratamento",
+            "Máscara Restore",
+            "Revitalização",
+            "Brilho Intenso",
+            "1L Kit Duplo"
+          ],
+          "colors": [
+            "Branco/Marrom"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Luxury Professional",
+            "features": [
+              "Kit SuperLiss",
+              "Shampoo Tratamento",
+              "Máscara Restore",
+              "Revitalização",
+              "Brilho Intenso",
+              "1L Kit Duplo"
+            ]
+          }
+        },
+        {
+          "id": "cadiveu-brasil-cacau-eco-keratin",
+          "name": "Cadiveu Brasil Cacau Eco Keratin Professional",
+          "brand": "Cadiveu",
+          "priceBRL": 298.5,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_18.png",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_18.png"
+          ],
+          "rating": 4.5,
+          "reviews": 44,
+          "description": "Tratamento de queratina brasileira nº1 no Brasil com fórmula eco keratin. Alisamento orgânico livre de formol para todos os tipos de cabelo.",
+          "features": [
+            "Nº1 no Brasil",
+            "Eco Keratin",
+            "Orgânico Livre Formol",
+            "Todos Tipos Cabelo",
+            "Queratina Brasileira",
+            "110ml x 3"
+          ],
+          "colors": [
+            "Bronze"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Cadiveu",
+            "features": [
+              "Nº1 no Brasil",
+              "Eco Keratin",
+              "Orgânico Livre Formol",
+              "Todos Tipos Cabelo",
+              "Queratina Brasileira",
+              "110ml x 3"
+            ]
+          }
+        },
+        {
+          "id": "richee-bioplastica-capilar-kit",
+          "name": "Richée Bioplástica Capilar Kit Professional",
+          "brand": "Richée",
+          "priceBRL": 135.9,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_19.png",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_19.png"
+          ],
+          "rating": 4.5,
+          "reviews": 70,
+          "description": "Kit de bioplástica capilar com shampoo antirresíduo e ativo antifrizz. Tratamento orgânico que promove liso natural com selagem molecular.",
+          "features": [
+            "Bioplástica Capilar",
+            "Shampoo Antirresíduo",
+            "Ativo Antifrizz",
+            "Tratamento Orgânico",
+            "Liso Natural",
+            "1L Kit"
+          ],
+          "colors": [
+            "Branco/Roxo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Richée",
+            "features": [
+              "Bioplástica Capilar",
+              "Shampoo Antirresíduo",
+              "Ativo Antifrizz",
+              "Tratamento Orgânico",
+              "Liso Natural",
+              "1L Kit"
+            ]
+          }
+        },
+        {
+          "id": "bonequinha-anti-residuos-mascara",
+          "name": "Bonequinha Kit Shampoo Anti-Resíduos + Máscara Capilar",
+          "brand": "Bonequinha",
+          "priceBRL": 155,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_20.png",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_20.png"
+          ],
+          "rating": 4.5,
+          "reviews": 14,
+          "description": "Kit profissional com shampoo anti-resíduos e máscara capilar hidratante. Fórmula com queratina hidrolisada para tratamento intensivo e preservação da integridade dos fios.",
+          "features": [
+            "Kit Shampoo + Máscara",
+            "Anti-Resíduos",
+            "Queratina Hidrolisada",
+            "Tratamento Intensivo",
+            "Preserva Integridade",
+            "1000ml x 2"
+          ],
+          "colors": [
+            "Azul/Rosa"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Bonequinha",
+            "features": [
+              "Kit Shampoo + Máscara",
+              "Anti-Resíduos",
+              "Queratina Hidrolisada",
+              "Tratamento Intensivo",
+              "Preserva Integridade",
+              "1000ml x 2"
+            ]
+          }
+        },
+        {
+          "id": "maria-escandalosa-shampoo-mascara",
+          "name": "Maria Escandalosa Kit Shampoo + Máscara Escova Progressiva",
+          "brand": "Maria Escandalosa",
+          "priceBRL": 118.9,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_21.JPG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_21.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 51,
+          "description": "Kit escova progressiva com shampoo e máscara capilar termoativada. Fórmula brasileira para alisamento natural com movimento e brilho intenso.",
+          "features": [
+            "Kit Brasileiro",
+            "Shampoo + Máscara",
+            "Termoativada",
+            "Alisamento Natural",
+            "Movimento e Brilho",
+            "1000ml Kit"
+          ],
+          "colors": [
+            "Azul/Rosa"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Maria Escandalosa",
+            "features": [
+              "Kit Brasileiro",
+              "Shampoo + Máscara",
+              "Termoativada",
+              "Alisamento Natural",
+              "Movimento e Brilho",
+              "1000ml Kit"
+            ]
+          }
+        },
+        {
+          "id": "empodera-perfect-liss-kit",
+          "name": "Empodera Perfect Liss Kit Realinhamento + Hidratação",
+          "brand": "Empodera",
+          "priceBRL": 142.5,
+          "category": "progressivas",
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_22.JPG",
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_22.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 108,
+          "description": "Kit Perfect Liss com shampoo antirresíduo e tratamento orgânico. Ação antifrizz e nutrição para realinhamento capilar com efeito detox e hidratação.",
+          "features": [
+            "Perfect Liss",
+            "Realinhamento + Hidratação",
+            "Ação Antifrizz",
+            "Efeito Detox",
+            "Tratamento Orgânico",
+            "1L Kit"
+          ],
+          "colors": [
+            "Branco/Rosa"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Empodera",
+            "features": [
+              "Perfect Liss",
+              "Realinhamento + Hidratação",
+              "Ação Antifrizz",
+              "Efeito Detox",
+              "Tratamento Orgânico",
+              "1L Kit"
+            ]
+          }
+        }
+      ]
+    },
+    "selagem": {
+      "metadata": {
+        "category": "selagem",
+        "brand": "Diversos",
+        "type": "Selagem Capilar",
+        "analyzed": "2025-09-19T02:04:46.287Z",
+        "totalProducts": 8,
+        "description": "Selagem Capilar"
+      },
+      "products": [
+        {
+          "id": "nika-bella-selagem-organica-0-formol",
+          "name": "Nika Bella Selagem Orgânica 0% Formol",
+          "brand": "Nika Bella",
+          "priceBRL": 165.9,
+          "category": "selagem",
+          "image": "/images/products/selagem/selagem_1.png",
+          "images": [
+            "/images/products/selagem/selagem_1.png"
+          ],
+          "rating": 4.5,
+          "reviews": 37,
+          "description": "Selagem orgânica profissional livre de formol para todos os tipos de cabelo. Fórmula avançada que promove alisamento natural com proteção e nutrição dos fios.",
+          "features": [
+            "0% Formol",
+            "Selagem Orgânica",
+            "Todos Tipos Cabelo",
+            "Alisamento Natural",
+            "Proteção dos Fios",
+            "1L Professional"
+          ],
+          "colors": [
+            "Branco/Verde"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Nika Bella",
+            "features": [
+              "0% Formol",
+              "Selagem Orgânica",
+              "Todos Tipos Cabelo",
+              "Alisamento Natural",
+              "Proteção dos Fios",
+              "1L Professional"
+            ]
+          }
+        },
+        {
+          "id": "let-me-be-selante-passo-unico",
+          "name": "Let Me Be Selante Passo Único Semi-Definitiva",
+          "brand": "Let Me Be",
+          "priceBRL": 109.9,
+          "category": "selagem",
+          "image": "/images/products/selagem/selagem_2.png",
+          "images": [
+            "/images/products/selagem/selagem_2.png"
+          ],
+          "rating": 4.5,
+          "reviews": 108,
+          "description": "Selante sem formol com colágeno, fito queratina e manteiga de karité. Tecnologia CLX-E termoativa que promove realinhamento capilar com brilho intenso.",
+          "features": [
+            "Passo Único",
+            "Colágeno",
+            "Fito Queratina",
+            "Manteiga de Karité",
+            "Tecnologia CLX-E",
+            "1000ml"
+          ],
+          "colors": [
+            "Cinza"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Let Me Be",
+            "features": [
+              "Passo Único",
+              "Colágeno",
+              "Fito Queratina",
+              "Manteiga de Karité",
+              "Tecnologia CLX-E",
+              "1000ml"
+            ]
+          }
+        },
+        {
+          "id": "lala-cosmetics-plastica-fios-selagem-termica",
+          "name": "Lala Cosmetics Plástica dos Fios Selagem Térmica",
+          "brand": "Lala Cosmetics",
+          "priceBRL": 128.5,
+          "category": "selagem",
+          "image": "/images/products/selagem/selagem_3.png",
+          "images": [
+            "/images/products/selagem/selagem_3.png"
+          ],
+          "rating": 4.5,
+          "reviews": 38,
+          "description": "Selagem térmica com arginina e açaí para cabelos profissionais. Fórmula que promove reconstrução molecular e selagem duradoura com proteção térmica.",
+          "features": [
+            "Selagem Térmica",
+            "Arginina + Açaí",
+            "Reconstrução Molecular",
+            "Proteção Térmica",
+            "Uso Profissional",
+            "960ml"
+          ],
+          "colors": [
+            "Rosa"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Lala Cosmetics",
+            "features": [
+              "Selagem Térmica",
+              "Arginina + Açaí",
+              "Reconstrução Molecular",
+              "Proteção Térmica",
+              "Uso Profissional",
+              "960ml"
+            ]
+          }
+        },
+        {
+          "id": "dos-coracoes-rosa-mosqueta-liso-espelhado",
+          "name": "Dos Corações Rosa Mosqueta Selagem Liso Espelhado",
+          "brand": "Dos Corações",
+          "priceBRL": 185,
+          "category": "selagem",
+          "image": "/images/products/selagem/selagem_4.png",
+          "images": [
+            "/images/products/selagem/selagem_4.png"
+          ],
+          "rating": 4.5,
+          "reviews": 43,
+          "description": "Selagem premium com óleo de rosa mosqueta para liso espelhado. Fórmula 5D que proporciona alisamento profundo com nutrição e brilho intenso.",
+          "features": [
+            "Óleo Rosa Mosqueta",
+            "Liso Espelhado",
+            "Fórmula 5D",
+            "Passo Único",
+            "Alisamento Profundo",
+            "1L Premium"
+          ],
+          "colors": [
+            "Branco"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Dos Corações",
+            "features": [
+              "Óleo Rosa Mosqueta",
+              "Liso Espelhado",
+              "Fórmula 5D",
+              "Passo Único",
+              "Alisamento Profundo",
+              "1L Premium"
+            ]
+          }
+        },
+        {
+          "id": "flo-lifetime-keratin-repair-reducing-protein",
+          "name": "FLO Lifetime Keratin Repair Reducing Protein",
+          "brand": "FLO Lifetime",
+          "priceBRL": 145.8,
+          "category": "selagem",
+          "image": "/images/products/selagem/selagem_5.png",
+          "images": [
+            "/images/products/selagem/selagem_5.png"
+          ],
+          "rating": 4.5,
+          "reviews": 80,
+          "description": "Proteína redutora com queratina para reparo capilar intensivo. Fórmula concentrada que reconstrói fibras danificadas proporcionando efeito alisante duradouro.",
+          "features": [
+            "Proteína Redutora",
+            "Queratina Repair",
+            "Reparo Intensivo",
+            "Reconstrói Fibras",
+            "Efeito Alisante",
+            "1L Professional"
+          ],
+          "colors": [
+            "Branco/Marrom"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "FLO Lifetime",
+            "features": [
+              "Proteína Redutora",
+              "Queratina Repair",
+              "Reparo Intensivo",
+              "Reconstrói Fibras",
+              "Efeito Alisante",
+              "1L Professional"
+            ]
+          }
+        },
+        {
+          "id": "tropicalis-reducing-protein-phytoactives",
+          "name": "Tropicalis Reducing Protein com Fitoativos",
+          "brand": "Tropicalis",
+          "priceBRL": 135.9,
+          "category": "selagem",
+          "image": "/images/products/selagem/selagem_6.png",
+          "images": [
+            "/images/products/selagem/selagem_6.png"
+          ],
+          "rating": 4.5,
+          "reviews": 23,
+          "description": "Proteína redutora enriquecida com fitoativos tropicais. Fórmula orgânica que promove alisamento natural respeitando a estrutura capilar com nutrição profunda.",
+          "features": [
+            "Fitoativos Tropicais",
+            "Proteína Redutora",
+            "Fórmula Orgânica",
+            "Alisamento Natural",
+            "Nutrição Profunda",
+            "1000ml"
+          ],
+          "colors": [
+            "Verde/Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Tropicalis",
+            "features": [
+              "Fitoativos Tropicais",
+              "Proteína Redutora",
+              "Fórmula Orgânica",
+              "Alisamento Natural",
+              "Nutrição Profunda",
+              "1000ml"
+            ]
+          }
+        },
+        {
+          "id": "borella-selagem-organica-3d-semi-definitiva",
+          "name": "Bórella Selagem Orgânica 3D Semi-Definitiva",
+          "brand": "Bórella",
+          "priceBRL": 129.9,
+          "category": "selagem",
+          "image": "/images/products/selagem/selagem_7.png",
+          "images": [
+            "/images/products/selagem/selagem_7.png"
+          ],
+          "rating": 4.5,
+          "reviews": 32,
+          "description": "Selagem orgânica 3D sem formol com passo único. Biocomplex com 19 aminoácidos, ácido hialurônico e queratina para alisamento duradouro até 3 meses.",
+          "features": [
+            "Selagem 3D",
+            "0% Formol",
+            "19 Aminoácidos",
+            "Ácido Hialurônico",
+            "Duração 3 Meses",
+            "1000ml"
+          ],
+          "colors": [
+            "Branco/Azul"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Bórella",
+            "features": [
+              "Selagem 3D",
+              "0% Formol",
+              "19 Aminoácidos",
+              "Ácido Hialurônico",
+              "Duração 3 Meses",
+              "1000ml"
+            ]
+          }
+        },
+        {
+          "id": "lusty-organic-protein-volume-reducer",
+          "name": "Lusty Organic Protein Volume Reducer Straightening Blow",
+          "brand": "Lusty",
+          "priceBRL": 118.5,
+          "category": "selagem",
+          "image": "/images/products/selagem/selagem_8.png",
+          "images": [
+            "/images/products/selagem/selagem_8.png"
+          ],
+          "rating": 4.5,
+          "reviews": 19,
+          "description": "Proteína orgânica redutora de volume com efeito alisante. Escova orgânica que controla frizz e proporciona alisamento natural com selagem molecular.",
+          "features": [
+            "Proteína Orgânica",
+            "Redutora de Volume",
+            "Efeito Alisante",
+            "Escova Orgânica",
+            "Controla Frizz",
+            "Selagem Molecular"
+          ],
+          "colors": [
+            "Branco"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Lusty",
+            "features": [
+              "Proteína Orgânica",
+              "Redutora de Volume",
+              "Efeito Alisante",
+              "Escova Orgânica",
+              "Controla Frizz",
+              "Selagem Molecular"
+            ]
+          }
+        }
+      ]
+    },
+    "botox": {
+      "metadata": {
+        "category": "botox",
+        "brand": "Diversos",
+        "type": "Produtos Botox Capilar",
+        "analyzed": "2025-09-19T02:04:46.287Z",
+        "totalProducts": 14,
+        "description": "Produtos Botox Capilar"
+      },
+      "products": [
+        {
+          "id": "topvip-btx-topterapia",
+          "name": "TopVip BTX Topterapia Formula 0%",
+          "brand": "TopVip",
+          "priceBRL": 38.8,
+          "category": "botox",
+          "image": "/images/products/botox/botox_1.png",
+          "images": [
+            "/images/products/botox/botox_1.png"
+          ],
+          "rating": 4.5,
+          "reviews": 19,
+          "description": "Botox capilar livre de formol com ação hidratante e alisante. Contém D'pantenol, óleo de argan e aminoácidos para reconstrução profunda dos fios.",
+          "features": [
+            "0% Formol",
+            "Com D'pantenol",
+            "Óleo de Argan",
+            "Aminoácidos",
+            "Uso Profissional",
+            "Reconstrução Profunda"
+          ],
+          "colors": [
+            "Amarelo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "TopVip",
+            "features": [
+              "0% Formol",
+              "Com D'pantenol",
+              "Óleo de Argan",
+              "Aminoácidos",
+              "Uso Profissional",
+              "Reconstrução Profunda"
+            ]
+          }
+        },
+        {
+          "id": "forever-liss-btox-zero",
+          "name": "Forever Liss BTOX Zero Máscara Ultra Hidratante",
+          "brand": "Forever Liss",
+          "priceBRL": 53.49,
+          "category": "botox",
+          "image": "/images/products/botox/botox_2.png",
+          "images": [
+            "/images/products/botox/botox_2.png"
+          ],
+          "rating": 4.5,
+          "reviews": 73,
+          "description": "Máscara ultra hidratante com fórmula orgânica antifrizz. Rica em óleo de argan, óleo de coco e manteiga de karité, proporciona hidratação profunda e realinhamento dos fios.",
+          "features": [
+            "Máscara Ultra Hidratante",
+            "Óleo de Argan",
+            "Óleo de Coco",
+            "Manteiga de Karité",
+            "Antifrizz",
+            "Antivolumeefrizz"
+          ],
+          "colors": [
+            "Azul/Branco"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Forever Liss",
+            "features": [
+              "Máscara Ultra Hidratante",
+              "Óleo de Argan",
+              "Óleo de Coco",
+              "Manteiga de Karité",
+              "Antifrizz",
+              "Antivolumeefrizz"
+            ]
+          }
+        },
+        {
+          "id": "btx-redutor-volume-organico",
+          "name": "BTX Redutor de Volume Orgânico Zero Formol",
+          "brand": "Genérico",
+          "priceBRL": 45.9,
+          "category": "botox",
+          "image": "/images/products/botox/botox_3.png",
+          "images": [
+            "/images/products/botox/botox_3.png"
+          ],
+          "rating": 4.5,
+          "reviews": 94,
+          "description": "Redutor de volume orgânico livre de formol para cabelos cacheados e volumosos. Composto de aminoácidos, ácidos condicionantes e óleo de argan para reparação dos fios.",
+          "features": [
+            "Zero Formol",
+            "Redutor de Volume",
+            "Aminoácidos",
+            "Óleo de Argan",
+            "Reparação dos Fios",
+            "Para Cabelos Cacheados"
+          ],
+          "colors": [
+            "Bege/Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Genérico",
+            "features": [
+              "Zero Formol",
+              "Redutor de Volume",
+              "Aminoácidos",
+              "Óleo de Argan",
+              "Reparação dos Fios",
+              "Para Cabelos Cacheados"
+            ]
+          }
+        },
+        {
+          "id": "topvip-botox-lisoplastia",
+          "name": "TopVip Botox Lisoplastia 0% Formol",
+          "brand": "TopVip",
+          "priceBRL": 42.5,
+          "category": "botox",
+          "image": "/images/products/botox/botox_4.png",
+          "images": [
+            "/images/products/botox/botox_4.png"
+          ],
+          "rating": 4.5,
+          "reviews": 14,
+          "description": "Botox capilar com ação lisoplastia para reconstrução intensa dos fios e redução de volume. Fórmula com D'pantenol, óleo de argan e aminoácidos.",
+          "features": [
+            "0% Formol",
+            "Reconstrução Intensa",
+            "Redução de Volume",
+            "Liso Natural",
+            "D'pantenol",
+            "Óleo de Argan"
+          ],
+          "colors": [
+            "Azul/Amarelo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "TopVip",
+            "features": [
+              "0% Formol",
+              "Reconstrução Intensa",
+              "Redução de Volume",
+              "Liso Natural",
+              "D'pantenol",
+              "Óleo de Argan"
+            ]
+          }
+        },
+        {
+          "id": "btox-organico-sem-quimica",
+          "name": "BTOX Orgânico Sem Química 0% Formol",
+          "brand": "Orgânico",
+          "priceBRL": 39.9,
+          "category": "botox",
+          "image": "/images/products/botox/botox_5.png",
+          "images": [
+            "/images/products/botox/botox_5.png"
+          ],
+          "rating": 4.5,
+          "reviews": 107,
+          "description": "Botox orgânico livre de química nociva com fórmula verde biotina. Restaura as fibras, repara volume, ação máscara e reduz eletricidade estática.",
+          "features": [
+            "0% Formol",
+            "Fórmula Verde Biotina",
+            "Restaura as Fibras",
+            "Repara Volume",
+            "Reduz Eletricidade Estática",
+            "Ação Máscara"
+          ],
+          "colors": [
+            "Branco/Verde"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Orgânico",
+            "features": [
+              "0% Formol",
+              "Fórmula Verde Biotina",
+              "Restaura as Fibras",
+              "Repara Volume",
+              "Reduz Eletricidade Estática",
+              "Ação Máscara"
+            ]
+          }
+        },
+        {
+          "id": "lanox-botox-organico",
+          "name": "Lanox Botox Orgânico Transformador",
+          "brand": "Lanox",
+          "priceBRL": 71.8,
+          "category": "botox",
+          "image": "/images/products/botox/botox_6.png",
+          "images": [
+            "/images/products/botox/botox_6.png"
+          ],
+          "rating": 4.5,
+          "reviews": 64,
+          "description": "Botox orgânico transformador com ação liso restaurador de longa duração. Rico em aminoácidos, óleos vegetais e silicones para reconstrução e diminuição do frizz.",
+          "features": [
+            "Transformador",
+            "Longa Duração",
+            "Aminoácidos",
+            "Óleos Vegetais",
+            "Diminui Frizz",
+            "Reconstrói Fibra Capilar"
+          ],
+          "colors": [
+            "Branco/Verde"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Lanox",
+            "features": [
+              "Transformador",
+              "Longa Duração",
+              "Aminoácidos",
+              "Óleos Vegetais",
+              "Diminui Frizz",
+              "Reconstrói Fibra Capilar"
+            ]
+          }
+        },
+        {
+          "id": "versus-desmaia-organic-botox",
+          "name": "Versus Desmaia Organic Botox Formol Free",
+          "brand": "Versus",
+          "priceBRL": 65,
+          "category": "botox",
+          "image": "/images/products/botox/botox_7.png",
+          "images": [
+            "/images/products/botox/botox_7.png"
+          ],
+          "rating": 4.5,
+          "reviews": 20,
+          "description": "Realinhamento capilar com ação instantânea e alta redução de volume. Enriquecido com macadâmia e óleo de argan para brilho e hidratação.",
+          "features": [
+            "Ação Instantânea",
+            "Alta Redução de Volume",
+            "Com Macadâmia",
+            "Óleo de Argan",
+            "Formol Free",
+            "Realinhamento Capilar"
+          ],
+          "colors": [
+            "Branco/Verde"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Versus",
+            "features": [
+              "Ação Instantânea",
+              "Alta Redução de Volume",
+              "Com Macadâmia",
+              "Óleo de Argan",
+              "Formol Free",
+              "Realinhamento Capilar"
+            ]
+          }
+        },
+        {
+          "id": "probelle-botox-forca-super",
+          "name": "Probelle Botox Alisante Força Super",
+          "brand": "Probelle",
+          "priceBRL": 88.2,
+          "category": "botox",
+          "image": "/images/products/botox/botox_8.png",
+          "images": [
+            "/images/products/botox/botox_8.png"
+          ],
+          "rating": 4.5,
+          "reviews": 108,
+          "description": "Botox alisante de força super para cabelos com alta resistência. Proporciona alisamento definitivo em uma única aplicação com efeito antioxidante.",
+          "features": [
+            "Força Super",
+            "Alisamento Definitivo",
+            "Uma Única Aplicação",
+            "Efeito Antioxidante",
+            "Para Cabelos Resistentes",
+            "Uso Profissional"
+          ],
+          "colors": [
+            "Roxo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Probelle",
+            "features": [
+              "Força Super",
+              "Alisamento Definitivo",
+              "Uma Única Aplicação",
+              "Efeito Antioxidante",
+              "Para Cabelos Resistentes",
+              "Uso Profissional"
+            ]
+          }
+        },
+        {
+          "id": "rofer-quiabo-magico-bbtox",
+          "name": "Rofer Quiabo Mágico BBTOX Mágico",
+          "brand": "Rofer",
+          "priceBRL": 56.9,
+          "category": "botox",
+          "image": "/images/products/botox/botox_9.png",
+          "images": [
+            "/images/products/botox/botox_9.png"
+          ],
+          "rating": 4.5,
+          "reviews": 73,
+          "description": "Botox mágico com extrato de quiabo para hidratação e nutrição intensa. Rico em óleos de macadâmia e coco, proporciona brilho intenso e maciez.",
+          "features": [
+            "Extrato de Quiabo",
+            "Óleo de Macadâmia",
+            "Óleo de Coco",
+            "Hidratação Intensa",
+            "Brilho Intenso",
+            "Uso Profissional"
+          ],
+          "colors": [
+            "Branco/Verde/Rosa"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Rofer",
+            "features": [
+              "Extrato de Quiabo",
+              "Óleo de Macadâmia",
+              "Óleo de Coco",
+              "Hidratação Intensa",
+              "Brilho Intenso",
+              "Uso Profissional"
+            ]
+          }
+        },
+        {
+          "id": "boratx-mascara-profissional",
+          "name": "BÓRATX Máscara Profissional Hidratação",
+          "brand": "Bóratx",
+          "priceBRL": 47.3,
+          "category": "botox",
+          "image": "/images/products/botox/botox_10.png",
+          "images": [
+            "/images/products/botox/botox_10.png"
+          ],
+          "rating": 4.5,
+          "reviews": 40,
+          "description": "Máscara profissional com tripla ação: hidratação, antifrizz e nutrição. Complexo bio complex com vitaminas para reparação e nutrição dos fios.",
+          "features": [
+            "Tripla Ação",
+            "Antifrizz",
+            "Nutrição",
+            "Bio Complex",
+            "Vitaminas",
+            "Reparação dos Fios"
+          ],
+          "colors": [
+            "Branco/Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Bóratx",
+            "features": [
+              "Tripla Ação",
+              "Antifrizz",
+              "Nutrição",
+              "Bio Complex",
+              "Vitaminas",
+              "Reparação dos Fios"
+            ]
+          }
+        },
+        {
+          "id": "topvip-botox-lisoplastia-extremo",
+          "name": "TopVip Botox Lisoplastia Lisoextremo",
+          "brand": "TopVip",
+          "priceBRL": 52.8,
+          "category": "botox",
+          "image": "/images/products/botox/botox_11.png",
+          "images": [
+            "/images/products/botox/botox_11.png"
+          ],
+          "rating": 4.5,
+          "reviews": 106,
+          "description": "Botox com ação extrema para reconstrução intensa dos fios e redução máxima de volume. Fórmula profissional com D'pantenol, óleo de argan e colágeno.",
+          "features": [
+            "Ação Extrema",
+            "Reconstrução Intensa",
+            "Redução Máxima Volume",
+            "D'pantenol",
+            "Óleo de Argan",
+            "Colágeno"
+          ],
+          "colors": [
+            "Preto/Cinza"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "TopVip",
+            "features": [
+              "Ação Extrema",
+              "Reconstrução Intensa",
+              "Redução Máxima Volume",
+              "D'pantenol",
+              "Óleo de Argan",
+              "Colágeno"
+            ]
+          }
+        },
+        {
+          "id": "etna-hair-btox-organico",
+          "name": "Etna Hair BTOX Orgânico Reconstrutor",
+          "brand": "Etna Hair",
+          "priceBRL": 44.7,
+          "category": "botox",
+          "image": "/images/products/botox/botox_12.JPG",
+          "images": [
+            "/images/products/botox/botox_12.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 22,
+          "description": "BTOX orgânico 0% formol reconstrutor para restauração completa dos fios. Fórmula com óleos essenciais e proteínas para máxima hidratação.",
+          "features": [
+            "0% Formol",
+            "Óleos Essenciais",
+            "Proteínas",
+            "Restauração Completa",
+            "Máxima Hidratação",
+            "Reconstrutor"
+          ],
+          "colors": [
+            "Branco/Verde"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Etna Hair",
+            "features": [
+              "0% Formol",
+              "Óleos Essenciais",
+              "Proteínas",
+              "Restauração Completa",
+              "Máxima Hidratação",
+              "Reconstrutor"
+            ]
+          }
+        },
+        {
+          "id": "i-belo-capelo-ravenna-btox",
+          "name": "I Belo Capelo Ravenna B-TOX Organic",
+          "brand": "I Belo Capelo",
+          "priceBRL": 69.5,
+          "category": "botox",
+          "image": "/images/products/botox/botox_16.png",
+          "images": [
+            "/images/products/botox/botox_16.png"
+          ],
+          "rating": 4.5,
+          "reviews": 43,
+          "description": "B-TOX orgânico com produto antioxidante para saúde e vitalidade capilar. Fórmula anti-frizz que reduz volume, aumenta brilho e hidrata profundamente.",
+          "features": [
+            "Produto Antioxidante",
+            "Anti-frizz",
+            "Reduz Volume",
+            "Aumenta Brilho",
+            "Hidratação Profunda",
+            "Saúde Capilar"
+          ],
+          "colors": [
+            "Verde"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "I Belo Capelo",
+            "features": [
+              "Produto Antioxidante",
+              "Anti-frizz",
+              "Reduz Volume",
+              "Aumenta Brilho",
+              "Hidratação Profunda",
+              "Saúde Capilar"
+            ]
+          }
+        },
+        {
+          "id": "prohall-bbtox-platinum",
+          "name": "Prohall BBTOX Platinum Máscara Matizadora",
+          "brand": "Prohall",
+          "priceBRL": 78.9,
+          "category": "botox",
+          "image": "/images/products/botox/botox_18.png",
+          "images": [
+            "/images/products/botox/botox_18.png"
+          ],
+          "rating": 4.5,
+          "reviews": 105,
+          "description": "Máscara matizadora de realinhamento com controle absoluto do volume e frizz. Ação matizadora platinum blond com colágeno hidrolisado e ácido lático.",
+          "features": [
+            "Ação Matizadora",
+            "Platinum Blond",
+            "Colágeno Hidrolisado",
+            "Ácido Lático",
+            "Controle Volume",
+            "Uso Profissional"
+          ],
+          "colors": [
+            "Prateado/Roxo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Prohall",
+            "features": [
+              "Ação Matizadora",
+              "Platinum Blond",
+              "Colágeno Hidrolisado",
+              "Ácido Lático",
+              "Controle Volume",
+              "Uso Profissional"
+            ]
+          }
+        }
+      ]
+    },
+    "relaxamentos": {
+      "metadata": {
+        "category": "relaxamentos",
+        "brand": "Diversos",
+        "type": "Relaxamentos Capilares",
+        "analyzed": "2025-09-19T02:04:46.287Z",
+        "totalProducts": 11,
+        "description": "Relaxamentos Capilares"
+      },
+      "products": [
+        {
+          "id": "embelleze-toin-relaxamento-encacheamento",
+          "name": "Embelleze TOIN Relaxamento e Encacheamento Floft",
+          "brand": "Embelleze",
+          "priceBRL": 79.6,
+          "category": "relaxamentos",
+          "image": "/images/products/relaxamentos_/relaxamentos__2.PNG",
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__2.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 74,
+          "description": "Relaxamento especial para cachos jovens com óleo de coco e abacate. Fórmula com tioglicolato e lanolina que define delicadamente os cachos e previne ressecamento.",
+          "features": [
+            "Para Cachos Jovens",
+            "Óleo de Coco",
+            "Óleo de Abacate",
+            "Tioglicolato + Lanolina",
+            "Previne Ressecamento",
+            "400g"
+          ],
+          "colors": [
+            "Roxo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Embelleze",
+            "features": [
+              "Para Cachos Jovens",
+              "Óleo de Coco",
+              "Óleo de Abacate",
+              "Tioglicolato + Lanolina",
+              "Previne Ressecamento",
+              "400g"
+            ]
+          }
+        },
+        {
+          "id": "hairlife-super-cachos-solto-natural",
+          "name": "HairLife Super Cachos Solto e Natural",
+          "brand": "HairLife",
+          "priceBRL": 45.5,
+          "category": "relaxamentos",
+          "image": "/images/products/relaxamentos_/relaxamentos__3.PNG",
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__3.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 14,
+          "description": "Creme de relaxamento para cabelos cacheados com extrato de girassol. Fórmula que solta os cachos mantendo movimento natural e brilho saudável.",
+          "features": [
+            "Super Cachos",
+            "Extrato de Girassol",
+            "Solto e Natural",
+            "Movimento Natural",
+            "Brilho Saudável",
+            "Kit Completo"
+          ],
+          "colors": [
+            "Verde/Amarelo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "HairLife",
+            "features": [
+              "Super Cachos",
+              "Extrato de Girassol",
+              "Solto e Natural",
+              "Movimento Natural",
+              "Brilho Saudável",
+              "Kit Completo"
+            ]
+          }
+        },
+        {
+          "id": "hairlife-liso-laminado-bondplex",
+          "name": "HairLife Liso Laminado BondPlex com Óleo de Argan",
+          "brand": "HairLife",
+          "priceBRL": 68.9,
+          "category": "relaxamentos",
+          "image": "/images/products/relaxamentos_/relaxamentos__1.WEBP",
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__1.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 38,
+          "description": "Creme alisante com tecnologia BondPlex e óleo de argan. Repara danos químicos anteriores proporcionando liso perfeito por até 10 semanas com brilho espelhado.",
+          "features": [
+            "Tecnologia BondPlex",
+            "Óleo de Argan",
+            "Manteiga de Karité",
+            "10 Semanas Duração",
+            "Brilho Espelhado",
+            "Repara Danos"
+          ],
+          "colors": [
+            "Azul"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "HairLife",
+            "features": [
+              "Tecnologia BondPlex",
+              "Óleo de Argan",
+              "Manteiga de Karité",
+              "10 Semanas Duração",
+              "Brilho Espelhado",
+              "Repara Danos"
+            ]
+          }
+        },
+        {
+          "id": "hairlife-cacho-natural-relaxamento-ondulamento",
+          "name": "HairLife Cacho & Natural - Creme Relaxamento e Ondulamento",
+          "brand": "HairLife",
+          "priceBRL": 42.8,
+          "category": "relaxamentos",
+          "image": "/images/products/relaxamentos_/relaxamentos__4.PNG",
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__4.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 83,
+          "description": "Creme para relaxamento e ondulamento que transforma cabelos ressecados em cachos naturalmente bonitos. Fórmula especial para cabelos cacheados.",
+          "features": [
+            "Relaxamento + Ondulamento",
+            "Para Cabelos Cacheados",
+            "Transforma Ressecados",
+            "Cachos Naturais",
+            "Fórmula Especial",
+            "Kit Completo"
+          ],
+          "colors": [
+            "Laranja/Rosa"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "HairLife",
+            "features": [
+              "Relaxamento + Ondulamento",
+              "Para Cabelos Cacheados",
+              "Transforma Ressecados",
+              "Cachos Naturais",
+              "Fórmula Especial",
+              "Kit Completo"
+            ]
+          }
+        },
+        {
+          "id": "hairlife-liso-natural-creme-alisamento",
+          "name": "HairLife Liso & Natural Creme para Alisamento",
+          "brand": "HairLife",
+          "priceBRL": 38.9,
+          "category": "relaxamentos",
+          "image": "/images/products/relaxamentos_/relaxamentos__5.PNG",
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__5.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 40,
+          "description": "Creme alisante que transforma cabelos em liso perfeito mantendo aspecto natural. Fórmula balanceada para alisamento sem agressão excessiva aos fios.",
+          "features": [
+            "Liso Natural",
+            "Sem Agressão Excessiva",
+            "Aspecto Natural",
+            "Fórmula Balanceada",
+            "Alisamento Perfeito",
+            "Kit Completo"
+          ],
+          "colors": [
+            "Verde"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "HairLife",
+            "features": [
+              "Liso Natural",
+              "Sem Agressão Excessiva",
+              "Aspecto Natural",
+              "Fórmula Balanceada",
+              "Alisamento Perfeito",
+              "Kit Completo"
+            ]
+          }
+        },
+        {
+          "id": "hairlife-relaxin-natural-creme-relaxamento",
+          "name": "HairLife Relaxin' & Natural Creme para Relaxamento",
+          "brand": "HairLife",
+          "priceBRL": 41.5,
+          "category": "relaxamentos",
+          "image": "/images/products/relaxamentos_/relaxamentos__6.PNG",
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__6.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 95,
+          "description": "Creme para relaxamento capilar que proporciona ondas naturais e relaxadas. Ideal para quem busca reduzir volume mantendo movimento e naturalidade dos fios.",
+          "features": [
+            "Ondas Naturais",
+            "Relaxamento Suave",
+            "Reduz Volume",
+            "Mantém Movimento",
+            "Naturalidade",
+            "Kit Completo"
+          ],
+          "colors": [
+            "Azul/Amarelo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "HairLife",
+            "features": [
+              "Ondas Naturais",
+              "Relaxamento Suave",
+              "Reduz Volume",
+              "Mantém Movimento",
+              "Naturalidade",
+              "Kit Completo"
+            ]
+          }
+        },
+        {
+          "id": "afro-hair-kit-relaxamento",
+          "name": "Afro Hair Kit Relaxamento Profissional",
+          "brand": "Afro Hair",
+          "priceBRL": 55.9,
+          "category": "relaxamentos",
+          "image": "/images/products/relaxamentos_/relaxamentos__7.JPG",
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__7.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 43,
+          "description": "Kit profissional de relaxamento especialmente desenvolvido para cabelos afro. Fórmula potente que alisa respeitando a estrutura natural dos fios crespos.",
+          "features": [
+            "Especial para Afro",
+            "Kit Profissional",
+            "Respeita Estrutura",
+            "Para Fios Crespos",
+            "Fórmula Potente",
+            "Resultado Duradouro"
+          ],
+          "colors": [
+            "Amarelo/Roxo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Afro Hair",
+            "features": [
+              "Especial para Afro",
+              "Kit Profissional",
+              "Respeita Estrutura",
+              "Para Fios Crespos",
+              "Fórmula Potente",
+              "Resultado Duradouro"
+            ]
+          }
+        },
+        {
+          "id": "hairlife-mel-amendoas-sem-amonia",
+          "name": "HairLife Mel & Amêndoas Creme Alisamento Sem Amônia",
+          "brand": "HairLife",
+          "priceBRL": 44.9,
+          "category": "relaxamentos",
+          "image": "/images/products/relaxamentos_/relaxamentos__8.PNG",
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__8.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 23,
+          "description": "Creme alisante enriquecido com mel e amêndoas, livre de amônia. Fórmula suave que alisa protegendo a fibra capilar com nutrição intensa e brilho natural.",
+          "features": [
+            "Mel + Amêndoas",
+            "Sem Amônia",
+            "Fórmula Suave",
+            "Protege Fibra Capilar",
+            "Nutrição Intensa",
+            "Brilho Natural"
+          ],
+          "colors": [
+            "Amarelo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "HairLife",
+            "features": [
+              "Mel + Amêndoas",
+              "Sem Amônia",
+              "Fórmula Suave",
+              "Protege Fibra Capilar",
+              "Nutrição Intensa",
+              "Brilho Natural"
+            ]
+          }
+        },
+        {
+          "id": "salon-line-cachos-definidos-soltos",
+          "name": "Salon Line Creme Relaxante Cachos Definidos e Soltos",
+          "brand": "Salon Line",
+          "priceBRL": 36.9,
+          "category": "relaxamentos",
+          "image": "/images/products/relaxamentos_/relaxamentos__9.JPG",
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__9.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 16,
+          "description": "Kit relaxante com guanidina e óleo de avelã para cabelos crespos. Promove soltura dos cachos mantendo definição natural com efeito antioxidante.",
+          "features": [
+            "Base Guanidina",
+            "Óleo de Avelã",
+            "Para Cabelos Crespos",
+            "Soltura Natural",
+            "Efeito Antioxidante",
+            "Kit 200g + Ativador"
+          ],
+          "colors": [
+            "Verde"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Salon Line",
+            "features": [
+              "Base Guanidina",
+              "Óleo de Avelã",
+              "Para Cabelos Crespos",
+              "Soltura Natural",
+              "Efeito Antioxidante",
+              "Kit 200g + Ativador"
+            ]
+          }
+        },
+        {
+          "id": "hairlife-relaxin-natural-girassol",
+          "name": "HairLife Relaxin' & Natural com Extrato de Girassol",
+          "brand": "HairLife",
+          "priceBRL": 40.5,
+          "category": "relaxamentos",
+          "image": "/images/products/relaxamentos_/relaxamentos__10.JPG",
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__10.JPG"
+          ],
+          "rating": 4.5,
+          "reviews": 100,
+          "description": "Creme relaxante enriquecido com extrato de girassol para cabelos que buscam charme e delicadeza. Fórmula que relaxa suavemente mantendo movimento natural.",
+          "features": [
+            "Extrato de Girassol",
+            "Charme e Delicadeza",
+            "Relaxamento Suave",
+            "Movimento Natural",
+            "Fórmula Enriquecida",
+            "Kit Completo"
+          ],
+          "colors": [
+            "Azul/Amarelo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "HairLife",
+            "features": [
+              "Extrato de Girassol",
+              "Charme e Delicadeza",
+              "Relaxamento Suave",
+              "Movimento Natural",
+              "Fórmula Enriquecida",
+              "Kit Completo"
+            ]
+          }
+        },
+        {
+          "id": "hairlife-cacho-natural-encacheamento",
+          "name": "HairLife Cacho & Natural Creme para Encacheamento",
+          "brand": "HairLife",
+          "priceBRL": 43.8,
+          "category": "relaxamentos",
+          "image": "/images/products/relaxamentos_/relaxamentos__11.WEBP",
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__11.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 38,
+          "description": "Creme especial para encacheamento com extrato de girassol. Transforma cabelos ressecados em cachos definidos e naturalmente encantadores com balanço e movimento.",
+          "features": [
+            "Para Encacheamento",
+            "Extrato de Girassol",
+            "Cachos Definidos",
+            "Naturalmente Encantadores",
+            "Balanço e Movimento",
+            "20% Mais Produtos"
+          ],
+          "colors": [
+            "Azul/Laranja"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "HairLife",
+            "features": [
+              "Para Encacheamento",
+              "Extrato de Girassol",
+              "Cachos Definidos",
+              "Naturalmente Encantadores",
+              "Balanço e Movimento",
+              "20% Mais Produtos"
+            ]
+          }
+        }
+      ]
+    },
+    "hidratacao": {
+      "metadata": {
+        "category": "hidratacao",
+        "brand": "Diversos",
+        "type": "Produtos de Hidratação",
+        "analyzed": "2025-09-19T02:04:46.289Z",
+        "totalProducts": 16,
+        "description": "Produtos de Hidratação"
+      },
+      "products": [
+        {
+          "id": "novex-creme-pentear-antiporosidade-rosa",
+          "name": "Novex Creme para Pentear Antiporosidade 72H - Cachos Mega Volume",
+          "brand": "Novex",
+          "priceBRL": 42.9,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_1.WEBP",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_1.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 86,
+          "description": "Creme para pentear com fórmula antiporosidade que proporciona volume e definição para cabelos ressecados. Hidratação intensa por até 72 horas com proteção contra ressecamento.",
+          "features": [
+            "Antiporosidade 72H",
+            "Mega Volume",
+            "Para Cabelos Ressecados",
+            "Hidratação Intensa",
+            "Definição de Cachos",
+            "Proteção Térmica"
+          ],
+          "colors": [
+            "Rosa"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Novex",
+            "features": [
+              "Antiporosidade 72H",
+              "Mega Volume",
+              "Para Cabelos Ressecados",
+              "Hidratação Intensa",
+              "Definição de Cachos",
+              "Proteção Térmica"
+            ]
+          }
+        },
+        {
+          "id": "novex-leave-in-blindagem-impermeabilizante",
+          "name": "Novex Salon Blindagem Leave-in Impermeabilizante",
+          "brand": "Novex",
+          "priceBRL": 35.5,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_2.WEBP",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_2.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 35,
+          "description": "Leave-in com proteção absoluta antifrizz, anti pontas duplas e brilho extremo. Proteção para altas temperaturas até 232°C, ideal para uso profissional.",
+          "features": [
+            "Proteção Absoluta",
+            "Antifrizz",
+            "Anti Pontas Duplas",
+            "Brilho Extremo",
+            "Proteção até 232°C",
+            "Uso Profissional"
+          ],
+          "colors": [
+            "Cinza/Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Novex",
+            "features": [
+              "Proteção Absoluta",
+              "Antifrizz",
+              "Anti Pontas Duplas",
+              "Brilho Extremo",
+              "Proteção até 232°C",
+              "Uso Profissional"
+            ]
+          }
+        },
+        {
+          "id": "novex-gelato-pistache-bomba-lamelar",
+          "name": "Novex Gelato Pistache Bomba Lamelar 8 em 1",
+          "brand": "Novex",
+          "priceBRL": 44.14,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_3.WEBP",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_3.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 93,
+          "description": "Creme de tratamento ultraprofundo com deliciosa sensação refrescante. Bomba lamelar 8 em 1 com efeito brilho espelhado e 3 minutos mágicos de ação.",
+          "features": [
+            "8 em 1",
+            "Tratamento Ultraprofundo",
+            "Efeito Brilho Espelhado",
+            "3 Minutos Mágicos",
+            "Sensação Refrescante",
+            "Bomba Lamelar"
+          ],
+          "colors": [
+            "Verde/Pistache"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Novex",
+            "features": [
+              "8 em 1",
+              "Tratamento Ultraprofundo",
+              "Efeito Brilho Espelhado",
+              "3 Minutos Mágicos",
+              "Sensação Refrescante",
+              "Bomba Lamelar"
+            ]
+          }
+        },
+        {
+          "id": "novex-creme-pentear-antiporosidade-azul",
+          "name": "Novex Creme para Pentear Antiporosidade 72H - Cachos Mega Volume Azul",
+          "brand": "Novex",
+          "priceBRL": 42.9,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_4.WEBP",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_4.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 86,
+          "description": "Versão azul do creme antiporosidade para cabelos ressecados. Volume e definição para cabelos 3A, 3B e 3C com hidratação prolongada.",
+          "features": [
+            "Antiporosidade 72H",
+            "Para Cabelos 3A, 3B, 3C",
+            "Volume e Definição",
+            "Hidratação Prolongada",
+            "Cabelos Ressecados",
+            "Ultra Volume"
+          ],
+          "colors": [
+            "Azul"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Novex",
+            "features": [
+              "Antiporosidade 72H",
+              "Para Cabelos 3A, 3B, 3C",
+              "Volume e Definição",
+              "Hidratação Prolongada",
+              "Cabelos Ressecados",
+              "Ultra Volume"
+            ]
+          }
+        },
+        {
+          "id": "novex-blindagem-kit-leave-in-spray-tubo",
+          "name": "Kit Novex Salon Blindagem Leave-in - Spray + Tubo",
+          "brand": "Novex",
+          "priceBRL": 58.9,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_5.WEBP",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_5.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 67,
+          "description": "Kit completo com leave-in spray e tubo impermeabilizante. Reparação lamelar com 12 benefícios em 1 para proteção total dos fios contra agressões.",
+          "features": [
+            "12 em 1",
+            "Reparação Lamelar",
+            "Spray + Tubo",
+            "Impermeabilizante",
+            "Proteção Total",
+            "Kit Completo"
+          ],
+          "colors": [
+            "Preto/Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Novex",
+            "features": [
+              "12 em 1",
+              "Reparação Lamelar",
+              "Spray + Tubo",
+              "Impermeabilizante",
+              "Proteção Total",
+              "Kit Completo"
+            ]
+          }
+        },
+        {
+          "id": "novex-ritual-dorama-tsubaki",
+          "name": "Novex Ritual Dorama com Tsubaki - Creme Ultraprofundo",
+          "brand": "Novex",
+          "priceBRL": 46.5,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_6.WEBP",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_6.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 74,
+          "description": "Creme de tratamento ultraprofundo inspirado nos rituais coreanos com óleo de camélia Tsubaki. HNR nutrição para sonho de nutrição, brilho apaixonante e amor ao cabelo.",
+          "features": [
+            "Óleo de Camélia Tsubaki",
+            "Ritual Coreano",
+            "HNR Nutrição",
+            "Brilho Apaixonante",
+            "Tratamento Ultraprofundo",
+            "Sonho de Nutrição"
+          ],
+          "colors": [
+            "Rosa/Amarelo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Novex",
+            "features": [
+              "Óleo de Camélia Tsubaki",
+              "Ritual Coreano",
+              "HNR Nutrição",
+              "Brilho Apaixonante",
+              "Tratamento Ultraprofundo",
+              "Sonho de Nutrição"
+            ]
+          }
+        },
+        {
+          "id": "novex-blindagem-leave-in-spray-reparacao",
+          "name": "Novex Salon Blindagem Leave-in Spray - Reparação Lamelar",
+          "brand": "Novex",
+          "priceBRL": 32.8,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_7.PNG",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_7.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 66,
+          "description": "Leave-in spray com reparação lamelar e proteção antiuquebra. Fórmula 12 em 1 para cabelos danificados que precisam de reconstrução intensa.",
+          "features": [
+            "Reparação Lamelar",
+            "12 em 1",
+            "Antiuquebra",
+            "Para Cabelos Danificados",
+            "Reconstrução Intensa",
+            "Spray Prático"
+          ],
+          "colors": [
+            "Preto/Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Novex",
+            "features": [
+              "Reparação Lamelar",
+              "12 em 1",
+              "Antiuquebra",
+              "Para Cabelos Danificados",
+              "Reconstrução Intensa",
+              "Spray Prático"
+            ]
+          }
+        },
+        {
+          "id": "biondina-anaconda-reflexos-naturais",
+          "name": "Biondina Anaconda Reflexos Naturais com Camomila",
+          "brand": "Anaconda",
+          "priceBRL": 24.99,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_8.PNG",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_8.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 45,
+          "description": "Loção clareadora com extrato de camomila para reflexos naturais. Clareia e realça a cor loira naturalmente, condiciona e adiciona brilho sem danificar os fios.",
+          "features": [
+            "Extrato de Camomila",
+            "Reflexos Naturais",
+            "Clareia Naturalmente",
+            "Condiciona",
+            "Adiciona Brilho",
+            "Não Danifica"
+          ],
+          "colors": [
+            "Branco/Amarelo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Anaconda",
+            "features": [
+              "Extrato de Camomila",
+              "Reflexos Naturais",
+              "Clareia Naturalmente",
+              "Condiciona",
+              "Adiciona Brilho",
+              "Não Danifica"
+            ]
+          }
+        },
+        {
+          "id": "salon-line-mascara-matizadora-chocolate",
+          "name": "Salon Line Máscara Matizadora #TodeCacho Chocolate",
+          "brand": "Salon Line",
+          "priceBRL": 33.5,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_9.PNG",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_9.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 33,
+          "description": "Máscara matizadora vegana com blend de cacau e óleo de amêndoas. Hidrata profundamente promovendo efeito castanho com nuance avermelhada de longa duração.",
+          "features": [
+            "Vegana",
+            "Blend de Cacau",
+            "Óleo de Amêndoas",
+            "Efeito Castanho Avermelhado",
+            "Longa Duração",
+            "Para Cachos e Crespos"
+          ],
+          "colors": [
+            "Marrom"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Salon Line",
+            "features": [
+              "Vegana",
+              "Blend de Cacau",
+              "Óleo de Amêndoas",
+              "Efeito Castanho Avermelhado",
+              "Longa Duração",
+              "Para Cachos e Crespos"
+            ]
+          }
+        },
+        {
+          "id": "bio-extratus-colorante-castanho",
+          "name": "Bio Extratus Colorante Castanho - 2 Minutos Mágicos",
+          "brand": "Bio Extratus",
+          "priceBRL": 28.9,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_10.PNG",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_10.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 100,
+          "description": "Máscara capilar colorante com ação em 2 minutos mágicos. Mantém manteiga illipê, Goji Berry e microqueratina para hidratação e intensificação dos tons castanhos.",
+          "features": [
+            "2 Minutos Mágicos",
+            "Manteiga Illipê",
+            "Goji Berry",
+            "Microqueratina",
+            "Intensifica Castanhos",
+            "pH 4.5"
+          ],
+          "colors": [
+            "Preto/Laranja"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Bio Extratus",
+            "features": [
+              "2 Minutos Mágicos",
+              "Manteiga Illipê",
+              "Goji Berry",
+              "Microqueratina",
+              "Intensifica Castanhos",
+              "pH 4.5"
+            ]
+          }
+        },
+        {
+          "id": "bio-extratus-sillitan-oleo-tutano",
+          "name": "Bio Extratus Sillitan Óleo Capilar com Tutano",
+          "brand": "Bio Extratus",
+          "priceBRL": 22.5,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_11.WEBP",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_11.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 86,
+          "description": "Óleo capilar com silicone e tutano para cabelos ressecados. Reduz volume, aumenta brilho e maciez com proteção contra agressões externas.",
+          "features": [
+            "Silicone com Tutano",
+            "Para Cabelos Ressecados",
+            "Reduz Volume",
+            "Aumenta Brilho",
+            "Proteção Externa",
+            "Ativador de Cachos"
+          ],
+          "colors": [
+            "Branco/Vermelho/Amarelo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Bio Extratus",
+            "features": [
+              "Silicone com Tutano",
+              "Para Cabelos Ressecados",
+              "Reduz Volume",
+              "Aumenta Brilho",
+              "Proteção Externa",
+              "Ativador de Cachos"
+            ]
+          }
+        },
+        {
+          "id": "salon-line-mascara-matizadora-vermelho",
+          "name": "Salon Line Máscara Matizadora #TodeCacho Vermelho Cereja",
+          "brand": "Salon Line",
+          "priceBRL": 33.5,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_12.PNG",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_12.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 53,
+          "description": "Máscara de hidratação matizadora com tecnologia PROFIX. Revitaliza a cor dos cabelos avermelhados proporcionando força, saúde e maciez profunda para cachos.",
+          "features": [
+            "Tecnologia PROFIX",
+            "Revitaliza Avermelhados",
+            "Força e Saúde",
+            "Maciez Profunda",
+            "Para Cachos e Crespos",
+            "Hidratação Intensa"
+          ],
+          "colors": [
+            "Vermelho"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Salon Line",
+            "features": [
+              "Tecnologia PROFIX",
+              "Revitaliza Avermelhados",
+              "Força e Saúde",
+              "Maciez Profunda",
+              "Para Cachos e Crespos",
+              "Hidratação Intensa"
+            ]
+          }
+        },
+        {
+          "id": "salon-line-mascara-matizadora-ruivo",
+          "name": "Salon Line Máscara Matizadora #TodeCacho Ruivo Natural",
+          "brand": "Salon Line",
+          "priceBRL": 33.5,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_13.PNG",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_13.PNG"
+          ],
+          "rating": 4.5,
+          "reviews": 77,
+          "description": "Máscara matizadora para cabelos ruivos com hidratação profunda. Protege a formatação dos cachos enquanto intensifica tons ruivos naturais com textura cremosa.",
+          "features": [
+            "Para Cabelos Ruivos",
+            "Hidratação Profunda",
+            "Protege Cachos",
+            "Intensifica Ruivos",
+            "Textura Cremosa",
+            "Tons Naturais"
+          ],
+          "colors": [
+            "Laranja"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Salon Line",
+            "features": [
+              "Para Cabelos Ruivos",
+              "Hidratação Profunda",
+              "Protege Cachos",
+              "Intensifica Ruivos",
+              "Textura Cremosa",
+              "Tons Naturais"
+            ]
+          }
+        },
+        {
+          "id": "novex-creme-pentear-antirressecamento-amarelo",
+          "name": "Novex Creme para Pentear Antirressecamento 72H - Cachos",
+          "brand": "Novex",
+          "priceBRL": 42.9,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_14.WEBP",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_14.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 43,
+          "description": "Creme para pentear com definição e brilho para cabelos opacos. Fórmula 72H de definição no day after com proteção antirressecamento.",
+          "features": [
+            "Antirressecamento 72H",
+            "Para Cabelos Opacos",
+            "Definição Day After",
+            "Brilho Intenso",
+            "Para Cachos 3A, 3B, 3C",
+            "Proteção Prolongada"
+          ],
+          "colors": [
+            "Amarelo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Novex",
+            "features": [
+              "Antirressecamento 72H",
+              "Para Cabelos Opacos",
+              "Definição Day After",
+              "Brilho Intenso",
+              "Para Cachos 3A, 3B, 3C",
+              "Proteção Prolongada"
+            ]
+          }
+        },
+        {
+          "id": "novex-leave-in-gloss-color-blindagem",
+          "name": "Novex Salon Blindagem Leave-in Gloss Color",
+          "brand": "Novex",
+          "priceBRL": 38.9,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_15.WEBP",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_15.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 60,
+          "description": "Leave-in com proteção da cor e brilho espelhado para cabelos tingidos. Proteção para altas temperaturas com tecnologia gloss color de longa duração.",
+          "features": [
+            "Proteção da Cor",
+            "Brilho Espelhado",
+            "Para Cabelos Tingidos",
+            "Gloss Color",
+            "Proteção Térmica",
+            "Longa Duração"
+          ],
+          "colors": [
+            "Preto/Dourado"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Novex",
+            "features": [
+              "Proteção da Cor",
+              "Brilho Espelhado",
+              "Para Cabelos Tingidos",
+              "Gloss Color",
+              "Proteção Térmica",
+              "Longa Duração"
+            ]
+          }
+        },
+        {
+          "id": "novex-creme-pentear-antirressecamento-roxo",
+          "name": "Novex Creme para Pentear Antirressecamento 72H - Cachos Roxo",
+          "brand": "Novex",
+          "priceBRL": 42.9,
+          "category": "hidratacao",
+          "image": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_16.WEBP",
+          "images": [
+            "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_16.WEBP"
+          ],
+          "rating": 4.5,
+          "reviews": 62,
+          "description": "Versão roxa do creme antirressecamento com definição e brilho para cabelos opacos. 72H de definição no day after para cachos cacheados e crespos.",
+          "features": [
+            "Antirressecamento 72H",
+            "Para Cabelos Opacos",
+            "Definição Day After",
+            "Para Cachos 4A, 4B, 4C",
+            "Brilho e Definição",
+            "Proteção Prolongada"
+          ],
+          "colors": [
+            "Roxo"
+          ],
+          "inStock": true,
+          "featured": false,
+          "isNew": true,
+          "specifications": {
+            "brand": "Novex",
+            "features": [
+              "Antirressecamento 72H",
+              "Para Cabelos Opacos",
+              "Definição Day After",
+              "Para Cachos 4A, 4B, 4C",
+              "Brilho e Definição",
+              "Proteção Prolongada"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

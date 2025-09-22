@@ -22,11 +22,16 @@ model User {
   name      String?
   phone     String?
   locale    String   @default("pt")
-  
+  image     String?
+
   // OAuth fields
   googleId     String?  @unique
   facebookId   String?  @unique
+  twitterId    String?  @unique
   avatar       String?
+
+  // NextAuth required fields
+  emailVerified DateTime?
   
   // Profile info
   firstName    String?
@@ -42,6 +47,13 @@ model User {
   isActive     Boolean  @default(true)
   isVerified   Boolean  @default(false)
   role         UserRole @default(CUSTOMER)
+
+  // Programa de Pontos
+  totalPoints     Int      @default(0)
+  availablePoints Int      @default(0)
+  usedPoints      Int      @default(0)
+  tierLevel       TierLevel @default(BRONZE)
+  tierProgress    Int      @default(0)
   
   // Timestamps
   createdAt    DateTime @default(now())
@@ -69,6 +81,14 @@ enum Gender {
   FEMALE
   OTHER
   PREFER_NOT_TO_SAY
+}
+
+enum TierLevel {
+  BRONZE
+  SILVER
+  GOLD
+  PLATINUM
+  DIAMOND
 }
 
 model Address {
@@ -158,15 +178,6 @@ model Product {
   sku         String   @unique
   barcode     String?
   
-  // Pricing - Brazilian hair studio with professional pricing
-  price       Float    // Using Float for MongoDB
-  professionalPrice Float?
-  comparePrice Float?
-  cost        Float?
-  isOnPromotion Boolean @default(false)
-  promoPrice    Float?
-  promoStartDate DateTime?
-  promoEndDate   DateTime?
   
   // Physical attributes
   weight      Float?   // in grams
@@ -292,7 +303,6 @@ type ProductOptionValue {
   value           String  // "Preto", "60cm", "1000ml"
   label           String? // Display label if different from value
   hexColor        String? // For color options
-  priceAdjustment Float   @default(0)
   quantity        Int     @default(0)
   isActive        Boolean @default(true)
   displayOrder    Int     @default(0)
@@ -310,10 +320,6 @@ model ProductVariant {
   size      String?  // 50cm, 60cm, etc.
   color     String?  // Color name or code
   
-  // Pricing override
-  price     Float?
-  professionalPrice Float?
-  comparePrice Float?
   
   // Stock override
   quantity  Int      @default(0)
@@ -408,12 +414,6 @@ model Order {
   shippingAddress OrderAddress?
   billingAddress  OrderAddress?
   
-  // Order totals
-  subtotal      Float
-  taxAmount     Float    @default(0)
-  shippingCost  Float    @default(0)
-  discountAmount Float   @default(0)
-  total         Float
   
   // Currency
   currency      String   @default("EUR")
@@ -497,7 +497,6 @@ type OrderItem {
   // Item details at time of purchase
   name      String
   sku       String
-  price     Float
   quantity  Int
   
   // Selected options snapshot
@@ -512,9 +511,6 @@ model Payment {
   id            String   @id @default(auto()) @map("_id") @db.ObjectId
   orderId       String   @db.ObjectId
   
-  // Payment details
-  amount        Float
-  currency      String   @default("EUR")
   method        PaymentMethod
   
   // External references
@@ -590,10 +586,6 @@ model Coupon {
   name        String
   description String?
   
-  // Discount settings
-  type        DiscountType
-  value       Float
-  minOrderValue Float?
   
   // Usage limits
   usageLimit  Int?
@@ -612,6 +604,132 @@ model Coupon {
   updatedAt   DateTime     @updatedAt
   
   @@map("coupons")
+}
+
+// ================================
+// PROGRAMA DE PONTOS
+// ================================
+
+model PointsTransaction {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+
+  // Transaction details
+  type        PointsTransactionType
+  points      Int      // Positive for earn, negative for redeem
+  description String
+
+  // References
+  orderId     String?  @db.ObjectId
+  productId   String?  @db.ObjectId
+  couponId    String?  @db.ObjectId
+
+  // Metadata
+  metadata    Json?    // Extra data like tier bonus, special promotion, etc.
+
+  // Status
+  status      PointsTransactionStatus @default(COMPLETED)
+  expiresAt   DateTime? // For points that expire
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("points_transactions")
+}
+
+enum PointsTransactionType {
+  PURCHASE        // Points earned from purchase
+  SIGNUP_BONUS    // Welcome bonus
+  BIRTHDAY_BONUS  // Birthday points
+  REVIEW_BONUS    // Points for writing reviews
+  REFERRAL_BONUS  // Points for referring friends
+  TIER_BONUS      // Tier upgrade bonus
+  REDEEM_DISCOUNT // Points redeemed for discount
+  REDEEM_PRODUCT  // Points redeemed for free product
+  EXPIRED         // Points expired
+  ADJUSTMENT      // Admin adjustment
+}
+
+enum PointsTransactionStatus {
+  PENDING
+  COMPLETED
+  CANCELLED
+  EXPIRED
+}
+
+model PointsReward {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+
+  // Reward details
+  name        String
+  description String
+  type        RewardType
+  pointsCost  Int
+
+  // Reward value
+  discountPercent  Int?     // For percentage discounts
+  discountFixed    Float?   // For fixed amount discounts
+  productId        String?  @db.ObjectId // For free products
+  freeShipping     Boolean  @default(false)
+
+  // Availability
+  minTierLevel     TierLevel @default(BRONZE)
+  maxRedemptions   Int?      // Global limit
+  maxPerUser       Int?      @default(1)
+
+  // Validity
+  validFrom   DateTime
+  validTo     DateTime?
+
+  // Status
+  isActive    Boolean  @default(true)
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("points_rewards")
+}
+
+enum RewardType {
+  PERCENTAGE_DISCOUNT
+  FIXED_DISCOUNT
+  FREE_PRODUCT
+  FREE_SHIPPING
+  TIER_UPGRADE
+}
+
+model PointsRedemption {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+  rewardId    String   @db.ObjectId
+
+  // Redemption details
+  pointsUsed  Int
+  status      RedemptionStatus @default(PENDING)
+
+  // Usage tracking
+  orderId     String?  @db.ObjectId // If used in an order
+  usedAt      DateTime?
+  expiresAt   DateTime?
+
+  // Generated coupon code for redemption
+  couponCode  String?  @unique
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("points_redemptions")
+}
+
+enum RedemptionStatus {
+  PENDING
+  ACTIVE
+  USED
+  EXPIRED
+  CANCELLED
 }
 
 enum DiscountType {
@@ -740,9 +858,50 @@ model ProductView {
   productId String   @db.ObjectId
   userId    String?  @db.ObjectId
   sessionId String
-  
+
   // Timestamps
   createdAt DateTime @default(now())
-  
+
   @@map("product_views")
+}
+
+// ================================
+// NEXTAUTH REQUIRED MODELS
+// ================================
+
+model Account {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId            String  @db.ObjectId
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.String
+  access_token      String? @db.String
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.String
+  session_state     String?
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  sessionToken String   @unique
+  userId       String   @db.ObjectId
+  expires      DateTime
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verificationtokens")
 }

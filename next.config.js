@@ -113,6 +113,12 @@ const nextConfig = {
     return [];
   },
   
+  // Development optimizations
+  poweredByHeader: false,
+
+  // Fix workspace root warning
+  outputFileTracingRoot: __dirname,
+
   experimental: {
     serverActions: {
       bodySizeLimit: '5mb',
@@ -136,6 +142,32 @@ const nextConfig = {
         })
       );
     }
+
+    // Fix OpenTelemetry issues
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+    };
+
+    // Ignore OpenTelemetry modules that cause issues
+    config.externals = config.externals || [];
+
+    // Fix for OpenTelemetry issues in Next.js 15.x
+    config.externals.push({
+      '@opentelemetry/api': 'commonjs @opentelemetry/api',
+      '@opentelemetry/sdk-node': 'commonjs @opentelemetry/sdk-node',
+      '@opentelemetry/auto-instrumentations-node': 'commonjs @opentelemetry/auto-instrumentations-node',
+    });
+
+    // Additional webpack configuration to handle OpenTelemetry
+    config.module = config.module || {};
+    config.module.rules = config.module.rules || [];
+    config.module.rules.push({
+      test: /node_modules\/@opentelemetry/,
+      use: 'null-loader',
+    });
 
     return config;
   },

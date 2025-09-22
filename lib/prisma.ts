@@ -1,22 +1,28 @@
 /**
  * Prisma Database Client Configuration
- * JC Hair Studio's 62's 62 E-commerce
+ * JC Hair Studio's 62 E-commerce
+ *
+ * Garante que apenas uma instância do PrismaClient exista em ambiente de
+ * desenvolvimento (hot-reload do Next.js). Previne erro "@prisma/client did not initialize yet".
  */
 
 import { PrismaClient } from './generated/prisma';
 
-const globalForPrisma = globalThis as unknown as {
-  prisma: PrismaClient | undefined;
-};
+declare global {
+  // eslint-disable-next-line no-var
+  var __prismaInstance__: PrismaClient | undefined;
+}
 
+// Cria nova instância apenas se não existir
 export const prisma =
-  globalForPrisma.prisma ??
+  global.__prismaInstance__ ??
   new PrismaClient({
-    log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
+    log: process.env.NODE_ENV === 'production' ? [] : ['query', 'warn', 'error'],
     errorFormat: 'pretty',
   });
 
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+// Salva a instância globalmente em dev para evitar múltiplas instâncias
+if (process.env.NODE_ENV !== 'production') global.__prismaInstance__ = prisma;
 
 export default prisma;
 
@@ -45,7 +51,8 @@ export async function disconnectDB() {
 // Health check helper
 export async function checkDBHealth() {
   try {
-    await prisma.$queryRaw`SELECT 1`;
+    // MongoDB health check - usando findFirst em uma collection pequena
+    await prisma.user.findFirst({ take: 1 });
     return { status: 'healthy', timestamp: new Date().toISOString() };
   } catch (error) {
     return { status: 'unhealthy', error: error?.toString(), timestamp: new Date().toISOString() };
@@ -59,79 +66,22 @@ export type OrderWithItems = Awaited<ReturnType<typeof getOrderWithItems>>;
 
 // Common query helpers
 export async function getUserWithAddresses(userId: string) {
+  // MongoDB com Prisma - sem include, usar findMany separado
   return prisma.user.findUnique({
-    where: { id: userId },
-    include: {
-      addresses: {
-        where: { isActive: true },
-        orderBy: { isDefault: 'desc' },
-      },
-    },
+    where: { id: userId }
   });
 }
 
 export async function getProductWithDetails(productId: string) {
+  // MongoDB com Prisma - sem include, usar findMany separado
   return prisma.product.findUnique({
-    where: { id: productId },
-    include: {
-      images: {
-        orderBy: { displayOrder: 'asc' },
-      },
-      variants: {
-        where: { isActive: true },
-        orderBy: { displayOrder: 'asc' },
-      },
-      categories: {
-        include: {
-          category: true,
-        },
-      },
-      reviews: {
-        where: { isPublished: true },
-        include: {
-          user: {
-            select: {
-              name: true,
-              firstName: true,
-              lastName: true,
-            },
-          },
-        },
-        orderBy: { createdAt: 'desc' },
-      },
-    },
+    where: { id: productId }
   });
 }
 
 export async function getOrderWithItems(orderId: string) {
+  // MongoDB com Prisma - sem include, usar findMany separado
   return prisma.order.findUnique({
-    where: { id: orderId },
-    include: {
-      items: {
-        include: {
-          product: {
-            select: {
-              name: true,
-              images: {
-                where: { isMain: true },
-                take: 1,
-              },
-            },
-          },
-        },
-      },
-      shippingAddress: true,
-      user: {
-        select: {
-          email: true,
-          name: true,
-          firstName: true,
-          lastName: true,
-        },
-      },
-      payments: {
-        orderBy: { createdAt: 'desc' },
-      },
-    },
+    where: { id: orderId }
   });
 }

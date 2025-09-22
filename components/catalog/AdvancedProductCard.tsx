@@ -317,11 +317,11 @@ export default function AdvancedProductCard({
               {/* Price */}
               <div className="flex items-center gap-3">
                 <span className="text-2xl font-bold text-amber-600">
-                  R$ {currentPrice.toFixed(2)}
+                  €{(currentPrice * 0.159).toFixed(2)}
                 </span>
                 {comparePrice && (
                   <span className="text-lg text-gray-400 line-through">
-                    R$ {comparePrice.toFixed(2)}
+                    €{(comparePrice * 0.159).toFixed(2)}
                   </span>
                 )}
               </div>
@@ -476,11 +476,11 @@ export default function AdvancedProductCard({
         {/* Price */}
         <div className="flex items-center gap-2 mb-4">
           <span className="text-xl font-bold text-amber-600">
-            R$ {currentPrice.toFixed(2)}
+            €{(currentPrice * 0.159).toFixed(2)}
           </span>
           {comparePrice && (
             <span className="text-sm text-gray-400 line-through">
-              R$ {comparePrice.toFixed(2)}
+              €{(comparePrice * 0.159).toFixed(2)}
             </span>
           )}
         </div>

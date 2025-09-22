@@ -8,18 +8,25 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 import { CartItem, Cart } from '../../types/product';
 
 interface CartState extends Cart {
+  // UI State
+  isOpen: boolean;
+
   // Actions
   addItem: (item: Omit<CartItem, 'id'>) => void;
   removeItem: (itemId: string) => void;
   updateQuantity: (itemId: string, quantity: number) => void;
   clearCart: () => void;
-  
+  openCart: () => void;
+  closeCart: () => void;
+  toggleCart: () => void;
+
   // Computed
   getItemCount: () => number;
   getSubtotal: () => number;
   getTaxAmount: (taxRate?: number) => number;
   getTotal: (taxRate?: number) => number;
-  
+  getTotalItems: () => number;
+
   // Utils
   isInCart: (productId: string, variantId?: string) => boolean;
   getCartItem: (productId: string, variantId?: string) => CartItem | undefined;
@@ -44,6 +51,7 @@ export const useCartStore = create<CartState>()(
       subtotal: 0,
       itemsCount: 0,
       isEmpty: true,
+      isOpen: false,
 
       // Actions
       addItem: (newItem) => {
@@ -127,6 +135,19 @@ export const useCartStore = create<CartState>()(
         });
       },
 
+      openCart: () => {
+        set({ isOpen: true });
+      },
+
+      closeCart: () => {
+        set({ isOpen: false });
+      },
+
+      toggleCart: () => {
+        const state = get();
+        set({ isOpen: !state.isOpen });
+      },
+
       // Computed values
       getItemCount: () => {
         const state = get();
@@ -147,6 +168,11 @@ export const useCartStore = create<CartState>()(
         const subtotal = get().getSubtotal();
         const tax = get().getTaxAmount(taxRate);
         return subtotal + tax;
+      },
+
+      getTotalItems: () => {
+        const state = get();
+        return state.items.reduce((count, item) => count + item.quantity, 0);
       },
 
       // Utils
@@ -170,6 +196,7 @@ export const useCartStore = create<CartState>()(
         subtotal: state.subtotal,
         itemsCount: state.itemsCount,
         isEmpty: state.isEmpty,
+        isOpen: state.isOpen,
       }),
       onRehydrateStorage: () => (state) => {
         if (state) {
@@ -196,19 +223,24 @@ export const useCart = () => {
     subtotal: store.subtotal,
     itemsCount: store.itemsCount,
     isEmpty: store.isEmpty,
-    
+    isOpen: store.isOpen,
+
     // Actions
     addItem: store.addItem,
     removeItem: store.removeItem,
     updateQuantity: store.updateQuantity,
     clearCart: store.clearCart,
-    
+    openCart: store.openCart,
+    closeCart: store.closeCart,
+    toggleCart: store.toggleCart,
+
     // Computed
     getItemCount: store.getItemCount,
     getSubtotal: store.getSubtotal,
     getTaxAmount: store.getTaxAmount,
     getTotal: store.getTotal,
-    
+    getTotalItems: store.getTotalItems,
+
     // Utils
     isInCart: store.isInCart,
     getCartItem: store.getCartItem,

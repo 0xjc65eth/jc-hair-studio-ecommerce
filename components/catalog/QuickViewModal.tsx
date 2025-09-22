@@ -294,11 +294,11 @@ export default function QuickViewModal({
             {/* Price */}
             <div className="flex items-center gap-3 mb-6">
               <span className="text-3xl font-bold text-amber-600">
-                R$ {currentPrice.toFixed(2)}
+                €{(currentPrice * 0.159).toFixed(2)}
               </span>
               {product.comparePrice && (
                 <span className="text-xl text-gray-400 line-through">
-                  R$ {product.comparePrice.toFixed(2)}
+                  €{(product.comparePrice * 0.159).toFixed(2)}
                 </span>
               )}
             </div>
@@ -397,7 +397,7 @@ export default function QuickViewModal({
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Truck className="w-5 h-5 text-green-600" />
-                <span>Frete grátis para compras acima de R$ 199</span>
+                <span>Frete grátis para compras acima de €32</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-gray-600">
                 <Shield className="w-5 h-5 text-blue-600" />

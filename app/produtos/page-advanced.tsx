@@ -107,8 +107,7 @@ function ProductCard({ product, viewMode }: ProductCardProps) {
                 €{product.preco_eur.toFixed(2)}
               </span>
               <span className="text-sm text-gray-400">
-                (R$ {product.preco_brl.toFixed(2)})
-              </span>
+                              </span>
             </div>
             
             <div className="flex items-center gap-2">
@@ -192,8 +191,7 @@ function ProductCard({ product, viewMode }: ProductCardProps) {
             €{product.preco_eur.toFixed(2)}
           </span>
           <span className="text-xs text-gray-400">
-            (R$ {product.preco_brl.toFixed(2)})
-          </span>
+                      </span>
         </div>
         
         <button className="w-full bg-gray-900 text-white py-2.5 rounded-lg hover:bg-amber-600 transition-colors font-medium text-sm tracking-wide">

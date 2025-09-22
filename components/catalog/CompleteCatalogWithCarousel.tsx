@@ -349,11 +349,11 @@ const CompleteCatalogWithCarousel = () => {
             <div>
               {product.originalPrice && (
                 <span className="text-sm text-gray-400 line-through mr-2">
-                  R$ {product.originalPrice.toFixed(2)}
+                  €{(product.originalPrice * 0.159).toFixed(2)}
                 </span>
               )}
               <div className="font-bold text-xl text-gray-900">
-                R$ {product.price.toFixed(2)}
+                €{(product.price * 0.159).toFixed(2)}
               </div>
             </div>
 
@@ -502,15 +502,15 @@ const CompleteCatalogWithCarousel = () => {
                   <div className="flex items-baseline gap-3 mb-2">
                     {selectedProduct.originalPrice && (
                       <span className="text-xl text-gray-400 line-through">
-                        R$ {selectedProduct.originalPrice.toFixed(2)}
+                        €{(selectedProduct.originalPrice * 0.159).toFixed(2)}
                       </span>
                     )}
                     <span className="text-4xl font-bold text-gray-900">
-                      R$ {selectedProduct.price.toFixed(2)}
+                      €{(selectedProduct.price * 0.159).toFixed(2)}
                     </span>
                   </div>
                   <p className="text-sm text-gray-600">
-                    Em até 12x de R$ {(selectedProduct.price / 12).toFixed(2)} sem juros
+                    Em até 12x de €{((selectedProduct.price * 0.159) / 12).toFixed(2)} sem juros
                   </p>
                 </div>
 
@@ -693,9 +693,9 @@ const CompleteCatalogWithCarousel = () => {
                     className="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-purple-500 focus:outline-none transition-colors"
                   >
                     <option value="all">Todas as faixas</option>
-                    <option value="low">Até R$ 25,00</option>
-                    <option value="medium">R$ 25,00 - R$ 50,00</option>
-                    <option value="high">Acima de R$ 50,00</option>
+                    <option value="low">Até €4,00</option>
+                    <option value="medium">€4,00 - €8,00</option>
+                    <option value="high">Acima de €8,00</option>
                   </select>
                 </div>
 

@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Termos de Uso | 62 Beauty\'s 62',
-  description: 'Termos e Condições de Uso juridicamente blindados para e-commerce internacional',
+  title: 'Termos de Uso | JC Hair Studio\'s 62',
+  description: 'Termos e Condições de Uso para e-commerce brasileiro de produtos capilares',
 }
 
 export default function TermosUso() {
@@ -15,9 +15,9 @@ export default function TermosUso() {
               Termos e Condições de Uso
             </h1>
             <p className="text-gray-600 text-lg">
-              <strong>Última atualização:</strong> 12 de setembro de 2025<br/>
-              <strong>Versão:</strong> 3.0 - Proteção Legal Máxima<br/>
-              <strong>Entidade:</strong> 62 Beauty's 62, Lda.
+              <strong>Última atualização:</strong> 19 de setembro de 2025<br/>
+              <strong>Versão:</strong> 1.0<br/>
+              <strong>Entidade:</strong> JC Hair Studio's 62 LTDA
             </p>
           </header>
 
@@ -29,10 +29,10 @@ export default function TermosUso() {
               <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
                 <p className="font-semibold text-red-800 mb-3">IMPORTANTE: LEIA ATENTAMENTE ANTES DE UTILIZAR NOSSOS SERVIÇOS</p>
                 <div className="space-y-3">
-                  <p><strong>1.1.</strong> Ao aceder, navegar ou utilizar este website (www.jchairstudio62.com), VOCÊ CONFIRMA que leu, compreendeu e aceita ficar vinculado a estes Termos e Condições de Uso ("Termos").</p>
+                  <p><strong>1.1.</strong> Ao acessar, navegar ou utilizar este website (jc-hair-studio.vercel.app), VOCÊ CONFIRMA que leu, compreendeu e aceita ficar vinculado a estes Termos e Condições de Uso ("Termos").</p>
                   <p><strong>1.2.</strong> Se NÃO CONCORDAR com qualquer parte destes Termos, deve CESSAR IMEDIATAMENTE a utilização do website e serviços.</p>
                   <p><strong>1.3.</strong> A utilização continuada após alterações aos Termos constitui aceitação das mesmas.</p>
-                  <p><strong>1.4.</strong> Estes Termos formam um contrato legalmente vinculativo entre você e 62 Beauty's 62, Lda.</p>
+                  <p><strong>1.4.</strong> Estes Termos formam um contrato legalmente vinculativo entre você e JC Hair Studio's 62 LTDA.</p>
                 </div>
               </div>
             </section>
@@ -44,17 +44,17 @@ export default function TermosUso() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="font-semibold text-blue-800 mb-2">Dados da Empresa</h3>
-                    <p><strong>Denominação Social:</strong> 62 Beauty's 62, Lda.</p>
-                    <p><strong>NIPC/NIF:</strong> [Número de identificação fiscal]</p>
-                    <p><strong>Conservatória:</strong> [Localização do registo comercial]</p>
-                    <p><strong>Capital Social:</strong> [Valor em euros]</p>
+                    <p><strong>Denominação Social:</strong> JC Hair Studio's 62 LTDA</p>
+                    <p><strong>CNPJ:</strong> [Número de identificação fiscal brasileiro - a definir]</p>
+                    <p><strong>Inscrição Estadual:</strong> [Número de inscrição estadual - a definir]</p>
+                    <p><strong>Capital Social:</strong> [Valor em reais - a definir]</p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-blue-800 mb-2">Contactos</h3>
-                    <p><strong>Sede Social:</strong> [Endereço completo em Portugal]</p>
-                    <p><strong>Email:</strong> info@jchairstudio62.com</p>
-                    <p><strong>Telefone:</strong> [Número de contacto]</p>
-                    <p><strong>Horário:</strong> Segunda a Sexta, 9h às 18h</p>
+                    <p><strong>Sede Social:</strong> Goiânia, Goiás, Brasil</p>
+                    <p><strong>Email:</strong> contato@jchairstudios62.xyz</p>
+                    <p><strong>WhatsApp:</strong> +351 928375226 | +32 497484720</p>
+                    <p><strong>Horário:</strong> Segunda a Sexta, 9h às 18h (Horário de Brasília)</p>
                   </div>
                 </div>
               </div>
@@ -64,44 +64,44 @@ export default function TermosUso() {
             <section>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">3. Descrição dos Serviços Oferecidos</h2>
               <div className="space-y-4">
-                <p><strong>3.1. OBJETO:</strong> A 62 Beauty's 62 opera uma plataforma de e-commerce especializada na venda de produtos para cabelo, extensões, mega hair e acessórios de beleza.</p>
+                <p><strong>3.1. OBJETO:</strong> A JC Hair Studio's 62 opera uma plataforma de e-commerce brasileira especializada na venda de produtos capilares de qualidade, com mais de 40 anos de tradição familiar no ramo.</p>
                 
                 <h3 className="text-xl font-semibold text-purple-700 mt-6 mb-3">Produtos Disponíveis:</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2">Extensões e Mega Hair</h4>
+                    <h4 className="font-semibold mb-2">Tratamentos Capilares</h4>
                     <ul className="text-sm space-y-1">
-                      <li>• Mega hair natural brasileiro</li>
-                      <li>• Extensões sintéticas premium</li>
-                      <li>• Fitas adesivas profissionais</li>
-                      <li>• Queratina e microlinks</li>
+                      <li>• Progressivas e alisamentos</li>
+                      <li>• Botox capilar e hidratações</li>
+                      <li>• Selagem e cauterização</li>
+                      <li>• Reconstrução capilar</li>
                     </ul>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2">Produtos de Cuidado</h4>
+                    <h4 className="font-semibold mb-2">Tinturas e Colorações</h4>
                     <ul className="text-sm space-y-1">
-                      <li>• Shampoos e condicionadores</li>
-                      <li>• Máscaras reconstrutoras</li>
-                      <li>• Óleos nutritivos</li>
-                      <li>• Produtos finalizadores</li>
+                      <li>• Tinturas profissionais (L'Oréal, Wella)</li>
+                      <li>• Colorações permanentes e semi</li>
+                      <li>• Descolorantes e oxidantes</li>
+                      <li>• Matizadores e tonalizantes</li>
                     </ul>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2">Progressiva Vogue</h4>
+                    <h4 className="font-semibold mb-2">Shampoos e Condicionadores</h4>
                     <ul className="text-sm space-y-1">
-                      <li>• Kits de progressiva profissional</li>
-                      <li>• Tratamentos alisadores</li>
-                      <li>• Produtos pós-química</li>
-                      <li>• Neutralizantes específicos</li>
+                      <li>• Linha profissional Bio Extratus</li>
+                      <li>• Produtos para diferentes tipos de cabelo</li>
+                      <li>• Shampoos de manutenção</li>
+                      <li>• Leave-ins e finalizadores</li>
                     </ul>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2">Acessórios</h4>
+                    <h4 className="font-semibold mb-2">Cosméticos e Maquiagens</h4>
                     <ul className="text-sm space-y-1">
-                      <li>• Ferramentas profissionais</li>
-                      <li>• Apliques e presilhas</li>
-                      <li>• Kits de aplicação</li>
-                      <li>• Produtos de manutenção</li>
+                      <li>• Bases e corretivos Mari Maria</li>
+                      <li>• Produtos Bruna Tavares BT Skin</li>
+                      <li>• Esmaltes e produtos de unha</li>
+                      <li>• Acessórios de beleza</li>
                     </ul>
                   </div>
                 </div>
@@ -202,10 +202,10 @@ export default function TermosUso() {
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h3 className="font-semibold text-green-800 mb-3">6.1. Formação de Preços</h3>
                   <div className="space-y-3">
-                    <p><strong>6.1.1.</strong> Todos os preços são apresentados em EUROS (€) e incluem IVA à taxa legal em vigor</p>
+                    <p><strong>6.1.1.</strong> Todos os preços são apresentados em EUROS (€) e incluem impostos conforme legislação aplicável</p>
                     <p><strong>6.1.2.</strong> Os preços podem variar sem aviso prévio, sendo aplicável o preço vigente no momento da confirmação do pedido</p>
                     <p><strong>6.1.3.</strong> Erros tipográficos ou de sistema não vinculam a empresa</p>
-                    <p><strong>6.1.4.</strong> Promoções são válidas enquanto mencionado ou até esgotamento de stock</p>
+                    <p><strong>6.1.4.</strong> Promoções são válidas enquanto mencionado ou até esgotamento de estoque</p>
                   </div>
                 </div>
 
@@ -213,19 +213,19 @@ export default function TermosUso() {
                   <h3 className="font-semibold text-blue-800 mb-3">6.2. Condições de Pagamento</h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold mb-2">Métodos Aceites:</h4>
+                      <h4 className="font-semibold mb-2">Métodos Aceitos:</h4>
                       <ul className="text-sm space-y-1">
                         <li>• Cartão de débito/crédito (Visa, Mastercard)</li>
-                        <li>• PayPal e carteiras digitais</li>
-                        <li>• Transferência bancária (encomendas &gt; €500)</li>
-                        <li>• MB Way (apenas Portugal)</li>
+                        <li>• PIX (pagamento instantâneo)</li>
+                        <li>• Transferência bancária (pedidos &gt; €80)</li>
+                        <li>• Boleto bancário</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Processamento:</h4>
                       <ul className="text-sm space-y-1">
-                        <li>• Pagamento processado em ambiente seguro</li>
-                        <li>• Confirmação imediata por email</li>
+                        <li>• Pagamento processado via Stripe (ambiente seguro)</li>
+                        <li>• Confirmação imediata por email e WhatsApp</li>
                         <li>• Reembolsos processados no método original</li>
                         <li>• Dados de cartão não armazenados</li>
                       </ul>
@@ -265,28 +265,28 @@ export default function TermosUso() {
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="border border-gray-300 p-3">Portugal Continental</td>
-                          <td className="border border-gray-300 p-3">24-48h úteis</td>
-                          <td className="border border-gray-300 p-3">€4,99 (Grátis &gt; €50)</td>
-                          <td className="border border-gray-300 p-3">CTT/DPD</td>
+                          <td className="border border-gray-300 p-3">Sudeste (SP, RJ, MG, ES)</td>
+                          <td className="border border-gray-300 p-3">2-5 dias úteis</td>
+                          <td className="border border-gray-300 p-3">€2,54 (Grátis &gt; €24)</td>
+                          <td className="border border-gray-300 p-3">Correios/Transportadora</td>
                         </tr>
                         <tr className="bg-gray-50">
-                          <td className="border border-gray-300 p-3">Açores/Madeira</td>
-                          <td className="border border-gray-300 p-3">3-5 dias úteis</td>
-                          <td className="border border-gray-300 p-3">€9,99</td>
-                          <td className="border border-gray-300 p-3">CTT Expresso</td>
+                          <td className="border border-gray-300 p-3">Sul (PR, SC, RS)</td>
+                          <td className="border border-gray-300 p-3">3-7 dias úteis</td>
+                          <td className="border border-gray-300 p-3">€3,18 (Grátis &gt; €24)</td>
+                          <td className="border border-gray-300 p-3">Correios/Transportadora</td>
                         </tr>
                         <tr>
-                          <td className="border border-gray-300 p-3">Espanha</td>
-                          <td className="border border-gray-300 p-3">3-5 dias úteis</td>
-                          <td className="border border-gray-300 p-3">€12,99</td>
-                          <td className="border border-gray-300 p-3">DPD/UPS</td>
+                          <td className="border border-gray-300 p-3">Centro-Oeste (GO, MT, MS, DF)</td>
+                          <td className="border border-gray-300 p-3">2-5 dias úteis</td>
+                          <td className="border border-gray-300 p-3">€2,86 (Grátis &gt; €24)</td>
+                          <td className="border border-gray-300 p-3">Correios/Transportadora</td>
                         </tr>
                         <tr className="bg-gray-50">
-                          <td className="border border-gray-300 p-3">União Europeia</td>
+                          <td className="border border-gray-300 p-3">Nordeste e Norte</td>
                           <td className="border border-gray-300 p-3">5-10 dias úteis</td>
-                          <td className="border border-gray-300 p-3">€19,99</td>
-                          <td className="border border-gray-300 p-3">UPS/FedEx</td>
+                          <td className="border border-gray-300 p-3">€3,97 (Grátis &gt; €32)</td>
+                          <td className="border border-gray-300 p-3">Correios/Transportadora</td>
                         </tr>
                       </tbody>
                     </table>
@@ -495,8 +495,8 @@ export default function TermosUso() {
                   <p className="font-semibold text-lg">DECLARAÇÃO DE ACEITAÇÃO</p>
                   <p>Ao utilizar este website e serviços, VOCÊ RECONHECE que leu, compreendeu e aceita ficar vinculado a estes Termos e Condições de Uso na sua totalidade.</p>
                   <div className="border-t border-gray-600 pt-4 mt-4">
-                    <p className="text-sm">© 2025 62 Beauty's 62, Lda. | Todos os direitos reservados</p>
-                    <p className="text-sm">Documento juridicamente blindado | Versão 3.0 | Última atualização: 12/09/2025</p>
+                    <p className="text-sm">© 2025 JC Hair Studio's 62 LTDA | Todos os direitos reservados</p>
+                    <p className="text-sm">Documento conforme legislação brasileira | Versão 1.0 | Última atualização: 19/09/2025</p>
                   </div>
                 </div>
               </div>

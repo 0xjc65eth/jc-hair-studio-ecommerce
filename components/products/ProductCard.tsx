@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ShoppingBag, Heart } from 'lucide-react';
+import { useCart } from '@/lib/stores/cartStore';
+import { toast } from 'react-toastify';
 import ImageCarousel from './ImageCarousel';
 
 interface ProductCardProps {
@@ -11,12 +13,18 @@ interface ProductCardProps {
   nome: string;
   marca: string;
   descricao: string;
-  preco_brl: number;
-  preco_eur: number;
   imagens: string[];
   badge?: string;
   destaque?: boolean;
   viewMode?: 'grid' | 'list';
+  pricing?: {
+    basePrice: number;
+    ourPrice: number;
+    discountPrice: number;
+    savings: number;
+    margin: string;
+    competitive: string;
+  };
 }
 
 export default function ProductCard({
@@ -24,15 +32,15 @@ export default function ProductCard({
   nome,
   marca,
   descricao,
-  preco_brl,
-  preco_eur,
   imagens,
   badge,
   destaque,
-  viewMode = 'grid'
+  viewMode = 'grid',
+  pricing
 }: ProductCardProps) {
   const [imageError, setImageError] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const { addItem } = useCart();
 
   const getBadgeColor = (badge: string) => {
     switch (badge) {
@@ -84,15 +92,16 @@ export default function ProductCard({
           </p>
           
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl font-bold text-amber-600">
-                €{preco_eur.toFixed(2)}
-              </span>
-              <span className="text-sm text-gray-400">
-                (R$ {preco_brl.toFixed(2)})
-              </span>
-            </div>
-            
+            {pricing && (
+              <div className="flex flex-col">
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice.toFixed(2)}</span>
+                  <span className="text-lg font-bold text-green-600">€{pricing.discountPrice.toFixed(2)}</span>
+                </div>
+                <span className="text-xs text-green-600 font-medium">Economize €{pricing.savings.toFixed(2)}</span>
+              </div>
+            )}
+
             <div className="flex items-center gap-2">
               <button className="p-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                 <Heart className="w-5 h-5 text-gray-600" />
@@ -147,21 +156,52 @@ export default function ProductCard({
         <p className="text-gray-600 text-sm mb-3 leading-relaxed line-clamp-2">
           {descricao}
         </p>
-        
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-lg font-bold text-amber-600">
-            €{preco_eur.toFixed(2)}
-          </span>
-          <span className="text-xs text-gray-400">
-            (R$ {preco_brl.toFixed(2)})
-          </span>
-        </div>
-        
-        <button 
+
+        {pricing && (
+          <div className="mb-4">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice.toFixed(2)}</span>
+              <span className="text-lg font-bold text-green-600">€{pricing.discountPrice.toFixed(2)}</span>
+            </div>
+            <div className="text-center">
+              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
+                Economize €{pricing.savings.toFixed(2)}
+              </span>
+            </div>
+          </div>
+        )}
+
+        <button
           className="w-full bg-gray-900 text-white py-2.5 rounded-lg hover:bg-amber-600 transition-colors font-medium text-sm tracking-wide transform hover:scale-105 transition-transform"
-          onClick={() => {
-            // Add to cart functionality
-            console.log('Adding to cart:', id);
+          onClick={async () => {
+            try {
+              addItem({
+                productId: id,
+                quantity: 1,
+                product: {
+                  id: id,
+                  name: nome,
+                  slug: nome.toLowerCase().replace(/\s+/g, '-'),
+                  price: pricing?.ourPrice || 0,
+                  comparePrice: pricing?.basePrice || undefined,
+                  images: imagens?.length ? imagens.map((img, index) => ({
+                    url: img,
+                    alt: nome,
+                    isMain: index === 0
+                  })) : [],
+                  status: 'ACTIVE' as any,
+                  quantity: 999,
+                },
+              });
+
+              toast.success(`${nome} adicionado ao carrinho!`, {
+                position: 'top-right',
+                autoClose: 3000,
+              });
+            } catch (error) {
+              console.error('Erro ao adicionar ao carrinho:', error);
+              toast.error('Erro ao adicionar produto ao carrinho');
+            }
           }}
         >
           ADICIONAR AO CARRINHO

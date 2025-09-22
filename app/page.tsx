@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
 import FeaturedProducts from '../components/products/FeaturedProducts';
@@ -9,63 +10,7 @@ export const metadata: Metadata = {
   description: 'Produtos premium de beleza brasileiros importados diretamente para Europa. Progressivas, tratamentos capilares, maquiagem profissional e ferramentas de qualidade.',
 };
 
-interface Product {
-  id: string;
-  name: string;
-  slug: string;
-  price: number;
-  comparePrice?: number | null;
-  shortDesc: string;
-  images: {
-    url: string;
-    alt: string;
-    isMain: boolean;
-  }[];
-}
-
-// Removed API fetch - using local data
-
-function ProductCard({ product }: { product: Product }) {
-  const mainImage = product.images.find(img => img.isMain) || product.images[0];
-
-  return (
-    <Link href={`/produto/${product.slug}`} className="group">
-      <div className="aspect-[3/4] bg-gray-50 rounded-lg overflow-hidden mb-4">
-        {mainImage && (
-          <img
-            src={mainImage.url}
-            alt={mainImage.alt}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            loading="lazy"
-          />
-        )}
-      </div>
-
-      <div>
-        <h3 className="font-medium text-gray-900 mb-2 group-hover:text-gray-600 transition-colors line-clamp-2">
-          {product.name}
-        </h3>
-        
-        <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-          {product.shortDesc}
-        </p>
-
-        <div className="flex items-center gap-2">
-          <span className="text-lg font-medium text-gray-900">
-            €{Number(product.price).toFixed(2)}
-          </span>
-          {product.comparePrice && (
-            <span className="text-sm text-gray-400 line-through">
-              €{Number(product.comparePrice).toFixed(2)}
-            </span>
-          )}
-        </div>
-      </div>
-    </Link>
-  );
-}
-
-// Removed old function - using new component
+// Removed API fetch and price-related components
 
 export default function HomePage() {
   return (
@@ -133,13 +78,13 @@ export default function HomePage() {
                 Semana da Beleza Brasileira
               </h2>
               <p className="text-xl text-black mb-6 opacity-90">
-                Até 30% de desconto + Frete grátis acima de €75
+                Produtos premium brasileiros + Frete grátis
               </p>
               <div className="inline-block bg-black text-amber-400 px-6 py-3 rounded-lg font-bold text-xl tracking-wider mb-4">
-                BRASIL30
+                PREMIUM
               </div>
               <p className="text-sm text-black opacity-75">
-                Válido até 31/12/2024
+                Qualidade garantida
               </p>
             </div>
           </div>
@@ -159,30 +104,88 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/produtos" className="group relative h-96 bg-black rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=400&fit=crop')] bg-cover bg-center opacity-70 group-hover:opacity-50 transition-opacity"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link href="/produtos" className="group relative h-80 bg-black rounded-2xl overflow-hidden">
+              <Image
+                src="/images/products/cadiveu/cadiveu-1.png"
+                alt="Progressivas & BTX Cadiveu"
+                fill
+                className="object-cover opacity-70 group-hover:opacity-50 transition-opacity"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-              <div className="relative z-10 flex flex-col justify-end h-full p-8 text-white">
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-amber-400 transition-colors">
-                  Produtos
+              <div className="relative z-10 flex flex-col justify-end h-full p-6 text-white">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">
+                  Progressivas & BTX
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Progressivas, tratamentos e produtos capilares
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Cadiveu, Forever Liss, Inoar
                 </p>
+                <div className="mt-3 text-xs text-amber-400">
+                  ⭐ Premium
+                </div>
               </div>
             </Link>
 
-            <Link href="/mega-hair-ferramentas" className="group relative h-96 bg-black rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600&h=400&fit=crop')] bg-cover bg-center opacity-70 group-hover:opacity-50 transition-opacity"></div>
+            <Link href="/mega-hair" className="group relative h-80 bg-black rounded-2xl overflow-hidden">
+              <Image
+                src="/images/mega-hair/mega-hair-1.jpg"
+                alt="Mega Hair Premium"
+                fill
+                className="object-cover opacity-70 group-hover:opacity-50 transition-opacity"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-              <div className="relative z-10 flex flex-col justify-end h-full p-8 text-white">
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-amber-400 transition-colors">
-                  Mega Hair & Ferramentas
+              <div className="relative z-10 flex flex-col justify-end h-full p-6 text-white">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">
+                  Mega Hair Premium
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Extensões e equipamentos profissionais
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Extensões brasileiras naturais
                 </p>
+                <div className="mt-3 text-xs text-amber-400">
+                  ⭐ Premium
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/maquiagens" className="group relative h-80 bg-black rounded-2xl overflow-hidden">
+              <Image
+                src="/images/products/bruna-tavares-bt-skin/BT Skin F30 Base Bruna Tavares.png"
+                alt="Maquiagem Premium Bruna Tavares"
+                fill
+                className="object-cover opacity-70 group-hover:opacity-50 transition-opacity"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+              <div className="relative z-10 flex flex-col justify-end h-full p-6 text-white">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">
+                  Maquiagem Premium
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Bruna Tavares, Vult, Mari Maria
+                </p>
+                <div className="mt-3 text-xs text-amber-400">
+                  ⭐ Premium
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/cosmeticos" className="group relative h-80 bg-black rounded-2xl overflow-hidden">
+              <Image
+                src="/images/products/truss/truss-1.png"
+                alt="Tratamentos Capilares Truss"
+                fill
+                className="object-cover opacity-70 group-hover:opacity-50 transition-opacity"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+              <div className="relative z-10 flex flex-col justify-end h-full p-6 text-white">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">
+                  Tratamentos Capilares
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  L'Oréal, Schwarzkopf, Amend
+                </p>
+                <div className="mt-3 text-xs text-amber-400">
+                  ⭐ Premium
+                </div>
               </div>
             </Link>
           </div>
@@ -262,37 +265,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-light mb-6 relative inline-block">
-            DESBLOQUEIE OS SEGREDOS DA BELEZA BRASILEIRA
-            <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full"></div>
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Receba dicas exclusivas, lançamentos e ofertas especiais
-          </p>
-          <div className="mb-8">
-            <span className="bg-amber-500 bg-opacity-20 text-amber-400 px-6 py-2 rounded-full text-sm font-medium">
-              🎁 15% de desconto na primeira compra
-            </span>
-          </div>
-          <div className="max-w-md mx-auto flex gap-4 mb-6">
-            <input 
-              type="email" 
-              placeholder="Seu melhor e-mail"
-              className="flex-1 px-6 py-4 rounded-full border-2 border-amber-500 border-opacity-30 bg-white bg-opacity-10 text-white placeholder-gray-400 focus:outline-none focus:border-amber-400 transition-colors"
-            />
-            <button className="bg-gradient-to-r from-amber-400 to-yellow-500 text-black px-8 py-4 rounded-full hover:shadow-xl hover:shadow-amber-500/25 transition-all duration-300 font-semibold tracking-wide transform hover:-translate-y-1">
-              Inscrever-se
-            </button>
-          </div>
-          <p className="text-sm text-gray-400">
-            ✨ 25.000+ inscritos • Proteção de dados garantida
-          </p>
         </div>
       </section>
 

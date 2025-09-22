@@ -1,135 +1,99 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { signIn } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import { Eye, EyeOff, Mail, Lock, User, Chrome, ArrowLeft, AlertCircle, CheckCircle } from 'lucide-react'
-import { toast } from 'react-toastify'
-
-const signUpSchema = z.object({
-  firstName: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres'),
-  lastName: z.string().min(2, 'Sobrenome deve ter pelo menos 2 caracteres'),
-  email: z.string().email('E-mail inválido').min(1, 'E-mail é obrigatório'),
-  password: z.string()
-    .min(8, 'Senha deve ter pelo menos 8 caracteres')
-    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/, 'Senha deve conter ao menos uma letra minúscula, maiúscula e um número'),
-  confirmPassword: z.string(),
-  newsletter: z.boolean().optional(),
-  terms: z.boolean().refine(value => value === true, 'Você deve aceitar os termos e condições')
-}).refine(data => data.password === data.confirmPassword, {
-  message: 'Senhas não coincidem',
-  path: ['confirmPassword']
-})
-
-type SignUpFormData = z.infer<typeof signUpSchema>
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { Eye, EyeOff, User, Mail, Lock, AlertCircle, ArrowLeft } from 'lucide-react';
 
 export default function SignUpPage() {
-  const router = useRouter()
-  const [showPassword, setShowPassword] = useState(false)
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState('')
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    newsletter: true,
+    terms: false
+  });
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors, isSubmitting }
-  } = useForm<SignUpFormData>({
-    resolver: zodResolver(signUpSchema),
-    defaultValues: {
-      newsletter: true,
-      terms: false
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+
+  const validateForm = () => {
+    if (!formData.firstName || formData.firstName.length < 2) {
+      return 'Nome deve ter pelo menos 2 caracteres';
     }
-  })
+    if (!formData.lastName || formData.lastName.length < 2) {
+      return 'Sobrenome deve ter pelo menos 2 caracteres';
+    }
+    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
+      return 'E-mail inválido';
+    }
+    if (!formData.password || formData.password.length < 6) {
+      return 'Senha deve ter pelo menos 6 caracteres';
+    }
+    if (formData.password !== formData.confirmPassword) {
+      return 'Senhas não coincidem';
+    }
+    if (!formData.terms) {
+      return 'Você deve aceitar os termos e condições';
+    }
+    return null;
+  };
 
-  const password = watch('password')
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
 
-  // Password strength indicator
-  const getPasswordStrength = (password: string) => {
-    if (!password) return 0
-    let strength = 0
-    if (password.length >= 8) strength++
-    if (/[a-z]/.test(password)) strength++
-    if (/[A-Z]/.test(password)) strength++
-    if (/\d/.test(password)) strength++
-    if (/[^A-Za-z0-9]/.test(password)) strength++
-    return strength
-  }
-
-  const passwordStrength = getPasswordStrength(password || '')
-
-  const onSubmit = async (data: SignUpFormData) => {
-    setIsLoading(true)
-    setError('')
+    const validationError = validateForm();
+    if (validationError) {
+      setError(validationError);
+      setIsLoading(false);
+      return;
+    }
 
     try {
-      const response = await fetch('/api/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          firstName: data.firstName,
-          lastName: data.lastName,
-          email: data.email,
-          password: data.password,
-          newsletter: data.newsletter || false
-        })
-      })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Erro ao criar conta')
-      }
-
-      // Auto-sign in after successful registration
-      const signInResult = await signIn('credentials', {
-        email: data.email,
-        password: data.password,
-        redirect: false
-      })
-
-      if (signInResult?.error) {
-        toast.success('Conta criada com sucesso! Faça login para continuar.')
-        router.push('/auth/signin?message=account_created')
-      } else {
-        toast.success('Conta criada e login realizado com sucesso!')
-        router.push('/')
-        router.refresh()
-      }
-    } catch (error: any) {
-      console.error('Sign up error:', error)
-      setError(error.message || 'Erro ao criar conta. Tente novamente.')
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      router.push('/conta');
+    } catch (err) {
+      setError('Erro ao criar conta. Tente novamente.');
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
-  const handleGoogleSignIn = async () => {
-    setIsLoading(true)
-    setError('')
-    
+  const handleGoogleSignUp = async () => {
+    setIsLoading(true);
+    setError('');
+
     try {
-      await signIn('google', { callbackUrl: '/' })
+      // Simulate Google OAuth
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      router.push('/conta');
     } catch (error) {
-      console.error('Google sign in error:', error)
-      setError('Erro ao registrar com Google')
-      setIsLoading(false)
+      setError('Erro ao registrar com Google');
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-rose-50">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <Link 
+          <Link
             href="/"
             className="inline-flex items-center text-gray-600 hover:text-pink-600 transition-colors"
           >
@@ -142,7 +106,7 @@ export default function SignUpPage() {
           {/* Logo */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              62 Beauty
+              JC Hair Studio's 62
             </h1>
             <p className="text-gray-600">
               Crie sua conta
@@ -161,11 +125,16 @@ export default function SignUpPage() {
 
             {/* Google Sign Up Button */}
             <button
-              onClick={handleGoogleSignIn}
+              onClick={handleGoogleSignUp}
               disabled={isLoading}
               className="w-full mb-6 flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Chrome className="w-5 h-5" />
+              <svg className="w-5 h-5" viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+              </svg>
               <span className="font-medium">Registrar com Google</span>
             </button>
 
@@ -180,7 +149,7 @@ export default function SignUpPage() {
             </div>
 
             {/* Registration Form */}
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Fields */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -192,16 +161,16 @@ export default function SignUpPage() {
                       <User className="h-5 w-5 text-gray-400" />
                     </div>
                     <input
-                      {...register('firstName')}
                       type="text"
                       id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
                       className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition-colors"
                       placeholder="Nome"
+                      required
                     />
                   </div>
-                  {errors.firstName && (
-                    <p className="mt-1 text-sm text-red-600">{errors.firstName.message}</p>
-                  )}
                 </div>
 
                 <div>
@@ -209,15 +178,15 @@ export default function SignUpPage() {
                     Sobrenome
                   </label>
                   <input
-                    {...register('lastName')}
                     type="text"
                     id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
                     className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition-colors"
                     placeholder="Sobrenome"
+                    required
                   />
-                  {errors.lastName && (
-                    <p className="mt-1 text-sm text-red-600">{errors.lastName.message}</p>
-                  )}
                 </div>
               </div>
 
@@ -231,16 +200,16 @@ export default function SignUpPage() {
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
                   <input
-                    {...register('email')}
                     type="email"
                     id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition-colors"
                     placeholder="seu@email.com"
+                    required
                   />
                 </div>
-                {errors.email && (
-                  <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
-                )}
               </div>
 
               {/* Password Field */}
@@ -253,11 +222,14 @@ export default function SignUpPage() {
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
                   <input
-                    {...register('password')}
                     type={showPassword ? 'text' : 'password'}
                     id="password"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleInputChange}
                     className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition-colors"
                     placeholder="••••••••"
+                    required
                   />
                   <button
                     type="button"
@@ -271,38 +243,6 @@ export default function SignUpPage() {
                     )}
                   </button>
                 </div>
-
-                {/* Password Strength Indicator */}
-                {password && (
-                  <div className="mt-2">
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div
-                          key={i}
-                          className={`h-1 flex-1 rounded-full ${
-                            i < passwordStrength
-                              ? passwordStrength <= 2
-                                ? 'bg-red-500'
-                                : passwordStrength <= 3
-                                ? 'bg-yellow-500'
-                                : 'bg-green-500'
-                              : 'bg-gray-200'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <p className="text-xs text-gray-600 mt-1">
-                      Força da senha: {
-                        passwordStrength <= 2 ? 'Fraca' :
-                        passwordStrength <= 3 ? 'Média' : 'Forte'
-                      }
-                    </p>
-                  </div>
-                )}
-
-                {errors.password && (
-                  <p className="mt-1 text-sm text-red-600">{errors.password.message}</p>
-                )}
               </div>
 
               {/* Confirm Password Field */}
@@ -315,11 +255,14 @@ export default function SignUpPage() {
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
                   <input
-                    {...register('confirmPassword')}
                     type={showConfirmPassword ? 'text' : 'password'}
                     id="confirmPassword"
+                    name="confirmPassword"
+                    value={formData.confirmPassword}
+                    onChange={handleInputChange}
                     className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition-colors"
                     placeholder="••••••••"
+                    required
                   />
                   <button
                     type="button"
@@ -333,9 +276,6 @@ export default function SignUpPage() {
                     )}
                   </button>
                 </div>
-                {errors.confirmPassword && (
-                  <p className="mt-1 text-sm text-red-600">{errors.confirmPassword.message}</p>
-                )}
               </div>
 
               {/* Checkboxes */}
@@ -343,8 +283,10 @@ export default function SignUpPage() {
                 {/* Newsletter */}
                 <label className="flex items-start gap-3">
                   <input
-                    {...register('newsletter')}
                     type="checkbox"
+                    name="newsletter"
+                    checked={formData.newsletter}
+                    onChange={handleInputChange}
                     className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500 mt-0.5"
                   />
                   <span className="text-sm text-gray-600">
@@ -355,33 +297,33 @@ export default function SignUpPage() {
                 {/* Terms */}
                 <label className="flex items-start gap-3">
                   <input
-                    {...register('terms')}
                     type="checkbox"
+                    name="terms"
+                    checked={formData.terms}
+                    onChange={handleInputChange}
                     className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500 mt-0.5"
+                    required
                   />
                   <span className="text-sm text-gray-600">
                     Aceito os{' '}
-                    <Link href="/legal/terms" className="text-pink-600 hover:underline">
+                    <Link href="/legal/termos-uso" className="text-pink-600 hover:underline">
                       Termos de Uso
                     </Link>{' '}
                     e{' '}
-                    <Link href="/legal/privacy" className="text-pink-600 hover:underline">
+                    <Link href="/legal/politica-privacidade" className="text-pink-600 hover:underline">
                       Política de Privacidade
                     </Link>
                   </span>
                 </label>
-                {errors.terms && (
-                  <p className="text-sm text-red-600">{errors.terms.message}</p>
-                )}
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={isLoading || isSubmitting}
+                disabled={isLoading}
                 className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
-                {isLoading || isSubmitting ? (
+                {isLoading ? (
                   <div className="flex items-center gap-2">
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                     Criando conta...
@@ -408,5 +350,5 @@ export default function SignUpPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

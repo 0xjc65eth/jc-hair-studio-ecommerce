@@ -2,32 +2,155 @@
 
 import React from 'react';
 import ProductCard from './ProductCard';
-import cosmeticsUrls from '../../drive_urls_converted.json';
-import { getWorkingImageUrl } from '../../lib/utils/imageUtils';
 
 export default function FeaturedProducts() {
-  // Generate featured products from Google Drive images with deterministic pricing
-  // Fixed pricing to prevent hydration mismatch - using index-based deterministic values
-  const featuredProductsData = cosmeticsUrls.successful.slice(0, 8).map((imageData, index) => {
-    const brands = ['Boca Rosa Beauty', 'O Boticário Make B', 'Eudora', 'Natura', 'Vult'];
-    const categories = ['Batom Premium', 'Base Líquida', 'Sombra Paleta', 'Esmalte Cremoso', 'Blush Matte'];
-
-    // Deterministic pricing based on index to avoid hydration mismatch
-    const basePricesBRL = [45, 52, 38, 68, 35, 72, 41, 59]; // Fixed prices for each index
-    const basePricesEUR = [12, 15, 10, 18, 9, 20, 11, 16]; // Corresponding EUR prices
-
-    return {
-      id: `featured-${index + 1}`,
-      nome: `${categories[index % categories.length]} ${index + 1}`,
-      marca: brands[index % brands.length],
-      descricao: 'Produto premium de cosmético brasileiro para Europa',
-      preco_brl: basePricesBRL[index] || 45, // Fallback to 45 if index exceeds array
-      preco_eur: basePricesEUR[index] || 12, // Fallback to 12 if index exceeds array
-      imagens: [getWorkingImageUrl(imageData.direct_url, index)],
-      badge: index < 2 ? 'BEST SELLER' : index < 4 ? 'NOVO' : null,
-      destaque: true
-    };
-  });
+  // Products from our European pricing catalog
+  const featuredProductsData = [
+    // Coloração Amend - from products-with-european-pricing.json
+    {
+      id: 'amend-coloracao-profissional',
+      nome: 'Amend Coloração Capilar Profissional',
+      marca: 'Amend',
+      descricao: 'Coloração profissional brasileira com tecnologia avançada. Cores intensas e duradouras com proteção e nutrição dos fios.',
+      imagens: ['/images/products/tinta_amend/tinta_amend_1.PNG'],
+      badge: 'PROFISSIONAL',
+      destaque: true,
+      pricing: {
+        basePrice: 12.00,
+        ourPrice: 13.20,
+        discountPrice: 10.56,
+        savings: 2.64,
+        margin: "10%",
+        competitive: "Estimativa baseada em produtos brasileiros premium"
+      }
+    },
+    // Tinta Wella - from catalog
+    {
+      id: 'wella-koleston-perfect',
+      nome: 'Wella Koleston Perfect Coloração',
+      marca: 'Wella',
+      descricao: 'Coloração profissional Wella com tecnologia ME+ para redução de alergias. Cobertura uniforme e cores vibrantes.',
+      imagens: ['/images/products/tinta_wella/tinta_wella_2.PNG'],
+      badge: 'HIPOALERGÊNICA',
+      destaque: true,
+      pricing: {
+        basePrice: 11.50,
+        ourPrice: 12.65,
+        discountPrice: 10.12,
+        savings: 2.53,
+        margin: "10%",
+        competitive: "Baseado em preços Wella Europa"
+      }
+    },
+    // Base Bruna Tavares - from bruna-tavares catalog
+    {
+      id: 'bruna-tavares-bt-skin-d30',
+      nome: 'Base BT Skin D30 - Tom Escuro',
+      marca: 'Bruna Tavares',
+      descricao: 'Base líquida BT Skin com fórmula avançada, cobertura natural e alta pigmentação. Desenvolvida com ácido hialurônico para hidratação prolongada.',
+      imagens: ['/images/products/bruna-tavares-bt-skin/BT Skin D30 Base Bruna Tavares.png'],
+      badge: 'PREMIUM',
+      destaque: true,
+      pricing: {
+        basePrice: 27.50,
+        ourPrice: 30.25,
+        discountPrice: 24.20,
+        savings: 6.05,
+        margin: "10%",
+        competitive: "Baseado em catálogo existente + pesquisa Europa"
+      }
+    },
+    // Tinta L'Oréal - from catalog
+    {
+      id: 'loreal-excellage-cores-variadas',
+      nome: 'L\'Oréal Paris Excellence Age Perfect',
+      marca: 'L\'Oréal Paris',
+      descricao: 'Coloração permanente especialmente desenvolvida para cabelos maduros. Cobertura total dos brancos com cor vibrante que dura até 100 dias.',
+      imagens: ['/images/products/tinta_loreal/tinta_loreal_1.PNG'],
+      badge: 'BESTSELLER',
+      destaque: true,
+      pricing: {
+        basePrice: 8.50,
+        ourPrice: 9.35,
+        discountPrice: 7.48,
+        savings: 1.87,
+        margin: "10%",
+        competitive: "Baseado em preços farmácias europeias"
+      }
+    },
+    // Botox Capilar - from catalog
+    {
+      id: 'forever-liss-btx-zero-formol-250g',
+      nome: 'Forever Liss BTX Zero Formol 250g',
+      marca: 'Forever Liss',
+      descricao: 'Botox capilar zero formol que alisa, reconstrói e hidrata profundamente os fios. Resultado natural com redução de volume e frizz.',
+      imagens: ['/images/products/botox/botox_1.png'],
+      badge: 'SEM FORMOL',
+      destaque: true,
+      pricing: {
+        basePrice: 22.90,
+        ourPrice: 25.19,
+        discountPrice: 20.15,
+        savings: 5.04,
+        margin: "10%",
+        competitive: "Baseado preço brasileiro convertido + margem importação"
+      }
+    },
+    // Progressiva - from catalog
+    {
+      id: 'cadiveu-professional-brasil-cacau-1l',
+      nome: 'Cadiveu Professional Brasil Cacau Alisante 1L',
+      marca: 'Cadiveu',
+      descricao: 'Tratamento alisante profissional com óleo de cacau que proporciona cabelos lisos, sedosos e com brilho intenso. Reduz o volume e elimina o frizz por até 4 meses.',
+      imagens: ['/images/products/progressivas_diversas/progressivas_diversas_1.JPG'],
+      badge: 'PROFISSIONAL',
+      destaque: true,
+      pricing: {
+        basePrice: 222.27,
+        ourPrice: 244.50,
+        discountPrice: 195.60,
+        savings: 48.90,
+        margin: "10%",
+        competitive: "Baseado em Bellasil €222.27"
+      }
+    },
+    // Tinta Beauty Color - from catalog
+    {
+      id: 'beauty-color-economica',
+      nome: 'Beauty Color Coloração Vibrante',
+      marca: 'Beauty Color',
+      descricao: 'Coloração brasileira econômica com cores vibrantes e proteção dos fios. Ótima relação custo-benefício.',
+      imagens: ['/images/products/tinta_beauty_color/tinta_beauty_color_1.PNG'],
+      badge: 'ECONÔMICA',
+      destaque: true,
+      pricing: {
+        basePrice: 6.50,
+        ourPrice: 7.15,
+        discountPrice: 5.72,
+        savings: 1.43,
+        margin: "10%",
+        competitive: "Posicionamento econômico brasileiro"
+      }
+    },
+    // Base Bruna Tavares Variação - from catalog
+    {
+      id: 'bruna-tavares-bt-skin-m20',
+      nome: 'Base BT Skin M20 - Tom Médio',
+      marca: 'Bruna Tavares',
+      descricao: 'Base líquida BT Skin para peles médias com subtom quente. Acabamento natural aveludado com tecnologia brasileira de ponta.',
+      imagens: ['/images/products/bruna-tavares-bt-skin/BT Skin M20 Base Bruna Tavares.png'],
+      badge: 'TOM MÉDIO',
+      destaque: true,
+      pricing: {
+        basePrice: 27.50,
+        ourPrice: 30.25,
+        discountPrice: 24.20,
+        savings: 6.05,
+        margin: "10%",
+        competitive: "Baseado em catálogo existente + pesquisa Europa"
+      }
+    }
+  ];
 
   if (!featuredProductsData.length) {
     return (
@@ -58,11 +181,10 @@ export default function FeaturedProducts() {
               nome={product.nome}
               marca={product.marca}
               descricao={product.descricao}
-              preco_brl={product.preco_brl}
-              preco_eur={product.preco_eur}
               imagens={product.imagens}
               badge={product.badge}
               destaque={product.destaque}
+              pricing={product.pricing}
             />
           ))}
         </div>

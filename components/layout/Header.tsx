@@ -14,8 +14,9 @@ import {
   Globe,
   ChevronDown 
 } from 'lucide-react';
-import { useCart } from '../../lib/stores/unifiedCartStore';
-import CartDrawer from '../shared/CartDrawer';
+import { useCart } from '@/lib/stores/cartStore';
+import { CartDrawer } from '../cart/CartDrawer';
+import { PointsWidget } from '../points/PointsWidget';
 
 interface NavigationItem {
   name: string;
@@ -42,7 +43,8 @@ export default function Header({ className = '' }: HeaderProps) {
   const [isMobileProductsDropdownOpen, setIsMobileProductsDropdownOpen] = useState(false);
   
   // Get cart data
-  const { itemsCount } = useCart();
+  const { getTotalItems, toggleCart } = useCart();
+  const itemsCount = getTotalItems();
   
   const pathname = usePathname();
 
@@ -60,6 +62,8 @@ export default function Header({ className = '' }: HeaderProps) {
         { name: 'Ferramentas Profissionais', href: '/categoria/ferramentas-profissionais' },
       ]
     },
+    { name: 'Cosméticos', href: '/cosmeticos', active: pathname === '/cosmeticos' },
+    { name: 'Maquiagens', href: '/maquiagens', active: pathname === '/maquiagens' },
     { name: 'Mega Hair', href: '/mega-hair', active: pathname === '/mega-hair' },
     { name: 'Sobre Nós', href: '/sobre', active: pathname === '/sobre' },
   ];
@@ -137,7 +141,7 @@ export default function Header({ className = '' }: HeaderProps) {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center lg:space-x-4 xl:space-x-8">
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               {navigationItems.map((item) => (
                 <div key={item.href} className="relative">
                   {item.hasDropdown ? (
@@ -183,7 +187,9 @@ export default function Header({ className = '' }: HeaderProps) {
                   ) : (
                     <Link
                       href={item.href}
-                      className={`nav-link ${item.active ? 'active' : ''}`}
+                      className={`nav-link ${item.active ? 'active' : ''} ${
+                        item.name === 'Cosméticos' ? 'cosmetics-nav-link' : ''
+                      }`}
                     >
                       {item.name}
                     </Link>
@@ -193,7 +199,7 @@ export default function Header({ className = '' }: HeaderProps) {
             </nav>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-3">
               {/* Language Selector */}
               <div className="relative">
                 <button
@@ -242,18 +248,21 @@ export default function Header({ className = '' }: HeaderProps) {
                 <Heart className="w-5 h-5" />
               </Link>
 
+              {/* Points Widget */}
+              <PointsWidget compact={true} />
+
               {/* Account */}
               <Link
                 href="/conta"
                 className="p-2 text-gray-700 hover:text-black transition-colors"
-                aria-label="Minha conta"
+                aria-label="Minha Conta"
               >
                 <User className="w-5 h-5" />
               </Link>
 
               {/* Cart */}
               <button
-                onClick={() => setIsCartOpen(true)}
+                onClick={toggleCart}
                 className="p-2 text-gray-700 hover:text-black transition-colors relative"
                 aria-label="Carrinho de compras"
               >
@@ -267,7 +276,7 @@ export default function Header({ className = '' }: HeaderProps) {
             </div>
 
             {/* Mobile Actions */}
-            <div className="flex lg:hidden items-center space-x-3">
+            <div className="flex lg:hidden items-center space-x-2">
               <button
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
                 className="p-2 text-gray-700 hover:text-black transition-colors"
@@ -277,7 +286,7 @@ export default function Header({ className = '' }: HeaderProps) {
               </button>
 
               <button
-                onClick={() => setIsCartOpen(true)}
+                onClick={toggleCart}
                 className="p-2 text-gray-700 hover:text-black transition-colors relative"
                 aria-label="Carrinho"
               >
@@ -404,6 +413,8 @@ export default function Header({ className = '' }: HeaderProps) {
                         item.active
                           ? 'bg-gray-100 text-black'
                           : 'text-gray-700 hover:bg-gray-50 hover:text-black'
+                      } ${
+                        item.name === 'Cosméticos' ? 'cosmetics-nav-link' : ''
                       }`}
                       onClick={closeMobileMenu}
                     >
@@ -417,12 +428,12 @@ export default function Header({ className = '' }: HeaderProps) {
             <div className="border-t border-gray-100 px-6 py-4">
               <div className="space-y-1">
                 <Link
-                  href="/conta"
+                  href="/auth/signin"
                   className="flex items-center px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
                   onClick={closeMobileMenu}
                 >
                   <User className="w-5 h-5 mr-3" />
-                  Minha Conta
+                  Entrar/Registrar
                 </Link>
                 
                 <Link
@@ -456,10 +467,7 @@ export default function Header({ className = '' }: HeaderProps) {
       </div>
       
       {/* Cart Drawer */}
-      <CartDrawer 
-        isOpen={isCartOpen} 
-        onClose={() => setIsCartOpen(false)} 
-      />
+      <CartDrawer />
     </>
   );
 }

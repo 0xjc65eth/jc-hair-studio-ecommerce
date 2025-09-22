@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-09-19T02:24:40.011Z",
+  "page": "/cosmeticos",
+  "summary": {
+    "totalConsoleMessages": 1,
+    "totalErrors": 1,
+    "totalWarnings": 0,
+    "totalNetworkErrors": 1
+  },
+  "errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+      "location": {
+        "url": "http://localhost:3002/cosmeticos"
+      }
+    }
+  ],
+  "warnings": [],
+  "networkErrors": [
+    {
+      "url": "http://localhost:3002/cosmeticos",
+      "status": 500,
+      "statusText": "Internal Server Error"
+    }
+  ],
+  "allConsoleMessages": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+      "location": {
+        "url": "http://localhost:3002/cosmeticos"
+      }
+    }
+  ]
+}

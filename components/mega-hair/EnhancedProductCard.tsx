@@ -22,7 +22,7 @@ import {
 import { HairColor, HairColorDifficulty } from '@/types/hairColor';
 import { COLOR_INDEX_BY_CODE } from '@/lib/data/hairColors';
 import { calculateMegaHairPrice, TechnicalComplexity, HairQuality, HairOrigin } from '@/lib/pricing';
-import { useCart } from '@/lib/stores/unifiedCartStore';
+import { useCart } from '@/lib/stores/cartStore';
 import ColorSelector from './ColorSelector';
 import { getWorkingImageUrl, handleImageError } from '@/lib/utils/imageUtils';
 

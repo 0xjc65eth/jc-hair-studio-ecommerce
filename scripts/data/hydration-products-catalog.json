@@ -1,0 +1,377 @@
+{
+  "hidratacao": {
+    "name": "Produtos de Hidratação",
+    "icon": "💧",
+    "products": [
+      {
+        "id": "novex-creme-pentear-antiporosidade-rosa",
+        "name": "Novex Creme para Pentear Antiporosidade 72H - Cachos Mega Volume",
+        "brand": "Novex",
+        "description": "Creme para pentear com fórmula antiporosidade que proporciona volume e definição para cabelos ressecados. Hidratação intensa por até 72 horas com proteção contra ressecamento.",
+        "price_brl": 42.90,
+        "price_eur": 10.59,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_1.WEBP"
+        ],
+        "colors": ["Rosa"],
+        "features": [
+          "Antiporosidade 72H",
+          "Mega Volume",
+          "Para Cabelos Ressecados",
+          "Hidratação Intensa",
+          "Definição de Cachos",
+          "Proteção Térmica"
+        ],
+        "stock": 32,
+        "rating": 4.6,
+        "reviews": 187
+      },
+      {
+        "id": "novex-leave-in-blindagem-impermeabilizante",
+        "name": "Novex Salon Blindagem Leave-in Impermeabilizante",
+        "brand": "Novex",
+        "description": "Leave-in com proteção absoluta antifrizz, anti pontas duplas e brilho extremo. Proteção para altas temperaturas até 232°C, ideal para uso profissional.",
+        "price_brl": 35.50,
+        "price_eur": 9.16,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_2.WEBP"
+        ],
+        "colors": ["Cinza/Dourado"],
+        "features": [
+          "Proteção Absoluta",
+          "Antifrizz",
+          "Anti Pontas Duplas",
+          "Brilho Extremo",
+          "Proteção até 232°C",
+          "Uso Profissional"
+        ],
+        "stock": 28,
+        "rating": 4.8,
+        "reviews": 143
+      },
+      {
+        "id": "novex-gelato-pistache-bomba-lamelar",
+        "name": "Novex Gelato Pistache Bomba Lamelar 8 em 1",
+        "brand": "Novex",
+        "description": "Creme de tratamento ultraprofundo com deliciosa sensação refrescante. Bomba lamelar 8 em 1 com efeito brilho espelhado e 3 minutos mágicos de ação.",
+        "price_brl": 44.14,
+        "price_eur": 10.89,
+        "originalPrice": 27.83,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_3.WEBP"
+        ],
+        "colors": ["Verde/Pistache"],
+        "features": [
+          "8 em 1",
+          "Tratamento Ultraprofundo",
+          "Efeito Brilho Espelhado",
+          "3 Minutos Mágicos",
+          "Sensação Refrescante",
+          "Bomba Lamelar"
+        ],
+        "stock": 41,
+        "rating": 4.9,
+        "reviews": 256
+      },
+      {
+        "id": "novex-creme-pentear-antiporosidade-azul",
+        "name": "Novex Creme para Pentear Antiporosidade 72H - Cachos Mega Volume Azul",
+        "brand": "Novex",
+        "description": "Versão azul do creme antiporosidade para cabelos ressecados. Volume e definição para cabelos 3A, 3B e 3C com hidratação prolongada.",
+        "price_brl": 42.90,
+        "price_eur": 10.59,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_4.WEBP"
+        ],
+        "colors": ["Azul"],
+        "features": [
+          "Antiporosidade 72H",
+          "Para Cabelos 3A, 3B, 3C",
+          "Volume e Definição",
+          "Hidratação Prolongada",
+          "Cabelos Ressecados",
+          "Ultra Volume"
+        ],
+        "stock": 35,
+        "rating": 4.6,
+        "reviews": 198
+      },
+      {
+        "id": "novex-blindagem-kit-leave-in-spray-tubo",
+        "name": "Kit Novex Salon Blindagem Leave-in - Spray + Tubo",
+        "brand": "Novex",
+        "description": "Kit completo com leave-in spray e tubo impermeabilizante. Reparação lamelar com 12 benefícios em 1 para proteção total dos fios contra agressões.",
+        "price_brl": 58.90,
+        "price_eur": 13.90,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_5.WEBP"
+        ],
+        "colors": ["Preto/Dourado"],
+        "features": [
+          "12 em 1",
+          "Reparação Lamelar",
+          "Spray + Tubo",
+          "Impermeabilizante",
+          "Proteção Total",
+          "Kit Completo"
+        ],
+        "stock": 22,
+        "rating": 4.7,
+        "reviews": 89
+      },
+      {
+        "id": "novex-ritual-dorama-tsubaki",
+        "name": "Novex Ritual Dorama com Tsubaki - Creme Ultraprofundo",
+        "brand": "Novex",
+        "description": "Creme de tratamento ultraprofundo inspirado nos rituais coreanos com óleo de camélia Tsubaki. HNR nutrição para sonho de nutrição, brilho apaixonante e amor ao cabelo.",
+        "price_brl": 46.50,
+        "price_eur": 11.48,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_6.WEBP"
+        ],
+        "colors": ["Rosa/Amarelo"],
+        "features": [
+          "Óleo de Camélia Tsubaki",
+          "Ritual Coreano",
+          "HNR Nutrição",
+          "Brilho Apaixonante",
+          "Tratamento Ultraprofundo",
+          "Sonho de Nutrição"
+        ],
+        "stock": 26,
+        "rating": 4.8,
+        "reviews": 134
+      },
+      {
+        "id": "novex-blindagem-leave-in-spray-reparacao",
+        "name": "Novex Salon Blindagem Leave-in Spray - Reparação Lamelar",
+        "brand": "Novex",
+        "description": "Leave-in spray com reparação lamelar e proteção antiuquebra. Fórmula 12 em 1 para cabelos danificados que precisam de reconstrução intensa.",
+        "price_brl": 32.80,
+        "price_eur": 8.66,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_7.PNG"
+        ],
+        "colors": ["Preto/Dourado"],
+        "features": [
+          "Reparação Lamelar",
+          "12 em 1",
+          "Antiuquebra",
+          "Para Cabelos Danificados",
+          "Reconstrução Intensa",
+          "Spray Prático"
+        ],
+        "stock": 38,
+        "rating": 4.5,
+        "reviews": 176
+      },
+      {
+        "id": "biondina-anaconda-reflexos-naturais",
+        "name": "Biondina Anaconda Reflexos Naturais com Camomila",
+        "brand": "Anaconda",
+        "description": "Loção clareadora com extrato de camomila para reflexos naturais. Clareia e realça a cor loira naturalmente, condiciona e adiciona brilho sem danificar os fios.",
+        "price_brl": 24.99,
+        "price_eur": 7.04,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_8.PNG"
+        ],
+        "colors": ["Branco/Amarelo"],
+        "features": [
+          "Extrato de Camomila",
+          "Reflexos Naturais",
+          "Clareia Naturalmente",
+          "Condiciona",
+          "Adiciona Brilho",
+          "Não Danifica"
+        ],
+        "stock": 18,
+        "rating": 4.3,
+        "reviews": 92
+      },
+      {
+        "id": "salon-line-mascara-matizadora-chocolate",
+        "name": "Salon Line Máscara Matizadora #TodeCacho Chocolate",
+        "brand": "Salon Line",
+        "description": "Máscara matizadora vegana com blend de cacau e óleo de amêndoas. Hidrata profundamente promovendo efeito castanho com nuance avermelhada de longa duração.",
+        "price_brl": 33.50,
+        "price_eur": 8.78,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_9.PNG"
+        ],
+        "colors": ["Marrom"],
+        "features": [
+          "Vegana",
+          "Blend de Cacau",
+          "Óleo de Amêndoas",
+          "Efeito Castanho Avermelhado",
+          "Longa Duração",
+          "Para Cachos e Crespos"
+        ],
+        "stock": 29,
+        "rating": 4.7,
+        "reviews": 203
+      },
+      {
+        "id": "bio-extratus-colorante-castanho",
+        "name": "Bio Extratus Colorante Castanho - 2 Minutos Mágicos",
+        "brand": "Bio Extratus",
+        "description": "Máscara capilar colorante com ação em 2 minutos mágicos. Mantém manteiga illipê, Goji Berry e microqueratina para hidratação e intensificação dos tons castanhos.",
+        "price_brl": 28.90,
+        "price_eur": 7.75,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_10.PNG"
+        ],
+        "colors": ["Preto/Laranja"],
+        "features": [
+          "2 Minutos Mágicos",
+          "Manteiga Illipê",
+          "Goji Berry",
+          "Microqueratina",
+          "Intensifica Castanhos",
+          "pH 4.5"
+        ],
+        "stock": 24,
+        "rating": 4.6,
+        "reviews": 156
+      },
+      {
+        "id": "bio-extratus-sillitan-oleo-tutano",
+        "name": "Bio Extratus Sillitan Óleo Capilar com Tutano",
+        "brand": "Bio Extratus",
+        "description": "Óleo capilar com silicone e tutano para cabelos ressecados. Reduz volume, aumenta brilho e maciez com proteção contra agressões externas.",
+        "price_brl": 22.50,
+        "price_eur": 6.59,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_11.WEBP"
+        ],
+        "colors": ["Branco/Vermelho/Amarelo"],
+        "features": [
+          "Silicone com Tutano",
+          "Para Cabelos Ressecados",
+          "Reduz Volume",
+          "Aumenta Brilho",
+          "Proteção Externa",
+          "Ativador de Cachos"
+        ],
+        "stock": 33,
+        "rating": 4.4,
+        "reviews": 127
+      },
+      {
+        "id": "salon-line-mascara-matizadora-vermelho",
+        "name": "Salon Line Máscara Matizadora #TodeCacho Vermelho Cereja",
+        "brand": "Salon Line",
+        "description": "Máscara de hidratação matizadora com tecnologia PROFIX. Revitaliza a cor dos cabelos avermelhados proporcionando força, saúde e maciez profunda para cachos.",
+        "price_brl": 33.50,
+        "price_eur": 8.78,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_12.PNG"
+        ],
+        "colors": ["Vermelho"],
+        "features": [
+          "Tecnologia PROFIX",
+          "Revitaliza Avermelhados",
+          "Força e Saúde",
+          "Maciez Profunda",
+          "Para Cachos e Crespos",
+          "Hidratação Intensa"
+        ],
+        "stock": 27,
+        "rating": 4.5,
+        "reviews": 184
+      },
+      {
+        "id": "salon-line-mascara-matizadora-ruivo",
+        "name": "Salon Line Máscara Matizadora #TodeCacho Ruivo Natural",
+        "brand": "Salon Line",
+        "description": "Máscara matizadora para cabelos ruivos com hidratação profunda. Protege a formatação dos cachos enquanto intensifica tons ruivos naturais com textura cremosa.",
+        "price_brl": 33.50,
+        "price_eur": 8.78,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_13.PNG"
+        ],
+        "colors": ["Laranja"],
+        "features": [
+          "Para Cabelos Ruivos",
+          "Hidratação Profunda",
+          "Protege Cachos",
+          "Intensifica Ruivos",
+          "Textura Cremosa",
+          "Tons Naturais"
+        ],
+        "stock": 21,
+        "rating": 4.6,
+        "reviews": 98
+      },
+      {
+        "id": "novex-creme-pentear-antirressecamento-amarelo",
+        "name": "Novex Creme para Pentear Antirressecamento 72H - Cachos",
+        "brand": "Novex",
+        "description": "Creme para pentear com definição e brilho para cabelos opacos. Fórmula 72H de definição no day after com proteção antirressecamento.",
+        "price_brl": 42.90,
+        "price_eur": 10.59,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_14.WEBP"
+        ],
+        "colors": ["Amarelo"],
+        "features": [
+          "Antirressecamento 72H",
+          "Para Cabelos Opacos",
+          "Definição Day After",
+          "Brilho Intenso",
+          "Para Cachos 3A, 3B, 3C",
+          "Proteção Prolongada"
+        ],
+        "stock": 36,
+        "rating": 4.7,
+        "reviews": 165
+      },
+      {
+        "id": "novex-leave-in-gloss-color-blindagem",
+        "name": "Novex Salon Blindagem Leave-in Gloss Color",
+        "brand": "Novex",
+        "description": "Leave-in com proteção da cor e brilho espelhado para cabelos tingidos. Proteção para altas temperaturas com tecnologia gloss color de longa duração.",
+        "price_brl": 38.90,
+        "price_eur": 9.82,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_15.WEBP"
+        ],
+        "colors": ["Preto/Dourado"],
+        "features": [
+          "Proteção da Cor",
+          "Brilho Espelhado",
+          "Para Cabelos Tingidos",
+          "Gloss Color",
+          "Proteção Térmica",
+          "Longa Duração"
+        ],
+        "stock": 31,
+        "rating": 4.8,
+        "reviews": 142
+      },
+      {
+        "id": "novex-creme-pentear-antirressecamento-roxo",
+        "name": "Novex Creme para Pentear Antirressecamento 72H - Cachos Roxo",
+        "brand": "Novex",
+        "description": "Versão roxa do creme antirressecamento com definição e brilho para cabelos opacos. 72H de definição no day after para cachos cacheados e crespos.",
+        "price_brl": 42.90,
+        "price_eur": 10.59,
+        "images": [
+          "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_16.WEBP"
+        ],
+        "colors": ["Roxo"],
+        "features": [
+          "Antirressecamento 72H",
+          "Para Cabelos Opacos",
+          "Definição Day After",
+          "Para Cachos 4A, 4B, 4C",
+          "Brilho e Definição",
+          "Proteção Prolongada"
+        ],
+        "stock": 29,
+        "rating": 4.6,
+        "reviews": 178
+      }
+    ]
+  }
+}

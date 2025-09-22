@@ -1,117 +1,116 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Award, Users, Globe, Heart, Leaf, Shield } from 'lucide-react';
+import { COMPANY_DATA } from '@/lib/data/company-data';
 
 export const metadata: Metadata = {
-  title: 'Sobre Nós - 62 Beauty\'s 62',
-  description: 'Conheça a história de mais de 30 anos da 62 Beauty\'s 62, líder em extensões de cabelo premium na Europa. Missão, valores e compromisso com a excelência.',
+  title: 'Sobre Nós - JC Hair Studio\'s 62',
+  description: 'Conheça a história de mais de 40 anos de tradição familiar da JC Hair Studio\'s 62. De um modesto salão em Goiânia ao e-commerce que atende todo o Brasil.',
   keywords: [
-    'sobre 62 Beauty',
+    'sobre JC Hair Studio',
     'história empresa',
-    'extensões cabelo europa',
+    'cabelo brasil',
     'empresa cabelo premium',
-    '30 anos experiência',
+    '40 anos experiência',
     'missão visão valores',
-    'certificações qualidade'
+    'tradição familiar'
   ],
   openGraph: {
-    title: 'Sobre Nós - 62 Beauty\'s 62',
-    description: 'Mais de 30 anos de experiência em extensões de cabelo premium. Conheça nossa história, missão e compromisso com a excelência.',
+    title: 'Sobre Nós - JC Hair Studio\'s 62',
+    description: 'Mais de 40 anos de tradição familiar em cuidados capilares. Conheça nossa história, missão e compromisso com a qualidade.',
     type: 'article',
   },
 };
 
 const values = [
   {
-    icon: Award,
-    title: "Qualidade",
-    description: "Nunca comprometemos a excelência. Cada produto passa por rigorosa seleção para garantir os melhores resultados.",
-    color: "text-amber-600"
-  },
-  {
     icon: Heart,
-    title: "Inovação",
-    description: "Sempre à frente das tendências, investimos constantemente em pesquisa e desenvolvimento de novos produtos.",
+    title: "Tradição Familiar",
+    description: COMPANY_DATA.values[0],
     color: "text-rose-600"
   },
   {
+    icon: Award,
+    title: "Qualidade Sem Compromisso",
+    description: COMPANY_DATA.values[1],
+    color: "text-amber-600"
+  },
+  {
     icon: Shield,
-    title: "Confiança",
-    description: "Construída ao longo de décadas através da transparência, honestidade e relacionamentos duradouros.",
+    title: "Transparência",
+    description: COMPANY_DATA.values[2],
     color: "text-blue-600"
   },
   {
-    icon: Leaf,
-    title: "Sustentabilidade",
-    description: "Responsabilidade com o futuro através de práticas sustentáveis e produtos eco-friendly.",
-    color: "text-green-600"
+    icon: Globe,
+    title: "Experiência Internacional",
+    description: COMPANY_DATA.values[3],
+    color: "text-indigo-600"
   },
   {
     icon: Users,
-    title: "Inclusão",
-    description: "Beleza para todas as mulheres. Oferecemos soluções diversas que celebram a individualidade.",
+    title: "Atendimento Personalizado",
+    description: COMPANY_DATA.values[4],
     color: "text-purple-600"
   },
   {
-    icon: Globe,
-    title: "Excelência",
-    description: "Padrão internacional de qualidade com atendimento personalizado e especializado.",
-    color: "text-indigo-600"
+    icon: Leaf,
+    title: "Responsabilidade",
+    description: COMPANY_DATA.values[5],
+    color: "text-green-600"
   }
 ];
 
 const stats = [
-  { number: "30+", label: "Anos de Experiência", description: "Décadas dedicadas à beleza capilar" },
-  { number: "50.000+", label: "Clientes Satisfeitas", description: "Em toda a Europa e além" },
-  { number: "15", label: "Países Atendidos", description: "Entrega internacional premium" },
-  { number: "98%", label: "Taxa de Satisfação", description: "Avaliações positivas comprovadas" },
-  { number: "500+", label: "Produtos Premium", description: "Catálogo cuidadosamente selecionado" },
-  { number: "24h", label: "Tempo Médio Resposta", description: "Atendimento ágil e eficiente" }
+  { number: "40+", label: "Anos de Tradição", description: "Décadas de conhecimento familiar" },
+  { number: "10.000+", label: "Clientes Atendidos", description: "Em todo o Brasil" },
+  { number: "27", label: "Estados Atendidos", description: "Entrega para todo o Brasil" },
+  { number: "95%", label: "Taxa de Satisfação", description: "Clientes recomendam nossos produtos" },
+  { number: "800+", label: "Produtos Selecionados", description: "Catálogo premium brasileiro" },
+  { number: "24h", label: "Suporte Online", description: "Atendimento via WhatsApp" }
 ];
 
 const certifications = [
-  "ISO 9001 - Sistema de Gestão da Qualidade",
-  "GDPR Compliance - Proteção de Dados",
-  "Certificação Orgânica - Produtos Naturais",
+  "Produtos Dermatologicamente Testados",
+  "Registro ANVISA - Conformidade Regulatória",
   "Cruelty-Free - Livre de Testes em Animais",
-  "Responsabilidade Social Corporativa",
-  "Certificado de Excelência em Atendimento"
+  "LGPD Compliance - Proteção de Dados",
+  "E-commerce Seguro - SSL Certificado",
+  "Satisfação do Cliente Garantida"
 ];
 
 const teamMembers = [
   {
-    name: "Júlio César",
-    role: "Fundador & CEO",
-    description: "Visionário por trás da 62 Beauty, com mais de 30 anos dedicados à beleza capilar premium.",
-    experience: "30+ anos"
+    name: COMPANY_DATA.history.founder.name,
+    role: COMPANY_DATA.history.founder.profession,
+    description: `${COMPANY_DATA.history.founder.nationality} de ${COMPANY_DATA.history.founder.age} anos, com ${COMPANY_DATA.history.founder.education}. ${COMPANY_DATA.history.founder.experience}`,
+    experience: COMPANY_DATA.history.founder.experience
+  },
+  {
+    name: COMPANY_DATA.history.familyFounder.name,
+    role: `${COMPANY_DATA.history.familyFounder.relation} & Matriarca`,
+    description: `${COMPANY_DATA.history.familyFounder.experience}. ${COMPANY_DATA.history.familyFounder.legacy} e responsável por toda a base de conhecimento da empresa.`,
+    experience: "40+ anos"
   },
   {
     name: "Equipe Técnica",
-    role: "Especialistas em Produto",
-    description: "Time qualificado em seleção, testes e desenvolvimento de produtos capilares de alta performance.",
+    role: "Especialistas em Produtos",
+    description: "Time especializado na seleção e testes de produtos capilares brasileiros, garantindo qualidade e resultados comprovados.",
     experience: "15+ anos"
   },
   {
-    name: "Atendimento Especializado",
-    role: "Consultores de Beleza",
-    description: "Profissionais capacitados para orientar e personalizar a escolha perfeita para cada cliente.",
-    experience: "10+ anos"
-  },
-  {
-    name: "Logística Europa",
-    role: "Equipe Internacional",
-    description: "Especialistas em entrega internacional com foco na experiência premium do cliente.",
-    experience: "8+ anos"
+    name: "Atendimento Digital",
+    role: "Consultores Capilares",
+    description: "Equipe capacitada para atendimento via WhatsApp e suporte online, orientando clientes em todo o Brasil.",
+    experience: "5+ anos"
   }
 ];
 
 const milestones = [
-  { year: "1990", achievement: "Fundação da empresa como pequeno salão especializado" },
-  { year: "2000", achievement: "Expansão para produtos premium e extensões naturais" },
-  { year: "2010", achievement: "Entrada no mercado europeu com base em Lisboa" },
-  { year: "2015", achievement: "Abertura do escritório comercial em Bruxelas" },
-  { year: "2020", achievement: "Lançamento do e-commerce com entrega internacional" },
-  { year: "2024", achievement: "Líder reconhecida em extensões premium na Europa" }
+  { year: "1980", achievement: `${COMPANY_DATA.history.familyFounder.name} inicia sua jornada como cabeleireira aos 13 anos` },
+  { year: "2000", achievement: `Fundação do ${COMPANY_DATA.history.origins.firstSalon} em ${COMPANY_DATA.history.origins.location}` },
+  { year: "2010-2020", achievement: COMPANY_DATA.history.evolution.internationalTraining },
+  { year: "2024", achievement: `Lançamento da ${COMPANY_DATA.name} - E-commerce para todo o Brasil` }
 ];
 
 export default function SobrePage() {
@@ -122,13 +121,10 @@ export default function SobrePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="max-w-4xl">
             <h1 className="text-4xl lg:text-6xl font-light text-gray-900 mb-6 leading-tight">
-              Mais de 30 anos transformando
-              <span className="italic"> sonhos em realidade</span>
+              {COMPANY_DATA.tagline}
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl">
-              Somos a 62 Beauty's 62, pioneiros em extensões de cabelo premium na Europa. 
-              Nossa jornada começou com uma paixão: realizar o sonho de cabelos perfeitos para 
-              mulheres exigentes em todo o continente.
+              {COMPANY_DATA.mission}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
@@ -165,18 +161,14 @@ export default function SobrePage() {
             <div className="bg-white p-8 rounded-lg shadow-sm">
               <h3 className="text-2xl font-medium text-gray-900 mb-4">Nossa Missão</h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Proporcionar às mulheres europeias acesso a extensões de cabelo de altíssima qualidade, 
-                oferecendo produtos premium que valorizam sua beleza natural e elevam sua autoestima, 
-                sempre com atendimento personalizado e expertise profissional.
+                {COMPANY_DATA.mission}
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-sm">
               <h3 className="text-2xl font-medium text-gray-900 mb-4">Nossa Visão</h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Ser reconhecida como a referência absoluta em extensões de cabelo premium na Europa, 
-                expandindo nossa presença internacional e mantendo o compromisso inabalável com a 
-                excelência, inovação e satisfação das nossas clientes.
+                {COMPANY_DATA.vision}
               </p>
             </div>
           </div>
@@ -365,8 +357,8 @@ export default function SobrePage() {
             Faça Parte da Nossa História
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Descubra por que milhares de mulheres em toda a Europa confiam na 62 Beauty's 62 
-            para realizar seus sonhos capilares.
+            Descubra por que milhares de brasileiros confiam na JC Hair Studio's 62
+            para cuidar de seus cabelos com qualidade e tradição familiar.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -376,7 +368,7 @@ export default function SobrePage() {
               Explorar Produtos
             </Link>
             <a 
-              href="https://wa.me/32470032758"
+              href={`https://wa.me/${COMPANY_DATA.contact.phones[0].number.replace(/[^0-9]/g, '')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-medium"

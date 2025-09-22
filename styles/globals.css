@@ -179,3 +179,207 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+
+/* Cosmetics Page Styles - Rosa e Vermelho Sofisticado */
+.cosmetics-nav-link {
+  @apply relative px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300;
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 50%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cosmetics-nav-link:hover {
+  background: linear-gradient(135deg, #db2777 0%, #9d174d 50%, #b91c1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 1px 2px rgba(236, 72, 153, 0.2);
+}
+
+.cosmetics-nav-link.active {
+  background: linear-gradient(135deg, #db2777 0%, #9d174d 50%, #b91c1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.cosmetics-nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ec4899, #be185d, #dc2626);
+  border-radius: 1px;
+}
+
+/* Cosmetics Button Styles */
+.cosmetics-btn-primary {
+  @apply px-6 py-3 font-medium rounded-full text-white shadow-lg hover:shadow-xl
+         transition-all duration-300 transform hover:scale-105 active:scale-95
+         focus:outline-none focus:ring-4 focus:ring-pink-200;
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 50%, #dc2626 100%);
+}
+
+.cosmetics-btn-primary:hover {
+  background: linear-gradient(135deg, #db2777 0%, #9d174d 50%, #b91c1c 100%);
+  box-shadow: 0 20px 25px -5px rgba(236, 72, 153, 0.3), 0 10px 10px -5px rgba(236, 72, 153, 0.2);
+}
+
+.cosmetics-btn-secondary {
+  @apply px-6 py-3 font-medium rounded-full border-2 transition-all duration-300
+         transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4;
+  border-color: #ec4899;
+  color: #ec4899;
+  background: transparent;
+}
+
+.cosmetics-btn-secondary:hover {
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 50%, #dc2626 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 10px 15px -3px rgba(236, 72, 153, 0.3);
+}
+
+/* Cosmetics Card Styles */
+.cosmetics-card {
+  @apply bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500
+         transform hover:-translate-y-2 border border-pink-100;
+  background: linear-gradient(145deg, #ffffff 0%, #fef7f7 100%);
+}
+
+.cosmetics-card:hover {
+  border-color: #ec4899;
+  box-shadow: 0 25px 50px -12px rgba(236, 72, 153, 0.25),
+              0 0 0 1px rgba(236, 72, 153, 0.1);
+}
+
+/* Cosmetics Badge Styles */
+.cosmetics-badge-new {
+  @apply px-3 py-1 text-xs font-semibold rounded-full text-white;
+  background: linear-gradient(135deg, #ec4899, #be185d);
+  box-shadow: 0 4px 6px -1px rgba(236, 72, 153, 0.3);
+}
+
+.cosmetics-badge-bestseller {
+  @apply px-3 py-1 text-xs font-semibold rounded-full text-white;
+  background: linear-gradient(135deg, #dc2626, #be185d);
+  box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.3);
+}
+
+/* Cosmetics Filter Pills */
+.cosmetics-filter-pill {
+  @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
+         border-2 cursor-pointer transform hover:scale-105;
+  border-color: #f9a8d4;
+  color: #be185d;
+  background: linear-gradient(145deg, #ffffff, #fef7f7);
+}
+
+.cosmetics-filter-pill:hover {
+  border-color: #ec4899;
+  background: linear-gradient(145deg, #fdf2f8, #fce7f3);
+  transform: scale(1.05) translateY(-1px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.2);
+}
+
+.cosmetics-filter-pill.active {
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 50%, #dc2626 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 16px rgba(236, 72, 153, 0.4);
+}
+
+/* Cosmetics Price Text */
+.cosmetics-price {
+  background: linear-gradient(135deg, #be185d 0%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Cosmetics Search Input */
+.cosmetics-search {
+  @apply w-full px-6 py-4 border-2 rounded-full text-gray-700 placeholder-pink-400
+         focus:outline-none focus:border-pink-400 focus:ring-4 focus:ring-pink-100
+         transition-all duration-300;
+  border-color: #f9a8d4;
+  background: linear-gradient(145deg, #ffffff, #fef7f7);
+}
+
+.cosmetics-search:focus {
+  border-color: #ec4899;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.1),
+              0 10px 25px -5px rgba(236, 72, 153, 0.2);
+}
+
+/* Cosmetics Header Gradient */
+.cosmetics-hero-bg {
+  background: linear-gradient(135deg,
+    #ec4899 0%,
+    #be185d 25%,
+    #dc2626 75%,
+    #b91c1c 100%);
+  position: relative;
+}
+
+.cosmetics-hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg,
+    rgba(236, 72, 153, 0.1) 0%,
+    rgba(190, 24, 93, 0.2) 50%,
+    rgba(220, 38, 38, 0.1) 100%);
+  pointer-events: none;
+}
+
+/* Cosmetics Newsletter Section */
+.cosmetics-newsletter {
+  background: linear-gradient(135deg, #ec4899 0%, #be185d 50%, #dc2626 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cosmetics-newsletter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Heart Animation for Wishlist */
+.cosmetics-heart {
+  @apply text-pink-500 transition-all duration-300;
+}
+
+.cosmetics-heart:hover {
+  @apply text-red-500 transform scale-110;
+  filter: drop-shadow(0 4px 8px rgba(236, 72, 153, 0.3));
+}
+
+/* Cosmetics Color Swatches */
+.cosmetics-color-swatch {
+  @apply w-5 h-5 rounded-full border-2 border-gray-200 cursor-pointer
+         transition-all duration-300 hover:scale-110;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cosmetics-color-swatch:hover {
+  border-color: #ec4899;
+  box-shadow: 0 4px 8px rgba(236, 72, 153, 0.3),
+              0 0 0 2px rgba(236, 72, 153, 0.2);
+}
+

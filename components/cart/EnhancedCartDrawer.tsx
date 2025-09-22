@@ -18,7 +18,7 @@ import {
   CreditCard,
   ArrowRight
 } from 'lucide-react';
-import { useEnhancedCartStore } from '@/lib/stores/enhancedCartStore';
+import { useCart } from '@/lib/stores/cartStore';
 
 interface EnhancedCartDrawerProps {
   onGoToCheckout?: () => void;
@@ -39,7 +39,7 @@ export default function EnhancedCartDrawer({ onGoToCheckout }: EnhancedCartDrawe
     setShippingMethod,
     getCartSummary,
     moveToWishlist
-  } = useEnhancedCartStore();
+  } = useCart();
 
   const [couponCode, setCouponCode] = useState('');
   const [showShippingOptions, setShowShippingOptions] = useState(false);
@@ -65,14 +65,14 @@ export default function EnhancedCartDrawer({ onGoToCheckout }: EnhancedCartDrawe
         code: 'FRETE20',
         type: 'fixed' as const,
         value: 20,
-        description: 'R$ 20 de desconto'
+        description: '€3 de desconto'
       },
       'PRIMEIRA50': {
         code: 'PRIMEIRA50',
         type: 'fixed' as const,
         value: 50,
         minAmount: 200,
-        description: 'R$ 50 de desconto em compras acima de R$ 200'
+        description: '€8 de desconto em compras acima de €32'
       }
     };
 
@@ -226,11 +226,11 @@ export default function EnhancedCartDrawer({ onGoToCheckout }: EnhancedCartDrawe
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <span className="font-bold text-amber-600">
-                              R$ {((item.variant?.price || item.price) * item.quantity).toFixed(2)}
+                              €{(((item.variant?.price || item.price) * item.quantity) * 0.159).toFixed(2)}
                             </span>
                             {item.comparePrice && (
                               <span className="text-xs text-gray-400 line-through">
-                                R$ {(item.comparePrice * item.quantity).toFixed(2)}
+                                €{((item.comparePrice * item.quantity) * 0.159).toFixed(2)}
                               </span>
                             )}
                           </div>
@@ -351,11 +351,11 @@ export default function EnhancedCartDrawer({ onGoToCheckout }: EnhancedCartDrawe
                                   <div>
                                     <span className="text-green-600 font-medium">Grátis</span>
                                     <p className="text-xs text-gray-500 line-through">
-                                      R$ {option.price.toFixed(2)}
+                                      €{(option.price * 0.159).toFixed(2)}
                                     </p>
                                   </div>
                                 ) : (
-                                  <span className="font-medium">R$ {option.price.toFixed(2)}</span>
+                                  <span className="font-medium">€{(option.price * 0.159).toFixed(2)}</span>
                                 )}
                               </div>
                             </div>
@@ -376,23 +376,23 @@ export default function EnhancedCartDrawer({ onGoToCheckout }: EnhancedCartDrawe
               <div className="space-y-2">
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-gray-600">Subtotal:</span>
-                  <span className="font-medium">R$ {summary.subtotal.toFixed(2)}</span>
+                  <span className="font-medium">€{(summary.subtotal * 0.159).toFixed(2)}</span>
                 </div>
                 {summary.shipping > 0 && (
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-600">Frete:</span>
-                    <span className="font-medium">R$ {summary.shipping.toFixed(2)}</span>
+                    <span className="font-medium">€{(summary.shipping * 0.159).toFixed(2)}</span>
                   </div>
                 )}
                 {summary.discount > 0 && (
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-600">Desconto:</span>
-                    <span className="font-medium text-green-600">-R$ {summary.discount.toFixed(2)}</span>
+                    <span className="font-medium text-green-600">-€{(summary.discount * 0.159).toFixed(2)}</span>
                   </div>
                 )}
                 <div className="flex items-center justify-between text-lg font-bold border-t border-gray-200 pt-2">
                   <span>Total:</span>
-                  <span className="text-amber-600">R$ {summary.total.toFixed(2)}</span>
+                  <span className="text-amber-600">€{(summary.total * 0.159).toFixed(2)}</span>
                 </div>
               </div>
 
@@ -400,7 +400,7 @@ export default function EnhancedCartDrawer({ onGoToCheckout }: EnhancedCartDrawe
               {summary.subtotal < 199 && (
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
                   <p className="text-sm text-blue-800 mb-2">
-                    Faltam <strong>R$ {(199 - summary.subtotal).toFixed(2)}</strong> para frete grátis!
+                    Faltam <strong>€{((199 - summary.subtotal) * 0.159).toFixed(2)}</strong> para frete grátis!
                   </p>
                   <div className="bg-blue-200 rounded-full h-2">
                     <div 

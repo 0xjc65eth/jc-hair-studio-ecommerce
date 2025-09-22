@@ -66,42 +66,6 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Newsletter Section */}
-      <div className="border-b border-gray-800">
-        <div className="container-custom py-12">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-playfair font-light mb-4">
-              Fique por Dentro das Novidades
-            </h2>
-            <p className="text-gray-400 mb-8 text-lg">
-              Receba promoções exclusivas, lançamentos e dicas de cuidados capilares
-            </p>
-            
-            <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
-              <input
-                type="email"
-                placeholder="Seu melhor e-mail"
-                className="flex-1 px-6 py-3 bg-gray-800 border border-gray-700 rounded-none text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/40"
-                required
-              />
-              <button 
-                type="submit" 
-                className="btn-primary bg-white text-black hover:bg-gray-100 px-8 py-3"
-              >
-                Inscrever-se
-              </button>
-            </form>
-            
-            <p className="text-sm text-gray-500 mt-4">
-              Ao se inscrever, você concorda com nossa{' '}
-              <Link href="/privacidade" className="underline hover:text-white">
-                política de privacidade
-              </Link>
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
@@ -139,11 +103,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-sm text-gray-400">
                 <Phone className="w-4 h-4 mr-3 flex-shrink-0" />
-                <span>+351 XXX XXX XXX</span>
+                <span>+351 928 375 226 • +32 049 748 4720</span>
               </div>
               <div className="flex items-center text-sm text-gray-400">
                 <Mail className="w-4 h-4 mr-3 flex-shrink-0" />
-                <span>contato@jchairstudios62.xyz</span>
+                <span>noreply@jchairstudios62.xyz</span>
               </div>
             </div>
 
@@ -351,7 +315,7 @@ export default function Footer() {
                 © {currentYear} JC Hair Studio's 62. Todos os direitos reservados.
               </p>
               <p className="text-xs text-gray-500">
-                CNPJ: XX.XXX.XXX/0001-XX • NIF: XXXXXXXXX
+                NIF: 293147175
               </p>
             </div>
             

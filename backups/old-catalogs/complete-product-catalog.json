@@ -1,0 +1,897 @@
+{
+  "categories": {
+    "hidratacao": {
+      "name": "Produtos de Hidratação",
+      "icon": "💧",
+      "products": [
+        {
+          "id": "bioextratus-oleo-argan",
+          "name": "Bio Extratus Óleo de Argan Premium",
+          "brand": "Bio Extratus",
+          "description": "Óleo de argan puro para hidratação profunda e reparação dos fios danificados",
+          "originalPrice": 35.9,
+          "images": [
+            "/images/products/hidratacao/hidratacao_1_1.jpg"
+          ],
+          "features": [
+            "Óleo Puro",
+            "Hidratação Intensa",
+            "Reparador",
+            "Brilho Natural"
+          ],
+          "stock": 45,
+          "rating": 4.8,
+          "reviews": 234
+        },
+        {
+          "id": "bioextratus-mascara-hidratante",
+          "name": "Bio Extratus Máscara Hidratante Multi-Função",
+          "brand": "Bio Extratus",
+          "description": "Máscara hidratante para todos os tipos de cabelo com múltiplos benefícios",
+          "images": [
+            "/images/products/hidratacao/hidratacao_2_1.jpg"
+          ],
+          "features": [
+            "Hidratação",
+            "Nutrição",
+            "Força",
+            "Maciez"
+          ],
+          "stock": 62,
+          "rating": 4.6,
+          "reviews": 189
+        },
+        {
+          "id": "cronograma-capilar-completo",
+          "name": "Kit Cronograma Capilar Completo",
+          "brand": "Bio Extratus",
+          "description": "Kit completo para cronograma capilar com hidratação, nutrição e reconstrução",
+          "originalPrice": 65.9,
+          "images": [
+            "/images/products/hidratacao/hidratacao_2_2.jpg"
+          ],
+          "features": [
+            "Kit Completo",
+            "3 Etapas",
+            "Profissional",
+            "Resultados Visíveis"
+          ],
+          "stock": 28,
+          "rating": 4.9,
+          "reviews": 156
+        },
+        {
+          "id": "tratamento-intensivo-reparacao",
+          "name": "Tratamento Intensivo de Reparação",
+          "brand": "Bio Extratus",
+          "description": "Tratamento intensivo para cabelos muito danificados e ressecados",
+          "images": [
+            "/images/products/hidratacao/hidratacao_2_3.jpg"
+          ],
+          "features": [
+            "Reparação Intensiva",
+            "Cabelos Danificados",
+            "Resultado Imediato"
+          ],
+          "stock": 33,
+          "rating": 4.7,
+          "reviews": 98
+        },
+        {
+          "id": "linha-professional-salon",
+          "name": "Linha Professional Salon",
+          "brand": "Bio Extratus",
+          "description": "Linha profissional para salões com produtos de alta performance",
+          "images": [
+            "/images/products/hidratacao/hidratacao_3_1.jpg"
+          ],
+          "features": [
+            "Profissional",
+            "Salão",
+            "Alta Performance",
+            "Resultado Duradouro"
+          ],
+          "stock": 25,
+          "rating": 4.8,
+          "reviews": 167
+        }
+      ]
+    },
+    "tintas-loreal": {
+      "name": "Tintas L'Oréal",
+      "icon": "🎨",
+      "products": [
+        {
+          "id": "loreal-coloracao-premium",
+          "name": "L'Oréal Coloração Premium Excellence",
+          "brand": "L'Oréal Paris",
+          "description": "Coloração profissional com cobertura total e proteção da cor",
+          "originalPrice": 32.9,
+          "images": [
+            "https://i.ibb.co/pChGNTF/IMG-8769.png",
+            "https://i.ibb.co/cXLqftLZ/IMG-8800.png",
+            "https://i.ibb.co/kgvkVbL4/IMG-8810.png",
+            "https://i.ibb.co/1k4JTFL/IMG-8826.png",
+            "https://i.ibb.co/xt5290DX/IMG-8832.png"
+          ],
+          "features": [
+            "Cobertura Total",
+            "Longa Duração",
+            "Proteção da Cor",
+            "Fácil Aplicação"
+          ],
+          "stock": 78,
+          "rating": 4.7,
+          "reviews": 289
+        },
+        {
+          "id": "loreal-tons-naturais",
+          "name": "L'Oréal Tons Naturais Collection",
+          "brand": "L'Oréal Paris",
+          "description": "Coleção de tons naturais para um resultado perfeito e natural",
+          "images": [
+            "https://i.ibb.co/rKvbq7kV/IMG-8846.png",
+            "https://i.ibb.co/5xGHG0Wt/IMG-8852.png",
+            "https://i.ibb.co/NgRgPT6d/IMG-8857.png",
+            "https://i.ibb.co/G4B23S9L/IMG-8861.png",
+            "https://i.ibb.co/mr4HdZSf/IMG-8862.png"
+          ],
+          "features": [
+            "Tons Naturais",
+            "Sem Amônia",
+            "Suave",
+            "Cobertura Uniforme"
+          ],
+          "stock": 65,
+          "rating": 4.5,
+          "reviews": 201
+        },
+        {
+          "id": "loreal-tons-fashion",
+          "name": "L'Oréal Fashion Colors",
+          "brand": "L'Oréal Paris",
+          "description": "Cores vibrantes e modernas para um visual contemporâneo",
+          "images": [
+            "https://i.ibb.co/C5hpKfQF/IMG-8868.png",
+            "https://i.ibb.co/HfGvrbG0/IMG-8869.png",
+            "https://i.ibb.co/M5gRqJQZ/IMG-8872.png",
+            "https://i.ibb.co/SDyrg5K0/IMG-8877.png",
+            "https://i.ibb.co/5xcWxQzb/IMG-8880.png"
+          ],
+          "features": [
+            "Cores Vibrantes",
+            "Tendência",
+            "Longa Fixação",
+            "Brilho Intenso"
+          ],
+          "stock": 52,
+          "rating": 4.6,
+          "reviews": 167
+        },
+        {
+          "id": "loreal-professional-salon",
+          "name": "L'Oréal Professional Salon Collection",
+          "brand": "L'Oréal Professional",
+          "description": "Linha profissional para resultados de salão em casa",
+          "originalPrice": 45.9,
+          "images": [
+            "https://i.ibb.co/0VjSdG2g/IMG-8885.png",
+            "https://i.ibb.co/dw7bBWvx/IMG-8898.png",
+            "https://i.ibb.co/R4h8scgD/IMG-8900.png",
+            "https://i.ibb.co/B19ym0R/IMG-8901.png"
+          ],
+          "features": [
+            "Profissional",
+            "Tecnologia Avançada",
+            "Resultado Salão",
+            "Premium"
+          ],
+          "stock": 34,
+          "rating": 4.9,
+          "reviews": 145
+        },
+        {
+          "id": "loreal-platinados-especiais",
+          "name": "L'Oréal Platinados Especiais",
+          "brand": "L'Oréal Paris",
+          "description": "Tons platinados especiais para cabelos loiros sofisticados",
+          "images": [
+            "https://i.ibb.co/qLM9xjFz/IMG-8966.png",
+            "https://i.ibb.co/Pvt5yz3H/IMG-8977.png",
+            "https://i.ibb.co/nNFjvQwc/IMG-8985.png",
+            "https://i.ibb.co/84b6SJ2J/IMG-8986.png",
+            "https://i.ibb.co/chFRvhH0/IMG-8987.png"
+          ],
+          "features": [
+            "Platinados",
+            "Loiros Especiais",
+            "Matização",
+            "Anti-amarelado"
+          ],
+          "stock": 41,
+          "rating": 4.4,
+          "reviews": 89
+        },
+        {
+          "id": "loreal-classic-collection",
+          "name": "L'Oréal Classic Collection",
+          "brand": "L'Oréal Paris",
+          "description": "Coleção clássica com tons tradicionais e atemporais",
+          "images": [
+            "https://i.ibb.co/1fmwWJ8J/IMG-9008.png",
+            "https://i.ibb.co/Z1WbCcGZ/IMG-9032.png",
+            "https://i.ibb.co/DH9stKJQ/IMG-9036.png",
+            "https://i.ibb.co/1Y2mvH1L/IMG-9043.png",
+            "https://i.ibb.co/KjmK22sf/IMG-9053.png"
+          ],
+          "features": [
+            "Clássicos",
+            "Atemporais",
+            "Confiável",
+            "Tradicional"
+          ],
+          "stock": 87,
+          "rating": 4.3,
+          "reviews": 278
+        }
+      ]
+    },
+    "tintas-amend": {
+      "name": "Tintas Amend",
+      "icon": "🌿",
+      "products": [
+        {
+          "id": "amend-naturals-collection",
+          "name": "Amend Naturals Collection",
+          "brand": "Amend",
+          "description": "Coloração natural com ingredientes orgânicos e fórmula suave",
+          "originalPrice": 24.9,
+          "images": [
+            "https://i.ibb.co/KxD0nWcb/IMG-8979.png",
+            "https://i.ibb.co/HfGFbZSY/IMG-8918.png",
+            "https://i.ibb.co/MkpDgPxr/IMG-8940.png",
+            "https://i.ibb.co/GfD8BYFK/IMG-8953.png",
+            "https://i.ibb.co/mVwfs0n0/IMG-8973.png"
+          ],
+          "features": [
+            "Natural",
+            "Orgânico",
+            "Suave",
+            "Sem Químicos Agressivos"
+          ],
+          "stock": 56,
+          "rating": 4.6,
+          "reviews": 198
+        },
+        {
+          "id": "amend-professional-line",
+          "name": "Amend Professional Line",
+          "brand": "Amend Professional",
+          "description": "Linha profissional com tecnologia avançada para salões",
+          "images": [
+            "https://i.ibb.co/77BS7Pq/IMG-8976.png"
+          ],
+          "features": [
+            "Profissional",
+            "Tecnologia Avançada",
+            "Resultado Premium"
+          ],
+          "stock": 32,
+          "rating": 4.7,
+          "reviews": 124
+        }
+      ]
+    },
+    "tintas-beauty-color": {
+      "name": "Tintas Beauty Color",
+      "icon": "💎",
+      "products": [
+        {
+          "id": "beauty-color-kit-coloracao",
+          "name": "Beauty Color Kit Coloração Completo",
+          "brand": "Beauty Color",
+          "description": "Kit completo de coloração com todos os acessórios necessários",
+          "originalPrice": 22.9,
+          "images": [
+            "https://i.ibb.co/QjfVrFvC/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png",
+            "https://i.ibb.co/XrKQhtvM/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png",
+            "https://i.ibb.co/QF9frBBN/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png",
+            "https://i.ibb.co/gLNRw72m/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png",
+            "https://i.ibb.co/Xfqsf4NR/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"
+          ],
+          "features": [
+            "Kit Completo",
+            "Fácil Aplicação",
+            "Resultado Profissional",
+            "Preço Acessível"
+          ],
+          "stock": 95,
+          "rating": 4.4,
+          "reviews": 312
+        },
+        {
+          "id": "beauty-color-tons-especiais",
+          "name": "Beauty Color Tons Especiais",
+          "brand": "Beauty Color",
+          "description": "Tons especiais e únicos para looks diferenciados",
+          "images": [
+            "https://i.ibb.co/mCsznqv5/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png",
+            "https://i.ibb.co/xSJSWWDt/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png",
+            "https://i.ibb.co/1G9tvWtL/155-B6-F03-6326-45-F1-B128-C98-F218-F2-A23.png",
+            "https://i.ibb.co/DfRJ0yVF/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"
+          ],
+          "features": [
+            "Tons Únicos",
+            "Diferenciados",
+            "Expressão Pessoal",
+            "Criatividade"
+          ],
+          "stock": 67,
+          "rating": 4.3,
+          "reviews": 187
+        },
+        {
+          "id": "beauty-color-basicos-essenciais",
+          "name": "Beauty Color Básicos Essenciais",
+          "brand": "Beauty Color",
+          "description": "Tons básicos e essenciais para o dia a dia",
+          "images": [
+            "https://i.ibb.co/q3dDbvng/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png",
+            "https://i.ibb.co/WWv1cSB5/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png",
+            "https://i.ibb.co/d08g0cGf/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png",
+            "https://i.ibb.co/h1d0ppPm/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"
+          ],
+          "features": [
+            "Básicos",
+            "Dia a Dia",
+            "Essenciais",
+            "Versáteis"
+          ],
+          "stock": 124,
+          "rating": 4.2,
+          "reviews": 245
+        },
+        {
+          "id": "beauty-color-premium-line",
+          "name": "Beauty Color Premium Line",
+          "brand": "Beauty Color",
+          "description": "Linha premium com qualidade superior e acabamento perfeito",
+          "images": [
+            "https://i.ibb.co/k6S2V543/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png",
+            "https://i.ibb.co/4ZC5k1Bh/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png",
+            "https://i.ibb.co/QF6TSw5p/E56-EA869-F48-B-4925-A000-3-D712-D35-B1-C2.png",
+            "https://i.ibb.co/840Q1Sf8/E50589-AE-AFCE-4-FD5-8-D43-C27-A34-DDEEE0.png",
+            "https://i.ibb.co/YThRbmcZ/EE902623-2-BC1-445-D-9-D31-071404310-ADE.png"
+          ],
+          "features": [
+            "Premium",
+            "Qualidade Superior",
+            "Acabamento Perfeito",
+            "Luxo"
+          ],
+          "stock": 43,
+          "rating": 4.8,
+          "reviews": 156
+        }
+      ]
+    },
+    "tintas-biocolor": {
+      "name": "Tintas Biocolor",
+      "icon": "🌱",
+      "products": [
+        {
+          "id": "biocolor-natural-collection",
+          "name": "Biocolor Natural Collection",
+          "brand": "Biocolor",
+          "description": "Coloração natural com extratos vegetais e fórmula suave",
+          "images": [
+            "https://i.ibb.co/zW13Y0f7/IMG-8725.png",
+            "https://i.ibb.co/Lz0DNGnb/IMG-8733.png",
+            "https://i.ibb.co/Y7yZs7h9/IMG-8757.png",
+            "https://i.ibb.co/JSy1VBq/IMG-8766.png",
+            "https://i.ibb.co/0jNTwTC1/IMG-8777.png"
+          ],
+          "features": [
+            "Natural",
+            "Extratos Vegetais",
+            "Suave",
+            "Hipoalergênico"
+          ],
+          "stock": 89,
+          "rating": 4.3,
+          "reviews": 267
+        },
+        {
+          "id": "biocolor-cobertura-total",
+          "name": "Biocolor Cobertura Total",
+          "brand": "Biocolor",
+          "description": "Coloração com cobertura total especialmente para cabelos grisalhos",
+          "images": [
+            "https://i.ibb.co/Df6SZDyG/IMG-8780.png",
+            "https://i.ibb.co/nvwpJqr/IMG-8819.png",
+            "https://i.ibb.co/MxkH2BkK/IMG-8820.png",
+            "https://i.ibb.co/MDhnJB7P/IMG-8829.png",
+            "https://i.ibb.co/sMwFxSv/IMG-8830.png"
+          ],
+          "features": [
+            "Cobertura Total",
+            "Grisalhos",
+            "Durabilidade",
+            "Fácil Aplicação"
+          ],
+          "stock": 72,
+          "rating": 4.5,
+          "reviews": 198
+        },
+        {
+          "id": "biocolor-tons-escuros",
+          "name": "Biocolor Tons Escuros",
+          "brand": "Biocolor",
+          "description": "Coloração para tons escuros com brilho intenso e cor duradoura",
+          "images": [
+            "https://i.ibb.co/C32ZCt4B/IMG-8831.png",
+            "https://i.ibb.co/TDCL11yb/IMG-8845.png",
+            "https://i.ibb.co/B2W6hyYG/IMG-8853.png",
+            "https://i.ibb.co/W4CxTc47/IMG-8855.png",
+            "https://i.ibb.co/mVd7LtHs/IMG-8858.png"
+          ],
+          "features": [
+            "Tons Escuros",
+            "Brilho Intenso",
+            "Duradouro",
+            "Proteção"
+          ],
+          "stock": 65,
+          "rating": 4.4,
+          "reviews": 234
+        },
+        {
+          "id": "biocolor-linha-premium",
+          "name": "Biocolor Linha Premium",
+          "brand": "Biocolor",
+          "description": "Linha premium com tecnologia avançada e ingredientes nobres",
+          "images": [
+            "https://i.ibb.co/1t7xSX4T/IMG-8875.png",
+            "https://i.ibb.co/nq5nf4nb/IMG-8882.png",
+            "https://i.ibb.co/N0NqBpC/IMG-8883.png",
+            "https://i.ibb.co/WWMMNj1Q/IMG-8903.png",
+            "https://i.ibb.co/qL1ZjHXh/IMG-8904.png"
+          ],
+          "features": [
+            "Premium",
+            "Tecnologia Avançada",
+            "Ingredientes Nobres",
+            "Resultado Superior"
+          ],
+          "stock": 38,
+          "rating": 4.6,
+          "reviews": 167
+        },
+        {
+          "id": "biocolor-especiais-festas",
+          "name": "Biocolor Especiais para Festas",
+          "brand": "Biocolor",
+          "description": "Cores especiais para ocasiões festivas e eventos especiais",
+          "images": [
+            "https://i.ibb.co/Zzkmtbyj/IMG-9020.png",
+            "https://i.ibb.co/fzFgTp8F/IMG-9023.png",
+            "https://i.ibb.co/1tRtSSBn/IMG-9055.png"
+          ],
+          "features": [
+            "Festas",
+            "Eventos Especiais",
+            "Cores Vibrantes",
+            "Temporário"
+          ],
+          "stock": 29,
+          "rating": 4.2,
+          "reviews": 89
+        }
+      ]
+    },
+    "tintas-wella": {
+      "name": "Tintas Wella",
+      "icon": "⭐",
+      "products": [
+        {
+          "id": "wella-koleston-perfect",
+          "name": "Wella Koleston Perfect",
+          "brand": "Wella Professionals",
+          "description": "Coloração profissional com tecnologia ME+ para máxima proteção",
+          "originalPrice": 42.9,
+          "images": [
+            "https://i.ibb.co/20TnJWRZ/IMG-8698.png",
+            "https://i.ibb.co/yngQsF7V/IMG-8711.png",
+            "https://i.ibb.co/Q7Nm5WtR/IMG-8712.png",
+            "https://i.ibb.co/ymZpBjTC/IMG-8713.png",
+            "https://i.ibb.co/93SRy4c2/IMG-8716.png"
+          ],
+          "features": [
+            "Profissional",
+            "Tecnologia ME+",
+            "Proteção Máxima",
+            "Resultado Perfeito"
+          ],
+          "stock": 45,
+          "rating": 4.9,
+          "reviews": 298
+        },
+        {
+          "id": "wella-color-touch",
+          "name": "Wella Color Touch",
+          "brand": "Wella Professionals",
+          "description": "Coloração semi-permanente para tons suaves e naturais",
+          "images": [
+            "https://i.ibb.co/B5wVv2Vw/IMG-8718.png",
+            "https://i.ibb.co/YBx8vTv5/IMG-8720.png",
+            "https://i.ibb.co/xkzjyBc/IMG-8727.png",
+            "https://i.ibb.co/93s8gtKH/IMG-8734.png",
+            "https://i.ibb.co/39sx2rq9/IMG-8737.png"
+          ],
+          "features": [
+            "Semi-permanente",
+            "Tons Suaves",
+            "Natural",
+            "Sem Amônia"
+          ],
+          "stock": 67,
+          "rating": 4.7,
+          "reviews": 234
+        },
+        {
+          "id": "wella-illumina-color",
+          "name": "Wella Illumina Color",
+          "brand": "Wella Professionals",
+          "description": "Coloração com tecnologia Microlight para brilho excepcional",
+          "images": [
+            "https://i.ibb.co/HD2zFVj5/IMG-8739.png",
+            "https://i.ibb.co/nqGbbHDq/IMG-8740.png",
+            "https://i.ibb.co/T91tgPy/IMG-8741.png",
+            "https://i.ibb.co/FTng1yq/IMG-8748.png",
+            "https://i.ibb.co/8ngLNnV3/IMG-8752.png"
+          ],
+          "features": [
+            "Tecnologia Microlight",
+            "Brilho Excepcional",
+            "Luminosidade",
+            "Premium"
+          ],
+          "stock": 34,
+          "rating": 4.8,
+          "reviews": 187
+        },
+        {
+          "id": "wella-blondor-multi",
+          "name": "Wella Blondor Multi Blonde",
+          "brand": "Wella Professionals",
+          "description": "Pó descolorante profissional para loiros perfeitos",
+          "images": [
+            "https://i.ibb.co/xKkNXRFg/IMG-8753.png",
+            "https://i.ibb.co/XfB0kV1b/IMG-8758.png",
+            "https://i.ibb.co/DPH8VQvL/IMG-8759.png",
+            "https://i.ibb.co/ymjhf1Ss/IMG-8761.png",
+            "https://i.ibb.co/C3w3M4KC/IMG-8764.png"
+          ],
+          "features": [
+            "Descolorante",
+            "Loiros Perfeitos",
+            "Profissional",
+            "Multi Blonde"
+          ],
+          "stock": 52,
+          "rating": 4.6,
+          "reviews": 156
+        },
+        {
+          "id": "wella-professionals-collection",
+          "name": "Wella Professionals Collection",
+          "brand": "Wella Professionals",
+          "description": "Coleção completa de produtos profissionais para salões",
+          "images": [
+            "https://i.ibb.co/7dCTBc2Y/IMG-8767.png",
+            "https://i.ibb.co/Z6ntcKdk/IMG-8768.png",
+            "https://i.ibb.co/Rp0NVTG1/IMG-8770.png",
+            "https://i.ibb.co/tp8qRbbt/IMG-8774.png",
+            "https://i.ibb.co/C5B5wp17/IMG-8778.png"
+          ],
+          "features": [
+            "Coleção Completa",
+            "Profissional",
+            "Salão",
+            "Qualidade Superior"
+          ],
+          "stock": 28,
+          "rating": 4.9,
+          "reviews": 145
+        }
+      ]
+    },
+    "tintas-nutrisse": {
+      "name": "Tintas Nutrisse Garnier",
+      "icon": "🥑",
+      "products": [
+        {
+          "id": "garnier-nutrisse-creme",
+          "name": "Garnier Nutrisse Creme",
+          "brand": "Garnier",
+          "description": "Coloração nutritiva com óleos de abacate, oliva e karité",
+          "originalPrice": 26.9,
+          "images": [
+            "https://i.ibb.co/fGv7xj55/IMG-8980.png",
+            "https://i.ibb.co/ccjffcZn/IMG-8902.png",
+            "https://i.ibb.co/zTBCy9gN/IMG-8912.png",
+            "https://i.ibb.co/1YM6B6ss/IMG-8923.png",
+            "https://i.ibb.co/WWRH4DkL/IMG-8933.png"
+          ],
+          "features": [
+            "Nutritiva",
+            "Óleos Naturais",
+            "Hidratação",
+            "Cor Duradoura"
+          ],
+          "stock": 78,
+          "rating": 4.5,
+          "reviews": 289
+        },
+        {
+          "id": "garnier-nutrisse-ultra-color",
+          "name": "Garnier Nutrisse Ultra Color",
+          "brand": "Garnier",
+          "description": "Coloração ultra vibrante para cores intensas e duradouras",
+          "images": [
+            "https://i.ibb.co/TDR4hKkK/IMG-8961.png",
+            "https://i.ibb.co/NR6DhZK/IMG-8962.png",
+            "https://i.ibb.co/hxbN06Jt/IMG-8965.png",
+            "https://i.ibb.co/QhwwMTN/IMG-8981.png",
+            "https://i.ibb.co/xSftt8Rv/IMG-8984.png"
+          ],
+          "features": [
+            "Ultra Vibrante",
+            "Cores Intensas",
+            "Duradoura",
+            "Brilho"
+          ],
+          "stock": 56,
+          "rating": 4.6,
+          "reviews": 201
+        }
+      ]
+    },
+    "progressivas": {
+      "name": "Progressivas e Alisamentos",
+      "icon": "✨",
+      "products": [
+        {
+          "id": "progressiva-organica-zap",
+          "name": "Zap Professional All Time Organic",
+          "brand": "Zap Professional",
+          "description": "Progressiva orgânica sem formol para alisamento natural e duradouro",
+          "originalPrice": 120,
+          "images": [
+            "https://i.ibb.co/N6p2cX42/Design-sem-nome-png.png",
+            "https://i.ibb.co/nNCh41hY/Design-sem-nome-png-1.png",
+            "https://i.ibb.co/Z1zxy8b0/Design-sem-nome-png-2.png",
+            "https://i.ibb.co/wZXx5GW1/Design-sem-nome-png-3.png"
+          ],
+          "features": [
+            "Sem Formol",
+            "Orgânica",
+            "Duração 4-6 meses",
+            "Natural"
+          ],
+          "stock": 15,
+          "rating": 4.8,
+          "reviews": 167
+        },
+        {
+          "id": "cadiveu-plastica-dos-fios",
+          "name": "Cadiveu Plástica dos Fios",
+          "brand": "Cadiveu Professional",
+          "description": "Reconstrução e alisamento em um só produto",
+          "images": [
+            "https://i.ibb.co/j9NTBzYX/IMG-9138.png",
+            "https://i.ibb.co/FLmByKk1/IMG-9139.png",
+            "https://i.ibb.co/847rZtcT/IMG-9140.png",
+            "https://i.ibb.co/vvB1pZNS/IMG-9141.png",
+            "https://i.ibb.co/6KRYTh0/IMG-9142.jpg"
+          ],
+          "features": [
+            "2 em 1",
+            "Reconstrução",
+            "Alisamento",
+            "Profissional"
+          ],
+          "stock": 28,
+          "rating": 4.7,
+          "reviews": 145
+        },
+        {
+          "id": "inoar-moroccan-keratin",
+          "name": "Inoar Moroccan Keratin",
+          "brand": "Inoar Professional",
+          "description": "Progressiva com queratina marroquina e óleo de argan",
+          "images": [
+            "https://i.ibb.co/7JQmywcP/IMG-9143.png",
+            "https://i.ibb.co/j96m2rd6/IMG-9145.jpg",
+            "https://i.ibb.co/Rpym1cYy/IMG-9146.jpg",
+            "https://i.ibb.co/sv2hz4Zz/IMG-9147.jpg"
+          ],
+          "features": [
+            "Queratina Marroquina",
+            "Óleo de Argan",
+            "Hidratação",
+            "Brilho"
+          ],
+          "stock": 22,
+          "rating": 4.6,
+          "reviews": 198
+        },
+        {
+          "id": "forever-liss-btox-zero",
+          "name": "Forever Liss BTox Zero",
+          "brand": "Forever Liss",
+          "description": "Botox capilar sem formol para alisamento e tratamento",
+          "images": [
+            "https://i.ibb.co/zWc9np8Z/IMG-9148.jpg",
+            "https://i.ibb.co/zhCPTj4c/IMG-9149.png",
+            "https://i.ibb.co/PsDzqbP9/IMG-9150.jpg",
+            "https://i.ibb.co/6JNYTbPx/IMG-9151.jpg"
+          ],
+          "features": [
+            "BTox Capilar",
+            "Zero Formol",
+            "Tratamento",
+            "Alisamento Suave"
+          ],
+          "stock": 35,
+          "rating": 4.5,
+          "reviews": 234
+        },
+        {
+          "id": "richee-bioplastica",
+          "name": "Richée Bioplástica Capilar",
+          "brand": "Richée Professional",
+          "description": "Bioplástica capilar para reconstrução total dos fios",
+          "images": [
+            "https://i.ibb.co/zhH1jp3M/IMG-9154.jpg",
+            "https://i.ibb.co/4ZHMdCg3/IMG-9158.png",
+            "https://i.ibb.co/pBWwcTb5/IMG-9164.jpg",
+            "https://i.ibb.co/kggMPwm6/IMG-9165.jpg"
+          ],
+          "features": [
+            "Bioplástica",
+            "Reconstrução Total",
+            "Tecnologia Avançada",
+            "Duradouro"
+          ],
+          "stock": 18,
+          "rating": 4.8,
+          "reviews": 156
+        },
+        {
+          "id": "ybera-paris-discovery",
+          "name": "Ybera Paris Discovery",
+          "brand": "Ybera Paris",
+          "description": "Progressiva francesa premium com tecnologia exclusiva",
+          "images": [
+            "https://i.ibb.co/ZzWL1sj5/IMG-9176.jpg",
+            "https://i.ibb.co/fzRG4yC2/IMG-9177.jpg",
+            "https://i.ibb.co/B2xJb3St/IMG-9182.webp",
+            "https://i.ibb.co/9kMKynBT/Untitled-design.png"
+          ],
+          "features": [
+            "Francesa",
+            "Premium",
+            "Tecnologia Exclusiva",
+            "Luxo"
+          ],
+          "stock": 12,
+          "rating": 4.9,
+          "reviews": 89
+        }
+      ]
+    },
+    "relaxamentos": {
+      "name": "Relaxamentos",
+      "icon": "🌊",
+      "products": [
+        {
+          "id": "afro-nature-guanidina",
+          "name": "Afro Nature Guanidina Super",
+          "brand": "Afro Nature",
+          "description": "Relaxamento com guanidina especial para cabelos afro e crespos",
+          "images": [
+            "https://i.ibb.co/gbPxQXwF/IMG-9113.jpg",
+            "https://i.ibb.co/Rk3FPCq3/IMG-9115.jpg"
+          ],
+          "features": [
+            "Guanidina",
+            "Cabelos Afro",
+            "Crespos",
+            "Ação Profunda"
+          ],
+          "stock": 25,
+          "rating": 4.6,
+          "reviews": 134
+        },
+        {
+          "id": "salon-line-relaxamento",
+          "name": "Salon Line Relaxamento Óleo de Coco",
+          "brand": "Salon Line",
+          "description": "Relaxamento enriquecido com óleo de coco para nutrição",
+          "images": [
+            "https://i.ibb.co/MDqfDk1N/IMG-9117.webp",
+            "https://i.ibb.co/Swj30w7R/IMG-9120.png"
+          ],
+          "features": [
+            "Óleo de Coco",
+            "Nutrição",
+            "Maciez",
+            "Hidratação"
+          ],
+          "stock": 42,
+          "rating": 4.4,
+          "reviews": 189
+        },
+        {
+          "id": "soft-hair-olive",
+          "name": "Soft Hair Relaxamento Olive",
+          "brand": "Soft Hair",
+          "description": "Relaxamento com azeite de oliva para suavidade extrema",
+          "images": [
+            "https://i.ibb.co/ycnfBwf3/IMG-9121.jpg",
+            "https://i.ibb.co/jk1yRLdj/IMG-9123.webp"
+          ],
+          "features": [
+            "Azeite de Oliva",
+            "Suavidade",
+            "Natural",
+            "Brilho"
+          ],
+          "stock": 38,
+          "rating": 4.3,
+          "reviews": 167
+        },
+        {
+          "id": "embelleze-novex",
+          "name": "Embelleze Novex Relaxamento",
+          "brand": "Embelleze",
+          "description": "Relaxamento com proteção anti-quebra e força extra",
+          "images": [
+            "https://i.ibb.co/JwpGZr2h/IMG-9124.png",
+            "https://i.ibb.co/TDh3MNgj/IMG-9126.png",
+            "https://i.ibb.co/ccxPK5qY/IMG-9127.png"
+          ],
+          "features": [
+            "Anti-quebra",
+            "Força Extra",
+            "Proteção",
+            "Resistência"
+          ],
+          "stock": 56,
+          "rating": 4.5,
+          "reviews": 234
+        },
+        {
+          "id": "tcb-professional",
+          "name": "TCB Professional Relaxamento",
+          "brand": "TCB",
+          "description": "Relaxamento profissional para resultados duradouros",
+          "images": [
+            "https://i.ibb.co/Z6BtP7cx/IMG-9133.png",
+            "https://i.ibb.co/xSjg77BQ/IMG-9134.jpg"
+          ],
+          "features": [
+            "Profissional",
+            "Duradouro",
+            "Resultado Garantido",
+            "Qualidade Superior"
+          ],
+          "stock": 29,
+          "rating": 4.7,
+          "reviews": 145
+        }
+      ]
+    }
+  }
+}

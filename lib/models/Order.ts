@@ -162,12 +162,13 @@ const OrderSchema = new Schema<IOrder>({
 });
 
 // Índices
-OrderSchema.index({ orderNumber: 1 }, { unique: true });
-OrderSchema.index({ userId: 1 });
-OrderSchema.index({ status: 1 });
-OrderSchema.index({ 'payment.status': 1 });
-OrderSchema.index({ createdAt: -1 });
-OrderSchema.index({ 'customer.email': 1 });
+// Índices removidos - já definidos no schema
+// OrderSchema.index({ orderNumber: 1 }, { unique: true });
+// OrderSchema.index({ userId: 1 });
+// OrderSchema.index({ status: 1 });
+// OrderSchema.index({ 'payment.status': 1 });
+// OrderSchema.index({ createdAt: -1 });
+// OrderSchema.index({ 'customer.email': 1 });
 
 // Middleware para gerar número do pedido
 OrderSchema.pre('save', function(next) {

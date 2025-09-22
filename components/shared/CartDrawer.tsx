@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui';
-import { useCart } from '../../lib/stores/unifiedCartStore';
+import { useCart } from '../../lib/stores/cartStore';
 import { X, Minus, Plus, ShoppingBag } from 'lucide-react';
 
 interface CartDrawerProps {

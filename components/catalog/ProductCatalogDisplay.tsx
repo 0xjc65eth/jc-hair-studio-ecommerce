@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import Card, { CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import Badge from '@/components/ui/Badge';
 import { Star, ShoppingCart, TrendingUp, Award } from 'lucide-react';
 import { useProductData } from '@/lib/hooks/useProductData';
-import { OptimizedImage } from '@/components/ui/OptimizedImage';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 interface ProductCatalogDisplayProps {
   categoryKey?: string;
@@ -52,16 +52,8 @@ export const ProductCatalogDisplay: React.FC<ProductCatalogDisplayProps> = ({
             <div className="text-sm text-gray-600">Estoque Total</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-purple-600">
-              R$ {categoryData.resumo.valorTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
-            </div>
-            <div className="text-sm text-gray-600">Valor Total</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-orange-600">
-              R$ {categoryData.resumo.ticketMedio.toFixed(2)}
-            </div>
-            <div className="text-sm text-gray-600">Ticket Médio</div>
           </div>
         </div>
 
@@ -88,8 +80,6 @@ export const ProductCatalogDisplay: React.FC<ProductCatalogDisplayProps> = ({
           <OptimizedImage
             src={product.images[0]}
             alt={product.nome}
-            category={product.categoria}
-            productName={product.nome}
             className="w-full h-full object-cover"
           />
         </div>
@@ -104,23 +94,6 @@ export const ProductCatalogDisplay: React.FC<ProductCatalogDisplayProps> = ({
             <span className="text-xs text-gray-500">({product.avaliacoes})</span>
           </div>
 
-          <div className="flex items-center justify-between">
-            <div className="flex flex-col">
-              <span className="font-bold text-lg text-green-600">
-                R$ {product.preco.toFixed(2)}
-              </span>
-              {product.precoOriginal && (
-                <span className="text-xs text-gray-500 line-through">
-                  R$ {product.precoOriginal.toFixed(2)}
-                </span>
-              )}
-            </div>
-            {product.desconto && (
-              <Badge variant="destructive" className="text-xs">
-                -{product.desconto}
-              </Badge>
-            )}
-          </div>
 
           <div className="flex items-center justify-between text-xs text-gray-600">
             <span>Estoque: {product.estoque}</span>
@@ -129,7 +102,7 @@ export const ProductCatalogDisplay: React.FC<ProductCatalogDisplayProps> = ({
 
           <div className="flex flex-wrap gap-1 mt-2">
             {product.features.slice(0, 2).map((feature: string, index: number) => (
-              <Badge key={index} variant="outline" className="text-xs">
+              <Badge key={index} variant="secondary" className="text-xs">
                 {feature}
               </Badge>
             ))}
@@ -157,12 +130,6 @@ export const ProductCatalogDisplay: React.FC<ProductCatalogDisplayProps> = ({
             <div className="text-3xl font-bold text-green-600">{stats.estoqueTotal}</div>
             <div className="text-sm text-gray-600">Estoque Total</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-600">
-              R$ {stats.valorTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
-            </div>
-            <div className="text-sm text-gray-600">Valor Total</div>
-          </div>
         </div>
       </CardContent>
     </Card>
@@ -186,13 +153,6 @@ export const ProductCatalogDisplay: React.FC<ProductCatalogDisplayProps> = ({
           </div>
 
           <div>
-            <h4 className="font-semibold mb-3">Ticket Médio por Categoria</h4>
-            {Object.entries(analysis.ticketMedio).map(([key, value]) => (
-              <div key={key} className="flex justify-between mb-2">
-                <span className="capitalize">{key}:</span>
-                <span className="font-medium">R$ {value.toFixed(2)}</span>
-              </div>
-            ))}
           </div>
         </div>
 
@@ -201,7 +161,7 @@ export const ProductCatalogDisplay: React.FC<ProductCatalogDisplayProps> = ({
           <div className="space-y-2">
             {analysis.qualidade.top5Avaliados.map((product, index) => (
               <div key={index} className="flex items-center gap-2">
-                <Badge variant="outline">{index + 1}</Badge>
+                <Badge variant="secondary">{index + 1}</Badge>
                 <span className="text-sm">{product}</span>
               </div>
             ))}

@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import { Header, Footer } from '../components/layout';
+import CookieBanner from '../components/layout/CookieBanner';
+import { ToastProvider } from '../lib/providers/ToastProvider';
+import { AuthProvider } from '../lib/providers/auth-provider';
 import '../styles/globals.css';
 import '../styles/components.css';
 
@@ -175,54 +178,35 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </a>
 
         {/* Main App Structure */}
-        <div className="min-h-screen flex flex-col">
-          {/* Header */}
-          <Header />
-          
-          {/* Main Content */}
-          <main id="main-content" className="flex-1 pt-16 lg:pt-20">
-            {children}
-          </main>
-          
-          {/* Footer */}
-          <Footer />
-        </div>
+        <AuthProvider>
+          <div className="min-h-screen flex flex-col">
+            {/* Header */}
+            <Header />
+
+            {/* Main Content */}
+            <main id="main-content" className="flex-1 pt-16 lg:pt-20">
+              {children}
+            </main>
+
+            {/* Footer */}
+            <Footer />
+          </div>
+        </AuthProvider>
 
         {/* Global Loading Indicator */}
-        <div id="global-loading" className="hidden fixed inset-0 bg-white/80 backdrop-blur-sm z-50 flex items-center justify-center">
-          <div className="loading-spinner w-8 h-8 border-2 border-black"></div>
+        <div id="global-loading" className="fixed inset-0 bg-white/80 backdrop-blur-sm z-50 hidden items-center justify-center">
+          <div className="loading-spinner w-8 h-8 border-2 border-black animate-spin"></div>
         </div>
+
+        {/* Toast Notifications */}
+        <ToastProvider />
+
+        {/* Cookie Consent Banner (GDPR) */}
+        <CookieBanner />
 
         {/* Toast Notifications Container */}
         <div id="toast-container" className="fixed bottom-4 right-4 space-y-2 z-50"></div>
 
-        {/* Cookie Consent Banner (GDPR) */}
-        <div 
-          id="cookie-banner" 
-          className="fixed bottom-0 left-0 right-0 bg-black text-white p-4 z-50 transform transition-transform duration-300"
-          style={{ transform: 'translateY(100%)' }}
-        >
-          <div className="container-custom flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm">
-              Este site utiliza cookies para melhorar sua experiência. 
-              Ao continuar navegando, você concorda com nossa política de privacidade.
-            </p>
-            <div className="flex gap-2">
-              <button 
-                id="accept-cookies" 
-                className="btn-primary text-sm px-4 py-2"
-              >
-                Aceitar
-              </button>
-              <button 
-                id="manage-cookies" 
-                className="btn-secondary text-sm px-4 py-2"
-              >
-                Gerenciar
-              </button>
-            </div>
-          </div>
-        </div>
 
         {/* Structured Data for SEO */}
         <script

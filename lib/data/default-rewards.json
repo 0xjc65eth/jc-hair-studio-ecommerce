@@ -1,0 +1,98 @@
+[
+  {
+    "name": "5% de Desconto",
+    "description": "Desconto de 5% em qualquer compra",
+    "type": "PERCENTAGE_DISCOUNT",
+    "pointsCost": 500,
+    "discountPercent": 5,
+    "minTierLevel": "BRONZE",
+    "maxPerUser": 2,
+    "validFrom": "2024-01-01T00:00:00.000Z",
+    "validTo": "2025-12-31T23:59:59.999Z",
+    "isActive": true
+  },
+  {
+    "name": "€10 de Desconto",
+    "description": "€10 de desconto em compras acima de €50",
+    "type": "FIXED_DISCOUNT",
+    "pointsCost": 1000,
+    "discountFixed": 10,
+    "minTierLevel": "BRONZE",
+    "maxPerUser": 1,
+    "validFrom": "2024-01-01T00:00:00.000Z",
+    "validTo": "2025-12-31T23:59:59.999Z",
+    "isActive": true
+  },
+  {
+    "name": "Frete Grátis",
+    "description": "Frete grátis para qualquer destino",
+    "type": "FREE_SHIPPING",
+    "pointsCost": 750,
+    "freeShipping": true,
+    "minTierLevel": "BRONZE",
+    "maxPerUser": 3,
+    "validFrom": "2024-01-01T00:00:00.000Z",
+    "validTo": "2025-12-31T23:59:59.999Z",
+    "isActive": true
+  },
+  {
+    "name": "10% de Desconto VIP",
+    "description": "Desconto exclusivo de 10% para membros Prata+",
+    "type": "PERCENTAGE_DISCOUNT",
+    "pointsCost": 1200,
+    "discountPercent": 10,
+    "minTierLevel": "SILVER",
+    "maxPerUser": 2,
+    "validFrom": "2024-01-01T00:00:00.000Z",
+    "validTo": "2025-12-31T23:59:59.999Z",
+    "isActive": true
+  },
+  {
+    "name": "€25 de Desconto Premium",
+    "description": "€25 de desconto em compras acima de €100",
+    "type": "FIXED_DISCOUNT",
+    "pointsCost": 2500,
+    "discountFixed": 25,
+    "minTierLevel": "GOLD",
+    "maxPerUser": 1,
+    "validFrom": "2024-01-01T00:00:00.000Z",
+    "validTo": "2025-12-31T23:59:59.999Z",
+    "isActive": true
+  },
+  {
+    "name": "15% de Desconto Elite",
+    "description": "Desconto exclusivo de 15% para membros Platina+",
+    "type": "PERCENTAGE_DISCOUNT",
+    "pointsCost": 3000,
+    "discountPercent": 15,
+    "minTierLevel": "PLATINUM",
+    "maxPerUser": 2,
+    "validFrom": "2024-01-01T00:00:00.000Z",
+    "validTo": "2025-12-31T23:59:59.999Z",
+    "isActive": true
+  },
+  {
+    "name": "€50 de Desconto Diamante",
+    "description": "€50 de desconto exclusivo para membros Diamante",
+    "type": "FIXED_DISCOUNT",
+    "pointsCost": 5000,
+    "discountFixed": 50,
+    "minTierLevel": "DIAMOND",
+    "maxPerUser": 1,
+    "validFrom": "2024-01-01T00:00:00.000Z",
+    "validTo": "2025-12-31T23:59:59.999Z",
+    "isActive": true
+  },
+  {
+    "name": "20% de Desconto Ultimate",
+    "description": "O maior desconto disponível - 20% OFF",
+    "type": "PERCENTAGE_DISCOUNT",
+    "pointsCost": 4000,
+    "discountPercent": 20,
+    "minTierLevel": "DIAMOND",
+    "maxPerUser": 1,
+    "validFrom": "2024-01-01T00:00:00.000Z",
+    "validTo": "2025-12-31T23:59:59.999Z",
+    "isActive": true
+  }
+]

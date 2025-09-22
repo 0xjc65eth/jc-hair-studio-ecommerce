@@ -1,0 +1,931 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "lastUpdated": "2025-09-18T03:09:38.331567Z",
+    "totalCategories": 43,
+    "totalProducts": 387,
+    "totalImages": 686,
+    "description": "Catálogo consolidado com TODOS os produtos + 5 novas categorias analisadas"
+  },
+  "categories": [
+    {
+      "id": "mari-maria-bases-complete",
+      "name": "Mari Maria - Base Matte Velvet Skin",
+      "description": "Coleção completa de bases Mari Maria Matte Velvet Skin com 11 tons disponíveis. Cada base oferece cobertura alta, acabamento matte aveludado e duração de 12 horas. Desenvolvida com tecnologia 2 em 1 (base + corretivo), enriquecida com Vitamina E e ativos antioxidantes. Encontre seu tom perfeito para uma pele uniforme e natural.",
+      "professional_description": "A linha Base Matte Velvet Skin da Mari Maria representa o que há de mais avançado em tecnologia de bases no mercado brasileiro. Desenvolvida especialmente para a diversidade de tons de pele brasileiros, oferece uma gama completa de 11 tons cuidadosamente selecionados para atender desde peles mais claras até as mais escuras. Cada fórmula é enriquecida com ativos de alta performance que garantem durabilidade, conforto e resultado profissional.",
+      "image": "/images/products/mari-maria-bases/mari-maria-base-baunilha.png",
+      "banner_image": "/images/categories/mari-maria-bases-banner.jpg",
+      "products": [
+        {
+          "id": "mari-maria-base-01",
+          "name": "Base Matte Velvet Skin - Amêndoa",
+          "brand": "Mari Maria",
+          "category": "Base",
+          "subcategory": "Base Líquida",
+          "description": "A Base e Corretivo Matte Velvet Skin no tom Amêndoa oferece cobertura alta e acabamento matte aveludado perfeito para pele clara com subtom neutro-quente. Sua fórmula inovadora 2 em 1 combina base de longa duração com corretivo de alta cobertura, proporcionando uma pele uniforme e natural por até 12 horas. Enriquecida com Vitamina E e ativos antioxidantes, protege a pele enquanto oferece um acabamento impecável. O subtom neutro-quente harmoniza perfeitamente com sua pele, criando um resultado natural e sofisticado.",
+          "professional_description": "Desenvolvida com tecnologia de pigmentos encapsulados e fórmula de longa duração, esta base oferece cobertura buildable que se adapta às suas necessidades. Sua textura cremosa e de fácil espalhabilidade permite uma aplicação uniforme, enquanto o controle de oleosidade mantém a maquiagem intacta durante todo o dia. Testada dermatologicamente e adequada para todos os tipos de pele.",
+          "features": [
+            "Cobertura alta e buildable",
+            "Acabamento matte aveludado",
+            "2 em 1: Base + Corretivo",
+            "Controle de oleosidade por 12 horas",
+            "Enriquecida com Vitamina E",
+            "Hipoalergênica e dermatologicamente testada",
+            "Livre de fragrâncias e parabenos",
+            "Resistente à água e suor",
+            "Não comedogênica",
+            "Aplicador com esponja integrado"
+          ],
+          "color_info": {
+            "tone": "Amêndoa",
+            "hex_color": "#D4B5A0",
+            "undertone": "Neutro-quente",
+            "skin_match": "Pele clara com subtom neutro-quente",
+            "rgb": "212, 181, 160"
+          },
+          "images": [
+            {
+              "url": "/images/products/mari-maria-bases/mari-maria-base-amndoa.png",
+              "alt": "Mari Maria Base Matte Velvet Skin Amêndoa",
+              "isPrimary": true
+            }
+          ],
+          "variants": [
+            {
+              "id": "mari-maria-base-01-variant-1",
+              "tone": "Amêndoa",
+              "size": "30ml",
+              "price_brl": 69.9,
+              "price_eur": 23.5,
+              "price_gbp": 19.99,
+              "available": true
+            }
+          ],
+          "specifications": {
+            "volume": "30ml",
+            "skin_type": "Todos os tipos de pele",
+            "coverage": "Alta cobertura",
+            "finish": "Matte aveludado",
+            "duration": "12 horas",
+            "spf": "Não contém FPS",
+            "ingredients_highlight": "Vitamina E, pigmentos minerais, ativos antioxidantes",
+            "application": "Aplicar com aplicador incluso ou pincel, construindo cobertura conforme necessário"
+          },
+          "stock": {
+            "available": true,
+            "quantity": 50
+          },
+          "tags": [
+            "base",
+            "mari-maria",
+            "matte",
+            "cobertura-alta",
+            "longa-duracao",
+            "amêndoa"
+          ],
+          "seo": {
+            "meta_title": "Base Mari Maria Matte Velvet Skin Amêndoa | Alta Cobertura 12h",
+            "meta_description": "Base Mari Maria tom Amêndoa com acabamento matte aveludado. Cobertura alta, 12h de duração. Perfeita para pele clara com subtom neutro-quente. Compre agora!",
+            "keywords": [
+              "base mari maria amêndoa",
+              "matte velvet skin",
+              "base alta cobertura",
+              "base longa duração"
+            ]
+          },
+          "created_at": "2025-09-18T14:50:01.548793",
+          "updated_at": "2025-09-18T14:50:01.548799"
+        },
+        {
+          "id": "mari-maria-base-02",
+          "name": "Base Matte Velvet Skin - Baunilha",
+          "brand": "Mari Maria",
+          "category": "Base",
+          "subcategory": "Base Líquida",
+          "description": "A Base e Corretivo Matte Velvet Skin no tom Baunilha oferece cobertura alta e acabamento matte aveludado perfeito para pele clara com subtom dourado pronunciado. Sua fórmula inovadora 2 em 1 combina base de longa duração com corretivo de alta cobertura, proporcionando uma pele uniforme e natural por até 12 horas. Enriquecida com Vitamina E e ativos antioxidantes, protege a pele enquanto oferece um acabamento impecável. O subtom dourado-amarelado harmoniza perfeitamente com sua pele, criando um resultado natural e sofisticado.",
+          "professional_description": "Desenvolvida com tecnologia de pigmentos encapsulados e fórmula de longa duração, esta base oferece cobertura buildable que se adapta às suas necessidades. Sua textura cremosa e de fácil espalhabilidade permite uma aplicação uniforme, enquanto o controle de oleosidade mantém a maquiagem intacta durante todo o dia. Testada dermatologicamente e adequada para todos os tipos de pele.",
+          "features": [
+            "Cobertura alta e buildable",
+            "Acabamento matte aveludado",
+            "2 em 1: Base + Corretivo",
+            "Controle de oleosidade por 12 horas",
+            "Enriquecida com Vitamina E",
+            "Hipoalergênica e dermatologicamente testada",
+            "Livre de fragrâncias e parabenos",
+            "Resistente à água e suor",
+            "Não comedogênica",
+            "Aplicador com esponja integrado"
+          ],
+          "color_info": {
+            "tone": "Baunilha",
+            "hex_color": "#E6C2A6",
+            "undertone": "Dourado-amarelado",
+            "skin_match": "Pele clara com subtom dourado pronunciado",
+            "rgb": "230, 194, 166"
+          },
+          "images": [
+            {
+              "url": "/images/products/mari-maria-bases/mari-maria-base-baunilha.png",
+              "alt": "Mari Maria Base Matte Velvet Skin Baunilha",
+              "isPrimary": true
+            }
+          ],
+          "variants": [
+            {
+              "id": "mari-maria-base-02-variant-1",
+              "tone": "Baunilha",
+              "size": "30ml",
+              "price_brl": 69.9,
+              "price_eur": 23.5,
+              "price_gbp": 19.99,
+              "available": true
+            }
+          ],
+          "specifications": {
+            "volume": "30ml",
+            "skin_type": "Todos os tipos de pele",
+            "coverage": "Alta cobertura",
+            "finish": "Matte aveludado",
+            "duration": "12 horas",
+            "spf": "Não contém FPS",
+            "ingredients_highlight": "Vitamina E, pigmentos minerais, ativos antioxidantes",
+            "application": "Aplicar com aplicador incluso ou pincel, construindo cobertura conforme necessário"
+          },
+          "stock": {
+            "available": true,
+            "quantity": 50
+          },
+          "tags": [
+            "base",
+            "mari-maria",
+            "matte",
+            "cobertura-alta",
+            "longa-duracao",
+            "baunilha"
+          ],
+          "seo": {
+            "meta_title": "Base Mari Maria Matte Velvet Skin Baunilha | Alta Cobertura 12h",
+            "meta_description": "Base Mari Maria tom Baunilha com acabamento matte aveludado. Cobertura alta, 12h de duração. Perfeita para pele clara com subtom dourado pronunciado. Compre agora!",
+            "keywords": [
+              "base mari maria baunilha",
+              "matte velvet skin",
+              "base alta cobertura",
+              "base longa duração"
+            ]
+          },
+          "created_at": "2025-09-18T14:50:01.548810",
+          "updated_at": "2025-09-18T14:50:01.548812"
+        },
+        {
+          "id": "mari-maria-base-03",
+          "name": "Base Matte Velvet Skin - Bege Claro",
+          "brand": "Mari Maria",
+          "category": "Base",
+          "subcategory": "Base Líquida",
+          "description": "A Base e Corretivo Matte Velvet Skin no tom Bege Claro oferece cobertura alta e acabamento matte aveludado perfeito para pele clara neutra. Sua fórmula inovadora 2 em 1 combina base de longa duração com corretivo de alta cobertura, proporcionando uma pele uniforme e natural por até 12 horas. Enriquecida com Vitamina E e ativos antioxidantes, protege a pele enquanto oferece um acabamento impecável. O subtom neutro harmoniza perfeitamente com sua pele, criando um resultado natural e sofisticado.",
+          "professional_description": "Desenvolvida com tecnologia de pigmentos encapsulados e fórmula de longa duração, esta base oferece cobertura buildable que se adapta às suas necessidades. Sua textura cremosa e de fácil espalhabilidade permite uma aplicação uniforme, enquanto o controle de oleosidade mantém a maquiagem intacta durante todo o dia. Testada dermatologicamente e adequada para todos os tipos de pele.",
+          "features": [
+            "Cobertura alta e buildable",
+            "Acabamento matte aveludado",
+            "2 em 1: Base + Corretivo",
+            "Controle de oleosidade por 12 horas",
+            "Enriquecida com Vitamina E",
+            "Hipoalergênica e dermatologicamente testada",
+            "Livre de fragrâncias e parabenos",
+            "Resistente à água e suor",
+            "Não comedogênica",
+            "Aplicador com esponja integrado"
+          ],
+          "color_info": {
+            "tone": "Bege Claro",
+            "hex_color": "#E0C4A8",
+            "undertone": "Neutro",
+            "skin_match": "Pele clara neutra",
+            "rgb": "224, 196, 168"
+          },
+          "images": [
+            {
+              "url": "/images/products/mari-maria-bases/mari-maria-base-bege-claro.png",
+              "alt": "Mari Maria Base Matte Velvet Skin Bege Claro",
+              "isPrimary": true
+            }
+          ],
+          "variants": [
+            {
+              "id": "mari-maria-base-03-variant-1",
+              "tone": "Bege Claro",
+              "size": "30ml",
+              "price_brl": 69.9,
+              "price_eur": 23.5,
+              "price_gbp": 19.99,
+              "available": true
+            }
+          ],
+          "specifications": {
+            "volume": "30ml",
+            "skin_type": "Todos os tipos de pele",
+            "coverage": "Alta cobertura",
+            "finish": "Matte aveludado",
+            "duration": "12 horas",
+            "spf": "Não contém FPS",
+            "ingredients_highlight": "Vitamina E, pigmentos minerais, ativos antioxidantes",
+            "application": "Aplicar com aplicador incluso ou pincel, construindo cobertura conforme necessário"
+          },
+          "stock": {
+            "available": true,
+            "quantity": 50
+          },
+          "tags": [
+            "base",
+            "mari-maria",
+            "matte",
+            "cobertura-alta",
+            "longa-duracao",
+            "bege-claro"
+          ],
+          "seo": {
+            "meta_title": "Base Mari Maria Matte Velvet Skin Bege Claro | Alta Cobertura 12h",
+            "meta_description": "Base Mari Maria tom Bege Claro com acabamento matte aveludado. Cobertura alta, 12h de duração. Perfeita para pele clara neutra. Compre agora!",
+            "keywords": [
+              "base mari maria bege claro",
+              "matte velvet skin",
+              "base alta cobertura",
+              "base longa duração"
+            ]
+          },
+          "created_at": "2025-09-18T14:50:01.548820",
+          "updated_at": "2025-09-18T14:50:01.548822"
+        },
+        {
+          "id": "mari-maria-base-04",
+          "name": "Base Matte Velvet Skin - Bege Claro 2",
+          "brand": "Mari Maria",
+          "category": "Base",
+          "subcategory": "Base Líquida",
+          "description": "A Base e Corretivo Matte Velvet Skin no tom Bege Claro 2 oferece cobertura alta e acabamento matte aveludado perfeito para pele clara com subtom levemente rosado. Sua fórmula inovadora 2 em 1 combina base de longa duração com corretivo de alta cobertura, proporcionando uma pele uniforme e natural por até 12 horas. Enriquecida com Vitamina E e ativos antioxidantes, protege a pele enquanto oferece um acabamento impecável. O subtom rosado suave harmoniza perfeitamente com sua pele, criando um resultado natural e sofisticado.",
+          "professional_description": "Desenvolvida com tecnologia de pigmentos encapsulados e fórmula de longa duração, esta base oferece cobertura buildable que se adapta às suas necessidades. Sua textura cremosa e de fácil espalhabilidade permite uma aplicação uniforme, enquanto o controle de oleosidade mantém a maquiagem intacta durante todo o dia. Testada dermatologicamente e adequada para todos os tipos de pele.",
+          "features": [
+            "Cobertura alta e buildable",
+            "Acabamento matte aveludado",
+            "2 em 1: Base + Corretivo",
+            "Controle de oleosidade por 12 horas",
+            "Enriquecida com Vitamina E",
+            "Hipoalergênica e dermatologicamente testada",
+            "Livre de fragrâncias e parabenos",
+            "Resistente à água e suor",
+            "Não comedogênica",
+            "Aplicador com esponja integrado"
+          ],
+          "color_info": {
+            "tone": "Bege Claro 2",
+            "hex_color": "#E2C5AA",
+            "undertone": "Rosado suave",
+            "skin_match": "Pele clara com subtom levemente rosado",
+            "rgb": "226, 197, 170"
+          },
+          "images": [
+            {
+              "url": "/images/products/mari-maria-bases/mari-maria-base-bege-claro-2.png",
+              "alt": "Mari Maria Base Matte Velvet Skin Bege Claro 2",
+              "isPrimary": true
+            }
+          ],
+          "variants": [
+            {
+              "id": "mari-maria-base-04-variant-1",
+              "tone": "Bege Claro 2",
+              "size": "30ml",
+              "price_brl": 69.9,
+              "price_eur": 23.5,
+              "price_gbp": 19.99,
+              "available": true
+            }
+          ],
+          "specifications": {
+            "volume": "30ml",
+            "skin_type": "Todos os tipos de pele",
+            "coverage": "Alta cobertura",
+            "finish": "Matte aveludado",
+            "duration": "12 horas",
+            "spf": "Não contém FPS",
+            "ingredients_highlight": "Vitamina E, pigmentos minerais, ativos antioxidantes",
+            "application": "Aplicar com aplicador incluso ou pincel, construindo cobertura conforme necessário"
+          },
+          "stock": {
+            "available": true,
+            "quantity": 50
+          },
+          "tags": [
+            "base",
+            "mari-maria",
+            "matte",
+            "cobertura-alta",
+            "longa-duracao",
+            "bege-claro-2"
+          ],
+          "seo": {
+            "meta_title": "Base Mari Maria Matte Velvet Skin Bege Claro 2 | Alta Cobertura 12h",
+            "meta_description": "Base Mari Maria tom Bege Claro 2 com acabamento matte aveludado. Cobertura alta, 12h de duração. Perfeita para pele clara com subtom levemente rosado. Compre agora!",
+            "keywords": [
+              "base mari maria bege claro 2",
+              "matte velvet skin",
+              "base alta cobertura",
+              "base longa duração"
+            ]
+          },
+          "created_at": "2025-09-18T14:50:01.548829",
+          "updated_at": "2025-09-18T14:50:01.548830"
+        },
+        {
+          "id": "mari-maria-base-05",
+          "name": "Base Matte Velvet Skin - Nude",
+          "brand": "Mari Maria",
+          "category": "Base",
+          "subcategory": "Base Líquida",
+          "description": "A Base e Corretivo Matte Velvet Skin no tom Nude oferece cobertura alta e acabamento matte aveludado perfeito para pele clara a média com subtom rosado. Sua fórmula inovadora 2 em 1 combina base de longa duração com corretivo de alta cobertura, proporcionando uma pele uniforme e natural por até 12 horas. Enriquecida com Vitamina E e ativos antioxidantes, protege a pele enquanto oferece um acabamento impecável. O subtom rosado harmoniza perfeitamente com sua pele, criando um resultado natural e sofisticado.",
+          "professional_description": "Desenvolvida com tecnologia de pigmentos encapsulados e fórmula de longa duração, esta base oferece cobertura buildable que se adapta às suas necessidades. Sua textura cremosa e de fácil espalhabilidade permite uma aplicação uniforme, enquanto o controle de oleosidade mantém a maquiagem intacta durante todo o dia. Testada dermatologicamente e adequada para todos os tipos de pele.",
+          "features": [
+            "Cobertura alta e buildable",
+            "Acabamento matte aveludado",
+            "2 em 1: Base + Corretivo",
+            "Controle de oleosidade por 12 horas",
+            "Enriquecida com Vitamina E",
+            "Hipoalergênica e dermatologicamente testada",
+            "Livre de fragrâncias e parabenos",
+            "Resistente à água e suor",
+            "Não comedogênica",
+            "Aplicador com esponja integrado"
+          ],
+          "color_info": {
+            "tone": "Nude",
+            "hex_color": "#DDB892",
+            "undertone": "Rosado",
+            "skin_match": "Pele clara a média com subtom rosado",
+            "rgb": "221, 184, 146"
+          },
+          "images": [
+            {
+              "url": "/images/products/mari-maria-bases/mari-maria-base-nude.png",
+              "alt": "Mari Maria Base Matte Velvet Skin Nude",
+              "isPrimary": true
+            }
+          ],
+          "variants": [
+            {
+              "id": "mari-maria-base-05-variant-1",
+              "tone": "Nude",
+              "size": "30ml",
+              "price_brl": 69.9,
+              "price_eur": 23.5,
+              "price_gbp": 19.99,
+              "available": true
+            }
+          ],
+          "specifications": {
+            "volume": "30ml",
+            "skin_type": "Todos os tipos de pele",
+            "coverage": "Alta cobertura",
+            "finish": "Matte aveludado",
+            "duration": "12 horas",
+            "spf": "Não contém FPS",
+            "ingredients_highlight": "Vitamina E, pigmentos minerais, ativos antioxidantes",
+            "application": "Aplicar com aplicador incluso ou pincel, construindo cobertura conforme necessário"
+          },
+          "stock": {
+            "available": true,
+            "quantity": 50
+          },
+          "tags": [
+            "base",
+            "mari-maria",
+            "matte",
+            "cobertura-alta",
+            "longa-duracao",
+            "nude"
+          ],
+          "seo": {
+            "meta_title": "Base Mari Maria Matte Velvet Skin Nude | Alta Cobertura 12h",
+            "meta_description": "Base Mari Maria tom Nude com acabamento matte aveludado. Cobertura alta, 12h de duração. Perfeita para pele clara a média com subtom rosado. Compre agora!",
+            "keywords": [
+              "base mari maria nude",
+              "matte velvet skin",
+              "base alta cobertura",
+              "base longa duração"
+            ]
+          },
+          "created_at": "2025-09-18T14:50:01.548838",
+          "updated_at": "2025-09-18T14:50:01.548839"
+        },
+        {
+          "id": "mari-maria-base-06",
+          "name": "Base Matte Velvet Skin - Bege Médio",
+          "brand": "Mari Maria",
+          "category": "Base",
+          "subcategory": "Base Líquida",
+          "description": "A Base e Corretivo Matte Velvet Skin no tom Bege Médio oferece cobertura alta e acabamento matte aveludado perfeito para pele média neutra. Sua fórmula inovadora 2 em 1 combina base de longa duração com corretivo de alta cobertura, proporcionando uma pele uniforme e natural por até 12 horas. Enriquecida com Vitamina E e ativos antioxidantes, protege a pele enquanto oferece um acabamento impecável. O subtom neutro harmoniza perfeitamente com sua pele, criando um resultado natural e sofisticado.",
+          "professional_description": "Desenvolvida com tecnologia de pigmentos encapsulados e fórmula de longa duração, esta base oferece cobertura buildable que se adapta às suas necessidades. Sua textura cremosa e de fácil espalhabilidade permite uma aplicação uniforme, enquanto o controle de oleosidade mantém a maquiagem intacta durante todo o dia. Testada dermatologicamente e adequada para todos os tipos de pele.",
+          "features": [
+            "Cobertura alta e buildable",
+            "Acabamento matte aveludado",
+            "2 em 1: Base + Corretivo",
+            "Controle de oleosidade por 12 horas",
+            "Enriquecida com Vitamina E",
+            "Hipoalergênica e dermatologicamente testada",
+            "Livre de fragrâncias e parabenos",
+            "Resistente à água e suor",
+            "Não comedogênica",
+            "Aplicador com esponja integrado"
+          ],
+          "color_info": {
+            "tone": "Bege Médio",
+            "hex_color": "#C9A876",
+            "undertone": "Neutro",
+            "skin_match": "Pele média neutra",
+            "rgb": "201, 168, 118"
+          },
+          "images": [
+            {
+              "url": "/images/products/mari-maria-bases/mari-maria-base-bege-mdio.png",
+              "alt": "Mari Maria Base Matte Velvet Skin Bege Médio",
+              "isPrimary": true
+            }
+          ],
+          "variants": [
+            {
+              "id": "mari-maria-base-06-variant-1",
+              "tone": "Bege Médio",
+              "size": "30ml",
+              "price_brl": 69.9,
+              "price_eur": 23.5,
+              "price_gbp": 19.99,
+              "available": true
+            }
+          ],
+          "specifications": {
+            "volume": "30ml",
+            "skin_type": "Todos os tipos de pele",
+            "coverage": "Alta cobertura",
+            "finish": "Matte aveludado",
+            "duration": "12 horas",
+            "spf": "Não contém FPS",
+            "ingredients_highlight": "Vitamina E, pigmentos minerais, ativos antioxidantes",
+            "application": "Aplicar com aplicador incluso ou pincel, construindo cobertura conforme necessário"
+          },
+          "stock": {
+            "available": true,
+            "quantity": 50
+          },
+          "tags": [
+            "base",
+            "mari-maria",
+            "matte",
+            "cobertura-alta",
+            "longa-duracao",
+            "bege-médio"
+          ],
+          "seo": {
+            "meta_title": "Base Mari Maria Matte Velvet Skin Bege Médio | Alta Cobertura 12h",
+            "meta_description": "Base Mari Maria tom Bege Médio com acabamento matte aveludado. Cobertura alta, 12h de duração. Perfeita para pele média neutra. Compre agora!",
+            "keywords": [
+              "base mari maria bege médio",
+              "matte velvet skin",
+              "base alta cobertura",
+              "base longa duração"
+            ]
+          },
+          "created_at": "2025-09-18T14:50:01.548851",
+          "updated_at": "2025-09-18T14:50:01.548853"
+        },
+        {
+          "id": "mari-maria-base-07",
+          "name": "Base Matte Velvet Skin - Caramelo",
+          "brand": "Mari Maria",
+          "category": "Base",
+          "subcategory": "Base Líquida",
+          "description": "A Base e Corretivo Matte Velvet Skin no tom Caramelo oferece cobertura alta e acabamento matte aveludado perfeito para pele média com subtom dourado. Sua fórmula inovadora 2 em 1 combina base de longa duração com corretivo de alta cobertura, proporcionando uma pele uniforme e natural por até 12 horas. Enriquecida com Vitamina E e ativos antioxidantes, protege a pele enquanto oferece um acabamento impecável. O subtom dourado-caramelo harmoniza perfeitamente com sua pele, criando um resultado natural e sofisticado.",
+          "professional_description": "Desenvolvida com tecnologia de pigmentos encapsulados e fórmula de longa duração, esta base oferece cobertura buildable que se adapta às suas necessidades. Sua textura cremosa e de fácil espalhabilidade permite uma aplicação uniforme, enquanto o controle de oleosidade mantém a maquiagem intacta durante todo o dia. Testada dermatologicamente e adequada para todos os tipos de pele.",
+          "features": [
+            "Cobertura alta e buildable",
+            "Acabamento matte aveludado",
+            "2 em 1: Base + Corretivo",
+            "Controle de oleosidade por 12 horas",
+            "Enriquecida com Vitamina E",
+            "Hipoalergênica e dermatologicamente testada",
+            "Livre de fragrâncias e parabenos",
+            "Resistente à água e suor",
+            "Não comedogênica",
+            "Aplicador com esponja integrado"
+          ],
+          "color_info": {
+            "tone": "Caramelo",
+            "hex_color": "#B8956A",
+            "undertone": "Dourado-caramelo",
+            "skin_match": "Pele média com subtom dourado",
+            "rgb": "184, 149, 106"
+          },
+          "images": [
+            {
+              "url": "/images/products/mari-maria-bases/mari-maria-base-caramelo.png",
+              "alt": "Mari Maria Base Matte Velvet Skin Caramelo",
+              "isPrimary": true
+            }
+          ],
+          "variants": [
+            {
+              "id": "mari-maria-base-07-variant-1",
+              "tone": "Caramelo",
+              "size": "30ml",
+              "price_brl": 69.9,
+              "price_eur": 23.5,
+              "price_gbp": 19.99,
+              "available": true
+            }
+          ],
+          "specifications": {
+            "volume": "30ml",
+            "skin_type": "Todos os tipos de pele",
+            "coverage": "Alta cobertura",
+            "finish": "Matte aveludado",
+            "duration": "12 horas",
+            "spf": "Não contém FPS",
+            "ingredients_highlight": "Vitamina E, pigmentos minerais, ativos antioxidantes",
+            "application": "Aplicar com aplicador incluso ou pincel, construindo cobertura conforme necessário"
+          },
+          "stock": {
+            "available": true,
+            "quantity": 50
+          },
+          "tags": [
+            "base",
+            "mari-maria",
+            "matte",
+            "cobertura-alta",
+            "longa-duracao",
+            "caramelo"
+          ],
+          "seo": {
+            "meta_title": "Base Mari Maria Matte Velvet Skin Caramelo | Alta Cobertura 12h",
+            "meta_description": "Base Mari Maria tom Caramelo com acabamento matte aveludado. Cobertura alta, 12h de duração. Perfeita para pele média com subtom dourado. Compre agora!",
+            "keywords": [
+              "base mari maria caramelo",
+              "matte velvet skin",
+              "base alta cobertura",
+              "base longa duração"
+            ]
+          },
+          "created_at": "2025-09-18T14:50:01.548860",
+          "updated_at": "2025-09-18T14:50:01.548861"
+        },
+        {
+          "id": "mari-maria-base-08",
+          "name": "Base Matte Velvet Skin - Canela",
+          "brand": "Mari Maria",
+          "category": "Base",
+          "subcategory": "Base Líquida",
+          "description": "A Base e Corretivo Matte Velvet Skin no tom Canela oferece cobertura alta e acabamento matte aveludado perfeito para pele média com subtom avermelhado. Sua fórmula inovadora 2 em 1 combina base de longa duração com corretivo de alta cobertura, proporcionando uma pele uniforme e natural por até 12 horas. Enriquecida com Vitamina E e ativos antioxidantes, protege a pele enquanto oferece um acabamento impecável. O subtom avermelhado-canela harmoniza perfeitamente com sua pele, criando um resultado natural e sofisticado.",
+          "professional_description": "Desenvolvida com tecnologia de pigmentos encapsulados e fórmula de longa duração, esta base oferece cobertura buildable que se adapta às suas necessidades. Sua textura cremosa e de fácil espalhabilidade permite uma aplicação uniforme, enquanto o controle de oleosidade mantém a maquiagem intacta durante todo o dia. Testada dermatologicamente e adequada para todos os tipos de pele.",
+          "features": [
+            "Cobertura alta e buildable",
+            "Acabamento matte aveludado",
+            "2 em 1: Base + Corretivo",
+            "Controle de oleosidade por 12 horas",
+            "Enriquecida com Vitamina E",
+            "Hipoalergênica e dermatologicamente testada",
+            "Livre de fragrâncias e parabenos",
+            "Resistente à água e suor",
+            "Não comedogênica",
+            "Aplicador com esponja integrado"
+          ],
+          "color_info": {
+            "tone": "Canela",
+            "hex_color": "#B5845C",
+            "undertone": "Avermelhado-canela",
+            "skin_match": "Pele média com subtom avermelhado",
+            "rgb": "181, 132, 92"
+          },
+          "images": [
+            {
+              "url": "/images/products/mari-maria-bases/mari-maria-base-canela.png",
+              "alt": "Mari Maria Base Matte Velvet Skin Canela",
+              "isPrimary": true
+            }
+          ],
+          "variants": [
+            {
+              "id": "mari-maria-base-08-variant-1",
+              "tone": "Canela",
+              "size": "30ml",
+              "price_brl": 69.9,
+              "price_eur": 23.5,
+              "price_gbp": 19.99,
+              "available": true
+            }
+          ],
+          "specifications": {
+            "volume": "30ml",
+            "skin_type": "Todos os tipos de pele",
+            "coverage": "Alta cobertura",
+            "finish": "Matte aveludado",
+            "duration": "12 horas",
+            "spf": "Não contém FPS",
+            "ingredients_highlight": "Vitamina E, pigmentos minerais, ativos antioxidantes",
+            "application": "Aplicar com aplicador incluso ou pincel, construindo cobertura conforme necessário"
+          },
+          "stock": {
+            "available": true,
+            "quantity": 50
+          },
+          "tags": [
+            "base",
+            "mari-maria",
+            "matte",
+            "cobertura-alta",
+            "longa-duracao",
+            "canela"
+          ],
+          "seo": {
+            "meta_title": "Base Mari Maria Matte Velvet Skin Canela | Alta Cobertura 12h",
+            "meta_description": "Base Mari Maria tom Canela com acabamento matte aveludado. Cobertura alta, 12h de duração. Perfeita para pele média com subtom avermelhado. Compre agora!",
+            "keywords": [
+              "base mari maria canela",
+              "matte velvet skin",
+              "base alta cobertura",
+              "base longa duração"
+            ]
+          },
+          "created_at": "2025-09-18T14:50:01.548868",
+          "updated_at": "2025-09-18T14:50:01.548869"
+        },
+        {
+          "id": "mari-maria-base-09",
+          "name": "Base Matte Velvet Skin - Bege Escuro",
+          "brand": "Mari Maria",
+          "category": "Base",
+          "subcategory": "Base Líquida",
+          "description": "A Base e Corretivo Matte Velvet Skin no tom Bege Escuro oferece cobertura alta e acabamento matte aveludado perfeito para pele média a escura neutra. Sua fórmula inovadora 2 em 1 combina base de longa duração com corretivo de alta cobertura, proporcionando uma pele uniforme e natural por até 12 horas. Enriquecida com Vitamina E e ativos antioxidantes, protege a pele enquanto oferece um acabamento impecável. O subtom marrom neutro harmoniza perfeitamente com sua pele, criando um resultado natural e sofisticado.",
+          "professional_description": "Desenvolvida com tecnologia de pigmentos encapsulados e fórmula de longa duração, esta base oferece cobertura buildable que se adapta às suas necessidades. Sua textura cremosa e de fácil espalhabilidade permite uma aplicação uniforme, enquanto o controle de oleosidade mantém a maquiagem intacta durante todo o dia. Testada dermatologicamente e adequada para todos os tipos de pele.",
+          "features": [
+            "Cobertura alta e buildable",
+            "Acabamento matte aveludado",
+            "2 em 1: Base + Corretivo",
+            "Controle de oleosidade por 12 horas",
+            "Enriquecida com Vitamina E",
+            "Hipoalergênica e dermatologicamente testada",
+            "Livre de fragrâncias e parabenos",
+            "Resistente à água e suor",
+            "Não comedogênica",
+            "Aplicador com esponja integrado"
+          ],
+          "color_info": {
+            "tone": "Bege Escuro",
+            "hex_color": "#A67C52",
+            "undertone": "Marrom neutro",
+            "skin_match": "Pele média a escura neutra",
+            "rgb": "166, 124, 82"
+          },
+          "images": [
+            {
+              "url": "/images/products/mari-maria-bases/mari-maria-base-bege-escuro.png",
+              "alt": "Mari Maria Base Matte Velvet Skin Bege Escuro",
+              "isPrimary": true
+            }
+          ],
+          "variants": [
+            {
+              "id": "mari-maria-base-09-variant-1",
+              "tone": "Bege Escuro",
+              "size": "30ml",
+              "price_brl": 69.9,
+              "price_eur": 23.5,
+              "price_gbp": 19.99,
+              "available": true
+            }
+          ],
+          "specifications": {
+            "volume": "30ml",
+            "skin_type": "Todos os tipos de pele",
+            "coverage": "Alta cobertura",
+            "finish": "Matte aveludado",
+            "duration": "12 horas",
+            "spf": "Não contém FPS",
+            "ingredients_highlight": "Vitamina E, pigmentos minerais, ativos antioxidantes",
+            "application": "Aplicar com aplicador incluso ou pincel, construindo cobertura conforme necessário"
+          },
+          "stock": {
+            "available": true,
+            "quantity": 50
+          },
+          "tags": [
+            "base",
+            "mari-maria",
+            "matte",
+            "cobertura-alta",
+            "longa-duracao",
+            "bege-escuro"
+          ],
+          "seo": {
+            "meta_title": "Base Mari Maria Matte Velvet Skin Bege Escuro | Alta Cobertura 12h",
+            "meta_description": "Base Mari Maria tom Bege Escuro com acabamento matte aveludado. Cobertura alta, 12h de duração. Perfeita para pele média a escura neutra. Compre agora!",
+            "keywords": [
+              "base mari maria bege escuro",
+              "matte velvet skin",
+              "base alta cobertura",
+              "base longa duração"
+            ]
+          },
+          "created_at": "2025-09-18T14:50:01.548876",
+          "updated_at": "2025-09-18T14:50:01.548878"
+        },
+        {
+          "id": "mari-maria-base-10",
+          "name": "Base Matte Velvet Skin - Cacau",
+          "brand": "Mari Maria",
+          "category": "Base",
+          "subcategory": "Base Líquida",
+          "description": "A Base e Corretivo Matte Velvet Skin no tom Cacau oferece cobertura alta e acabamento matte aveludado perfeito para pele escura com subtom quente. Sua fórmula inovadora 2 em 1 combina base de longa duração com corretivo de alta cobertura, proporcionando uma pele uniforme e natural por até 12 horas. Enriquecida com Vitamina E e ativos antioxidantes, protege a pele enquanto oferece um acabamento impecável. O subtom chocolate quente harmoniza perfeitamente com sua pele, criando um resultado natural e sofisticado.",
+          "professional_description": "Desenvolvida com tecnologia de pigmentos encapsulados e fórmula de longa duração, esta base oferece cobertura buildable que se adapta às suas necessidades. Sua textura cremosa e de fácil espalhabilidade permite uma aplicação uniforme, enquanto o controle de oleosidade mantém a maquiagem intacta durante todo o dia. Testada dermatologicamente e adequada para todos os tipos de pele.",
+          "features": [
+            "Cobertura alta e buildable",
+            "Acabamento matte aveludado",
+            "2 em 1: Base + Corretivo",
+            "Controle de oleosidade por 12 horas",
+            "Enriquecida com Vitamina E",
+            "Hipoalergênica e dermatologicamente testada",
+            "Livre de fragrâncias e parabenos",
+            "Resistente à água e suor",
+            "Não comedogênica",
+            "Aplicador com esponja integrado"
+          ],
+          "color_info": {
+            "tone": "Cacau",
+            "hex_color": "#8B5A3C",
+            "undertone": "Chocolate quente",
+            "skin_match": "Pele escura com subtom quente",
+            "rgb": "139, 90, 60"
+          },
+          "images": [
+            {
+              "url": "/images/products/mari-maria-bases/mari-maria-base-cacau.png",
+              "alt": "Mari Maria Base Matte Velvet Skin Cacau",
+              "isPrimary": true
+            }
+          ],
+          "variants": [
+            {
+              "id": "mari-maria-base-10-variant-1",
+              "tone": "Cacau",
+              "size": "30ml",
+              "price_brl": 69.9,
+              "price_eur": 23.5,
+              "price_gbp": 19.99,
+              "available": true
+            }
+          ],
+          "specifications": {
+            "volume": "30ml",
+            "skin_type": "Todos os tipos de pele",
+            "coverage": "Alta cobertura",
+            "finish": "Matte aveludado",
+            "duration": "12 horas",
+            "spf": "Não contém FPS",
+            "ingredients_highlight": "Vitamina E, pigmentos minerais, ativos antioxidantes",
+            "application": "Aplicar com aplicador incluso ou pincel, construindo cobertura conforme necessário"
+          },
+          "stock": {
+            "available": true,
+            "quantity": 50
+          },
+          "tags": [
+            "base",
+            "mari-maria",
+            "matte",
+            "cobertura-alta",
+            "longa-duracao",
+            "cacau"
+          ],
+          "seo": {
+            "meta_title": "Base Mari Maria Matte Velvet Skin Cacau | Alta Cobertura 12h",
+            "meta_description": "Base Mari Maria tom Cacau com acabamento matte aveludado. Cobertura alta, 12h de duração. Perfeita para pele escura com subtom quente. Compre agora!",
+            "keywords": [
+              "base mari maria cacau",
+              "matte velvet skin",
+              "base alta cobertura",
+              "base longa duração"
+            ]
+          },
+          "created_at": "2025-09-18T14:50:01.548959",
+          "updated_at": "2025-09-18T14:50:01.548961"
+        },
+        {
+          "id": "mari-maria-base-11",
+          "name": "Base Matte Velvet Skin - Chocolate",
+          "brand": "Mari Maria",
+          "category": "Base",
+          "subcategory": "Base Líquida",
+          "description": "A Base e Corretivo Matte Velvet Skin no tom Chocolate oferece cobertura alta e acabamento matte aveludado perfeito para pele muito escura. Sua fórmula inovadora 2 em 1 combina base de longa duração com corretivo de alta cobertura, proporcionando uma pele uniforme e natural por até 12 horas. Enriquecida com Vitamina E e ativos antioxidantes, protege a pele enquanto oferece um acabamento impecável. O subtom marrom intenso harmoniza perfeitamente com sua pele, criando um resultado natural e sofisticado.",
+          "professional_description": "Desenvolvida com tecnologia de pigmentos encapsulados e fórmula de longa duração, esta base oferece cobertura buildable que se adapta às suas necessidades. Sua textura cremosa e de fácil espalhabilidade permite uma aplicação uniforme, enquanto o controle de oleosidade mantém a maquiagem intacta durante todo o dia. Testada dermatologicamente e adequada para todos os tipos de pele.",
+          "features": [
+            "Cobertura alta e buildable",
+            "Acabamento matte aveludado",
+            "2 em 1: Base + Corretivo",
+            "Controle de oleosidade por 12 horas",
+            "Enriquecida com Vitamina E",
+            "Hipoalergênica e dermatologicamente testada",
+            "Livre de fragrâncias e parabenos",
+            "Resistente à água e suor",
+            "Não comedogênica",
+            "Aplicador com esponja integrado"
+          ],
+          "color_info": {
+            "tone": "Chocolate",
+            "hex_color": "#704233",
+            "undertone": "Marrom intenso",
+            "skin_match": "Pele muito escura",
+            "rgb": "112, 66, 51"
+          },
+          "images": [
+            {
+              "url": "/images/products/mari-maria-bases/mari-maria-base-chocolate.png",
+              "alt": "Mari Maria Base Matte Velvet Skin Chocolate",
+              "isPrimary": true
+            }
+          ],
+          "variants": [
+            {
+              "id": "mari-maria-base-11-variant-1",
+              "tone": "Chocolate",
+              "size": "30ml",
+              "price_brl": 69.9,
+              "price_eur": 23.5,
+              "price_gbp": 19.99,
+              "available": true
+            }
+          ],
+          "specifications": {
+            "volume": "30ml",
+            "skin_type": "Todos os tipos de pele",
+            "coverage": "Alta cobertura",
+            "finish": "Matte aveludado",
+            "duration": "12 horas",
+            "spf": "Não contém FPS",
+            "ingredients_highlight": "Vitamina E, pigmentos minerais, ativos antioxidantes",
+            "application": "Aplicar com aplicador incluso ou pincel, construindo cobertura conforme necessário"
+          },
+          "stock": {
+            "available": true,
+            "quantity": 50
+          },
+          "tags": [
+            "base",
+            "mari-maria",
+            "matte",
+            "cobertura-alta",
+            "longa-duracao",
+            "chocolate"
+          ],
+          "seo": {
+            "meta_title": "Base Mari Maria Matte Velvet Skin Chocolate | Alta Cobertura 12h",
+            "meta_description": "Base Mari Maria tom Chocolate com acabamento matte aveludado. Cobertura alta, 12h de duração. Perfeita para pele muito escura. Compre agora!",
+            "keywords": [
+              "base mari maria chocolate",
+              "matte velvet skin",
+              "base alta cobertura",
+              "base longa duração"
+            ]
+          },
+          "created_at": "2025-09-18T14:50:01.548967",
+          "updated_at": "2025-09-18T14:50:01.548968"
+        }
+      ],
+      "featured": true,
+      "sort_order": 1,
+      "price_range": {
+        "min_brl": 69.9,
+        "max_brl": 89.9,
+        "min_eur": 19.99,
+        "max_eur": 23.5,
+        "min_gbp": 19.99,
+        "max_gbp": 19.99
+      },
+      "brand_info": {
+        "name": "Mari Maria",
+        "origin": "Brasil",
+        "description": "Mari Maria é uma marca brasileira de cosméticos que se destaca pela qualidade e inovação. Criada pela influenciadora Mari Maria, a marca é conhecida por produtos de alta performance que atendem a diversidade da beleza brasileira.",
+        "certifications": [
+          "Dermatologicamente testado",
+          "Hipoalergênico",
+          "Cruelty-free"
+        ]
+      },
+      "usage_guide": {
+        "preparation": "Limpe e hidrate a pele antes da aplicação",
+        "application": "Aplique pequena quantidade no centro do rosto e espalhe uniformemente",
+        "blending": "Use o aplicador incluso ou pincel para esfumar bem",
+        "building": "Construa a cobertura gradualmente conforme necessário",
+        "setting": "Finalize com pó translúcido para maior fixação"
+      },
+      "created_at": "2025-09-18T14:50:01.548971",
+      "updated_at": "2025-09-18T14:50:01.548972"
+    }
+  ]
+}

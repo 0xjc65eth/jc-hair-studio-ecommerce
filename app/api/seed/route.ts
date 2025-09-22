@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { connectDB } from '@/lib/mongodb/connection';
 import { Product } from '@/lib/models/Product';
 import { Category } from '@/lib/models/Category';
+import { seedComprehensiveDatabase } from '@/lib/seeders/comprehensive-products';
 
 // Dados dos produtos brasileiros
 const brazilianProducts = [
@@ -14,14 +15,14 @@ const brazilianProducts = [
     subcategory: 'progressiva',
     description: 'Tratamento alisante com cana-de-açúcar Cysteine, cacau e D-panthenol. Sem formol, parabenos e ingredientes animais. Durabilidade de 3+ meses. Ideal para todos os tipos de cabelo, proporcionando alisamento máximo com hidratação profunda.',
     price: {
-      retail: 268.52,
-      professional: 222.27,
-      promotional: 199.99,
-      currency: 'BRL'
+      retail: 42.69,
+      professional: 35.34,
+      promotional: 31.80,
+      currency: 'EUR'
     },
     sizes: [
-      { size: '1000ml', price: 268.52, stock: 15, barcode: '7898963522341' },
-      { size: '500ml', price: 149.90, stock: 25, barcode: '7898963522358' }
+      { size: '1000ml', price: 42.69, stock: 15, barcode: '7898963522341' },
+      { size: '500ml', price: 23.83, stock: 25, barcode: '7898963522358' }
     ],
     images: [{ url: '/images/products/cadiveu-brasil-cacau.jpg', alt: 'Cadiveu Brasil Cacau 1000ml', isPrimary: true }],
     stock: { available: 40, reserved: 5, minimum: 10 },
@@ -49,12 +50,12 @@ const brazilianProducts = [
     subcategory: 'progressiva',
     description: 'Fórmula alemã com queratina e óleo de cacau, 0,2% formol. Kit completo com 3 produtos para ação instantânea. Permite lavagem no mesmo dia da aplicação, ideal para cabelos rebeldes.',
     price: {
-      retail: 415.87,
-      professional: 350.00,
-      promotional: 299.99,
-      currency: 'BRL'
+      retail: 66.12,
+      professional: 55.65,
+      promotional: 47.70,
+      currency: 'EUR'
     },
-    sizes: [{ size: 'Kit 3x1000ml', price: 415.87, stock: 10, barcode: '7908124000134' }],
+    sizes: [{ size: 'Kit 3x1000ml', price: 66.12, stock: 10, barcode: '7908124000134' }],
     images: [{ url: '/images/products/inoar-g-hair-kit.jpg', alt: 'Kit G-Hair Alemã 3x1000ml', isPrimary: true }],
     stock: { available: 10, reserved: 2, minimum: 5 },
     attributes: {
@@ -81,12 +82,12 @@ const brazilianProducts = [
     subcategory: 'progressiva',
     description: 'Primeiro shampoo alisante do mundo com blend de 5 ácidos. Livre de formol, alisa em uma única lavagem com durabilidade de até 3 meses. Inovação brasileira revolucionária.',
     price: {
-      retail: 545.90,
-      professional: 474.90,
-      promotional: 449.90,
-      currency: 'BRL'
+      retail: 86.80,
+      professional: 75.51,
+      promotional: 71.53,
+      currency: 'EUR'
     },
-    sizes: [{ size: '980ml', price: 474.90, stock: 8, barcode: '7898959463214' }],
+    sizes: [{ size: '980ml', price: 75.51, stock: 8, barcode: '7898959463214' }],
     images: [{ url: '/images/products/sweet-hair-the-first.jpg', alt: 'Sweet Hair The First 980ml', isPrimary: true }],
     stock: { available: 8, reserved: 1, minimum: 3 },
     attributes: {
@@ -113,14 +114,14 @@ const brazilianProducts = [
     subcategory: 'botox',
     description: '100% livre de formol, com óleo de argan, coco e manteiga de karité. Redução de 90% do volume, alinhamento capilar e hidratação profunda. Durabilidade de 20-50 dias.',
     price: {
-      retail: 127.99,
-      professional: 95.00,
-      promotional: 89.90,
-      currency: 'BRL'
+      retail: 20.35,
+      professional: 15.11,
+      promotional: 14.29,
+      currency: 'EUR'
     },
     sizes: [
-      { size: '1kg', price: 127.99, stock: 20, barcode: '7908030408458' },
-      { size: '250g', price: 38.90, stock: 30, barcode: '7908030408465' }
+      { size: '1kg', price: 20.35, stock: 20, barcode: '7908030408458' },
+      { size: '250g', price: 6.18, stock: 30, barcode: '7908030408465' }
     ],
     images: [{ url: '/images/products/forever-liss-botox-zero.jpg', alt: 'Forever Liss Botox Zero Formol 1kg', isPrimary: true }],
     stock: { available: 50, reserved: 5, minimum: 10 },
@@ -140,139 +141,6 @@ const brazilianProducts = [
     featured: false,
     isActive: true
   },
-  {
-    sku: 'RISQ-DG-HIB',
-    name: 'Esmalte Diamond Gel - Hibisco Rosa',
-    brand: 'Risqué',
-    category: 'esmaltes',
-    subcategory: 'cremoso',
-    description: 'Esmalte efeito gel com pincel de 800 cerdas para aplicação perfeita. Durabilidade superior e brilho intenso duradouro. Cor tendência hibisco rosa.',
-    price: {
-      retail: 14.93,
-      professional: 12.50,
-      promotional: 13.96,
-      currency: 'BRL'
-    },
-    sizes: [{ size: '9.5ml', price: 14.93, stock: 50, barcode: '7891350038224' }],
-    images: [{ url: '/images/products/risque-hibisco-rosa.jpg', alt: 'Risqué Diamond Gel Hibisco Rosa', isPrimary: true }],
-    stock: { available: 50, reserved: 5, minimum: 15 },
-    attributes: {
-      color: 'Hibisco Rosa',
-      texture: 'Cremoso',
-      finish: 'Brilhante',
-      benefits: ['Efeito gel', 'Longa duração', 'Secagem rápida', 'Pincel 800 cerdas']
-    },
-    ratings: { average: 4.7, count: 89, reviews: [] },
-    tags: ['esmalte', 'risqué', 'diamond gel', 'rosa', 'cremoso', 'brasil'],
-    seo: {
-      slug: 'risque-esmalte-diamond-gel-hibisco-rosa',
-      metaTitle: 'Risqué Diamond Gel Hibisco Rosa - Esmalte Efeito Gel',
-      metaDescription: 'Esmalte Risqué Diamond Gel na cor Hibisco Rosa. Efeito gel com brilho intenso e longa duração.',
-      keywords: ['esmalte risqué', 'diamond gel', 'hibisco rosa', 'efeito gel', 'longa duração']
-    },
-    featured: true,
-    isActive: true
-  },
-  {
-    sku: 'QDB-BASE-240F',
-    name: 'Base Tô No Glow 240F',
-    brand: 'Quem Disse Berenice?',
-    category: 'maquiagem',
-    subcategory: 'base',
-    description: 'Base líquida com efeito radiante natural, cobertura média e hidratação sem oleosidade. Desenvolvida especialmente para a pele brasileira.',
-    price: {
-      retail: 69.90,
-      professional: 55.00,
-      promotional: 37.70,
-      currency: 'BRL'
-    },
-    sizes: [{ size: '30ml', price: 37.70, stock: 25, barcode: '7908229401324' }],
-    images: [{ url: '/images/products/qdb-base-glow-240f.jpg', alt: 'Base Tô No Glow 240F', isPrimary: true }],
-    stock: { available: 25, reserved: 3, minimum: 8 },
-    attributes: {
-      color: '240F',
-      texture: 'Líquida',
-      finish: 'Glow',
-      benefits: ['Efeito radiante', 'Cobertura média', 'Hidratação', 'Pele brasileira']
-    },
-    ratings: { average: 4.5, count: 156, reviews: [] },
-    tags: ['base', 'qdb', 'glow', 'maquiagem', 'pele radiante', 'brasil'],
-    seo: {
-      slug: 'qdb-base-to-no-glow-240f-pele-brasileira',
-      metaTitle: 'QDB Base Tô No Glow 240F - Base Radiante Pele Brasileira',
-      metaDescription: 'Base Quem Disse Berenice Tô No Glow tom 240F. Efeito radiante natural para pele brasileira.',
-      keywords: ['base qdb', 'tô no glow', '240f', 'base radiante', 'pele brasileira']
-    },
-    featured: true,
-    isActive: true
-  },
-  {
-    sku: 'TAIFF-TOUR-2100',
-    name: 'Secador Tourmaline Ion 2100W',
-    brand: 'Taiff',
-    category: 'ferramentas',
-    subcategory: 'secador',
-    description: 'Secador profissional com tecnologia íons negativos, tourmaline e cerâmica. Motor AC de longa durabilidade, cabo 3m e tampa removível.',
-    price: {
-      retail: 639.00,
-      professional: 520.00,
-      promotional: 440.01,
-      currency: 'BRL'
-    },
-    sizes: [{ size: 'Único', price: 440.01, stock: 12, barcode: '7898483610234' }],
-    images: [{ url: '/images/products/taiff-tourmaline-ion.jpg', alt: 'Taiff Tourmaline Ion 2100W', isPrimary: true }],
-    stock: { available: 12, reserved: 2, minimum: 3 },
-    attributes: {
-      voltage: '127V',
-      power: '2100W',
-      benefits: ['Íons negativos', 'Tourmaline', 'Cerâmica', 'Cabo 3m', 'Tampa removível']
-    },
-    ratings: { average: 4.8, count: 567, reviews: [] },
-    tags: ['secador', 'taiff', 'profissional', '2100w', 'tourmaline', 'brasil'],
-    seo: {
-      slug: 'taiff-secador-tourmaline-ion-2100w-profissional',
-      metaTitle: 'Taiff Tourmaline Ion 2100W - Secador Profissional',
-      metaDescription: 'Secador Taiff Tourmaline Ion 2100W com íons negativos. Profissional para hair studio.',
-      keywords: ['secador taiff', 'tourmaline ion', '2100w', 'secador profissional', 'íons negativos']
-    },
-    featured: true,
-    isActive: true
-  },
-  {
-    sku: 'LOREAL-ABS-500',
-    name: 'Absolut Repair Gold Quinoa Shampoo',
-    brand: "L'Oréal Professionnel",
-    category: 'cuidados_diarios',
-    subcategory: 'shampoo',
-    description: 'Shampoo reparador com Gold Quinoa e proteínas. Repara e reestrutura a fibra capilar, proporcionando 77% mais reparação e 7x mais brilho.',
-    price: {
-      retail: 236.90,
-      professional: 190.00,
-      promotional: 180.90,
-      currency: 'BRL'
-    },
-    sizes: [
-      { size: '500ml', price: 180.90, stock: 20, barcode: '3474636975853' },
-      { size: '250ml', price: 105.90, stock: 30, barcode: '3474636975846' }
-    ],
-    images: [{ url: '/images/products/loreal-absolut-repair-gold.jpg', alt: 'Absolut Repair Gold Quinoa 500ml', isPrimary: true }],
-    stock: { available: 50, reserved: 5, minimum: 15 },
-    attributes: {
-      benefits: ['77% mais reparado', '7x mais brilho', 'Reestrutura fibra'],
-      indications: ['Cabelos danificados', 'Cabelos ressecados'],
-      composition: ['Gold Quinoa', 'Proteínas']
-    },
-    ratings: { average: 4.8, count: 456, reviews: [] },
-    tags: ['shampoo', 'loreal', 'reparador', 'profissional', 'quinoa', 'ouro'],
-    seo: {
-      slug: 'loreal-absolut-repair-gold-quinoa-shampoo-500ml',
-      metaTitle: "L'Oréal Absolut Repair Gold Quinoa - Shampoo Reparador 500ml",
-      metaDescription: 'Shampoo reparador LOréal com Gold Quinoa. Repara fibra capilar com 77% mais eficácia.',
-      keywords: ['shampoo reparador', 'loreal profissional', 'gold quinoa', 'absolut repair', 'cabelo danificado']
-    },
-    featured: false,
-    isActive: true
-  }
 ];
 
 const brazilianCategories = [
@@ -288,21 +156,6 @@ const brazilianCategories = [
       metaTitle: 'Tratamentos Capilares Profissionais - Hair Studio Brasil',
       metaDescription: 'Progressivas, botox e tratamentos capilares das melhores marcas brasileiras. Cadiveu, Sweet Hair, Forever Liss.',
       keywords: ['progressiva brasil', 'botox capilar', 'tratamento profissional', 'cadiveu', 'sweet hair']
-    },
-    isActive: true
-  },
-  {
-    name: 'Esmaltes',
-    slug: 'esmaltes',
-    description: 'Esmaltes das marcas brasileiras mais amadas',
-    order: 2,
-    featured: true,
-    image: '/images/categories/esmaltes.jpg',
-    icon: '💅',
-    seo: {
-      metaTitle: 'Esmaltes Brasileiros - Risqué, Colorama, Dailus',
-      metaDescription: 'Esmaltes das melhores marcas brasileiras. Risqué Diamond Gel, Colorama, Dailus e muito mais.',
-      keywords: ['esmalte risqué', 'esmalte colorama', 'esmalte dailus', 'esmalte brasileiro']
     },
     isActive: true
   },
@@ -355,49 +208,68 @@ const brazilianCategories = [
 
 export async function POST(request: NextRequest) {
   try {
-    console.log('🌱 Iniciando seeding do banco de dados...');
-    
-    await connectDB();
-    
-    // Limpar dados existentes
-    await Product.deleteMany({});
-    await Category.deleteMany({});
-    console.log('🗑️ Dados existentes removidos');
+    const { searchParams } = new URL(request.url);
+    const mode = searchParams.get('mode') || 'basic';
 
-    // Inserir categorias
-    const categories = await Category.insertMany(brazilianCategories);
-    console.log(`✅ ${categories.length} categorias inseridas`);
+    console.log(`🌱 Iniciando seeding ${mode} do banco de dados...`);
 
-    // Inserir produtos
-    const products = await Product.insertMany(brazilianProducts);
-    console.log(`✅ ${products.length} produtos inseridos`);
+    if (mode === 'comprehensive') {
+      // Use comprehensive seeding with all catalogs
+      const result = await seedComprehensiveDatabase();
 
-    return NextResponse.json({
-      success: true,
-      message: 'Database seeded successfully! 🎉',
-      data: {
-        categoriesCount: categories.length,
-        productsCount: products.length,
-        categories: categories.map(cat => ({
-          name: cat.name,
-          slug: cat.slug,
-          featured: cat.featured
-        })),
-        products: products.map(prod => ({
-          sku: prod.sku,
-          name: prod.name,
-          brand: prod.brand,
-          category: prod.category,
-          featured: prod.featured
-        }))
-      }
-    });
+      return NextResponse.json({
+        success: true,
+        message: 'Comprehensive database seeded successfully! 🎉',
+        data: {
+          categoriesCount: result.categories,
+          productsCount: result.products,
+          productsByCategory: result.productsByCategory
+        }
+      });
+    } else {
+      // Basic seeding with limited products
+      await connectDB();
+
+      // Limpar dados existentes
+      await Product.deleteMany({});
+      await Category.deleteMany({});
+      console.log('🗑️ Dados existentes removidos');
+
+      // Inserir categorias
+      const categories = await Category.insertMany(brazilianCategories);
+      console.log(`✅ ${categories.length} categorias inseridas`);
+
+      // Inserir produtos
+      const products = await Product.insertMany(brazilianProducts);
+      console.log(`✅ ${products.length} produtos inseridos`);
+
+      return NextResponse.json({
+        success: true,
+        message: 'Basic database seeded successfully! 🎉',
+        data: {
+          categoriesCount: categories.length,
+          productsCount: products.length,
+          categories: categories.map(cat => ({
+            name: cat.name,
+            slug: cat.slug,
+            featured: cat.featured
+          })),
+          products: products.map(prod => ({
+            sku: prod.sku,
+            name: prod.name,
+            brand: prod.brand,
+            category: prod.category,
+            featured: prod.featured
+          }))
+        }
+      });
+    }
 
   } catch (error) {
     console.error('❌ Erro durante o seeding:', error);
     return NextResponse.json(
-      { 
-        success: false, 
+      {
+        success: false,
         error: 'Erro ao popular banco de dados',
         details: error instanceof Error ? error.message : 'Erro desconhecido'
       },

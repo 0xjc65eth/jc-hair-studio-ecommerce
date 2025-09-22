@@ -103,34 +103,32 @@ export default function VideoHeroCarousel({
       {/* Video Container */}
       <div className="relative w-full h-full">
         <AnimatePresence mode="wait">
-          {videos.map((video, index) => (
-            <motion.div
-              key={`${video.src}-${index}`}
-              className="absolute inset-0"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: index === currentIndex ? 1 : 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <video
-                ref={(el) => {
-                  videoRefs.current[index] = el;
-                }}
-                src={video.src}
-                className="w-full h-full object-cover"
-                loop
-                muted={isMuted}
-                playsInline
-                preload="metadata"
-                onError={(e) => {
-                  console.error('Video error:', e);
-                }}
-              />
+          <motion.div
+            key={currentIndex}
+            className="absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <video
+              ref={(el) => {
+                videoRefs.current[currentIndex] = el;
+              }}
+              src={videos[currentIndex].src}
+              className="w-full h-full object-cover"
+              loop
+              muted={isMuted}
+              playsInline
+              preload="metadata"
+              onError={(e) => {
+                console.error('Video error:', e);
+              }}
+            />
 
-              {/* Dark Overlay for Better Text Readability */}
-              <div className="absolute inset-0 bg-black bg-opacity-30" />
-            </motion.div>
-          ))}
+            {/* Dark Overlay for Better Text Readability */}
+            <div className="absolute inset-0 bg-black bg-opacity-30" />
+          </motion.div>
         </AnimatePresence>
       </div>
 

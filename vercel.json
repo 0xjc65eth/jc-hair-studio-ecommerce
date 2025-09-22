@@ -1,11 +1,88 @@
 {
-  "version": 2,
-  "buildCommand": "npx prisma generate && npm run build",
-  "installCommand": "npm install --legacy-peer-deps",
+  "buildCommand": "npm run vercel:build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "installCommand": "npm install",
+  "regions": ["gru1"],
   "functions": {
-    "app/api/**/*.ts": {
-      "maxDuration": 30
+    "app/api/*/route.ts": {
+      "maxDuration": 30,
+      "memory": 1024
+    },
+    "app/api/seed/route.ts": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "app/api/analytics/*/route.ts": {
+      "maxDuration": 30,
+      "memory": 512
     }
   },
-  "regions": ["fra1"]
+  "env": {
+    "SKIP_TYPE_CHECK": "true",
+    "NODE_ENV": "production"
+  },
+  "build": {
+    "env": {
+      "SKIP_TYPE_CHECK": "true",
+      "NODE_ENV": "production"
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, s-maxage=300, stale-while-revalidate=59"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "authorized"
+        }
+      ],
+      "headers": [
+        {
+          "key": "x-authorized",
+          "value": "true"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "crons": []
 }

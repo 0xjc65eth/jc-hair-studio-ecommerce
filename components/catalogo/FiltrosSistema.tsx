@@ -38,7 +38,6 @@ const CATEGORIES = [
   { value: 'tratamentos', label: 'Tratamentos' },
   { value: 'shampoos', label: 'Shampoos' },
   { value: 'maquiagem', label: 'Maquiagem' },
-  { value: 'esmaltes', label: 'Esmaltes' },
   { value: 'corpo', label: 'Corpo' }
 ];
 

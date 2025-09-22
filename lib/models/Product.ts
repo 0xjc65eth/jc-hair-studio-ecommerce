@@ -7,15 +7,21 @@ export interface IProduct extends Document {
   category: string;
   subcategory: string;
   description: string;
-  price: {
-    retail: number;
-    professional: number;
-    promotional?: number;
-    currency: string;
+  shortDesc?: string;
+  finalidade?: string;
+  volume?: string;
+  cor?: string;
+  cores?: string[];
+  pricing: {
+    basePrice: number;
+    ourPrice: number;
+    discountPrice: number;
+    savings: number;
+    margin: string;
+    competitive: string;
   };
   sizes: Array<{
     size: string;
-    price: number;
     stock: number;
     barcode: string;
   }>;
@@ -53,6 +59,7 @@ export interface IProduct extends Document {
     }>;
   };
   tags: string[];
+  labels?: string[];
   seo: {
     slug: string;
     metaTitle: string;
@@ -87,26 +94,46 @@ const ProductSchema = new Schema<IProduct>({
   category: { 
     type: String, 
     required: true,
-    enum: ['tratamento_capilar', 'esmaltes', 'maquiagem', 'ferramentas', 'cuidados_diarios', 'corporais']
+    enum: ['tratamento_capilar', 'maquiagem', 'ferramentas', 'cuidados_diarios', 'corporais']
   },
   subcategory: { 
     type: String, 
     required: true
   },
-  description: { 
-    type: String, 
+  description: {
+    type: String,
     required: true,
     maxlength: 2000
   },
-  price: {
-    retail: { type: Number, required: true, min: 0 },
-    professional: { type: Number, required: true, min: 0 },
-    promotional: { type: Number, min: 0 },
-    currency: { type: String, default: 'BRL' }
+  shortDesc: {
+    type: String,
+    maxlength: 200
+  },
+  finalidade: {
+    type: String,
+    maxlength: 300
+  },
+  volume: {
+    type: String,
+    maxlength: 50
+  },
+  cor: {
+    type: String,
+    maxlength: 100
+  },
+  cores: [{
+    type: String
+  }],
+  pricing: {
+    basePrice: { type: Number, required: true, min: 0 },
+    ourPrice: { type: Number, required: true, min: 0 },
+    discountPrice: { type: Number, required: true, min: 0 },
+    savings: { type: Number, required: true, min: 0 },
+    margin: { type: String, required: true },
+    competitive: { type: String, required: true }
   },
   sizes: [{
     size: { type: String, required: true },
-    price: { type: Number, required: true, min: 0 },
     stock: { type: Number, required: true, min: 0, default: 0 },
     barcode: { type: String, required: true }
   }],
@@ -143,9 +170,13 @@ const ProductSchema = new Schema<IProduct>({
       photos: [String]
     }]
   },
-  tags: [{ 
-    type: String, 
+  tags: [{
+    type: String,
     lowercase: true,
+    trim: true
+  }],
+  labels: [{
+    type: String,
     trim: true
   }],
   seo: {
@@ -166,17 +197,15 @@ const ProductSchema = new Schema<IProduct>({
   timestamps: true
 });
 
-// Índices para otimização
-ProductSchema.index({ sku: 1 }, { unique: true });
-ProductSchema.index({ category: 1, subcategory: 1 });
-ProductSchema.index({ brand: 1 });
-ProductSchema.index({ 'price.retail': 1 });
-ProductSchema.index({ 'price.professional': 1 });
-ProductSchema.index({ tags: 1 });
-ProductSchema.index({ featured: 1, isActive: 1 });
-ProductSchema.index({ 'ratings.average': -1 });
-ProductSchema.index({ createdAt: -1 });
-ProductSchema.index({ 'seo.slug': 1 }, { unique: true });
+// Índices para otimização - removidos porque já definidos no schema
+// ProductSchema.index({ sku: 1 }, { unique: true });
+// ProductSchema.index({ category: 1, subcategory: 1 });
+// ProductSchema.index({ brand: 1 });
+// ProductSchema.index({ tags: 1 });
+// ProductSchema.index({ featured: 1, isActive: 1 });
+// ProductSchema.index({ 'ratings.average': -1 });
+// ProductSchema.index({ createdAt: -1 });
+// ProductSchema.index({ 'seo.slug': 1 }, { unique: true });
 
 // Índice de texto para busca
 ProductSchema.index({
@@ -207,11 +236,5 @@ ProductSchema.virtual('needsRestock').get(function() {
   return this.stock.available <= this.stock.minimum;
 });
 
-ProductSchema.virtual('discountPercentage').get(function() {
-  if (this.price.promotional && this.price.promotional < this.price.retail) {
-    return Math.round(((this.price.retail - this.price.promotional) / this.price.retail) * 100);
-  }
-  return 0;
-});
 
 export const Product = mongoose.models.Product || mongoose.model<IProduct>('Product', ProductSchema);

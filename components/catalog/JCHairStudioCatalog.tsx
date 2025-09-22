@@ -67,7 +67,7 @@ interface CartItem {
  */
 const JCHairStudioCatalog: React.FC = () => {
   // State management
-  const [activeCategory, setActiveCategory] = useState('cosmeticos');
+  const [activeCategory, setActiveCategory] = useState('hidratacao');
   const [activeSubcategory, setActiveSubcategory] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -89,28 +89,49 @@ const JCHairStudioCatalog: React.FC = () => {
   // Get all products and organize by category
   const allProducts = useMemo(() => {
     const products: Product[] = [];
-    productsData.categories.forEach(category => {
-      category.subcategories.forEach(subcategory => {
-        subcategory.products.forEach(product => {
-          products.push({
-            ...product as Product,
-            category: category.name,
-            subcategory: subcategory.name
+    if (productsData?.categories) {
+      Object.entries(productsData.categories).forEach(([categoryKey, category]) => {
+        if (category?.products) {
+          category.products.forEach(product => {
+            products.push({
+              ...product as Product,
+              category: category.name,
+              subcategory: category.name
+            });
           });
-        });
+        }
       });
-    });
+    }
     return products;
+  }, []);
+
+  // Convert categories object to array for compatibility
+  const categoriesArray = useMemo(() => {
+    if (!productsData.categories) {
+      return [];
+    }
+    return Object.entries(productsData.categories).map(([key, category]) => ({
+      id: key,
+      name: category.name,
+      icon: category.icon || '📦',
+      subcategories: [] // No subcategories in this structure
+    }));
   }, []);
 
   // Filter products based on active category and filters
   const filteredProducts = useMemo(() => {
+    if (!allProducts || allProducts.length === 0) {
+      return [];
+    }
+
     let products = allProducts.filter(product => {
-      const categoryMatch = product.category.toLowerCase() ===
-        productsData.categories.find(c => c.id === activeCategory)?.name.toLowerCase();
+      if (!product) return false;
+
+      const categoryMatch = product.category?.toLowerCase() ===
+        categoriesArray.find(c => c.id === activeCategory)?.name?.toLowerCase();
 
       const subcategoryMatch = !activeSubcategory ||
-        product.subcategory.toLowerCase() === activeSubcategory.toLowerCase();
+        product.subcategory?.toLowerCase() === activeSubcategory.toLowerCase();
 
       return categoryMatch && subcategoryMatch;
     });
@@ -118,21 +139,22 @@ const JCHairStudioCatalog: React.FC = () => {
     // Apply search filter
     if (searchTerm) {
       products = products.filter(product =>
-        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.brand.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        product?.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product?.brand?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product?.tags?.some(tag => tag?.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
 
     // Apply other filters
     if (selectedFilters.brands.length > 0) {
       products = products.filter(product =>
-        selectedFilters.brands.includes(product.brand)
+        product?.brand && selectedFilters.brands.includes(product.brand)
       );
     }
 
     if (selectedFilters.priceRange) {
       products = products.filter(product =>
+        product?.price_eur &&
         product.price_eur >= selectedFilters.priceRange.min &&
         product.price_eur <= selectedFilters.priceRange.max
       );
@@ -140,9 +162,9 @@ const JCHairStudioCatalog: React.FC = () => {
 
     if (selectedFilters.characteristics.length > 0) {
       products = products.filter(product =>
-        selectedFilters.characteristics.some(char =>
+        product?.characteristics && selectedFilters.characteristics.some(char =>
           product.characteristics.some(pChar =>
-            pChar.toLowerCase().includes(char.toLowerCase())
+            pChar?.toLowerCase().includes(char.toLowerCase())
           )
         )
       );
@@ -449,7 +471,6 @@ const JCHairStudioCatalog: React.FC = () => {
                 </span>
               )}
               <p className="text-xs text-gray-500 mt-1">
-                R$ {product.price_brl.toFixed(2)} no Brasil
               </p>
             </div>
             {product.stockQuantity <= 20 && (
@@ -537,7 +558,7 @@ const JCHairStudioCatalog: React.FC = () => {
 
       {/* Category Navigation */}
       <CategoryNavigation
-        categories={productsData.categories}
+        categories={categoriesArray}
         activeCategory={activeCategory}
         activeSubcategory={activeSubcategory}
         onCategoryChange={setActiveCategory}
@@ -598,7 +619,7 @@ const JCHairStudioCatalog: React.FC = () => {
           <p className="text-gray-600 font-medium">
             {filteredProducts.length} produto{filteredProducts.length !== 1 ? 's' : ''} encontrado{filteredProducts.length !== 1 ? 's' : ''} em{' '}
             <span className="font-bold text-purple-600">
-              {productsData.categories.find(c => c.id === activeCategory)?.name}
+              {categoriesArray.find(c => c.id === activeCategory)?.name}
             </span>
           </p>
           {searchTerm && (

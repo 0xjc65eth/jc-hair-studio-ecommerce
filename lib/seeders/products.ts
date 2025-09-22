@@ -169,172 +169,6 @@ export const treatmentProducts = [
   }
 ];
 
-export const nailProducts = [
-  {
-    sku: 'RISQ-DG-HIB',
-    name: 'Esmalte Diamond Gel - Hibisco Rosa',
-    brand: 'Risqué',
-    category: 'esmaltes',
-    subcategory: 'cremoso',
-    description: 'Esmalte efeito gel com pincel de 800 cerdas para aplicação perfeita. Durabilidade superior e brilho intenso duradouro. Cor tendência hibisco rosa.',
-    price: {
-      retail: 14.93,
-      professional: 12.50,
-      promotional: 13.96,
-      currency: 'BRL'
-    },
-    sizes: [
-      { size: '9.5ml', price: 14.93, stock: 50, barcode: '7891350038224' }
-    ],
-    images: [
-      { 
-        url: '/images/products/risque-hibisco-rosa.jpg', 
-        alt: 'Risqué Diamond Gel Hibisco Rosa', 
-        isPrimary: true 
-      }
-    ],
-    stock: { available: 50, reserved: 5, minimum: 15 },
-    attributes: {
-      color: 'Hibisco Rosa',
-      texture: 'Cremoso',
-      finish: 'Brilhante',
-      benefits: ['Efeito gel', 'Longa duração', 'Secagem rápida', 'Pincel 800 cerdas']
-    },
-    ratings: { average: 4.7, count: 89, reviews: [] },
-    tags: ['esmalte', 'risqué', 'diamond gel', 'rosa', 'cremoso', 'brasil'],
-    seo: {
-      slug: 'risque-esmalte-diamond-gel-hibisco-rosa',
-      metaTitle: 'Risqué Diamond Gel Hibisco Rosa - Esmalte Efeito Gel',
-      metaDescription: 'Esmalte Risqué Diamond Gel na cor Hibisco Rosa. Efeito gel com brilho intenso e longa duração.',
-      keywords: ['esmalte risqué', 'diamond gel', 'hibisco rosa', 'efeito gel', 'longa duração']
-    },
-    featured: true,
-    isActive: true
-  },
-  {
-    sku: 'RISQ-DG-CHAB',
-    name: 'Esmalte Diamond Gel - Chá Branco',
-    brand: 'Risqué',
-    category: 'esmaltes',
-    subcategory: 'cremoso',
-    description: 'Esmalte nude claro cremoso com efeito gel duradouro. Tonalidade elegante e sofisticada, perfeita para qualquer ocasião.',
-    price: {
-      retail: 14.93,
-      professional: 12.50,
-      promotional: 13.96,
-      currency: 'BRL'
-    },
-    sizes: [
-      { size: '9.5ml', price: 14.93, stock: 45, barcode: '7891350038231' }
-    ],
-    images: [
-      { 
-        url: '/images/products/risque-cha-branco.jpg', 
-        alt: 'Risqué Diamond Gel Chá Branco', 
-        isPrimary: true 
-      }
-    ],
-    stock: { available: 45, reserved: 3, minimum: 15 },
-    attributes: {
-      color: 'Chá Branco',
-      texture: 'Cremoso',
-      finish: 'Brilhante',
-      benefits: ['Efeito gel', 'Nude elegante', 'Alta cobertura']
-    },
-    ratings: { average: 4.8, count: 120, reviews: [] },
-    tags: ['esmalte', 'risqué', 'diamond gel', 'nude', 'cremoso', 'brasil'],
-    seo: {
-      slug: 'risque-esmalte-diamond-gel-cha-branco',
-      metaTitle: 'Risqué Diamond Gel Chá Branco - Esmalte Nude Elegante',
-      metaDescription: 'Esmalte Risqué Diamond Gel Chá Branco. Nude elegante com efeito gel e alta cobertura.',
-      keywords: ['esmalte nude', 'risqué', 'chá branco', 'diamond gel', 'elegante']
-    },
-    featured: true,
-    isActive: true
-  },
-  {
-    sku: 'COLOR-VOBS',
-    name: 'Esmalte Colorama - Vermelha Obsessão',
-    brand: 'Colorama',
-    category: 'esmaltes',
-    subcategory: 'efeito_gel',
-    description: 'Esmalte efeito gel que dura até 10 dias. Vermelho intenso clássico com brilho espelhado e secagem rápida.',
-    price: {
-      retail: 8.90,
-      professional: 7.50,
-      promotional: 8.08,
-      currency: 'BRL'
-    },
-    sizes: [
-      { size: '8ml', price: 8.90, stock: 60, barcode: '7896000714596' }
-    ],
-    images: [
-      { 
-        url: '/images/products/colorama-vermelha-obsessao.jpg', 
-        alt: 'Colorama Vermelha Obsessão', 
-        isPrimary: true 
-      }
-    ],
-    stock: { available: 60, reserved: 5, minimum: 20 },
-    attributes: {
-      color: 'Vermelha Obsessão',
-      texture: 'Cremoso',
-      finish: 'Gel',
-      benefits: ['Dura até 10 dias', 'Brilho espelhado', 'Secagem rápida']
-    },
-    ratings: { average: 4.4, count: 67, reviews: [] },
-    tags: ['esmalte', 'colorama', 'efeito gel', 'vermelho', 'longa duração', 'brasil'],
-    seo: {
-      slug: 'colorama-esmalte-vermelha-obsessao-efeito-gel',
-      metaTitle: 'Colorama Vermelha Obsessão - Esmalte Efeito Gel Vermelho',
-      metaDescription: 'Esmalte Colorama Vermelha Obsessão com efeito gel. Dura até 10 dias com brilho espelhado.',
-      keywords: ['esmalte colorama', 'vermelha obsessão', 'efeito gel', 'vermelho', '10 dias']
-    },
-    featured: false,
-    isActive: true
-  },
-  {
-    sku: 'DAILUS-BC-233',
-    name: 'Esmalte Queridinhos - Bolo de Chocolate',
-    brand: 'Dailus',
-    category: 'esmaltes',
-    subcategory: 'cremoso',
-    description: 'Esmalte cremoso marrom chocolate da linha Queridinhos. Alta pigmentação com cobertura uniforme e pincel preciso.',
-    price: {
-      retail: 11.30,
-      professional: 9.50,
-      promotional: 10.84,
-      currency: 'BRL'
-    },
-    sizes: [
-      { size: '8ml', price: 10.84, stock: 40, barcode: '7894321654897' }
-    ],
-    images: [
-      { 
-        url: '/images/products/dailus-bolo-chocolate.jpg', 
-        alt: 'Dailus Bolo de Chocolate', 
-        isPrimary: true 
-      }
-    ],
-    stock: { available: 40, reserved: 2, minimum: 10 },
-    attributes: {
-      color: 'Bolo de Chocolate',
-      texture: 'Cremoso',
-      finish: 'Cremoso',
-      benefits: ['Alta pigmentação', 'Cobertura uniforme', 'Pincel preciso']
-    },
-    ratings: { average: 4.6, count: 45, reviews: [] },
-    tags: ['esmalte', 'dailus', 'queridinhos', 'marrom', 'cremoso', 'brasil'],
-    seo: {
-      slug: 'dailus-esmalte-queridinhos-bolo-chocolate',
-      metaTitle: 'Dailus Queridinhos Bolo de Chocolate - Esmalte Cremoso',
-      metaDescription: 'Esmalte Dailus Bolo de Chocolate da linha Queridinhos. Cremoso com alta pigmentação.',
-      keywords: ['esmalte dailus', 'queridinhos', 'bolo de chocolate', 'marrom', 'cremoso']
-    },
-    featured: false,
-    isActive: true
-  }
-];
 
 export const makeupProducts = [
   {
@@ -564,20 +398,6 @@ export const brazilianCategories = [
     }
   },
   {
-    name: 'Esmaltes',
-    slug: 'esmaltes',
-    description: 'Esmaltes das marcas brasileiras mais amadas',
-    order: 2,
-    featured: true,
-    image: '/images/categories/esmaltes.jpg',
-    icon: '💅',
-    seo: {
-      metaTitle: 'Esmaltes Brasileiros - Risqué, Colorama, Dailus',
-      metaDescription: 'Esmaltes das melhores marcas brasileiras. Risqué Diamond Gel, Colorama, Dailus e muito mais.',
-      keywords: ['esmalte risqué', 'esmalte colorama', 'esmalte dailus', 'esmalte brasileiro']
-    }
-  },
-  {
     name: 'Maquiagem',
     slug: 'maquiagem',
     description: 'Maquiagens brasileiras para todos os tons de pele',
@@ -652,7 +472,6 @@ export async function seedDatabase() {
     // Inserir produtos
     const allProducts = [
       ...treatmentProducts,
-      ...nailProducts,
       ...makeupProducts,
       ...toolProducts,
       ...careProducts

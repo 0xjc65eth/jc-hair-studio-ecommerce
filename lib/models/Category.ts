@@ -64,11 +64,11 @@ const CategorySchema = new Schema<ICategory>({
   timestamps: true
 });
 
-// Índices
-CategorySchema.index({ slug: 1 }, { unique: true });
-CategorySchema.index({ parent: 1 });
-CategorySchema.index({ order: 1 });
-CategorySchema.index({ featured: 1, isActive: 1 });
+// Índices removidos - já definidos no schema
+// CategorySchema.index({ slug: 1 }, { unique: true });
+// CategorySchema.index({ parent: 1 });
+// CategorySchema.index({ order: 1 });
+// CategorySchema.index({ featured: 1, isActive: 1 });
 
 // Middleware para gerar slug
 CategorySchema.pre('save', function(next) {

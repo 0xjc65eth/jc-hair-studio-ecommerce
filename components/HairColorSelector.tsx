@@ -281,7 +281,7 @@ export function HairColorSelector({
                 {/* Preço */}
                 {showPricing && (
                   <div className="mt-2 font-semibold text-green-600">
-                    R$ {Math.round(basePrice * color.priceMultiplier)}
+                    €{Math.round((basePrice * color.priceMultiplier) * 0.159)}
                   </div>
                 )}
               </div>
@@ -371,7 +371,7 @@ export function HairColorSelector({
             <div className="mt-4">
               <h5 className="font-medium mb-2">Custo Estimado da Transformação</h5>
               <div className="text-2xl font-bold text-green-600">
-                R$ {transformationCost}
+                €{Math.round(transformationCost * 0.159)}
               </div>
               <p className="text-sm text-gray-600">
                 Inclui processo completo e produtos necessários

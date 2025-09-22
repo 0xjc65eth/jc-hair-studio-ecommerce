@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getLegacyCompatibleProducts } from '@/lib/data/megaHairProducts';
+import { useCart } from '@/lib/stores/cartStore';
 
 // Enhanced product data structure (mantém compatibilidade)
 interface MegaHairProduct {
@@ -52,7 +53,8 @@ export default function MegaHairCatalog() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState<MegaHairProduct | null>(null);
   const [showFilters, setShowFilters] = useState(true);
-  const [cart, setCart] = useState<{ id: number; quantity: number }[]>([]);
+  const { addItem: addToCartStore, getItemCount, openCart, items } = useCart();
+  const [isClient, setIsClient] = useState(false);
 
   // Filters state
   const [filters, setFilters] = useState<Filters>({
@@ -96,18 +98,21 @@ export default function MegaHairCatalog() {
     return filtered;
   }, [allProducts, filters]);
 
-  // Load cart from localStorage
+  // Client-side hydration
   useEffect(() => {
-    const savedCart = localStorage.getItem('megaHairCart');
-    if (savedCart) {
-      setCart(JSON.parse(savedCart));
-    }
+    setIsClient(true);
   }, []);
 
-  // Save cart to localStorage
+  // Cart is now managed by global store
   useEffect(() => {
-    localStorage.setItem('megaHairCart', JSON.stringify(cart));
-  }, [cart]);
+    // Global cart store handles persistence automatically
+  }, [isClient]);
+
+  // Save cart to localStorage
+  // Remove old cart localStorage logic
+  useEffect(() => {
+    // Cart is now managed by global store
+  }, [isClient]);
 
   // Simulate loading
   useEffect(() => {
@@ -135,25 +140,28 @@ export default function MegaHairCatalog() {
   };
 
   const addToCart = (product: MegaHairProduct) => {
-    setCart(prev => {
-      const existing = prev.find(item => item.id === product.id);
-      if (existing) {
-        return prev.map(item =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      }
-      return [...prev, { id: product.id, quantity: 1 }];
+    addToCartStore({
+      productId: product.id.toString(),
+      quantity: 1,
+      product: {
+        id: product.id.toString(),
+        name: product.name,
+        slug: `mega-hair-${product.id}`,
+        price: product.price,
+        images: [{ url: product.image, alt: product.name, isMain: true }],
+        status: 'ACTIVE' as any,
+        quantity: product.inStock ? 999 : 0,
+      },
     });
+    openCart();
   };
 
   const getCartItemCount = () => {
-    return cart.reduce((sum, item) => sum + item.quantity, 0);
+    return getItemCount();
   };
 
   const isInCart = (productId: number) => {
-    return cart.some(item => item.id === productId);
+    return items.some(item => item.productId === productId.toString());
   };
 
   const formatPrice = (price: number) => {
@@ -170,7 +178,7 @@ export default function MegaHairCatalog() {
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-rose-200 border-t-rose-600 rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600 font-light">Carregando catálogo premium...</p>
+          <p className="text-gray-600 font-light">Carregando catálogo...</p>
         </div>
       </div>
     );
@@ -178,7 +186,7 @@ export default function MegaHairCatalog() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Enhanced Header */}
+      {/* Simple Header */}
       <section className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
@@ -187,7 +195,7 @@ export default function MegaHairCatalog() {
               animate={{ opacity: 1, y: 0 }}
               className="text-6xl font-thin mb-6 tracking-wide"
             >
-              Catálogo <span className="font-light text-rose-400">Mega Hair Premium</span>
+              Catálogo <span className="font-light text-rose-400">Mega Hair</span>
             </motion.h1>
             <div className="w-32 h-1 bg-gradient-to-r from-rose-400 to-rose-600 mx-auto mb-8 rounded-full"></div>
             <motion.p
@@ -196,7 +204,7 @@ export default function MegaHairCatalog() {
               transition={{ delay: 0.2 }}
               className="text-xl text-gray-300 font-light leading-relaxed mb-8"
             >
-              {allProducts.length} produtos premium selecionados • Cabelos 100% naturais importados •
+              {allProducts.length} produtos selecionados • Cabelos 100% naturais •
               Entrega em toda Europa
             </motion.p>
             <motion.div
@@ -251,7 +259,7 @@ export default function MegaHairCatalog() {
 
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex gap-8">
-          {/* Enhanced Filter Sidebar */}
+          {/* Filter Sidebar */}
           <AnimatePresence>
             {showFilters && (
               <motion.div
@@ -426,6 +434,7 @@ export default function MegaHairCatalog() {
                           alt={product.name}
                           fill
                           className="object-cover group-hover:scale-110 transition-transform duration-500"
+                          loading="lazy"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
                             target.src = 'https://via.placeholder.com/400x300/f3f4f6/9ca3af?text=Mega+Hair';
@@ -507,7 +516,7 @@ export default function MegaHairCatalog() {
         </div>
       </div>
 
-      {/* Enhanced Product Detail Modal */}
+      {/* Product Detail Modal */}
       <AnimatePresence>
         {selectedProduct && (
           <motion.div
@@ -543,22 +552,18 @@ export default function MegaHairCatalog() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div className="relative h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden">
+                  <div className="relative h-96 rounded-lg overflow-hidden">
                     <Image
                       src={selectedProduct.image}
                       alt={selectedProduct.name}
                       fill
                       className="object-cover"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = 'https://via.placeholder.com/600x400/f3f4f6/9ca3af?text=Mega+Hair';
-                      }}
                     />
                   </div>
 
                   <div className="space-y-6">
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-3">Especificações Detalhadas</h3>
+                      <h3 className="font-semibold text-gray-900 mb-3">Especificações</h3>
                       <div className="space-y-3 text-sm text-gray-600">
                         <div className="flex justify-between py-2 border-b">
                           <span>Comprimento:</span>
@@ -615,27 +620,25 @@ export default function MegaHairCatalog() {
                         </div>
                       </div>
 
-                      <div className="space-y-3">
-                        <button
-                          onClick={() => {
-                            addToCart(selectedProduct);
-                            setSelectedProduct(null);
-                          }}
-                          disabled={!selectedProduct.inStock}
-                          className={`w-full py-4 rounded-lg font-medium text-lg transition-all ${
-                            selectedProduct.inStock
-                              ? 'bg-rose-600 text-white hover:bg-rose-700'
-                              : 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                          }`}
-                        >
-                          {selectedProduct.inStock ? 'Adicionar ao Carrinho' : 'Produto Indisponível'}
-                        </button>
+                      <button
+                        onClick={() => {
+                          addToCart(selectedProduct);
+                          setSelectedProduct(null);
+                        }}
+                        disabled={!selectedProduct.inStock}
+                        className={`w-full py-4 rounded-lg font-medium text-lg transition-all ${
+                          selectedProduct.inStock
+                            ? 'bg-rose-600 text-white hover:bg-rose-700'
+                            : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                        }`}
+                      >
+                        {selectedProduct.inStock ? 'Adicionar ao Carrinho' : 'Produto Indisponível'}
+                      </button>
 
-                        <div className="text-xs text-gray-500 text-center space-y-1">
-                          <p>• Entrega em 5-10 dias úteis para toda Europa</p>
-                          <p>• Frete grátis para pedidos acima de €500</p>
-                          <p>• Garantia de qualidade de 30 dias</p>
-                        </div>
+                      <div className="text-xs text-gray-500 text-center space-y-1 mt-4">
+                        <p>• Entrega em 5-10 dias úteis para toda Europa</p>
+                        <p>• Frete grátis para pedidos acima de €500</p>
+                        <p>• Garantia de qualidade de 30 dias</p>
                       </div>
                     </div>
                   </div>

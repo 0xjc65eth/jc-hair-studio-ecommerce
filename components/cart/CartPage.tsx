@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useCart } from '../../lib/stores/unifiedCartStore';
+import { useCart } from '../../lib/stores/cartStore';
 import { Button } from '../ui';
 import { 
   ArrowLeft, 

@@ -128,13 +128,6 @@ export const LazyCompareButton = dynamic(
   }
 )
 
-export const LazyNewsletterPopup = dynamic(
-  () => import('../catalogo/NewsletterPopup'),
-  {
-    loading: () => null,
-    ssr: false
-  }
-)
 
 // HOC for lazy loading with intersection observer
 export function withLazyLoading<T extends object>(

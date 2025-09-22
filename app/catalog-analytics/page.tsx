@@ -1,8 +1,3 @@
-'use client';
-
-import React from 'react';
-import ProductCatalogDisplay from '@/components/catalog/ProductCatalogDisplay';
-
 export default function CatalogAnalyticsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -12,14 +7,9 @@ export default function CatalogAnalyticsPage() {
             📊 JC Hair Studio - Analytics do Catálogo
           </h1>
           <p className="text-lg text-gray-600">
-            Análise completa dos produtos organizados por categorias
+            Página temporariamente desabilitada - estrutura de dados sendo atualizada
           </p>
         </div>
-
-        <ProductCatalogDisplay
-          showSummary={true}
-          showAnalysis={true}
-        />
       </div>
     </div>
   );

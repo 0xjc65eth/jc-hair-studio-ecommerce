@@ -4,7 +4,6 @@
 export { default as FiltrosSistema } from './FiltrosSistema';
 export { default as PorQueComprar } from './PorQueComprar';
 export { default as WhatsAppButton } from './WhatsAppButton';
-export { default as NewsletterPopup } from './NewsletterPopup';
 export { default as WishlistButton } from './WishlistButton';
 export { default as CompareButton, CompareBar } from './CompareButton';
 export { default as SocialProof } from './SocialProof';
@@ -26,5 +25,4 @@ export type {
   ProductComparison,
   ReviewWithPhotos,
   ShippingCalculation,
-  NewsletterSubscription
 } from '../../types/product';
