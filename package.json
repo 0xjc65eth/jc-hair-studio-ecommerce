@@ -40,7 +40,7 @@
     "test:performance": "node tests/performance-test.mjs",
     "test:performance:headless": "TEST_HEADLESS=true node tests/performance-test.mjs",
     "test:all": "npm run test:pipeline && npm run test:accessibility:headless && npm run test:performance:headless",
-    "prepare": "husky",
+    "prepare": "node -e \"try{require('husky')}catch(e){process.exit(0)}\" && husky || true",
     "seed:mongodb": "tsx scripts/seed-mongodb.ts",
     "analyze": "ANALYZE=true next build",
     "postinstall": "prisma generate",
