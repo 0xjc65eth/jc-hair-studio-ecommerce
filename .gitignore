@@ -87,3 +87,4 @@ build.log
 *_converted.json
 download_*.txt
 drive_urls_*
+.vercel

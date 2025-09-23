@@ -501,6 +501,50 @@ export default function AdminPanel() {
     }
   };
 
+  // Missing function implementations
+  const fetchAnalyticsData = async () => {
+    try {
+      console.log('📊 Fetching analytics data...');
+      // Placeholder for analytics data fetching
+      setAnalyticsData({
+        conversionFunnel: [],
+        customerLifetimeValue: 0,
+        topProducts: [],
+        revenueByChannel: [],
+        geographicDistribution: [],
+        customerSegments: [],
+        orderFrequency: [],
+        averageOrderValue: 0,
+        customerRetentionRate: 0,
+        monthlyRecurringRevenue: 0
+      });
+    } catch (error) {
+      console.error('❌ Error fetching analytics data:', error);
+    }
+  };
+
+  const setupRealTimeUpdates = () => {
+    try {
+      console.log('🔄 Setting up real-time updates...');
+      // Placeholder for real-time update setup
+      setLastUpdate(new Date());
+    } catch (error) {
+      console.error('❌ Error setting up real-time updates:', error);
+    }
+  };
+
+  const syncOfflineChanges = async () => {
+    try {
+      console.log('🔄 Syncing offline changes...');
+      // Placeholder for offline sync
+      await fetchDashboardData();
+      await fetchOrders();
+      await fetchNotifications();
+    } catch (error) {
+      console.error('❌ Error syncing offline changes:', error);
+    }
+  };
+
   const tabs = [
     { id: 'dashboard', name: 'Dashboard', icon: BarChart3, description: 'Visão geral e métricas' },
     { id: 'orders', name: 'Pedidos', icon: ShoppingCart, description: 'Gestão completa de pedidos' },

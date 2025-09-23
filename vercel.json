@@ -1,8 +1,9 @@
 {
+  "version": 2,
   "buildCommand": "npm run build:safe",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "installCommand": "npm install --legacy-peer-deps && npm run postinstall || true",
+  "installCommand": "npm install --legacy-peer-deps",
   "regions": ["gru1"],
   "functions": {
     "app/api/*/route.ts": {
