@@ -12,6 +12,14 @@ export const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code",
+          scope: "openid email profile https://www.googleapis.com/auth/gmail.send"
+        }
+      }
     }),
     TwitterProvider({
       clientId: process.env.TWITTER_CLIENT_ID!,
@@ -73,17 +81,44 @@ export const authOptions: NextAuthOptions = {
     signUp: "/auth/signup",
   },
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user, account }) {
       if (user) {
         token.id = user.id
+      }
+      if (account) {
+        token.accessToken = account.access_token
+        token.refreshToken = account.refresh_token
       }
       return token
     },
     async session({ session, token }) {
       if (token) {
         session.user.id = token.id as string
+        session.accessToken = token.accessToken as string
       }
       return session
     },
+    async signIn({ user, account, profile }) {
+      if (account?.provider === "google") {
+        // Marcar email como verificado para usuários Google
+        if (user.email && profile?.email_verified) {
+          await prisma.user.update({
+            where: { email: user.email },
+            data: {
+              emailVerified: new Date(),
+              isVerified: true,
+              image: profile.picture
+            }
+          })
+        }
+      }
+      return true
+    },
+    async redirect({ url, baseUrl }) {
+      // Redirecionamentos inteligentes
+      if (url.startsWith("/")) return `${baseUrl}${url}`
+      else if (new URL(url).origin === baseUrl) return url
+      return `${baseUrl}/conta`
+    }
   },
 }

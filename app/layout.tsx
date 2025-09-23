@@ -4,6 +4,7 @@ import { Header, Footer } from '../components/layout';
 import CookieBanner from '../components/layout/CookieBanner';
 import { ToastProvider } from '../lib/providers/ToastProvider';
 import { AuthProvider } from '../lib/providers/auth-provider';
+import { CartInitializer } from '@/lib/providers/CartProvider';
 import '../styles/globals.css';
 import '../styles/components.css';
 
@@ -179,18 +180,20 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
         {/* Main App Structure */}
         <AuthProvider>
-          <div className="min-h-screen flex flex-col">
-            {/* Header */}
-            <Header />
+          <CartInitializer>
+            <div className="min-h-screen flex flex-col">
+              {/* Header */}
+              <Header />
 
-            {/* Main Content */}
-            <main id="main-content" className="flex-1 pt-16 lg:pt-20">
-              {children}
-            </main>
+              {/* Main Content */}
+              <main id="main-content" className="flex-1 pt-16 lg:pt-20">
+                {children}
+              </main>
 
-            {/* Footer */}
-            <Footer />
-          </div>
+              {/* Footer */}
+              <Footer />
+            </div>
+          </CartInitializer>
         </AuthProvider>
 
         {/* Global Loading Indicator */}

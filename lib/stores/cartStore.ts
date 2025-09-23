@@ -1,10 +1,10 @@
 /**
  * Shopping Cart Store - Zustand
- * JC Hair Studio's 62's 62 E-commerce
+ * JC Hair Studio's 62 E-commerce
  */
 
+import { useEffect } from 'react';
 import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
 import { CartItem, Cart } from '../../types/product';
 
 interface CartState extends Cart {
@@ -43,180 +43,247 @@ const generateCartItemId = (productId: string, variantId?: string): string => {
   return variantId ? `${productId}-${variantId}` : productId;
 };
 
-export const useCartStore = create<CartState>()(
-  persist(
-    (set, get) => ({
-      // Initial state
+// LocalStorage helpers
+const CART_STORAGE_KEY = 'jc-cart-storage-manual';
+
+const saveToStorage = (items: CartItem[]) => {
+  if (typeof window !== 'undefined') {
+    try {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
+    } catch (error) {
+      console.warn('Failed to save cart:', error);
+    }
+  }
+};
+
+const loadFromStorage = (): CartItem[] => {
+  if (typeof window !== 'undefined') {
+    try {
+      const stored = localStorage.getItem(CART_STORAGE_KEY);
+      return stored ? JSON.parse(stored) : [];
+    } catch (error) {
+      console.warn('Failed to load cart:', error);
+    }
+  }
+  return [];
+};
+
+export const useCartStore = create<CartState>((set, get) => ({
+  // Initial state
+  items: [],
+  subtotal: 0,
+  itemsCount: 0,
+  isEmpty: true,
+  isOpen: false,
+
+  // Actions
+  addItem: (newItem) => {
+    const state = get();
+    const itemId = generateCartItemId(newItem.productId, newItem.variantId);
+
+    // Check if item already exists
+    const existingItemIndex = state.items.findIndex(item => item.id === itemId);
+
+    let updatedItems: CartItem[];
+
+    if (existingItemIndex >= 0) {
+      // Update quantity of existing item
+      updatedItems = state.items.map((item, index) =>
+        index === existingItemIndex
+          ? { ...item, quantity: item.quantity + newItem.quantity }
+          : item
+      );
+    } else {
+      // Add new item
+      const cartItem: CartItem = {
+        ...newItem,
+        id: itemId,
+      };
+      updatedItems = [...state.items, cartItem];
+    }
+
+    const subtotal = calculateSubtotal(updatedItems);
+    const itemsCount = updatedItems.reduce((count, item) => count + item.quantity, 0);
+
+    // Save to localStorage
+    saveToStorage(updatedItems);
+
+    set({
+      items: updatedItems,
+      subtotal,
+      itemsCount,
+      isEmpty: updatedItems.length === 0,
+    });
+  },
+
+  removeItem: (itemId) => {
+    const state = get();
+    const updatedItems = state.items.filter(item => item.id !== itemId);
+    const subtotal = calculateSubtotal(updatedItems);
+    const itemsCount = updatedItems.reduce((count, item) => count + item.quantity, 0);
+
+    // Save to localStorage
+    saveToStorage(updatedItems);
+
+    set({
+      items: updatedItems,
+      subtotal,
+      itemsCount,
+      isEmpty: updatedItems.length === 0,
+    });
+  },
+
+  updateQuantity: (itemId, quantity) => {
+    if (quantity <= 0) {
+      get().removeItem(itemId);
+      return;
+    }
+
+    const state = get();
+    const updatedItems = state.items.map(item =>
+      item.id === itemId ? { ...item, quantity } : item
+    );
+
+    const subtotal = calculateSubtotal(updatedItems);
+    const itemsCount = updatedItems.reduce((count, item) => count + item.quantity, 0);
+
+    // Save to localStorage
+    saveToStorage(updatedItems);
+
+    set({
+      items: updatedItems,
+      subtotal,
+      itemsCount,
+      isEmpty: updatedItems.length === 0,
+    });
+  },
+
+  clearCart: () => {
+    // Save to localStorage
+    saveToStorage([]);
+
+    set({
       items: [],
       subtotal: 0,
       itemsCount: 0,
       isEmpty: true,
-      isOpen: false,
+    });
+  },
 
-      // Actions
-      addItem: (newItem) => {
-        const state = get();
-        const itemId = generateCartItemId(newItem.productId, newItem.variantId);
-        
-        // Check if item already exists
-        const existingItemIndex = state.items.findIndex(item => item.id === itemId);
-        
-        let updatedItems: CartItem[];
-        
-        if (existingItemIndex >= 0) {
-          // Update quantity of existing item
-          updatedItems = state.items.map((item, index) => 
-            index === existingItemIndex 
-              ? { ...item, quantity: item.quantity + newItem.quantity }
-              : item
-          );
-        } else {
-          // Add new item
-          const cartItem: CartItem = {
-            ...newItem,
-            id: itemId,
-          };
-          updatedItems = [...state.items, cartItem];
-        }
+  openCart: () => {
+    set({ isOpen: true });
+  },
 
-        const subtotal = calculateSubtotal(updatedItems);
-        const itemsCount = updatedItems.reduce((count, item) => count + item.quantity, 0);
+  closeCart: () => {
+    set({ isOpen: false });
+  },
 
-        set({
-          items: updatedItems,
-          subtotal,
-          itemsCount,
-          isEmpty: updatedItems.length === 0,
-        });
-      },
+  toggleCart: () => {
+    const state = get();
+    set({ isOpen: !state.isOpen });
+  },
 
-      removeItem: (itemId) => {
-        const state = get();
-        const updatedItems = state.items.filter(item => item.id !== itemId);
-        const subtotal = calculateSubtotal(updatedItems);
-        const itemsCount = updatedItems.reduce((count, item) => count + item.quantity, 0);
+  // Computed values
+  getItemCount: () => {
+    const state = get();
+    return state.items.reduce((count, item) => count + item.quantity, 0);
+  },
 
-        set({
-          items: updatedItems,
-          subtotal,
-          itemsCount,
-          isEmpty: updatedItems.length === 0,
-        });
-      },
+  getSubtotal: () => {
+    const state = get();
+    return calculateSubtotal(state.items);
+  },
 
-      updateQuantity: (itemId, quantity) => {
-        if (quantity <= 0) {
-          get().removeItem(itemId);
-          return;
-        }
+  getTaxAmount: (taxRate = 0.23) => { // 23% IVA padrão em Portugal
+    const subtotal = get().getSubtotal();
+    return subtotal * taxRate;
+  },
 
-        const state = get();
-        const updatedItems = state.items.map(item =>
-          item.id === itemId ? { ...item, quantity } : item
-        );
+  getTotal: (taxRate = 0.23) => {
+    const subtotal = get().getSubtotal();
+    const tax = get().getTaxAmount(taxRate);
+    return subtotal + tax;
+  },
 
-        const subtotal = calculateSubtotal(updatedItems);
-        const itemsCount = updatedItems.reduce((count, item) => count + item.quantity, 0);
+  getTotalItems: () => {
+    const state = get();
+    return state.items.reduce((count, item) => count + item.quantity, 0);
+  },
 
-        set({
-          items: updatedItems,
-          subtotal,
-          itemsCount,
-          isEmpty: updatedItems.length === 0,
-        });
-      },
+  // Utils
+  isInCart: (productId, variantId) => {
+    const state = get();
+    const itemId = generateCartItemId(productId, variantId);
+    return state.items.some(item => item.id === itemId);
+  },
 
-      clearCart: () => {
-        set({
-          items: [],
-          subtotal: 0,
-          itemsCount: 0,
-          isEmpty: true,
-        });
-      },
+  getCartItem: (productId, variantId) => {
+    const state = get();
+    const itemId = generateCartItemId(productId, variantId);
+    return state.items.find(item => item.id === itemId);
+  },
+}));
 
-      openCart: () => {
-        set({ isOpen: true });
-      },
+// Global flag to prevent multiple initializations
+let cartInitialized = false;
 
-      closeCart: () => {
-        set({ isOpen: false });
-      },
+// Hook to initialize cart from localStorage
+export const useCartInitializer = () => {
+  const { items } = useCartStore();
 
-      toggleCart: () => {
-        const state = get();
-        set({ isOpen: !state.isOpen });
-      },
-
-      // Computed values
-      getItemCount: () => {
-        const state = get();
-        return state.items.reduce((count, item) => count + item.quantity, 0);
-      },
-
-      getSubtotal: () => {
-        const state = get();
-        return calculateSubtotal(state.items);
-      },
-
-      getTaxAmount: (taxRate = 0.23) => { // 23% IVA padrão em Portugal
-        const subtotal = get().getSubtotal();
-        return subtotal * taxRate;
-      },
-
-      getTotal: (taxRate = 0.23) => {
-        const subtotal = get().getSubtotal();
-        const tax = get().getTaxAmount(taxRate);
-        return subtotal + tax;
-      },
-
-      getTotalItems: () => {
-        const state = get();
-        return state.items.reduce((count, item) => count + item.quantity, 0);
-      },
-
-      // Utils
-      isInCart: (productId, variantId) => {
-        const state = get();
-        const itemId = generateCartItemId(productId, variantId);
-        return state.items.some(item => item.id === itemId);
-      },
-
-      getCartItem: (productId, variantId) => {
-        const state = get();
-        const itemId = generateCartItemId(productId, variantId);
-        return state.items.find(item => item.id === itemId);
-      },
-    }),
-    {
-      name: 'jc-cart-storage', // unique name for localStorage key
-      storage: createJSONStorage(() => localStorage),
-      partialize: (state) => ({
-        items: state.items,
-        subtotal: state.subtotal,
-        itemsCount: state.itemsCount,
-        isEmpty: state.isEmpty,
-        isOpen: state.isOpen,
-      }),
-      onRehydrateStorage: () => (state) => {
-        if (state) {
-          // Recalculate values after rehydration
-          const subtotal = calculateSubtotal(state.items);
-          const itemsCount = state.items.reduce((count, item) => count + item.quantity, 0);
-          
-          state.subtotal = subtotal;
-          state.itemsCount = itemsCount;
-          state.isEmpty = state.items.length === 0;
-        }
-      },
+  // Load from localStorage on first render - use useEffect for proper timing
+  useEffect(() => {
+    // Prevent multiple initializations
+    if (cartInitialized || typeof window === 'undefined') {
+      return;
     }
-  )
-);
+
+    const savedItems = loadFromStorage();
+    console.log('🔍 CART INITIALIZER DEBUG:', {
+      savedItemsLength: savedItems.length,
+      savedItems
+    });
+
+    if (savedItems.length > 0) {
+      const subtotal = calculateSubtotal(savedItems);
+      const itemsCount = savedItems.reduce((count, item) => count + item.quantity, 0);
+
+      // Only update if current items are empty to avoid overwriting
+      const currentItems = useCartStore.getState().items;
+      console.log('🔄 UPDATING CART STATE:', {
+        currentItemsLength: currentItems.length,
+        newItemsLength: savedItems.length,
+        newSubtotal: subtotal,
+        newItemsCount: itemsCount
+      });
+
+      if (currentItems.length === 0) {
+        useCartStore.setState({
+          items: savedItems,
+          subtotal,
+          itemsCount,
+          isEmpty: false,
+        });
+        console.log('✅ CART STATE UPDATED FROM LOCALSTORAGE');
+      } else {
+        console.log('⚠️ CART ALREADY HAS ITEMS, SKIPPING UPDATE');
+      }
+    } else {
+      console.log('📭 NO SAVED ITEMS IN LOCALSTORAGE');
+    }
+
+    // Mark as initialized
+    cartInitialized = true;
+  }, []); // Run only once on mount
+};
 
 // Utility hook for cart operations
 export const useCart = () => {
   const store = useCartStore();
-  
+
+  // Don't initialize here since CartProvider already does it
+  // This prevents double initialization and race conditions
+
   return {
     // State
     items: store.items,

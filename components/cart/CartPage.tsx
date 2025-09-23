@@ -30,14 +30,50 @@ export default function CartPage() {
   } = useCart();
 
   const [mounted, setMounted] = useState(false);
+  const [cartInitialized, setCartInitialized] = useState(false);
   const [couponCode, setCouponCode] = useState('');
 
+  // Cart initialization effect - wait for localStorage to load before checking if empty
   useEffect(() => {
     setMounted(true);
+
+    // Allow time for cart to initialize from localStorage
+    const initTimer = setTimeout(() => {
+      setCartInitialized(true);
+    }, 100); // Small delay to ensure localStorage has been read
+
+    return () => clearTimeout(initTimer);
   }, []);
+
+  // Additional effect to handle cart state changes and ensure proper initialization
+  useEffect(() => {
+    if (mounted && items.length > 0) {
+      // If we have items, cart is definitely initialized
+      setCartInitialized(true);
+    }
+  }, [mounted, items]);
 
   // Don't render until mounted to avoid hydration issues
   if (!mounted) return null;
+
+  // Show loading while cart is initializing - prevent race condition
+  if (!cartInitialized) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container-custom text-center">
+          <div className="max-w-md mx-auto">
+            <div className="w-8 h-8 border-2 border-amber-600 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+            <h1 className="text-2xl font-playfair font-light mb-4 text-gray-900">
+              Carregando Carrinho...
+            </h1>
+            <p className="text-gray-600">
+              Verificando seus produtos...
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const taxAmount = getTaxAmount();
   const total = getTotal();
@@ -46,7 +82,8 @@ export default function CartPage() {
   const shippingCost = freeShipping ? 0 : 5.99;
   const finalTotal = total + shippingCost;
 
-  if (isEmpty) {
+  // Only show empty cart message if cart is empty AND we know it's been properly initialized
+  if (isEmpty && cartInitialized) {
     return (
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="container-custom text-center">

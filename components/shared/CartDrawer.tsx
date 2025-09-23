@@ -109,13 +109,17 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                 const itemTotal = itemPrice * item.quantity;
 
                 return (
-                  <div key={item.id} className="flex gap-4 p-4 border border-gray-100 rounded-none">
+                  <div key={item.id} className="flex gap-4 p-4 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     {/* Product Image */}
-                    <div className="relative w-16 h-16 flex-shrink-0 bg-gray-100">
+                    <div className="relative w-20 h-20 flex-shrink-0 bg-gray-100 rounded-lg overflow-hidden">
                       {mainImage ? (
-                        <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                          <span className="text-xs text-gray-500">Produto</span>
-                        </div>
+                        <Image
+                          src={mainImage.url}
+                          alt={mainImage.alt}
+                          fill
+                          className="object-cover"
+                          sizes="80px"
+                        />
                       ) : (
                         <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                           <span className="text-xs text-gray-500">Sem Img</span>
@@ -137,22 +141,22 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
 
                       <div className="flex items-center justify-between">
                         {/* Quantity Controls */}
-                        <div className="flex items-center border border-gray-200 rounded-none">
+                        <div className="flex items-center border border-gray-300 rounded-lg bg-gray-50">
                           <button
                             onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                            className="p-1 hover:bg-gray-50 transition-colors"
+                            className="p-2 hover:bg-gray-100 transition-colors rounded-l-lg disabled:opacity-50"
                             disabled={item.quantity <= 1}
                           >
-                            <Minus className="w-3 h-3" />
+                            <Minus className="w-3 h-3 text-gray-600" />
                           </button>
-                          <span className="px-3 py-1 text-sm font-medium min-w-[2rem] text-center">
+                          <span className="px-3 py-2 text-sm font-medium min-w-[2.5rem] text-center bg-white">
                             {item.quantity}
                           </span>
                           <button
                             onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                            className="p-1 hover:bg-gray-50 transition-colors"
+                            className="p-2 hover:bg-gray-100 transition-colors rounded-r-lg"
                           >
-                            <Plus className="w-3 h-3" />
+                            <Plus className="w-3 h-3 text-gray-600" />
                           </button>
                         </div>
 
@@ -199,14 +203,14 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
 
             {/* Actions */}
             <div className="space-y-3">
-              <Link href="/carrinho" onClick={onClose}>
-                <Button variant="outline" fullWidth>
-                  Ver Carrinho
+              <Link href="/checkout" onClick={onClose}>
+                <Button fullWidth className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-3">
+                  🛒 Finalizar Compra - €{total.toFixed(2)}
                 </Button>
               </Link>
-              <Link href="/checkout" onClick={onClose}>
-                <Button fullWidth>
-                  Finalizar Compra
+              <Link href="/carrinho" onClick={onClose}>
+                <Button variant="outline" fullWidth className="border-gray-300 hover:bg-gray-50">
+                  Ver Carrinho Completo
                 </Button>
               </Link>
             </div>

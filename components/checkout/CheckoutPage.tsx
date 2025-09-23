@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useCart } from '@/lib/stores/cartStore';
 import { Button } from '@/components/ui/Button';
 import { countries, getShippingCost } from '@/lib/config/shipping';
+import { StripePayment } from './StripePayment';
 import {
   ArrowLeft,
   CreditCard,
@@ -54,10 +55,15 @@ export default function CheckoutPage() {
     clearCart
   } = useCart();
 
+  // Cart state tracking for checkout - prevent race condition with localStorage loading
   const [mounted, setMounted] = useState(false);
+  const [cartInitialized, setCartInitialized] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
   const [isProcessing, setIsProcessing] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
+  const [paymentIntentId, setPaymentIntentId] = useState<string>('');
+
+  // Debug logs only in development and when there are issues - moved to useEffect to prevent initialization errors
 
   const [customerInfo, setCustomerInfo] = useState<CustomerInfo>({
     name: '',
@@ -77,15 +83,80 @@ export default function CheckoutPage() {
 
   const [selectedPayment, setSelectedPayment] = useState<string>('');
 
+  // Cart initialization effect - DEFINITIVE SOLUTION for race condition
   useEffect(() => {
     setMounted(true);
+
+    // Force immediate check of localStorage on mount
+    const checkCartImmediately = () => {
+      if (typeof window !== 'undefined') {
+        const savedCart = localStorage.getItem('jc-cart-storage-manual');
+        console.log('🔍 IMMEDIATE CHECKOUT CHECK:', {
+          savedCart: savedCart ? JSON.parse(savedCart).length : 0,
+          currentItems: items.length
+        });
+
+        // If we have saved data, give it more time to load
+        if (savedCart && JSON.parse(savedCart).length > 0) {
+          console.log('📦 FOUND SAVED CART - Waiting for store update...');
+          // Give more time for complex cart data
+          setTimeout(() => setCartInitialized(true), 300);
+        } else {
+          console.log('📭 NO SAVED CART - Initialize immediately');
+          // No saved data, safe to initialize immediately
+          setCartInitialized(true);
+        }
+      } else {
+        // Server-side, initialize after hydration
+        setTimeout(() => setCartInitialized(true), 500);
+      }
+    };
+
+    checkCartImmediately();
+  }, []);
+
+  // Additional effect - if items appear, cart is definitely ready
+  useEffect(() => {
+    if (mounted && items.length > 0) {
+      console.log('✅ ITEMS DETECTED - Cart definitely initialized');
+      setCartInitialized(true);
+    }
+  }, [mounted, items]);
+
+  // Failsafe - ensure we don't get stuck in loading forever
+  useEffect(() => {
+    const failsafeTimer = setTimeout(() => {
+      console.log('⏰ FAILSAFE TIMEOUT - Force initializing cart');
+      setCartInitialized(true);
+    }, 2000); // 2 second failsafe
+
+    return () => clearTimeout(failsafeTimer);
   }, []);
 
   // Don't render until mounted to avoid hydration issues
   if (!mounted) return null;
 
-  // Redirect if cart is empty
-  if (isEmpty) {
+  // Show loading while cart is initializing - prevent race condition
+  if (!cartInitialized) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-16">
+        <div className="container-custom text-center">
+          <div className="max-w-md mx-auto">
+            <div className="w-8 h-8 border-2 border-amber-600 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+            <h1 className="text-2xl font-playfair font-light mb-4 text-gray-900">
+              Carregando Carrinho...
+            </h1>
+            <p className="text-gray-600">
+              Verificando seus produtos...
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Only redirect if cart is empty AND we know it's been properly initialized
+  if (isEmpty && cartInitialized) {
     return (
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="container-custom text-center">
@@ -155,10 +226,30 @@ export default function CheckoutPage() {
 
   const validateStep1 = () => {
     const { name, email, phone, address } = customerInfo;
-    return name && email && phone &&
+    const isValid = name && email && phone &&
            address.street && address.number &&
            address.neighborhood && address.city &&
            address.state && address.zipCode;
+
+    // Log validation only when invalid and in development
+    if (process.env.NODE_ENV === 'development' && !isValid) {
+      console.log('📋 FORM VALIDATION:', {
+        isValid,
+        missing: {
+          name: !name,
+          email: !email,
+          phone: !phone,
+          street: !address.street,
+          number: !address.number,
+          neighborhood: !address.neighborhood,
+          city: !address.city,
+          state: !address.state,
+          zipCode: !address.zipCode
+        }
+      });
+    }
+
+    return isValid;
   };
 
   const handleNextStep = () => {
@@ -168,27 +259,189 @@ export default function CheckoutPage() {
   };
 
   const handleProcessOrder = async () => {
+    console.log('🚀 HANDLE PROCESS ORDER - START:', {
+      selectedPayment,
+      items: items.length,
+      isEmpty,
+      currentStep
+    });
+
     if (!selectedPayment) {
+      console.log('⚠️ NO PAYMENT METHOD SELECTED');
       alert('Por favor, selecione uma forma de pagamento');
       return;
     }
+
+    // 🚨 CRITICAL CHECK: Verify cart before processing
+    if (isEmpty || items.length === 0) {
+      console.log('🚨 CRITICAL ERROR: Trying to process empty cart!');
+      const localStorageCheck = localStorage.getItem('jc-cart-storage-manual');
+      console.log('🚨 localStorage content:', localStorageCheck ? JSON.parse(localStorageCheck) : null);
+      alert('Erro: Carrinho vazio. Adicione produtos antes de continuar.');
+      return;
+    }
+
+    // 🔍 DEBUG: Log state before processing
+    console.log('💳 PROCESSING ORDER - BEFORE:', {
+      selectedPayment,
+      itemsLength: items.length,
+      itemsCount,
+      subtotal,
+      isEmpty,
+      cartItems: items.map(item => ({
+        id: item.id,
+        name: item.product.name,
+        quantity: item.quantity,
+        price: item.product.price
+      }))
+    });
 
     setIsProcessing(true);
 
     // Simular processamento do pedido
     try {
+      // 🔍 DEBUG: Log before processing
+      console.log('💳 PROCESSING ORDER - STARTING:', {
+        itemsLength: items.length,
+        localStorageContent: localStorage.getItem('jc-cart-storage-manual')
+      });
+
+      // Simular processamento (MANTER o carrinho durante processamento)
       await new Promise(resolve => setTimeout(resolve, 3000));
 
-      // Simular sucesso
+      // 🔍 DEBUG: Log processing success
+      console.log('✅ ORDER PROCESSED SUCCESSFULLY - Before clearing cart:', {
+        itemsLength: items.length,
+        localStorageContent: localStorage.getItem('jc-cart-storage-manual')
+      });
+
+      // Generate order ID
+      const orderId = `JC-${Date.now().toString().slice(-6)}`;
+
+      // Send order confirmation email
+      try {
+        console.log('📧 Sending order confirmation email...');
+
+        const orderData = {
+          orderId,
+          customerName: customerInfo.name || 'Cliente',
+          customerEmail: customerInfo.email || 'juliocesarurss65@gmail.com',
+          items: items.map(item => ({
+            name: item.product.name,
+            quantity: item.quantity,
+            price: item.variant?.price || item.product.price
+          })),
+          total: finalTotal,
+          paymentMethod: paymentMethods.find(p => p.id === selectedPayment)?.name || 'Não especificado'
+        };
+
+        const emailResponse = await fetch('/api/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            type: 'order-confirmation',
+            data: orderData
+          }),
+        });
+
+        if (emailResponse.ok) {
+          console.log('✅ Order confirmation email sent successfully');
+        } else {
+          console.error('❌ Failed to send order confirmation email');
+        }
+      } catch (emailError) {
+        console.error('❌ Error sending order confirmation email:', emailError);
+      }
+
+      // APENAS limpar carrinho APÓS sucesso confirmado
       setOrderComplete(true);
-      clearCart();
+
+      // Aguardar o estado de pedido completo ser atualizado antes de limpar
+      setTimeout(() => {
+        console.log('🧹 NOW CLEARING CART - After order confirmed:', {
+          itemsLength: items.length,
+          localStorageContent: localStorage.getItem('jc-cart-storage-manual')
+        });
+
+        clearCart();
+
+        console.log('✅ CART CLEARED - AFTER successful order:', {
+          newLocalStorageContent: localStorage.getItem('jc-cart-storage-manual')
+        });
+      }, 500); // Aguardar meio segundo para garantir que o estado foi atualizado
 
     } catch (error) {
-      console.error('Erro ao processar pedido:', error);
+      console.error('❌ Erro ao processar pedido:', error);
       alert('Erro ao processar pedido. Tente novamente.');
     } finally {
       setIsProcessing(false);
     }
+  };
+
+  // Handlers para o pagamento real com Stripe
+  const handlePaymentSuccess = async (paymentIntentId: string) => {
+    console.log('💳 Payment successful:', paymentIntentId);
+
+    setPaymentIntentId(paymentIntentId);
+    setIsProcessing(true);
+
+    try {
+      // Gerar ID do pedido
+      const orderId = `JC-${Date.now().toString().slice(-6)}`;
+
+      // Enviar email de confirmação
+      const orderData = {
+        orderId,
+        customerName: customerInfo.name || 'Cliente',
+        customerEmail: customerInfo.email || 'juliocesarurss65@gmail.com',
+        items: items.map(item => ({
+          name: item.product.name,
+          quantity: item.quantity,
+          price: item.variant?.price || item.product.price
+        })),
+        total: finalTotal,
+        paymentMethod: 'Cartão de Crédito (Stripe)',
+        paymentIntentId
+      };
+
+      const emailResponse = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'order-confirmation',
+          data: orderData
+        }),
+      });
+
+      if (emailResponse.ok) {
+        console.log('✅ Order confirmation email sent successfully');
+      } else {
+        console.error('❌ Failed to send order confirmation email');
+      }
+
+      // Marcar pedido como completo
+      setOrderComplete(true);
+
+      // Limpar carrinho após um delay
+      setTimeout(() => {
+        clearCart();
+        console.log('✅ CART CLEARED - AFTER successful payment');
+      }, 500);
+
+    } catch (error) {
+      console.error('❌ Error processing order after payment:', error);
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  const handlePaymentError = (error: string) => {
+    console.error('💳 Payment failed:', error);
+    alert(`Erro no pagamento: ${error}`);
   };
 
   if (orderComplete) {
@@ -206,6 +459,9 @@ export default function CheckoutPage() {
             <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">
               <h3 className="font-medium text-gray-900 mb-2">Número do Pedido</h3>
               <p className="text-2xl font-bold text-amber-600">#JC-{Date.now().toString().slice(-6)}</p>
+              <p className="text-sm text-gray-500 mt-2">
+                Um email de confirmação foi enviado para {customerInfo.email || 'juliocesarurss65@gmail.com'}
+              </p>
             </div>
             <div className="space-y-3">
               <Link href="/produtos">
@@ -463,58 +719,33 @@ export default function CheckoutPage() {
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
                   <h2 className="text-xl font-playfair font-medium mb-6 flex items-center gap-2">
                     <CreditCard className="w-5 h-5" />
-                    Forma de Pagamento
+                    Pagamento Seguro
                   </h2>
 
-                  <div className="space-y-4 mb-6">
-                    {paymentMethods.map((method) => (
-                      <div
-                        key={method.id}
-                        className={`border-2 rounded-lg p-4 cursor-pointer transition-colors ${
-                          selectedPayment === method.id
-                            ? 'border-amber-500 bg-amber-50'
-                            : 'border-gray-200 hover:border-gray-300'
-                        }`}
-                        onClick={() => setSelectedPayment(method.id)}
-                      >
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <method.icon className="w-6 h-6 text-gray-600" />
-                            <div>
-                              <h3 className="font-medium text-gray-900">{method.name}</h3>
-                              <p className="text-sm text-gray-600">{method.description}</p>
-                            </div>
-                          </div>
-                          <div className={`w-4 h-4 rounded-full border-2 ${
-                            selectedPayment === method.id
-                              ? 'border-amber-500 bg-amber-500'
-                              : 'border-gray-300'
-                          }`}>
-                            {selectedPayment === method.id && (
-                              <div className="w-full h-full rounded-full bg-white scale-50"></div>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  <StripePayment
+                    amount={finalTotal}
+                    currency="eur"
+                    customerInfo={{
+                      name: customerInfo.name,
+                      email: customerInfo.email,
+                      phone: customerInfo.phone,
+                    }}
+                    items={items.map(item => ({
+                      name: item.product.name,
+                      quantity: item.quantity,
+                      price: item.variant?.price || item.product.price,
+                    }))}
+                    onSuccess={handlePaymentSuccess}
+                    onError={handlePaymentError}
+                  />
 
-                  <div className="flex gap-4">
+                  <div className="mt-6">
                     <Button
                       variant="outline"
                       onClick={() => setCurrentStep(1)}
-                      className="flex-1"
+                      className="w-full"
                     >
-                      Voltar
-                    </Button>
-                    <Button
-                      onClick={handleProcessOrder}
-                      disabled={!selectedPayment || isProcessing}
-                      size="lg"
-                      className="flex-1"
-                      isLoading={isProcessing}
-                    >
-                      {isProcessing ? 'Processando...' : 'Finalizar Pedido'}
+                      ← Voltar para Dados Pessoais
                     </Button>
                   </div>
                 </div>

@@ -114,13 +114,33 @@ export default function MegaHairCatalog() {
     // Cart is now managed by global store
   }, [isClient]);
 
-  // Simulate loading
+  // Simulate loading - ensure loading state is properly handled
   useEffect(() => {
+    // Set loading to false after component mounts and client-side hydration is complete
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1500);
-    return () => clearTimeout(timer);
+
+    // Fallback: Force loading to false after maximum wait time to prevent stuck loading
+    const fallbackTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(fallbackTimer);
+    };
   }, []);
+
+  // Additional safety check - ensure loading state resets if component re-mounts
+  useEffect(() => {
+    if (isClient && isLoading) {
+      const emergencyTimer = setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
+      return () => clearTimeout(emergencyTimer);
+    }
+  }, [isClient, isLoading]);
 
   const handleFilterChange = (filterType: keyof Filters, value: string | boolean) => {
     setFilters(prev => ({

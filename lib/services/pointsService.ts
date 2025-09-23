@@ -45,6 +45,8 @@ export interface PointsTransactionData {
 }
 
 export class PointsService {
+  static POINTS_CONFIG = POINTS_CONFIG;
+
   // Adicionar pontos a um usuário
   static async addPoints(data: PointsTransactionData) {
     try {
@@ -324,10 +326,15 @@ export class PointsService {
   // Buscar recompensas disponíveis
   static async getAvailableRewards(tierLevel: string) {
     try {
+      // Get tier hierarchy level for comparison
+      const tierLevels = ['BRONZE', 'SILVER', 'GOLD', 'PLATINUM', 'DIAMOND'];
+      const userTierIndex = tierLevels.indexOf(tierLevel);
+      const allowedTiers = tierLevels.slice(0, userTierIndex + 1);
+
       const rewards = await prisma.pointsReward.findMany({
         where: {
           isActive: true,
-          minTierLevel: { lte: tierLevel },
+          minTierLevel: { in: allowedTiers },
           validFrom: { lte: new Date() },
           OR: [
             { validTo: null },
@@ -355,9 +362,6 @@ export class PointsService {
             { expiresAt: null },
             { expiresAt: { gte: new Date() } }
           ]
-        },
-        include: {
-          reward: true
         },
         orderBy: { createdAt: 'desc' }
       });

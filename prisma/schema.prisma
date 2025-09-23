@@ -66,7 +66,11 @@ model User {
   reviewIds    String[] @db.ObjectId
   wishlistIds  String[] @db.ObjectId
   cartItemIds  String[] @db.ObjectId
-  
+
+  // NextAuth relations
+  accounts Account[]
+  sessions Session[]
+
   @@map("users")
 }
 
@@ -883,6 +887,8 @@ model Account {
   id_token          String? @db.String
   session_state     String?
 
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@unique([provider, providerAccountId])
   @@map("accounts")
 }
@@ -892,6 +898,8 @@ model Session {
   sessionToken String   @unique
   userId       String   @db.ObjectId
   expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("sessions")
 }

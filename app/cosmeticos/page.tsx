@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Button } from '../../components/ui/Button';
 import ProductCard from '../../components/products/ProductCard';
+import { useCart } from '../../lib/stores/cartStore'; // Import cart store for shopping cart functionality
 import { ShoppingBag, Search, Filter, Heart, Eye, Shuffle, Grid, List, Palette, Sparkles } from 'lucide-react';
 
 // Função para gerar dados das tintas com numeração sequencial
@@ -250,6 +251,44 @@ export default function TintasPage() {
   const [sortBy, setSortBy] = useState('name');
   const [viewMode, setViewMode] = useState('grid');
   const [wishlistIds, setWishlistIds] = useState([]);
+
+  // Cart functionality - Initialize cart store and actions
+  const { addItem, openCart } = useCart();
+
+  /**
+   * Add product to shopping cart
+   * Converts the product data format to match cart item structure
+   * Opens cart drawer after successful addition for immediate user feedback
+   * @param {Object} product - Product object from tintasCapilares array
+   */
+  const handleAddToCart = (product) => {
+    // Convert product format to cart item format
+    const cartItem = {
+      productId: product.id,
+      product: {
+        id: product.id,
+        name: product.nome,
+        price: product.pricing.discountPrice, // Use discounted price
+        images: [
+          {
+            url: product.imagem,
+            alt: product.nome,
+            isMain: true
+          }
+        ],
+        category: product.categoria,
+        description: product.descricao
+      },
+      quantity: 1, // Default quantity for new items
+      variant: null // No variants for hair color products
+    };
+
+    // Add item to cart store (automatically saves to localStorage)
+    addItem(cartItem);
+
+    // Open cart drawer to provide immediate visual feedback
+    openCart();
+  };
 
   // Aplicar filtros
   useEffect(() => {
@@ -627,9 +666,13 @@ export default function TintasPage() {
                           )}
                         </div>
                         <Button
+                          onClick={() => handleAddToCart(product)} // Add product to cart when clicked
                           className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm"
                         >
-                          Comprar
+                          <span className="flex items-center gap-2">
+                            <ShoppingBag className="w-4 h-4" />
+                            Comprar
+                          </span>
                         </Button>
                       </div>
                     </div>
