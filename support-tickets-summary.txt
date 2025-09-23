@@ -1,0 +1,32 @@
+
+TICKETS DE SUPORTE CRIADOS - 2025-09-23T12:46:15.994Z
+================================================
+
+PROBLEMA: An error occurred with our connection to Stripe. Request was retried X times.
+DOMÍNIO: jchairstudios62.xyz
+PROJETO: jc-hair-studio
+
+CANAIS CONTACTADOS:
+- [ ] Vercel Support (email)
+- [ ] Vercel Help Center (dashboard)
+- [ ] Stripe Support (email)
+- [ ] Stripe Dashboard
+- [ ] GitHub Issue (opcional)
+- [ ] Discord Vercel
+- [ ] Twitter
+
+INFORMAÇÕES IMPORTANTES:
+- Stripe Account ID: [ADICIONE NO EMAIL]
+- Vercel Team ID: [VERIFIQUE NO DASHBOARD]
+- Região de Deploy: [VERIFIQUE NO DASHBOARD]
+
+LINKS ÚTEIS:
+- Vercel Discord: https://vercel.com/discord
+- Vercel Status: https://www.vercel-status.com/
+- Stripe Status: https://status.stripe.com/
+
+ACOMPANHAMENTO:
+- Email responses
+- Discord #help channel
+- Dashboard notifications
+
