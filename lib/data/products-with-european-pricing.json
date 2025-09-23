@@ -2170,6 +2170,36 @@
           "images": ["/images/products/mari-maria-bases/mari-maria-base-amndoa.png"]
         },
         {
+          "id": "teste-juliana",
+          "name": "Teste Juliana",
+          "slug": "teste-juliana",
+          "brand": "JC Hair Studio",
+          "shortDesc": "Produto de teste Juliana para validação do sistema",
+          "description": "Produto especial criado para teste do sistema de e-commerce. Perfeito para validar funcionalidades de compra, pagamento e notificações.",
+          "sku": "TJ-TEST-001",
+          "category": "Maquiagem Premium",
+          "subcategory": "Teste",
+          "finalidade": "Produto de teste para validação do sistema",
+          "cor": "Universal",
+          "volume": "1un",
+          "pricing": {
+            "basePrice": 1.00,
+            "ourPrice": 1.00,
+            "discountPrice": 1.00,
+            "savings": 0.00,
+            "margin": "0%",
+            "competitive": "PRODUTO TESTE - Valor especial para Juliana"
+          },
+          "tags": ["teste", "juliana", "validação", "sistema"],
+          "rating": 5.0,
+          "reviewsCount": 1,
+          "inStock": true,
+          "stockQuantity": 100,
+          "weight": 10,
+          "labels": ["TESTE", "ESPECIAL"],
+          "images": ["/images/products/placeholder-product.jpg"]
+        },
+        {
           "id": "mari-maria-base-baunilha",
           "name": "Base Mari Maria - Tom Baunilha",
           "slug": "mari-maria-base-baunilha",

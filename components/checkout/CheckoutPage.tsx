@@ -21,11 +21,21 @@ import {
   AlertCircle
 } from 'lucide-react';
 
+/**
+ * Interface defining comprehensive customer information structure
+ * Captures all required personal, contact, and address data for order processing
+ */
 interface CustomerInfo {
+  // Personal Information
   name: string;
   email: string;
   phone: string;
+  cpfNif: string; // CPF for Brazil, NIF for Portugal/EU
+
+  // Geographic Information
   country: string;
+
+  // Complete Address Structure
   address: {
     street: string;
     number: string;
@@ -35,6 +45,9 @@ interface CustomerInfo {
     state: string;
     zipCode: string;
   };
+
+  // Delivery Preferences
+  deliveryMethod: string;
 }
 
 interface PaymentMethod {
@@ -63,12 +76,24 @@ export default function CheckoutPage() {
   const [orderComplete, setOrderComplete] = useState(false);
   const [paymentIntentId, setPaymentIntentId] = useState<string>('');
 
+  // Client technical information for fraud prevention and order tracking
+  const [clientInfo, setClientInfo] = useState({
+    ip: '',
+    userAgent: '',
+    timestamp: ''
+  });
+
   // Debug logs only in development and when there are issues - moved to useEffect to prevent initialization errors
 
+  /**
+   * Customer information state with comprehensive data structure
+   * Includes personal details, contact info, and complete delivery address
+   */
   const [customerInfo, setCustomerInfo] = useState<CustomerInfo>({
     name: '',
     email: '',
     phone: '',
+    cpfNif: '',
     country: 'PT',
     address: {
       street: '',
@@ -78,14 +103,118 @@ export default function CheckoutPage() {
       city: '',
       state: '',
       zipCode: ''
-    }
+    },
+    deliveryMethod: 'standard' // Default delivery method
   });
 
   const [selectedPayment, setSelectedPayment] = useState<string>('');
 
-  // Cart initialization effect - DEFINITIVE SOLUTION for race condition
+  /**
+   * Validation utility functions for form fields
+   * Provides robust validation for different data types and formats
+   */
+  const validationUtils = {
+    /**
+     * Validates email format using comprehensive regex
+     */
+    validateEmail: (email: string): boolean => {
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      return emailRegex.test(email);
+    },
+
+    /**
+     * Validates phone number format (international support)
+     */
+    validatePhone: (phone: string): boolean => {
+      const cleanPhone = phone.replace(/[\s\-\(\)]/g, '');
+      const phoneRegex = /^[+]?[\d]{8,15}$/;
+      return phoneRegex.test(cleanPhone);
+    },
+
+    /**
+     * Validates CPF (Brazil) or NIF (Portugal/EU) format
+     */
+    validateCpfNif: (document: string): boolean => {
+      const cleanDoc = document.replace(/[\s\-\.]/g, '');
+      // CPF: 11 digits, NIF: 9 digits, or other EU formats
+      return /^[\d]{9,11}$/.test(cleanDoc);
+    },
+
+    /**
+     * Validates ZIP/postal code format (flexible for different countries)
+     */
+    validateZipCode: (zipCode: string, country: string): boolean => {
+      const cleanZip = zipCode.replace(/[\s\-]/g, '');
+      switch (country) {
+        case 'PT': // Portugal
+          return /^[\d]{4}-?[\d]{3}$/.test(zipCode);
+        case 'BR': // Brazil
+          return /^[\d]{5}-?[\d]{3}$/.test(zipCode);
+        case 'US': // United States
+          return /^[\d]{5}(-[\d]{4})?$/.test(zipCode);
+        case 'DE': // Germany
+        case 'FR': // France
+          return /^[\d]{5}$/.test(cleanZip);
+        default: // Generic validation
+          return /^[a-zA-Z0-9\s\-]{3,10}$/.test(zipCode);
+      }
+    },
+
+    /**
+     * Validates required string fields (non-empty, reasonable length)
+     */
+    validateRequiredString: (value: string, minLength: number = 2): boolean => {
+      return value.trim().length >= minLength;
+    }
+  };
+
+  /**
+   * Cart initialization effect - DEFINITIVE SOLUTION for race condition
+   * Also captures client technical information for security and tracking
+   */
   useEffect(() => {
     setMounted(true);
+
+    // Capture client information for security and order tracking
+    const captureClientInfo = async () => {
+      try {
+        // Get user agent from browser
+        const userAgent = navigator.userAgent;
+
+        // Get client IP address from external service
+        let clientIp = 'Unknown';
+        try {
+          const ipResponse = await fetch('https://api.ipify.org?format=json');
+          const ipData = await ipResponse.json();
+          clientIp = ipData.ip;
+        } catch (ipError) {
+          console.warn('Could not fetch client IP:', ipError);
+          // Fallback: try to get IP from headers via our API
+          try {
+            const fallbackResponse = await fetch('/api/get-client-ip');
+            const fallbackData = await fallbackResponse.json();
+            clientIp = fallbackData.ip || 'Unknown';
+          } catch (fallbackError) {
+            console.warn('Fallback IP fetch failed:', fallbackError);
+          }
+        }
+
+        // Update client info state
+        setClientInfo({
+          ip: clientIp,
+          userAgent: userAgent,
+          timestamp: new Date().toISOString()
+        });
+
+        console.log('📱 Client Info Captured:', {
+          ip: clientIp,
+          userAgent: userAgent.substring(0, 50) + '...', // Truncate for logging
+          timestamp: new Date().toISOString()
+        });
+      } catch (error) {
+        console.error('Error capturing client info:', error);
+      }
+    };
 
     // Force immediate check of localStorage on mount
     const checkCartImmediately = () => {
@@ -112,6 +241,8 @@ export default function CheckoutPage() {
       }
     };
 
+    // Execute both initialization tasks
+    captureClientInfo();
     checkCartImmediately();
   }, []);
 
@@ -224,32 +355,80 @@ export default function CheckoutPage() {
     }
   };
 
+  /**
+   * Comprehensive validation for Step 1 - Customer Information
+   * Validates all required fields including personal data and complete address
+   * Uses robust validation utilities for format checking
+   */
   const validateStep1 = () => {
-    const { name, email, phone, address } = customerInfo;
-    const isValid = name && email && phone &&
-           address.street && address.number &&
-           address.neighborhood && address.city &&
-           address.state && address.zipCode;
+    const { name, email, phone, cpfNif, address, deliveryMethod } = customerInfo;
 
-    // Log validation only when invalid and in development
+    // Required field validation using utility functions
+    const validationResults = {
+      name: validationUtils.validateRequiredString(name, 2),
+      email: validationUtils.validateEmail(email),
+      phone: validationUtils.validatePhone(phone),
+      cpfNif: validationUtils.validateCpfNif(cpfNif),
+      street: validationUtils.validateRequiredString(address.street, 3),
+      number: validationUtils.validateRequiredString(address.number, 1),
+      neighborhood: validationUtils.validateRequiredString(address.neighborhood, 2),
+      city: validationUtils.validateRequiredString(address.city, 2),
+      state: validationUtils.validateRequiredString(address.state, 2),
+      zipCode: validationUtils.validateZipCode(address.zipCode, customerInfo.country),
+      deliveryMethod: validationUtils.validateRequiredString(deliveryMethod, 3)
+    };
+
+    // Check if all validations pass
+    const isValid = Object.values(validationResults).every(result => result === true);
+
+    // Comprehensive validation logging for development
     if (process.env.NODE_ENV === 'development' && !isValid) {
-      console.log('📋 FORM VALIDATION:', {
+      console.log('📋 COMPREHENSIVE FORM VALIDATION:', {
         isValid,
-        missing: {
-          name: !name,
-          email: !email,
-          phone: !phone,
-          street: !address.street,
-          number: !address.number,
-          neighborhood: !address.neighborhood,
-          city: !address.city,
-          state: !address.state,
-          zipCode: !address.zipCode
-        }
+        validationResults,
+        fieldValues: {
+          name: name || '(empty)',
+          email: email ? email.substring(0, 3) + '***@' + email.split('@')[1] : '(empty)',
+          phone: phone ? phone.substring(0, 3) + '***' : '(empty)',
+          cpfNif: cpfNif ? cpfNif.substring(0, 3) + '***' : '(empty)',
+          country: customerInfo.country,
+          deliveryMethod: deliveryMethod || '(empty)'
+        },
+        failedFields: Object.keys(validationResults).filter(key =>
+          validationResults[key as keyof typeof validationResults] === false
+        )
       });
     }
 
     return isValid;
+  };
+
+  /**
+   * Provides user-friendly validation messages for form fields
+   * Returns specific error messages for failed validations
+   */
+  const getValidationMessage = (field: string): string => {
+    const { name, email, phone, cpfNif, address, deliveryMethod } = customerInfo;
+
+    switch (field) {
+      case 'name':
+        return !validationUtils.validateRequiredString(name, 2)
+          ? 'Nome deve ter pelo menos 2 caracteres' : '';
+      case 'email':
+        return !validationUtils.validateEmail(email)
+          ? 'Email deve ter formato válido (exemplo@email.com)' : '';
+      case 'phone':
+        return !validationUtils.validatePhone(phone)
+          ? 'Telefone deve ter formato válido (+351 912 345 678)' : '';
+      case 'cpfNif':
+        return !validationUtils.validateCpfNif(cpfNif)
+          ? 'CPF/NIF deve ter formato válido (9-11 dígitos)' : '';
+      case 'zipCode':
+        return !validationUtils.validateZipCode(address.zipCode, customerInfo.country)
+          ? `Código postal inválido para ${customerInfo.country}` : '';
+      default:
+        return '';
+    }
   };
 
   const handleNextStep = () => {
@@ -380,16 +559,19 @@ export default function CheckoutPage() {
     }
   };
 
-  // Handlers para o pagamento real com Stripe
+  /**
+   * Handle successful payment processing with comprehensive data collection
+   * Sends complete customer information, order details, and technical data to payment-success API
+   */
   const handlePaymentSuccess = async (paymentIntentId: string) => {
-    console.log('💳 Payment successful:', paymentIntentId);
+    console.log('💳 Payment successful - Processing comprehensive order data:', paymentIntentId);
 
     setPaymentIntentId(paymentIntentId);
     setIsProcessing(true);
 
     try {
-      // 🚨 CRITICAL: Call payment-success API for admin notifications and MongoDB storage
-      console.log('📧 Calling payment-success API for notifications...');
+      // 🚨 CRITICAL: Call payment-success API with ALL customer and technical data
+      console.log('📧 Calling payment-success API with comprehensive data...');
 
       const paymentSuccessResponse = await fetch('/api/payment-success', {
         method: 'POST',
@@ -397,25 +579,76 @@ export default function CheckoutPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          // Payment Information
           paymentIntentId,
+          amount: finalTotal,
+
+          // Complete Customer Information
           customerInfo: {
             name: customerInfo.name || 'Cliente',
             email: customerInfo.email || 'email não informado',
-            phone: customerInfo.phone || ''
+            phone: customerInfo.phone || 'telefone não informado',
+            cpfNif: customerInfo.cpfNif || 'documento não informado',
+            country: customerInfo.country,
+
+            // Complete address information
+            address: {
+              street: customerInfo.address.street,
+              number: customerInfo.address.number,
+              complement: customerInfo.address.complement,
+              neighborhood: customerInfo.address.neighborhood,
+              city: customerInfo.address.city,
+              state: customerInfo.address.state,
+              zipCode: customerInfo.address.zipCode,
+              country: customerInfo.country
+            },
+
+            // Delivery preferences
+            deliveryMethod: customerInfo.deliveryMethod
           },
+
+          // Order items with complete details
           items: items.map(item => ({
+            id: item.id,
             name: item.product.name,
             quantity: item.quantity,
-            price: item.variant?.price || item.product.price
+            price: item.variant?.price || item.product.price,
+            total: (item.variant?.price || item.product.price) * item.quantity,
+            variant: item.variant ? {
+              id: item.variant.id,
+              name: item.variant.name,
+              price: item.variant.price
+            } : null
           })),
-          amount: finalTotal
+
+          // Order totals breakdown
+          orderTotals: {
+            subtotal: subtotal,
+            taxAmount: taxAmount,
+            shippingCost: shippingCost,
+            finalTotal: finalTotal
+          },
+
+          // Technical information for fraud prevention and tracking
+          technicalInfo: {
+            clientIp: clientInfo.ip,
+            userAgent: clientInfo.userAgent,
+            timestamp: clientInfo.timestamp,
+            orderTimestamp: new Date().toISOString(),
+            browserLanguage: navigator.language,
+            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            screenResolution: `${screen.width}x${screen.height}`,
+            referrer: document.referrer || 'direct'
+          }
         }),
       });
 
       if (paymentSuccessResponse.ok) {
-        console.log('✅ Payment success API called successfully');
+        const responseData = await paymentSuccessResponse.json();
+        console.log('✅ Payment success API called successfully:', responseData);
       } else {
-        console.error('❌ Failed to call payment-success API');
+        const errorData = await paymentSuccessResponse.text();
+        console.error('❌ Failed to call payment-success API:', errorData);
       }
 
       // Marcar pedido como completo
@@ -548,10 +781,16 @@ export default function CheckoutPage() {
                         type="text"
                         value={customerInfo.name}
                         onChange={(e) => handleCustomerInfoChange('name', e.target.value)}
-                        className="input-luxury w-full"
+                        className={`input-luxury w-full ${
+                          customerInfo.name && !validationUtils.validateRequiredString(customerInfo.name, 2)
+                            ? 'border-red-300 focus:border-red-500' : ''
+                        }`}
                         placeholder="Seu nome completo"
                         required
                       />
+                      {customerInfo.name && getValidationMessage('name') && (
+                        <p className="text-red-500 text-xs mt-1">{getValidationMessage('name')}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -561,12 +800,18 @@ export default function CheckoutPage() {
                         type="email"
                         value={customerInfo.email}
                         onChange={(e) => handleCustomerInfoChange('email', e.target.value)}
-                        className="input-luxury w-full"
+                        className={`input-luxury w-full ${
+                          customerInfo.email && !validationUtils.validateEmail(customerInfo.email)
+                            ? 'border-red-300 focus:border-red-500' : ''
+                        }`}
                         placeholder="seu@email.com"
                         required
                       />
+                      {customerInfo.email && getValidationMessage('email') && (
+                        <p className="text-red-500 text-xs mt-1">{getValidationMessage('email')}</p>
+                      )}
                     </div>
-                    <div className="md:col-span-2">
+                    <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Telefone *
                       </label>
@@ -574,10 +819,35 @@ export default function CheckoutPage() {
                         type="tel"
                         value={customerInfo.phone}
                         onChange={(e) => handleCustomerInfoChange('phone', e.target.value)}
-                        className="input-luxury w-full"
+                        className={`input-luxury w-full ${
+                          customerInfo.phone && !validationUtils.validatePhone(customerInfo.phone)
+                            ? 'border-red-300 focus:border-red-500' : ''
+                        }`}
                         placeholder="+351 912 345 678"
                         required
                       />
+                      {customerInfo.phone && getValidationMessage('phone') && (
+                        <p className="text-red-500 text-xs mt-1">{getValidationMessage('phone')}</p>
+                      )}
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        CPF/NIF *
+                      </label>
+                      <input
+                        type="text"
+                        value={customerInfo.cpfNif}
+                        onChange={(e) => handleCustomerInfoChange('cpfNif', e.target.value)}
+                        className={`input-luxury w-full ${
+                          customerInfo.cpfNif && !validationUtils.validateCpfNif(customerInfo.cpfNif)
+                            ? 'border-red-300 focus:border-red-500' : ''
+                        }`}
+                        placeholder="123.456.789-00 ou 123456789"
+                        required
+                      />
+                      {customerInfo.cpfNif && getValidationMessage('cpfNif') && (
+                        <p className="text-red-500 text-xs mt-1">{getValidationMessage('cpfNif')}</p>
+                      )}
                     </div>
                   </div>
 
@@ -612,10 +882,16 @@ export default function CheckoutPage() {
                         type="text"
                         value={customerInfo.address.zipCode}
                         onChange={(e) => handleCustomerInfoChange('address.zipCode', e.target.value)}
-                        className="input-luxury w-full"
+                        className={`input-luxury w-full ${
+                          customerInfo.address.zipCode && !validationUtils.validateZipCode(customerInfo.address.zipCode, customerInfo.country)
+                            ? 'border-red-300 focus:border-red-500' : ''
+                        }`}
                         placeholder="1000-001"
                         required
                       />
+                      {customerInfo.address.zipCode && getValidationMessage('zipCode') && (
+                        <p className="text-red-500 text-xs mt-1">{getValidationMessage('zipCode')}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -681,7 +957,7 @@ export default function CheckoutPage() {
                         required
                       />
                     </div>
-                    <div className="md:col-span-2">
+                    <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Estado/Distrito *
                       </label>
@@ -693,6 +969,22 @@ export default function CheckoutPage() {
                         placeholder="Estado/Região/Distrito"
                         required
                       />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Método de Entrega *
+                      </label>
+                      <select
+                        value={customerInfo.deliveryMethod}
+                        onChange={(e) => handleCustomerInfoChange('deliveryMethod', e.target.value)}
+                        className="input-luxury w-full"
+                        required
+                      >
+                        <option value="standard">Entrega Standard (3-5 dias úteis)</option>
+                        <option value="express">Entrega Express (1-2 dias úteis)</option>
+                        <option value="priority">Entrega Prioritária (24h)</option>
+                        <option value="pickup">Recolha na Loja</option>
+                      </select>
                     </div>
                   </div>
 

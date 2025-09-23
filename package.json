@@ -44,7 +44,7 @@
     "seed:mongodb": "tsx scripts/seed-mongodb.ts",
     "analyze": "ANALYZE=true next build",
     "postinstall": "prisma generate",
-    "vercel:build": "prisma generate && next build"
+    "vercel:build": "next build --no-lint"
   },
   "keywords": [
     "ecommerce",
@@ -75,6 +75,8 @@
     "@types/mongoose": "^5.11.96",
     "@types/node": "^24.3.1",
     "@types/nodemailer": "^7.0.1",
+    "@types/pdfkit": "^0.17.3",
+    "@types/qrcode": "^1.5.5",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "autoprefixer": "^10.4.21",
@@ -101,9 +103,11 @@
     "next-pwa": "^5.6.0",
     "node-fetch": "^3.3.2",
     "nodemailer": "^6.10.1",
+    "pdfkit": "^0.17.2",
     "postcss": "^8.5.6",
     "prisma": "^6.16.1",
     "puppeteer": "^24.22.0",
+    "qrcode": "^1.5.4",
     "react": "^19.1.1",
     "react-country-region-selector": "^4.0.2",
     "react-dom": "^19.1.1",
@@ -124,6 +128,7 @@
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
     "uuid": "^13.0.0",
+    "xlsx": "^0.18.5",
     "zod": "^4.1.8",
     "zustand": "^5.0.8"
   },

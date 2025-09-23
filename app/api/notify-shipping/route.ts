@@ -1,5 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { sendEmail, generateShippedEmail } from '@/lib/utils/email';
+import { sendShippingNotificationEmail } from '@/app/api/admin/notifications/route';
+
+// Helper function to get tracking URL based on carrier
+function getTrackingUrl(carrier: string, trackingCode: string): string {
+  const carrierUrls: { [key: string]: string } = {
+    'correios': `https://www2.correios.com.br/sistemas/rastreamento/ctrl/ctrlRastreamento.cfm?codigo=${trackingCode}`,
+    'jadlog': `https://www.jadlog.com.br/trackingpage?tracking=${trackingCode}`,
+    'loggi': `https://www.loggi.com/rastreamento/${trackingCode}`,
+    'mercado-envios': `https://envios.mercadolivre.com.br/tracking/${trackingCode}`,
+  };
+
+  const lowerCarrier = carrier.toLowerCase();
+  return carrierUrls[lowerCarrier] || `https://www.google.com/search?q=rastreamento+${trackingCode}`;
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -47,42 +60,36 @@ export async function POST(request: NextRequest) {
       formattedItems = [{ name: 'Produtos do pedido', quantity: 1 }];
     }
 
-    // Gerar email de despacho
+    // Prepare shipping notification data
     const shippingData = {
       orderId,
       customerName,
       customerEmail,
       trackingCode,
-      carrier,
-      estimatedDelivery: estimatedDelivery || 'A definir',
-      shippingAddress: shippingAddress || 'Endereço cadastrado',
-      items: formattedItems
+      shippingCarrier: carrier,
+      estimatedDelivery: estimatedDelivery || '5-10 dias úteis',
+      shippingAddress: typeof shippingAddress === 'string' ? { street: shippingAddress } : shippingAddress,
+      trackingUrl: getTrackingUrl(carrier, trackingCode),
+      products: formattedItems
     };
 
-    const emailData = generateShippedEmail(shippingData);
-    const success = await sendEmail(emailData);
+    // Send shipping notification using new system
+    await sendShippingNotificationEmail(shippingData);
 
-    if (success) {
-      // Log para auditoria
-      console.log(`Email de despacho enviado - Pedido: ${orderId}, Cliente: ${customerEmail}, Código: ${trackingCode}`);
+    // Log for audit
+    console.log(`📦 Shipping notification sent - Order: ${orderId}, Customer: ${customerEmail}, Tracking: ${trackingCode}`);
 
-      return NextResponse.json({
-        success: true,
-        message: 'Notificação de despacho enviada com sucesso',
-        data: {
-          orderId,
-          customerEmail,
-          trackingCode,
-          carrier,
-          sentAt: new Date().toISOString()
-        }
-      });
-    } else {
-      return NextResponse.json(
-        { error: 'Falha ao enviar notificação de despacho' },
-        { status: 500 }
-      );
-    }
+    return NextResponse.json({
+      success: true,
+      message: 'Notificação de despacho enviada com sucesso',
+      data: {
+        orderId,
+        customerEmail,
+        trackingCode,
+        carrier,
+        sentAt: new Date().toISOString()
+      }
+    });
 
   } catch (error) {
     console.error('Erro na API de notificação de despacho:', error);

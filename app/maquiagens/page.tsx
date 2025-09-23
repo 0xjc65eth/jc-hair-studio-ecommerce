@@ -97,6 +97,15 @@ const mariMariaProducts = [
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-nude.png'],
     badge: 'DESTAQUE',
     pricing: { basePrice: 37.00, ourPrice: 40.70, discountPrice: 32.56, savings: 8.14, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+  },
+  {
+    id: 'teste-juliana',
+    nome: 'Teste Juliana',
+    marca: 'JC Hair Studio',
+    descricao: 'Produto especial criado para teste do sistema de e-commerce. Perfeito para validar funcionalidades de compra, pagamento e notificações.',
+    imagens: ['/images/products/placeholder-product.jpg'],
+    badge: 'TESTE',
+    pricing: { basePrice: 1.00, ourPrice: 1.00, discountPrice: 1.00, savings: 0.00, margin: '0%', competitive: 'PRODUTO TESTE - Valor especial para Juliana' }
   }
 ];
 
