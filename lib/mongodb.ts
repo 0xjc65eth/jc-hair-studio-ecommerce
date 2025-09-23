@@ -15,14 +15,14 @@ export { Review } from './mongodb/schemas/review.schema';
 // Re-export connection utilities
 export {
   connectDB,
+  connectDB as connectToDatabase,  // Alias for compatibility
   disconnectDB,
   checkDBHealth,
   getConnectionStats,
   setupConnectionListeners
 } from './mongodb/connection';
 
-// Add legacy export for compatibility
-export { connectDB as connectToDatabase } from './mongodb/connection';
+// Legacy export removed (duplicate resolved)
 
 // Create a prisma-compatible interface for easier migration
 export const prisma = {

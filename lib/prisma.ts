@@ -6,82 +6,33 @@
  * desenvolvimento (hot-reload do Next.js). Previne erro "@prisma/client did not initialize yet".
  */
 
-import { PrismaClient } from './generated/prisma';
+// Fallback to MongoDB directly when Prisma is not available
+import { connectDB, prisma } from './mongodb';
 
-declare global {
-  // eslint-disable-next-line no-var
-  var __prismaInstance__: PrismaClient | undefined;
-}
-
-// Cria nova instância apenas se não existir
-export const prisma =
-  global.__prismaInstance__ ??
-  new PrismaClient({
-    log: process.env.NODE_ENV === 'production' ? [] : ['query', 'warn', 'error'],
-    errorFormat: 'pretty',
-  });
-
-// Salva a instância globalmente em dev para evitar múltiplas instâncias
-if (process.env.NODE_ENV !== 'production') global.__prismaInstance__ = prisma;
-
+// Export the MongoDB prisma client directly
+export { prisma };
 export default prisma;
 
-// Database connection helper
-export async function connectDB() {
-  try {
-    await prisma.$connect();
-    console.log('✅ Database connected successfully');
-  } catch (error) {
-    console.error('❌ Database connection failed:', error);
-    throw error;
-  }
-}
-
-// Disconnect helper
-export async function disconnectDB() {
-  try {
-    await prisma.$disconnect();
-    console.log('✅ Database disconnected successfully');
-  } catch (error) {
-    console.error('❌ Database disconnection failed:', error);
-    throw error;
-  }
-}
-
-// Health check helper
-export async function checkDBHealth() {
-  try {
-    // MongoDB health check - usando findFirst em uma collection pequena
-    await prisma.user.findFirst({ take: 1 });
-    return { status: 'healthy', timestamp: new Date().toISOString() };
-  } catch (error) {
-    return { status: 'unhealthy', error: error?.toString(), timestamp: new Date().toISOString() };
-  }
-}
+// Re-export connection helpers from mongodb module
+export { connectDB, disconnectDB, checkDBHealth } from './mongodb';
 
 // Utility types for better TypeScript support
 export type UserWithAddresses = Awaited<ReturnType<typeof getUserWithAddresses>>;
 export type ProductWithDetails = Awaited<ReturnType<typeof getProductWithDetails>>;
 export type OrderWithItems = Awaited<ReturnType<typeof getOrderWithItems>>;
 
-// Common query helpers
+// Common query helpers using MongoDB schemas
 export async function getUserWithAddresses(userId: string) {
-  // MongoDB com Prisma - sem include, usar findMany separado
-  return prisma.user.findUnique({
-    where: { id: userId }
-  });
+  const { User } = await import('./mongodb/schemas/user.schema');
+  return User.findById(userId).exec();
 }
 
 export async function getProductWithDetails(productId: string) {
-  // MongoDB com Prisma - sem include, usar findMany separado
-  return prisma.product.findUnique({
-    where: { id: productId }
-  });
+  const { Product } = await import('./mongodb/schemas/product.schema');
+  return Product.findById(productId).exec();
 }
 
 export async function getOrderWithItems(orderId: string) {
-  // MongoDB com Prisma - sem include, usar findMany separado
-  return prisma.order.findUnique({
-    where: { id: orderId }
-  });
+  const { Order } = await import('./mongodb/schemas/order.schema');
+  return Order.findById(orderId).exec();
 }
