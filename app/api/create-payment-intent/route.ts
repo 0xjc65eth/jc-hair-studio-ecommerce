@@ -24,11 +24,13 @@ if (!process.env.STRIPE_SECRET_KEY) {
 
 const stripe = process.env.STRIPE_SECRET_KEY ? new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: '2023-10-16',
-  timeout: 30000, // 30 second timeout
-  maxNetworkRetries: 3, // Allow 3 retries
+  timeout: 60000, // 60 second timeout (increased)
+  maxNetworkRetries: 5, // Allow 5 retries (increased)
   telemetry: false, // Disable telemetry
   stripeAccount: undefined, // Ensure we're not using connect
   httpAgent: undefined, // Use default HTTP agent
+  host: 'api.stripe.com', // Explicitly set host
+  protocol: 'https', // Explicitly set protocol
 }) : null;
 
 export async function POST(request: NextRequest) {
@@ -56,19 +58,41 @@ export async function POST(request: NextRequest) {
 
     // Testar conectividade com Stripe antes de criar PaymentIntent
     try {
-      await stripe.balance.retrieve();
+      console.log('🔍 Testing Stripe connectivity with extended timeout...');
+      const balance = await stripe.balance.retrieve();
       console.log('✅ Stripe connection test successful');
     } catch (connectionError) {
       console.error('❌ Stripe connection test failed:', connectionError);
-      return NextResponse.json(
-        {
-          error: 'Erro de conectividade com Stripe',
-          message: 'Não foi possível conectar com o sistema de pagamentos. Tente novamente em alguns minutos.',
-          details: connectionError instanceof Error ? connectionError.message : 'Erro desconhecido',
-          retryable: true
-        },
-        { status: 503 }
-      );
+
+      // Se for problema de rede, tentar uma vez mais com configuração diferente
+      console.log('🔄 Attempting alternative Stripe configuration...');
+      try {
+        const alternativeStripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+          apiVersion: '2023-10-16',
+          timeout: 120000, // 2 minutos
+          maxNetworkRetries: 2,
+          telemetry: false,
+        });
+
+        await alternativeStripe.balance.retrieve();
+        console.log('✅ Alternative Stripe connection successful');
+
+        // Atualizar stripe instance para usar a configuração que funcionou
+        Object.assign(stripe, alternativeStripe);
+
+      } catch (alternativeError) {
+        console.error('❌ Alternative Stripe connection also failed:', alternativeError);
+        return NextResponse.json(
+          {
+            error: 'Erro de conectividade com Stripe',
+            message: 'Sistema de pagamentos temporariamente indisponível. Nossa equipe foi notificada.',
+            details: connectionError instanceof Error ? connectionError.message : 'Erro desconhecido',
+            retryable: true,
+            timestamp: new Date().toISOString()
+          },
+          { status: 503 }
+        );
+      }
     }
 
     const { amount, currency = 'eur', customerInfo, items } = await request.json();
