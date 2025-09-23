@@ -1,11 +1,9 @@
 import sgMail from '@sendgrid/mail';
-
-import { env } from '@/lib/env';
 import logger from '@/lib/logger';
 
 // Configuração condicional do SendGrid
-if (env.SENDGRID_API_KEY) {
-  sgMail.setApiKey(env.SENDGRID_API_KEY);
+if (process.env.SENDGRID_API_KEY) {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   logger.info('SendGrid configurado com sucesso');
 } else {
   logger.warn('SENDGRID_API_KEY não configurada - emails serão simulados em desenvolvimento');
@@ -21,7 +19,7 @@ export interface EmailData {
 export async function sendEmail(emailData: EmailData): Promise<boolean> {
   try {
     // Se SENDGRID_API_KEY não estiver configurada, simular envio
-    if (!env.SENDGRID_API_KEY) {
+    if (!process.env.SENDGRID_API_KEY) {
       logger.info('📧 [SIMULAÇÃO] Email seria enviado para:', {
         to: emailData.to,
         subject: emailData.subject,
@@ -32,13 +30,13 @@ export async function sendEmail(emailData: EmailData): Promise<boolean> {
 
     const msg = {
       to: emailData.to,
-      from: env.FROM_EMAIL || 'orders@jchairstudios62.com',
+      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.com',
       subject: emailData.subject,
       text: emailData.text,
       html: emailData.html,
       mail_settings: {
         sandbox_mode: {
-          enable: process.env.NODE_ENV !== 'production',
+          enable: process.process.env.NODE_ENV !== 'production',
         },
       },
     };
@@ -238,7 +236,7 @@ export function generateSupportEmail(contactData: {
   `;
 
   return {
-    to: env.SUPPORT_EMAIL || env.FROM_EMAIL || 'suporte@jchairstudios62.com',
+    to: process.env.SUPPORT_EMAIL || process.env.FROM_EMAIL || 'suporte@jchairstudios62.com',
     subject: `[CONTATO] ${contactData.subject} - ${contactData.customerName}`,
     html,
     text

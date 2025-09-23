@@ -71,7 +71,10 @@ const PaymentForm: React.FC<StripePaymentProps> = ({
           console.log('✅ Client Secret set successfully');
         } else {
           console.error('❌ No client secret in response:', data);
-          onError(`Erro ao inicializar pagamento: ${data.error || 'Resposta inválida'}`);
+          // Enhanced error display with debug information
+          const errorDetails = data.details ? ` (${data.details})` : '';
+          const debugInfo = data.debugInfo ? `\nDebug: ${JSON.stringify(data.debugInfo)}` : '';
+          onError(`Erro ao inicializar pagamento: ${data.error || 'Resposta inválida'}${errorDetails}${debugInfo}`);
         }
       } catch (error) {
         console.error('Erro ao criar Payment Intent:', error);

@@ -1,12 +1,11 @@
 import sgMail from '@sendgrid/mail';
-import { env } from '@/lib/env';
 import logger from '@/lib/logger';
 
 // Configurar SendGrid API Key
-const SENDGRID_ENABLED = !!env.SENDGRID_API_KEY && env.SENDGRID_API_KEY !== 'SG.your-sendgrid-api-key';
+const SENDGRID_ENABLED = !!process.env.SENDGRID_API_KEY && process.env.SENDGRID_API_KEY !== 'SG.your-sendgrid-api-key';
 
 if (SENDGRID_ENABLED) {
-  sgMail.setApiKey(env.SENDGRID_API_KEY!);
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
   logger.info('✅ SendGrid configured successfully');
 } else {
   logger.warn('⚠️ SendGrid not configured - emails will be logged to console only');
@@ -51,7 +50,7 @@ export async function sendContactEmail(data: ContactFormData): Promise<boolean> 
     // Email para a empresa
     const emailToCompany: EmailTemplate = {
       to: process.env.SUPPORT_EMAIL || 'suporte@jchairstudios62.xyz',
-      from: env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
+      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
       subject: `[${formType.toUpperCase()}] ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -108,7 +107,7 @@ export async function sendContactEmail(data: ContactFormData): Promise<boolean> 
     // Email de confirmação para o cliente
     const emailToCustomer: EmailTemplate = {
       to: email,
-      from: env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
+      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
       subject: 'Recebemos sua mensagem - JC Hair Studio\'s 62',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -223,7 +222,7 @@ export async function sendOrderConfirmationEmail(data: OrderEmailData): Promise<
 
     const emailTemplate: EmailTemplate = {
       to: customerEmail,
-      from: env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
+      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
       subject: `Pedido Confirmado #${orderId} - JC Hair Studio's 62`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -317,7 +316,7 @@ export async function sendNewsletterEmail(email: string, name?: string): Promise
   try {
     const emailTemplate: EmailTemplate = {
       to: email,
-      from: env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
+      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
       subject: 'Bem-vindo(a) à Newsletter JC Hair Studio\'s 62! 🎉',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
