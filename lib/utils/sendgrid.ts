@@ -717,10 +717,14 @@ export async function sendNewsletterEmail(email: string, name?: string): Promise
   }
 }
 
+// Legacy export for compatibility
+export const sendEmail = sendContactEmail;
+
 export default {
   sendContactEmail,
   sendOrderConfirmationEmail,
   sendPaymentConfirmationEmail,
   sendShippingNotificationEmail,
-  sendNewsletterEmail
+  sendNewsletterEmail,
+  sendEmail
 };

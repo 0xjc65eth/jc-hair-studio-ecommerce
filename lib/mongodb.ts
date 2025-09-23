@@ -13,13 +13,16 @@ export { Order } from './mongodb/schemas/order.schema';
 export { Review } from './mongodb/schemas/review.schema';
 
 // Re-export connection utilities
-export { 
-  connectDB, 
-  disconnectDB, 
-  checkDBHealth, 
+export {
+  connectDB,
+  disconnectDB,
+  checkDBHealth,
   getConnectionStats,
-  setupConnectionListeners 
+  setupConnectionListeners
 } from './mongodb/connection';
+
+// Add legacy export for compatibility
+export { connectDB as connectToDatabase } from './mongodb/connection';
 
 // Create a prisma-compatible interface for easier migration
 export const prisma = {

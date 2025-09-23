@@ -1,1 +1,15 @@
-{"projectId":"prj_oWdQrgjvGg0cVOqf9pGcobgp3w5Y","orgId":"team_3Na6ocXzVQ9WfGtW6DMutWIC","projectName":"jc-hair-studio"}
+{
+  "projectId": "prj_oWdQrgjvGg0cVOqf9pGcobgp3w5Y",
+  "orgId": "team_3Na6ocXzVQ9WfGtW6DMutWIC",
+  "settings": {
+    "createdAt": 1757920947695,
+    "framework": "nextjs",
+    "devCommand": null,
+    "installCommand": "npm install --legacy-peer-deps",
+    "buildCommand": "npm run build",
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "22.x"
+  }
+}
