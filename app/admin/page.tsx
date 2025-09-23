@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
+import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/Button';
 import { LowStockAlerts } from '@/components/admin/LowStockAlerts';
 import { formatCurrency } from '@/lib/utils/formatters';
@@ -88,6 +89,7 @@ import {
 } from 'lucide-react';
 
 export default function AdminPanel() {
+  const [isClient, setIsClient] = useState(false);
   const [activeTab, setActiveTab] = useState('dashboard');
   const [dashboardData, setDashboardData] = useState({
     totalOrders: 0,
@@ -97,6 +99,11 @@ export default function AdminPanel() {
     pendingOrders: 0,
     loading: true,
   });
+
+  // Hydration fix
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // Enterprise Order Management State
   const [orders, setOrders] = useState([]);
@@ -1700,6 +1707,18 @@ export default function AdminPanel() {
       default: return renderDashboard();
     }
   };
+
+  // Prevent hydration mismatch - wait for client-side render
+  if (!isClient) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+          <p className="text-gray-600 font-medium">Carregando painel administrativo...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
