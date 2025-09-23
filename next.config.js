@@ -31,11 +31,10 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  // Environment variables
+  // Environment variables (removed NODE_ENV as it's not allowed)
   env: {
     SKIP_TYPE_CHECK: 'true',
     SKIP_LINT: 'true',
-    NODE_ENV: 'production',
     NEXT_TELEMETRY_DISABLED: '1'
   },
 
@@ -68,10 +67,6 @@ const nextConfig = {
     return config;
   },
 
-  // Disable telemetry
-  telemetry: {
-    disabled: true,
-  },
 
   // Output configuration
   output: 'standalone',

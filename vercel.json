@@ -1,5 +1,5 @@
 {
-  "buildCommand": "SKIP_TYPE_CHECK=true SKIP_LINT=true NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production npx next build",
+  "buildCommand": "npm run build:safe",
   "outputDirectory": ".next",
   "framework": "nextjs",
   "installCommand": "npm install --legacy-peer-deps && npm run postinstall || true",
