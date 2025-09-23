@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import productData from '@/lib/data/products-reorganized.json';
+import productData from '@/lib/data/products-with-european-pricing.json';
 import advancedCatalog from '@/lib/data/products-advanced-catalog.json';
 
 // Import additional catalogs

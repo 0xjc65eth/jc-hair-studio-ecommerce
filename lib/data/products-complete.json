@@ -1,4 +1,64 @@
 {
-  "categories": [],
-  "products": []
+  "categories": [
+    {
+      "id": "teste",
+      "name": "🧪 Produtos de Teste",
+      "slug": "teste",
+      "description": "Produtos para teste do sistema de emails e pagamentos",
+      "image": "/placeholder-product.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": "produto-teste-001",
+      "name": "🧪 Produto Teste - Email System",
+      "description": "Produto específico para testar o sistema de emails de confirmação. Valor mínimo para facilitar testes de pagamento e notificações.",
+      "price": 1.00,
+      "originalPrice": 5.00,
+      "category": "teste",
+      "subcategory": "teste-emails",
+      "brand": "JC Hair Studio",
+      "images": [
+        "/placeholder-product.jpg"
+      ],
+      "inStock": true,
+      "stockQuantity": 999,
+      "featured": true,
+      "tags": ["teste", "email", "pagamento", "confirmacao"],
+      "variants": [
+        {
+          "id": "teste-basico",
+          "name": "Teste Básico",
+          "price": 1.00,
+          "originalPrice": 5.00,
+          "inStock": true,
+          "stockQuantity": 999
+        },
+        {
+          "id": "teste-premium",
+          "name": "Teste Premium",
+          "price": 2.00,
+          "originalPrice": 10.00,
+          "inStock": true,
+          "stockQuantity": 999
+        }
+      ],
+      "specifications": {
+        "tipo": "Produto de Teste",
+        "funcao": "Testar sistema de emails",
+        "valor": "Mínimo para facilitar testes",
+        "entrega": "Digital - sem envio físico"
+      },
+      "seoTitle": "Produto Teste - Sistema de Emails JC Hair Studio",
+      "seoDescription": "Produto de teste com valor mínimo para verificar funcionamento do sistema de emails de confirmação e notificações.",
+      "weight": 0,
+      "dimensions": {
+        "length": 0,
+        "width": 0,
+        "height": 0
+      },
+      "shippingRequired": false,
+      "digitalProduct": true
+    }
+  ]
 }

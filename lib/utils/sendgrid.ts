@@ -6,9 +6,9 @@ const SENDGRID_ENABLED = !!process.env.SENDGRID_API_KEY && process.env.SENDGRID_
 
 if (SENDGRID_ENABLED) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
-  logger.info('✅ SendGrid configured successfully');
+  console.log('✅ SendGrid configured successfully');
 } else {
-  logger.warn('⚠️ SendGrid not configured - emails will be logged to console only');
+  console.warn('⚠️ SendGrid not configured - using SENDGRID_API_KEY:', process.env.SENDGRID_API_KEY ? 'EXISTS' : 'MISSING');
 }
 
 export interface EmailTemplate {
@@ -45,6 +45,12 @@ export interface OrderEmailData {
  */
 export async function sendContactEmail(data: ContactFormData): Promise<boolean> {
   try {
+    console.log('🔧 SendGrid DEBUG - sendContactEmail called with:', {
+      hasData: !!data,
+      sendgridEnabled: SENDGRID_ENABLED,
+      apiKeyExists: !!process.env.SENDGRID_API_KEY
+    });
+
     const { name, email, phone, subject, message, formType = 'contact' } = data;
 
     // Email para a empresa
@@ -185,16 +191,16 @@ export async function sendContactEmail(data: ContactFormData): Promise<boolean> 
 
     // Enviar ambos os emails
     if (SENDGRID_ENABLED) {
+      console.log('📧 SendGrid ENABLED - Attempting to send emails...');
       await sgMail.send(emailToCompany);
+      console.log('✅ Email to company sent successfully');
       await sgMail.send(emailToCustomer);
+      console.log('✅ Email to customer sent successfully');
     } else {
-      logger.info('📧 [DEV MODE] Email para empresa:', {
-        to: emailToCompany.to,
-        subject: emailToCompany.subject,
-      });
-      logger.info('📧 [DEV MODE] Email para cliente:', {
-        to: emailToCustomer.to,
-        subject: emailToCustomer.subject,
+      console.log('📧 [DEV MODE] SendGrid DISABLED - Would send emails:', {
+        company: emailToCompany.to,
+        customer: emailToCustomer.to,
+        sendgridKey: process.env.SENDGRID_API_KEY ? 'EXISTS' : 'MISSING'
       });
     }
 
@@ -314,6 +320,13 @@ export async function sendOrderConfirmationEmail(data: OrderEmailData): Promise<
  */
 export async function sendNewsletterEmail(email: string, name?: string): Promise<boolean> {
   try {
+    console.log('🔧 SendGrid DEBUG - sendNewsletterEmail called with:', {
+      email,
+      name,
+      sendgridEnabled: SENDGRID_ENABLED,
+      apiKeyExists: !!process.env.SENDGRID_API_KEY
+    });
+
     const emailTemplate: EmailTemplate = {
       to: email,
       from: process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
@@ -368,12 +381,14 @@ export async function sendNewsletterEmail(email: string, name?: string): Promise
     };
 
     if (SENDGRID_ENABLED) {
+      console.log('📧 Newsletter - SendGrid ENABLED - Attempting to send...');
       await sgMail.send(emailTemplate);
+      console.log('✅ Newsletter email sent successfully');
     } else {
-      logger.info('📧 [DEV MODE] Email de newsletter:', {
+      console.log('📧 [DEV MODE] Newsletter - SendGrid DISABLED:', {
         to: emailTemplate.to,
         subject: emailTemplate.subject,
-        name: name || 'Subscriber',
+        sendgridKey: process.env.SENDGRID_API_KEY ? 'EXISTS' : 'MISSING'
       });
     }
     return true;

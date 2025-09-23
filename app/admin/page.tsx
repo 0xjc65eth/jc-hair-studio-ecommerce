@@ -37,20 +37,41 @@ export default function AdminPanel() {
 
   const fetchDashboardData = async () => {
     try {
-      // Simulate API calls - replace with real data
-      setTimeout(() => {
+      setDashboardData(prev => ({ ...prev, loading: true }));
+
+      console.log('📊 Fetching real dashboard data...');
+
+      // Fetch real orders data from Stripe
+      const ordersResponse = await fetch('/api/admin/orders');
+      const ordersData = await ordersResponse.json();
+
+      if (ordersData.success) {
+        console.log(`✅ Loaded ${ordersData.total} real orders`);
+
         setDashboardData({
-          totalOrders: 1247,
-          totalRevenue: 89750.00,
-          lowStockItems: 23,
-          activeCoupons: 8,
-          pendingOrders: 15,
+          totalOrders: ordersData.total,
+          totalRevenue: ordersData.revenue,
+          lowStockItems: 0, // Not implemented yet
+          activeCoupons: 0, // Not implemented yet
+          pendingOrders: ordersData.pendingOrders || 0,
           loading: false,
+          stripeOrders: ordersData.stripeOrders || 0,
+          lastUpdate: new Date().toLocaleString()
         });
-      }, 1000);
+      } else {
+        throw new Error('Failed to fetch orders data');
+      }
     } catch (error) {
-      console.error('Error fetching dashboard data:', error);
-      setDashboardData(prev => ({ ...prev, loading: false }));
+      console.error('❌ Error fetching dashboard data:', error);
+      setDashboardData({
+        totalOrders: 0,
+        totalRevenue: 0,
+        lowStockItems: 0,
+        activeCoupons: 0,
+        pendingOrders: 0,
+        loading: false,
+        error: 'Erro ao carregar dados'
+      });
     }
   };
 

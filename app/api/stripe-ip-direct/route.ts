@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import https from 'https';
 
-const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
-
-if (!STRIPE_SECRET_KEY) {
-    throw new Error('STRIPE_SECRET_KEY is required');
+function getStripeSecretKey() {
+    const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
+    if (!STRIPE_SECRET_KEY) {
+        throw new Error('STRIPE_SECRET_KEY is required');
+    }
+    return STRIPE_SECRET_KEY;
 }
 
 const STRIPE_IPS = [
@@ -16,7 +18,7 @@ const STRIPE_IPS = [
 
 async function makeDirectHttpsRequest(endpoint: string, method = 'GET', data?: any): Promise<any> {
     return new Promise((resolve, reject) => {
-        const postData = data ? JSON.stringify(data) : undefined;
+        const postData = data ? data : undefined;
 
         let lastError: any;
         let attemptCount = 0;
@@ -36,7 +38,7 @@ async function makeDirectHttpsRequest(endpoint: string, method = 'GET', data?: a
                 path: `/v1/${endpoint}`,
                 method,
                 headers: {
-                    'Authorization': `Bearer ${STRIPE_SECRET_KEY}`,
+                    'Authorization': `Bearer ${getStripeSecretKey()}`,
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Host': 'api.stripe.com',
                     'User-Agent': 'Stripe/v1 NodeBindings/14.25.0',

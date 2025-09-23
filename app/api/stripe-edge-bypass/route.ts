@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export const runtime = 'edge';
-
-const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
-
-if (!STRIPE_SECRET_KEY) {
-    throw new Error('STRIPE_SECRET_KEY is required');
+function getStripeSecretKey() {
+    const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
+    if (!STRIPE_SECRET_KEY) {
+        throw new Error('STRIPE_SECRET_KEY is required');
+    }
+    return STRIPE_SECRET_KEY;
 }
 
 async function stripeEdgeRequest(endpoint: string, method = 'GET', body?: any): Promise<any> {
@@ -14,7 +14,7 @@ async function stripeEdgeRequest(endpoint: string, method = 'GET', body?: any): 
     const requestInit: RequestInit = {
         method,
         headers: {
-            'Authorization': `Bearer ${STRIPE_SECRET_KEY}`,
+            'Authorization': `Bearer ${getStripeSecretKey()}`,
             'Content-Type': 'application/x-www-form-urlencoded',
             'User-Agent': 'EdgeRuntime/1.0',
             'Accept': 'application/json',
@@ -54,7 +54,7 @@ export async function GET(request: NextRequest) {
             message: 'Conexão via Edge Runtime funcionou',
             duration,
             customers_found: testResult.data?.length || 0,
-            edge_location: request.geo?.city || 'unknown'
+            edge_location: 'unknown'
         });
 
     } catch (error: any) {
@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
             runtime: 'edge',
             error: error.message,
             duration,
-            edge_location: request.geo?.city || 'unknown',
+            edge_location: 'unknown',
             diagnosis: 'Edge Runtime network stack issue'
         }, { status: 500 });
     }
@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
             client_secret: paymentIntent.client_secret,
             amount: paymentIntent.amount,
             duration,
-            edge_location: request.geo?.city || 'unknown',
+            edge_location: 'unknown',
             message: 'Payment Intent criado via Edge Runtime'
         });
 
@@ -127,7 +127,7 @@ export async function POST(request: NextRequest) {
             runtime: 'edge',
             error: error.message,
             duration,
-            edge_location: request.geo?.city || 'unknown',
+            edge_location: 'unknown',
             diagnosis: 'Falha na criação de Payment Intent via Edge Runtime'
         }, { status: 500 });
     }

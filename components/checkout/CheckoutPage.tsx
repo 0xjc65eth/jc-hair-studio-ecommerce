@@ -388,39 +388,34 @@ export default function CheckoutPage() {
     setIsProcessing(true);
 
     try {
-      // Gerar ID do pedido
-      const orderId = `JC-${Date.now().toString().slice(-6)}`;
+      // 🚨 CRITICAL: Call payment-success API for admin notifications and MongoDB storage
+      console.log('📧 Calling payment-success API for notifications...');
 
-      // Enviar email de confirmação
-      const orderData = {
-        orderId,
-        customerName: customerInfo.name || 'Cliente',
-        customerEmail: customerInfo.email || 'juliocesarurss65@gmail.com',
-        items: items.map(item => ({
-          name: item.product.name,
-          quantity: item.quantity,
-          price: item.variant?.price || item.product.price
-        })),
-        total: finalTotal,
-        paymentMethod: 'Cartão de Crédito (Stripe)',
-        paymentIntentId
-      };
-
-      const emailResponse = await fetch('/api/send-email', {
+      const paymentSuccessResponse = await fetch('/api/payment-success', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          type: 'order-confirmation',
-          data: orderData
+          paymentIntentId,
+          customerInfo: {
+            name: customerInfo.name || 'Cliente',
+            email: customerInfo.email || 'email não informado',
+            phone: customerInfo.phone || ''
+          },
+          items: items.map(item => ({
+            name: item.product.name,
+            quantity: item.quantity,
+            price: item.variant?.price || item.product.price
+          })),
+          amount: finalTotal
         }),
       });
 
-      if (emailResponse.ok) {
-        console.log('✅ Order confirmation email sent successfully');
+      if (paymentSuccessResponse.ok) {
+        console.log('✅ Payment success API called successfully');
       } else {
-        console.error('❌ Failed to send order confirmation email');
+        console.error('❌ Failed to call payment-success API');
       }
 
       // Marcar pedido como completo
