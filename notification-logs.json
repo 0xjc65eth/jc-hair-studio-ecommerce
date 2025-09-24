@@ -1,6 +1,22 @@
 [
   {
     "event": "order_confirmed",
+    "orderId": "MODE-TEST-1758744454444",
+    "customerEmail": "cliente.real@gmail.com",
+    "clientEmail": "juliana.dayane110@gmail.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Cliente Real da Silva",
+      "total": 99.99,
+      "itemCount": 1
+    },
+    "id": "LOG_1758744456537_0pfmukbjk",
+    "timestamp": "2025-09-24T20:07:36.537Z"
+  },
+  {
+    "event": "order_confirmed",
     "orderId": "MODE-TEST-1758744350666",
     "customerEmail": "cliente.real@gmail.com",
     "clientEmail": "juliana.dayane110@gmail.com",
