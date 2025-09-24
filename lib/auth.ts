@@ -1,13 +1,12 @@
 import { NextAuthOptions } from "next-auth"
-import { PrismaAdapter } from "@next-auth/prisma-adapter"
 import GoogleProvider from "next-auth/providers/google"
 import TwitterProvider from "next-auth/providers/twitter"
 import CredentialsProvider from "next-auth/providers/credentials"
 import bcrypt from "bcryptjs"
-import { prisma } from "@/lib/prisma"
+import { User } from "@/lib/mongodb"
 
 export const authOptions: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma),
+  // Remover PrismaAdapter - usar JWT strategy apenas
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -45,10 +44,8 @@ export const authOptions: NextAuthOptions = {
           return null
         }
 
-        const user = await prisma.user.findUnique({
-          where: {
-            email: credentials.email
-          }
+        const user = await User.findOne({
+          email: credentials.email
         })
 
         if (!user || !user.password) {
@@ -65,7 +62,7 @@ export const authOptions: NextAuthOptions = {
         }
 
         return {
-          id: user.id,
+          id: user._id.toString(),
           email: user.email,
           name: user.name,
           image: user.image,
@@ -100,16 +97,23 @@ export const authOptions: NextAuthOptions = {
     },
     async signIn({ user, account, profile }) {
       if (account?.provider === "google") {
-        // Marcar email como verificado para usuários Google
+        // Criar ou atualizar usuário Google no MongoDB
         if (user.email && profile?.email_verified) {
-          await prisma.user.update({
-            where: { email: user.email },
-            data: {
-              emailVerified: new Date(),
-              isVerified: true,
-              image: profile.picture
-            }
-          })
+          try {
+            await User.findOneAndUpdate(
+              { email: user.email },
+              {
+                name: user.name || profile.name,
+                image: profile.picture || user.image,
+                emailVerified: new Date(),
+                isVerified: true,
+                googleId: account.providerAccountId,
+              },
+              { upsert: true, new: true }
+            )
+          } catch (error) {
+            console.error('Erro ao salvar usuário Google:', error)
+          }
         }
       }
       return true

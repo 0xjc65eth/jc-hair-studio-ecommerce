@@ -964,7 +964,9 @@ export default function ProdutosPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const currentProducts = activeTab === 'progressivas' ? progressivasData : relaxamentosData;
+  const currentProducts = activeTab === 'progressivas'
+    ? progressivasData
+    : relaxamentosData;
   const filteredProducts = currentProducts.filter(product =>
     product.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
     product.marca.toLowerCase().includes(searchTerm.toLowerCase())
@@ -1041,7 +1043,10 @@ export default function ProdutosPage() {
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            {activeTab === 'progressivas' ? 'Progressivas Profissionais' : 'Relaxamentos Capilares'}
+            {activeTab === 'progressivas'
+              ? 'Progressivas Profissionais'
+              : 'Relaxamentos Capilares'
+            }
           </h2>
           <p className="text-gray-600">
             {activeTab === 'progressivas'

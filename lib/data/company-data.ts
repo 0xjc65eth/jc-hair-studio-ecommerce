@@ -58,7 +58,7 @@ export const COMPANY_DATA = {
         primary: true
       },
       {
-        number: "+32 497484720",
+        number: "+32 472384027",
         type: "WhatsApp/Telefone",
         country: "Bélgica",
         primary: false
@@ -81,13 +81,13 @@ export const COMPANY_DATA = {
   // Endereços
   addresses: {
     headquarters: {
-      street: "Rua das Flores, 62",
-      neighborhood: "Jardim Nova Esperança",
-      city: "Goiânia",
-      state: "Goiás",
-      country: "Brasil",
-      zipCode: "74000-000",
-      type: "Sede original"
+      street: "R. Gil Vicente, N°5",
+      neighborhood: "Torre da Marinha",
+      city: "Seixal",
+      state: "Setúbal",
+      country: "Portugal",
+      zipCode: "2840-474",
+      type: "Sede principal"
     },
     online: {
       description: "Loja online com atendimento internacional",

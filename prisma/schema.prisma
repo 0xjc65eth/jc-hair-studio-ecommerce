@@ -238,7 +238,11 @@ model Product {
   
   // Embedded options array
   options         ProductOption[]
-  
+
+  // Inventory relations
+  inventory       Inventory[]
+  lowStockAlerts  LowStockAlert[]
+
   @@map("products")
 }
 
@@ -337,7 +341,11 @@ model ProductVariant {
   // Timestamps
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  
+
+  // Inventory relations
+  inventory     Inventory[]
+  lowStockAlerts LowStockAlert[]
+
   @@map("product_variants")
 }
 
@@ -867,6 +875,98 @@ model ProductView {
   createdAt DateTime @default(now())
 
   @@map("product_views")
+}
+
+// ================================
+// INVENTORY MANAGEMENT
+// ================================
+
+model Inventory {
+  id                   String   @id @default(auto()) @map("_id") @db.ObjectId
+  productId            String   @db.ObjectId
+  variantId            String?  @db.ObjectId
+
+  // Stock details
+  sku                  String   @unique
+  quantity             Int      @default(0)
+  reservedQuantity     Int      @default(0)
+  lowStockThreshold    Int      @default(5)
+  reorderPoint         Int      @default(10)
+  reorderQuantity      Int      @default(50)
+
+  // Location and tracking
+  location             String?  // Warehouse location
+  trackQuantity        Boolean  @default(true)
+
+  // Relations
+  product              Product  @relation(fields: [productId], references: [id])
+  variant              ProductVariant? @relation(fields: [variantId], references: [id])
+  stockMovements       StockMovement[]
+
+  // Timestamps
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@unique([productId, variantId])
+  @@map("inventory")
+}
+
+model StockMovement {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  inventoryId String   @db.ObjectId
+
+  // Movement details
+  type        StockMovementType
+  quantity    Int
+  reason      String
+  reference   String?  // Order ID, purchase ID, etc.
+
+  // User tracking
+  userId      String?  @db.ObjectId
+
+  // Relations
+  inventory   Inventory @relation(fields: [inventoryId], references: [id])
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+
+  @@map("stock_movements")
+}
+
+enum StockMovementType {
+  IN         // Stock added
+  OUT        // Stock sold/used
+  ADJUSTMENT // Manual adjustment
+  RESERVED   // Stock reserved for order
+  RELEASED   // Reserved stock released
+}
+
+model LowStockAlert {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  productId   String   @db.ObjectId
+  variantId   String?  @db.ObjectId
+
+  // Alert details
+  currentStock Int
+  threshold    Int
+  status       AlertStatus @default(ACTIVE)
+
+  // Relations
+  product     Product @relation(fields: [productId], references: [id])
+  variant     ProductVariant? @relation(fields: [variantId], references: [id])
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([productId, variantId])
+  @@map("low_stock_alerts")
+}
+
+enum AlertStatus {
+  ACTIVE
+  RESOLVED
+  DISMISSED
 }
 
 // ================================

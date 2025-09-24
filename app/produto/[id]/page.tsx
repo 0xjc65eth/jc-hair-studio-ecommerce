@@ -8,6 +8,9 @@ import { ArrowLeft, Heart, Share2, ShoppingBag, Star, Truck, Shield, RotateCcw, 
 import { useProductData } from '../../../lib/hooks/useProductData';
 import ImageCarousel from '../../../components/products/ImageCarousel';
 
+// Import static products data from products page
+import { getStaticProductById } from '../../../lib/data/staticProducts';
+
 export default function ProductDetailPage() {
   const params = useParams();
   const router = useRouter();
@@ -15,7 +18,30 @@ export default function ProductDetailPage() {
   const [selectedVariant, setSelectedVariant] = useState(0);
 
   const { getProductById, getAllProducts } = useProductData();
-  const product = getProductById(params.id as string);
+  let product = getProductById(params.id as string);
+
+  // If not found in JSON data, try static products
+  if (!product) {
+    const staticProduct = getStaticProductById(params.id as string);
+    if (staticProduct) {
+      // Convert static product to compatible format
+      product = {
+        id: staticProduct.id,
+        name: staticProduct.nome,
+        nome: staticProduct.nome,
+        brand: staticProduct.marca,
+        marca: staticProduct.marca,
+        description: staticProduct.descricao,
+        descricao: staticProduct.descricao,
+        images: staticProduct.imagens,
+        imagens: staticProduct.imagens,
+        badge: staticProduct.badge,
+        preco_eur: staticProduct.pricing?.discountPrice || 0,
+        category: 'Produtos Capilares',
+        pricing: staticProduct.pricing
+      };
+    }
+  }
 
   if (!product) {
     return (
@@ -61,8 +87,9 @@ export default function ProductDetailPage() {
     }
   };
 
-  const relatedProducts = products
-    .filter(p => p.id !== product.id && p.subcategoria === product.subcategoria)
+  const allProducts = getAllProducts();
+  const relatedProducts = allProducts
+    .filter(p => p.id !== product.id && (p.subcategoria === product.subcategoria || p.category === product.category))
     .slice(0, 4);
 
   return (
@@ -150,7 +177,7 @@ export default function ProductDetailPage() {
             <div className="border-t border-b border-gray-100 py-6">
               <div className="flex items-center gap-4 mb-2">
                 <span className="text-4xl font-bold text-amber-600">
-                  €{product.preco_eur.toFixed(2)}
+                  €{(product.preco_eur || product.pricing?.discountPrice || 0).toFixed(2)}
                 </span>
                 <span className="text-lg text-gray-500">
                 </span>
@@ -264,7 +291,7 @@ export default function ProductDetailPage() {
                     </h4>
                     <div className="flex items-center gap-2">
                       <span className="text-lg font-bold text-amber-600">
-                        €{relatedProduct.preco_eur.toFixed(2)}
+                        €{(relatedProduct.preco_eur || relatedProduct.pricing?.discountPrice || 0).toFixed(2)}
                       </span>
                     </div>
                   </div>

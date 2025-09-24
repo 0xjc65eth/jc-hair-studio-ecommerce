@@ -10,7 +10,7 @@ interface WhatsAppButtonProps {
   className?: string;
 }
 
-const WHATSAPP_NUMBER = '+320494989860';
+const WHATSAPP_NUMBER = '+32472384027';
 const BUSINESS_HOURS = {
   start: 9,
   end: 18,
@@ -18,12 +18,14 @@ const BUSINESS_HOURS = {
 };
 
 const QUICK_MESSAGES = [
-  '👋 Olá! Gostaria de saber mais sobre os produtos.',
-  '📦 Quero informações sobre entrega para meu país.',
-  '🎯 Preciso de ajuda para escolher o produto ideal.',
-  '💰 Vocês têm promoções ou descontos especiais?',
-  '🚚 Como funciona o rastreamento do pedido?',
-  '✅ Quero confirmar se o produto é original.'
+  '👋 Olá! Gostaria de saber mais sobre os produtos e serviços da JC Hair Studio.',
+  '📦 Preciso de informações sobre entrega e prazos para minha região.',
+  '🎯 Estou procurando o produto ideal para meu tipo de cabelo, podem me ajudar?',
+  '💰 Gostaria de saber sobre promoções e descontos especiais disponíveis.',
+  '🚚 Como posso acompanhar o status e rastreamento do meu pedido?',
+  '✅ Quero confirmar a autenticidade e procedência dos produtos.',
+  '💄 Tenho dúvidas sobre aplicação e cuidados pós-tratamento.',
+  '🌟 Gostaria de agendar uma consulta ou atendimento personalizado.'
 ];
 
 export default function WhatsAppButton({
@@ -97,7 +99,7 @@ export default function WhatsAppButton({
   };
 
   const openWhatsApp = (message?: string) => {
-    const defaultMessage = 'Olá! Vim do site JC Hair Studio e gostaria de saber mais sobre os produtos.';
+    const defaultMessage = 'Olá! Vim do site JC Hair Studio e gostaria de saber mais sobre os produtos profissionais para cabelo. Podem me ajudar com informações sobre tratamentos, mega hair e produtos de qualidade?';
     const text = encodeURIComponent(message || customMessage || defaultMessage);
     const url = `https://wa.me/${WHATSAPP_NUMBER.replace('+', '')}?text=${text}`;
     window.open(url, '_blank');

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import PointsService from '@/lib/services/pointsService';
-import prisma from '@/lib/prisma';
+import { User } from '@/lib/mongodb';
 
 // GET /api/points - Obter saldo e histórico de pontos do usuário
 export async function GET(request: NextRequest) {
@@ -22,15 +22,12 @@ export async function GET(request: NextRequest) {
     const includeHistory = searchParams.get('includeHistory') === 'true';
 
     // Buscar dados do usuário
-    const user = await prisma.user.findUnique({
-      where: { id: session.user.id },
-      select: {
-        totalPoints: true,
-        availablePoints: true,
-        usedPoints: true,
-        tierLevel: true,
-        tierProgress: true
-      }
+    const user = await User.findById(session.user.id).select({
+      totalPoints: 1,
+      availablePoints: 1,
+      usedPoints: 1,
+      tierLevel: 1,
+      tierProgress: 1
     });
 
     if (!user) {
@@ -86,10 +83,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Verificar se é admin (você pode ajustar esta verificação)
-    const user = await prisma.user.findUnique({
-      where: { id: session.user.id },
-      select: { role: true }
-    });
+    const user = await User.findById(session.user.id).select('role');
 
     if (user?.role !== 'ADMIN' && user?.role !== 'SUPER_ADMIN') {
       return NextResponse.json(

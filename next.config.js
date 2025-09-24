@@ -70,6 +70,7 @@ const nextConfig = {
 
   // Output configuration
   output: 'standalone',
+  outputFileTracingRoot: __dirname,
 
   // Headers for security
   async headers() {

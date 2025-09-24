@@ -2,11 +2,14 @@ import sgMail from '@sendgrid/mail';
 import logger from '@/lib/logger';
 
 // Configurar SendGrid API Key
-const SENDGRID_ENABLED = !!process.env.SENDGRID_API_KEY && process.env.SENDGRID_API_KEY !== 'SG.your-sendgrid-api-key';
+const SENDGRID_ENABLED = !!process.env.SENDGRID_API_KEY && process.env.SENDGRID_API_KEY !== 'SG.your-sendgrid-api-key' && process.env.SENDGRID_API_KEY.startsWith('SG.');
+const TEST_MODE = process.env.NODE_ENV === 'test' || process.env.SENDGRID_TEST_MODE === 'true' || !SENDGRID_ENABLED;
 
-if (SENDGRID_ENABLED) {
+if (SENDGRID_ENABLED && !TEST_MODE) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
   console.log('✅ SendGrid configured successfully');
+} else if (TEST_MODE) {
+  console.log('🧪 SendGrid in test mode - emails will be mocked');
 } else {
   console.warn('⚠️ SendGrid not configured - using SENDGRID_API_KEY:', process.env.SENDGRID_API_KEY ? 'EXISTS' : 'MISSING');
 }
@@ -131,7 +134,7 @@ export async function sendContactEmail(data: ContactFormData): Promise<boolean> 
 
           <div style="background: #374151; color: white; padding: 20px; text-align: center;">
             <p style="margin: 0;">JC Hair Studio's 62 - Tradição Familiar há mais de 40 anos</p>
-            <p style="margin: 5px 0;">WhatsApp: +351 928375226 | +32 497484720</p>
+            <p style="margin: 5px 0;">WhatsApp: +351 928375226 | +32 472384027</p>
           </div>
         </div>
       `,
@@ -188,8 +191,8 @@ export async function sendContactEmail(data: ContactFormData): Promise<boolean> 
               <a href="https://wa.me/351928375226" style="display: inline-block; background: #25d366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; margin-right: 10px;">
                 📱 WhatsApp Portugal: +351 928375226
               </a>
-              <a href="https://wa.me/32497484720" style="display: inline-block; background: #25d366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px;">
-                📱 WhatsApp Bélgica: +32 497484720
+              <a href="https://wa.me/32472384027" style="display: inline-block; background: #25d366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px;">
+                📱 WhatsApp Bélgica: +32 472384027
               </a>
             </div>
 
@@ -219,7 +222,7 @@ export async function sendContactEmail(data: ContactFormData): Promise<boolean> 
 
         Precisa de ajuda urgente? Entre em contato via WhatsApp:
         Portugal: +351 928375226
-        Bélgica: +32 497484720
+        Bélgica: +32 472384027
 
         Horário de atendimento:
         Segunda a Sexta: 09:00 - 18:00 (Horário de Brasília)
@@ -478,9 +481,9 @@ export async function sendOrderConfirmationEmail(data: OrderEmailData): Promise<
                   <span style="margin-right: 8px; font-size: 18px;">📱</span>
                   Portugal: +351 928375226
                 </a>
-                <a href="https://wa.me/32497484720" style="display: inline-flex; align-items: center; background: rgba(255,255,255,0.2); color: white; padding: 12px 20px; text-decoration: none; border-radius: 50px; font-weight: 600; backdrop-filter: blur(10px); transition: all 0.3s ease;">
+                <a href="https://wa.me/32472384027" style="display: inline-flex; align-items: center; background: rgba(255,255,255,0.2); color: white; padding: 12px 20px; text-decoration: none; border-radius: 50px; font-weight: 600; backdrop-filter: blur(10px); transition: all 0.3s ease;">
                   <span style="margin-right: 8px; font-size: 18px;">📱</span>
-                  Bélgica: +32 497484720
+                  Bélgica: +32 472384027
                 </a>
               </div>
 

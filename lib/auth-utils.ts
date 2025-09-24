@@ -1,5 +1,5 @@
 import { getServerSession } from 'next-auth'
-import { authOptions } from '@/lib/auth-options'
+import { authOptions } from '@/lib/auth'
 
 // Middleware to protect admin routes
 export const protectAdmin = (handler: any) => {

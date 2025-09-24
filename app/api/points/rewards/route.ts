@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import PointsService from '@/lib/services/pointsService';
-import prisma from '@/lib/prisma';
+import { User } from '@/lib/mongodb';
 
 // GET /api/points/rewards - Buscar recompensas disponíveis
 export async function GET(request: NextRequest) {
@@ -17,9 +17,9 @@ export async function GET(request: NextRequest) {
     }
 
     // Buscar tier do usuário
-    const user = await prisma.user.findUnique({
-      where: { id: session.user.id },
-      select: { tierLevel: true, availablePoints: true }
+    const user = await User.findById(session.user.id).select({
+      tierLevel: 1,
+      availablePoints: 1
     });
 
     if (!user) {

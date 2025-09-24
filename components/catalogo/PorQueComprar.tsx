@@ -73,7 +73,7 @@ const BENEFITS = [
     title: 'Suporte em Português',
     description: 'Atendimento personalizado em português por brasileiros na Europa.',
     details: [
-      'WhatsApp direto: +320494989860',
+      'WhatsApp direto: +32472384027',
       'E-mail em português',
       'Horário comercial europeu',
       'Conhecimento técnico brasileiro'

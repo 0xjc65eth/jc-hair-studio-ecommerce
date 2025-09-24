@@ -53,7 +53,7 @@ export default function TermosUso() {
                     <h3 className="font-semibold text-blue-800 mb-2">Contactos</h3>
                     <p><strong>Sede Social:</strong> Goiânia, Goiás, Brasil</p>
                     <p><strong>Email:</strong> contato@jchairstudios62.xyz</p>
-                    <p><strong>WhatsApp:</strong> +351 928375226 | +32 497484720</p>
+                    <p><strong>WhatsApp:</strong> +351 928375226 | +32 472384027</p>
                     <p><strong>Horário:</strong> Segunda a Sexta, 9h às 18h (Horário de Brasília)</p>
                   </div>
                 </div>

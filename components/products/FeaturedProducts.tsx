@@ -4,150 +4,150 @@ import React from 'react';
 import ProductCard from './ProductCard';
 
 export default function FeaturedProducts() {
-  // Products from our European pricing catalog
+  // Featured products from our Brazilian beauty catalog
   const featuredProductsData = [
-    // Coloração Amend - from products-with-european-pricing.json
+    // COCOCHOCO Premium Keratin - Best seller progressiva
     {
-      id: 'amend-coloracao-profissional',
-      nome: 'Amend Coloração Capilar Profissional',
-      marca: 'Amend',
-      descricao: 'Coloração profissional brasileira com tecnologia avançada. Cores intensas e duradouras com proteção e nutrição dos fios.',
-      imagens: ['/images/products/tinta_amend/tinta_amend_1.PNG'],
-      badge: 'PROFISSIONAL',
+      id: 'cocochoco-original-premium',
+      nome: 'COCOCHOCO Original Premium Keratin Treatment',
+      marca: 'COCOCHOCO',
+      descricao: 'Tratamento premium de queratina com terapia de chocolate. Fórmula profissional que proporciona alisamento duradouro, brilho intenso e nutrição profunda para resultados excepcionais.',
+      imagens: ['/images/products/progressivas_diversas/progressivas_diversas_1.JPG'],
+      badge: 'BEST SELLER',
       destaque: true,
       pricing: {
-        basePrice: 12.00,
-        ourPrice: 13.20,
-        discountPrice: 10.56,
-        savings: 2.64,
-        margin: "10%",
-        competitive: "Estimativa baseada em produtos brasileiros premium"
+        basePrice: 189.90,
+        ourPrice: 284.85,
+        discountPrice: 259.90,
+        savings: 24.95,
+        margin: "37%",
+        competitive: "Baseado em progressivas premium europeias"
       }
     },
-    // Tinta Wella - from catalog
+    // Mega Hair Premium - Liso Loiro Platinado
     {
-      id: 'wella-koleston-perfect',
-      nome: 'Wella Koleston Perfect Coloração',
-      marca: 'Wella',
-      descricao: 'Coloração profissional Wella com tecnologia ME+ para redução de alergias. Cobertura uniforme e cores vibrantes.',
-      imagens: ['/images/products/tinta_wella/tinta_wella_2.PNG'],
-      badge: 'HIPOALERGÊNICA',
+      id: 'mega-hair-liso-loiro-platinado',
+      nome: 'Mega Hair Liso Loiro Platinado 613 - 50cm',
+      marca: 'JC Hair Studio\'s 62',
+      descricao: 'Extensão de cabelo 100% humano Remy europeu, loiro platinado 613 com 50cm de comprimento. Cutículas alinhadas, brilho natural e resistência máxima.',
+      imagens: ['/images/mega-hair/mega-hair-001.jpg'],
+      badge: 'PREMIUM',
       destaque: true,
       pricing: {
-        basePrice: 11.50,
-        ourPrice: 12.65,
-        discountPrice: 10.12,
-        savings: 2.53,
+        basePrice: 85.00,
+        ourPrice: 120.00,
+        discountPrice: 85.00,
+        savings: 35.00,
         margin: "10%",
-        competitive: "Baseado em preços Wella Europa"
+        competitive: "Baseado em mega hair premium europeu"
       }
     },
-    // Base Bruna Tavares - from bruna-tavares catalog
+    // Base Mari Maria - Bestseller
+    {
+      id: 'mari-maria-base-amndoa',
+      nome: 'Base Mari Maria - Tom Amêndoa',
+      marca: 'Mari Maria',
+      descricao: 'Base líquida profissional Mari Maria no tom Amêndoa. Acabamento natural e cobertura modulável para todos os tipos de pele.',
+      imagens: ['/images/products/mari-maria-bases/mari-maria-base-amndoa.png'],
+      badge: 'BESTSELLER',
+      destaque: true,
+      pricing: {
+        basePrice: 32.00,
+        ourPrice: 35.20,
+        discountPrice: 28.16,
+        savings: 7.04,
+        margin: "10%",
+        competitive: "Baseado em bases premium do mercado europeu"
+      }
+    },
+    // Base Bruna Tavares - Premium
     {
       id: 'bruna-tavares-bt-skin-d30',
       nome: 'Base BT Skin D30 - Tom Escuro',
       marca: 'Bruna Tavares',
-      descricao: 'Base líquida BT Skin com fórmula avançada, cobertura natural e alta pigmentação. Desenvolvida com ácido hialurônico para hidratação prolongada.',
+      descricao: 'Base líquida com cobertura natural, alta pigmentação e acabamento aveludado. Ideal para peles escuras com subtom quente.',
       imagens: ['/images/products/bruna-tavares-bt-skin/BT Skin D30 Base Bruna Tavares.png'],
+      badge: 'DESTAQUE',
+      destaque: true,
+      pricing: {
+        basePrice: 27.50,
+        ourPrice: 30.25,
+        discountPrice: 24.20,
+        savings: 6.05,
+        margin: "10%",
+        competitive: "Baseado em bases premium do mercado europeu"
+      }
+    },
+    // Mega Hair Castanho Natural
+    {
+      id: 'mega-hair-liso-castanho-natural',
+      nome: 'Mega Hair Liso Castanho Natural - 55cm',
+      marca: 'JC Hair Studio\'s 62',
+      descricao: 'Mega hair castanho natural premium brasileiro com 55cm de comprimento. Alta densidade 110g, movimento orgânico e compatibilidade perfeita com cabelos nativos.',
+      imagens: ['/images/mega-hair/mega-hair-002.jpg'],
+      badge: 'NATURAL',
+      destaque: true,
+      pricing: {
+        basePrice: 90.00,
+        ourPrice: 130.00,
+        discountPrice: 90.00,
+        savings: 40.00,
+        margin: "10%",
+        competitive: "Baseado em mega hair premium brasileiro"
+      }
+    },
+    // COCOCHOCO Gold - Progressiva Premium
+    {
+      id: 'cocochoco-gold-premium',
+      nome: 'COCOCHOCO Gold Premium Keratin Treatment',
+      marca: 'COCOCHOCO',
+      descricao: 'Tratamento de queratina dourado com brilho extra. Fórmula premium para resultados profissionais com máximo brilho e alisamento perfeito.',
+      imagens: ['/images/products/progressivas_diversas/progressivas_diversas_2.JPG'],
       badge: 'PREMIUM',
       destaque: true,
       pricing: {
-        basePrice: 27.50,
-        ourPrice: 30.25,
-        discountPrice: 24.20,
-        savings: 6.05,
-        margin: "10%",
-        competitive: "Baseado em catálogo existente + pesquisa Europa"
+        basePrice: 149.90,
+        ourPrice: 224.85,
+        discountPrice: 199.90,
+        savings: 24.95,
+        margin: "33.4%",
+        competitive: "Baseado em progressivas premium europeias"
       }
     },
-    // Tinta L'Oréal - from catalog
+    // Novex Hidratação - Cuidado capilar
     {
-      id: 'loreal-excellage-cores-variadas',
-      nome: 'L\'Oréal Paris Excellence Age Perfect',
-      marca: 'L\'Oréal Paris',
-      descricao: 'Coloração permanente especialmente desenvolvida para cabelos maduros. Cobertura total dos brancos com cor vibrante que dura até 100 dias.',
-      imagens: ['/images/products/tinta_loreal/tinta_loreal_1.PNG'],
-      badge: 'BESTSELLER',
+      id: 'novex-creme-antiporosidade-rosa',
+      nome: 'Novex Creme Antiporosidade 72H Rosa - Cachos Mega Volume',
+      marca: 'NOVEX',
+      descricao: 'Creme para pentear com fórmula antiporosidade que proporciona volume e definição para cabelos ressecados. Hidratação intensa por até 72 horas.',
+      imagens: ['/images/products/produtos_de_hidratacao/produtos_de_hidratacao_1.WEBP'],
+      badge: 'BEST SELLER',
       destaque: true,
       pricing: {
-        basePrice: 8.50,
-        ourPrice: 9.35,
-        discountPrice: 7.48,
-        savings: 1.87,
-        margin: "10%",
-        competitive: "Baseado em preços farmácias europeias"
+        basePrice: 10.59,
+        ourPrice: 15.89,
+        discountPrice: 14.50,
+        savings: 1.39,
+        margin: "37%",
+        competitive: "Baseado em produtos de hidratação europeus"
       }
     },
-    // Botox Capilar - from catalog
+    // Mega Hair Preto Premium
     {
-      id: 'forever-liss-btx-zero-formol-250g',
-      nome: 'Forever Liss BTX Zero Formol 250g',
-      marca: 'Forever Liss',
-      descricao: 'Botox capilar zero formol que alisa, reconstrói e hidrata profundamente os fios. Resultado natural com redução de volume e frizz.',
-      imagens: ['/images/products/botox/botox_1.png'],
-      badge: 'SEM FORMOL',
+      id: 'mega-hair-liso-preto-premium',
+      nome: 'Mega Hair Liso Preto Premium - 60cm',
+      marca: 'JC Hair Studio\'s 62',
+      descricao: 'Mega hair preto intenso premium, 60cm, brilho natural excepcional. Densidade máxima e brilho espelhado diamond.',
+      imagens: ['/images/mega-hair/mega-hair-004.jpg'],
+      badge: 'LUXO',
       destaque: true,
       pricing: {
-        basePrice: 22.90,
-        ourPrice: 25.19,
-        discountPrice: 20.15,
-        savings: 5.04,
+        basePrice: 95.00,
+        ourPrice: 130.00,
+        discountPrice: 95.00,
+        savings: 35.00,
         margin: "10%",
-        competitive: "Baseado preço brasileiro convertido + margem importação"
-      }
-    },
-    // Progressiva - from catalog
-    {
-      id: 'cadiveu-professional-brasil-cacau-1l',
-      nome: 'Cadiveu Professional Brasil Cacau Alisante 1L',
-      marca: 'Cadiveu',
-      descricao: 'Tratamento alisante profissional com óleo de cacau que proporciona cabelos lisos, sedosos e com brilho intenso. Reduz o volume e elimina o frizz por até 4 meses.',
-      imagens: ['/images/products/progressivas_diversas/progressivas_diversas_1.JPG'],
-      badge: 'PROFISSIONAL',
-      destaque: true,
-      pricing: {
-        basePrice: 222.27,
-        ourPrice: 244.50,
-        discountPrice: 195.60,
-        savings: 48.90,
-        margin: "10%",
-        competitive: "Baseado em Bellasil €222.27"
-      }
-    },
-    // Tinta Beauty Color - from catalog
-    {
-      id: 'beauty-color-economica',
-      nome: 'Beauty Color Coloração Vibrante',
-      marca: 'Beauty Color',
-      descricao: 'Coloração brasileira econômica com cores vibrantes e proteção dos fios. Ótima relação custo-benefício.',
-      imagens: ['/images/products/tinta_beauty_color/tinta_beauty_color_1.PNG'],
-      badge: 'ECONÔMICA',
-      destaque: true,
-      pricing: {
-        basePrice: 6.50,
-        ourPrice: 7.15,
-        discountPrice: 5.72,
-        savings: 1.43,
-        margin: "10%",
-        competitive: "Posicionamento econômico brasileiro"
-      }
-    },
-    // Base Bruna Tavares Variação - from catalog
-    {
-      id: 'bruna-tavares-bt-skin-m20',
-      nome: 'Base BT Skin M20 - Tom Médio',
-      marca: 'Bruna Tavares',
-      descricao: 'Base líquida BT Skin para peles médias com subtom quente. Acabamento natural aveludado com tecnologia brasileira de ponta.',
-      imagens: ['/images/products/bruna-tavares-bt-skin/BT Skin M20 Base Bruna Tavares.png'],
-      badge: 'TOM MÉDIO',
-      destaque: true,
-      pricing: {
-        basePrice: 27.50,
-        ourPrice: 30.25,
-        discountPrice: 24.20,
-        savings: 6.05,
-        margin: "10%",
-        competitive: "Baseado em catálogo existente + pesquisa Europa"
+        competitive: "Baseado em mega hair premium brasileiro"
       }
     }
   ];

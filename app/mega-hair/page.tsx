@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getLegacyCompatibleProducts } from '@/lib/data/megaHairProducts';
 import { useCart } from '@/lib/stores/cartStore';
@@ -50,6 +52,7 @@ interface Filters {
 }
 
 export default function MegaHairCatalog() {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState<MegaHairProduct | null>(null);
   const [showFilters, setShowFilters] = useState(true);
@@ -205,72 +208,47 @@ export default function MegaHairCatalog() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Simple Header */}
-      <section className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-20">
+    <div className="min-h-screen bg-white">
+      {/* Minimal Header */}
+      <section className="bg-white border-b border-gray-200 py-12">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-6xl font-thin mb-6 tracking-wide"
-            >
-              Catálogo <span className="font-light text-rose-400">Mega Hair</span>
-            </motion.h1>
-            <div className="w-32 h-1 bg-gradient-to-r from-rose-400 to-rose-600 mx-auto mb-8 rounded-full"></div>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-xl text-gray-300 font-light leading-relaxed mb-8"
-            >
-              {allProducts.length} produtos selecionados • Cabelos 100% naturais •
-              Entrega em toda Europa
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="flex items-center justify-center gap-6 text-sm text-gray-400"
-            >
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                <span>{filteredProducts.filter(p => p.inStock).length} Disponíveis</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                <span>{getCartItemCount()} no Carrinho</span>
-              </div>
-            </motion.div>
+          <div className="text-center">
+            <h1 className="text-3xl font-normal text-gray-900 mb-3">
+              Mega Hair Professional
+            </h1>
+            <p className="text-gray-600 mb-6">
+              {allProducts.length} produtos • Extensões de cabelo premium
+            </p>
+            <div className="flex items-center justify-center gap-4 text-sm text-gray-500">
+              <span>{filteredProducts.filter(p => p.inStock).length} em estoque</span>
+              <span>•</span>
+              <span>{getCartItemCount()} no carrinho</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Filter Controls */}
-      <section className="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
+      {/* Clean Filter Bar */}
+      <section className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between py-4">
-            <div className="flex items-center gap-4">
-              <button
-                onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
-              >
-                <span className="text-sm">🔍</span>
-                <span className="text-sm font-medium">
-                  {showFilters ? 'Ocultar Filtros' : 'Mostrar Filtros'}
-                </span>
-              </button>
-              <div className="text-sm text-gray-600">
-                {filteredProducts.length} de {allProducts.length} produtos
-              </div>
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded text-sm hover:border-gray-400 transition-colors"
+            >
+              Filtros {showFilters ? '−' : '+'}
+            </button>
+
+            <div className="text-sm text-gray-600">
+              {filteredProducts.length} produtos
             </div>
 
             {(filters.type !== 'todos' || filters.color !== 'todos' || filters.length !== 'todos' || filters.priceRange !== 'todos' || filters.inStock) && (
               <button
                 onClick={clearAllFilters}
-                className="text-sm text-rose-600 hover:text-rose-800 font-medium"
+                className="text-sm text-gray-600 hover:text-gray-900 underline"
               >
-                Limpar Filtros
+                Limpar
               </button>
             )}
           </div>
@@ -429,78 +407,54 @@ export default function MegaHairCatalog() {
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
               >
                 {filteredProducts.map((product, index) => (
-                  <motion.div
+                  <div
                     key={product.id}
-                    layout
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ delay: index * 0.02 }}
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
+                    className="bg-white border border-gray-200 overflow-hidden group"
                   >
                     {/* Product Image */}
-                    <div className="relative h-64 overflow-hidden">
-                      {product.badge && (
-                        <span className="absolute top-3 right-3 z-10 px-3 py-1 bg-rose-600 text-white text-xs font-semibold rounded-full">
-                          {product.badge}
+                    <Link href={`/produto/${product.id}`} className="block">
+                      <div className="relative h-48 bg-gray-100">
+                        {!product.inStock && (
+                          <div className="absolute inset-0 bg-white/80 flex items-center justify-center z-10">
+                            <span className="text-gray-600 text-sm">Esgotado</span>
+                          </div>
+                        )}
+                        <span className="absolute top-2 left-2 bg-black/80 text-white px-2 py-1 text-xs">
+                          {product.length}cm
                         </span>
-                      )}
-                      <span className="absolute top-3 left-3 z-10 px-3 py-1 bg-gray-900/90 text-white text-sm rounded-full">
-                        {product.length} cm
-                      </span>
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-500"
-                          loading="lazy"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.src = 'https://via.placeholder.com/400x300/f3f4f6/9ca3af?text=Mega+Hair';
-                          }}
-                        />
-                      </div>
-
-                      {!product.inStock && (
-                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                          <span className="text-white font-medium">Indisponível</span>
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={product.image}
+                            alt={product.name}
+                            fill
+                            className="object-cover"
+                            loading="lazy"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              target.src = '/images/placeholder-product.jpg';
+                            }}
+                          />
                         </div>
-                      )}
-                    </div>
+                      </div>
+                    </Link>
 
                     {/* Product Info */}
-                    <div className="p-5">
-                      <div className="text-xs text-rose-600 font-semibold uppercase tracking-wider mb-1">
-                        {typeNames[product.type]} • {product.origin}
+                    <div className="p-4">
+                      <div className="text-xs text-gray-500 mb-1">
+                        {typeNames[product.type]}
                       </div>
-                      <h3 className="text-lg font-medium mb-3 text-gray-900 line-clamp-2">
+                      <h3 className="text-sm font-medium mb-2 text-gray-900">
                         {product.name}
                       </h3>
 
-                      {/* Rating */}
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="flex text-yellow-400">
-                          {[...Array(5)].map((_, i) => (
-                            <span key={i} className="text-sm">
-                              {i < Math.floor(product.rating) ? '★' : '☆'}
-                            </span>
-                          ))}
-                        </div>
-                        <span className="text-xs text-gray-500">({product.reviews})</span>
-                      </div>
-
                       {/* Specs */}
-                      <div className="flex gap-4 text-xs text-gray-600 mb-4">
-                        <span>📏 {product.length}cm</span>
-                        <span>⚖️ {product.weight}g</span>
-                        <span>🎨 Premium</span>
+                      <div className="text-xs text-gray-500 mb-3">
+                        {product.length}cm • {product.weight}g • {product.origin}
                       </div>
 
                       {/* Price */}
-                      <div className="mb-4">
-                        <div className="text-2xl font-light text-rose-600">{formatPrice(product.price)}</div>
-                        <div className="text-xs text-gray-500">Por 100g + Frete</div>
+                      <div className="mb-3">
+                        <div className="text-lg font-medium text-gray-900">{formatPrice(product.price)}</div>
                       </div>
 
                       {/* Action Buttons */}
@@ -508,27 +462,27 @@ export default function MegaHairCatalog() {
                         <button
                           onClick={() => addToCart(product)}
                           disabled={!product.inStock}
-                          className={`w-full py-3 rounded-lg font-medium transition-all duration-300 ${
+                          className={`w-full py-2 text-sm font-medium transition-colors ${
                             product.inStock
                               ? isInCart(product.id)
-                                ? 'bg-green-600 text-white'
-                                : 'bg-gray-900 text-white hover:bg-rose-600 transform hover:-translate-y-0.5'
-                              : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                                ? 'bg-gray-900 text-white'
+                                : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                              : 'bg-gray-100 text-gray-400 cursor-not-allowed'
                           }`}
                         >
-                          {!product.inStock ? 'Indisponível' :
-                           isInCart(product.id) ? 'No Carrinho ✓' : 'Adicionar ao Carrinho'}
+                          {!product.inStock ? 'Esgotado' :
+                           isInCart(product.id) ? 'No Carrinho' : 'Adicionar'}
                         </button>
 
-                        <button
-                          onClick={() => setSelectedProduct(product)}
-                          className="w-full py-2 border border-gray-300 text-gray-700 rounded-lg hover:border-rose-600 hover:text-rose-600 transition-colors text-sm"
+                        <Link
+                          href={`/produto/${product.id}`}
+                          className="block w-full py-2 text-center text-sm text-gray-600 hover:text-gray-900 border border-gray-200 hover:border-gray-300 transition-colors"
                         >
                           Ver Detalhes
-                        </button>
+                        </Link>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </motion.div>
             )}

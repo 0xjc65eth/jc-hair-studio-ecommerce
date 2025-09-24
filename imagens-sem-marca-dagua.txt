@@ -1,0 +1,31 @@
+🎯 IMAGENS DE MEGAHAIR SEM MARCA D'ÁGUA "LOJA DO CABELO"
+================================================================
+
+✅ IMAGENS LIMPAS (atualizadas em 24/09/2025):
+- mega-hair-002.jpg (363,634 bytes)
+- mega-hair-011.jpg (991,292 bytes)
+- mega-hair-017.jpg (902,825 bytes)
+- mega-hair-018.jpg (883,422 bytes)
+- mega-hair-019.jpg (1,005,793 bytes)
+- mega-hair-020.jpg (1,060,148 bytes)
+
+📍 Localização: public/images/mega-hair/
+🌐 URLs para acessar:
+- http://localhost:3000/images/mega-hair/mega-hair-002.jpg
+- http://localhost:3000/images/mega-hair/mega-hair-011.jpg
+- http://localhost:3000/images/mega-hair/mega-hair-017.jpg
+- http://localhost:3000/images/mega-hair/mega-hair-018.jpg
+- http://localhost:3000/images/mega-hair/mega-hair-019.jpg
+- http://localhost:3000/images/mega-hair/mega-hair-020.jpg
+
+⚠️ IMAGENS AINDA COM MARCA D'ÁGUA (70 imagens restantes):
+- Todas as outras imagens (mega-hair-001.jpg até mega-hair-076.jpg, exceto as 6 listadas acima)
+- Datadas de 14/09/2025 - precisam ser substituídas por versões sem marca d'água
+
+📈 ESTATÍSTICAS:
+- Total de imagens: 76
+- Sem marca d'água: 6 (7.9%)
+- Com marca d'água: 70 (92.1%)
+
+🔗 Status Git:
+As imagens 002, 011, 017, 018, 019, 020 estão marcadas como modificadas (M) no git status.

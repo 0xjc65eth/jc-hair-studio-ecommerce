@@ -5,6 +5,7 @@ import { Button } from '../../components/ui/Button';
 import ProductCard from '../../components/products/ProductCard';
 import { useCart } from '../../lib/stores/cartStore'; // Import cart store for shopping cart functionality
 import { ShoppingBag, Search, Filter, Heart, Eye, Shuffle, Grid, List, Palette, Sparkles } from 'lucide-react';
+import { allEsmaltesData } from '../../lib/data/esmaltesProducts';
 
 // Função para gerar dados das tintas com numeração sequencial
 const gerarTintasLOreal = () => {
@@ -191,24 +192,44 @@ const gerarTintasAltaModa = () => {
   return tintasAltaModa;
 };
 
-// Dados das tintas com imagens reais validadas - CATÁLOGO COMPLETO
+// Converter esmaltes IMPALA oficiais para formato compatível
+const esmaltesFormatados = allEsmaltesData.map(esmalte => ({
+  id: esmalte.id,
+  nome: esmalte.nome,
+  marca: esmalte.marca,
+  categoria: 'Esmaltes',
+  cor: esmalte.cores?.[0]?.nome || 'Variado',
+  tom: esmalte.cores?.[0]?.codigo || '',
+  descricao: esmalte.descricao,
+  imagem: esmalte.imagens[0],
+  pricing: esmalte.pricing,
+  rating: 4.5 + (Math.random() * 0.4), // Ratings altos para IMPALA oficial
+  reviewsCount: 30 + Math.floor(Math.random() * 40),
+  inStock: true,
+  tags: esmalte.tags,
+  badge: esmalte.badge
+}));
+
+// Dados das tintas com imagens reais validadas - CATÁLOGO COMPLETO + ESMALTES
 const tintasCapilares = [
   ...gerarTintasLOreal(),      // 22 produtos
   ...gerarTintasBioColor(),    // 23 produtos
   ...gerarTintasBeautyColor(), // 44 produtos (removidos 2 placeholders)
   ...gerarTintasAmend(),       // 6 produtos
   ...gerarTintasNutrisse(),    // 9 produtos
-  ...gerarTintasAltaModa()     // 29 produtos
-]; // Total: 133 produtos
+  ...gerarTintasAltaModa(),    // 29 produtos
+  ...esmaltesFormatados        // 56 produtos IMPALA oficiais
+]; // Total: 189 produtos
 
-// Filtros específicos para tintas
+// Filtros específicos para tintas e esmaltes
 const marcasTintas = [
   { value: 'LOREAL', label: "L'Oréal Paris", count: 22 },
   { value: 'BIOCOLOR', label: 'BioColor', count: 23 },
   { value: 'BEAUTY COLOR', label: 'Beauty Color', count: 44 },
   { value: 'AMEND', label: 'Amend', count: 6 },
   { value: 'GARNIER', label: 'Garnier Nutrisse', count: 9 },
-  { value: 'ALFAPARF', label: 'Alfaparf Alta Moda', count: 29 }
+  { value: 'ALFAPARF', label: 'Alfaparf Alta Moda', count: 29 },
+  { value: 'IMPALA', label: 'IMPALA', count: 56 }
 ];
 
 const categoriasTintas = [
@@ -218,7 +239,8 @@ const categoriasTintas = [
   { value: 'premium', label: 'Coloração Premium' },
   { value: 'profissional', label: 'Coloração Profissional' },
   { value: 'nutritiva', label: 'Coloração Nutritiva' },
-  { value: 'italiana', label: 'Coloração Italiana' }
+  { value: 'italiana', label: 'Coloração Italiana' },
+  { value: 'esmaltes', label: 'Esmaltes IMPALA' }
 ];
 
 const coresTintas = [
@@ -239,9 +261,14 @@ const faixasPreco = [
   { value: '25+', label: '€25+' }
 ];
 
+// Separar produtos por categoria
+const tintasOnly = tintasCapilares.filter(produto => produto.categoria !== 'Esmaltes');
+const esmaltesOnly = tintasCapilares.filter(produto => produto.categoria === 'Esmaltes');
+
 // Componente principal
 export default function TintasPage() {
   // Estados para filtros
+  const [activeSection, setActiveSection] = useState('todos'); // 'todos', 'tintas', 'esmaltes'
   const [filteredProducts, setFilteredProducts] = useState(tintasCapilares);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedBrand, setSelectedBrand] = useState('');
@@ -292,7 +319,20 @@ export default function TintasPage() {
 
   // Aplicar filtros
   useEffect(() => {
-    let filtered = [...tintasCapilares];
+    // Determinar base de produtos baseada na seção ativa
+    let baseProducts = [];
+    switch (activeSection) {
+      case 'tintas':
+        baseProducts = [...tintasOnly];
+        break;
+      case 'esmaltes':
+        baseProducts = [...esmaltesOnly];
+        break;
+      default:
+        baseProducts = [...tintasCapilares];
+    }
+
+    let filtered = baseProducts;
 
     // Filtro de busca
     if (searchTerm) {
@@ -354,7 +394,7 @@ export default function TintasPage() {
     }
 
     setFilteredProducts(filtered);
-  }, [searchTerm, selectedBrand, selectedCategory, selectedColor, selectedPriceRange, sortBy]);
+  }, [activeSection, searchTerm, selectedBrand, selectedCategory, selectedColor, selectedPriceRange, sortBy]);
 
   const handleToggleWishlist = (productId) => {
     setWishlistIds(prev =>
@@ -381,11 +421,11 @@ export default function TintasPage() {
             <div className="flex items-center justify-center mb-4">
               <Palette className="w-8 h-8 mr-3" />
               <h1 className="text-4xl md:text-5xl font-bold">
-                Tintas Capilares
+                Cosméticos & Beleza
               </h1>
             </div>
             <p className="text-xl mb-8 opacity-90">
-              Transforme seu visual com as melhores marcas de coloração
+              Tintas capilares premium e esmaltes IMPALA para um visual completo
             </p>
             <div className="flex items-center justify-center gap-6 text-sm">
               <div className="flex items-center gap-2">
@@ -400,6 +440,44 @@ export default function TintasPage() {
           </div>
         </div>
       </section>
+
+      {/* Navigation Tabs */}
+      <div className="bg-white border-b sticky top-0 z-40">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex space-x-8 py-4">
+            <button
+              onClick={() => setActiveSection('todos')}
+              className={`px-4 py-2 font-medium transition-colors ${
+                activeSection === 'todos'
+                  ? 'text-purple-600 border-b-2 border-purple-600'
+                  : 'text-gray-600 hover:text-purple-600'
+              }`}
+            >
+              🛍️ Todos ({tintasCapilares.length})
+            </button>
+            <button
+              onClick={() => setActiveSection('tintas')}
+              className={`px-4 py-2 font-medium transition-colors ${
+                activeSection === 'tintas'
+                  ? 'text-purple-600 border-b-2 border-purple-600'
+                  : 'text-gray-600 hover:text-purple-600'
+              }`}
+            >
+              🎨 Tintas Capilares ({tintasOnly.length})
+            </button>
+            <button
+              onClick={() => setActiveSection('esmaltes')}
+              className={`px-4 py-2 font-medium transition-colors ${
+                activeSection === 'esmaltes'
+                  ? 'text-purple-600 border-b-2 border-purple-600'
+                  : 'text-gray-600 hover:text-purple-600'
+              }`}
+            >
+              💅 Esmaltes IMPALA ({esmaltesOnly.length})
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* Conteúdo principal */}
       <div className="max-w-7xl mx-auto px-4 py-8">

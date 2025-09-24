@@ -6,15 +6,180 @@ import FeaturedProducts from '../components/products/FeaturedProducts';
 import VideoHeroCarousel from '../components/home/VideoHeroCarousel';
 
 export const metadata: Metadata = {
-  title: '62 Beauty - Produtos Premium do Brasil para Europa',
-  description: 'Produtos premium de beleza brasileiros importados diretamente para Europa. Progressivas, tratamentos capilares, maquiagem profissional e ferramentas de qualidade.',
+  title: 'JC Hair Studio\'s 62 - Produtos Capilares Brasileiros Premium | Mega Hair, Progressivas',
+  description: 'Loja online de produtos capilares brasileiros premium com +40 anos de tradição familiar. Mega hair 100% humano, progressivas Vogue originais, BTX capilar, maquiagem brasileira. Entrega em toda Europa com garantia de qualidade.',
+  keywords: [
+    // Mega Hair
+    'mega hair brasileiro', 'cabelo humano brasileiro', 'extensão capilar brasil', 'mega hair natural', 'cabelo brasileiro premium',
+    // Progressivas
+    'progressiva vogue original', 'progressiva brasileira', 'btx capilar profissional', 'botox capilar', 'alisamento brasileiro',
+    // Maquiagem
+    'maquiagem brasileira europa', 'natura portugal', 'eudora bélgica', 'ruby rose europa', 'cosméticos brasil',
+    // Localização
+    'produtos brasileiros portugal', 'cosméticos brasil europa', 'loja brasileira portugal', 'produtos brasil bélgica',
+    // Marca
+    'jc hair studio 62', 'tradição familiar 40 anos', 'produtos autênticos brasil', 'qualidade premium brasil'
+  ],
+  openGraph: {
+    title: 'JC Hair Studio\'s 62 - Produtos Capilares Brasileiros Premium',
+    description: 'Mega hair brasileiro 100% humano, progressivas Vogue originais, maquiagem brasileira. +40 anos tradição familiar. Entrega Europa.',
+    images: [{
+      url: '/og-home-brasil.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Produtos Capilares Brasileiros Premium - JC Hair Studio\'s 62'
+    }],
+    type: 'website',
+    locale: 'pt_PT'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@jchairstudios62',
+    title: 'JC Hair Studio\'s 62 - Produtos Capilares Brasileiros Premium',
+    description: 'Mega hair brasileiro, progressivas Vogue, maquiagem brasileira. Tradição familiar +40 anos.',
+    images: ['/twitter-home-brasil.jpg']
+  }
 };
 
 // Removed API fetch and price-related components
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {/* Structured Data for Homepage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: "JC Hair Studio's 62",
+            alternateName: ["JC Hair Studios 62", "62 Beauty"],
+            description: 'Loja online de produtos capilares brasileiros premium com mais de 40 anos de tradição familiar.',
+            url: 'https://jchairstudios62.xyz',
+            logo: 'https://jchairstudios62.xyz/logo-brasil.png',
+            image: 'https://jchairstudios62.xyz/og-home-brasil.jpg',
+            foundingDate: '2000',
+            founders: {
+              '@type': 'Person',
+              name: 'Julio César',
+              nationality: 'Brazilian',
+              knowsAbout: ['Brazilian Hair Products', 'Hair Extensions', 'Brazilian Cosmetics']
+            },
+            contactPoint: [
+              {
+                '@type': 'ContactPoint',
+                telephone: '+351928375226',
+                contactType: 'Customer Service',
+                areaServed: ['PT', 'ES', 'FR', 'IT', 'BE', 'DE'],
+                availableLanguage: ['Portuguese', 'Spanish', 'English']
+              }
+            ],
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'R. Gil Vicente, N°5',
+              addressLocality: 'Seixal',
+              addressRegion: 'Setúbal',
+              postalCode: '2840-474',
+              addressCountry: 'PT'
+            },
+            sameAs: [
+              'https://instagram.com/jchairstudios62',
+              'https://facebook.com/jchairstudios62',
+              'https://tiktok.com/@jchairstudios62'
+            ],
+            hasOfferCatalog: [
+              {
+                '@type': 'OfferCatalog',
+                name: 'Mega Hair Brasileiro',
+                description: 'Extensões de cabelo 100% humano brasileiro',
+                url: 'https://jchairstudios62.xyz/mega-hair'
+              },
+              {
+                '@type': 'OfferCatalog',
+                name: 'Progressivas Brasileiras',
+                description: 'Progressivas Vogue e tratamentos brasileiros premium',
+                url: 'https://jchairstudios62.xyz/progressiva-vogue'
+              },
+              {
+                '@type': 'OfferCatalog',
+                name: 'Maquiagem Brasileira',
+                description: 'Cosméticos das melhores marcas brasileiras',
+                url: 'https://jchairstudios62.xyz/maquiagem'
+              }
+            ],
+            knowsAbout: [
+              'Brazilian Hair Extensions',
+              'Professional Hair Treatments',
+              'Brazilian Cosmetics',
+              'Curly Hair Care',
+              'Hair Straightening'
+            ],
+            areaServed: {
+              '@type': 'Place',
+              name: 'Europe',
+              geo: {
+                '@type': 'GeoShape',
+                polygon: '48.0,2.0 55.0,12.0 40.0,-8.0 48.0,2.0'
+              }
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '4.9',
+              reviewCount: '280',
+              bestRating: '5',
+              worstRating: '1'
+            }
+          })
+        }}
+      />
+
+      {/* FAQ Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Os produtos são realmente brasileiros originais?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim! Todos nossos produtos são importados diretamente do Brasil com certificado de autenticidade. Temos mais de 40 anos de experiência e garantimos a procedência de todos os produtos.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'O mega hair é 100% cabelo humano brasileiro?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim! Nosso mega hair é 100% cabelo humano brasileiro com cutículas alinhadas, sem processos químicos agressivos. Qualidade premium garantida com duração de 8 a 12 meses.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'Vocês entregam em toda Europa?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim! Entregamos em Portugal, Espanha, França, Itália, Bélgica, Alemanha e outros países europeus. Prazo: 5-10 dias úteis. Frete grátis acima de €150.'
+                }
+              },
+              {
+                '@type': 'Question',
+                name: 'As progressivas Vogue são originais do Brasil?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Sim! Somos distribuidores autorizados das progressivas Vogue originais. Importamos diretamente do fabricante brasileiro com garantia de autenticidade.'
+                }
+              }
+            ]
+          })
+        }}
+      />
+
+      <div className="min-h-screen bg-white">
       {/* Video Hero Carousel */}
       <VideoHeroCarousel
         videos={[
@@ -107,29 +272,29 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link href="/produtos" className="group relative h-80 bg-black rounded-2xl overflow-hidden">
               <Image
-                src="/images/products/cadiveu/cadiveu-1.png"
-                alt="Progressivas & BTX Cadiveu"
+                src="/images/products/progressivas_diversas/progressivas_diversas_1.JPG"
+                alt="Progressivas Premium COCOCHOCO"
                 fill
                 className="object-cover opacity-70 group-hover:opacity-50 transition-opacity"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
               <div className="relative z-10 flex flex-col justify-end h-full p-6 text-white">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">
-                  Progressivas & BTX
+                  Progressivas Premium
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Cadiveu, Forever Liss, Inoar
+                  COCOCHOCO, Brasil Cacau, Forever Liss
                 </p>
                 <div className="mt-3 text-xs text-amber-400">
-                  ⭐ Premium
+                  ⭐ Best Seller
                 </div>
               </div>
             </Link>
 
             <Link href="/mega-hair" className="group relative h-80 bg-black rounded-2xl overflow-hidden">
               <Image
-                src="/images/mega-hair/mega-hair-1.jpg"
-                alt="Mega Hair Premium"
+                src="/images/mega-hair/mega-hair-001.jpg"
+                alt="Mega Hair Premium Brasileiro"
                 fill
                 className="object-cover opacity-70 group-hover:opacity-50 transition-opacity"
               />
@@ -139,49 +304,49 @@ export default function HomePage() {
                   Mega Hair Premium
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Extensões brasileiras naturais
+                  100% Humano Remy, 20 tipos diferentes
                 </p>
                 <div className="mt-3 text-xs text-amber-400">
-                  ⭐ Premium
+                  ⭐ Exclusivo
                 </div>
               </div>
             </Link>
 
-            <Link href="/maquiagens" className="group relative h-80 bg-black rounded-2xl overflow-hidden">
+            <Link href="/produtos" className="group relative h-80 bg-black rounded-2xl overflow-hidden">
               <Image
-                src="/images/products/bruna-tavares-bt-skin/BT Skin F30 Base Bruna Tavares.png"
-                alt="Maquiagem Premium Bruna Tavares"
+                src="/images/products/mari-maria-bases/mari-maria-base-amndoa.png"
+                alt="Maquiagem Brasileira Mari Maria & Bruna Tavares"
                 fill
                 className="object-cover opacity-70 group-hover:opacity-50 transition-opacity"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
               <div className="relative z-10 flex flex-col justify-end h-full p-6 text-white">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">
-                  Maquiagem Premium
+                  Maquiagem Brasileira
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Bruna Tavares, Vult, Mari Maria
+                  Mari Maria, Bruna Tavares, 10+ tons
                 </p>
                 <div className="mt-3 text-xs text-amber-400">
-                  ⭐ Premium
+                  ⭐ Bestseller
                 </div>
               </div>
             </Link>
 
-            <Link href="/cosmeticos" className="group relative h-80 bg-black rounded-2xl overflow-hidden">
+            <Link href="/produtos" className="group relative h-80 bg-black rounded-2xl overflow-hidden">
               <Image
-                src="/images/products/truss/truss-1.png"
-                alt="Tratamentos Capilares Truss"
+                src="/images/products/produtos_de_hidratacao/produtos_de_hidratacao_1.WEBP"
+                alt="Tratamentos & Hidratação Novex"
                 fill
                 className="object-cover opacity-70 group-hover:opacity-50 transition-opacity"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
               <div className="relative z-10 flex flex-col justify-end h-full p-6 text-white">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-amber-400 transition-colors">
-                  Tratamentos Capilares
+                  Hidratação & BTX
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  L'Oréal, Schwarzkopf, Amend
+                  Novex, Forever Liss, Bio Extratus
                 </p>
                 <div className="mt-3 text-xs text-amber-400">
                   ⭐ Premium
@@ -206,10 +371,10 @@ export default function HomePage() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {['Natura', 'O Boticário', 'Cadiveu', 'Inoar', 'Honma Tokyo', 'Forever Liss'].map((brand) => (
+            {['COCOCHOCO', 'Mari Maria', 'Bruna Tavares', 'Forever Liss', 'Novex', 'Bio Extratus'].map((brand) => (
               <div key={brand} className="text-center">
                 <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-amber-100 transition-colors">
-                  <span className="text-gray-600 font-semibold text-sm">{brand}</span>
+                  <span className="text-gray-600 font-semibold text-xs text-center px-2">{brand}</span>
                 </div>
               </div>
             ))}
@@ -289,6 +454,7 @@ export default function HomePage() {
           </a>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
