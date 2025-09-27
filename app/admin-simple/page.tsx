@@ -1,9 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 import {
   CreditCard,
   Users,
@@ -86,13 +84,13 @@ export default function SimpleAdminPage() {
     switch (status) {
       case 'paid':
       case 'completed':
-        return 'bg-green-500';
+        return 'bg-green-100 text-green-800';
       case 'pending':
-        return 'bg-yellow-500';
+        return 'bg-yellow-100 text-yellow-800';
       case 'failed':
-        return 'bg-red-500';
+        return 'bg-red-100 text-red-800';
       default:
-        return 'bg-gray-500';
+        return 'bg-gray-100 text-gray-800';
     }
   };
 
@@ -119,78 +117,54 @@ export default function SimpleAdminPage() {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Total de Vendas
-            </CardTitle>
-            <CreditCard className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">
-              {formatCurrency(stats.totalRevenue)}
-            </div>
-            <p className="text-xs text-muted-foreground">
-              Total acumulado
-            </p>
-          </CardContent>
-        </Card>
+        <div className="bg-white p-6 rounded-lg shadow-md border">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-medium text-gray-600">Total de Vendas</h3>
+            <CreditCard className="h-4 w-4 text-gray-400" />
+          </div>
+          <div className="text-2xl font-bold text-gray-900">
+            {formatCurrency(stats.totalRevenue)}
+          </div>
+          <p className="text-xs text-gray-500">Total acumulado</p>
+        </div>
 
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Pedidos Totais
-            </CardTitle>
-            <ShoppingCart className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{stats.totalOrders}</div>
-            <p className="text-xs text-muted-foreground">
-              Desde o início
-            </p>
-          </CardContent>
-        </Card>
+        <div className="bg-white p-6 rounded-lg shadow-md border">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-medium text-gray-600">Pedidos Totais</h3>
+            <ShoppingCart className="h-4 w-4 text-gray-400" />
+          </div>
+          <div className="text-2xl font-bold text-gray-900">{stats.totalOrders}</div>
+          <p className="text-xs text-gray-500">Desde o início</p>
+        </div>
 
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Pedidos Hoje
-            </CardTitle>
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{stats.todayOrders}</div>
-            <p className="text-xs text-muted-foreground">
-              Últimas 24 horas
-            </p>
-          </CardContent>
-        </Card>
+        <div className="bg-white p-6 rounded-lg shadow-md border">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-medium text-gray-600">Pedidos Hoje</h3>
+            <TrendingUp className="h-4 w-4 text-gray-400" />
+          </div>
+          <div className="text-2xl font-bold text-gray-900">{stats.todayOrders}</div>
+          <p className="text-xs text-gray-500">Últimas 24 horas</p>
+        </div>
 
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
-              Pendentes
-            </CardTitle>
-            <Package className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{stats.pendingOrders}</div>
-            <p className="text-xs text-muted-foreground">
-              Aguardando processamento
-            </p>
-          </CardContent>
-        </Card>
+        <div className="bg-white p-6 rounded-lg shadow-md border">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-sm font-medium text-gray-600">Pendentes</h3>
+            <Package className="h-4 w-4 text-gray-400" />
+          </div>
+          <div className="text-2xl font-bold text-gray-900">{stats.pendingOrders}</div>
+          <p className="text-xs text-gray-500">Aguardando processamento</p>
+        </div>
       </div>
 
       {/* Orders List */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Pedidos Recentes</CardTitle>
-          <CardDescription>
+      <div className="bg-white rounded-lg shadow-md border">
+        <div className="p-6 border-b">
+          <h2 className="text-lg font-semibold text-gray-900">Pedidos Recentes</h2>
+          <p className="text-sm text-gray-600">
             Últimos {orders.length} pedidos recebidos
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
+          </p>
+        </div>
+        <div className="p-6">
           {loading ? (
             <div className="text-center py-8">
               <RefreshCw className="h-8 w-8 animate-spin mx-auto text-gray-400" />
@@ -235,9 +209,9 @@ export default function SimpleAdminPage() {
                         {formatCurrency(order.total || order.amount || 0)}
                       </td>
                       <td className="py-3">
-                        <Badge className={getStatusColor(order.status || 'pending')}>
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(order.status || 'pending')}`}>
                           {order.status || 'pending'}
-                        </Badge>
+                        </span>
                       </td>
                       <td className="py-3 text-sm">
                         {formatDate(order.createdAt || new Date().toISOString())}
@@ -248,8 +222,8 @@ export default function SimpleAdminPage() {
               </table>
             </div>
           )}
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       {/* Help Section */}
       <div className="mt-8 p-4 bg-blue-50 rounded-lg">
