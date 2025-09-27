@@ -7,7 +7,7 @@
 
 import fetch from 'node-fetch';
 
-const PRODUCTION_URL = 'https://jc-hair-studio-o65ugls7x-0xjc65eths-projects.vercel.app';
+const PRODUCTION_URL = 'https://jchairstudios62.xyz';
 
 console.log('\n🚀 TESTE FINAL DE PRODUÇÃO - DEPLOY COM PAGAMENTO CORRIGIDO');
 console.log('══════════════════════════════════════════════════════════');

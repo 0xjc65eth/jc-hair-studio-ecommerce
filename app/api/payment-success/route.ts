@@ -150,7 +150,8 @@ async function saveOrderToAdmin(orderData: any) {
                    process.env.NEXT_PUBLIC_SITE_URL ||
                    'https://jchairstudios62.xyz';
 
-    const response = await fetch(`${baseUrl}/api/admin/orders`, {
+    // Use simplified orders API for production
+    const response = await fetch(`${baseUrl}/api/admin/orders-simple`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
