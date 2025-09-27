@@ -1,7 +1,9 @@
 // Autocomplete endpoint for JC Hair Studio's 62's 62 E-commerce
 import { NextRequest, NextResponse } from 'next/server';
-import { SearchService } from '../../../../lib/services/searchService';
-import { withOptionalAuth, withSecurityHeaders, withRateLimit } from '../../../../lib/auth/middleware';
+// import { SearchService } from '../../../../lib/services/searchService';
+// import { withOptionalAuth, withSecurityHeaders, withRateLimit } from '../../../../lib/auth/middleware';
+import { categories } from '@/lib/data/categories';
+import { getAllStaticProducts } from '@/lib/data/staticProducts';
 
 async function autocompleteHandler(request: NextRequest) {
   try {
@@ -19,12 +21,47 @@ async function autocompleteHandler(request: NextRequest) {
       });
     }
 
-    const suggestions = await SearchService.getAutocompleteSuggestions(query, limit);
+    // Get suggestions from static data
+    const suggestions = new Set<string>();
+
+    // Search in categories
+    categories.forEach(category => {
+      if (category.name.toLowerCase().includes(query.toLowerCase())) {
+        suggestions.add(category.name);
+      }
+      if (category.products) {
+        category.products.forEach(product => {
+          if (product.name.toLowerCase().includes(query.toLowerCase())) {
+            suggestions.add(product.name);
+          }
+          if (product.brand && product.brand.toLowerCase().includes(query.toLowerCase())) {
+            suggestions.add(product.brand);
+          }
+          // Note: Category products don't have colors field in this structure
+        });
+      }
+    });
+
+    // Search in static products
+    const staticProducts = getAllStaticProducts();
+    if (staticProducts && Array.isArray(staticProducts)) {
+      staticProducts.forEach(produto => {
+        if (produto.nome.toLowerCase().includes(query.toLowerCase())) {
+          suggestions.add(produto.nome);
+        }
+        if (produto.marca && produto.marca.toLowerCase().includes(query.toLowerCase())) {
+          suggestions.add(produto.marca);
+        }
+        // Note: StaticProducts doesn't have 'cores' field like categories products do
+      });
+    }
+
+    const suggestionArray = Array.from(suggestions).slice(0, limit);
 
     return NextResponse.json({
       success: true,
       data: {
-        suggestions,
+        suggestions: suggestionArray,
         query
       }
     });
@@ -42,21 +79,5 @@ async function autocompleteHandler(request: NextRequest) {
   }
 }
 
-// Apply middleware
-const GET = withSecurityHeaders(
-  withRateLimit(
-    withOptionalAuth(autocompleteHandler),
-    {
-      maxRequests: 200,
-      windowMs: 15 * 60 * 1000, // 15 minutes
-      keyGenerator: (req) => {
-        const forwarded = req.headers.get('x-forwarded-for');
-        const realIp = req.headers.get('x-real-ip');
-        const ip = forwarded?.split(',')[0] || realIp || 'anonymous';
-        return `autocomplete:${ip}`;
-      }
-    }
-  )
-);
-
-export { GET };
+// Export the handler
+export const GET = autocompleteHandler;

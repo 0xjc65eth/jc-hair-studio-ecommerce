@@ -46,9 +46,6 @@ export const PRODUCTS = {
   /** Maximum number of featured products on homepage */
   FEATURED_LIMIT: 12,
 
-  /** Default product image placeholder */
-  DEFAULT_IMAGE: '/placeholder-product.jpg',
-
   /** Supported image formats for product uploads */
   SUPPORTED_IMAGE_FORMATS: ['jpg', 'jpeg', 'png', 'webp'] as const,
 

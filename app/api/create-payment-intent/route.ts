@@ -67,16 +67,14 @@ export async function POST(request: NextRequest) {
       timestamp: new Date().toISOString()
     });
 
-    // Usar Edge Runtime que comprovadamente funciona
+    // Simplified Stripe request for faster execution
     const paymentIntent = await stripeEdgeRequest('payment_intents', 'POST', {
-        amount: Math.round(amount * 100).toString(), // Converter para centavos
+        amount: Math.round(amount * 100).toString(),
         currency: currency.toLowerCase(),
-        'payment_method_types[]': 'card',
-        'metadata[source]': 'jc-hair-studio-web',
-        'metadata[itemsCount]': items?.length?.toString() || '1',
-        'metadata[customerName]': customerInfo?.name || 'Cliente',
-        'metadata[customerEmail]': customerInfo?.email || '',
-        'metadata[timestamp]': new Date().toISOString()
+        'automatic_payment_methods[enabled]': 'true',
+        'automatic_payment_methods[allow_redirects]': 'always',
+        'metadata[source]': 'jc-hair-studio',
+        'metadata[customer]': customerInfo?.email || 'guest'
     });
 
     const duration = Date.now() - startTime;
@@ -103,16 +101,9 @@ export async function POST(request: NextRequest) {
       }
     };
 
-    // Add to admin orders (will be updated when payment succeeds)
-    try {
-      await fetch(`${request.nextUrl.origin}/api/admin/orders`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(orderData)
-      });
-    } catch (error) {
-      console.warn('⚠️ Could not add order to admin dashboard:', error);
-    }
+    // Skip non-critical admin orders creation for speed
+    // This will be handled by payment-success webhook instead
+    console.log('⚡ Skipping admin order creation for faster response');
 
     // Retornar dados essenciais para o frontend
     return NextResponse.json({

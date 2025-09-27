@@ -1,11 +1,13 @@
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
+import Link from 'next/link';
 import { Button } from '../../components/ui/Button';
 import ProductCard from '../../components/products/ProductCard';
 import { useCart } from '../../lib/stores/cartStore'; // Import cart store for shopping cart functionality
 import { ShoppingBag, Search, Filter, Heart, Eye, Shuffle, Grid, List, Palette, Sparkles } from 'lucide-react';
 import { allEsmaltesData } from '../../lib/data/esmaltesProducts';
+import { allPerfumesData } from '../../lib/data/perfumesProducts';
 
 // Função para gerar dados das tintas com numeração sequencial
 const gerarTintasLOreal = () => {
@@ -192,6 +194,7 @@ const gerarTintasAltaModa = () => {
   return tintasAltaModa;
 };
 
+
 // Converter esmaltes IMPALA oficiais para formato compatível
 const esmaltesFormatados = allEsmaltesData.map(esmalte => ({
   id: esmalte.id,
@@ -210,7 +213,28 @@ const esmaltesFormatados = allEsmaltesData.map(esmalte => ({
   badge: esmalte.badge
 }));
 
-// Dados das tintas com imagens reais validadas - CATÁLOGO COMPLETO + ESMALTES
+// Converter perfumes WEPINK para formato compatível
+const perfumesFormatados = allPerfumesData.map(perfume => ({
+  id: perfume.id,
+  nome: perfume.nome,
+  marca: perfume.marca,
+  categoria: 'Perfumes',
+  cor: perfume.genero === 'feminino' ? 'Feminino' : perfume.genero === 'masculino' ? 'Masculino' : 'Unissex',
+  tom: perfume.especificacoes.volume,
+  descricao: perfume.descricao,
+  imagem: perfume.imagem,
+  pricing: perfume.pricing,
+  rating: perfume.rating,
+  reviewsCount: perfume.reviews,
+  inStock: true,
+  tags: [...perfume.tags, perfume.especificacoes.familia_olfativa].filter(Boolean),
+  badge: perfume.badge || 'NOVO',
+  genero: perfume.genero,
+  volume: perfume.especificacoes.volume,
+  familia: perfume.especificacoes.familia_olfativa
+}));
+
+// Dados das tintas capilares
 const tintasCapilares = [
   ...gerarTintasLOreal(),      // 22 produtos
   ...gerarTintasBioColor(),    // 23 produtos
@@ -218,18 +242,35 @@ const tintasCapilares = [
   ...gerarTintasAmend(),       // 6 produtos
   ...gerarTintasNutrisse(),    // 9 produtos
   ...gerarTintasAltaModa(),    // 29 produtos
-  ...esmaltesFormatados        // 56 produtos IMPALA oficiais
-]; // Total: 189 produtos
+]; // Total: 133 produtos de tinta capilar
 
-// Filtros específicos para tintas e esmaltes
+// Produtos separados (não misturados)
+const esmaltesData = [...esmaltesFormatados];     // 56 produtos IMPALA oficiais
+const perfumesData = [...perfumesFormatados];    // 15 perfumes WEPINK selecionados
+
+// Todos os produtos combinados
+const allProducts = [
+  ...tintasCapilares,
+  ...esmaltesData,
+  ...perfumesData
+]; // Total: 204 produtos
+
+// Filtros específicos por categoria
 const marcasTintas = [
   { value: 'LOREAL', label: "L'Oréal Paris", count: 22 },
   { value: 'BIOCOLOR', label: 'BioColor', count: 23 },
   { value: 'BEAUTY COLOR', label: 'Beauty Color', count: 44 },
   { value: 'AMEND', label: 'Amend', count: 6 },
   { value: 'GARNIER', label: 'Garnier Nutrisse', count: 9 },
-  { value: 'ALFAPARF', label: 'Alfaparf Alta Moda', count: 29 },
+  { value: 'ALFAPARF', label: 'Alfaparf Alta Moda', count: 29 }
+];
+
+const marcasEsmaltes = [
   { value: 'IMPALA', label: 'IMPALA', count: 56 }
+];
+
+const marcasPerfumes = [
+  { value: 'WEPINK', label: 'WEPINK', count: 15 }
 ];
 
 const categoriasTintas = [
@@ -239,8 +280,7 @@ const categoriasTintas = [
   { value: 'premium', label: 'Coloração Premium' },
   { value: 'profissional', label: 'Coloração Profissional' },
   { value: 'nutritiva', label: 'Coloração Nutritiva' },
-  { value: 'italiana', label: 'Coloração Italiana' },
-  { value: 'esmaltes', label: 'Esmaltes IMPALA' }
+  { value: 'italiana', label: 'Coloração Italiana' }
 ];
 
 const coresTintas = [
@@ -261,15 +301,16 @@ const faixasPreco = [
   { value: '25+', label: '€25+' }
 ];
 
-// Separar produtos por categoria
-const tintasOnly = tintasCapilares.filter(produto => produto.categoria !== 'Esmaltes');
-const esmaltesOnly = tintasCapilares.filter(produto => produto.categoria === 'Esmaltes');
+// Produtos já separados corretamente
+const tintasOnly = tintasCapilares;  // Apenas tintas capilares
+const esmaltesOnly = esmaltesData;   // Apenas esmaltes IMPALA
+const perfumesOnly = perfumesData;   // Apenas perfumes WEPINK
 
 // Componente principal
 export default function TintasPage() {
   // Estados para filtros
-  const [activeSection, setActiveSection] = useState('todos'); // 'todos', 'tintas', 'esmaltes'
-  const [filteredProducts, setFilteredProducts] = useState(tintasCapilares);
+  const [activeSection, setActiveSection] = useState('todos'); // 'todos', 'tintas', 'esmaltes', 'perfumes'
+  const [filteredProducts, setFilteredProducts] = useState(allProducts);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedBrand, setSelectedBrand] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -328,8 +369,11 @@ export default function TintasPage() {
       case 'esmaltes':
         baseProducts = [...esmaltesOnly];
         break;
+      case 'perfumes':
+        baseProducts = [...perfumesOnly];
+        break;
       default:
-        baseProducts = [...tintasCapilares];
+        baseProducts = [...allProducts];
     }
 
     let filtered = baseProducts;
@@ -412,6 +456,20 @@ export default function TintasPage() {
     setSelectedPriceRange('');
   };
 
+  // Get available brands based on active section
+  const getAvailableBrands = () => {
+    switch (activeSection) {
+      case 'tintas':
+        return marcasTintas;
+      case 'esmaltes':
+        return marcasEsmaltes;
+      case 'perfumes':
+        return marcasPerfumes;
+      default:
+        return [...marcasTintas, ...marcasEsmaltes, ...marcasPerfumes];
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header da página */}
@@ -425,12 +483,12 @@ export default function TintasPage() {
               </h1>
             </div>
             <p className="text-xl mb-8 opacity-90">
-              Tintas capilares premium e esmaltes IMPALA para um visual completo
+              Tintas capilares premium, esmaltes IMPALA e perfumes WEPINK para um visual completo
             </p>
             <div className="flex items-center justify-center gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <ShoppingBag className="w-5 h-5" />
-                <span>{tintasCapilares.length} produtos disponíveis</span>
+                <span>{allProducts.length} produtos disponíveis</span>
               </div>
               <div className="flex items-center gap-2">
                 <Sparkles className="w-5 h-5" />
@@ -453,7 +511,7 @@ export default function TintasPage() {
                   : 'text-gray-600 hover:text-purple-600'
               }`}
             >
-              🛍️ Todos ({tintasCapilares.length})
+              🛍️ Todos ({allProducts.length})
             </button>
             <button
               onClick={() => setActiveSection('tintas')}
@@ -475,6 +533,16 @@ export default function TintasPage() {
             >
               💅 Esmaltes IMPALA ({esmaltesOnly.length})
             </button>
+            <button
+              onClick={() => setActiveSection('perfumes')}
+              className={`px-4 py-2 font-medium transition-colors ${
+                activeSection === 'perfumes'
+                  ? 'text-purple-600 border-b-2 border-purple-600'
+                  : 'text-gray-600 hover:text-purple-600'
+              }`}
+            >
+              🌺 Perfumes WEPINK ({perfumesOnly.length})
+            </button>
           </div>
         </div>
       </div>
@@ -484,7 +552,7 @@ export default function TintasPage() {
         <div className="lg:flex lg:gap-8">
           {/* Sidebar com filtros */}
           <div className="lg:w-80 flex-shrink-0 mb-8 lg:mb-0">
-            <div className="bg-white rounded-2xl shadow-lg border border-purple-100 sticky top-24 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-lg border border-purple-100 sticky top-4 overflow-hidden">
               {/* Header dos filtros */}
               <div className="flex items-center justify-between p-6 border-b border-purple-100 bg-gradient-to-r from-purple-50 to-pink-50">
                 <div className="flex items-center gap-3">
@@ -530,7 +598,7 @@ export default function TintasPage() {
                     className="w-full p-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-300"
                   >
                     <option value="">Todas as marcas</option>
-                    {marcasTintas.map(marca => (
+                    {getAvailableBrands().map(marca => (
                       <option key={marca.value} value={marca.value}>
                         {marca.label} ({marca.count})
                       </option>
@@ -622,7 +690,7 @@ export default function TintasPage() {
             {/* Controles de ordenação */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 bg-white p-4 rounded-lg shadow-sm">
               <div className="text-sm text-gray-600">
-                Mostrando {filteredProducts.length} de {tintasCapilares.length} produtos
+                Mostrando {filteredProducts.length} de {allProducts.length} produtos
               </div>
 
               <div className="flex items-center gap-4">
@@ -676,11 +744,13 @@ export default function TintasPage() {
                 {filteredProducts.map((product) => (
                   <div key={product.id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
                     <div className="relative">
-                      <img
-                        src={product.imagem}
-                        alt={product.nome}
-                        className="w-full h-48 object-cover rounded-t-lg"
-                      />
+                      <Link href={`/produto/${product.id}`}>
+                        <img
+                          src={product.imagem}
+                          alt={product.nome}
+                          className="w-full h-48 object-cover rounded-t-lg cursor-pointer hover:opacity-90 transition-opacity"
+                        />
+                      </Link>
                       {product.badge && (
                         <span className="absolute top-2 left-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">
                           {product.badge}
@@ -702,9 +772,11 @@ export default function TintasPage() {
                       <div className="text-xs text-purple-600 font-medium mb-1">
                         {product.marca}
                       </div>
-                      <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
-                        {product.nome}
-                      </h3>
+                      <Link href={`/produto/${product.id}`}>
+                        <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 hover:text-purple-600 transition-colors cursor-pointer">
+                          {product.nome}
+                        </h3>
+                      </Link>
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
                           Tom {product.tom}
@@ -763,7 +835,7 @@ export default function TintasPage() {
                   <Search className="w-16 h-16 mx-auto" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-600 mb-2">
-                  Nenhuma tinta encontrada
+                  Nenhum produto encontrado
                 </h3>
                 <p className="text-gray-500 mb-4">
                   Tente ajustar os filtros para encontrar o que procura
@@ -785,7 +857,7 @@ export default function TintasPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Por que escolher nossas tintas?
+              Por que escolher nossos cosméticos?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Oferecemos apenas as melhores marcas com imagens reais e preços exclusivos
@@ -805,16 +877,16 @@ export default function TintasPage() {
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏆</span>
               </div>
-              <h3 className="font-semibold mb-2">6 Marcas Premium</h3>
-              <p className="text-sm text-gray-600">L'Oréal, BioColor, Beauty Color, Amend, Garnier e Alfaparf</p>
+              <h3 className="font-semibold mb-2">Marcas Premium</h3>
+              <p className="text-sm text-gray-600">L'Oréal, Beauty Color, Amend, Garnier, BioColor, Alfaparf, IMPALA e WEPINK</p>
             </div>
 
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">✨</span>
               </div>
-              <h3 className="font-semibold mb-2">Resultados Profissionais</h3>
-              <p className="text-sm text-gray-600">Qualidade de salão em casa</p>
+              <h3 className="font-semibold mb-2">Qualidade Profissional</h3>
+              <p className="text-sm text-gray-600">Tintas, esmaltes e perfumes de alta qualidade</p>
             </div>
 
             <div className="text-center p-6">

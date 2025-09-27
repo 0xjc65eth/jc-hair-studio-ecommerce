@@ -8,7 +8,7 @@
  * preventing race conditions and ensuring cart data persists across all pages and components.
  */
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useCartInitializer } from '../stores/cartStore';
 
 interface CartInitializerProps {

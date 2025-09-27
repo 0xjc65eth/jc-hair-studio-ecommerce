@@ -33,15 +33,27 @@ export async function POST(request: NextRequest) {
       formType: formType || 'contact'
     };
 
+    // Log environment details for debugging
+    console.log('📧 Contact API - Environment check:', {
+      sendgridApiKey: process.env.SENDGRID_API_KEY ? 'EXISTS' : 'MISSING',
+      forceSendEmails: process.env.FORCE_SEND_EMAILS,
+      nodeEnv: process.env.NODE_ENV,
+      fromEmail: process.env.FROM_EMAIL,
+      supportEmail: process.env.SUPPORT_EMAIL
+    });
+
     // Enviar email via SendGrid
+    console.log('📧 Contact API - Attempting to send email via SendGrid...');
     const success = await sendContactEmail(contactData);
 
     if (success) {
+      console.log('✅ Contact API - Email sent successfully');
       return NextResponse.json({
         success: true,
         message: 'Mensagem enviada com sucesso! Você receberá uma confirmação por email em breve.'
       });
     } else {
+      console.log('❌ Contact API - Email sending failed');
       return NextResponse.json(
         { error: 'Falha ao enviar mensagem. Tente novamente ou entre em contato via WhatsApp.' },
         { status: 500 }

@@ -6,14 +6,14 @@ const nextConfig = {
     }
   },
 
-  // TypeScript configuration
+  // TypeScript configuration - enable for production
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: process.env.SKIP_TYPE_CHECK === 'true',
   },
 
-  // ESLint configuration
+  // ESLint configuration - enable for production
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: process.env.SKIP_LINT === 'true',
   },
 
   // Image optimization

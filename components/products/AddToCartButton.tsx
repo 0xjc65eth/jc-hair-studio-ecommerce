@@ -10,6 +10,7 @@ interface Product {
   id: string;
   name: string;
   price: number;
+  comparePrice?: number;
   image?: string;
   variant?: string;
   color?: string;
@@ -29,11 +30,13 @@ export function AddToCartButton({
   showQuantitySelector = false,
   className = '',
 }: AddToCartButtonProps) {
-  const { addItem, getItemCount, openCart } = useCart();
+  const { addItem, openCart, getCartItem } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
 
-  const currentQuantity = getItemCount();
+  // Get current quantity of this specific product in cart
+  const currentCartItem = getCartItem(product.id);
+  const currentQuantity = currentCartItem?.quantity || 0;
 
   const handleAddToCart = async () => {
     setIsAdding(true);

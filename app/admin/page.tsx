@@ -147,33 +147,89 @@ export default function AdminPanel() {
   const [selectedOrder, setSelectedOrder] = useState<any>(null);
   const [showOrderModal, setShowOrderModal] = useState(false);
 
-  // Authentication handler
-  const handleLogin = (e: React.FormEvent) => {
+  // Authentication handler - SEGURANÇA APRIMORADA
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === 'juliojuliana62') {
-      setIsAuthenticated(true);
-      setAuthError('');
-    } else {
-      setAuthError('Senha incorreta. Tente novamente.');
+
+    try {
+      // Verificar senha via API para maior segurança
+      const response = await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ password }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setIsAuthenticated(true);
+        setAuthError('');
+
+        // Salvar sessão com timeout
+        const sessionData = {
+          authenticated: true,
+          timestamp: Date.now(),
+          expiresIn: 3600000, // 1 hora
+        };
+        localStorage.setItem('adminSession', JSON.stringify(sessionData));
+      } else {
+        setAuthError('Senha incorreta. Tente novamente.');
+      }
+    } catch (error) {
+      console.error('Erro de autenticação:', error);
+      setAuthError('Erro de conexão. Tente novamente.');
     }
   };
 
-  useEffect(() => {
-    fetchDashboardData();
-    fetchOrders();
-    fetchNotifications();
-    fetchAnalyticsData();
-    setupRealTimeUpdates();
-    setupOfflineDetection();
+  // Validação de sessão
+  const checkAuthSession = () => {
+    try {
+      const sessionData = localStorage.getItem('adminSession');
+      if (sessionData) {
+        const session = JSON.parse(sessionData);
+        const now = Date.now();
 
-    const interval = setInterval(() => {
+        // Verificar se a sessão não expirou
+        if (session.authenticated && (now - session.timestamp) < session.expiresIn) {
+          setIsAuthenticated(true);
+          console.log('✅ Sessão admin válida carregada');
+          return true;
+        } else {
+          // Sessão expirada
+          localStorage.removeItem('adminSession');
+          console.log('⏰ Sessão admin expirada');
+        }
+      }
+    } catch (error) {
+      console.error('❌ Erro ao verificar sessão:', error);
+      localStorage.removeItem('adminSession');
+    }
+    return false;
+  };
+
+  useEffect(() => {
+    // Verificar sessão existente primeiro
+    const hasValidSession = checkAuthSession();
+
+    if (hasValidSession) {
+      // Carregar dados apenas se autenticado
       fetchDashboardData();
       fetchOrders();
-    }, 30000);
+      fetchNotifications();
+      fetchAnalyticsData();
+      setupRealTimeUpdates();
+      setupOfflineDetection();
 
-    return () => {
-      clearInterval(interval);
-    };
+      const interval = setInterval(() => {
+        fetchDashboardData();
+        fetchOrders();
+      }, 30000);
+
+      return () => {
+        clearInterval(interval);
+      };
+    }
   }, []);
 
   const fetchDashboardData = async () => {
@@ -820,7 +876,7 @@ export default function AdminPanel() {
                                 alt={product.name}
                                 className="w-12 h-12 object-cover rounded-lg"
                                 onError={(e) => {
-                                  e.target.src = '/placeholder-product.jpg';
+                                  e.currentTarget.style.display = 'none';
                                 }}
                               />
                             )}
@@ -1914,7 +1970,7 @@ export default function AdminPanel() {
                               alt={product.name}
                               className="w-16 h-16 object-cover rounded-lg"
                               onError={(e) => {
-                                e.target.src = '/placeholder-product.jpg';
+                                e.currentTarget.style.display = 'none';
                               }}
                             />
                           )}

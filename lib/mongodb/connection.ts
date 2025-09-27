@@ -13,20 +13,25 @@
 import mongoose, { Connection } from 'mongoose';
 
 // Connection configuration
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://juliocesar62:juliocesar65@jchaircluster.o078ehn.mongodb.net/?retryWrites=true&w=majority&appName=JCHairCluster';
+const MONGODB_URI = process.env.MONGODB_URI;
 const DATABASE_NAME = process.env.MONGODB_DB_NAME || 'jc-hair-studio-ecommerce';
+
+if (!MONGODB_URI) {
+  console.warn('MONGODB_URI not found in environment variables. Database features will be disabled.');
+}
 
 // Connection pool configuration
 const connectionOptions: mongoose.ConnectOptions = {
   // Database name
   dbName: DATABASE_NAME,
   
-  // Connection pool settings
-  maxPoolSize: 10, // Maximum number of connections
-  minPoolSize: 2,  // Minimum number of connections
-  maxIdleTimeMS: 30000, // Close connections after 30 seconds of inactivity
-  serverSelectionTimeoutMS: 5000, // How long to try selecting a server
-  socketTimeoutMS: 45000, // How long a send or receive on a socket can take before timing out
+  // Connection pool settings - OTIMIZADO para produção
+  maxPoolSize: 15, // Maximum number of connections (aumentado para admin panel)
+  minPoolSize: 3,  // Minimum number of connections (aumentado para estabilidade)
+  maxIdleTimeMS: 60000, // Close connections after 60 seconds of inactivity (aumentado)
+  serverSelectionTimeoutMS: 30000, // How long to try selecting a server (CORRIGIDO: 30s)
+  socketTimeoutMS: 120000, // How long a send or receive on a socket can take (CORRIGIDO: 2min)
+  connectTimeoutMS: 30000, // How long to wait for initial connection (CORRIGIDO: 30s)
   
   // Buffer settings (mongoose specific)
   bufferCommands: false, // Disable mongoose buffering
@@ -55,6 +60,11 @@ if (!cached) {
  * Connect to MongoDB with singleton pattern
  */
 export async function connectDB(): Promise<Connection> {
+  // Check if MONGODB_URI is available
+  if (!MONGODB_URI) {
+    throw new Error('MONGODB_URI not defined. Database connection unavailable.');
+  }
+
   // Return existing connection if available
   if (cached.conn) {
     console.log('✅ Using existing MongoDB connection');
@@ -64,7 +74,7 @@ export async function connectDB(): Promise<Connection> {
   // If no connection exists but promise is in progress, wait for it
   if (!cached.promise) {
     console.log('🔄 Establishing new MongoDB connection...');
-    
+
     cached.promise = mongoose.connect(MONGODB_URI, connectionOptions).then((mongoose) => {
       console.log('✅ MongoDB connected successfully to database:', DATABASE_NAME);
       return mongoose.connection;

@@ -1,17 +1,19 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
+import { generateCategoryMeta } from '../../lib/utils/metaTags';
+import { generateUnifiedCatalog } from '../../lib/data/megaHairProducts';
 
-export const metadata: Metadata = {
-  title: 'Mega Hair Premium - Studio Premium Hair',
-  description: 'Catálogo completo de mega hair 100% natural. Extensões de cabelo premium com entrega em toda a Europa.',
-  keywords: [
-    'mega hair',
-    'extensões cabelo',
-    'cabelo natural',
-    'studio premium hair',
-    'mega hair premium',
-    'extensões naturais'
-  ],
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const products = generateUnifiedCatalog();
+
+  return generateCategoryMeta('mega-hair', products.map(product => ({
+    id: product.id,
+    name: product.name,
+    brand: product.collection,
+    price: product.price,
+    preco_eur: product.price,
+    category: 'mega-hair'
+  })));
+}
 
 interface MegaHairLayoutProps {
   children: React.ReactNode;

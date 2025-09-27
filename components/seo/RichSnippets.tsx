@@ -367,11 +367,163 @@ export function BreadcrumbSnippets({ breadcrumbs }: BreadcrumbSnippetsProps) {
   );
 }
 
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface RichSnippetsProps {
+  type: 'product' | 'product-collection' | 'tutorial' | 'article' | 'video';
+  products?: Product[];
+  product?: Product;
+  tutorial?: Tutorial;
+  article?: {
+    headline: string;
+    description: string;
+    author: string;
+    datePublished: string;
+    dateModified?: string;
+    image: string;
+    category: string;
+    keywords: string[];
+    wordCount?: number;
+  };
+  video?: {
+    name: string;
+    description: string;
+    thumbnailUrl: string;
+    uploadDate: string;
+    duration: string;
+    contentUrl: string;
+    embedUrl?: string;
+    author: string;
+    category: string;
+  };
+  reviews?: Review[];
+  aggregateRating?: {
+    ratingValue: number;
+    reviewCount: number;
+    bestRating?: number;
+    worstRating?: number;
+  };
+  faqs?: FAQ[];
+  breadcrumbs?: Array<{
+    name: string;
+    url: string;
+  }>;
+}
+
+export function RichSnippets({
+  type,
+  product,
+  products,
+  tutorial,
+  article,
+  video,
+  reviews,
+  aggregateRating,
+  faqs,
+  breadcrumbs
+}: RichSnippetsProps) {
+  const generateFAQSchema = (faqs: FAQ[]) => ({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  });
+
+  const generateProductCollectionSchema = (products: Product[]) => ({
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Produtos Brasileiros Premium',
+    description: 'Coleção de produtos de beleza brasileiros',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: products.map((product, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Product',
+          name: product.name,
+          brand: {
+            '@type': 'Brand',
+            name: product.brand
+          },
+          category: product.category,
+          description: product.description,
+          image: product.image,
+          offers: {
+            '@type': 'Offer',
+            price: product.price,
+            priceCurrency: product.currency,
+            availability: `https://schema.org/${product.availability}`,
+            seller: {
+              '@type': 'Organization',
+              name: 'JC Hair Studio\'s 62'
+            }
+          }
+        }
+      }))
+    }
+  });
+
+  return (
+    <>
+      {breadcrumbs && <BreadcrumbSnippets breadcrumbs={breadcrumbs} />}
+
+      {type === 'product' && product && (
+        <ProductSnippets
+          product={product}
+          reviews={reviews}
+          aggregateRating={aggregateRating}
+        />
+      )}
+
+      {type === 'product-collection' && products && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateProductCollectionSchema(products))
+          }}
+        />
+      )}
+
+      {type === 'tutorial' && tutorial && (
+        <TutorialSnippets tutorial={tutorial} relatedProducts={products} />
+      )}
+
+      {type === 'article' && article && (
+        <ArticleSnippets article={article} />
+      )}
+
+      {type === 'video' && video && (
+        <VideoSnippets video={video} />
+      )}
+
+      {faqs && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqs))
+          }}
+        />
+      )}
+    </>
+  );
+}
+
 export default {
   ReviewSnippets,
   TutorialSnippets,
   ProductSnippets,
   VideoSnippets,
   ArticleSnippets,
-  BreadcrumbSnippets
+  BreadcrumbSnippets,
+  RichSnippets
 };

@@ -674,286 +674,239 @@ export function searchProducts(query: string): MegaHairProduct[] {
 
 // Função para compatibilidade com interface antiga do mega-hair/page.tsx
 export function getLegacyCompatibleProducts() {
-  // ORGANIZAÇÃO PROFISSIONAL - TIPOS 1A-4C, 25CM-100CM
-  const products = [
-    // === LISOS (1A-2A) ===
+  // SISTEMA COM IMAGENS REAIS - APENAS FOTOS DA PASTA "cabelos mega hair lasted version"
+
+  // Base de dados dos cabelos reais disponíveis
+  const hairTypes = [
+    // LISOS (1A-2A)
     {
       id: 1,
-      name: 'Mega Hair Liso 1A Ruivo Alaranjado - 25cm',
+      name: 'Mega Hair Liso 1A Ruivo Alaranjado',
       type: 'liso' as const,
       color: 'ruivo' as const,
-      length: '25cm',
-      price: 75.00,
-      originalPrice: 95.00,
-      image: '/images/mega-hair/liso/25cm/ruivo-alaranjado-liso-1a.jpg',
-      description: 'Mega hair liso tipo 1A ruivo alaranjado vibrante. Cabelo escorrido sem volume, cor intensa e moderna. Comprimento 25cm ideal para volume sutil.',
+      baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Alaranjado_acesso.jpg',
+      basePrice: 70.00,
+      description: 'Mega hair liso tipo 1A ruivo alaranjado vibrante. Cabelo escorrido sem volume, cor intensa e moderna.',
       rating: 4.6,
-      reviews: 89,
-      inStock: true,
-      isNew: true
+      reviews: 89
     },
     {
       id: 2,
-      name: 'Mega Hair Liso 1A Grisalho Acinzentado - 30cm',
+      name: 'Mega Hair Liso 1A Grisalho Acinzentado',
       type: 'liso' as const,
       color: 'grisalho' as const,
-      length: '30cm',
-      price: 85.00,
-      originalPrice: 110.00,
-      image: '/images/mega-hair/liso/30cm/grisalho-acinzentado-liso-1a.jpg',
-      description: 'Mega hair liso tipo 1A grisalho acinzentado elegante. Perfeito para assumir os fios brancos com sofisticação. Comprimento 30cm versátil.',
+      baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Grisalho_acinzentado.jpg',
+      basePrice: 80.00,
+      description: 'Mega hair liso tipo 1A grisalho acinzentado elegante. Perfeito para assumir os fios brancos com sofisticação.',
       rating: 4.8,
-      reviews: 156,
-      inStock: true,
-      isNew: true
+      reviews: 156
     },
     {
       id: 3,
-      name: 'Mega Hair Liso 1A Grisalho Mix Preto - 40cm',
+      name: 'Mega Hair Liso 1A Grisalho Mix Preto',
       type: 'liso' as const,
       color: 'grisalho' as const,
-      length: '40cm',
-      price: 95.00,
-      originalPrice: 125.00,
-      image: '/images/mega-hair/liso/40cm/grisalho-mix-liso-1a.jpg',
-      description: 'Mega hair liso tipo 1A grisalho 40% com fundo preto natural. Transição perfeita para cabelos em processo de grisalho. 40cm de elegância.',
+      baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Grisalho_em_40_com_fundo_de_cor_preto_natural.jpg',
+      basePrice: 85.00,
+      description: 'Mega hair liso tipo 1A grisalho 40% com fundo preto natural. Transição perfeita para cabelos em processo de grisalho.',
       rating: 4.7,
-      reviews: 134,
-      inStock: true,
-      isNew: true
+      reviews: 134
     },
     {
       id: 4,
-      name: 'Mega Hair Liso 1A Loiro Acobreado - 50cm',
+      name: 'Mega Hair Liso 1A Loiro Acobreado',
       type: 'liso' as const,
       color: 'loiro' as const,
-      length: '50cm',
-      price: 110.00,
-      originalPrice: 145.00,
-      image: '/images/mega-hair/liso/50cm/loiro-acobreado-liso-1a.jpg',
-      description: 'Mega hair liso tipo 1A loiro levemente acobreado premium. Tom dourado sutil e sofisticado. Comprimento 50cm clássico e versátil.',
+      baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Loiro_levemente_acobreado.jpg',
+      basePrice: 95.00,
+      description: 'Mega hair liso tipo 1A loiro levemente acobreado premium. Tom dourado sutil e sofisticado.',
       rating: 4.9,
-      reviews: 203,
-      inStock: true,
-      isNew: true
+      reviews: 203
     },
     {
       id: 5,
-      name: 'Mega Hair Liso 1A Loiro Platinado - 60cm',
+      name: 'Mega Hair Liso 1A Loiro Platinado',
       type: 'liso' as const,
       color: 'loiro' as const,
-      length: '60cm',
-      price: 135.00,
-      originalPrice: 175.00,
-      image: '/images/mega-hair/liso/60cm/loiro-platinado-liso-1a.jpg',
-      description: 'Mega hair liso tipo 1A loiro platinado luxury. Tom ultra claro cristalino, máximo impacto visual. Comprimento 60cm para looks dramáticos.',
+      baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Loiro_platinado.jpg',
+      basePrice: 120.00,
+      description: 'Mega hair liso tipo 1A loiro platinado luxury. Tom ultra claro cristalino, máximo impacto visual.',
       rating: 4.8,
-      reviews: 178,
-      inStock: true,
-      isNew: true
+      reviews: 178
     },
     {
       id: 6,
-      name: 'Mega Hair Liso 1A Preto Natural - 70cm',
+      name: 'Mega Hair Liso 1A Preto Natural',
       type: 'liso' as const,
       color: 'preto' as const,
-      length: '70cm',
-      price: 120.00,
-      originalPrice: 160.00,
-      image: '/images/mega-hair/liso/70cm/preto-natural-liso-1a.jpg',
-      description: 'Mega hair liso tipo 1A preto natural brasileiro premium. Brilho intenso, cor sólida profunda. Comprimento 70cm para máximo volume e comprimento.',
+      baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Preto_natural.jpg',
+      basePrice: 90.00,
+      description: 'Mega hair liso tipo 1A preto natural brasileiro premium. Brilho intenso, cor sólida profunda.',
       rating: 4.9,
-      reviews: 245,
-      inStock: true,
-      isNew: true
+      reviews: 245
     },
     {
       id: 7,
-      name: 'Mega Hair Liso 2A Castanho Chocolate - 80cm',
+      name: 'Mega Hair Liso 2A Castanho Chocolate',
       type: 'liso' as const,
       color: 'castanho' as const,
-      length: '80cm',
-      price: 140.00,
-      originalPrice: 185.00,
-      image: '/images/mega-hair/liso/80cm/castanho-chocolate-liso-2a.jpg',
-      description: 'Mega hair liso tipo 2A castanho chocolate com leve volume. Tom marrom rico e natural. Comprimento 80cm extraordinário para transformações completas.',
+      baseImage: '/images/mega-hair-real/Cabelo_2A_-_Liso_com_um_pouco_de_volume._Marrom_ou_chocolate.jpg',
+      basePrice: 100.00,
+      description: 'Mega hair liso tipo 2A castanho chocolate com leve volume. Tom marrom rico e natural.',
       rating: 4.7,
-      reviews: 167,
-      inStock: true,
-      isNew: true
+      reviews: 167
     },
     {
       id: 8,
-      name: 'Mega Hair Liso 2A Preto Natural - 90cm',
+      name: 'Mega Hair Liso 2A Preto Natural Premium',
       type: 'liso' as const,
       color: 'preto' as const,
-      length: '90cm',
-      price: 155.00,
-      originalPrice: 200.00,
-      image: '/images/mega-hair/liso/90cm/preto-natural-liso-2a.jpg',
-      description: 'Mega hair liso tipo 2A preto natural com volume sutil. Comprimento 90cm excepcional para máximo impacto. Densidade premium brasileira.',
+      baseImage: '/images/mega-hair-real/Cabelo_2A_-_Liso_com_um_pouco_de_volume._Preto_natural.jpg',
+      basePrice: 105.00,
+      description: 'Mega hair liso tipo 2A preto natural com volume sutil. Densidade premium brasileira.',
       rating: 5.0,
-      reviews: 298,
-      inStock: true,
-      isNew: true
+      reviews: 298
     },
 
-    // === ONDULADOS (2C-3A) ===
+    // ONDULADOS (2C-3A)
     {
       id: 9,
-      name: 'Mega Hair Ondulado 2C Preto Natural - 30cm',
+      name: 'Mega Hair Ondulado 2C Preto Natural',
       type: 'ondulado' as const,
       color: 'preto' as const,
-      length: '30cm',
-      price: 95.00,
-      originalPrice: 125.00,
-      image: '/images/mega-hair/ondulado/30cm/preto-natural-ondulado-2c.jpg',
-      description: 'Mega hair ondulado tipo 2C preto natural com ondas fortes quase cachos. Movimento natural intenso. Comprimento 30cm perfeito para volume.',
+      baseImage: '/images/mega-hair-real/Cabelo_2C_Ondas_fortes_quase_cachos._Preto_natural.jpg',
+      basePrice: 85.00,
+      description: 'Mega hair ondulado tipo 2C preto natural com ondas fortes quase cachos. Movimento natural intenso.',
       rating: 4.8,
-      reviews: 187,
-      inStock: true,
-      isNew: true
+      reviews: 187
     },
     {
       id: 10,
-      name: 'Mega Hair Ondulado 3A Preto Natural - 40cm',
+      name: 'Mega Hair Ondulado 3A Preto Natural',
       type: 'ondulado' as const,
       color: 'preto' as const,
-      length: '40cm',
-      price: 105.00,
-      originalPrice: 140.00,
-      image: '/images/mega-hair/ondulado/40cm/preto-natural-ondulado-3a.jpg',
-      description: 'Mega hair ondulado tipo 3A preto natural com ondas marcadas e tendência ao frizz. Textura autêntica brasileira. Comprimento 40cm versátil.',
+      baseImage: '/images/mega-hair-real/Cabelo_3A_-_Ondas_mais_marcadas_tendencia_a_frizz._Preto_natural.jpg',
+      basePrice: 90.00,
+      description: 'Mega hair ondulado tipo 3A preto natural com ondas marcadas e tendência ao frizz. Textura autêntica brasileira.',
       rating: 4.6,
-      reviews: 145,
-      inStock: true,
-      isNew: true
+      reviews: 145
     },
 
-    // === CACHEADOS (3C) ===
+    // CACHEADOS (3C)
     {
       id: 11,
-      name: 'Mega Hair Cacheado 3C Castanho Médio - 35cm',
+      name: 'Mega Hair Cacheado 3C Preto Natural',
       type: 'cacheado' as const,
-      color: 'castanho' as const,
-      length: '35cm',
-      price: 115.00,
-      originalPrice: 150.00,
-      image: '/images/mega-hair/cacheado/35cm/castanho-medio-cacheado-3c.jpg',
-      description: 'Mega hair cacheado tipo 3C castanho médio com cachos pequenos bem fechados. Definição perfeita natural. Comprimento 35cm ideal para volume.',
-      rating: 4.7,
-      reviews: 167,
-      inStock: true,
-      isNew: true
+      color: 'preto' as const,
+      baseImage: '/images/mega-hair-real/Cabelo_3C_Cachos_pequenos_e_bem_fechados._Preto.jpg',
+      basePrice: 95.00,
+      description: 'Mega hair cacheado tipo 3C preto natural com cachos pequenos fechados. Volume natural intenso.',
+      rating: 4.8,
+      reviews: 198
     },
     {
       id: 12,
-      name: 'Mega Hair Cacheado 3C Ruivo Intenso - 45cm',
+      name: 'Mega Hair Cacheado 3C Castanho Médio',
       type: 'cacheado' as const,
-      color: 'ruivo' as const,
-      length: '45cm',
-      price: 135.00,
-      originalPrice: 175.00,
-      image: '/images/mega-hair/cacheado/45cm/ruivo-cacheado-3c.jpg',
-      description: 'Mega hair cacheado tipo 3C ruivo arregalado vibrante. Cor intensa única com cachos bem definidos. Comprimento 45cm para máximo impacto.',
-      rating: 4.9,
-      reviews: 123,
-      inStock: true,
-      isNew: true
+      color: 'castanho' as const,
+      baseImage: '/images/mega-hair-real/Cabelo_3C_Cachos_pequenos_e_bem_fechados._Castanho_medio.jpg',
+      basePrice: 100.00,
+      description: 'Mega hair cacheado tipo 3C castanho médio com cachos pequenos bem fechados. Definição perfeita natural.',
+      rating: 4.7,
+      reviews: 167
     },
     {
       id: 13,
-      name: 'Mega Hair Cacheado 3C Preto Natural - 25cm',
+      name: 'Mega Hair Cacheado 3C Ruivo Intenso',
       type: 'cacheado' as const,
-      color: 'preto' as const,
-      length: '25cm',
-      price: 100.00,
-      originalPrice: 130.00,
-      image: '/images/mega-hair/cacheado/25cm/preto-natural-cacheado-3c.jpg',
-      description: 'Mega hair cacheado tipo 3C preto natural com cachos pequenos fechados. Volume natural intenso. Comprimento 25cm para looks autênticos.',
-      rating: 4.8,
-      reviews: 198,
-      inStock: true,
-      isNew: true
+      color: 'ruivo' as const,
+      baseImage: '/images/mega-hair-real/Cabelo_3C_Cachos_pequenos_e_bem_fechados._Ruivo_arregalado.jpg',
+      basePrice: 120.00,
+      description: 'Mega hair cacheado tipo 3C ruivo arregalado vibrante. Cor intensa única com cachos bem definidos.',
+      rating: 4.9,
+      reviews: 123
     },
     {
       id: 14,
-      name: 'Mega Hair Cacheado 3C Borgonha Luxury - 55cm',
+      name: 'Mega Hair Cacheado 3C Borgonha Luxury',
       type: 'cacheado' as const,
       color: 'ruivo' as const,
-      length: '55cm',
-      price: 145.00,
-      originalPrice: 190.00,
-      image: '/images/mega-hair/cacheado/55cm/borgonha-cacheado-3c.jpg',
-      description: 'Mega hair cacheado tipo 3C vermelho borgonha luxury. Tom vinho sofisticado com cachos perfeitos. Comprimento 55cm para looks únicos.',
+      baseImage: '/images/mega-hair-real/Cabelo_3C_Cachos_pequenos_e_bem_fechados._Vermelho_borgonha.jpg',
+      basePrice: 130.00,
+      description: 'Mega hair cacheado tipo 3C vermelho borgonha luxury. Tom vinho sofisticado com cachos perfeitos.',
       rating: 5.0,
-      reviews: 156,
-      inStock: true,
-      isNew: true
+      reviews: 156
     },
 
-    // === CRESPOS (4A-4C) ===
+    // CRESPOS (4A-4C)
     {
       id: 15,
-      name: 'Mega Hair Crespo 4A Preto Mechas Caramelo - 25cm',
+      name: 'Mega Hair Crespo 4A Preto Mechas Caramelo',
       type: 'crespo' as const,
       color: 'ombre' as const,
-      length: '25cm',
-      price: 125.00,
-      originalPrice: 165.00,
-      image: '/images/mega-hair/crespo/25cm/preto-mechas-caramelo-crespo-4a.jpg',
-      description: 'Mega hair crespo tipo 4A preto com mechas carameladas que se misturam naturalmente. Cachinhos pequenos em forma de molinha. 25cm autêntico.',
+      baseImage: '/images/mega-hair-real/Cabelo_4A_Cachinhos_bem_pequenos_em_forma_de_molinha_bem_fechadas._Preto_com_mechas_carameladas_que_se_misturam_com_o_preto.jpg',
+      basePrice: 110.00,
+      description: 'Mega hair crespo tipo 4A preto com mechas carameladas que se misturam naturalmente. Cachinhos pequenos em forma de molinha.',
       rating: 4.9,
-      reviews: 189,
-      inStock: true,
-      isNew: true
+      reviews: 189
     },
     {
       id: 16,
-      name: 'Mega Hair Crespo 4A Ombré Dourado - 30cm',
+      name: 'Mega Hair Crespo 4A Ombré Dourado',
       type: 'crespo' as const,
       color: 'ombre' as const,
-      length: '30cm',
-      price: 140.00,
-      originalPrice: 180.00,
-      image: '/images/mega-hair/crespo/30cm/ombre-dourado-crespo-4a.jpg',
-      description: 'Mega hair crespo tipo 4A com raiz preta e degradê dourado completo. Cachos fechados em "S" miúdo. Comprimento 30cm impactante.',
+      baseImage: '/images/mega-hair-real/Cabelo-_4A_Cachos_muito_fechados_em_forma_de_S_miudo._Cor_raiz_preta_e_um_degrade_dourado_em_toda_o_seu_comprometimento.jpg',
+      basePrice: 125.00,
+      description: 'Mega hair crespo tipo 4A com raiz preta e degradê dourado completo. Cachos fechados em "S" miúdo.',
       rating: 4.8,
-      reviews: 167,
-      inStock: true,
-      isNew: true
+      reviews: 167
     },
     {
       id: 17,
-      name: 'Mega Hair Crespo 4B Preto Natural - 35cm',
+      name: 'Mega Hair Crespo 4B Preto Natural',
       type: 'crespo' as const,
       color: 'preto' as const,
-      length: '35cm',
-      price: 115.00,
-      originalPrice: 150.00,
-      image: '/images/mega-hair/crespo/35cm/preto-natural-crespo-4b.jpg',
-      description: 'Mega hair crespo tipo 4B preto natural com curvatura em "Z", menos definição e mais volume. Textura autêntica africana. 35cm poderoso.',
+      baseImage: '/images/mega-hair-real/Cabelo_4B_Curvatura_em_Z_menos_definicao_mais_volume._Preto_natural.jpg',
+      basePrice: 100.00,
+      description: 'Mega hair crespo tipo 4B preto natural com curvatura em "Z", menos definição e mais volume. Textura autêntica africana.',
       rating: 4.7,
-      reviews: 203,
-      inStock: true,
-      isNew: true
+      reviews: 203
     },
     {
       id: 18,
-      name: 'Mega Hair Crespo 4C Preto Natural - 40cm',
+      name: 'Mega Hair Crespo 4C Preto Natural',
       type: 'crespo' as const,
       color: 'preto' as const,
-      length: '40cm',
-      price: 130.00,
-      originalPrice: 170.00,
-      image: '/images/mega-hair/crespo/40cm/preto-natural-crespo-4c.jpg',
-      description: 'Mega hair crespo tipo 4C preto natural extremamente crespo, fios bem encolhidos com pouca definição natural. Comprimento 40cm máximo volume.',
+      baseImage: '/images/mega-hair-real/Cabelo_4C_Extremamente_crespo_fios_bem_encolhidos_pouca_definicao_natural._Preto_natural.jpg',
+      basePrice: 115.00,
+      description: 'Mega hair crespo tipo 4C preto natural extremamente crespo, fios bem encolhidos com pouca definição natural.',
       rating: 4.6,
-      reviews: 178,
-      inStock: true,
-      isNew: true
+      reviews: 178
     }
   ];
+
+  // SISTEMA SIMPLIFICADO: Apenas os 18 produtos reais, cada um com sua foto específica
+  // Não gerar múltiplos tamanhos - usar apenas as imagens reais disponíveis
+
+  const products = [];
+
+  hairTypes.forEach((hairType, index) => {
+    products.push({
+      id: hairType.id,
+      name: hairType.name,
+      type: hairType.type,
+      color: hairType.color,
+      length: '50cm', // Tamanho padrão para todos
+      price: hairType.basePrice,
+      originalPrice: Math.round(hairType.basePrice * 1.3), // 30% desconto
+      image: hairType.baseImage, // Usar a imagem real diretamente
+      description: hairType.description,
+      rating: hairType.rating,
+      reviews: hairType.reviews,
+      inStock: true,
+      isNew: index < 8 // Primeiros 8 produtos marcados como novos
+    });
+  });
 
   return products;
 }

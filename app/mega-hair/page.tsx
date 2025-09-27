@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getLegacyCompatibleProducts } from '@/lib/data/megaHairProducts';
 import { useCart } from '@/lib/stores/cartStore';
+import { CategorySchema } from '@/components/seo/SchemaMarkup';
 
 // Enhanced product data structure (mantém compatibilidade)
 interface MegaHairProduct {
@@ -431,7 +432,7 @@ export default function MegaHairCatalog() {
                             loading="lazy"
                             onError={(e) => {
                               const target = e.target as HTMLImageElement;
-                              target.src = '/images/placeholder-product.jpg';
+                              target.src = '/placeholder-product.jpg';
                             }}
                           />
                         </div>
@@ -622,6 +623,23 @@ export default function MegaHairCatalog() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Schema Markup for Category Rich Snippets */}
+      <CategorySchema
+        category="Mega Hair Brasileiro"
+        products={filteredProducts.map(product => ({
+          id: product.id.toString(),
+          name: product.name,
+          brand: "JC Hair Studio's 62",
+          price: product.price,
+          preco_eur: product.price,
+          images: [product.image],
+          category: 'mega-hair',
+          inStock: product.inStock,
+          rating: product.rating,
+          reviews: product.reviews
+        }))}
+      />
     </div>
   );
 }

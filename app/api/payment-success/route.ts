@@ -1,375 +1,189 @@
-/**
- * @fileoverview API de Confirmação de Pagamento com Sistema de Notificações Paralelas
- * @description Processa confirmações de pagamento e executa 5 agentes de notificação em paralelo
- * @version 2.0.0
- * @author JC Hair Studio Development Team
- */
-
 import { NextRequest, NextResponse } from 'next/server';
-import { executeParallelNotifications } from '@/app/api/admin/notifications/route';
+import { sendEmail, generateOrderConfirmationEmail } from '@/lib/utils/email';
 
-/**
- * Endpoint POST para processar confirmações de pagamento bem-sucedidas
- * Executa sistema avançado de notificações com 5 agentes paralelos:
- * - Agent 1: Notificação completa para admin (juliocesarurss65@gmail.com)
- * - Agent 2: Email de confirmação de pedido para cliente
- * - Agent 3: Email de confirmação de pagamento para cliente
- * - Agent 4: Sistema de backup via Discord webhook
- * - Agent 5: Persistência no MongoDB para auditoria
- */
 export async function POST(request: NextRequest) {
   try {
-    // ==========================================
-    // EXTRAÇÃO E VALIDAÇÃO DOS DADOS RECEBIDOS
-    // ==========================================
+    const { paymentIntentId, customerInfo, amount, currency, items } = await request.json();
 
-    console.log('🎉 Iniciando processamento de pagamento confirmado...');
+    console.log('🔔 Processing immediate payment notification:', paymentIntentId);
 
-    // Extrair dados do corpo da requisição (incluindo novos campos técnicos)
-    const {
+    // Create order data
+    const orderData = {
+      orderId: paymentIntentId,
       paymentIntentId,
-      customerInfo,
-      items,
-      amount,
-      orderTotals,
-      technicalInfo,
-      shippingAddress,
-      deliveryMethod
-    } = await request.json();
-
-    // Log detalhado dos dados recebidos para auditoria
-    console.log('📋 Dados recebidos:', {
-      paymentIntentId,
-      customerName: customerInfo?.name,
-      customerEmail: customerInfo?.email,
-      customerPhone: customerInfo?.phone,
-      customerCpfNif: customerInfo?.cpfNif ? customerInfo.cpfNif.substring(0, 3) + '***' : 'N/A',
+      customerName: customerInfo.name,
+      customerEmail: customerInfo.email,
       total: amount,
-      itemsCount: items?.length || 0,
-      hasCompleteAddress: !!(customerInfo?.address),
-      deliveryMethod: customerInfo?.deliveryMethod || deliveryMethod,
-      clientIp: technicalInfo?.clientIp || 'N/A',
-      userAgent: technicalInfo?.userAgent ? technicalInfo.userAgent.substring(0, 50) + '...' : 'N/A',
-      hasOrderTotals: !!orderTotals
-    });
-
-    // ==========================================
-    // CAPTURA DE DADOS TÉCNICOS DO CLIENTE
-    // ==========================================
-
-    // Priorizar dados técnicos enviados pelo cliente, com fallback para headers
-    const clientIp = technicalInfo?.clientIp ||
-                     request.headers.get('x-forwarded-for') ||
-                     request.headers.get('x-real-ip') ||
-                     request.ip ||
-                     'Unknown IP';
-
-    const userAgent = technicalInfo?.userAgent ||
-                      request.headers.get('user-agent') ||
-                      'Unknown Device';
-
-    // Capturar dados técnicos adicionais
-    const browserLanguage = technicalInfo?.browserLanguage || 'Unknown';
-    const timezone = technicalInfo?.timezone || 'Unknown';
-    const screenResolution = technicalInfo?.screenResolution || 'Unknown';
-    const referrer = technicalInfo?.referrer || request.headers.get('referer') || 'direct';
-
-    // Log das informações técnicas capturadas
-    console.log('🔍 Dados técnicos completos capturados:', {
-      clientIp,
-      userAgent: userAgent.substring(0, 100) + '...',
-      browserLanguage,
-      timezone,
-      screenResolution,
-      referrer
-    });
-
-    // ==========================================
-    // PREPARAÇÃO DE DADOS COMPLETOS DO PEDIDO
-    // ==========================================
-
-    console.log('📦 Preparando dados completos do pedido...');
-
-    // Construir objeto completo com todos os dados necessários para notificações
-    const completeOrderData = {
-      // Identificadores únicos do pedido
-      orderId: paymentIntentId ? paymentIntentId.slice(-8) : `TEST-${Date.now().toString().slice(-8)}`, // Últimos 8 caracteres como ID amigável
-      paymentIntentId,
-      transactionId: paymentIntentId,
-
-      // Dados básicos do cliente (COMPLETOS)
-      customerName: customerInfo?.name || 'Cliente',
-      customerEmail: customerInfo?.email || 'email não informado',
-      customerPhone: customerInfo?.phone || '',
-      customerCpfNif: customerInfo?.cpfNif || '',
-      customerCountry: customerInfo?.country || 'Portugal',
-
-      // Informações financeiras (DETALHADAS)
-      total: amount || orderTotals?.finalTotal || 0,
-      subtotal: orderTotals?.subtotal || amount || 0,
-      taxAmount: orderTotals?.taxAmount || 0,
-      shippingCost: orderTotals?.shippingCost || 0,
-      currency: 'EUR',
-      discount: 0,
-
-      // Status e metadados do pagamento
-      status: 'paid', // Confirmação de pagamento aprovado
+      currency: currency?.toUpperCase() || 'EUR',
+      itemsCount: items?.length || 1,
+      status: 'paid',
       paymentMethod: 'Cartão de Crédito',
-      paymentGateway: 'Stripe', // Gateway usado para processar o pagamento
-
-      // Timestamps importantes
       createdAt: new Date().toISOString(),
-
-      // Lista detalhada de produtos com validação
-      products: items?.map((item: any) => ({
-        name: item.name || 'Produto',
-        quantity: item.quantity || 1,
-        price: item.price || 0,
-        sku: item.sku || item.id || 'N/A', // SKU para controle de estoque
-        // Calcular subtotal do item
-        subtotal: (item.price || 0) * (item.quantity || 1)
-      })) || [],
-
-      // Endereço de entrega completo (PRIORITIZA dados do customerInfo)
-      shippingAddress: customerInfo?.address ? {
-        name: customerInfo.name || 'Cliente',
-        street: customerInfo.address.street || '',
-        number: customerInfo.address.number || '',
-        complement: customerInfo.address.complement || '',
-        neighborhood: customerInfo.address.neighborhood || '',
-        city: customerInfo.address.city || '',
-        state: customerInfo.address.state || '',
-        zipCode: customerInfo.address.zipCode || '',
-        country: customerInfo.country || 'Portugal',
-        phone: customerInfo.phone || '',
-        notes: ''
-      } : (shippingAddress ? {
-        name: shippingAddress.name || customerInfo?.name || 'Cliente',
-        street: shippingAddress.street || shippingAddress.address || '',
-        complement: shippingAddress.complement || shippingAddress.address2 || '',
-        neighborhood: shippingAddress.neighborhood || shippingAddress.district || '',
-        city: shippingAddress.city || '',
-        state: shippingAddress.state || shippingAddress.region || '',
-        zipCode: shippingAddress.zipCode || shippingAddress.postalCode || '',
-        country: shippingAddress.country || 'Portugal',
-        phone: shippingAddress.phone || customerInfo?.phone || '',
-        notes: shippingAddress.notes || shippingAddress.instructions || ''
-      } : null),
-
-      // Informações de entrega e envio
-      deliveryMethod: customerInfo?.deliveryMethod || deliveryMethod || 'Correios - Envio Padrão',
-      shippingCarrier: 'Correios',
-      estimatedDelivery: '5-10 dias úteis',
-
-      // Dados técnicos para análise (COMPLETOS E OBRIGATÓRIOS)
-      clientIp: clientIp,
-      userAgent: userAgent,
-      browserLanguage: browserLanguage,
-      timezone: timezone,
-      screenResolution: screenResolution,
-      referrer: referrer,
-
-      // Metadados adicionais para analytics (EXPANDIDOS)
-      source: 'Website', // Origem da venda
-      sessionId: request.headers.get('x-session-id') || 'Unknown',
-      orderTimestamp: technicalInfo?.orderTimestamp || new Date().toISOString(),
-
-      // Dados de geolocalização e detecção de fraude
-      technicalFingerprint: {
-        ip: clientIp,
-        userAgent: userAgent,
-        language: browserLanguage,
-        timezone: timezone,
-        resolution: screenResolution,
-        referrer: referrer,
-        timestamp: new Date().toISOString()
-      }
+      shippingType: determineShippingType(amount),
+      estimatedDelivery: calculateDeliveryTime(amount)
     };
 
-    // Log dos dados preparados (sem informações sensíveis)
-    console.log('✅ Dados do pedido COMPLETOS preparados:', {
-      orderId: completeOrderData.orderId,
-      customerEmail: completeOrderData.customerEmail,
-      customerPhone: completeOrderData.customerPhone,
-      customerCpfNif: completeOrderData.customerCpfNif ? completeOrderData.customerCpfNif.substring(0, 3) + '***' : 'N/A',
-      total: completeOrderData.total,
-      subtotal: completeOrderData.subtotal,
-      taxAmount: completeOrderData.taxAmount,
-      shippingCost: completeOrderData.shippingCost,
-      productCount: completeOrderData.products.length,
-      hasCompleteAddress: !!completeOrderData.shippingAddress,
-      deliveryMethod: completeOrderData.deliveryMethod,
-      clientIp: completeOrderData.clientIp,
-      browserLanguage: completeOrderData.browserLanguage,
-      timezone: completeOrderData.timezone,
-      paymentGateway: completeOrderData.paymentGateway,
-      hasTechnicalFingerprint: !!completeOrderData.technicalFingerprint
-    });
+    // Send notifications in parallel with timeout
+    const notifications = [
+      Promise.race([
+        sendCustomerConfirmation(orderData),
+        new Promise((_, reject) => setTimeout(() => reject(new Error('Customer email timeout')), 8000))
+      ]),
+      Promise.race([
+        sendAdminNotification(orderData),
+        new Promise((_, reject) => setTimeout(() => reject(new Error('Admin email timeout')), 8000))
+      ]),
+      Promise.race([
+        saveOrderToAdmin(orderData),
+        new Promise((_, reject) => setTimeout(() => reject(new Error('Save order timeout')), 5000))
+      ])
+    ];
 
-    // ==========================================
-    // EXECUÇÃO DO SISTEMA DE NOTIFICAÇÕES PARALELAS
-    // ==========================================
+    const results = await Promise.allSettled(notifications);
 
-    console.log('🚀 Executando sistema de notificações com 5 agentes paralelos...');
-    console.log('📧 Admin principal: juliocesarurss65@gmail.com');
+    const summary = {
+      customerEmail: results[0].status === 'fulfilled' ? 'sent' : 'failed',
+      adminEmail: results[1].status === 'fulfilled' ? 'sent' : 'failed',
+      orderSaved: results[2].status === 'fulfilled' ? 'saved' : 'failed'
+    };
 
-    // Executar todas as notificações usando o novo sistema paralelo
-    // Este sistema garante:
-    // 1. Máxima velocidade (execução paralela)
-    // 2. Redundância (múltiplos canais)
-    // 3. Auditoria completa (logs no MongoDB)
-    // 4. Retry automático em caso de falhas
-    const notificationResults = await executeParallelNotifications(completeOrderData);
+    console.log('✅ Notifications processed for payment:', paymentIntentId, summary);
 
-    // ==========================================
-    // ANÁLISE DETALHADA DOS RESULTADOS
-    // ==========================================
-
-    console.log('📊 Resultados das notificações recebidos:', notificationResults);
-
-    // Verificar se notificação crítica do admin foi enviada
-    const adminNotification = notificationResults.details?.find(
-      (detail: any) => detail.agent === 'Admin'
-    );
-
-    if (adminNotification?.status === 'fulfilled') {
-      console.log('✅ CRÍTICO: Notificação admin enviada com sucesso para juliocesarurss65@gmail.com');
-    } else {
-      console.error('❌ CRÍTICO: Falha na notificação admin:', adminNotification?.error);
-    }
-
-    // Analisar sucesso das notificações do cliente
-    const customerNotifications = notificationResults.details?.filter(
-      (detail: any) => ['Order', 'Payment'].includes(detail.agent)
-    );
-
-    const successfulCustomerNotifications = customerNotifications?.filter(
-      (detail: any) => detail.status === 'fulfilled'
-    ).length || 0;
-
-    console.log(`📨 Notificações do cliente: ${successfulCustomerNotifications}/${customerNotifications?.length || 0} enviadas`);
-
-    // Log resumo final das notificações
-    console.log('📈 Resumo final das notificações:', {
-      totalAgents: notificationResults.total,
-      successful: notificationResults.successful,
-      failed: notificationResults.failed,
-      successRate: ((notificationResults.successful / notificationResults.total) * 100).toFixed(1) + '%'
-    });
-
-    // ==========================================
-    // ATUALIZAÇÃO DO DASHBOARD ADMINISTRATIVO
-    // ==========================================
-
-    console.log('💾 Atualizando dashboard administrativo...');
-
-    // Atualizar status do pedido no painel administrativo
-    try {
-      const dashboardResponse = await fetch(`${request.nextUrl.origin}/api/admin/orders`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Admin-Update': 'true' // Header para identificar atualização automática
-        },
-        body: JSON.stringify({
-          ...completeOrderData,
-          status: 'paid',
-          notificationStatus: notificationResults,
-          updatedAt: new Date().toISOString()
-        })
-      });
-
-      if (dashboardResponse.ok) {
-        console.log('✅ Pedido registrado no dashboard administrativo');
-      } else {
-        console.warn('⚠️ Aviso: Falha ao atualizar dashboard (não crítico)');
-      }
-    } catch (dashboardError) {
-      console.warn('⚠️ Aviso: Erro ao conectar com dashboard:', dashboardError);
-      // Não é crítico - o sistema pode continuar funcionando
-    }
-
-    // ==========================================
-    // RESPOSTA FINAL DE SUCESSO
-    // ==========================================
-
-    console.log('🎊 Processamento de pagamento concluído com sucesso!');
-
-    // Retornar resposta detalhada sobre o processamento
     return NextResponse.json({
       success: true,
-      message: 'Pagamento processado e notificações enviadas com sucesso',
-      orderId: completeOrderData.orderId,
-      paymentStatus: 'confirmed',
-      notificationResults: {
-        totalSent: notificationResults.successful,
-        totalFailed: notificationResults.failed,
-        adminNotified: adminNotification?.status === 'fulfilled',
-        customerNotified: successfulCustomerNotifications > 0
-      },
-      metadata: {
-        processedAt: new Date().toISOString(),
-        totalAmount: completeOrderData.total,
-        currency: completeOrderData.currency,
-        productsCount: completeOrderData.products.length
-      }
+      notifications: summary,
+      paymentIntentId
     });
-
   } catch (error) {
-    // ==========================================
-    // TRATAMENTO DE ERROS CRÍTICOS
-    // ==========================================
+    console.error('❌ Error processing payment success notification:', error);
+    return NextResponse.json(
+      { error: 'Failed to process notification' },
+      { status: 500 }
+    );
+  }
+}
 
-    console.error('❌ ERRO CRÍTICO no processamento de pagamento:', error);
-
-    // Log detalhado do erro para debug
-    console.error('🔍 Detalhes do erro:', {
-      message: error instanceof Error ? error.message : 'Erro desconhecido',
-      stack: error instanceof Error ? error.stack : 'Stack não disponível',
-      timestamp: new Date().toISOString()
+async function sendCustomerConfirmation(orderData: any) {
+  try {
+    const emailData = generateOrderConfirmationEmail({
+      orderId: orderData.orderId,
+      customerName: orderData.customerName,
+      customerEmail: orderData.customerEmail,
+      total: orderData.total,
+      items: [],
+      paymentMethod: orderData.paymentMethod,
+      shippingType: orderData.shippingType,
+      estimatedDelivery: orderData.estimatedDelivery
     });
 
-    // Tentar enviar notificação de erro crítico para admin
-    try {
-      console.log('📧 Tentando notificar admin sobre erro crítico...');
+    await sendEmail(emailData);
+    console.log('✅ Customer confirmation email sent to:', orderData.customerEmail);
+  } catch (error) {
+    console.error('❌ Failed to send customer confirmation:', error);
+  }
+}
 
-      // Dados mínimos para notificação de erro
-      const errorNotificationData = {
-        orderId: `ERROR-${Date.now()}`,
-        customerName: 'Sistema JC Hair Studio',
-        customerEmail: 'sistema@jchairstudios62.xyz',
-        total: 0,
-        status: 'error',
-        products: [],
-        errorDetails: {
-          message: error instanceof Error ? error.message : 'Erro desconhecido',
-          timestamp: new Date().toISOString(),
-          endpoint: '/api/payment-success'
-        },
-        createdAt: new Date().toISOString()
-      };
+async function sendAdminNotification(orderData: any) {
+  try {
+    await sendEmail({
+      to: process.env.SUPPORT_EMAIL || 'suporte@jchairstudios62.xyz',
+      subject: `🎉 Nova Venda - Pedido #${orderData.orderId.substring(0, 8)}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #4caf50;">🎉 Nova Venda Realizada!</h2>
 
-      // Tentar executar notificação de erro
-      await executeParallelNotifications(errorNotificationData);
-      console.log('✅ Admin notificado sobre erro crítico');
+          <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3>📋 Detalhes do Pedido</h3>
+            <p><strong>Pedido ID:</strong> #${orderData.orderId.substring(0, 8)}</p>
+            <p><strong>Valor Total:</strong> €${orderData.total.toFixed(2)} ${orderData.currency}</p>
+            <p><strong>Quantidade de Itens:</strong> ${orderData.itemsCount}</p>
+            <p><strong>Data:</strong> ${new Date(orderData.createdAt).toLocaleString('pt-PT')}</p>
+          </div>
 
-    } catch (notificationError) {
-      console.error('❌ Falha ao notificar admin sobre erro:', notificationError);
+          <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3>👤 Dados do Cliente</h3>
+            <p><strong>Nome:</strong> ${orderData.customerName}</p>
+            <p><strong>Email:</strong> ${orderData.customerEmail}</p>
+          </div>
+
+          <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3>📦 Informações de Envio</h3>
+            <p><strong>Tipo de Frete:</strong> ${orderData.shippingType}</p>
+            <p><strong>Prazo Estimado:</strong> ${orderData.estimatedDelivery}</p>
+          </div>
+
+          <div style="background: #f1f8e9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3>💳 Pagamento</h3>
+            <p><strong>Método:</strong> ${orderData.paymentMethod}</p>
+            <p><strong>Status:</strong> ✅ Aprovado</p>
+            <p><strong>Stripe ID:</strong> ${orderData.paymentIntentId}</p>
+          </div>
+
+          <div style="margin-top: 30px; padding: 20px; background: #ffebee; border-radius: 8px;">
+            <h3>📋 Próximos Passos</h3>
+            <ol style="line-height: 1.6;">
+              <li>✅ <strong>Pagamento confirmado</strong></li>
+              <li>📦 <strong>Preparar produtos para envio</strong></li>
+              <li>🏃‍♂️ <strong>Processar envio (${orderData.shippingType})</strong></li>
+              <li>📱 <strong>Enviar código de rastreamento ao cliente</strong></li>
+            </ol>
+          </div>
+
+          <hr style="margin: 30px 0;">
+          <p style="text-align: center; color: #666;">
+            <strong>JC Hair Studio's 62</strong><br>
+            Sistema de E-commerce Automatizado
+          </p>
+        </div>
+      `,
+      sandbox: false
+    });
+    console.log('✅ Admin notification email sent');
+  } catch (error) {
+    console.error('❌ Failed to send admin notification:', error);
+  }
+}
+
+async function saveOrderToAdmin(orderData: any) {
+  try {
+    const baseUrl = process.env.NEXTAUTH_URL ||
+                   process.env.NEXT_PUBLIC_SITE_URL ||
+                   'https://jchairstudios62.xyz';
+
+    const response = await fetch(`${baseUrl}/api/admin/orders`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(orderData),
+    });
+
+    if (response.ok) {
+      console.log('✅ Order saved to admin dashboard');
+    } else {
+      console.error('❌ Failed to save to admin dashboard:', response.status);
     }
+  } catch (error) {
+    console.error('❌ Error saving to admin dashboard:', error);
+  }
+}
 
-    // Retornar erro estruturado para o cliente
-    return NextResponse.json({
-      success: false,
-      error: 'Erro interno no processamento do pagamento',
-      message: 'Seu pagamento foi processado, mas houve um problema nas notificações. Nossa equipe foi notificada.',
-      details: process.env.NODE_ENV === 'development' ? {
-        errorMessage: error instanceof Error ? error.message : 'Erro desconhecido',
-        timestamp: new Date().toISOString()
-      } : undefined, // Só mostrar detalhes em desenvolvimento
-      support: {
-        email: 'contato@jchairstudios62.xyz',
-        phone: '+351 928375226'
-      }
-    }, { status: 500 });
+function determineShippingType(amount: number): string {
+  if (amount >= 50) {
+    return '🚚 Frete Grátis (Standard)';
+  } else if (amount >= 30) {
+    return '📦 Frete Standard (€4.99)';
+  } else {
+    return '📦 Frete Standard (€7.99)';
+  }
+}
+
+function calculateDeliveryTime(amount: number): string {
+  if (amount >= 100) {
+    return '1-2 dias úteis (Express)';
+  } else if (amount >= 50) {
+    return '2-3 dias úteis (Standard)';
+  } else {
+    return '3-5 dias úteis (Standard)';
   }
 }

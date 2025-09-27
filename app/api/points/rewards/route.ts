@@ -16,11 +16,19 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Buscar tier do usuário
-    const user = await User.findById(session.user.id).select({
-      tierLevel: 1,
-      availablePoints: 1
-    });
+    // Buscar tier do usuário (busca robusta por ID)
+    let user;
+    try {
+      user = await User.findById(session.user.id).select({
+        tierLevel: 1,
+        availablePoints: 1
+      });
+    } catch (error) {
+      user = await User.findOne({ googleId: session.user.id }).select({
+        tierLevel: 1,
+        availablePoints: 1
+      });
+    }
 
     if (!user) {
       return NextResponse.json(

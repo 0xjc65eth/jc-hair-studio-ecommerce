@@ -82,6 +82,19 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         token.id = user.id
       }
+
+      // Para Google OAuth, garantir que temos o MongoDB ID
+      if (account?.provider === "google" && user?.email) {
+        try {
+          const mongoUser = await User.findOne({ email: user.email })
+          if (mongoUser) {
+            token.id = mongoUser._id.toString()
+          }
+        } catch (error) {
+          console.error('Erro ao buscar usuário MongoDB no JWT:', error)
+        }
+      }
+
       if (account) {
         token.accessToken = account.access_token
         token.refreshToken = account.refresh_token
@@ -100,7 +113,7 @@ export const authOptions: NextAuthOptions = {
         // Criar ou atualizar usuário Google no MongoDB
         if (user.email && profile?.email_verified) {
           try {
-            await User.findOneAndUpdate(
+            const mongoUser = await User.findOneAndUpdate(
               { email: user.email },
               {
                 name: user.name || profile.name,
@@ -111,6 +124,10 @@ export const authOptions: NextAuthOptions = {
               },
               { upsert: true, new: true }
             )
+            // Atualizar o user.id com o MongoDB ObjectId
+            if (mongoUser) {
+              user.id = mongoUser._id.toString()
+            }
           } catch (error) {
             console.error('Erro ao salvar usuário Google:', error)
           }

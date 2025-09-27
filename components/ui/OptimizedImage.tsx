@@ -48,10 +48,25 @@ export default function OptimizedImage({
   }
 
   if (hasError) {
+    // Fallback para placeholder se imagem falhar
     return (
-      <div className={`bg-gray-200 flex items-center justify-center ${className}`}>
-        <div className="text-gray-400 text-sm">Imagem indisponível</div>
-      </div>
+      <Image
+        src="/placeholder-product.jpg"
+        alt={alt}
+        width={width}
+        height={height}
+        className={`${objectFit === 'cover' ? 'object-cover' : `object-${objectFit}`} opacity-75 ${className}`}
+        placeholder="blur"
+        blurDataURL={blurDataURL}
+        onError={() => {
+          // Se até o placeholder falhar, mostrar div cinza
+          return (
+            <div className={`bg-gray-200 flex items-center justify-center ${className}`}>
+              <div className="text-gray-400 text-sm">Imagem indisponível</div>
+            </div>
+          )
+        }}
+      />
     )
   }
 

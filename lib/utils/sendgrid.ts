@@ -3,15 +3,28 @@ import logger from '@/lib/logger';
 
 // Configurar SendGrid API Key
 const SENDGRID_ENABLED = !!process.env.SENDGRID_API_KEY && process.env.SENDGRID_API_KEY !== 'SG.your-sendgrid-api-key' && process.env.SENDGRID_API_KEY.startsWith('SG.');
-const TEST_MODE = process.env.NODE_ENV === 'test' || process.env.SENDGRID_TEST_MODE === 'true' || !SENDGRID_ENABLED;
+const FORCE_SEND_EMAILS = process.env.FORCE_SEND_EMAILS === 'true';
+const TEST_MODE = (process.env.NODE_ENV === 'test' || process.env.SENDGRID_TEST_MODE === 'true') && !FORCE_SEND_EMAILS && !SENDGRID_ENABLED;
 
-if (SENDGRID_ENABLED && !TEST_MODE) {
+if (SENDGRID_ENABLED || FORCE_SEND_EMAILS) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
-  console.log('✅ SendGrid configured successfully');
+  console.log('✅ SendGrid configured successfully', {
+    enabled: SENDGRID_ENABLED,
+    forceSend: FORCE_SEND_EMAILS,
+    testMode: TEST_MODE,
+    nodeEnv: process.env.NODE_ENV
+  });
 } else if (TEST_MODE) {
-  console.log('🧪 SendGrid in test mode - emails will be mocked');
+  console.log('🧪 SendGrid in test mode - emails will be mocked', {
+    forceSend: FORCE_SEND_EMAILS,
+    nodeEnv: process.env.NODE_ENV
+  });
 } else {
-  console.warn('⚠️ SendGrid not configured - using SENDGRID_API_KEY:', process.env.SENDGRID_API_KEY ? 'EXISTS' : 'MISSING');
+  console.warn('⚠️ SendGrid not configured', {
+    apiKeyExists: !!process.env.SENDGRID_API_KEY,
+    forceSend: FORCE_SEND_EMAILS,
+    nodeEnv: process.env.NODE_ENV
+  });
 }
 
 export interface EmailTemplate {
@@ -100,7 +113,7 @@ export async function sendContactEmail(data: ContactFormData): Promise<boolean> 
     // Email para a empresa
     const emailToCompany: EmailTemplate = {
       to: process.env.SUPPORT_EMAIL || 'suporte@jchairstudios62.xyz',
-      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
+      from: `${process.env.FROM_NAME || 'JC Hair Studio\'s 62'} <${process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz'}>`,
       subject: `[${formType.toUpperCase()}] ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -157,7 +170,7 @@ export async function sendContactEmail(data: ContactFormData): Promise<boolean> 
     // Email de confirmação para o cliente
     const emailToCustomer: EmailTemplate = {
       to: email,
-      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
+      from: `${process.env.FROM_NAME || 'JC Hair Studio\'s 62'} <${process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz'}>`,
       subject: 'Recebemos sua mensagem - JC Hair Studio\'s 62',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -234,17 +247,31 @@ export async function sendContactEmail(data: ContactFormData): Promise<boolean> 
     };
 
     // Enviar ambos os emails
-    if (SENDGRID_ENABLED) {
-      console.log('📧 SendGrid ENABLED - Attempting to send emails...');
-      await sgMail.send(emailToCompany);
-      console.log('✅ Email to company sent successfully');
-      await sgMail.send(emailToCustomer);
-      console.log('✅ Email to customer sent successfully');
+    if (SENDGRID_ENABLED || FORCE_SEND_EMAILS) {
+      console.log('📧 SendGrid ENABLED - Attempting to send emails...', {
+        enabled: SENDGRID_ENABLED,
+        forceSend: FORCE_SEND_EMAILS,
+        testMode: TEST_MODE
+      });
+
+      try {
+        await sgMail.send(emailToCompany);
+        console.log('✅ Email to company sent successfully:', emailToCompany.to);
+
+        await sgMail.send(emailToCustomer);
+        console.log('✅ Email to customer sent successfully:', emailToCustomer.to);
+      } catch (sendError) {
+        console.error('❌ Failed to send emails:', sendError);
+        logger.error('SendGrid email sending failed:', sendError);
+        throw sendError;
+      }
     } else {
       console.log('📧 [DEV MODE] SendGrid DISABLED - Would send emails:', {
         company: emailToCompany.to,
         customer: emailToCustomer.to,
-        sendgridKey: process.env.SENDGRID_API_KEY ? 'EXISTS' : 'MISSING'
+        sendgridKey: process.env.SENDGRID_API_KEY ? 'EXISTS' : 'MISSING',
+        forceSend: FORCE_SEND_EMAILS,
+        testMode: TEST_MODE
       });
     }
 
@@ -331,7 +358,7 @@ export async function sendOrderConfirmationEmail(data: OrderEmailData): Promise<
 
     const emailTemplate: EmailTemplate = {
       to: customerEmail,
-      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
+      from: `${process.env.FROM_NAME || 'JC Hair Studio\'s 62'} <${process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz'}>`,
       subject: `✨ Pedido Confirmado #${orderId} - JC Hair Studio's 62`,
       html: `
       <!DOCTYPE html>
@@ -539,14 +566,30 @@ export async function sendOrderConfirmationEmail(data: OrderEmailData): Promise<
       `
     };
 
-    if (SENDGRID_ENABLED) {
-      await sgMail.send(emailTemplate);
+    if (SENDGRID_ENABLED || FORCE_SEND_EMAILS) {
+      console.log('📧 Sending order confirmation email...', {
+        to: emailTemplate.to,
+        orderId,
+        enabled: SENDGRID_ENABLED,
+        forceSend: FORCE_SEND_EMAILS
+      });
+
+      try {
+        await sgMail.send(emailTemplate);
+        console.log('✅ Order confirmation email sent successfully');
+      } catch (sendError) {
+        console.error('❌ Failed to send order confirmation email:', sendError);
+        logger.error('Order confirmation email failed:', sendError);
+        throw sendError;
+      }
     } else {
       logger.info('📧 [DEV MODE] Email de confirmação de pedido:', {
         to: emailTemplate.to,
         subject: emailTemplate.subject,
         orderId,
         total,
+        forceSend: FORCE_SEND_EMAILS,
+        testMode: TEST_MODE
       });
     }
     return true;
@@ -576,19 +619,35 @@ export async function sendPaymentConfirmationEmail(data: PaymentEmailData): Prom
 
     const emailTemplate: EmailTemplate = {
       to: customerEmail,
-      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
+      from: `${process.env.FROM_NAME || 'JC Hair Studio\'s 62'} <${process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz'}>`,
       subject: `💳 Pagamento Aprovado - Pedido #${orderId} - JC Hair Studio's 62`,
       html: `Payment confirmation email content here`
     };
 
-    if (SENDGRID_ENABLED) {
-      await sgMail.send(emailTemplate);
+    if (SENDGRID_ENABLED || FORCE_SEND_EMAILS) {
+      console.log('📧 Sending payment confirmation email...', {
+        to: emailTemplate.to,
+        orderId,
+        enabled: SENDGRID_ENABLED,
+        forceSend: FORCE_SEND_EMAILS
+      });
+
+      try {
+        await sgMail.send(emailTemplate);
+        console.log('✅ Payment confirmation email sent successfully');
+      } catch (sendError) {
+        console.error('❌ Failed to send payment confirmation email:', sendError);
+        logger.error('Payment confirmation email failed:', sendError);
+        throw sendError;
+      }
     } else {
       logger.info('📧 [DEV MODE] Email de confirmação de pagamento:', {
         to: emailTemplate.to,
         subject: emailTemplate.subject,
         orderId,
         total,
+        forceSend: FORCE_SEND_EMAILS,
+        testMode: TEST_MODE
       });
     }
     return true;
@@ -618,19 +677,36 @@ export async function sendShippingNotificationEmail(data: ShippingEmailData): Pr
 
     const emailTemplate: EmailTemplate = {
       to: customerEmail,
-      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
+      from: `${process.env.FROM_NAME || 'JC Hair Studio\'s 62'} <${process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz'}>`,
       subject: `📦 Seu pedido foi enviado! #${orderId} - JC Hair Studio's 62`,
       html: `Shipping notification email content here`
     };
 
-    if (SENDGRID_ENABLED) {
-      await sgMail.send(emailTemplate);
+    if (SENDGRID_ENABLED || FORCE_SEND_EMAILS) {
+      console.log('📧 Sending shipping notification email...', {
+        to: emailTemplate.to,
+        orderId,
+        trackingCode,
+        enabled: SENDGRID_ENABLED,
+        forceSend: FORCE_SEND_EMAILS
+      });
+
+      try {
+        await sgMail.send(emailTemplate);
+        console.log('✅ Shipping notification email sent successfully');
+      } catch (sendError) {
+        console.error('❌ Failed to send shipping notification email:', sendError);
+        logger.error('Shipping notification email failed:', sendError);
+        throw sendError;
+      }
     } else {
       logger.info('📧 [DEV MODE] Email de notificação de envio:', {
         to: emailTemplate.to,
         subject: emailTemplate.subject,
         orderId,
         trackingCode,
+        forceSend: FORCE_SEND_EMAILS,
+        testMode: TEST_MODE
       });
     }
     return true;
@@ -651,7 +727,7 @@ export async function sendNewsletterEmail(email: string, name?: string): Promise
 
     const emailTemplate: EmailTemplate = {
       to: email,
-      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz',
+      from: `${process.env.FROM_NAME || 'JC Hair Studio\'s 62'} <${process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz'}>`,
       subject: 'Bem-vindo(a) à Newsletter JC Hair Studio\'s 62! 🎉',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -702,15 +778,27 @@ export async function sendNewsletterEmail(email: string, name?: string): Promise
       `
     };
 
-    if (SENDGRID_ENABLED) {
-      console.log('📧 Newsletter - SendGrid ENABLED - Attempting to send...');
-      await sgMail.send(emailTemplate);
-      console.log('✅ Newsletter email sent successfully');
+    if (SENDGRID_ENABLED || FORCE_SEND_EMAILS) {
+      console.log('📧 Newsletter - SendGrid ENABLED - Attempting to send...', {
+        enabled: SENDGRID_ENABLED,
+        forceSend: FORCE_SEND_EMAILS
+      });
+
+      try {
+        await sgMail.send(emailTemplate);
+        console.log('✅ Newsletter email sent successfully');
+      } catch (sendError) {
+        console.error('❌ Failed to send newsletter email:', sendError);
+        logger.error('Newsletter email failed:', sendError);
+        throw sendError;
+      }
     } else {
       console.log('📧 [DEV MODE] Newsletter - SendGrid DISABLED:', {
         to: emailTemplate.to,
         subject: emailTemplate.subject,
-        sendgridKey: process.env.SENDGRID_API_KEY ? 'EXISTS' : 'MISSING'
+        sendgridKey: process.env.SENDGRID_API_KEY ? 'EXISTS' : 'MISSING',
+        forceSend: FORCE_SEND_EMAILS,
+        testMode: TEST_MODE
       });
     }
     return true;
@@ -723,11 +811,63 @@ export async function sendNewsletterEmail(email: string, name?: string): Promise
 // Legacy export for compatibility
 export const sendEmail = sendContactEmail;
 
+/**
+ * Send cart abandonment recovery email
+ */
+export async function sendCartAbandonmentEmail(
+  to: string,
+  subject: string,
+  html: string
+): Promise<{ success: boolean; error?: string }> {
+  try {
+    console.log('📧 SendGrid Cart Abandonment - Attempting to send...', {
+      to: to.replace(/(.{3}).*(@.*)/, '$1***$2'),
+      subject,
+      enabled: SENDGRID_ENABLED
+    });
+
+    if ((TEST_MODE && !FORCE_SEND_EMAILS) || (!SENDGRID_ENABLED && !FORCE_SEND_EMAILS)) {
+      console.log('📧 [DEV MODE] Cart abandonment email simulated:', {
+        to: to.replace(/(.{3}).*(@.*)/, '$1***$2'),
+        subject,
+        htmlLength: html.length,
+        forceSend: FORCE_SEND_EMAILS,
+        testMode: TEST_MODE
+      });
+      return { success: true };
+    }
+
+    const emailTemplate = {
+      to,
+      from: `${process.env.FROM_NAME || 'JC Hair Studio\'s 62'} <${process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz'}>`,
+      subject,
+      html
+    };
+
+    try {
+      await sgMail.send(emailTemplate);
+      console.log('✅ Cart abandonment email sent successfully');
+      return { success: true };
+    } catch (sendError) {
+      console.error('❌ Failed to send cart abandonment email:', sendError);
+      throw sendError;
+    }
+
+  } catch (error) {
+    console.error('❌ Error sending cart abandonment email:', error);
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'Unknown error'
+    };
+  }
+}
+
 export default {
   sendContactEmail,
   sendOrderConfirmationEmail,
   sendPaymentConfirmationEmail,
   sendShippingNotificationEmail,
   sendNewsletterEmail,
+  sendCartAbandonmentEmail,
   sendEmail
 };

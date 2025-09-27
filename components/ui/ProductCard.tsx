@@ -175,27 +175,30 @@ export function ProductCard({
       <Link href={`/produto/${product.slug}`}>
         <div className={imageVariants[variant]}>
           {/* Main Product Image */}
-          <Image
-            src={getImageUrl(
-              // DEFENSIVE VALIDATION: Ensure images array exists and has at least one item
-              (product.images && product.images.length > 0)
-                ? (product.images[currentImageIndex] || product.images[0])
-                : '/placeholder-product.jpg', // Fallback image
-              {
-                width: 400,
-                height: variant === 'compact' ? 400 : 500,
-                quality: 85,
-                format: 'webp'
-              }
-            )}
-            alt={product.name}
-            fill
-            className={`object-cover transition-all duration-500 ${
-              imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
-            }`}
-            onLoad={() => setImageLoaded(true)}
-            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-          />
+          {(product.images && product.images.length > 0) ? (
+            <Image
+              src={getImageUrl(
+                product.images[currentImageIndex] || product.images[0],
+                {
+                  width: 400,
+                  height: variant === 'compact' ? 400 : 500,
+                  quality: 85,
+                  format: 'webp'
+                }
+              )}
+              alt={product.name}
+              fill
+              className={`object-cover transition-all duration-500 ${
+                imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
+              }`}
+              onLoad={() => setImageLoaded(true)}
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            />
+          ) : (
+            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+              <span className="text-gray-400 text-sm">Sem imagem</span>
+            </div>
+          )}
           
           {/* Additional Images on Hover */}
           {/* DEFENSIVE VALIDATION: Check if images array exists and has multiple items */}

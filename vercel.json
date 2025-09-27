@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npm run build:safe",
+  "buildCommand": "npm run build:vercel",
   "outputDirectory": ".next",
   "framework": "nextjs",
   "installCommand": "npm install --legacy-peer-deps",
@@ -40,8 +40,7 @@
       "SKIP_LINT": "true",
       "NODE_ENV": "production",
       "NEXT_TELEMETRY_DISABLED": "1",
-      "CI": "true",
-      "PRISMA_GENERATE_SKIP_AUTOINSTALL": "true"
+      "CI": "true"
     }
   },
   "headers": [

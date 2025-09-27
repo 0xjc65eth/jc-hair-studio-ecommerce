@@ -20,7 +20,8 @@ import {
   Home,
   CheckCircle,
   AlertCircle,
-  ShoppingBag
+  ShoppingBag,
+  Shield
 } from 'lucide-react';
 import { SecurityBadges, TrustIndicators } from '../ui/BrazilianComponents';
 
@@ -955,7 +956,7 @@ export default function CheckoutPage() {
                     </div>
                   </div>
 
-                  {validateStep1() && (
+                  {validateStep1() ? (
                     <div className="mt-6">
                       <StripePayment
                         amount={finalTotal}
@@ -972,6 +973,26 @@ export default function CheckoutPage() {
                         }))}
                         onSuccess={handlePaymentSuccess}
                         onError={handlePaymentError}
+                      />
+                    </div>
+                  ) : (
+                    // Pre-render payment form in hidden state for faster loading
+                    <div className="hidden">
+                      <StripePayment
+                        amount={finalTotal}
+                        currency="eur"
+                        customerInfo={{
+                          name: customerInfo.name || 'Cliente',
+                          email: customerInfo.email || 'cliente@email.com',
+                          phone: customerInfo.phone || '912345678',
+                        }}
+                        items={[{
+                          name: 'Produto',
+                          quantity: 1,
+                          price: finalTotal,
+                        }]}
+                        onSuccess={() => {}}
+                        onError={() => {}}
                       />
                     </div>
                   )}

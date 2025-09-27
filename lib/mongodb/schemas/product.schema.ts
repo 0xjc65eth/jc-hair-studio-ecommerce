@@ -368,9 +368,10 @@ const ProductSchema = new Schema<IProduct>({
   viewCount: { type: Number, default: 0, min: 0 },
   purchaseCount: { type: Number, default: 0, min: 0 },
   wishlistCount: { type: Number, default: 0, min: 0 },
-}, { 
+}, {
   timestamps: true,
-  collection: 'products'
+  collection: 'products',
+  suppressReservedKeysWarning: true
 });
 
 // Create and export the model

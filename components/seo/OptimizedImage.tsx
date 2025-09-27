@@ -59,8 +59,6 @@ export default function OptimizedImage({
   // Gerar title se não fornecido
   const optimizedTitle = title || generateOptimizedTitle(alt, { product, category, brand });
 
-  // Fallback image para produtos brasileiros
-  const fallbackImage = '/images/placeholder-product-brasileiro.jpg';
 
   // Configurações responsivas padrão
   const defaultSizes = sizes || `

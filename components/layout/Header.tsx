@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -41,11 +41,14 @@ export default function Header({ className = '' }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
   const [isMobileProductsDropdownOpen, setIsMobileProductsDropdownOpen] = useState(false);
-  
+
+  // Ref for dropdown timeout management
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   // Get cart data
   const { getTotalItems, toggleCart } = useCart();
   const itemsCount = getTotalItems();
-  
+
   const pathname = usePathname();
 
   const navigationItems = [
@@ -62,7 +65,7 @@ export default function Header({ className = '' }: HeaderProps) {
         { name: 'Ferramentas Profissionais', href: '/categoria/ferramentas-profissionais' },
       ]
     },
-    { name: 'Cosméticos', href: '/cosmeticos', active: pathname === '/cosmeticos' },
+    { name: 'Cosméticos', href: '/cosmeticos', active: pathname.includes('/cosmeticos') },
     { name: 'Maquiagens', href: '/maquiagens', active: pathname === '/maquiagens' },
     { name: 'Mega Hair', href: '/mega-hair', active: pathname === '/mega-hair' },
     { name: 'Sobre Nós', href: '/sobre', active: pathname === '/sobre' },
@@ -80,7 +83,7 @@ export default function Header({ className = '' }: HeaderProps) {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -96,6 +99,15 @@ export default function Header({ className = '' }: HeaderProps) {
     };
   }, [isMobileMenuOpen]);
 
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+    };
+  }, []);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -105,25 +117,48 @@ export default function Header({ className = '' }: HeaderProps) {
     setIsMobileProductsDropdownOpen(false);
   };
 
+  // Helper functions for dropdown management
+  const handleDropdownEnter = (dropdownName: string) => {
+    // Clear any existing timeout
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    // Open dropdown immediately
+    if (dropdownName === 'Produtos Capilares') {
+      setIsProductsDropdownOpen(true);
+    }
+  };
+
+  const handleDropdownLeave = (dropdownName: string) => {
+    // Set timeout to close dropdown after delay
+    dropdownTimeoutRef.current = setTimeout(() => {
+      if (dropdownName === 'Produtos Capilares') {
+        setIsProductsDropdownOpen(false);
+      }
+    }, 300);
+  };
+
   return (
     <>
-      <header 
+      <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'header-glass shadow-md' 
+          isScrolled
+            ? 'header-glass shadow-md'
             : 'bg-white/95 backdrop-blur-sm'
         } ${className}`}
+        style={{ zIndex: 50 }}
       >
         <div className="container-custom">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex items-center justify-between h-16 lg:h-20 py-2 lg:py-3">
             {/* Logo */}
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="flex-shrink-0 z-50"
               onClick={closeMobileMenu}
             >
               <div className="flex items-center">
-                <div className="relative w-10 h-10 lg:w-12 lg:h-12">
+                <div className="relative w-12 h-12 lg:w-16 lg:h-16">
                   <Image
                     src="/logo-icon.svg"
                     alt="JC Hair Studio's 62"
@@ -133,9 +168,13 @@ export default function Header({ className = '' }: HeaderProps) {
                   />
                 </div>
                 <div className="ml-3 hidden sm:block">
-                  <h1 className="font-playfair text-xl lg:text-2xl font-medium text-gray-900">
-                    JC Hair Studio's <span className="italic">62</span>
+                  <h1 className="font-playfair text-xl lg:text-2xl xl:text-3xl font-semibold text-gray-900 leading-tight tracking-wide">
+                    <span>JC Hair Studio's</span>{" "}
+                    <span className="logo-accent-number">62</span>
                   </h1>
+                  <p className="text-xs text-gray-600 font-light tracking-widest uppercase -mt-1">
+                    Premium Hair Extensions
+                  </p>
                 </div>
               </div>
             </Link>
@@ -146,37 +185,32 @@ export default function Header({ className = '' }: HeaderProps) {
                 <div key={item.href} className="relative">
                   {item.hasDropdown ? (
                     <div
-                      className="relative"
-                      onMouseEnter={() => {
-                        // Use different states for different dropdowns
-                        if (item.name === 'Produtos Capilares') {
-                          setIsProductsDropdownOpen(true);
-                        }
-                      }}
-                      onMouseLeave={() => {
-                        // Close the appropriate dropdown
-                        if (item.name === 'Produtos Capilares') {
-                          setIsProductsDropdownOpen(false);
-                        }
-                      }}
+                      className="relative group"
+                      onMouseEnter={() => handleDropdownEnter(item.name)}
+                      onMouseLeave={() => handleDropdownLeave(item.name)}
                     >
                       <Link
                         href={item.href}
                         className={`nav-link flex items-center space-x-1 ${item.active ? 'active' : ''}`}
                       >
                         <span>{item.name}</span>
-                        <ChevronDown className="w-3 h-3" />
+                        <ChevronDown className={`w-3 h-3 transition-transform ${isProductsDropdownOpen && item.name === 'Produtos Capilares' ? 'rotate-180' : ''}`} />
                       </Link>
 
                       {/* Show dropdown based on specific state */}
                       {(item.name === 'Produtos Capilares' && isProductsDropdownOpen) &&
                         item.dropdownItems && (
-                        <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
+                        <div
+                          className="absolute top-full left-0 mt-0 w-64 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50 opacity-100 transform translate-y-0 transition-all duration-200"
+                          onMouseEnter={() => handleDropdownEnter(item.name)}
+                          onMouseLeave={() => handleDropdownLeave(item.name)}
+                        >
                           {item.dropdownItems.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.href}
                               href={dropdownItem.href}
                               className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-black transition-colors"
+                              onClick={() => setIsProductsDropdownOpen(false)}
                             >
                               {dropdownItem.name}
                             </Link>
@@ -199,7 +233,7 @@ export default function Header({ className = '' }: HeaderProps) {
             </nav>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center space-x-3">
+            <div className="hidden lg:flex items-center space-x-2">
               {/* Language Selector */}
               <div className="relative">
                 <button
@@ -263,12 +297,14 @@ export default function Header({ className = '' }: HeaderProps) {
               {/* Cart */}
               <button
                 onClick={toggleCart}
-                className="p-2 text-gray-700 hover:text-black transition-colors relative"
+                className="p-2 text-gray-700 hover:text-black transition-colors relative group"
                 aria-label="Carrinho de compras"
+                data-testid="cart-button"
+                style={{ position: 'relative', zIndex: 60 }}
               >
-                <ShoppingBag className="w-5 h-5" />
+                <ShoppingBag className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 {itemsCount > 0 && (
-                  <span className="cart-counter">
+                  <span className="cart-counter" data-testid="cart-counter">
                     {itemsCount}
                   </span>
                 )}
@@ -276,7 +312,7 @@ export default function Header({ className = '' }: HeaderProps) {
             </div>
 
             {/* Mobile Actions */}
-            <div className="flex lg:hidden items-center space-x-2">
+            <div className="flex lg:hidden items-center space-x-1">
               <button
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
                 className="p-2 text-gray-700 hover:text-black transition-colors"
@@ -287,12 +323,14 @@ export default function Header({ className = '' }: HeaderProps) {
 
               <button
                 onClick={toggleCart}
-                className="p-2 text-gray-700 hover:text-black transition-colors relative"
+                className="p-2 text-gray-700 hover:text-black transition-colors relative group"
                 aria-label="Carrinho"
+                data-testid="mobile-cart-button"
+                style={{ position: 'relative', zIndex: 60 }}
               >
-                <ShoppingBag className="w-5 h-5" />
+                <ShoppingBag className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 {itemsCount > 0 && (
-                  <span className="cart-counter">
+                  <span className="cart-counter" data-testid="mobile-cart-counter">
                     {itemsCount}
                   </span>
                 )}

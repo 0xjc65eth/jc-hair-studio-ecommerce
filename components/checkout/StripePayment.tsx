@@ -11,16 +11,13 @@ import {
 import { Button } from '@/components/ui/Button';
 import { CreditCard, Loader2 } from 'lucide-react';
 
-// Lazy loading do Stripe - só carrega quando necessário
+// Pre-load Stripe para performance otimizada
 const stripePublicKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
-let stripePromise: Promise<any> | null = null;
 
-const getStripe = () => {
-  if (!stripePromise && stripePublicKey) {
-    stripePromise = loadStripe(stripePublicKey);
-  }
-  return stripePromise;
-};
+// Pre-carrega Stripe imediatamente para evitar atrasos
+const stripePromise = stripePublicKey ? loadStripe(stripePublicKey) : null;
+
+const getStripe = () => stripePromise;
 
 interface StripePaymentProps {
   amount: number;
@@ -87,11 +84,11 @@ const PaymentForm: React.FC<PaymentFormProps> = ({
     try {
       console.log('💳 PAYMENT: Confirming payment with Stripe...');
 
-      // Simplified payment confirmation - removed return_url to prevent redirect issues
+      // Payment confirmation with return URL for redirect-based methods
       const { error, paymentIntent } = await stripe.confirmPayment({
         elements,
         confirmParams: {
-          // Remove return_url to stay on current page
+          return_url: `${window.location.origin}/pagamento-sucesso`,
         },
         redirect: 'if_required', // Only redirect if absolutely necessary
       });
@@ -109,6 +106,25 @@ const PaymentForm: React.FC<PaymentFormProps> = ({
         onError(error.message || 'Erro no processamento do pagamento');
       } else if (paymentIntent?.status === 'succeeded') {
         console.log('🎉 PAYMENT: Payment succeeded!', paymentIntent.id);
+
+        // Send immediate notification since webhooks might be delayed
+        try {
+          await fetch('/api/payment-success', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              paymentIntentId: paymentIntent.id,
+              customerInfo,
+              amount,
+              currency,
+              items
+            })
+          });
+          console.log('✅ Immediate notification sent');
+        } catch (notificationError) {
+          console.warn('⚠️ Failed to send immediate notification:', notificationError);
+        }
+
         onSuccess(paymentIntent.id);
       } else {
         console.warn('⚠️ PAYMENT: Unexpected payment status:', paymentIntent?.status);
@@ -171,14 +187,6 @@ const PaymentForm: React.FC<PaymentFormProps> = ({
                       name: customerInfo.name,
                       email: customerInfo.email,
                       phone: customerInfo.phone,
-                    }
-                  },
-                  fields: {
-                    billingDetails: {
-                      name: 'never',
-                      email: 'never',
-                      phone: 'never',
-                      address: 'never'
                     }
                   }
                 }}
@@ -249,62 +257,81 @@ const PaymentForm: React.FC<PaymentFormProps> = ({
 export const StripePayment: React.FC<StripePaymentProps> = (props) => {
   const [clientSecret, setClientSecret] = useState('');
 
-  // Enhanced Payment Intent creation with comprehensive logging
+  // Optimized Payment Intent creation with faster execution
   useEffect(() => {
+    // Prevent multiple payment intents if one already exists
+    if (clientSecret) {
+      console.log('💳 STRIPE: Payment intent already exists, skipping creation');
+      return;
+    }
+
+    // Create payment intent immediately when conditions are met
+    let isCancelled = false;
+
     const createPaymentIntent = async () => {
-      console.log('💳 STRIPE: Initializing payment intent...', {
+      console.log('⚡ STRIPE: Fast payment intent creation...', {
         amount: props.amount,
-        currency: props.currency,
-        customerEmail: props.customerInfo.email,
-        itemsCount: props.items.length
+        customerEmail: props.customerInfo.email
       });
 
       try {
         const requestData = {
           amount: props.amount,
-          currency: props.currency,
+          currency: props.currency || 'eur',
           customerInfo: props.customerInfo,
           items: props.items,
         };
 
-        console.log('📤 STRIPE: Sending payment intent request...', requestData);
+        // Use faster fetch with timeout
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
 
         const response = await fetch('/api/create-payment-intent', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(requestData),
+          signal: controller.signal
         });
 
-        console.log('📥 STRIPE: Payment intent response status:', response.status);
+        clearTimeout(timeoutId);
+
+        if (isCancelled) return;
 
         const data = await response.json();
-        console.log('📄 STRIPE: Payment intent response data:', {
+        console.log('📄 STRIPE: Payment intent response:', {
           success: response.ok,
           hasClientSecret: !!data.clientSecret,
-          paymentIntentId: data.paymentIntentId,
-          error: data.error
+          duration: data.duration
         });
 
         if (response.ok && data.clientSecret) {
-          console.log('✅ STRIPE: Payment intent created successfully');
+          console.log('✅ STRIPE: Payment intent created in', data.duration || 'unknown', 'ms');
           setClientSecret(data.clientSecret);
         } else {
           console.error('❌ STRIPE: Payment intent creation failed:', data.error);
           props.onError(data.error || 'Erro ao inicializar pagamento');
         }
       } catch (error) {
+        if (isCancelled) return;
         console.error('❌ STRIPE: Network error creating payment intent:', error);
-        props.onError('Erro ao conectar com o processador de pagamentos. Verifique sua conexão.');
+        props.onError(
+          error instanceof Error && error.name === 'AbortError'
+            ? 'Timeout - Verifique sua conexão e tente novamente'
+            : 'Erro ao conectar com o processador de pagamentos. Verifique sua conexão.'
+        );
       }
     };
 
-    if (props.amount > 0) {
-      console.log('🚀 STRIPE: Starting payment intent creation process...');
+    // Only create if we have minimum required data
+    if (props.amount > 0 && props.customerInfo.name && props.customerInfo.email) {
+      console.log('🚀 STRIPE: Starting optimized payment intent creation...');
       createPaymentIntent();
-    } else {
-      console.warn('⚠️ STRIPE: Invalid amount, skipping payment intent creation:', props.amount);
     }
-  }, [props.amount, props.currency, props.customerInfo, props.items, props.onError]);
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [props.amount, props.currency, props.customerInfo.name, props.customerInfo.email, props.items.length, props.onError, clientSecret]);
 
   if (!stripePublicKey) {
     return (
@@ -352,10 +379,16 @@ export const StripePayment: React.FC<StripePaymentProps> = (props) => {
 
   if (!clientSecret) {
     return (
-      <div className="text-center p-6 bg-blue-50 border border-blue-200 rounded-lg">
-        <div className="flex items-center justify-center gap-2">
-          <div className="w-5 h-5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-          <span className="text-blue-800">Preparando pagamento...</span>
+      <div className="text-center p-6 bg-gradient-to-r from-blue-50 to-green-50 border border-blue-200 rounded-lg">
+        <div className="flex items-center justify-center gap-3 mb-3">
+          <div className="w-6 h-6 border-3 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+          <span className="text-blue-800 font-medium">Preparando pagamento seguro...</span>
+        </div>
+        <div className="text-sm text-blue-600">
+          🔒 Conectando com Stripe • ⚡ Processo otimizado
+        </div>
+        <div className="mt-3 bg-white/50 rounded-full h-2 overflow-hidden">
+          <div className="h-full bg-gradient-to-r from-blue-500 to-green-500 animate-pulse"></div>
         </div>
       </div>
     );

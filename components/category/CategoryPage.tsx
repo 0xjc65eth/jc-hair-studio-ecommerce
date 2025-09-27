@@ -45,8 +45,8 @@ export default function CategoryPage({ category, className = '' }: CategoryPageP
     if (filters.priceRange) {
       const range = priceRanges.find(r => r.id === filters.priceRange);
       if (range) {
-        filtered = filtered.filter(product => 
-          product.price >= range.min && 
+        filtered = filtered.filter(product =>
+          product.price >= range.min &&
           (range.max === Infinity ? true : product.price <= range.max)
         );
       }

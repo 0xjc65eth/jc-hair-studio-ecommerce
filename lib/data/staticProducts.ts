@@ -1132,7 +1132,7 @@ const cosmeticsData: StaticProduct[] = [
       nome: `IMPALA ${coresReais[corIndex]} ${tipos[tipoIndex]}`,
       marca: 'IMPALA',
       descricao: `Esmalte IMPALA ${tipos[tipoIndex].toLowerCase()} na cor ${coresReais[corIndex]}. Fórmula de qualidade superior da marca número 1 em esmaltes no Brasil.`,
-      imagens: [`/images/products/esmaltes/esmalte_${index}.jpg`],
+      imagens: ['/images/products/esmaltes/Impala Abrigo Cremoso.webp'],
       badge: badges[tipoIndex],
       pricing: {
         basePrice: precos[tipoIndex],
@@ -1153,7 +1153,7 @@ const megaHairData: StaticProduct[] = [
     nome: 'Mega Hair Liso Castanho Natural - 50cm',
     marca: 'JC HAIR STUDIO',
     descricao: 'Mega hair 100% humano, castanho natural, 50cm de comprimento. Qualidade premium sem marca d\'água.',
-    imagens: ['/images/mega-hair/mega-hair-001.jpg'],
+    imagens: ['/images/products/g-hair/g-hair-1.png'],
     badge: 'NOVO',
     pricing: {
       basePrice: 60.00,
@@ -1169,7 +1169,7 @@ const megaHairData: StaticProduct[] = [
     nome: 'Mega Hair Liso Loiro Mel - 55cm',
     marca: 'JC HAIR STUDIO',
     descricao: 'Mega hair loiro mel premium, 55cm, ideal para transformações naturais.',
-    imagens: ['/images/mega-hair/mega-hair-002.jpg'],
+    imagens: ['/images/products/g-hair/g-hair-2.png'],
     badge: 'NOVO',
     pricing: {
       basePrice: 65.00,
@@ -1185,7 +1185,7 @@ const megaHairData: StaticProduct[] = [
     nome: 'Mega Hair Ondulado Castanho - 45cm',
     marca: 'JC HAIR STUDIO',
     descricao: 'Mega hair ondulado natural, movimento perfeito para looks modernos.',
-    imagens: ['/images/mega-hair/mega-hair-003.jpg'],
+    imagens: ['/images/products/g-hair/g-hair-3.png'],
     badge: 'NOVO',
     pricing: {
       basePrice: 55.00,
@@ -1201,7 +1201,7 @@ const megaHairData: StaticProduct[] = [
     nome: 'Mega Hair Liso Preto Intenso - 60cm',
     marca: 'JC HAIR STUDIO',
     descricao: 'Mega hair preto intenso premium, 60cm, brilho natural excepcional.',
-    imagens: ['/images/mega-hair/mega-hair-004.jpg'],
+    imagens: ['/images/products/g-hair/g-hair-4.png'],
     badge: 'NOVO',
     pricing: {
       basePrice: 70.00,
@@ -1217,7 +1217,7 @@ const megaHairData: StaticProduct[] = [
     nome: 'Mega Hair Liso Castanho Claro - 50cm',
     marca: 'JC HAIR STUDIO',
     descricao: 'Mega hair castanho claro delicado, perfeito para looks suaves.',
-    imagens: ['/images/mega-hair/mega-hair-005.jpg'],
+    imagens: ['/images/products/g-hair/g-hair-5.png'],
     badge: 'NOVO',
     pricing: {
       basePrice: 60.00,
@@ -1233,7 +1233,7 @@ const megaHairData: StaticProduct[] = [
     nome: 'Mega Hair Liso Loiro Escuro - 55cm',
     marca: 'JC HAIR STUDIO',
     descricao: 'Mega hair loiro escuro sofisticado, 55cm de elegância.',
-    imagens: ['/images/mega-hair/mega-hair-006.jpg'],
+    imagens: ['/images/products/g-hair/g-hair-6.png'],
     badge: 'NOVO',
     pricing: {
       basePrice: 65.00,
@@ -1249,7 +1249,7 @@ const megaHairData: StaticProduct[] = [
     nome: 'Mega Hair Liso Castanho Médio - 45cm',
     marca: 'JC HAIR STUDIO',
     descricao: 'Mega hair castanho médio versátil, ideal para o dia a dia.',
-    imagens: ['/images/mega-hair/mega-hair-007.jpg'],
+    imagens: ['/images/products/g-hair/inoar-ghair-alemanha-3.png'],
     badge: 'NOVO',
     pricing: {
       basePrice: 55.00,
@@ -1265,7 +1265,7 @@ const megaHairData: StaticProduct[] = [
     nome: 'Mega Hair Ondulado Natural - 50cm',
     marca: 'JC HAIR STUDIO',
     descricao: 'Mega hair ondulado com movimento natural, 50cm de charme.',
-    imagens: ['/images/mega-hair/mega-hair-008.jpg'],
+    imagens: ['/images/products/g-hair/g-hair-1.png'],
     badge: 'NOVO',
     pricing: {
       basePrice: 60.00,
@@ -1281,7 +1281,7 @@ const megaHairData: StaticProduct[] = [
     nome: 'Mega Hair Liso Premium - 55cm',
     marca: 'JC HAIR STUDIO',
     descricao: 'Mega hair liso premium, qualidade superior garantida.',
-    imagens: ['/images/mega-hair/mega-hair-009.jpg'],
+    imagens: ['/images/products/g-hair/g-hair-2.png'],
     badge: 'PREMIUM',
     pricing: {
       basePrice: 68.00,
@@ -1297,7 +1297,7 @@ const megaHairData: StaticProduct[] = [
     nome: 'Mega Hair Cacheado Natural - 40cm',
     marca: 'JC HAIR STUDIO',
     descricao: 'Mega hair cacheado com cachos definidos e naturais.',
-    imagens: ['/images/mega-hair/mega-hair-010.jpg'],
+    imagens: ['/images/products/g-hair/g-hair-3.png'],
     badge: 'NOVO',
     pricing: {
       basePrice: 58.00,
@@ -1617,15 +1617,6 @@ const maquiagensData: StaticProduct[] = [
     badge: 'PREMIUM',
     pricing: { basePrice: 26.50, ourPrice: 29.15, discountPrice: 23.32, savings: 5.83, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
-  {
-    id: 'teste-juliana',
-    nome: 'Teste Juliana',
-    marca: 'JC Hair Studio',
-    descricao: 'Produto especial criado para teste do sistema de e-commerce. Perfeito para validar funcionalidades de compra, pagamento e notificações.',
-    imagens: ['/images/products/placeholder-product.jpg'],
-    badge: 'TESTE',
-    pricing: { basePrice: 1.00, ourPrice: 1.00, discountPrice: 1.00, savings: 0.00, margin: '0%', competitive: 'PRODUTO TESTE - Valor especial para Juliana' }
-  }
 ];
 
 // Consolidate all static products

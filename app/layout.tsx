@@ -1,10 +1,17 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
-import { Header, Footer } from '../components/layout';
+import { Footer } from '../components/layout';
+import RevolutionaryHeader from '../components/layout/RevolutionaryHeader';
 import CookieBanner from '../components/layout/CookieBanner';
 import { ToastProvider } from '../lib/providers/ToastProvider';
 import { AuthProvider } from '../lib/providers/auth-provider';
 import { CartInitializer } from '@/lib/providers/CartProvider';
+import { HomepageSchema } from '../components/seo/SchemaMarkup';
+import FacebookPixel from '../components/analytics/FacebookPixel';
+import GoogleAnalytics from '../components/analytics/GoogleAnalytics';
+import LiveChat from '../components/ui/LiveChat';
+import CartAbandonmentRecovery from '../components/cart/CartAbandonmentRecovery';
+import PerformanceOptimizer from '../components/performance/PerformanceOptimizer';
 import '../styles/globals.css';
 import '../styles/components.css';
 
@@ -145,17 +152,15 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html 
-      lang="pt" 
+    <html
+      lang="pt"
       className={`${inter.variable} ${playfair.variable} scroll-smooth`}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Preload critical assets */}
-        <link rel="preload" href="/images/hero-bg.jpg" as="image" />
         
         {/* PWA Configuration */}
         <meta name="application-name" content="62 Beauty's 62" />
@@ -275,23 +280,30 @@ export default function RootLayout({ children }: RootLayoutProps) {
           Pular para o conteúdo principal
         </a>
 
-        {/* Main App Structure */}
-        <AuthProvider>
-          <CartInitializer>
-            <div className="min-h-screen flex flex-col">
-              {/* Header */}
-              <Header />
+        {/* Performance Optimization Wrapper */}
+        <PerformanceOptimizer>
+          {/* Main App Structure */}
+          <AuthProvider>
+            <CartInitializer>
+              <div className="min-h-screen flex flex-col">
+                {/* Header */}
+                <RevolutionaryHeader />
 
-              {/* Main Content */}
-              <main id="main-content" className="flex-1 pt-16 lg:pt-20">
-                {children}
-              </main>
+                {/* Main Content */}
+                <main id="main-content" className="flex-1 pt-16 lg:pt-20">
+                  {children}
+                </main>
 
-              {/* Footer */}
-              <Footer />
-            </div>
-          </CartInitializer>
-        </AuthProvider>
+                {/* Footer */}
+                <Footer />
+
+                {/* Conversion Optimization Components */}
+                <LiveChat />
+                <CartAbandonmentRecovery />
+              </div>
+            </CartInitializer>
+          </AuthProvider>
+        </PerformanceOptimizer>
 
         {/* Global Loading Indicator */}
         <div id="global-loading" className="fixed inset-0 bg-white/80 backdrop-blur-sm z-50 hidden items-center justify-center">
@@ -306,6 +318,21 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
         {/* Toast Notifications Container */}
         <div id="toast-container" className="fixed bottom-4 right-4 space-y-2 z-50"></div>
+
+        {/* Homepage Schema Markup */}
+        <HomepageSchema />
+
+        {/* Analytics & Tracking */}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            {process.env.NEXT_PUBLIC_GA_ID && (
+              <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+            )}
+            {process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID && (
+              <FacebookPixel pixelId={process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID} />
+            )}
+          </>
+        )}
 
 
         {/* Structured Data for SEO */}

@@ -419,10 +419,11 @@ export class CacheManager {
       case 'day':
         timeKey = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
         break;
-      case 'week':
+      case 'week': {
         const weekStart = new Date(now.setDate(now.getDate() - now.getDay()));
         timeKey = `${weekStart.getFullYear()}-W${Math.ceil(weekStart.getDate() / 7)}`;
         break;
+      }
       case 'month':
         timeKey = `${now.getFullYear()}-${now.getMonth()}`;
         break;

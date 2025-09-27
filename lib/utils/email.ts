@@ -2,11 +2,23 @@ import sgMail from '@sendgrid/mail';
 import logger from '@/lib/logger';
 
 // Configuração condicional do SendGrid
-if (process.env.SENDGRID_API_KEY) {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  logger.info('SendGrid configurado com sucesso');
+const SENDGRID_ENABLED = !!process.env.SENDGRID_API_KEY && process.env.SENDGRID_API_KEY !== 'SG.your-sendgrid-api-key' && process.env.SENDGRID_API_KEY.startsWith('SG.');
+const FORCE_SEND_EMAILS = process.env.FORCE_SEND_EMAILS === 'true';
+const SANDBOX_MODE = process.env.SENDGRID_SANDBOX_MODE === 'true';
+
+if (SENDGRID_ENABLED || FORCE_SEND_EMAILS) {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+  logger.info('SendGrid configurado com sucesso', {
+    enabled: SENDGRID_ENABLED,
+    forceSend: FORCE_SEND_EMAILS,
+    sandboxMode: SANDBOX_MODE,
+    nodeEnv: process.env.NODE_ENV
+  });
 } else {
-  logger.warn('SENDGRID_API_KEY não configurada - emails serão simulados em desenvolvimento');
+  logger.warn('SENDGRID_API_KEY não configurada - emails serão simulados em desenvolvimento', {
+    apiKeyExists: !!process.env.SENDGRID_API_KEY,
+    forceSend: FORCE_SEND_EMAILS
+  });
 }
 
 export interface EmailData {
@@ -18,33 +30,50 @@ export interface EmailData {
 
 export async function sendEmail(emailData: EmailData): Promise<boolean> {
   try {
-    // Se SENDGRID_API_KEY não estiver configurada, simular envio
-    if (!process.env.SENDGRID_API_KEY) {
+    console.log('📧 sendEmail called with:', {
+      to: emailData.to?.replace(/(.{3}).*(@.*)/, '$1***$2'),
+      subject: emailData.subject,
+      enabled: SENDGRID_ENABLED,
+      forceSend: FORCE_SEND_EMAILS,
+      sandboxMode: SANDBOX_MODE
+    });
+
+    // Se SENDGRID não estiver configurado e não forçar envio, simular
+    if (!SENDGRID_ENABLED && !FORCE_SEND_EMAILS) {
       logger.info('📧 [SIMULAÇÃO] Email seria enviado para:', {
         to: emailData.to,
         subject: emailData.subject,
-        sandbox: true
+        sandbox: true,
+        forceSend: FORCE_SEND_EMAILS
       });
       return true;
     }
 
     const msg = {
       to: emailData.to,
-      from: process.env.FROM_EMAIL || 'orders@jchairstudios62.com',
+      from: `${process.env.FROM_NAME || 'JC Hair Studio\'s 62'} <${process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz'}>`,
       subject: emailData.subject,
       text: emailData.text,
       html: emailData.html,
       mail_settings: {
         sandbox_mode: {
-          enable: process.process.env.NODE_ENV !== 'production',
+          enable: SANDBOX_MODE && !FORCE_SEND_EMAILS,
         },
       },
     };
 
+    console.log('📧 Attempting to send email via SendGrid...', {
+      to: emailData.to?.replace(/(.{3}).*(@.*)/, '$1***$2'),
+      from: msg.from,
+      sandboxMode: msg.mail_settings.sandbox_mode.enable
+    });
+
     await sgMail.send(msg);
+    console.log('✅ Email sent successfully to:', emailData.to?.replace(/(.{3}).*(@.*)/, '$1***$2'));
     logger.info('Email enviado com sucesso para:', emailData.to);
     return true;
   } catch (error) {
+    console.error('❌ Failed to send email:', error);
     logger.error('Erro ao enviar email:', error);
     return false;
   }
@@ -236,7 +265,7 @@ export function generateSupportEmail(contactData: {
   `;
 
   return {
-    to: process.env.SUPPORT_EMAIL || process.env.FROM_EMAIL || 'suporte@jchairstudios62.com',
+    to: process.env.SUPPORT_EMAIL || process.env.FROM_EMAIL || 'suporte@jchairstudios62.xyz',
     subject: `[CONTATO] ${contactData.subject} - ${contactData.customerName}`,
     html,
     text

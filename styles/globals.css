@@ -383,3 +383,284 @@ h1, h2, h3, h4, h5, h6 {
               0 0 0 2px rgba(236, 72, 153, 0.2);
 }
 
+/* Brazilian Theme Styles */
+.text-brasil {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.btn-brasil {
+  @apply px-6 py-3 font-bold text-white rounded-lg shadow-lg hover:shadow-xl
+         transition-all duration-300 transform hover:scale-105 active:scale-95
+         focus:outline-none focus:ring-4 focus:ring-green-200;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 50%, #f59e0b 100%);
+}
+
+.btn-brasil:hover {
+  background: linear-gradient(135deg, #15803d 0%, #14532d 50%, #d97706 100%);
+  box-shadow: 0 20px 25px -5px rgba(22, 163, 74, 0.3), 0 10px 10px -5px rgba(22, 163, 74, 0.2);
+}
+
+.btn-professional {
+  @apply px-6 py-3 font-semibold text-white bg-gray-900 rounded-lg shadow-lg
+         hover:bg-gray-800 hover:shadow-xl transition-all duration-300
+         transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-gray-300;
+}
+
+.product-card-brasil {
+  @apply bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-500
+         transform hover:-translate-y-2 border border-green-100 overflow-hidden;
+  background: linear-gradient(145deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.product-card-brasil:hover {
+  border-color: #16a34a;
+  box-shadow: 0 25px 50px -12px rgba(22, 163, 74, 0.25),
+              0 0 0 1px rgba(22, 163, 74, 0.1);
+}
+
+.professional-card {
+  @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500
+         transform hover:-translate-y-1 border border-gray-100 overflow-hidden;
+}
+
+.professional-card:hover {
+  border-color: #6b7280;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15),
+              0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.brasil-badge {
+  @apply px-3 py-1 text-xs font-bold rounded-full text-white inline-flex items-center gap-1;
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  box-shadow: 0 4px 6px -1px rgba(22, 163, 74, 0.3);
+}
+
+.brasil-badge::before {
+  content: '🇧🇷';
+  margin-right: 2px;
+}
+
+.brazilian-header {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 25%, #f59e0b 75%, #d97706 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.brazilian-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg,
+    rgba(22, 163, 74, 0.1) 0%,
+    rgba(21, 128, 61, 0.2) 50%,
+    rgba(245, 158, 11, 0.1) 100%);
+  pointer-events: none;
+}
+
+.security-badges {
+  @apply flex flex-wrap items-center justify-center gap-6 py-4;
+}
+
+.security-badge {
+  @apply flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm
+         border border-gray-200 text-sm font-medium text-gray-700;
+}
+
+.trust-indicator {
+  @apply hover:shadow-md transition-shadow duration-300;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Container utilities */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Clean Homepage Styles */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Clean, minimal product cards */
+.clean-product-card {
+  @apply bg-white border border-gray-100 rounded-lg overflow-hidden
+         transition-all duration-300 hover:shadow-md;
+}
+
+.clean-product-card:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Minimal buttons */
+.clean-button-primary {
+  @apply bg-black text-white px-8 py-3 rounded-lg font-normal
+         transition-colors duration-300 hover:bg-gray-800
+         focus:outline-none focus:ring-2 focus:ring-gray-300;
+}
+
+.clean-button-outline {
+  @apply border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-normal
+         transition-colors duration-300 hover:border-gray-400 hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-gray-300;
+}
+
+/* Clean typography */
+.clean-heading {
+  @apply font-light tracking-tight text-gray-900;
+}
+
+.clean-subheading {
+  @apply font-normal text-gray-600;
+}
+
+/* Minimal section spacing */
+.clean-section {
+  @apply py-16;
+}
+
+.clean-section-alt {
+  @apply py-16 bg-gray-50;
+}
+
+/* Clean stats */
+.clean-stats {
+  @apply grid md:grid-cols-3 gap-8 pt-8 border-t border-gray-100;
+}
+
+.clean-stat {
+  @apply text-center;
+}
+
+.clean-stat-number {
+  @apply text-3xl font-light text-gray-900 mb-2;
+}
+
+.clean-stat-label {
+  @apply text-gray-600;
+}
+
+/* Minimal contact section */
+.clean-contact {
+  @apply text-center space-y-4;
+}
+
+.clean-contact-info {
+  @apply text-gray-500 text-sm;
+}
+
+/* Clean product grid */
+.clean-product-grid {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+/* Simple hover effects */
+.clean-hover-scale {
+  @apply transition-transform duration-500 hover:scale-105;
+}
+
+/* Clean spacing utilities */
+.clean-container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.clean-container-narrow {
+  @apply max-w-4xl mx-auto px-4;
+}
+
+/* Clean form elements (if needed later) */
+.clean-input {
+  @apply w-full px-4 py-3 border border-gray-200 rounded-lg
+         focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent;
+}
+
+/* Simple badges */
+.clean-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+}
+
+.clean-badge-gray {
+  @apply bg-gray-100 text-gray-800;
+}
+
+/* Clean navigation (for header) */
+.clean-nav-link {
+  @apply text-gray-700 hover:text-black transition-colors duration-200
+         text-sm font-medium;
+}
+
+/* Header and Logo Styles */
+.header-glass {
+  @apply bg-white/90 backdrop-blur-md border-b border-gray-100/50;
+}
+
+/* Custom height utilities */
+.h-18 {
+  height: 4.5rem; /* 72px */
+}
+
+.h-24 {
+  height: 6rem; /* 96px */
+}
+
+.logo-brand-text {
+  @apply font-playfair text-xl lg:text-2xl xl:text-3xl font-semibold
+         text-gray-900 leading-tight tracking-wide;
+}
+
+.logo-accent-number {
+  @apply italic font-bold bg-gradient-to-r from-amber-700 via-amber-800 to-amber-900
+         bg-clip-text text-transparent drop-shadow-sm;
+}
+
+.logo-tagline {
+  @apply text-xs text-gray-600 font-light tracking-widest uppercase
+         transition-all duration-300 hover:text-gray-800;
+}
+
+.nav-link {
+  @apply relative text-gray-700 hover:text-black transition-all duration-300
+         text-sm font-medium tracking-wide px-3 py-2 rounded-md
+         hover:bg-gray-50;
+}
+
+.nav-link.active {
+  @apply text-black font-semibold;
+}
+
+.nav-link.active::after {
+  content: '';
+  @apply absolute bottom-0 left-1/2 transform -translate-x-1/2
+         w-6 h-0.5 bg-amber-700 rounded-full;
+}
+
+.cart-counter {
+  @apply absolute -top-2 -right-2 bg-black text-white text-xs
+         rounded-full w-5 h-5 flex items-center justify-center z-[60]
+         font-semibold border-2 border-white shadow-lg;
+}
+
+.language-dropdown {
+  @apply absolute top-full right-0 mt-2 w-48 bg-white rounded-lg
+         shadow-lg border border-gray-100 py-2 z-50;
+}
+
+.language-option {
+  @apply block w-full text-left px-4 py-2 text-sm text-gray-700
+         hover:bg-gray-50 hover:text-black transition-colors;
+}
+
