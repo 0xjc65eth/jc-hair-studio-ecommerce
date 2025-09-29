@@ -1,0 +1,959 @@
+{
+  "category": "Esmaltes",
+  "subcategory": "Esmaltes IMPALA",
+  "totalProducts": 54,
+  "products": [
+    {
+      "id": "impala-esmalte-abrigo-cremoso",
+      "nome": "Esmalte IMPALA Abrigo",
+      "marca": "IMPALA",
+      "cor": "Azul Marinho",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso e secagem rápida",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Abrigo Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-acalanto-cremoso",
+      "nome": "Esmalte IMPALA Acalanto",
+      "marca": "IMPALA",
+      "cor": "Lilás",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em tom lilás suave",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Acalanto Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-allure-cremoso",
+      "nome": "Esmalte IMPALA Allure",
+      "marca": "IMPALA",
+      "cor": "Vermelho",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em vermelho clássico",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Allure Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-amante-perolado",
+      "nome": "Esmalte IMPALA Amante",
+      "marca": "IMPALA",
+      "cor": "Vermelho",
+      "acabamento": "Perolado",
+      "descricao": "Esmalte brasileiro com acabamento perolado em vermelho intenso",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-perolado",
+      "images": ["/images/products/esmaltes/Impala Amante Perolado_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-amor-perolado",
+      "nome": "Esmalte IMPALA Amor",
+      "marca": "IMPALA",
+      "cor": "Vermelho",
+      "acabamento": "Perolado",
+      "descricao": "Esmalte brasileiro com acabamento perolado em vermelho vibrante",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-perolado",
+      "images": ["/images/products/esmaltes/Impala Amor Perolado_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-amore-perolado",
+      "nome": "Esmalte IMPALA Amore",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Perolado",
+      "descricao": "Esmalte brasileiro com acabamento perolado em rosa delicado",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-perolado",
+      "images": ["/images/products/esmaltes/Impala Amore Perolado.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-ballet-classico-cremoso",
+      "nome": "Esmalte IMPALA Ballet Clássico",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa ballet",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Ballet Clássico Cremoso_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-base-bomba-cremoso",
+      "nome": "IMPALA Base Bomba",
+      "marca": "IMPALA",
+      "cor": "Transparente",
+      "acabamento": "Cremoso",
+      "descricao": "Base fortalecedora para unhas com acabamento cremoso",
+      "categoria": "esmaltes",
+      "subcategoria": "base-tratamento",
+      "images": ["/images/products/esmaltes/Impala Base Bomba Cremoso.webp"],
+      "pricing": {
+        "basePrice": 15.90,
+        "ourPrice": 11.90,
+        "discountPrice": 9.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-base-unhas-fracas",
+      "nome": "IMPALA Base para Unhas Fracas",
+      "marca": "IMPALA",
+      "cor": "Transparente",
+      "acabamento": "Tratamento",
+      "descricao": "Base tratamento especial para unhas fracas e quebradiças",
+      "categoria": "esmaltes",
+      "subcategoria": "base-tratamento",
+      "images": ["/images/products/esmaltes/Impala Base para Unhas Fracas Tratamento_.webp"],
+      "pricing": {
+        "basePrice": 15.90,
+        "ourPrice": 11.90,
+        "discountPrice": 9.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-branco-cremoso",
+      "nome": "Esmalte IMPALA Branco",
+      "marca": "IMPALA",
+      "cor": "Branco",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em branco puro",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Branco Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-cafe-cafe-cremoso",
+      "nome": "Esmalte IMPALA Café Café",
+      "marca": "IMPALA",
+      "cor": "Marrom",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em tom café",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Café Café Cremoso_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-chamego-meu",
+      "nome": "Esmalte IMPALA Chamego Meu",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa aconchegante",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Chamego meu_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-coffee-cremoso",
+      "nome": "Esmalte IMPALA Coffee",
+      "marca": "IMPALA",
+      "cor": "Marrom",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em tom coffee",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Coffee Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-coisa-linda-cremoso",
+      "nome": "Esmalte IMPALA Coisa Linda",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa suave",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Coisa Linda Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-collant-cremoso",
+      "nome": "Esmalte IMPALA Collant",
+      "marca": "IMPALA",
+      "cor": "Nude",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em tom nude",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Collant Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-compartilhar-preguica",
+      "nome": "Esmalte IMPALA Compartilhar Preguiça",
+      "marca": "IMPALA",
+      "cor": "Cinza",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em tom cinza relaxante",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Compartilhar Preguiça_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-confeti-cremoso",
+      "nome": "Esmalte IMPALA Confeti",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa festivo",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Confeti Cremoso_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-confiante-imprevisivel-metal",
+      "nome": "Esmalte IMPALA Confiante e Imprevisível",
+      "marca": "IMPALA",
+      "cor": "Dourado",
+      "acabamento": "Metal Like",
+      "descricao": "Esmalte brasileiro com acabamento metálico dourado",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-metalico",
+      "images": ["/images/products/esmaltes/Impala Confiante e Imprevisível Metal Likee.webp"],
+      "pricing": {
+        "basePrice": 14.90,
+        "ourPrice": 10.90,
+        "discountPrice": 8.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-croche-cremoso",
+      "nome": "Esmalte IMPALA Crochê",
+      "marca": "IMPALA",
+      "cor": "Bege",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em tom bege aconchegante",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Crochê Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-descomplicada-cremoso",
+      "nome": "Esmalte IMPALA Descomplicada",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa prático",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Descomplicada Cremoso_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-dizeres-perolado",
+      "nome": "Esmalte IMPALA Dizeres",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Perolado",
+      "descricao": "Esmalte brasileiro com acabamento perolado em rosa expressivo",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-perolado",
+      "images": ["/images/products/esmaltes/Impala Dizeres Perolado.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-dadiva-cremoso",
+      "nome": "Esmalte IMPALA Dádiva",
+      "marca": "IMPALA",
+      "cor": "Roxo",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em roxo especial",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Dádiva Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-equilibrio-cremoso",
+      "nome": "Esmalte IMPALA Equilíbrio",
+      "marca": "IMPALA",
+      "cor": "Verde",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em verde harmonioso",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Equilíbrio Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-essencial-cremoso",
+      "nome": "Esmalte IMPALA Essencial",
+      "marca": "IMPALA",
+      "cor": "Nude",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em nude essencial",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Essencial Cremoso_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-fascinacao-cremoso",
+      "nome": "Esmalte IMPALA Fascinação",
+      "marca": "IMPALA",
+      "cor": "Vermelho",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em vermelho fascinante",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Fascinação Cremoso_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-flutua-cremoso",
+      "nome": "Esmalte IMPALA Flutua",
+      "marca": "IMPALA",
+      "cor": "Azul",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em azul flutuante",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Flutua Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-gatinha-cremoso",
+      "nome": "Esmalte IMPALA Gatinha",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa felino",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Gatinha Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-imensidao-cremoso",
+      "nome": "Esmalte IMPALA Imensidão",
+      "marca": "IMPALA",
+      "cor": "Azul",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em azul infinito",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Imensidão Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-inocense-cremoso",
+      "nome": "Esmalte IMPALA Inocense",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa inocente",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Inocense Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-jane-cremoso",
+      "nome": "Esmalte IMPALA Jane",
+      "marca": "IMPALA",
+      "cor": "Vermelho",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em vermelho elegante",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Jane Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-laguna-cremoso",
+      "nome": "Esmalte IMPALA Laguna",
+      "marca": "IMPALA",
+      "cor": "Azul",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em azul laguna",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Laguna Cremoso_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-lembranca-perolado",
+      "nome": "Esmalte IMPALA Lembrança",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Perolado",
+      "descricao": "Esmalte brasileiro com acabamento perolado em rosa memória",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-perolado",
+      "images": ["/images/products/esmaltes/Impala Lembrança Perolado_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-lenny-perolado",
+      "nome": "Esmalte IMPALA Lenny",
+      "marca": "IMPALA",
+      "cor": "Lilás",
+      "acabamento": "Perolado",
+      "descricao": "Esmalte brasileiro com acabamento perolado em lilás suave",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-perolado",
+      "images": ["/images/products/esmaltes/Impala Lenny Perolado.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-lua-perolado",
+      "nome": "Esmalte IMPALA Lua",
+      "marca": "IMPALA",
+      "cor": "Prata",
+      "acabamento": "Perolado",
+      "descricao": "Esmalte brasileiro com acabamento perolado em prata lunar",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-perolado",
+      "images": ["/images/products/esmaltes/Impala Lua Perolado_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-maria-cereja-cremoso",
+      "nome": "Esmalte IMPALA Maria Cereja",
+      "marca": "IMPALA",
+      "cor": "Vermelho",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em vermelho cereja",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Maria Cereja Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-marilyn-cremoso",
+      "nome": "Esmalte IMPALA Marilyn",
+      "marca": "IMPALA",
+      "cor": "Vermelho",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em vermelho icônico",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Marilyn Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-menina-bonita",
+      "nome": "Esmalte IMPALA Menina Bonita",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa encantador",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Menina Bonita.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-na-ponta-do-pe-cremoso",
+      "nome": "Esmalte IMPALA Na Ponta do Pé",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa bailarina",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Na Ponta do Pé Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-preto-cremoso",
+      "nome": "Esmalte IMPALA Preto",
+      "marca": "IMPALA",
+      "cor": "Preto",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em preto clássico",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Preto Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-querer-cremoso",
+      "nome": "Esmalte IMPALA Querer",
+      "marca": "IMPALA",
+      "cor": "Roxo",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em roxo desejável",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Querer Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-royal-cremoso",
+      "nome": "Esmalte IMPALA Royal",
+      "marca": "IMPALA",
+      "cor": "Azul",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em azul real",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Royal Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-roca-rosa-cremoso",
+      "nome": "Esmalte IMPALA Roça Rosa",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa campestre",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Roça Rosa Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-sabe-que-e-gostosa-cremoso",
+      "nome": "Esmalte IMPALA Sabe que é Gostosa",
+      "marca": "IMPALA",
+      "cor": "Coral",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em coral confiante",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Sabe que é Gostosa Cremoso_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-semear-perolado",
+      "nome": "Esmalte IMPALA Semear",
+      "marca": "IMPALA",
+      "cor": "Verde",
+      "acabamento": "Perolado",
+      "descricao": "Esmalte brasileiro com acabamento perolado em verde plantio",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-perolado",
+      "images": ["/images/products/esmaltes/Impala Semear Perolado.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-serena",
+      "nome": "Esmalte IMPALA Serena",
+      "marca": "IMPALA",
+      "cor": "Azul",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em azul sereno",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Serena.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-sofisticado-cremoso",
+      "nome": "Esmalte IMPALA Sofisticado",
+      "marca": "IMPALA",
+      "cor": "Marrom",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em marrom elegante",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Sofisticado Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-solta-o-agronejo-cremoso",
+      "nome": "Esmalte IMPALA Solta o Agronejo",
+      "marca": "IMPALA",
+      "cor": "Verde",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em verde agronejo",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Solta o Agronejo Cremoso.jpg"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-sonho-perolado",
+      "nome": "Esmalte IMPALA Sonho",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Perolado",
+      "descricao": "Esmalte brasileiro com acabamento perolado em rosa sonhador",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-perolado",
+      "images": ["/images/products/esmaltes/Impala Sonho Perolado.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-sossego",
+      "nome": "Esmalte IMPALA Sossego",
+      "marca": "IMPALA",
+      "cor": "Azul",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em azul tranquilo",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Sossego_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-sutileza-cremoso",
+      "nome": "Esmalte IMPALA Sutileza",
+      "marca": "IMPALA",
+      "cor": "Nude",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em nude sutil",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Sutileza Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-terra-molhada-cremoso",
+      "nome": "Esmalte IMPALA Terra Molhada",
+      "marca": "IMPALA",
+      "cor": "Marrom",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em marrom terra",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Terra Molhada Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-toda-dengosa-cremoso",
+      "nome": "Esmalte IMPALA Toda Dengosa",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa dengoso",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Toda Dengosa Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-top-pop",
+      "nome": "Esmalte IMPALA Top Pop",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa pop",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Top Pop_.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-vinho-cremoso",
+      "nome": "Esmalte IMPALA Vinho",
+      "marca": "IMPALA",
+      "cor": "Vinho",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em vinho elegante",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Vinho Cremoso.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-viva-ame-brilhe-glitter",
+      "nome": "Esmalte IMPALA Viva Ame e Brilhe",
+      "marca": "IMPALA",
+      "cor": "Dourado",
+      "acabamento": "Glitter",
+      "descricao": "Esmalte brasileiro com acabamento glitter dourado vibrante",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-glitter",
+      "images": ["/images/products/esmaltes/Impala Viva Ame e Brilhe Glitter_.webp"],
+      "pricing": {
+        "basePrice": 14.90,
+        "ourPrice": 10.90,
+        "discountPrice": 8.90
+      },
+      "badge": "BRASILEIRO"
+    },
+    {
+      "id": "impala-esmalte-zaz",
+      "nome": "Esmalte IMPALA Zaz",
+      "marca": "IMPALA",
+      "cor": "Rosa",
+      "acabamento": "Cremoso",
+      "descricao": "Esmalte brasileiro com acabamento cremoso em rosa energético",
+      "categoria": "esmaltes",
+      "subcategoria": "esmalte-cremoso",
+      "images": ["/images/products/esmaltes/Impala Zaz.webp"],
+      "pricing": {
+        "basePrice": 12.90,
+        "ourPrice": 8.90,
+        "discountPrice": 7.90
+      },
+      "badge": "BRASILEIRO"
+    }
+  ]
+}

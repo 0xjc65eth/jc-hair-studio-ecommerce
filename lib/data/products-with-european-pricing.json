@@ -30,20 +30,30 @@
           "volume": "1L",
           "pricing": {
             "basePrice": 222.27,
-            "ourPrice": 244.50,
-            "discountPrice": 195.60,
-            "savings": 48.90,
+            "ourPrice": 244.5,
+            "discountPrice": 195.6,
+            "savings": 48.9,
             "margin": "10%",
             "competitive": "Baseado em Bellasil €222.27"
           },
-          "tags": ["profissional", "longa duração", "cacau", "anti-frizz"],
+          "tags": [
+            "profissional",
+            "longa duração",
+            "cacau",
+            "anti-frizz"
+          ],
           "rating": 4.8,
           "reviewsCount": 342,
           "inStock": true,
           "stockQuantity": 25,
           "weight": 1000,
-          "labels": ["DESTAQUE", "PROFISSIONAL"],
-          "images": ["/images/products/cadiveu/cadiveu-1.png"]
+          "labels": [
+            "DESTAQUE",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/cadiveu/cadiveu-1.png"
+          ]
         },
         {
           "id": "cadiveu-professional-brasil-cacau-300ml",
@@ -61,18 +71,28 @@
             "basePrice": 141.79,
             "ourPrice": 155.97,
             "discountPrice": 124.77,
-            "savings": 31.20,
+            "savings": 31.2,
             "margin": "10%",
             "competitive": "Baseado em Bellasil Brasil Cacau Eco Keratin €141.79"
           },
-          "tags": ["profissional", "trial", "cacau", "anti-frizz"],
+          "tags": [
+            "profissional",
+            "trial",
+            "cacau",
+            "anti-frizz"
+          ],
           "rating": 4.7,
           "reviewsCount": 156,
           "inStock": true,
           "stockQuantity": 35,
           "weight": 300,
-          "labels": ["TRIAL", "PROFISSIONAL"],
-          "images": ["/images/products/cadiveu/cadiveu-2.png"]
+          "labels": [
+            "TRIAL",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/cadiveu/cadiveu-2.png"
+          ]
         },
         {
           "id": "forever-liss-btx-zero-formol-250g",
@@ -87,21 +107,31 @@
           "finalidade": "Botox capilar sem formol - reconstrução e alisamento",
           "volume": "250g",
           "pricing": {
-            "basePrice": 22.90,
+            "basePrice": 22.9,
             "ourPrice": 25.19,
             "discountPrice": 20.15,
             "savings": 5.04,
             "margin": "10%",
             "competitive": "Baseado preço brasileiro R$22.90 convertido + margem importação"
           },
-          "tags": ["sem formol", "reconstrução", "natural", "hidratação"],
+          "tags": [
+            "sem formol",
+            "reconstrução",
+            "natural",
+            "hidratação"
+          ],
           "rating": 4.7,
           "reviewsCount": 198,
           "inStock": true,
           "stockQuantity": 30,
           "weight": 250,
-          "labels": ["NOVO", "SEM FORMOL"],
-          "images": ["/images/products/botox/botox_1.png"]
+          "labels": [
+            "NOVO",
+            "SEM FORMOL"
+          ],
+          "images": [
+            "/images/products/botox/botox_1.png"
+          ]
         },
         {
           "id": "forever-liss-btx-zero-formol-1kg",
@@ -116,21 +146,31 @@
           "finalidade": "Botox capilar profissional sem formol",
           "volume": "1Kg",
           "pricing": {
-            "basePrice": 132.90,
+            "basePrice": 132.9,
             "ourPrice": 146.19,
             "discountPrice": 116.95,
             "savings": 29.24,
             "margin": "10%",
             "competitive": "Baseado preço brasileiro R$132.90 convertido + margem importação"
           },
-          "tags": ["sem formol", "profissional", "salão", "1kg"],
+          "tags": [
+            "sem formol",
+            "profissional",
+            "salão",
+            "1kg"
+          ],
           "rating": 4.8,
           "reviewsCount": 89,
           "inStock": true,
           "stockQuantity": 15,
           "weight": 1000,
-          "labels": ["PROFISSIONAL", "SEM FORMOL"],
-          "images": ["/images/products/botox/botox_2.png"]
+          "labels": [
+            "PROFISSIONAL",
+            "SEM FORMOL"
+          ],
+          "images": [
+            "/images/products/botox/botox_2.png"
+          ]
         },
         {
           "id": "btx-professional-premium-01",
@@ -145,21 +185,31 @@
           "finalidade": "BTX reconstrução premium",
           "volume": "500g",
           "pricing": {
-            "basePrice": 35.50,
+            "basePrice": 35.5,
             "ourPrice": 39.05,
             "discountPrice": 31.24,
             "savings": 7.81,
             "margin": "10%",
             "competitive": "Baseado em BTX premium europeus"
           },
-          "tags": ["premium", "reconstrução", "sem formol", "profissional"],
+          "tags": [
+            "premium",
+            "reconstrução",
+            "sem formol",
+            "profissional"
+          ],
           "rating": 4.8,
           "reviewsCount": 445,
           "inStock": true,
           "stockQuantity": 32,
           "weight": 500,
-          "labels": ["PREMIUM", "SEM FORMOL"],
-          "images": ["/images/products/produtos_diversos/IMG-8737.png"]
+          "labels": [
+            "PREMIUM",
+            "SEM FORMOL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8737.png"
+          ]
         },
         {
           "id": "progressiva-advanced-02",
@@ -174,21 +224,31 @@
           "finalidade": "Alisamento profissional avançado",
           "volume": "1L",
           "pricing": {
-            "basePrice": 165.00,
-            "ourPrice": 181.50,
-            "discountPrice": 145.20,
-            "savings": 36.30,
+            "basePrice": 165,
+            "ourPrice": 181.5,
+            "discountPrice": 145.2,
+            "savings": 36.3,
             "margin": "10%",
             "competitive": "Baseado em progressivas premium europeias"
           },
-          "tags": ["avançado", "profissional", "brilho", "proteção"],
+          "tags": [
+            "avançado",
+            "profissional",
+            "brilho",
+            "proteção"
+          ],
           "rating": 4.7,
           "reviewsCount": 298,
           "inStock": true,
           "stockQuantity": 18,
           "weight": 1000,
-          "labels": ["AVANÇADO", "PROFISSIONAL"],
-          "images": ["/images/products/produtos_diversos/IMG-8739.png"]
+          "labels": [
+            "AVANÇADO",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8739.png"
+          ]
         },
         {
           "id": "btx-repair-intensive-03",
@@ -203,21 +263,31 @@
           "finalidade": "BTX reparação intensiva",
           "volume": "300g",
           "pricing": {
-            "basePrice": 42.80,
+            "basePrice": 42.8,
             "ourPrice": 47.08,
             "discountPrice": 37.66,
             "savings": 9.42,
             "margin": "10%",
             "competitive": "Baseado em BTX premium europeus"
           },
-          "tags": ["reparador", "intensivo", "danificados", "ressecados"],
+          "tags": [
+            "reparador",
+            "intensivo",
+            "danificados",
+            "ressecados"
+          ],
           "rating": 4.9,
           "reviewsCount": 623,
           "inStock": true,
           "stockQuantity": 25,
           "weight": 300,
-          "labels": ["REPARADOR", "INTENSIVO"],
-          "images": ["/images/products/produtos_diversos/IMG-8740.png"]
+          "labels": [
+            "REPARADOR",
+            "INTENSIVO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8740.png"
+          ]
         },
         {
           "id": "progressiva-keratin-04",
@@ -232,21 +302,31 @@
           "finalidade": "Progressiva queratina suavidade máxima",
           "volume": "800ml",
           "pricing": {
-            "basePrice": 145.60,
+            "basePrice": 145.6,
             "ourPrice": 160.16,
             "discountPrice": 128.13,
             "savings": 32.03,
             "margin": "10%",
             "competitive": "Baseado em progressivas premium europeias"
           },
-          "tags": ["queratina", "suavidade", "anti-frizz", "complexo"],
+          "tags": [
+            "queratina",
+            "suavidade",
+            "anti-frizz",
+            "complexo"
+          ],
           "rating": 4.8,
           "reviewsCount": 367,
           "inStock": true,
           "stockQuantity": 22,
           "weight": 800,
-          "labels": ["QUERATINA", "SUAVIDADE"],
-          "images": ["/images/products/produtos_diversos/IMG-8741.png"]
+          "labels": [
+            "QUERATINA",
+            "SUAVIDADE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8741.png"
+          ]
         },
         {
           "id": "btx-collagen-boost-05",
@@ -261,21 +341,31 @@
           "finalidade": "BTX colágeno reconstrução firmeza",
           "volume": "400g",
           "pricing": {
-            "basePrice": 38.90,
+            "basePrice": 38.9,
             "ourPrice": 42.79,
             "discountPrice": 34.23,
             "savings": 8.56,
             "margin": "10%",
             "competitive": "Baseado em BTX premium europeus"
           },
-          "tags": ["colágeno", "firmeza", "elasticidade", "reconstrução"],
+          "tags": [
+            "colágeno",
+            "firmeza",
+            "elasticidade",
+            "reconstrução"
+          ],
           "rating": 4.6,
           "reviewsCount": 234,
           "inStock": true,
           "stockQuantity": 28,
           "weight": 400,
-          "labels": ["COLÁGENO", "FIRMEZA"],
-          "images": ["/images/products/produtos_diversos/IMG-8748.png"]
+          "labels": [
+            "COLÁGENO",
+            "FIRMEZA"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8748.png"
+          ]
         },
         {
           "id": "progressiva-silk-protein-06",
@@ -290,21 +380,31 @@
           "finalidade": "Progressiva proteína seda sedosidade",
           "volume": "600ml",
           "pricing": {
-            "basePrice": 125.50,
+            "basePrice": 125.5,
             "ourPrice": 138.05,
             "discountPrice": 110.44,
             "savings": 27.61,
             "margin": "10%",
             "competitive": "Baseado em progressivas premium europeias"
           },
-          "tags": ["proteína seda", "sedoso", "brilho natural", "avançado"],
+          "tags": [
+            "proteína seda",
+            "sedoso",
+            "brilho natural",
+            "avançado"
+          ],
           "rating": 4.7,
           "reviewsCount": 456,
           "inStock": true,
           "stockQuantity": 19,
           "weight": 600,
-          "labels": ["PROTEÍNA SEDA", "SEDOSIDADE"],
-          "images": ["/images/products/produtos_diversos/IMG-8752.png"]
+          "labels": [
+            "PROTEÍNA SEDA",
+            "SEDOSIDADE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8752.png"
+          ]
         },
         {
           "id": "btx-vitamin-complex-07",
@@ -319,21 +419,31 @@
           "finalidade": "BTX vitamínico revitalizante",
           "volume": "350g",
           "pricing": {
-            "basePrice": 44.20,
+            "basePrice": 44.2,
             "ourPrice": 48.62,
-            "discountPrice": 38.90,
+            "discountPrice": 38.9,
             "savings": 9.72,
             "margin": "10%",
             "competitive": "Baseado em BTX premium europeus"
           },
-          "tags": ["vitamínico", "revitalizante", "nutritivo", "profundo"],
+          "tags": [
+            "vitamínico",
+            "revitalizante",
+            "nutritivo",
+            "profundo"
+          ],
           "rating": 4.8,
           "reviewsCount": 389,
           "inStock": true,
           "stockQuantity": 31,
           "weight": 350,
-          "labels": ["VITAMÍNICO", "REVITALIZANTE"],
-          "images": ["/images/products/produtos_diversos/IMG-8753.png"]
+          "labels": [
+            "VITAMÍNICO",
+            "REVITALIZANTE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8753.png"
+          ]
         },
         {
           "id": "progressiva-nano-technology-08",
@@ -348,21 +458,31 @@
           "finalidade": "Progressiva nanotecnologia superior",
           "volume": "750ml",
           "pricing": {
-            "basePrice": 185.00,
-            "ourPrice": 203.50,
-            "discountPrice": 162.80,
-            "savings": 40.70,
+            "basePrice": 185,
+            "ourPrice": 203.5,
+            "discountPrice": 162.8,
+            "savings": 40.7,
             "margin": "10%",
             "competitive": "Baseado em progressivas premium europeias"
           },
-          "tags": ["nanotecnologia", "superior", "penetração", "excepcional"],
+          "tags": [
+            "nanotecnologia",
+            "superior",
+            "penetração",
+            "excepcional"
+          ],
           "rating": 4.9,
           "reviewsCount": 678,
           "inStock": true,
           "stockQuantity": 15,
           "weight": 750,
-          "labels": ["NANOTECNOLOGIA", "SUPERIOR"],
-          "images": ["/images/products/produtos_diversos/IMG-8757.png"]
+          "labels": [
+            "NANOTECNOLOGIA",
+            "SUPERIOR"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8757.png"
+          ]
         },
         {
           "id": "btx-argan-oil-09",
@@ -377,21 +497,31 @@
           "finalidade": "BTX argan tratamento luxo",
           "volume": "450g",
           "pricing": {
-            "basePrice": 52.80,
+            "basePrice": 52.8,
             "ourPrice": 58.08,
             "discountPrice": 46.46,
             "savings": 11.62,
             "margin": "10%",
             "competitive": "Baseado em BTX premium europeus"
           },
-          "tags": ["argan", "luxo", "nutrição intensa", "brilho excepcional"],
+          "tags": [
+            "argan",
+            "luxo",
+            "nutrição intensa",
+            "brilho excepcional"
+          ],
           "rating": 4.9,
           "reviewsCount": 567,
           "inStock": true,
           "stockQuantity": 24,
           "weight": 450,
-          "labels": ["ARGAN", "LUXO"],
-          "images": ["/images/products/produtos_diversos/IMG-8758.png"]
+          "labels": [
+            "ARGAN",
+            "LUXO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8758.png"
+          ]
         },
         {
           "id": "progressiva-diamond-shine-10",
@@ -406,21 +536,31 @@
           "finalidade": "Progressiva brilho diamante luminoso",
           "volume": "900ml",
           "pricing": {
-            "basePrice": 195.50,
+            "basePrice": 195.5,
             "ourPrice": 215.05,
             "discountPrice": 172.04,
             "savings": 43.01,
             "margin": "10%",
             "competitive": "Baseado em progressivas premium europeias"
           },
-          "tags": ["brilho diamante", "luminoso", "premium", "perfeito"],
+          "tags": [
+            "brilho diamante",
+            "luminoso",
+            "premium",
+            "perfeito"
+          ],
           "rating": 4.8,
           "reviewsCount": 434,
           "inStock": true,
           "stockQuantity": 12,
           "weight": 900,
-          "labels": ["BRILHO DIAMANTE", "LUMINOSO"],
-          "images": ["/images/products/produtos_diversos/IMG-8759.png"]
+          "labels": [
+            "BRILHO DIAMANTE",
+            "LUMINOSO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8759.png"
+          ]
         },
         {
           "id": "advanced-progressive-system-11",
@@ -435,21 +575,30 @@
           "finalidade": "Alisamento progressivo de longa duração",
           "volume": "500ml",
           "pricing": {
-            "basePrice": 38.80,
+            "basePrice": 38.8,
             "ourPrice": 42.68,
             "discountPrice": 34.14,
             "savings": 8.54,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["progressiva", "premium", "advanced", "brasileira"],
+          "tags": [
+            "progressiva",
+            "premium",
+            "advanced",
+            "brasileira"
+          ],
           "rating": 4.7,
           "reviewsCount": 225,
           "inStock": true,
           "stockQuantity": 22,
           "weight": 500,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/produtos_diversos/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"
+          ]
         },
         {
           "id": "btx-ultra-reconstruction-12",
@@ -464,21 +613,30 @@
           "finalidade": "Reconstrução ultra para cabelos muito danificados",
           "volume": "1L",
           "pricing": {
-            "basePrice": 48.90,
+            "basePrice": 48.9,
             "ourPrice": 53.79,
             "discountPrice": 43.03,
             "savings": 10.76,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["btx", "ultra", "reconstruction", "therapy"],
+          "tags": [
+            "btx",
+            "ultra",
+            "reconstruction",
+            "therapy"
+          ],
           "rating": 4.8,
           "reviewsCount": 195,
           "inStock": true,
           "stockQuantity": 15,
           "weight": 1000,
-          "labels": ["ULTRA"],
-          "images": ["/images/products/produtos_diversos/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"]
+          "labels": [
+            "ULTRA"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"
+          ]
         },
         {
           "id": "luxury-progressive-gold-13",
@@ -493,21 +651,30 @@
           "finalidade": "Alisamento luxury com partículas de ouro",
           "volume": "500ml",
           "pricing": {
-            "basePrice": 52.30,
+            "basePrice": 52.3,
             "ourPrice": 57.53,
             "discountPrice": 46.02,
             "savings": 11.51,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["luxury", "gold", "progressiva", "premium"],
+          "tags": [
+            "luxury",
+            "gold",
+            "progressiva",
+            "premium"
+          ],
           "rating": 4.9,
           "reviewsCount": 165,
           "inStock": true,
           "stockQuantity": 12,
           "weight": 500,
-          "labels": ["LUXURY"],
-          "images": ["/images/products/produtos_diversos/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png"]
+          "labels": [
+            "LUXURY"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png"
+          ]
         },
         {
           "id": "professional-btx-therapy-14",
@@ -522,21 +689,30 @@
           "finalidade": "Therapy reconstruction com aminoácidos",
           "volume": "1L",
           "pricing": {
-            "basePrice": 41.20,
+            "basePrice": 41.2,
             "ourPrice": 45.32,
             "discountPrice": 36.26,
             "savings": 9.06,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["btx", "therapy", "aminoacidos", "professional"],
+          "tags": [
+            "btx",
+            "therapy",
+            "aminoacidos",
+            "professional"
+          ],
           "rating": 4.6,
           "reviewsCount": 210,
           "inStock": true,
           "stockQuantity": 20,
           "weight": 1000,
-          "labels": ["PROFESSIONAL"],
-          "images": ["/images/products/produtos_diversos/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png"]
+          "labels": [
+            "PROFESSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png"
+          ]
         },
         {
           "id": "premium-btx-diamond-15",
@@ -551,21 +727,30 @@
           "finalidade": "BTX premium com brilho diamante",
           "volume": "1L",
           "pricing": {
-            "basePrice": 55.60,
+            "basePrice": 55.6,
             "ourPrice": 61.16,
             "discountPrice": 48.93,
             "savings": 12.23,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["btx", "diamond", "premium", "brilho"],
+          "tags": [
+            "btx",
+            "diamond",
+            "premium",
+            "brilho"
+          ],
           "rating": 4.9,
           "reviewsCount": 145,
           "inStock": true,
           "stockQuantity": 10,
           "weight": 1000,
-          "labels": ["DIAMOND"],
-          "images": ["/images/products/produtos_diversos/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png"]
+          "labels": [
+            "DIAMOND"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png"
+          ]
         },
         {
           "id": "royal-progressive-platinum-16",
@@ -580,21 +765,30 @@
           "finalidade": "Progressivo royal com tecnologia anti-age",
           "volume": "500ml",
           "pricing": {
-            "basePrice": 49.80,
+            "basePrice": 49.8,
             "ourPrice": 54.78,
             "discountPrice": 43.82,
             "savings": 10.96,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["royal", "platinum", "anti-age", "progressiva"],
+          "tags": [
+            "royal",
+            "platinum",
+            "anti-age",
+            "progressiva"
+          ],
           "rating": 4.8,
           "reviewsCount": 185,
           "inStock": true,
           "stockQuantity": 14,
           "weight": 500,
-          "labels": ["ROYAL"],
-          "images": ["/images/products/produtos_diversos/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"]
+          "labels": [
+            "ROYAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"
+          ]
         }
       ]
     },
@@ -605,996 +799,6 @@
       "description": "Tintas e colorações profissionais para todos os tipos de cabelo",
       "icon": "🎨",
       "products": [
-        {
-          "id": "loreal-excellage-cores-variadas",
-          "name": "L'Oréal Paris Excellence Age Perfect",
-          "slug": "loreal-excellage-cores-variadas",
-          "brand": "L'Oréal Paris",
-          "shortDesc": "Coloração permanente com cobertura 100% dos cabelos brancos",
-          "description": "Coloração permanente especialmente desenvolvida para cabelos maduros. Cobertura total dos brancos com cor vibrante que dura até 100 dias.",
-          "sku": "LOR-EXC-VAR-001",
-          "category": "Coloração Capilar",
-          "subcategory": "Permanente",
-          "finalidade": "Cobertura total de cabelos brancos",
-          "cores": ["Louro Claro", "Castanho", "Preto", "Louro Escuro", "Mogno"],
-          "volume": "Kit completo",
-          "pricing": {
-            "basePrice": 8.50,
-            "ourPrice": 9.35,
-            "discountPrice": 7.48,
-            "savings": 1.87,
-            "margin": "10%",
-            "competitive": "Baseado em preços farmácias europeias"
-          },
-          "tags": ["100% cobertura", "longa duração", "cabelos maduros", "vibrante"],
-          "rating": 4.6,
-          "reviewsCount": 892,
-          "inStock": true,
-          "stockQuantity": 50,
-          "weight": 150,
-          "labels": ["BESTSELLER", "COBERTURA TOTAL"],
-          "images": ["/images/products/tinta_loreal/tinta_loreal_1.PNG"]
-        },
-        {
-          "id": "amend-coloracao-profissional",
-          "name": "Amend Coloração Capilar Profissional",
-          "slug": "amend-coloracao-profissional",
-          "brand": "Amend",
-          "shortDesc": "Coloração premium com tecnologia avançada para máxima durabilidade",
-          "description": "Coloração profissional brasileira com tecnologia avançada. Cores intensas e duradouras com proteção e nutrição dos fios.",
-          "sku": "AMD-COL-PRO-001",
-          "category": "Coloração Capilar",
-          "subcategory": "Profissional",
-          "finalidade": "Coloração profissional de alta performance",
-          "cores": ["Diversas cores disponíveis"],
-          "volume": "60ml + oxidante",
-          "pricing": {
-            "basePrice": 12.00,
-            "ourPrice": 13.20,
-            "discountPrice": 10.56,
-            "savings": 2.64,
-            "margin": "10%",
-            "competitive": "Estimativa baseada em produtos brasileiros premium"
-          },
-          "tags": ["profissional", "brasileiro", "alta performance", "durável"],
-          "rating": 4.7,
-          "reviewsCount": 156,
-          "inStock": true,
-          "stockQuantity": 40,
-          "weight": 200,
-          "labels": ["PROFISSIONAL", "BRASILEIRO"],
-          "images": ["/images/products/tinta_amend/tinta_amend_1.PNG"]
-        },
-        {
-          "id": "wella-koleston-perfect",
-          "name": "Wella Koleston Perfect Coloração",
-          "slug": "wella-koleston-perfect",
-          "brand": "Wella",
-          "shortDesc": "Coloração profissional com cobertura perfeita e duração prolongada",
-          "description": "Coloração profissional Wella com tecnologia ME+ para redução de alergias. Cobertura uniforme e cores vibrantes.",
-          "sku": "WEL-KOL-PRF-001",
-          "category": "Coloração Capilar",
-          "subcategory": "Profissional",
-          "finalidade": "Coloração profissional hipoalergênica",
-          "cores": ["Ampla gama de cores profissionais"],
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 11.50,
-            "ourPrice": 12.65,
-            "discountPrice": 10.12,
-            "savings": 2.53,
-            "margin": "10%",
-            "competitive": "Baseado em preços Wella Europa"
-          },
-          "tags": ["profissional", "ME+ technology", "hipoalergênica", "salão"],
-          "rating": 4.8,
-          "reviewsCount": 567,
-          "inStock": true,
-          "stockQuantity": 35,
-          "weight": 180,
-          "labels": ["PROFISSIONAL", "HIPOALERGÊNICA"],
-          "images": ["/images/products/tinta_wella/tinta_wella_2.PNG"]
-        },
-        {
-          "id": "beauty-color-economica",
-          "name": "Beauty Color Coloração Vibrante",
-          "slug": "beauty-color-economica",
-          "brand": "Beauty Color",
-          "shortDesc": "Coloração vibrante com proteção e nutrição para os fios",
-          "description": "Coloração brasileira econômica com cores vibrantes e proteção dos fios. Ótima relação custo-benefício.",
-          "sku": "BC-VIB-ECO-001",
-          "category": "Coloração Capilar",
-          "subcategory": "Doméstica",
-          "finalidade": "Coloração econômica com proteção",
-          "cores": ["Diversas cores vibrantes"],
-          "volume": "Kit completo",
-          "pricing": {
-            "basePrice": 6.50,
-            "ourPrice": 7.15,
-            "discountPrice": 5.72,
-            "savings": 1.43,
-            "margin": "10%",
-            "competitive": "Posicionamento econômico brasileiro"
-          },
-          "tags": ["econômica", "vibrante", "brasileira", "custo-benefício"],
-          "rating": 4.3,
-          "reviewsCount": 234,
-          "inStock": true,
-          "stockQuantity": 60,
-          "weight": 120,
-          "labels": ["ECONÔMICA", "CUSTO-BENEFÍCIO"],
-          "images": ["/images/products/tinta_beauty_color/tinta_beauty_color_1.PNG"]
-        },
-        {
-          "id": "wella-koleston-perfect-loiro-natural",
-          "name": "Wella Koleston Perfect 7.0 - Loiro Natural",
-          "slug": "wella-koleston-perfect-7-0",
-          "brand": "Wella",
-          "shortDesc": "Coloração profissional com tecnologia ME+ para máxima proteção",
-          "description": "Coloração profissional Wella com tecnologia ME+ que reduz o risco de alergia. Cobertura uniforme e cor duradoura.",
-          "sku": "WEL-KOL-7-0",
-          "category": "Coloração Capilar",
-          "subcategory": "Profissional",
-          "finalidade": "Coloração profissional loiro natural",
-          "cor": "7.0 - Loiro Natural",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 11.50,
-            "ourPrice": 12.65,
-            "discountPrice": 10.12,
-            "savings": 2.53,
-            "margin": "10%",
-            "competitive": "Baseado em preços Wella Europa"
-          },
-          "tags": ["wella", "profissional", "loiro", "tecnologia me+"],
-          "rating": 4.8,
-          "reviewsCount": 567,
-          "inStock": true,
-          "stockQuantity": 35,
-          "weight": 80,
-          "labels": ["PROFISSIONAL", "TECNOLOGIA ME+"],
-          "images": ["/images/products/tinta_wella/tinta_wella_1.PNG"]
-        },
-        {
-          "id": "wella-koleston-perfect-castanho-escuro",
-          "name": "Wella Koleston Perfect 3.0 - Castanho Escuro",
-          "slug": "wella-koleston-perfect-3-0",
-          "brand": "Wella",
-          "shortDesc": "Coloração profissional castanho escuro com cobertura total",
-          "description": "Coloração profissional Wella para castanho escuro. Cobertura 100% dos brancos com cor intensa e duradoura.",
-          "sku": "WEL-KOL-3-0",
-          "category": "Coloração Capilar",
-          "subcategory": "Profissional",
-          "finalidade": "Coloração castanho escuro",
-          "cor": "3.0 - Castanho Escuro",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 11.50,
-            "ourPrice": 12.65,
-            "discountPrice": 10.12,
-            "savings": 2.53,
-            "margin": "10%",
-            "competitive": "Baseado em preços Wella Europa"
-          },
-          "tags": ["wella", "castanho", "cobertura total", "profissional"],
-          "rating": 4.7,
-          "reviewsCount": 423,
-          "inStock": true,
-          "stockQuantity": 42,
-          "weight": 80,
-          "labels": ["COBERTURA TOTAL", "PROFISSIONAL"],
-          "images": ["/images/products/tinta_wella/tinta_wella_10.PNG"]
-        },
-        {
-          "id": "wella-koleston-perfect-loiro-medio",
-          "name": "Wella Koleston Perfect 6.0 - Loiro Médio",
-          "slug": "wella-koleston-perfect-6-0",
-          "brand": "Wella",
-          "shortDesc": "Coloração profissional loiro médio com brilho intenso",
-          "description": "Coloração Wella Koleston Perfect para loiro médio. Fórmula profissional com brilho intenso e proteção da fibra capilar.",
-          "sku": "WEL-KOL-6-0",
-          "category": "Coloração Capilar",
-          "subcategory": "Profissional",
-          "finalidade": "Coloração loiro médio",
-          "cor": "6.0 - Loiro Médio",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 11.50,
-            "ourPrice": 12.65,
-            "discountPrice": 10.12,
-            "savings": 2.53,
-            "margin": "10%",
-            "competitive": "Baseado em preços Wella Europa"
-          },
-          "tags": ["wella", "loiro médio", "brilho", "proteção capilar"],
-          "rating": 4.6,
-          "reviewsCount": 298,
-          "inStock": true,
-          "stockQuantity": 28,
-          "weight": 80,
-          "labels": ["BRILHO INTENSO", "PROFISSIONAL"],
-          "images": ["/images/products/tinta_wella/tinta_wella_11.PNG"]
-        },
-        {
-          "id": "wella-koleston-perfect-preto-natural",
-          "name": "Wella Koleston Perfect 1.0 - Preto Natural",
-          "slug": "wella-koleston-perfect-1-0",
-          "brand": "Wella",
-          "shortDesc": "Coloração profissional preto natural com máxima cobertura",
-          "description": "Coloração Wella para preto natural intenso. Cobertura máxima dos brancos com cor profunda e duradoura.",
-          "sku": "WEL-KOL-1-0",
-          "category": "Coloração Capilar",
-          "subcategory": "Profissional",
-          "finalidade": "Coloração preto natural",
-          "cor": "1.0 - Preto Natural",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 11.50,
-            "ourPrice": 12.65,
-            "discountPrice": 10.12,
-            "savings": 2.53,
-            "margin": "10%",
-            "competitive": "Baseado em preços Wella Europa"
-          },
-          "tags": ["wella", "preto", "máxima cobertura", "intenso"],
-          "rating": 4.9,
-          "reviewsCount": 743,
-          "inStock": true,
-          "stockQuantity": 55,
-          "weight": 80,
-          "labels": ["MÁXIMA COBERTURA", "BESTSELLER"],
-          "images": ["/images/products/tinta_wella/tinta_wella_12.PNG"]
-        },
-        {
-          "id": "wella-koleston-perfect-ruivo-dourado",
-          "name": "Wella Koleston Perfect 7.43 - Ruivo Dourado",
-          "slug": "wella-koleston-perfect-7-43",
-          "brand": "Wella",
-          "shortDesc": "Coloração profissional ruivo dourado vibrante",
-          "description": "Coloração Wella em tom ruivo dourado. Reflexos vibrantes e cor multidimensional para um visual moderno.",
-          "sku": "WEL-KOL-7-43",
-          "category": "Coloração Capilar",
-          "subcategory": "Profissional",
-          "finalidade": "Coloração ruivo dourado",
-          "cor": "7.43 - Ruivo Dourado",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 12.00,
-            "ourPrice": 13.20,
-            "discountPrice": 10.56,
-            "savings": 2.64,
-            "margin": "10%",
-            "competitive": "Baseado em preços Wella Europa"
-          },
-          "tags": ["wella", "ruivo", "dourado", "vibrante"],
-          "rating": 4.5,
-          "reviewsCount": 187,
-          "inStock": true,
-          "stockQuantity": 23,
-          "weight": 80,
-          "labels": ["REFLEXOS VIBRANTES", "MODERNO"],
-          "images": ["/images/products/tinta_wella/tinta_wella_13.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-1",
-          "name": "Exclusive Coloração Capilar Premium 1",
-          "slug": "exclusive-coloracao-1",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-001",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 1",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 14.00,
-            "ourPrice": 15.40,
-            "discountPrice": 12.32,
-            "savings": 3.08,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.7,
-          "reviewsCount": 234,
-          "inStock": true,
-          "stockQuantity": 25,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_1.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-2",
-          "name": "Exclusive Coloração Capilar Premium 2",
-          "slug": "exclusive-coloracao-2",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-002",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 2",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 14.20,
-            "ourPrice": 15.62,
-            "discountPrice": 12.50,
-            "savings": 3.12,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.6,
-          "reviewsCount": 198,
-          "inStock": true,
-          "stockQuantity": 27,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_2.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-3",
-          "name": "Exclusive Coloração Capilar Premium 3",
-          "slug": "exclusive-coloracao-3",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-003",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 3",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 14.40,
-            "ourPrice": 15.84,
-            "discountPrice": 12.67,
-            "savings": 3.17,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.8,
-          "reviewsCount": 312,
-          "inStock": true,
-          "stockQuantity": 29,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_3.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-4",
-          "name": "Exclusive Coloração Capilar Premium 4",
-          "slug": "exclusive-coloracao-4",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-004",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 4",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 14.60,
-            "ourPrice": 16.06,
-            "discountPrice": 12.85,
-            "savings": 3.21,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.5,
-          "reviewsCount": 145,
-          "inStock": true,
-          "stockQuantity": 31,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_4.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-5",
-          "name": "Exclusive Coloração Capilar Premium 5",
-          "slug": "exclusive-coloracao-5",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-005",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 5",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 14.80,
-            "ourPrice": 16.28,
-            "discountPrice": 13.02,
-            "savings": 3.26,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.7,
-          "reviewsCount": 267,
-          "inStock": true,
-          "stockQuantity": 33,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_5.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-6",
-          "name": "Exclusive Coloração Capilar Premium 6",
-          "slug": "exclusive-coloracao-6",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-006",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 6",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 15.00,
-            "ourPrice": 16.50,
-            "discountPrice": 13.20,
-            "savings": 3.30,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.6,
-          "reviewsCount": 189,
-          "inStock": true,
-          "stockQuantity": 35,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_6.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-7",
-          "name": "Exclusive Coloração Capilar Premium 7",
-          "slug": "exclusive-coloracao-7",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-007",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 7",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 15.20,
-            "ourPrice": 16.72,
-            "discountPrice": 13.38,
-            "savings": 3.34,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.8,
-          "reviewsCount": 321,
-          "inStock": true,
-          "stockQuantity": 37,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_7.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-8",
-          "name": "Exclusive Coloração Capilar Premium 8",
-          "slug": "exclusive-coloracao-8",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-008",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 8",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 15.40,
-            "ourPrice": 16.94,
-            "discountPrice": 13.55,
-            "savings": 3.39,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.4,
-          "reviewsCount": 156,
-          "inStock": true,
-          "stockQuantity": 39,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_8.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-9",
-          "name": "Exclusive Coloração Capilar Premium 9",
-          "slug": "exclusive-coloracao-9",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-009",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 9",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 15.60,
-            "ourPrice": 17.16,
-            "discountPrice": 13.73,
-            "savings": 3.43,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.9,
-          "reviewsCount": 445,
-          "inStock": true,
-          "stockQuantity": 41,
-          "weight": 80,
-          "labels": ["PREMIUM", "BESTSELLER"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_9.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-10",
-          "name": "Exclusive Coloração Capilar Premium 10",
-          "slug": "exclusive-coloracao-10",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-010",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 10",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 15.80,
-            "ourPrice": 17.38,
-            "discountPrice": 13.90,
-            "savings": 3.48,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.6,
-          "reviewsCount": 278,
-          "inStock": true,
-          "stockQuantity": 43,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_10.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-11",
-          "name": "Exclusive Coloração Capilar Premium 11",
-          "slug": "exclusive-coloracao-11",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-011",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 11",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 16.00,
-            "ourPrice": 17.60,
-            "discountPrice": 14.08,
-            "savings": 3.52,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.7,
-          "reviewsCount": 356,
-          "inStock": true,
-          "stockQuantity": 45,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_11.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-12",
-          "name": "Exclusive Coloração Capilar Premium 12",
-          "slug": "exclusive-coloracao-12",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-012",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 12",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 16.20,
-            "ourPrice": 17.82,
-            "discountPrice": 14.26,
-            "savings": 3.56,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.5,
-          "reviewsCount": 189,
-          "inStock": true,
-          "stockQuantity": 47,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_12.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-13",
-          "name": "Exclusive Coloração Capilar Premium 13",
-          "slug": "exclusive-coloracao-13",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-013",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 13",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 16.40,
-            "ourPrice": 18.04,
-            "discountPrice": 14.43,
-            "savings": 3.61,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.8,
-          "reviewsCount": 423,
-          "inStock": true,
-          "stockQuantity": 49,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_13.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-14",
-          "name": "Exclusive Coloração Capilar Premium 14",
-          "slug": "exclusive-coloracao-14",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-014",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 14",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 16.60,
-            "ourPrice": 18.26,
-            "discountPrice": 14.61,
-            "savings": 3.65,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.6,
-          "reviewsCount": 267,
-          "inStock": true,
-          "stockQuantity": 51,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_14.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-15",
-          "name": "Exclusive Coloração Capilar Premium 15",
-          "slug": "exclusive-coloracao-15",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-015",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 15",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 16.80,
-            "ourPrice": 18.48,
-            "discountPrice": 14.78,
-            "savings": 3.70,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.7,
-          "reviewsCount": 345,
-          "inStock": true,
-          "stockQuantity": 53,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_15.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-16",
-          "name": "Exclusive Coloração Capilar Premium 16",
-          "slug": "exclusive-coloracao-16",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-016",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 16",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 17.00,
-            "ourPrice": 18.70,
-            "discountPrice": 14.96,
-            "savings": 3.74,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.4,
-          "reviewsCount": 198,
-          "inStock": true,
-          "stockQuantity": 55,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_16.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-17",
-          "name": "Exclusive Coloração Capilar Premium 17",
-          "slug": "exclusive-coloracao-17",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-017",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 17",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 17.20,
-            "ourPrice": 18.92,
-            "discountPrice": 15.14,
-            "savings": 3.78,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.9,
-          "reviewsCount": 512,
-          "inStock": true,
-          "stockQuantity": 57,
-          "weight": 80,
-          "labels": ["PREMIUM", "BESTSELLER"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_17.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-18",
-          "name": "Exclusive Coloração Capilar Premium 18",
-          "slug": "exclusive-coloracao-18",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-018",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 18",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 17.40,
-            "ourPrice": 19.14,
-            "discountPrice": 15.31,
-            "savings": 3.83,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.6,
-          "reviewsCount": 289,
-          "inStock": true,
-          "stockQuantity": 59,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_18.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-19",
-          "name": "Exclusive Coloração Capilar Premium 19",
-          "slug": "exclusive-coloracao-19",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-019",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 19",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 17.60,
-            "ourPrice": 19.36,
-            "discountPrice": 15.49,
-            "savings": 3.87,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.7,
-          "reviewsCount": 367,
-          "inStock": true,
-          "stockQuantity": 61,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_19.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-20",
-          "name": "Exclusive Coloração Capilar Premium 20",
-          "slug": "exclusive-coloracao-20",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-020",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 20",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 17.80,
-            "ourPrice": 19.58,
-            "discountPrice": 15.66,
-            "savings": 3.92,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.5,
-          "reviewsCount": 234,
-          "inStock": true,
-          "stockQuantity": 63,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_20.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-21",
-          "name": "Exclusive Coloração Capilar Premium 21",
-          "slug": "exclusive-coloracao-21",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-021",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 21",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 18.00,
-            "ourPrice": 19.80,
-            "discountPrice": 15.84,
-            "savings": 3.96,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.8,
-          "reviewsCount": 445,
-          "inStock": true,
-          "stockQuantity": 65,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_21.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-22",
-          "name": "Exclusive Coloração Capilar Premium 22",
-          "slug": "exclusive-coloracao-22",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-022",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 22",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 18.20,
-            "ourPrice": 20.02,
-            "discountPrice": 16.02,
-            "savings": 4.00,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.6,
-          "reviewsCount": 312,
-          "inStock": true,
-          "stockQuantity": 67,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_22.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-23",
-          "name": "Exclusive Coloração Capilar Premium 23",
-          "slug": "exclusive-coloracao-23",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-023",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 23",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 18.40,
-            "ourPrice": 20.24,
-            "discountPrice": 16.19,
-            "savings": 4.05,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.7,
-          "reviewsCount": 389,
-          "inStock": true,
-          "stockQuantity": 69,
-          "weight": 80,
-          "labels": ["PREMIUM", "EXCLUSIVA"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_23.PNG"]
-        },
-        {
-          "id": "exclusive-coloracao-24",
-          "name": "Exclusive Coloração Capilar Premium 24",
-          "slug": "exclusive-coloracao-24",
-          "brand": "Exclusive",
-          "shortDesc": "Coloração premium com tecnologia exclusiva",
-          "description": "Coloração profissional Exclusive com fórmula avançada. Cobertura perfeita e cor duradoura com proteção capilar.",
-          "sku": "EXC-COL-024",
-          "category": "Coloração Capilar",
-          "subcategory": "Premium",
-          "finalidade": "Coloração premium profissional",
-          "cor": "Cor exclusiva 24",
-          "volume": "60ml",
-          "pricing": {
-            "basePrice": 18.60,
-            "ourPrice": 20.46,
-            "discountPrice": 16.37,
-            "savings": 4.09,
-            "margin": "10%",
-            "competitive": "Baseado em colorações premium europeias"
-          },
-          "tags": ["exclusive", "premium", "profissional", "duradoura"],
-          "rating": 4.9,
-          "reviewsCount": 567,
-          "inStock": true,
-          "stockQuantity": 71,
-          "weight": 80,
-          "labels": ["PREMIUM", "BESTSELLER"],
-          "images": ["/images/products/tinta_excllusiv/tinta_excllusiv_24.PNG"]
-        },
         {
           "id": "professional-color-01",
           "name": "Coloração Profissional Advanced Color 01",
@@ -1609,21 +813,31 @@
           "cor": "Cor premium 01",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 19.80,
+            "basePrice": 19.8,
             "ourPrice": 21.78,
             "discountPrice": 17.42,
             "savings": 4.36,
             "margin": "10%",
             "competitive": "Baseado em colorações premium europeias"
           },
-          "tags": ["premium", "profissional", "alta cobertura", "duradoura"],
+          "tags": [
+            "premium",
+            "profissional",
+            "alta cobertura",
+            "duradoura"
+          ],
           "rating": 4.7,
           "reviewsCount": 423,
           "inStock": true,
           "stockQuantity": 45,
           "weight": 80,
-          "labels": ["PREMIUM", "PROFISSIONAL"],
-          "images": ["/images/products/produtos_diversos/Design-sem-nome-png.png"]
+          "labels": [
+            "PREMIUM",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png.png"
+          ]
         },
         {
           "id": "professional-color-02",
@@ -1639,21 +853,31 @@
           "cor": "Cor premium 02",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 20.00,
-            "ourPrice": 22.00,
-            "discountPrice": 17.60,
-            "savings": 4.40,
+            "basePrice": 20,
+            "ourPrice": 22,
+            "discountPrice": 17.6,
+            "savings": 4.4,
             "margin": "10%",
             "competitive": "Baseado em colorações premium europeias"
           },
-          "tags": ["premium", "profissional", "alta cobertura", "duradoura"],
+          "tags": [
+            "premium",
+            "profissional",
+            "alta cobertura",
+            "duradoura"
+          ],
           "rating": 4.6,
           "reviewsCount": 387,
           "inStock": true,
           "stockQuantity": 42,
           "weight": 80,
-          "labels": ["PREMIUM", "PROFISSIONAL"],
-          "images": ["/images/products/produtos_diversos/Design-sem-nome-png-1.png"]
+          "labels": [
+            "PREMIUM",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png-1.png"
+          ]
         },
         {
           "id": "professional-color-03",
@@ -1669,21 +893,31 @@
           "cor": "Cor premium 03",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 20.20,
+            "basePrice": 20.2,
             "ourPrice": 22.22,
             "discountPrice": 17.78,
             "savings": 4.44,
             "margin": "10%",
             "competitive": "Baseado em colorações premium europeias"
           },
-          "tags": ["premium", "profissional", "alta cobertura", "duradoura"],
+          "tags": [
+            "premium",
+            "profissional",
+            "alta cobertura",
+            "duradoura"
+          ],
           "rating": 4.8,
           "reviewsCount": 445,
           "inStock": true,
           "stockQuantity": 47,
           "weight": 80,
-          "labels": ["PREMIUM", "PROFISSIONAL"],
-          "images": ["/images/products/produtos_diversos/Design-sem-nome-png-2.png"]
+          "labels": [
+            "PREMIUM",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png-2.png"
+          ]
         },
         {
           "id": "professional-color-04",
@@ -1699,21 +933,31 @@
           "cor": "Cor premium 04",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 20.40,
+            "basePrice": 20.4,
             "ourPrice": 22.44,
             "discountPrice": 17.95,
             "savings": 4.49,
             "margin": "10%",
             "competitive": "Baseado em colorações premium europeias"
           },
-          "tags": ["premium", "profissional", "alta cobertura", "duradoura"],
+          "tags": [
+            "premium",
+            "profissional",
+            "alta cobertura",
+            "duradoura"
+          ],
           "rating": 4.5,
           "reviewsCount": 312,
           "inStock": true,
           "stockQuantity": 39,
           "weight": 80,
-          "labels": ["PREMIUM", "PROFISSIONAL"],
-          "images": ["/images/products/produtos_diversos/Design-sem-nome-png-3.png"]
+          "labels": [
+            "PREMIUM",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png-3.png"
+          ]
         },
         {
           "id": "intensive-color-05",
@@ -1729,21 +973,31 @@
           "cor": "Cor intensiva 05",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 18.60,
+            "basePrice": 18.6,
             "ourPrice": 20.46,
             "discountPrice": 16.37,
             "savings": 4.09,
             "margin": "10%",
             "competitive": "Baseado em colorações premium europeias"
           },
-          "tags": ["intensiva", "vibrante", "profissional", "cobertura"],
+          "tags": [
+            "intensiva",
+            "vibrante",
+            "profissional",
+            "cobertura"
+          ],
           "rating": 4.9,
           "reviewsCount": 567,
           "inStock": true,
           "stockQuantity": 52,
           "weight": 80,
-          "labels": ["INTENSIVA", "VIBRANTE"],
-          "images": ["/images/products/produtos_diversos/E50589-AE-AFCE-4-FD5-8-D43-C27-A34-DDEEE0.png"]
+          "labels": [
+            "INTENSIVA",
+            "VIBRANTE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/E50589-AE-AFCE-4-FD5-8-D43-C27-A34-DDEEE0.png"
+          ]
         },
         {
           "id": "salon-grade-color-06",
@@ -1759,21 +1013,31 @@
           "cor": "Cor salão 06",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 21.20,
+            "basePrice": 21.2,
             "ourPrice": 23.32,
             "discountPrice": 18.66,
             "savings": 4.66,
             "margin": "10%",
             "competitive": "Baseado em colorações premium europeias"
           },
-          "tags": ["salão", "consistente", "profissional", "qualidade"],
+          "tags": [
+            "salão",
+            "consistente",
+            "profissional",
+            "qualidade"
+          ],
           "rating": 4.7,
           "reviewsCount": 398,
           "inStock": true,
           "stockQuantity": 35,
           "weight": 80,
-          "labels": ["SALÃO", "QUALIDADE"],
-          "images": ["/images/products/produtos_diversos/E56-EA869-F48-B-4925-A000-3-D712-D35-B1-C2.png"]
+          "labels": [
+            "SALÃO",
+            "QUALIDADE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/E56-EA869-F48-B-4925-A000-3-D712-D35-B1-C2.png"
+          ]
         },
         {
           "id": "ultra-color-07",
@@ -1789,21 +1053,31 @@
           "cor": "Cor ultra 07",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 22.80,
+            "basePrice": 22.8,
             "ourPrice": 25.08,
             "discountPrice": 20.06,
             "savings": 5.02,
             "margin": "10%",
             "competitive": "Baseado em colorações premium europeias"
           },
-          "tags": ["ultra", "avançado", "durabilidade", "extraordinário"],
+          "tags": [
+            "ultra",
+            "avançado",
+            "durabilidade",
+            "extraordinário"
+          ],
           "rating": 4.8,
           "reviewsCount": 489,
           "inStock": true,
           "stockQuantity": 41,
           "weight": 80,
-          "labels": ["ULTRA", "AVANÇADO"],
-          "images": ["/images/products/produtos_diversos/EE902623-2-BC1-445-D-9-D31-071404310-ADE.png"]
+          "labels": [
+            "ULTRA",
+            "AVANÇADO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/EE902623-2-BC1-445-D-9-D31-071404310-ADE.png"
+          ]
         },
         {
           "id": "master-color-08",
@@ -1819,21 +1093,31 @@
           "cor": "Cor master 08",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 24.50,
+            "basePrice": 24.5,
             "ourPrice": 26.95,
             "discountPrice": 21.56,
             "savings": 5.39,
             "margin": "10%",
             "competitive": "Baseado em colorações premium europeias"
           },
-          "tags": ["master", "perfeição", "mestres", "profissional"],
+          "tags": [
+            "master",
+            "perfeição",
+            "mestres",
+            "profissional"
+          ],
           "rating": 4.9,
           "reviewsCount": 623,
           "inStock": true,
           "stockQuantity": 28,
           "weight": 80,
-          "labels": ["MASTER", "PERFEIÇÃO"],
-          "images": ["/images/products/produtos_diversos/IMG-8698.png"]
+          "labels": [
+            "MASTER",
+            "PERFEIÇÃO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8698.png"
+          ]
         },
         {
           "id": "elite-color-09",
@@ -1849,21 +1133,31 @@
           "cor": "Cor elite 09",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 25.20,
+            "basePrice": 25.2,
             "ourPrice": 27.72,
             "discountPrice": 22.18,
             "savings": 5.54,
             "margin": "10%",
             "competitive": "Baseado em colorações premium europeias"
           },
-          "tags": ["elite", "excepcional", "rico", "vibrante"],
+          "tags": [
+            "elite",
+            "excepcional",
+            "rico",
+            "vibrante"
+          ],
           "rating": 4.8,
           "reviewsCount": 445,
           "inStock": true,
           "stockQuantity": 33,
           "weight": 80,
-          "labels": ["ELITE", "EXCEPCIONAL"],
-          "images": ["/images/products/produtos_diversos/IMG-8711.png"]
+          "labels": [
+            "ELITE",
+            "EXCEPCIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8711.png"
+          ]
         },
         {
           "id": "platinum-color-10",
@@ -1879,21 +1173,31 @@
           "cor": "Cor platinum 10",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 26.80,
+            "basePrice": 26.8,
             "ourPrice": 29.48,
             "discountPrice": 23.58,
-            "savings": 5.90,
+            "savings": 5.9,
             "margin": "10%",
             "competitive": "Baseado em colorações premium europeias"
           },
-          "tags": ["platinum", "excelência", "qualidade", "performance"],
+          "tags": [
+            "platinum",
+            "excelência",
+            "qualidade",
+            "performance"
+          ],
           "rating": 4.9,
           "reviewsCount": 578,
           "inStock": true,
           "stockQuantity": 25,
           "weight": 80,
-          "labels": ["PLATINUM", "EXCELÊNCIA"],
-          "images": ["/images/products/produtos_diversos/IMG-8712.png"]
+          "labels": [
+            "PLATINUM",
+            "EXCELÊNCIA"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8712.png"
+          ]
         },
         {
           "id": "advanced-treatment-system-16",
@@ -1908,21 +1212,30 @@
           "finalidade": "Recovery system para cabelos danificados",
           "volume": "300ml",
           "pricing": {
-            "basePrice": 29.80,
+            "basePrice": 29.8,
             "ourPrice": 32.78,
             "discountPrice": 26.22,
             "savings": 6.56,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["advanced", "recovery", "system", "danificados"],
+          "tags": [
+            "advanced",
+            "recovery",
+            "system",
+            "danificados"
+          ],
           "rating": 4.8,
           "reviewsCount": 285,
           "inStock": true,
           "stockQuantity": 22,
           "weight": 320,
-          "labels": ["RECOVERY"],
-          "images": ["/images/products/produtos_diversos/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"]
+          "labels": [
+            "RECOVERY"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"
+          ]
         },
         {
           "id": "intensive-repair-therapy-17",
@@ -1937,21 +1250,30 @@
           "finalidade": "Terapia repair intensiva com ouro",
           "volume": "250ml",
           "pricing": {
-            "basePrice": 35.60,
+            "basePrice": 35.6,
             "ourPrice": 39.16,
             "discountPrice": 31.33,
             "savings": 7.83,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["intensive", "repair", "gold", "premium"],
+          "tags": [
+            "intensive",
+            "repair",
+            "gold",
+            "premium"
+          ],
           "rating": 4.9,
           "reviewsCount": 195,
           "inStock": true,
           "stockQuantity": 18,
           "weight": 270,
-          "labels": ["GOLD"],
-          "images": ["/images/products/produtos_diversos/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png"]
+          "labels": [
+            "GOLD"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png"
+          ]
         },
         {
           "id": "professional-nutrition-complex-18",
@@ -1966,21 +1288,30 @@
           "finalidade": "Complexo nutrition platinum professional",
           "volume": "500ml",
           "pricing": {
-            "basePrice": 42.30,
+            "basePrice": 42.3,
             "ourPrice": 46.53,
             "discountPrice": 37.22,
             "savings": 9.31,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["professional", "nutrition", "platinum", "complex"],
+          "tags": [
+            "professional",
+            "nutrition",
+            "platinum",
+            "complex"
+          ],
           "rating": 4.7,
           "reviewsCount": 325,
           "inStock": true,
           "stockQuantity": 25,
           "weight": 520,
-          "labels": ["PLATINUM"],
-          "images": ["/images/products/produtos_diversos/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png"]
+          "labels": [
+            "PLATINUM"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png"
+          ]
         },
         {
           "id": "ultra-hydration-therapy-19",
@@ -1995,21 +1326,30 @@
           "finalidade": "Terapia hydration ultra com brilho diamond",
           "volume": "300ml",
           "pricing": {
-            "basePrice": 38.90,
+            "basePrice": 38.9,
             "ourPrice": 42.79,
             "discountPrice": 34.23,
             "savings": 8.56,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["ultra", "hydration", "diamond", "therapy"],
+          "tags": [
+            "ultra",
+            "hydration",
+            "diamond",
+            "therapy"
+          ],
           "rating": 4.8,
           "reviewsCount": 265,
           "inStock": true,
           "stockQuantity": 20,
           "weight": 320,
-          "labels": ["DIAMOND"],
-          "images": ["/images/products/produtos_diversos/Design-sem-nome-png-1.png"]
+          "labels": [
+            "DIAMOND"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png-1.png"
+          ]
         },
         {
           "id": "regenerative-treatment-premium-20",
@@ -2024,21 +1364,30 @@
           "finalidade": "Sistema regenerative premium com células-tronco",
           "volume": "250ml",
           "pricing": {
-            "basePrice": 45.80,
+            "basePrice": 45.8,
             "ourPrice": 50.38,
-            "discountPrice": 40.30,
+            "discountPrice": 40.3,
             "savings": 10.08,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["regenerative", "premium", "células-tronco", "system"],
+          "tags": [
+            "regenerative",
+            "premium",
+            "células-tronco",
+            "system"
+          ],
           "rating": 4.9,
           "reviewsCount": 155,
           "inStock": true,
           "stockQuantity": 15,
           "weight": 270,
-          "labels": ["REGENERATIVE"],
-          "images": ["/images/products/produtos_diversos/Design-sem-nome-png-2.png"]
+          "labels": [
+            "REGENERATIVE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png-2.png"
+          ]
         }
       ]
     },
@@ -2063,21 +1412,31 @@
           "cor": "D30 - Deep 30",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 27.50,
+            "basePrice": 27.5,
             "ourPrice": 30.25,
-            "discountPrice": 24.20,
+            "discountPrice": 24.2,
             "savings": 6.05,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["brasileira", "ácido hialurônico", "longa duração", "pele escura"],
+          "tags": [
+            "brasileira",
+            "ácido hialurônico",
+            "longa duração",
+            "pele escura"
+          ],
           "rating": 4.8,
           "reviewsCount": 432,
           "inStock": true,
           "stockQuantity": 25,
           "weight": 50,
-          "labels": ["PREMIUM", "BRASILEIRO"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin D30 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM",
+            "BRASILEIRO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D30 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-f10",
@@ -2093,21 +1452,31 @@
           "cor": "F10 - Fair 10",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 27.50,
+            "basePrice": 27.5,
             "ourPrice": 30.25,
-            "discountPrice": 24.20,
+            "discountPrice": 24.2,
             "savings": 6.05,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["brasileira", "pele clara", "subtom frio", "proteção luz azul"],
+          "tags": [
+            "brasileira",
+            "pele clara",
+            "subtom frio",
+            "proteção luz azul"
+          ],
           "rating": 4.7,
           "reviewsCount": 298,
           "inStock": true,
           "stockQuantity": 30,
           "weight": 50,
-          "labels": ["PREMIUM", "PELE CLARA"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin F10 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM",
+            "PELE CLARA"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F10 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-m20",
@@ -2123,21 +1492,31 @@
           "cor": "M20 - Medium 20",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 27.50,
+            "basePrice": 27.5,
             "ourPrice": 30.25,
-            "discountPrice": 24.20,
+            "discountPrice": 24.2,
             "savings": 6.05,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["brasileira", "pele média", "acabamento natural", "tom médio"],
+          "tags": [
+            "brasileira",
+            "pele média",
+            "acabamento natural",
+            "tom médio"
+          ],
           "rating": 4.8,
           "reviewsCount": 387,
           "inStock": true,
           "stockQuantity": 28,
           "weight": 50,
-          "labels": ["PREMIUM", "TOM MÉDIO"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin M20 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM",
+            "TOM MÉDIO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M20 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "mari-maria-base-amndoa",
@@ -2153,21 +1532,30 @@
           "cor": "Amêndoa",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 1.00,
-            "ourPrice": 1.00,
-            "discountPrice": 1.00,
-            "savings": 0.00,
+            "basePrice": 1,
+            "ourPrice": 1,
+            "discountPrice": 1,
+            "savings": 0,
             "margin": "0%",
             "competitive": "PRODUTO TESTE - Valor mínimo para testar notificações"
           },
-          "tags": ["mari maria", "base", "amêndoa", "profissional"],
+          "tags": [
+            "mari maria",
+            "base",
+            "amêndoa",
+            "profissional"
+          ],
           "rating": 4.7,
           "reviewsCount": 320,
           "inStock": true,
           "stockQuantity": 28,
           "weight": 50,
-          "labels": ["BESTSELLER"],
-          "images": ["/images/products/mari-maria-bases/mari-maria-base-amndoa.png"]
+          "labels": [
+            "BESTSELLER"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-amndoa.png"
+          ]
         },
         {
           "id": "teste-juliana",
@@ -2183,21 +1571,31 @@
           "cor": "Universal",
           "volume": "1un",
           "pricing": {
-            "basePrice": 1.00,
-            "ourPrice": 1.00,
-            "discountPrice": 1.00,
-            "savings": 0.00,
+            "basePrice": 1,
+            "ourPrice": 1,
+            "discountPrice": 1,
+            "savings": 0,
             "margin": "0%",
             "competitive": "PRODUTO TESTE - Valor especial para Juliana"
           },
-          "tags": ["teste", "juliana", "validação", "sistema"],
-          "rating": 5.0,
+          "tags": [
+            "teste",
+            "juliana",
+            "validação",
+            "sistema"
+          ],
+          "rating": 5,
           "reviewsCount": 1,
           "inStock": true,
           "stockQuantity": 100,
           "weight": 10,
-          "labels": ["TESTE", "ESPECIAL"],
-          "images": ["/images/products/placeholder-product.jpg"]
+          "labels": [
+            "TESTE",
+            "ESPECIAL"
+          ],
+          "images": [
+            "/images/products/placeholder-product.jpg"
+          ]
         },
         {
           "id": "mari-maria-base-baunilha",
@@ -2213,21 +1611,30 @@
           "cor": "Baunilha",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 32.50,
-            "ourPrice": 35.70,
+            "basePrice": 32.5,
+            "ourPrice": 35.7,
             "discountPrice": 28.56,
             "savings": 7.14,
             "margin": "10%",
             "competitive": "Baseado em bases premium do mercado europeu"
           },
-          "tags": ["mari maria", "base", "baunilha", "profissional"],
+          "tags": [
+            "mari maria",
+            "base",
+            "baunilha",
+            "profissional"
+          ],
           "rating": 4.8,
           "reviewsCount": 201,
           "inStock": true,
           "stockQuantity": 37,
           "weight": 50,
-          "labels": ["BESTSELLER"],
-          "images": ["/images/products/mari-maria-bases/mari-maria-base-baunilha.png"]
+          "labels": [
+            "BESTSELLER"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-baunilha.png"
+          ]
         },
         {
           "id": "mari-maria-base-bege-claro",
@@ -2243,21 +1650,30 @@
           "cor": "Bege Claro",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 33.50,
-            "ourPrice": 36.70,
+            "basePrice": 33.5,
+            "ourPrice": 36.7,
             "discountPrice": 29.36,
             "savings": 7.34,
             "margin": "10%",
             "competitive": "Baseado em bases premium do mercado europeu"
           },
-          "tags": ["mari maria", "base", "bege claro", "profissional"],
+          "tags": [
+            "mari maria",
+            "base",
+            "bege claro",
+            "profissional"
+          ],
           "rating": 4.6,
           "reviewsCount": 211,
           "inStock": true,
           "stockQuantity": 26,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/mari-maria-bases/mari-maria-base-bege-claro.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-bege-claro.png"
+          ]
         },
         {
           "id": "mari-maria-base-bege-escuro",
@@ -2273,21 +1689,30 @@
           "cor": "Bege Escuro",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 34.00,
-            "ourPrice": 37.20,
+            "basePrice": 34,
+            "ourPrice": 37.2,
             "discountPrice": 29.76,
             "savings": 7.44,
             "margin": "10%",
             "competitive": "Baseado em bases premium do mercado europeu"
           },
-          "tags": ["mari maria", "base", "bege escuro", "profissional"],
+          "tags": [
+            "mari maria",
+            "base",
+            "bege escuro",
+            "profissional"
+          ],
           "rating": 4.7,
           "reviewsCount": 368,
           "inStock": true,
           "stockQuantity": 18,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/mari-maria-bases/mari-maria-base-bege-escuro.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-bege-escuro.png"
+          ]
         },
         {
           "id": "mari-maria-base-bege-medio",
@@ -2303,21 +1728,30 @@
           "cor": "Bege Médio",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 34.50,
-            "ourPrice": 37.70,
+            "basePrice": 34.5,
+            "ourPrice": 37.7,
             "discountPrice": 30.16,
             "savings": 7.54,
             "margin": "10%",
             "competitive": "Baseado em bases premium do mercado europeu"
           },
-          "tags": ["mari maria", "base", "bege médio", "profissional"],
+          "tags": [
+            "mari maria",
+            "base",
+            "bege médio",
+            "profissional"
+          ],
           "rating": 4.8,
           "reviewsCount": 196,
           "inStock": true,
           "stockQuantity": 19,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/mari-maria-bases/mari-maria-base-bege-mdio.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-bege-mdio.png"
+          ]
         },
         {
           "id": "mari-maria-base-cacau",
@@ -2333,21 +1767,30 @@
           "cor": "Cacau",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 35.00,
-            "ourPrice": 38.20,
+            "basePrice": 35,
+            "ourPrice": 38.2,
             "discountPrice": 30.56,
             "savings": 7.64,
             "margin": "10%",
             "competitive": "Baseado em bases premium do mercado europeu"
           },
-          "tags": ["mari maria", "base", "cacau", "profissional"],
+          "tags": [
+            "mari maria",
+            "base",
+            "cacau",
+            "profissional"
+          ],
           "rating": 4.9,
           "reviewsCount": 178,
           "inStock": true,
           "stockQuantity": 17,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/mari-maria-bases/mari-maria-base-cacau.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-cacau.png"
+          ]
         },
         {
           "id": "mari-maria-base-canela",
@@ -2363,21 +1806,30 @@
           "cor": "Canela",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 35.50,
-            "ourPrice": 38.70,
+            "basePrice": 35.5,
+            "ourPrice": 38.7,
             "discountPrice": 30.96,
             "savings": 7.74,
             "margin": "10%",
             "competitive": "Baseado em bases premium do mercado europeu"
           },
-          "tags": ["mari maria", "base", "canela", "profissional"],
+          "tags": [
+            "mari maria",
+            "base",
+            "canela",
+            "profissional"
+          ],
           "rating": 4.8,
           "reviewsCount": 394,
           "inStock": true,
           "stockQuantity": 37,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/mari-maria-bases/mari-maria-base-canela.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-canela.png"
+          ]
         },
         {
           "id": "mari-maria-base-caramelo",
@@ -2393,21 +1845,30 @@
           "cor": "Caramelo",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 36.00,
-            "ourPrice": 39.20,
+            "basePrice": 36,
+            "ourPrice": 39.2,
             "discountPrice": 31.36,
             "savings": 7.84,
             "margin": "10%",
             "competitive": "Baseado em bases premium do mercado europeu"
           },
-          "tags": ["mari maria", "base", "caramelo", "profissional"],
+          "tags": [
+            "mari maria",
+            "base",
+            "caramelo",
+            "profissional"
+          ],
           "rating": 4.7,
           "reviewsCount": 236,
           "inStock": true,
           "stockQuantity": 28,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/mari-maria-bases/mari-maria-base-caramelo.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-caramelo.png"
+          ]
         },
         {
           "id": "mari-maria-base-chocolate",
@@ -2423,21 +1884,30 @@
           "cor": "Chocolate",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 36.50,
-            "ourPrice": 39.70,
+            "basePrice": 36.5,
+            "ourPrice": 39.7,
             "discountPrice": 31.76,
             "savings": 7.94,
             "margin": "10%",
             "competitive": "Baseado em bases premium do mercado europeu"
           },
-          "tags": ["mari maria", "base", "chocolate", "profissional"],
+          "tags": [
+            "mari maria",
+            "base",
+            "chocolate",
+            "profissional"
+          ],
           "rating": 4.9,
           "reviewsCount": 318,
           "inStock": true,
           "stockQuantity": 17,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/mari-maria-bases/mari-maria-base-chocolate.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-chocolate.png"
+          ]
         },
         {
           "id": "mari-maria-base-nude",
@@ -2453,21 +1923,30 @@
           "cor": "Nude",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 37.00,
-            "ourPrice": 40.20,
+            "basePrice": 37,
+            "ourPrice": 40.2,
             "discountPrice": 32.16,
             "savings": 8.04,
             "margin": "10%",
             "competitive": "Baseado em bases premium do mercado europeu"
           },
-          "tags": ["mari maria", "base", "nude", "profissional"],
+          "tags": [
+            "mari maria",
+            "base",
+            "nude",
+            "profissional"
+          ],
           "rating": 4.8,
           "reviewsCount": 459,
           "inStock": true,
           "stockQuantity": 37,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/mari-maria-bases/mari-maria-base-nude.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-nude.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-d10",
@@ -2483,21 +1962,30 @@
           "cor": "D10 - Dourado",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 25.00,
-            "ourPrice": 27.50,
-            "discountPrice": 22.00,
-            "savings": 5.50,
+            "basePrice": 25,
+            "ourPrice": 27.5,
+            "discountPrice": 22,
+            "savings": 5.5,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "dourado", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "dourado",
+            "brasileira"
+          ],
           "rating": 4.7,
           "reviewsCount": 427,
           "inStock": true,
           "stockQuantity": 42,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin D10 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D10 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-d20",
@@ -2513,21 +2001,30 @@
           "cor": "D20 - Dourado",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 25.30,
-            "ourPrice": 27.80,
+            "basePrice": 25.3,
+            "ourPrice": 27.8,
             "discountPrice": 22.25,
             "savings": 5.55,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "dourado", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "dourado",
+            "brasileira"
+          ],
           "rating": 4.5,
           "reviewsCount": 299,
           "inStock": true,
           "stockQuantity": 33,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin D20 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D20 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-d40",
@@ -2543,21 +2040,30 @@
           "cor": "D40 - Dourado",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 25.90,
-            "ourPrice": 28.40,
+            "basePrice": 25.9,
+            "ourPrice": 28.4,
             "discountPrice": 22.75,
             "savings": 5.65,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "dourado", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "dourado",
+            "brasileira"
+          ],
           "rating": 4.6,
           "reviewsCount": 130,
           "inStock": true,
           "stockQuantity": 31,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin D40 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D40 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-d50",
@@ -2573,21 +2079,30 @@
           "cor": "D50 - Dourado",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 26.20,
-            "ourPrice": 28.70,
-            "discountPrice": 23.00,
-            "savings": 5.70,
+            "basePrice": 26.2,
+            "ourPrice": 28.7,
+            "discountPrice": 23,
+            "savings": 5.7,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "dourado", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "dourado",
+            "brasileira"
+          ],
           "rating": 4.8,
           "reviewsCount": 276,
           "inStock": true,
           "stockQuantity": 36,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin D50 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D50 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-d60",
@@ -2603,21 +2118,30 @@
           "cor": "D60 - Dourado",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 26.50,
-            "ourPrice": 29.00,
+            "basePrice": 26.5,
+            "ourPrice": 29,
             "discountPrice": 23.25,
             "savings": 5.75,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "dourado", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "dourado",
+            "brasileira"
+          ],
           "rating": 4.7,
           "reviewsCount": 345,
           "inStock": true,
           "stockQuantity": 31,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin D60 Base Bruna Tavares.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D60 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-f20",
@@ -2633,21 +2157,30 @@
           "cor": "F20 - Frio",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 25.30,
-            "ourPrice": 27.80,
+            "basePrice": 25.3,
+            "ourPrice": 27.8,
             "discountPrice": 22.25,
             "savings": 5.55,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "frio", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "frio",
+            "brasileira"
+          ],
           "rating": 4.6,
           "reviewsCount": 101,
           "inStock": true,
           "stockQuantity": 21,
           "weight": 50,
-          "labels": ["NOVO"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin F20 Base Bruna Tavares.png"]
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F20 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-f30",
@@ -2663,21 +2196,30 @@
           "cor": "F30 - Frio",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 25.60,
-            "ourPrice": 28.10,
-            "discountPrice": 22.50,
-            "savings": 5.60,
+            "basePrice": 25.6,
+            "ourPrice": 28.1,
+            "discountPrice": 22.5,
+            "savings": 5.6,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "frio", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "frio",
+            "brasileira"
+          ],
           "rating": 4.7,
           "reviewsCount": 152,
           "inStock": true,
           "stockQuantity": 22,
           "weight": 50,
-          "labels": ["NOVO"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin F30 Base Bruna Tavares.png"]
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F30 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-f40",
@@ -2693,21 +2235,30 @@
           "cor": "F40 - Frio",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 25.90,
-            "ourPrice": 28.40,
+            "basePrice": 25.9,
+            "ourPrice": 28.4,
             "discountPrice": 22.75,
             "savings": 5.65,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "frio", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "frio",
+            "brasileira"
+          ],
           "rating": 4.8,
           "reviewsCount": 203,
           "inStock": true,
           "stockQuantity": 23,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin F40 Base Bruna Tavares.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F40 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-f50",
@@ -2723,21 +2274,30 @@
           "cor": "F50 - Frio",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 26.20,
-            "ourPrice": 28.70,
-            "discountPrice": 23.00,
-            "savings": 5.70,
+            "basePrice": 26.2,
+            "ourPrice": 28.7,
+            "discountPrice": 23,
+            "savings": 5.7,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "frio", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "frio",
+            "brasileira"
+          ],
           "rating": 4.5,
           "reviewsCount": 254,
           "inStock": true,
           "stockQuantity": 24,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin F50 Base Bruna Tavares.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F50 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-f60",
@@ -2753,21 +2313,30 @@
           "cor": "F60 - Frio",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 26.50,
-            "ourPrice": 29.00,
+            "basePrice": 26.5,
+            "ourPrice": 29,
             "discountPrice": 23.25,
             "savings": 5.75,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "frio", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "frio",
+            "brasileira"
+          ],
           "rating": 4.6,
           "reviewsCount": 305,
           "inStock": true,
           "stockQuantity": 25,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin F60 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F60 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-l10",
@@ -2783,21 +2352,30 @@
           "cor": "L10 - Livre",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 26.80,
-            "ourPrice": 29.30,
-            "discountPrice": 23.50,
-            "savings": 5.80,
+            "basePrice": 26.8,
+            "ourPrice": 29.3,
+            "discountPrice": 23.5,
+            "savings": 5.8,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "livre", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
           "rating": 4.7,
           "reviewsCount": 356,
           "inStock": true,
           "stockQuantity": 26,
           "weight": 50,
-          "labels": ["NOVO"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin L10 Base Bruna Tavares.png"]
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L10 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-l20",
@@ -2813,21 +2391,30 @@
           "cor": "L20 - Livre",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 27.10,
-            "ourPrice": 29.60,
+            "basePrice": 27.1,
+            "ourPrice": 29.6,
             "discountPrice": 23.75,
             "savings": 5.85,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "livre", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
           "rating": 4.8,
           "reviewsCount": 407,
           "inStock": true,
           "stockQuantity": 27,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin L20 Base Bruna Tavares.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L20 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-l30",
@@ -2843,21 +2430,30 @@
           "cor": "L30 - Livre",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 27.40,
-            "ourPrice": 29.90,
-            "discountPrice": 24.00,
-            "savings": 5.90,
+            "basePrice": 27.4,
+            "ourPrice": 29.9,
+            "discountPrice": 24,
+            "savings": 5.9,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "livre", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
           "rating": 4.6,
           "reviewsCount": 458,
           "inStock": true,
           "stockQuantity": 28,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin L30 Base Bruna Tavares.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L30 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-l40",
@@ -2873,21 +2469,30 @@
           "cor": "L40 - Livre",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 27.70,
-            "ourPrice": 30.20,
+            "basePrice": 27.7,
+            "ourPrice": 30.2,
             "discountPrice": 24.25,
             "savings": 5.95,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "livre", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
           "rating": 4.7,
           "reviewsCount": 509,
           "inStock": true,
           "stockQuantity": 29,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin L40 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L40 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-l50",
@@ -2903,21 +2508,30 @@
           "cor": "L50 - Livre",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 28.00,
-            "ourPrice": 30.50,
-            "discountPrice": 24.50,
-            "savings": 6.00,
+            "basePrice": 28,
+            "ourPrice": 30.5,
+            "discountPrice": 24.5,
+            "savings": 6,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "livre", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
           "rating": 4.8,
           "reviewsCount": 560,
           "inStock": true,
           "stockQuantity": 30,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin L50 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L50 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-l60",
@@ -2933,21 +2547,30 @@
           "cor": "L60 - Livre",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 28.30,
-            "ourPrice": 30.80,
+            "basePrice": 28.3,
+            "ourPrice": 30.8,
             "discountPrice": 24.75,
             "savings": 6.05,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "livre", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
           "rating": 4.9,
           "reviewsCount": 611,
           "inStock": true,
           "stockQuantity": 31,
           "weight": 50,
-          "labels": ["BESTSELLER"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin L60 Base Bruna Tavares.png"]
+          "labels": [
+            "BESTSELLER"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L60 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-m10",
@@ -2963,21 +2586,30 @@
           "cor": "M10 - Médio",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 28.60,
-            "ourPrice": 31.10,
-            "discountPrice": 25.00,
-            "savings": 6.10,
+            "basePrice": 28.6,
+            "ourPrice": 31.1,
+            "discountPrice": 25,
+            "savings": 6.1,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "médio", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "médio",
+            "brasileira"
+          ],
           "rating": 4.7,
           "reviewsCount": 662,
           "inStock": true,
           "stockQuantity": 32,
           "weight": 50,
-          "labels": ["NOVO"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin M10 Base Bruna Tavares.png"]
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M10 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-m30",
@@ -2993,21 +2625,30 @@
           "cor": "M30 - Médio",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 28.90,
-            "ourPrice": 31.40,
+            "basePrice": 28.9,
+            "ourPrice": 31.4,
             "discountPrice": 25.25,
             "savings": 6.15,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "médio", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "médio",
+            "brasileira"
+          ],
           "rating": 4.8,
           "reviewsCount": 713,
           "inStock": true,
           "stockQuantity": 33,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin M30 Base Bruna Tavares.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M30 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-m40",
@@ -3023,21 +2664,30 @@
           "cor": "M40 - Médio",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 29.20,
-            "ourPrice": 31.70,
-            "discountPrice": 25.50,
-            "savings": 6.20,
+            "basePrice": 29.2,
+            "ourPrice": 31.7,
+            "discountPrice": 25.5,
+            "savings": 6.2,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "médio", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "médio",
+            "brasileira"
+          ],
           "rating": 4.6,
           "reviewsCount": 764,
           "inStock": true,
           "stockQuantity": 34,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin M40 Base Bruna Tavares.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M40 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-m50",
@@ -3053,21 +2703,30 @@
           "cor": "M50 - Médio",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 29.50,
-            "ourPrice": 32.00,
+            "basePrice": 29.5,
+            "ourPrice": 32,
             "discountPrice": 25.75,
             "savings": 6.25,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "médio", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "médio",
+            "brasileira"
+          ],
           "rating": 4.7,
           "reviewsCount": 815,
           "inStock": true,
           "stockQuantity": 35,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin M50 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M50 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-m60",
@@ -3083,21 +2742,30 @@
           "cor": "M60 - Médio",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 29.80,
-            "ourPrice": 32.30,
-            "discountPrice": 26.00,
-            "savings": 6.30,
+            "basePrice": 29.8,
+            "ourPrice": 32.3,
+            "discountPrice": 26,
+            "savings": 6.3,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "médio", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "médio",
+            "brasileira"
+          ],
           "rating": 4.8,
           "reviewsCount": 866,
           "inStock": true,
           "stockQuantity": 36,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin M60 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M60 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-t10",
@@ -3113,21 +2781,30 @@
           "cor": "T10 - Tropicália",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 30.10,
-            "ourPrice": 32.60,
+            "basePrice": 30.1,
+            "ourPrice": 32.6,
             "discountPrice": 26.25,
             "savings": 6.35,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "tropicália", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
           "rating": 4.9,
           "reviewsCount": 917,
           "inStock": true,
           "stockQuantity": 37,
           "weight": 50,
-          "labels": ["NOVO"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin T10 Base Bruna Tavares.png"]
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T10 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-t20",
@@ -3143,21 +2820,30 @@
           "cor": "T20 - Tropicália",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 30.40,
-            "ourPrice": 32.90,
-            "discountPrice": 26.50,
-            "savings": 6.40,
+            "basePrice": 30.4,
+            "ourPrice": 32.9,
+            "discountPrice": 26.5,
+            "savings": 6.4,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "tropicália", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
           "rating": 4.7,
           "reviewsCount": 968,
           "inStock": true,
           "stockQuantity": 38,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin T20 Base Bruna Tavares.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T20 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-t30",
@@ -3173,21 +2859,30 @@
           "cor": "T30 - Tropicália",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 30.70,
-            "ourPrice": 33.20,
+            "basePrice": 30.7,
+            "ourPrice": 33.2,
             "discountPrice": 26.75,
             "savings": 6.45,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "tropicália", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
           "rating": 4.8,
           "reviewsCount": 1019,
           "inStock": true,
           "stockQuantity": 39,
           "weight": 50,
-          "labels": ["DESTAQUE"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin T30 Base Bruna Tavares.png"]
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T30 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-t40",
@@ -3203,21 +2898,30 @@
           "cor": "T40 - Tropicália",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 31.00,
-            "ourPrice": 33.50,
-            "discountPrice": 27.00,
-            "savings": 6.50,
+            "basePrice": 31,
+            "ourPrice": 33.5,
+            "discountPrice": 27,
+            "savings": 6.5,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "tropicália", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
           "rating": 4.6,
           "reviewsCount": 1070,
           "inStock": true,
           "stockQuantity": 40,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin T40 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T40 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-t50",
@@ -3233,21 +2937,30 @@
           "cor": "T50 - Tropicália",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 31.30,
-            "ourPrice": 33.80,
+            "basePrice": 31.3,
+            "ourPrice": 33.8,
             "discountPrice": 27.25,
             "savings": 6.55,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "tropicália", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
           "rating": 4.7,
           "reviewsCount": 1121,
           "inStock": true,
           "stockQuantity": 41,
           "weight": 50,
-          "labels": ["PREMIUM"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin T50 Base Bruna Tavares.png"]
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T50 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "bruna-tavares-bt-skin-t60",
@@ -3263,21 +2976,30 @@
           "cor": "T60 - Tropicália",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 31.60,
-            "ourPrice": 34.10,
-            "discountPrice": 27.50,
-            "savings": 6.60,
+            "basePrice": 31.6,
+            "ourPrice": 34.1,
+            "discountPrice": 27.5,
+            "savings": 6.6,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["bruna tavares", "bt skin", "tropicália", "brasileira"],
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
           "rating": 4.8,
           "reviewsCount": 1172,
           "inStock": true,
           "stockQuantity": 42,
           "weight": 50,
-          "labels": ["BESTSELLER"],
-          "images": ["/images/products/bruna-tavares-bt-skin/BT Skin T60 Base Bruna Tavares.png"]
+          "labels": [
+            "BESTSELLER"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T60 Base Bruna Tavares.png"
+          ]
         },
         {
           "id": "premium-lipstick-01",
@@ -3293,21 +3015,31 @@
           "cor": "Vermelho Premium 01",
           "volume": "3.5g",
           "pricing": {
-            "basePrice": 32.50,
+            "basePrice": 32.5,
             "ourPrice": 35.75,
-            "discountPrice": 28.60,
+            "discountPrice": 28.6,
             "savings": 7.15,
             "margin": "10%",
             "competitive": "Baseado em batons premium europeus"
           },
-          "tags": ["matte", "premium", "pigmentação", "duradoura"],
+          "tags": [
+            "matte",
+            "premium",
+            "pigmentação",
+            "duradoura"
+          ],
           "rating": 4.8,
           "reviewsCount": 567,
           "inStock": true,
           "stockQuantity": 45,
           "weight": 15,
-          "labels": ["PREMIUM", "MATTE"],
-          "images": ["/images/products/produtos_diversos/IMG-8713.png"]
+          "labels": [
+            "PREMIUM",
+            "MATTE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8713.png"
+          ]
         },
         {
           "id": "premium-foundation-02",
@@ -3323,21 +3055,31 @@
           "cor": "Tom Natural 02",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 38.00,
-            "ourPrice": 41.80,
+            "basePrice": 38,
+            "ourPrice": 41.8,
             "discountPrice": 33.44,
             "savings": 8.36,
             "margin": "10%",
             "competitive": "Baseado em bases premium europeias"
           },
-          "tags": ["cobertura total", "16 horas", "natural", "premium"],
+          "tags": [
+            "cobertura total",
+            "16 horas",
+            "natural",
+            "premium"
+          ],
           "rating": 4.9,
           "reviewsCount": 423,
           "inStock": true,
           "stockQuantity": 38,
           "weight": 50,
-          "labels": ["FULL COVERAGE", "LONGA DURAÇÃO"],
-          "images": ["/images/products/produtos_diversos/IMG-8716.png"]
+          "labels": [
+            "FULL COVERAGE",
+            "LONGA DURAÇÃO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8716.png"
+          ]
         },
         {
           "id": "premium-concealer-03",
@@ -3353,21 +3095,31 @@
           "cor": "Tom HD 03",
           "volume": "6ml",
           "pricing": {
-            "basePrice": 28.50,
+            "basePrice": 28.5,
             "ourPrice": 31.35,
             "discountPrice": 25.08,
             "savings": 6.27,
             "margin": "10%",
             "competitive": "Baseado em corretivos premium europeus"
           },
-          "tags": ["alta definição", "olheiras", "imperfeições", "premium"],
+          "tags": [
+            "alta definição",
+            "olheiras",
+            "imperfeições",
+            "premium"
+          ],
           "rating": 4.7,
           "reviewsCount": 298,
           "inStock": true,
           "stockQuantity": 52,
           "weight": 25,
-          "labels": ["HD", "COBERTURA PERFEITA"],
-          "images": ["/images/products/produtos_diversos/IMG-8718.png"]
+          "labels": [
+            "HD",
+            "COBERTURA PERFEITA"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8718.png"
+          ]
         },
         {
           "id": "premium-mascara-04",
@@ -3383,21 +3135,31 @@
           "cor": "Preto Intenso",
           "volume": "8ml",
           "pricing": {
-            "basePrice": 26.80,
+            "basePrice": 26.8,
             "ourPrice": 29.48,
             "discountPrice": 23.58,
-            "savings": 5.90,
+            "savings": 5.9,
             "margin": "10%",
             "competitive": "Baseado em máscaras premium europeias"
           },
-          "tags": ["volume extremo", "separação", "sem grumos", "intenso"],
+          "tags": [
+            "volume extremo",
+            "separação",
+            "sem grumos",
+            "intenso"
+          ],
           "rating": 4.6,
           "reviewsCount": 445,
           "inStock": true,
           "stockQuantity": 41,
           "weight": 30,
-          "labels": ["VOLUME EXTREMO", "SEM GRUMOS"],
-          "images": ["/images/products/produtos_diversos/IMG-8720.png"]
+          "labels": [
+            "VOLUME EXTREMO",
+            "SEM GRUMOS"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8720.png"
+          ]
         },
         {
           "id": "premium-eyeshadow-05",
@@ -3413,21 +3175,31 @@
           "cor": "Mix Premium 05",
           "volume": "12 x 2g",
           "pricing": {
-            "basePrice": 45.00,
-            "ourPrice": 49.50,
-            "discountPrice": 39.60,
-            "savings": 9.90,
+            "basePrice": 45,
+            "ourPrice": 49.5,
+            "discountPrice": 39.6,
+            "savings": 9.9,
             "margin": "10%",
             "competitive": "Baseado em paletas premium europeias"
           },
-          "tags": ["12 cores", "pigmentada", "matte", "shimmer"],
+          "tags": [
+            "12 cores",
+            "pigmentada",
+            "matte",
+            "shimmer"
+          ],
           "rating": 4.9,
           "reviewsCount": 678,
           "inStock": true,
           "stockQuantity": 28,
           "weight": 80,
-          "labels": ["12 CORES", "ALTA PIGMENTAÇÃO"],
-          "images": ["/images/products/produtos_diversos/IMG-8725.png"]
+          "labels": [
+            "12 CORES",
+            "ALTA PIGMENTAÇÃO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8725.png"
+          ]
         },
         {
           "id": "premium-blush-06",
@@ -3443,21 +3215,31 @@
           "cor": "Rosa Natural 06",
           "volume": "8g",
           "pricing": {
-            "basePrice": 24.50,
+            "basePrice": 24.5,
             "ourPrice": 26.95,
             "discountPrice": 21.56,
             "savings": 5.39,
             "margin": "10%",
             "competitive": "Baseado em blushes premium europeus"
           },
-          "tags": ["natural", "luminoso", "sedoso", "saudável"],
+          "tags": [
+            "natural",
+            "luminoso",
+            "sedoso",
+            "saudável"
+          ],
           "rating": 4.7,
           "reviewsCount": 334,
           "inStock": true,
           "stockQuantity": 46,
           "weight": 35,
-          "labels": ["NATURAL", "LUMINOSO"],
-          "images": ["/images/products/produtos_diversos/IMG-8727.png"]
+          "labels": [
+            "NATURAL",
+            "LUMINOSO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8727.png"
+          ]
         },
         {
           "id": "premium-eyeliner-07",
@@ -3473,21 +3255,31 @@
           "cor": "Preto Precision",
           "volume": "2ml",
           "pricing": {
-            "basePrice": 22.80,
+            "basePrice": 22.8,
             "ourPrice": 25.08,
             "discountPrice": 20.06,
             "savings": 5.02,
             "margin": "10%",
             "competitive": "Baseado em delineadores premium europeus"
           },
-          "tags": ["precisão", "traços perfeitos", "duração", "líquido"],
+          "tags": [
+            "precisão",
+            "traços perfeitos",
+            "duração",
+            "líquido"
+          ],
           "rating": 4.8,
           "reviewsCount": 412,
           "inStock": true,
           "stockQuantity": 55,
           "weight": 20,
-          "labels": ["PRECISION", "TRAÇOS PERFEITOS"],
-          "images": ["/images/products/produtos_diversos/IMG-8733.png"]
+          "labels": [
+            "PRECISION",
+            "TRAÇOS PERFEITOS"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8733.png"
+          ]
         },
         {
           "id": "premium-powder-08",
@@ -3503,21 +3295,31 @@
           "cor": "Translúcido Universal",
           "volume": "10g",
           "pricing": {
-            "basePrice": 26.00,
-            "ourPrice": 28.60,
+            "basePrice": 26,
+            "ourPrice": 28.6,
             "discountPrice": 22.88,
             "savings": 5.72,
             "margin": "10%",
             "competitive": "Baseado em pós premium europeus"
           },
-          "tags": ["translúcido", "fixação", "natural", "universal"],
+          "tags": [
+            "translúcido",
+            "fixação",
+            "natural",
+            "universal"
+          ],
           "rating": 4.6,
           "reviewsCount": 287,
           "inStock": true,
           "stockQuantity": 43,
           "weight": 40,
-          "labels": ["TRANSLÚCIDO", "FIXAÇÃO"],
-          "images": ["/images/products/produtos_diversos/IMG-8734.png"]
+          "labels": [
+            "TRANSLÚCIDO",
+            "FIXAÇÃO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8734.png"
+          ]
         },
         {
           "id": "juliana-teste",
@@ -3532,21 +3334,31 @@
           "finalidade": "Produto de teste Juliana",
           "volume": "1 unidade",
           "pricing": {
-            "basePrice": 1.00,
-            "ourPrice": 1.00,
-            "discountPrice": 1.00,
-            "savings": 0.00,
+            "basePrice": 1,
+            "ourPrice": 1,
+            "discountPrice": 1,
+            "savings": 0,
             "margin": "0%",
             "competitive": "Valor de teste especial"
           },
-          "tags": ["teste", "juliana", "promocional", "especial"],
-          "rating": 5.0,
+          "tags": [
+            "teste",
+            "juliana",
+            "promocional",
+            "especial"
+          ],
+          "rating": 5,
           "reviewsCount": 1,
           "inStock": true,
           "stockQuantity": 999,
           "weight": 10,
-          "labels": ["TESTE", "PROMOCIONAL"],
-          "images": ["/placeholder-product.jpg"]
+          "labels": [
+            "TESTE",
+            "PROMOCIONAL"
+          ],
+          "images": [
+            "/placeholder-product.jpg"
+          ]
         },
         {
           "id": "produto-teste-001",
@@ -3561,21 +3373,31 @@
           "finalidade": "Testar sistema de emails",
           "volume": "Digital",
           "pricing": {
-            "basePrice": 1.00,
-            "ourPrice": 1.00,
-            "discountPrice": 1.00,
-            "savings": 0.00,
+            "basePrice": 1,
+            "ourPrice": 1,
+            "discountPrice": 1,
+            "savings": 0,
             "margin": "0%",
             "competitive": "Valor mínimo para testes"
           },
-          "tags": ["teste", "email", "pagamento", "confirmacao"],
-          "rating": 5.0,
+          "tags": [
+            "teste",
+            "email",
+            "pagamento",
+            "confirmacao"
+          ],
+          "rating": 5,
           "reviewsCount": 1,
           "inStock": true,
           "stockQuantity": 999,
           "weight": 0,
-          "labels": ["TESTE", "EMAIL"],
-          "images": ["/placeholder-product.jpg"]
+          "labels": [
+            "TESTE",
+            "EMAIL"
+          ],
+          "images": [
+            "/placeholder-product.jpg"
+          ]
         },
         {
           "id": "elite-coloracao-premium-11",
@@ -3590,21 +3412,30 @@
           "finalidade": "Coloração premium com cobertura total",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 22.40,
+            "basePrice": 22.4,
             "ourPrice": 24.64,
             "discountPrice": 19.71,
             "savings": 4.93,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["elite", "premium", "cobertura", "professional"],
+          "tags": [
+            "elite",
+            "premium",
+            "cobertura",
+            "professional"
+          ],
           "rating": 4.7,
           "reviewsCount": 195,
           "inStock": true,
           "stockQuantity": 28,
           "weight": 80,
-          "labels": ["ELITE"],
-          "images": ["/images/products/produtos_diversos/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png"]
+          "labels": [
+            "ELITE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png"
+          ]
         },
         {
           "id": "supreme-color-intensive-12",
@@ -3619,21 +3450,30 @@
           "finalidade": "Coloração supreme com proteção UV",
           "volume": "100ml",
           "pricing": {
-            "basePrice": 25.80,
+            "basePrice": 25.8,
             "ourPrice": 28.38,
-            "discountPrice": 22.70,
+            "discountPrice": 22.7,
             "savings": 5.68,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["supreme", "intensive", "proteção uv", "antioxidante"],
+          "tags": [
+            "supreme",
+            "intensive",
+            "proteção uv",
+            "antioxidante"
+          ],
           "rating": 4.8,
           "reviewsCount": 245,
           "inStock": true,
           "stockQuantity": 32,
           "weight": 120,
-          "labels": ["SUPREME"],
-          "images": ["/images/products/produtos_diversos/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png"]
+          "labels": [
+            "SUPREME"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png"
+          ]
         },
         {
           "id": "luxury-color-diamond-13",
@@ -3648,21 +3488,30 @@
           "finalidade": "Coloração luxury com brilho diamante",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 28.90,
+            "basePrice": 28.9,
             "ourPrice": 31.79,
             "discountPrice": 25.43,
             "savings": 6.36,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["luxury", "diamond", "brilho", "premium"],
+          "tags": [
+            "luxury",
+            "diamond",
+            "brilho",
+            "premium"
+          ],
           "rating": 4.9,
           "reviewsCount": 175,
           "inStock": true,
           "stockQuantity": 18,
           "weight": 80,
-          "labels": ["DIAMOND"],
-          "images": ["/images/products/produtos_diversos/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png"]
+          "labels": [
+            "DIAMOND"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png"
+          ]
         },
         {
           "id": "professional-color-platinum-14",
@@ -3677,21 +3526,30 @@
           "finalidade": "Coloração professional com tecnologia anti-fade",
           "volume": "100ml",
           "pricing": {
-            "basePrice": 26.50,
+            "basePrice": 26.5,
             "ourPrice": 29.15,
             "discountPrice": 23.32,
             "savings": 5.83,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["professional", "platinum", "anti-fade", "duradoura"],
+          "tags": [
+            "professional",
+            "platinum",
+            "anti-fade",
+            "duradoura"
+          ],
           "rating": 4.6,
           "reviewsCount": 220,
           "inStock": true,
           "stockQuantity": 25,
           "weight": 120,
-          "labels": ["PLATINUM"],
-          "images": ["/images/products/produtos_diversos/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png"]
+          "labels": [
+            "PLATINUM"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png"
+          ]
         },
         {
           "id": "royal-color-exclusive-15",
@@ -3706,21 +3564,30 @@
           "finalidade": "Coloração royal exclusive para salões premium",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 32.20,
+            "basePrice": 32.2,
             "ourPrice": 35.42,
             "discountPrice": 28.34,
             "savings": 7.08,
             "margin": "10%",
             "competitive": "Baseado em catálogo existente + pesquisa Europa"
           },
-          "tags": ["royal", "exclusive", "luxury", "premium"],
+          "tags": [
+            "royal",
+            "exclusive",
+            "luxury",
+            "premium"
+          ],
           "rating": 4.9,
           "reviewsCount": 155,
           "inStock": true,
           "stockQuantity": 15,
           "weight": 80,
-          "labels": ["ROYAL"],
-          "images": ["/images/products/produtos_diversos/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png"]
+          "labels": [
+            "ROYAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png"
+          ]
         }
       ]
     },
@@ -3744,21 +3611,31 @@
           "finalidade": "Hidratação profunda para cabelos ressecados",
           "volume": "500g",
           "pricing": {
-            "basePrice": 15.00,
-            "ourPrice": 16.50,
-            "discountPrice": 13.20,
-            "savings": 3.30,
+            "basePrice": 15,
+            "ourPrice": 16.5,
+            "discountPrice": 13.2,
+            "savings": 3.3,
             "margin": "10%",
             "competitive": "Estimativa baseada produtos brasileiros premium"
           },
-          "tags": ["hidratação", "extratos naturais", "cabelo ressecado", "brasileiro"],
+          "tags": [
+            "hidratação",
+            "extratos naturais",
+            "cabelo ressecado",
+            "brasileiro"
+          ],
           "rating": 4.6,
           "reviewsCount": 189,
           "inStock": true,
           "stockQuantity": 45,
           "weight": 500,
-          "labels": ["HIDRATAÇÃO", "NATURAL"],
-          "images": ["/images/products/bio_extratus_produtos_/bio_extratus_produtos__1.PNG"]
+          "labels": [
+            "HIDRATAÇÃO",
+            "NATURAL"
+          ],
+          "images": [
+            "/images/products/bio_extratus_produtos_/bio_extratus_produtos__1.PNG"
+          ]
         },
         {
           "id": "premium-hidratacao-intensiva-1",
@@ -3773,21 +3650,31 @@
           "finalidade": "Hidratação profunda e restauração capilar",
           "volume": "300g",
           "pricing": {
-            "basePrice": 18.50,
+            "basePrice": 18.5,
             "ourPrice": 20.35,
             "discountPrice": 16.28,
             "savings": 4.07,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["hidratação", "premium", "restauração", "cabelo seco"],
+          "tags": [
+            "hidratação",
+            "premium",
+            "restauração",
+            "cabelo seco"
+          ],
           "rating": 4.8,
           "reviewsCount": 324,
           "inStock": true,
           "stockQuantity": 42,
           "weight": 300,
-          "labels": ["HIDRATAÇÃO", "PREMIUM"],
-          "images": ["/images/products/produtos_diversos/155-B6-F03-6326-45-F1-B128-C98-F218-F2-A23.png"]
+          "labels": [
+            "HIDRATAÇÃO",
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/155-B6-F03-6326-45-F1-B128-C98-F218-F2-A23.png"
+          ]
         },
         {
           "id": "nutricao-avancada-2",
@@ -3802,21 +3689,31 @@
           "finalidade": "Nutrição profunda e reparação de danos",
           "volume": "250ml",
           "pricing": {
-            "basePrice": 16.80,
+            "basePrice": 16.8,
             "ourPrice": 18.48,
             "discountPrice": 14.78,
-            "savings": 3.70,
+            "savings": 3.7,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["nutrição", "vitaminas", "proteínas", "reparação"],
+          "tags": [
+            "nutrição",
+            "vitaminas",
+            "proteínas",
+            "reparação"
+          ],
           "rating": 4.6,
           "reviewsCount": 287,
           "inStock": true,
           "stockQuantity": 38,
           "weight": 250,
-          "labels": ["NUTRIÇÃO", "REPARAÇÃO"],
-          "images": ["/images/products/produtos_diversos/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"]
+          "labels": [
+            "NUTRIÇÃO",
+            "REPARAÇÃO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"
+          ]
         },
         {
           "id": "reconstrucao-total-3",
@@ -3831,21 +3728,31 @@
           "finalidade": "Reconstrução da fibra capilar",
           "volume": "200ml",
           "pricing": {
-            "basePrice": 22.00,
-            "ourPrice": 24.20,
+            "basePrice": 22,
+            "ourPrice": 24.2,
             "discountPrice": 19.36,
             "savings": 4.84,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["reconstrução", "proteínas", "fibra capilar", "intensivo"],
+          "tags": [
+            "reconstrução",
+            "proteínas",
+            "fibra capilar",
+            "intensivo"
+          ],
           "rating": 4.9,
           "reviewsCount": 456,
           "inStock": true,
           "stockQuantity": 35,
           "weight": 200,
-          "labels": ["RECONSTRUÇÃO", "PROTEICO"],
-          "images": ["/images/products/produtos_diversos/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"]
+          "labels": [
+            "RECONSTRUÇÃO",
+            "PROTEICO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"
+          ]
         },
         {
           "id": "mascara-nutritiva-4",
@@ -3860,21 +3767,31 @@
           "finalidade": "Nutrição natural com óleos essenciais",
           "volume": "500g",
           "pricing": {
-            "basePrice": 19.50,
+            "basePrice": 19.5,
             "ourPrice": 21.45,
             "discountPrice": 17.16,
             "savings": 4.29,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["argan", "karité", "natural", "brilho"],
+          "tags": [
+            "argan",
+            "karité",
+            "natural",
+            "brilho"
+          ],
           "rating": 4.7,
           "reviewsCount": 398,
           "inStock": true,
           "stockQuantity": 44,
           "weight": 500,
-          "labels": ["NATURAL", "BRILHO"],
-          "images": ["/images/products/produtos_diversos/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png"]
+          "labels": [
+            "NATURAL",
+            "BRILHO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png"
+          ]
         },
         {
           "id": "ampola-fortalecimento-5",
@@ -3889,21 +3806,31 @@
           "finalidade": "Fortalecimento e prevenção da quebra",
           "volume": "12ml x 6 ampolas",
           "pricing": {
-            "basePrice": 25.00,
-            "ourPrice": 27.50,
-            "discountPrice": 22.00,
-            "savings": 5.50,
+            "basePrice": 25,
+            "ourPrice": 27.5,
+            "discountPrice": 22,
+            "savings": 5.5,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["fortalecimento", "ampola", "concentrado", "raiz"],
+          "tags": [
+            "fortalecimento",
+            "ampola",
+            "concentrado",
+            "raiz"
+          ],
           "rating": 4.8,
           "reviewsCount": 267,
           "inStock": true,
           "stockQuantity": 28,
           "weight": 100,
-          "labels": ["FORTALECIMENTO", "CONCENTRADO"],
-          "images": ["/images/products/produtos_diversos/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png"]
+          "labels": [
+            "FORTALECIMENTO",
+            "CONCENTRADO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png"
+          ]
         },
         {
           "id": "serum-anti-frizz-6",
@@ -3918,21 +3845,31 @@
           "finalidade": "Controle de frizz e definição",
           "volume": "100ml",
           "pricing": {
-            "basePrice": 14.50,
+            "basePrice": 14.5,
             "ourPrice": 15.95,
             "discountPrice": 12.76,
             "savings": 3.19,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["anti-frizz", "definição", "proteção térmica", "cachos"],
+          "tags": [
+            "anti-frizz",
+            "definição",
+            "proteção térmica",
+            "cachos"
+          ],
           "rating": 4.5,
           "reviewsCount": 189,
           "inStock": true,
           "stockQuantity": 52,
           "weight": 100,
-          "labels": ["ANTI-FRIZZ", "DEFINIÇÃO"],
-          "images": ["/images/products/produtos_diversos/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png"]
+          "labels": [
+            "ANTI-FRIZZ",
+            "DEFINIÇÃO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png"
+          ]
         },
         {
           "id": "oleo-capilar-7",
@@ -3947,21 +3884,31 @@
           "finalidade": "Nutrição vitamínica e brilho",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 17.20,
+            "basePrice": 17.2,
             "ourPrice": 18.92,
             "discountPrice": 15.14,
             "savings": 3.78,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["vitaminas", "óleo", "brilho", "nutrição"],
+          "tags": [
+            "vitaminas",
+            "óleo",
+            "brilho",
+            "nutrição"
+          ],
           "rating": 4.6,
           "reviewsCount": 312,
           "inStock": true,
           "stockQuantity": 41,
           "weight": 60,
-          "labels": ["VITAMÍNICO", "BRILHO"],
-          "images": ["/images/products/produtos_diversos/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"]
+          "labels": [
+            "VITAMÍNICO",
+            "BRILHO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"
+          ]
         },
         {
           "id": "creme-leave-in-8",
@@ -3976,21 +3923,31 @@
           "finalidade": "Proteção solar e térmica",
           "volume": "150ml",
           "pricing": {
-            "basePrice": 13.80,
+            "basePrice": 13.8,
             "ourPrice": 15.18,
             "discountPrice": 12.14,
             "savings": 3.04,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["leave-in", "proteção solar", "proteção térmica", "sem enxágue"],
+          "tags": [
+            "leave-in",
+            "proteção solar",
+            "proteção térmica",
+            "sem enxágue"
+          ],
           "rating": 4.7,
           "reviewsCount": 445,
           "inStock": true,
           "stockQuantity": 59,
           "weight": 150,
-          "labels": ["PROTEÇÃO", "LEAVE-IN"],
-          "images": ["/images/products/produtos_diversos/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png"]
+          "labels": [
+            "PROTEÇÃO",
+            "LEAVE-IN"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png"
+          ]
         },
         {
           "id": "mascara-reparadora-9",
@@ -4005,21 +3962,31 @@
           "finalidade": "Reparação pós-procedimentos químicos",
           "volume": "400g",
           "pricing": {
-            "basePrice": 21.50,
+            "basePrice": 21.5,
             "ourPrice": 23.65,
             "discountPrice": 18.92,
             "savings": 4.73,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["pós-química", "reparação", "alisamento", "relaxamento"],
+          "tags": [
+            "pós-química",
+            "reparação",
+            "alisamento",
+            "relaxamento"
+          ],
           "rating": 4.8,
           "reviewsCount": 378,
           "inStock": true,
           "stockQuantity": 33,
           "weight": 400,
-          "labels": ["PÓS-QUÍMICA", "REPARAÇÃO"],
-          "images": ["/images/products/produtos_diversos/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png"]
+          "labels": [
+            "PÓS-QUÍMICA",
+            "REPARAÇÃO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png"
+          ]
         },
         {
           "id": "tonico-crescimento-10",
@@ -4034,21 +4001,31 @@
           "finalidade": "Estimular crescimento capilar",
           "volume": "120ml",
           "pricing": {
-            "basePrice": 26.00,
-            "ourPrice": 28.60,
+            "basePrice": 26,
+            "ourPrice": 28.6,
             "discountPrice": 22.88,
             "savings": 5.72,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["crescimento", "estimulante", "couro cabeludo", "circulação"],
+          "tags": [
+            "crescimento",
+            "estimulante",
+            "couro cabeludo",
+            "circulação"
+          ],
           "rating": 4.4,
           "reviewsCount": 234,
           "inStock": true,
           "stockQuantity": 27,
           "weight": 120,
-          "labels": ["CRESCIMENTO", "ESTIMULANTE"],
-          "images": ["/images/products/produtos_diversos/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png"]
+          "labels": [
+            "CRESCIMENTO",
+            "ESTIMULANTE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png"
+          ]
         },
         {
           "id": "spray-termoativo-11",
@@ -4063,21 +4040,31 @@
           "finalidade": "Proteção térmica para modelagem",
           "volume": "200ml",
           "pricing": {
-            "basePrice": 15.60,
+            "basePrice": 15.6,
             "ourPrice": 17.16,
             "discountPrice": 13.73,
             "savings": 3.43,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["proteção térmica", "spray", "modelagem", "chapinha"],
+          "tags": [
+            "proteção térmica",
+            "spray",
+            "modelagem",
+            "chapinha"
+          ],
           "rating": 4.6,
           "reviewsCount": 567,
           "inStock": true,
           "stockQuantity": 48,
           "weight": 200,
-          "labels": ["PROTEÇÃO TÉRMICA", "MODELAGEM"],
-          "images": ["/images/products/produtos_diversos/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png"]
+          "labels": [
+            "PROTEÇÃO TÉRMICA",
+            "MODELAGEM"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png"
+          ]
         },
         {
           "id": "condicionador-profundo-12",
@@ -4092,21 +4079,31 @@
           "finalidade": "Condicionamento profundo e restauração",
           "volume": "350ml",
           "pricing": {
-            "basePrice": 16.20,
+            "basePrice": 16.2,
             "ourPrice": 17.82,
             "discountPrice": 14.26,
             "savings": 3.56,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["condicionador", "profundo", "elasticidade", "maciez"],
+          "tags": [
+            "condicionador",
+            "profundo",
+            "elasticidade",
+            "maciez"
+          ],
           "rating": 4.7,
           "reviewsCount": 423,
           "inStock": true,
           "stockQuantity": 56,
           "weight": 350,
-          "labels": ["PROFUNDO", "RESTAURADOR"],
-          "images": ["/images/products/produtos_diversos/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png"]
+          "labels": [
+            "PROFUNDO",
+            "RESTAURADOR"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png"
+          ]
         },
         {
           "id": "serum-antiqueda-13",
@@ -4121,21 +4118,31 @@
           "finalidade": "Prevenção de queda e fortalecimento",
           "volume": "50ml",
           "pricing": {
-            "basePrice": 28.50,
+            "basePrice": 28.5,
             "ourPrice": 31.35,
             "discountPrice": 25.08,
             "savings": 6.27,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["antiqueda", "fortalecedor", "raiz", "crescimento"],
+          "tags": [
+            "antiqueda",
+            "fortalecedor",
+            "raiz",
+            "crescimento"
+          ],
           "rating": 4.9,
           "reviewsCount": 689,
           "inStock": true,
           "stockQuantity": 22,
           "weight": 50,
-          "labels": ["ANTIQUEDA", "FORTALECEDOR"],
-          "images": ["/images/products/produtos_diversos/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"]
+          "labels": [
+            "ANTIQUEDA",
+            "FORTALECEDOR"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"
+          ]
         },
         {
           "id": "mascara-detox-14",
@@ -4150,21 +4157,31 @@
           "finalidade": "Detox e purificação capilar",
           "volume": "250g",
           "pricing": {
-            "basePrice": 18.80,
+            "basePrice": 18.8,
             "ourPrice": 20.68,
             "discountPrice": 16.54,
             "savings": 4.14,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["detox", "purificante", "limpeza", "leveza"],
+          "tags": [
+            "detox",
+            "purificante",
+            "limpeza",
+            "leveza"
+          ],
           "rating": 4.5,
           "reviewsCount": 356,
           "inStock": true,
           "stockQuantity": 39,
           "weight": 250,
-          "labels": ["DETOX", "PURIFICANTE"],
-          "images": ["/images/products/produtos_diversos/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png"]
+          "labels": [
+            "DETOX",
+            "PURIFICANTE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png"
+          ]
         },
         {
           "id": "ampola-shock-15",
@@ -4179,21 +4196,31 @@
           "finalidade": "Reconstrução imediata de emergência",
           "volume": "15ml x 4 ampolas",
           "pricing": {
-            "basePrice": 32.00,
-            "ourPrice": 35.20,
+            "basePrice": 32,
+            "ourPrice": 35.2,
             "discountPrice": 28.16,
             "savings": 7.04,
             "margin": "10%",
             "competitive": "Baseado em tratamentos premium europeus"
           },
-          "tags": ["shock", "reconstrução", "emergência", "imediato"],
+          "tags": [
+            "shock",
+            "reconstrução",
+            "emergência",
+            "imediato"
+          ],
           "rating": 4.8,
           "reviewsCount": 445,
           "inStock": true,
           "stockQuantity": 18,
           "weight": 80,
-          "labels": ["SHOCK", "EMERGÊNCIA"],
-          "images": ["/images/products/produtos_diversos/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png"]
+          "labels": [
+            "SHOCK",
+            "EMERGÊNCIA"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png"
+          ]
         }
       ]
     }

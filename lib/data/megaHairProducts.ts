@@ -681,207 +681,297 @@ export function getLegacyCompatibleProducts() {
     // LISOS (1A-2A)
     {
       id: 1,
-      name: 'Mega Hair Liso 1A Ruivo Alaranjado',
+      name: 'Mega Hair Liso 1A Ruivo Alaranjado Premium',
       type: 'liso' as const,
       color: 'ruivo' as const,
       baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Alaranjado_acesso.jpg',
       basePrice: 70.00,
-      description: 'Mega hair liso tipo 1A ruivo alaranjado vibrante. Cabelo escorrido sem volume, cor intensa e moderna.',
+      description: 'Mega hair liso tipo 1A ruivo alaranjado vibrante profissional. Cabelo 100% humano brasileiro escorrido sem volume, cor intensa e moderna com pigmentação natural duradoura. Ideal para transformações ousadas e looks únicos.',
+      technicalSpecs: 'Cabelo brasileiro 100% humano virgem, tipo 1A liso natural, cor alaranjada intensa, densidade 90-100 fios/cm², resistência térmica até 160°C, comprimento padrão 50cm',
+      applicationGuide: 'Aplicação recomendada por profissional especializado. Técnica de costura ou mega hair com tela. Preparar o cabelo natural com lavagem prévia.',
+      careInstructions: 'Usar shampoo e condicionador sem sulfatos. Evitar produtos com álcool. Pentear sempre de baixo para cima. Hidratar semanalmente com produtos específicos para cabelos coloridos.',
+      compatibility: 'Ideal para cabelos castanhos e pretos que desejam um contraste vibrante. Combina perfeitamente com tons quentes de pele.',
       rating: 4.6,
-      reviews: 89
+      reviews: 89,
+      badge: 'EXCLUSIVO'
     },
     {
       id: 2,
-      name: 'Mega Hair Liso 1A Grisalho Acinzentado',
+      name: 'Mega Hair Liso 1A Grisalho Acinzentado Elegance',
       type: 'liso' as const,
       color: 'grisalho' as const,
       baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Grisalho_acinzentado.jpg',
       basePrice: 80.00,
-      description: 'Mega hair liso tipo 1A grisalho acinzentado elegante. Perfeito para assumir os fios brancos com sofisticação.',
+      description: 'Mega hair liso tipo 1A grisalho acinzentado elegante premium. Cabelo 100% humano europeu com transição natural para o grisalho. Perfeito para assumir os fios brancos com máxima sofisticação e classe.',
+      technicalSpecs: 'Cabelo europeu 100% humano premium, tipo 1A liso natural, cor grisalha acinzentada uniforme, densidade 110-120 fios/cm², resistência térmica até 180°C, tratamento anti-amarelamento',
+      applicationGuide: 'Aplicação profissional recomendada. Ideal para técnica de costura fina. Combinar tons com cabelo natural existente para transição harmoniosa.',
+      careInstructions: 'Usar produtos específicos para cabelos grisalhos. Shampoo matizador quinzenal. Evitar exposição solar excessiva. Hidratação profunda mensal obrigatória.',
+      compatibility: 'Perfeito para transição natural do grisalho. Ideal para mulheres maduras que desejam elegância e autenticidade.',
       rating: 4.8,
-      reviews: 156
+      reviews: 156,
+      badge: 'PREMIUM'
     },
     {
       id: 3,
-      name: 'Mega Hair Liso 1A Grisalho Mix Preto',
+      name: 'Mega Hair Liso 1A Grisalho Mix Preto Transição',
       type: 'liso' as const,
       color: 'grisalho' as const,
       baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Grisalho_em_40_com_fundo_de_cor_preto_natural.jpg',
       basePrice: 85.00,
-      description: 'Mega hair liso tipo 1A grisalho 40% com fundo preto natural. Transição perfeita para cabelos em processo de grisalho.',
+      description: 'Mega hair liso tipo 1A grisalho 40% com fundo preto natural premium. Cabelo 100% humano brasileiro com mistura autêntica de fios grisalhos e pretos. Transição perfeita para cabelos em processo natural de grisalho.',
+      technicalSpecs: 'Cabelo brasileiro 100% humano selecionado, tipo 1A liso natural, 40% fios grisalhos + 60% preto natural, densidade balanceada 100-110 fios/cm², resistência superior',
+      applicationGuide: 'Aplicação por especialista em transição capilar. Misturar estrategicamente com cabelo natural para resultado harmonioso. Técnica de costura ou nano link recomendada.',
+      careInstructions: 'Rotina de cuidados dupla: produtos para cabelo preto e grisalho. Shampoo matizador mensal. Hidratação alternada semanal.',
+      compatibility: 'Ideal para mulheres em transição capilar natural. Perfeito para quem quer aceitar o grisalho gradualmente.',
       rating: 4.7,
-      reviews: 134
+      reviews: 134,
+      badge: 'NATURAL'
     },
     {
       id: 4,
-      name: 'Mega Hair Liso 1A Loiro Acobreado',
+      name: 'Mega Hair Liso 1A Loiro Acobreado Luxury',
       type: 'liso' as const,
       color: 'loiro' as const,
       baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Loiro_levemente_acobreado.jpg',
       basePrice: 95.00,
-      description: 'Mega hair liso tipo 1A loiro levemente acobreado premium. Tom dourado sutil e sofisticado.',
+      description: 'Mega hair liso tipo 1A loiro levemente acobreado luxury premium. Cabelo 100% humano europeu com reflexos acobreados naturais. Tom dourado sutil e sofisticado com brilho diamante incomparável.',
+      technicalSpecs: 'Cabelo europeu 100% humano Remy premium, tipo 1A liso sedoso, loiro acobreado natural #27/30, densidade 115-125 fios/cm², cutículas alinhadas, brilho natural intenso',
+      applicationGuide: 'Aplicação profissional Master Class obrigatória. Técnica de costura ultrafina ou mega hair invisível. Colorimetria prévia recomendada para harmonização.',
+      careInstructions: 'Produtos luxury para loiros. Shampoo e condicionador sem sulfatos. Máscara matizadora quinzenal. Protetor térmico sempre. Óleo reparador nas pontas.',
+      compatibility: 'Ideal para peles quentes e douradas. Combina com olhos mel, verdes e castanhos. Perfeito para looks sofisticados e elegantes.',
       rating: 4.9,
-      reviews: 203
+      reviews: 203,
+      badge: 'LUXO'
     },
     {
       id: 5,
-      name: 'Mega Hair Liso 1A Loiro Platinado',
+      name: 'Mega Hair Liso 1A Loiro Platinado Diamond',
       type: 'liso' as const,
       color: 'loiro' as const,
       baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Loiro_platinado.jpg',
       basePrice: 120.00,
-      description: 'Mega hair liso tipo 1A loiro platinado luxury. Tom ultra claro cristalino, máximo impacto visual.',
+      description: 'Mega hair liso tipo 1A loiro platinado diamond ultra premium. Cabelo 100% humano europeu com descoloração profissional. Tom ultra claro cristalino #613 com máximo impacto visual e brilho espelhado.',
+      technicalSpecs: 'Cabelo europeu 100% humano virgin premium, tipo 1A sedoso, loiro platinado #613 ultra claro, densidade máxima 120-130 fios/cm², processo de descoloração controlada, cuticulas seladas',
+      applicationGuide: 'Aplicação exclusiva por Master Colorist. Avaliação capilar obrigatória. Técnica de aplicação gradual recomendada. Teste de mecha prévia essencial.',
+      careInstructions: 'Linha platinum completa obrigatória. Shampoo purple diário. Condicionador reparador intensivo. Cronograma capilar semanal. Proteção UV sempre.',
+      compatibility: 'Ideal para peles frias e rosadas. Combina com olhos azuis, verdes claros e cinzas. Máximo impacto fashion e editorial.',
       rating: 4.8,
-      reviews: 178
+      reviews: 178,
+      badge: 'DIAMOND'
     },
     {
       id: 6,
-      name: 'Mega Hair Liso 1A Preto Natural',
+      name: 'Mega Hair Liso 1A Preto Natural Brasileiro',
       type: 'liso' as const,
       color: 'preto' as const,
       baseImage: '/images/mega-hair-real/Cabelo_1A_Liso_escorrido_sem_volume._Preto_natural.jpg',
       basePrice: 90.00,
-      description: 'Mega hair liso tipo 1A preto natural brasileiro premium. Brilho intenso, cor sólida profunda.',
+      description: 'Mega hair liso tipo 1A preto natural brasileiro premium autêntico. Cabelo 100% humano virgem com brilho intenso e cor sólida profunda. Qualidade superior reconhecida mundialmente.',
+      technicalSpecs: 'Cabelo brasileiro 100% humano virgem premium, tipo 1A liso natural, preto intenso #1B, densidade 110-120 fios/cm², sem processamento químico, resistência máxima natural',
+      applicationGuide: 'Aplicação versátil para todos os métodos. Ideal para costura tradicional, tela ou fita adesiva. Base perfeita para futuras colorações e técnicas de iluminação.',
+      careInstructions: 'Cuidados básicos com produtos de qualidade. Shampoo e condicionador hidratantes. Pode ser escovado, alisado e modelado livremente. Óleo capilar para brilho extra.',
+      compatibility: 'Universal - combina com todos os tons de pele e estilos. Base ideal para mechas, luzes e colorações futuras. Clássico atemporal.',
       rating: 4.9,
-      reviews: 245
+      reviews: 245,
+      badge: 'BEST SELLER'
     },
     {
       id: 7,
-      name: 'Mega Hair Liso 2A Castanho Chocolate',
+      name: 'Mega Hair Liso 2A Castanho Chocolate Premium',
       type: 'liso' as const,
       color: 'castanho' as const,
       baseImage: '/images/mega-hair-real/Cabelo_2A_-_Liso_com_um_pouco_de_volume._Marrom_ou_chocolate.jpg',
       basePrice: 100.00,
-      description: 'Mega hair liso tipo 2A castanho chocolate com leve volume. Tom marrom rico e natural.',
+      description: 'Mega hair liso tipo 2A castanho chocolate premium com corpo natural. Cabelo 100% humano brasileiro com leve volume e movimento. Tom marrom rico e natural com reflexos dourados sutis.',
+      technicalSpecs: 'Cabelo brasileiro 100% humano premium, tipo 2A liso com corpo, castanho chocolate #4, densidade média 100-110 fios/cm², volume natural balanceado, movimento fluido',
+      applicationGuide: 'Aplicação respeitando o movimento natural. Técnica de costura em camadas para resultado volumoso. Misturar com cabelo natural para integração perfeita.',
+      careInstructions: 'Produtos para cabelos com corpo. Mousse volumizador para realçar movimento. Secagem com difusor recomendada. Evitar alisamento excessivo para manter naturalidade.',
+      compatibility: 'Ideal para quem busca volume natural. Combina com peles morenas e bronzeadas. Perfeito para looks naturais e despojados.',
       rating: 4.7,
-      reviews: 167
+      reviews: 167,
+      badge: 'NATURAL'
     },
     {
       id: 8,
-      name: 'Mega Hair Liso 2A Preto Natural Premium',
+      name: 'Mega Hair Liso 2A Preto Natural Master Class',
       type: 'liso' as const,
       color: 'preto' as const,
       baseImage: '/images/mega-hair-real/Cabelo_2A_-_Liso_com_um_pouco_de_volume._Preto_natural.jpg',
       basePrice: 105.00,
-      description: 'Mega hair liso tipo 2A preto natural com volume sutil. Densidade premium brasileira.',
+      description: 'Mega hair liso tipo 2A preto natural master class com volume sutil premium. Cabelo 100% humano brasileiro selecionado com densidade superior e corpo natural. Nossa melhor qualidade em cabelo preto.',
+      technicalSpecs: 'Cabelo brasileiro 100% humano master class, tipo 2A liso com volume, preto natural intenso #1, densidade premium 115-125 fios/cm², seleção rigorosa, qualidade AAA',
+      applicationGuide: 'Aplicação master class por profissional certificado. Técnica de camadas para volume estratégico. Resultado natural com densidade superior garantida.',
+      careInstructions: 'Linha premium para cabelos de luxo. Cronograma capilar profissional. Pode receber qualquer tratamento químico. Resistência máxima garantida.',
+      compatibility: 'Produto universal premium. Ideal para todas as ocasiões e estilos. Base perfeita para qualquer transformação futura.',
       rating: 5.0,
-      reviews: 298
+      reviews: 298,
+      badge: 'MASTER CLASS'
     },
 
     // ONDULADOS (2C-3A)
     {
       id: 9,
-      name: 'Mega Hair Ondulado 2C Preto Natural',
+      name: 'Mega Hair Ondulado 2C Preto Natural Movimento',
       type: 'ondulado' as const,
       color: 'preto' as const,
       baseImage: '/images/mega-hair-real/Cabelo_2C_Ondas_fortes_quase_cachos._Preto_natural.jpg',
       basePrice: 85.00,
-      description: 'Mega hair ondulado tipo 2C preto natural com ondas fortes quase cachos. Movimento natural intenso.',
+      description: 'Mega hair ondulado tipo 2C preto natural com movimento intenso. Cabelo 100% humano brasileiro com ondas fortes quase cachos. Transição natural entre liso e cacheado com volume e definição perfeitos.',
+      technicalSpecs: 'Cabelo brasileiro 100% humano natural, tipo 2C ondulado marcante, preto intenso #1, padrão de onda definido, densidade 95-105 fios/cm², elasticidade natural superior',
+      applicationGuide: 'Aplicação respeitando o padrão natural das ondas. Técnica de costura em camadas onduladas. Não esticar durante aplicação para manter o movimento natural.',
+      careInstructions: 'Produtos específicos para cabelos ondulados. Creme para pentear sem álcool. Secar com difusor ou natural. Não escove seco - use dedos ou pente de dentes largos.',
+      compatibility: 'Ideal para quem tem cabelo natural ondulado ou deseja movimento sem compromisso. Combina com estilos despojados e naturais.',
       rating: 4.8,
-      reviews: 187
+      reviews: 187,
+      badge: 'MOVIMENTO'
     },
     {
       id: 10,
-      name: 'Mega Hair Ondulado 3A Preto Natural',
+      name: 'Mega Hair Ondulado 3A Preto Natural Autêntico',
       type: 'ondulado' as const,
       color: 'preto' as const,
       baseImage: '/images/mega-hair-real/Cabelo_3A_-_Ondas_mais_marcadas_tendencia_a_frizz._Preto_natural.jpg',
       basePrice: 90.00,
-      description: 'Mega hair ondulado tipo 3A preto natural com ondas marcadas e tendência ao frizz. Textura autêntica brasileira.',
+      description: 'Mega hair ondulado tipo 3A preto natural autêntico brasileiro. Cabelo 100% humano com ondas marcadas e tendência natural ao frizz. Textura autêntica brasileira com personalidade e movimento único.',
+      technicalSpecs: 'Cabelo brasileiro 100% humano autêntico, tipo 3A ondulado definido, preto natural #1, ondas em formato S, tendência natural ao frizz, densidade 90-100 fios/cm²',
+      applicationGuide: 'Aplicação por especialista em cabelos texturizados. Técnica que preserva o padrão natural. Não tentar alisar ou modificar a textura durante aplicação.',
+      careInstructions: 'Rotina NooPoo (sem sulfatos). Condicionador leave-in obrigatório. Óleos naturais para controle do frizz. Finalização com creme de pentear específico.',
+      compatibility: 'Perfeito para quem tem cabelo natural ondulado ou cacheado. Ideal para looks naturais, praiais e autênticos. Abraça a textura natural brasileira.',
       rating: 4.6,
-      reviews: 145
+      reviews: 145,
+      badge: 'AUTÊNTICO'
     },
 
     // CACHEADOS (3C)
     {
       id: 11,
-      name: 'Mega Hair Cacheado 3C Preto Natural',
+      name: 'Mega Hair Cacheado 3C Preto Natural Definição',
       type: 'cacheado' as const,
       color: 'preto' as const,
       baseImage: '/images/mega-hair-real/Cabelo_3C_Cachos_pequenos_e_bem_fechados._Preto.jpg',
       basePrice: 95.00,
-      description: 'Mega hair cacheado tipo 3C preto natural com cachos pequenos fechados. Volume natural intenso.',
+      description: 'Mega hair cacheado tipo 3C preto natural com definição máxima. Cabelo 100% humano brasileiro com cachos pequenos bem fechados. Volume natural intenso e formato perfeito para looks afro-brasileiros.',
+      technicalSpecs: 'Cabelo brasileiro 100% humano cacheado, tipo 3C cachos fechados, preto profundo #1, cachos em espiral pequena, alta elasticidade, densidade 85-95 fios/cm²',
+      applicationGuide: 'Aplicação exclusiva por especialista em cabelos cacheados. Técnica específica que mantém a integridade dos cachos. Aplicação em camadas para volume estratégico.',
+      careInstructions: 'Método Curly Girl obrigatório. Produtos sem sulfatos, parabenos ou álcool. Finalização com gelatina ou creme para cachos. Nunca escove seco.',
+      compatibility: 'Ideal para quem tem cachos naturais 3B/3C ou deseja volume e definição autênticos. Perfeito para valorizar a beleza afro-brasileira.',
       rating: 4.8,
-      reviews: 198
+      reviews: 198,
+      badge: 'DEFINIÇÃO'
     },
     {
       id: 12,
-      name: 'Mega Hair Cacheado 3C Castanho Médio',
+      name: 'Mega Hair Cacheado 3C Castanho Médio Premium',
       type: 'cacheado' as const,
       color: 'castanho' as const,
       baseImage: '/images/mega-hair-real/Cabelo_3C_Cachos_pequenos_e_bem_fechados._Castanho_medio.jpg',
       basePrice: 100.00,
-      description: 'Mega hair cacheado tipo 3C castanho médio com cachos pequenos bem fechados. Definição perfeita natural.',
+      description: 'Mega hair cacheado tipo 3C castanho médio premium com definição natural perfeita. Cabelo 100% humano brasileiro com cachos pequenos bem fechados em tom castanho médio único e sofisticado.',
+      technicalSpecs: 'Cabelo brasileiro 100% humano premium, tipo 3C cachos definidos, castanho médio #4, reflexos naturais dourados, cachos uniformes, densidade balanceada 90-100 fios/cm²',
+      applicationGuide: 'Aplicação master por especialista em texturas cacheadas. Respeitar o padrão natural dos cachos. Aplicação em seções pequenas para resultado harmonioso.',
+      careInstructions: 'Cronograma capilar específico para cachos coloridos. Hidratação semanal intensiva. Produtos sem sulfatos. Finalização com ativador de cachos premium.',
+      compatibility: 'Ideal para peles morenas e douradas. Combina com olhos castanhos e mel. Perfeito para looks sofisticados mantendo naturalidade.',
       rating: 4.7,
-      reviews: 167
+      reviews: 167,
+      badge: 'PREMIUM'
     },
     {
       id: 13,
-      name: 'Mega Hair Cacheado 3C Ruivo Intenso',
+      name: 'Mega Hair Cacheado 3C Ruivo Intenso Exclusivo',
       type: 'cacheado' as const,
       color: 'ruivo' as const,
       baseImage: '/images/mega-hair-real/Cabelo_3C_Cachos_pequenos_e_bem_fechados._Ruivo_arregalado.jpg',
       basePrice: 120.00,
-      description: 'Mega hair cacheado tipo 3C ruivo arregalado vibrante. Cor intensa única com cachos bem definidos.',
+      description: 'Mega hair cacheado tipo 3C ruivo intenso exclusivo. Cabelo 100% humano europeu com coloração ruiva arregalada vibrante. Cor intensa única combinada com cachos perfeitamente definidos - raridade absoluta no mercado.',
+      technicalSpecs: 'Cabelo europeu 100% humano raro, tipo 3C cachos fechados, ruivo intenso natural #350, pigmentação profunda duradoura, cachos em espiral perfeita, densidade especial 85-95 fios/cm²',
+      applicationGuide: 'Produto ultra exclusivo - aplicação apenas por Master Colorist especializado. Avaliação prévia obrigatória. Técnica de aplicação gradual para impacto máximo.',
+      careInstructions: 'Linha exclusiva para ruivos cacheados. Produtos sem sulfatos com proteção UV. Cronograma capilar intensivo. Retoque de cor a cada 6-8 semanas.',
+      compatibility: 'Para personalidades marcantes e únicas. Combina com peles claras e sardas. Máximo impacto visual - produto de colecionador.',
       rating: 4.9,
-      reviews: 123
+      reviews: 123,
+      badge: 'ULTRA RARO'
     },
     {
       id: 14,
-      name: 'Mega Hair Cacheado 3C Borgonha Luxury',
+      name: 'Mega Hair Cacheado 3C Borgonha Luxury Exclusivo',
       type: 'cacheado' as const,
       color: 'ruivo' as const,
       baseImage: '/images/mega-hair-real/Cabelo_3C_Cachos_pequenos_e_bem_fechados._Vermelho_borgonha.jpg',
       basePrice: 130.00,
-      description: 'Mega hair cacheado tipo 3C vermelho borgonha luxury. Tom vinho sofisticado com cachos perfeitos.',
+      description: 'Mega hair cacheado tipo 3C vermelho borgonha luxury exclusivo. Cabelo 100% humano europeu premium com coloração borgonha sofisticada. Tom vinho profundo e elegante combinado com cachos perfeitos - peça de arte capilar.',
+      technicalSpecs: 'Cabelo europeu 100% humano luxury, tipo 3C cachos perfeitos, vermelho borgonha #99J, coloração profissional multicamadas, cachos uniformes premium, densidade luxury 90-100 fios/cm²',
+      applicationGuide: 'Aplicação master class exclusiva. Produto para colecionadores e occasions especiais. Técnica artística de aplicação para resultado impactante.',
+      careInstructions: 'Linha luxury completa obrigatória. Proteção UV intensiva. Cronograma capilar profissional. Manutenção em salão especializado.',
+      compatibility: 'Para mulheres sofisticadas e elegantes. Combina com peles morenas e douradas. Ideal para eventos especiais e looks de impacto.',
       rating: 5.0,
-      reviews: 156
+      reviews: 156,
+      badge: 'OBRA DE ARTE'
     },
 
     // CRESPOS (4A-4C)
     {
       id: 15,
-      name: 'Mega Hair Crespo 4A Preto Mechas Caramelo',
+      name: 'Mega Hair Crespo 4A Preto Mechas Caramelo Ombré',
       type: 'crespo' as const,
       color: 'ombre' as const,
       baseImage: '/images/mega-hair-real/Cabelo_4A_Cachinhos_bem_pequenos_em_forma_de_molinha_bem_fechadas._Preto_com_mechas_carameladas_que_se_misturam_com_o_preto.jpg',
       basePrice: 110.00,
-      description: 'Mega hair crespo tipo 4A preto com mechas carameladas que se misturam naturalmente. Cachinhos pequenos em forma de molinha.',
+      description: 'Mega hair crespo tipo 4A preto com mechas carameladas ombré natural. Cabelo 100% humano brasileiro com cachinhos pequenos em forma de molinha que se misturam harmoniosamente com tons caramelo. Transição de cores natural e sofisticada.',
+      technicalSpecs: 'Cabelo brasileiro 100% humano afro-autêntico, tipo 4A cachinhos molinha, base preta #1 com mechas caramelo #27/30, ombré natural, densidade 80-90 fios/cm², elasticidade máxima',
+      applicationGuide: 'Aplicação exclusiva por especialista em cabelos afro-texturizados. Técnica de aplicação que respeita o padrão natural dos cachinhos. Mistura estratégica para resultado harmonioso.',
+      careInstructions: 'Método LOC (Leave-in, Oil, Cream) obrigatório. Produtos específicos para cabelos crespos e coloridos. Finalização com creme para cachos e óleo selante.',
+      compatibility: 'Perfeito para transição capilar e valorização da textura afro. Ideal para quem busca cores sem comprometer a autenticidade.',
       rating: 4.9,
-      reviews: 189
+      reviews: 189,
+      badge: 'AFRO AUTÊNTICO'
     },
     {
       id: 16,
-      name: 'Mega Hair Crespo 4A Ombré Dourado',
+      name: 'Mega Hair Crespo 4A Ombré Dourado Luxury',
       type: 'crespo' as const,
       color: 'ombre' as const,
       baseImage: '/images/mega-hair-real/Cabelo-_4A_Cachos_muito_fechados_em_forma_de_S_miudo._Cor_raiz_preta_e_um_degrade_dourado_em_toda_o_seu_comprometimento.jpg',
       basePrice: 125.00,
-      description: 'Mega hair crespo tipo 4A com raiz preta e degradê dourado completo. Cachos fechados em "S" miúdo.',
+      description: 'Mega hair crespo tipo 4A ombré dourado luxury premium. Cabelo 100% humano brasileiro com raiz preta e degradê dourado em todo comprimento. Cachos fechados em "S" miúdo com transição de cores espetacular.',
+      technicalSpecs: 'Cabelo brasileiro 100% humano luxury, tipo 4A cachos em S miúdo, raiz preta #1 com degradê dourado #27, ombré profissional completo, densidade premium 85-95 fios/cm²',
+      applicationGuide: 'Aplicação master class por colorista especializado em texturas afro. Técnica de aplicação em camadas para valorizar o degradê. Resultado de impacto garantido.',
+      careInstructions: 'Cronograma capilar intensivo para cabelos crespos e coloridos. Produtos sem sulfatos. Hidratação bi-semanal. Proteção térmica e UV obrigatória.',
+      compatibility: 'Para mulheres que desejam ousadia mantendo a autenticidade afro. Combina com todos os tons de pele. Look de alta costura.',
       rating: 4.8,
-      reviews: 167
+      reviews: 167,
+      badge: 'HIGH FASHION'
     },
     {
       id: 17,
-      name: 'Mega Hair Crespo 4B Preto Natural',
+      name: 'Mega Hair Crespo 4B Preto Natural Afro Power',
       type: 'crespo' as const,
       color: 'preto' as const,
       baseImage: '/images/mega-hair-real/Cabelo_4B_Curvatura_em_Z_menos_definicao_mais_volume._Preto_natural.jpg',
       basePrice: 100.00,
-      description: 'Mega hair crespo tipo 4B preto natural com curvatura em "Z", menos definição e mais volume. Textura autêntica africana.',
+      description: 'Mega hair crespo tipo 4B preto natural afro power autêntico. Cabelo 100% humano africano com curvatura em "Z" característica, menos definição e máximo volume natural. Textura autêntica que celebra a beleza afro original.',
+      technicalSpecs: 'Cabelo afro-brasileiro 100% humano autêntico, tipo 4B curvatura Z, preto profundo #1, padrão irregular natural, volume máximo, densidade especial 75-85 fios/cm²',
+      applicationGuide: 'Aplicação por especialista em cabelos afro-texturizados. Técnica que maximiza volume natural. Respeitar a irregularidade natural do padrão - é isso que torna único.',
+      careInstructions: 'Cuidados afro especializados. Hidratação intensiva diária. Óleos naturais (coco, rícino, jojoba). Método pineapple para dormir. Nunca escove ou penteie seco.',
+      compatibility: 'Para celebrar a beleza afro natural. Ideal para big chop, transição capilar e afirmação de identidade. Volume e atitude garantidos.',
       rating: 4.7,
-      reviews: 203
+      reviews: 203,
+      badge: 'AFRO POWER'
     },
     {
       id: 18,
-      name: 'Mega Hair Crespo 4C Preto Natural',
+      name: 'Mega Hair Crespo 4C Preto Natural Rainha Africana',
       type: 'crespo' as const,
       color: 'preto' as const,
       baseImage: '/images/mega-hair-real/Cabelo_4C_Extremamente_crespo_fios_bem_encolhidos_pouca_definicao_natural._Preto_natural.jpg',
       basePrice: 115.00,
-      description: 'Mega hair crespo tipo 4C preto natural extremamente crespo, fios bem encolhidos com pouca definição natural.',
+      description: 'Mega hair crespo tipo 4C preto natural rainha africana premium. Cabelo 100% humano afro-autêntico extremamente crespo com fios bem encolhidos e textura natural única. Representa a máxima expressão da beleza afro ancestral.',
+      technicalSpecs: 'Cabelo afro-brasileiro 100% humano premium, tipo 4C extremamente crespo, preto intenso #1, fios encolhidos naturalmente, textura irregular autêntica, densidade concentrada 70-80 fios/cm²',
+      applicationGuide: 'Aplicação master por especialista em cabelos tipo 4C. Técnica ultra especializada que respeita o encolhimento natural. Produto para conhecedoras da beleza afro.',
+      careInstructions: 'Regime de cuidados afro intensivo. Hidratação diária obrigatória. Método LOC religiosamente. Óleos pesados (rícino, murumuru). Manipulação mínima.',
+      compatibility: 'Para rainhas que celebram a máxima autenticidade afro. Ideal para coroa afro, twist outs e protective styles. Beleza ancestral garantida.',
       rating: 4.6,
-      reviews: 178
+      reviews: 178,
+      badge: 'ANCESTRAL'
     }
   ];
 
@@ -901,10 +991,17 @@ export function getLegacyCompatibleProducts() {
       originalPrice: Math.round(hairType.basePrice * 1.3), // 30% desconto
       image: hairType.baseImage, // Usar a imagem real diretamente
       description: hairType.description,
+      technicalSpecs: hairType.technicalSpecs,
+      applicationGuide: hairType.applicationGuide,
+      careInstructions: hairType.careInstructions,
+      compatibility: hairType.compatibility,
       rating: hairType.rating,
       reviews: hairType.reviews,
+      badge: hairType.badge,
       inStock: true,
-      isNew: index < 8 // Primeiros 8 produtos marcados como novos
+      isNew: index < 8, // Primeiros 8 produtos marcados como novos
+      origin: 'Brasil',
+      weight: 100 // Peso padrão em gramas
     });
   });
 

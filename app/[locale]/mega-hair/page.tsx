@@ -8,6 +8,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { getLegacyCompatibleProducts } from '../../../lib/data/megaHairProducts';
 import { useCart } from '../../../lib/stores/cartStore';
 import { CategorySchema } from '@/components/seo/SchemaMarkup';
+import OptimizedMegaHairImage, { useMegaHairImagePreload } from '@/components/mega-hair/OptimizedMegaHairImage';
+import HairTypeSection from '@/components/mega-hair/HairTypeSection';
+import CollectionSection from '@/components/mega-hair/CollectionSection';
 
 // Enhanced product data structure (mantém compatibilidade)
 interface MegaHairProduct {
@@ -49,6 +52,8 @@ interface Filters {
   color: string;
   length: string;
   priceRange: string;
+  collection: string;
+  badge: string;
   inStock: boolean;
 }
 
@@ -57,6 +62,20 @@ export default function MegaHairCatalog() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState<MegaHairProduct | null>(null);
   const [showFilters, setShowFilters] = useState(true);
+  const [viewMode, setViewMode] = useState<'grid' | 'categories' | 'collections'>('categories');
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
+    liso: true,
+    ondulado: false,
+    cacheado: false,
+    crespo: false
+  });
+  const [expandedCollections, setExpandedCollections] = useState<Record<string, boolean>>({
+    CLASSIC: true,
+    PREMIUM: false,
+    GOLD: false,
+    RAPUNZEL: false,
+    PROFESSIONAL: false
+  });
   const { addItem: addToCartStore, getItemCount, openCart, items } = useCart();
   const [isClient, setIsClient] = useState(false);
 
@@ -66,11 +85,20 @@ export default function MegaHairCatalog() {
     color: 'todos',
     length: 'todos',
     priceRange: 'todos',
+    collection: 'todos',
+    badge: 'todos',
     inStock: false
   });
 
   // Generate products once usando sistema unificado
   const allProducts = useMemo(() => generateProducts(), []);
+
+  // Preload das primeiras imagens críticas
+  const criticalImages = useMemo(() =>
+    allProducts.slice(0, 6).map(p => p.image).filter(Boolean),
+    [allProducts]
+  );
+  useMegaHairImagePreload(criticalImages, 6);
 
   // Filter products based on current filters
   const filteredProducts = useMemo(() => {
@@ -95,12 +123,131 @@ export default function MegaHairCatalog() {
         }
       });
     }
+    if (filters.collection !== 'todos') {
+      filtered = filtered.filter(p => {
+        // Determinar coleção baseada no preço se não estiver definida
+        let collection = p.collection || 'CLASSIC';
+        if (!p.collection) {
+          if (p.price < 80) collection = 'CLASSIC';
+          else if (p.price < 130) collection = 'PREMIUM';
+          else if (p.price < 180) collection = 'GOLD';
+          else if (p.price < 220) collection = 'RAPUNZEL';
+          else collection = 'PROFESSIONAL';
+        }
+        return collection === filters.collection;
+      });
+    }
+    if (filters.badge !== 'todos') {
+      filtered = filtered.filter(p => p.badge === filters.badge);
+    }
     if (filters.inStock) {
       filtered = filtered.filter(p => p.inStock);
     }
 
     return filtered;
   }, [allProducts, filters]);
+
+  // Agrupar produtos por tipo de cabelo
+  const productsByType = useMemo(() => {
+    const grouped = {
+      liso: [] as MegaHairProduct[],
+      ondulado: [] as MegaHairProduct[],
+      cacheado: [] as MegaHairProduct[],
+      crespo: [] as MegaHairProduct[]
+    };
+
+    filteredProducts.forEach(product => {
+      if (product.type && grouped[product.type]) {
+        grouped[product.type].push(product);
+      }
+    });
+
+    return grouped;
+  }, [filteredProducts]);
+
+  // Agrupar produtos por coleção
+  const productsByCollection = useMemo(() => {
+    const grouped = {
+      CLASSIC: [] as MegaHairProduct[],
+      PREMIUM: [] as MegaHairProduct[],
+      GOLD: [] as MegaHairProduct[],
+      RAPUNZEL: [] as MegaHairProduct[],
+      PROFESSIONAL: [] as MegaHairProduct[]
+    };
+
+    filteredProducts.forEach(product => {
+      // Determinar coleção baseada no preço se não estiver definida
+      let collection = product.collection || 'CLASSIC';
+
+      if (!product.collection) {
+        if (product.price < 80) collection = 'CLASSIC';
+        else if (product.price < 130) collection = 'PREMIUM';
+        else if (product.price < 180) collection = 'GOLD';
+        else if (product.price < 220) collection = 'RAPUNZEL';
+        else collection = 'PROFESSIONAL';
+      }
+
+      if (grouped[collection as keyof typeof grouped]) {
+        grouped[collection as keyof typeof grouped].push(product);
+      }
+    });
+
+    return grouped;
+  }, [filteredProducts]);
+
+  // Controlar expansão de seções
+  const toggleSection = (type: string) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [type]: !prev[type]
+    }));
+  };
+
+  const expandAllSections = () => {
+    setExpandedSections({
+      liso: true,
+      ondulado: true,
+      cacheado: true,
+      crespo: true
+    });
+  };
+
+  const collapseAllSections = () => {
+    setExpandedSections({
+      liso: false,
+      ondulado: false,
+      cacheado: false,
+      crespo: false
+    });
+  };
+
+  // Controlar expansão de coleções
+  const toggleCollection = (collection: string) => {
+    setExpandedCollections(prev => ({
+      ...prev,
+      [collection]: !prev[collection]
+    }));
+  };
+
+  const expandAllCollections = () => {
+    setExpandedCollections({
+      CLASSIC: true,
+      PREMIUM: true,
+      GOLD: true,
+      RAPUNZEL: true,
+      PROFESSIONAL: true
+    });
+  };
+
+  const collapseAllCollections = () => {
+    setExpandedCollections({
+      CLASSIC: false,
+      PREMIUM: false,
+      GOLD: false,
+      RAPUNZEL: false,
+      PROFESSIONAL: false
+    });
+  };
 
   // Client-side hydration
   useEffect(() => {
@@ -159,6 +306,8 @@ export default function MegaHairCatalog() {
       color: 'todos',
       length: 'todos',
       priceRange: 'todos',
+      collection: 'todos',
+      badge: 'todos',
       inStock: false
     });
   };
@@ -229,29 +378,104 @@ export default function MegaHairCatalog() {
         </div>
       </section>
 
-      {/* Clean Filter Bar */}
+      {/* Enhanced Filter Bar */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between py-4">
-            <button
-              onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded text-sm hover:border-gray-400 transition-colors"
-            >
-              Filtros {showFilters ? '−' : '+'}
-            </button>
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => setShowFilters(!showFilters)}
+                className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded text-sm hover:border-gray-400 transition-colors"
+              >
+                Filtros {showFilters ? '−' : '+'}
+              </button>
 
-            <div className="text-sm text-gray-600">
-              {filteredProducts.length} produtos
+              {/* Seletor de modo de visualização */}
+              <div className="flex items-center border border-gray-300 rounded overflow-hidden">
+                <button
+                  onClick={() => setViewMode('categories')}
+                  className={`px-3 py-2 text-sm transition-colors ${
+                    viewMode === 'categories'
+                      ? 'bg-rose-600 text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  Por Tipo
+                </button>
+                <button
+                  onClick={() => setViewMode('collections')}
+                  className={`px-3 py-2 text-sm transition-colors ${
+                    viewMode === 'collections'
+                      ? 'bg-rose-600 text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  Por Coleção
+                </button>
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`px-3 py-2 text-sm transition-colors ${
+                    viewMode === 'grid'
+                      ? 'bg-rose-600 text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                  }`}
+                >
+                  Grade
+                </button>
+              </div>
+
+              {/* Controles de expansão */}
+              {viewMode === 'categories' && (
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={expandAllSections}
+                    className="text-xs text-gray-600 hover:text-gray-900 underline"
+                  >
+                    Expandir Tudo
+                  </button>
+                  <span className="text-gray-300">|</span>
+                  <button
+                    onClick={collapseAllSections}
+                    className="text-xs text-gray-600 hover:text-gray-900 underline"
+                  >
+                    Recolher Tudo
+                  </button>
+                </div>
+              )}
+
+              {viewMode === 'collections' && (
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={expandAllCollections}
+                    className="text-xs text-gray-600 hover:text-gray-900 underline"
+                  >
+                    Expandir Tudo
+                  </button>
+                  <span className="text-gray-300">|</span>
+                  <button
+                    onClick={collapseAllCollections}
+                    className="text-xs text-gray-600 hover:text-gray-900 underline"
+                  >
+                    Recolher Tudo
+                  </button>
+                </div>
+              )}
             </div>
 
-            {(filters.type !== 'todos' || filters.color !== 'todos' || filters.length !== 'todos' || filters.priceRange !== 'todos' || filters.inStock) && (
-              <button
-                onClick={clearAllFilters}
-                className="text-sm text-gray-600 hover:text-gray-900 underline"
-              >
-                Limpar
-              </button>
-            )}
+            <div className="flex items-center gap-4">
+              <div className="text-sm text-gray-600">
+                {filteredProducts.length} produtos
+              </div>
+
+              {(filters.type !== 'todos' || filters.color !== 'todos' || filters.length !== 'todos' || filters.priceRange !== 'todos' || filters.inStock) && (
+                <button
+                  onClick={clearAllFilters}
+                  className="text-sm text-gray-600 hover:text-gray-900 underline"
+                >
+                  Limpar Filtros
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -384,7 +608,7 @@ export default function MegaHairCatalog() {
             )}
           </AnimatePresence>
 
-          {/* Products Grid */}
+          {/* Content Area */}
           <div className="flex-1">
             {filteredProducts.length === 0 ? (
               <div className="text-center py-20">
@@ -402,7 +626,42 @@ export default function MegaHairCatalog() {
                   Limpar Filtros
                 </button>
               </div>
+            ) : viewMode === 'categories' ? (
+              /* Visualização por Categorias */
+              <div className="space-y-6">
+                {(['liso', 'ondulado', 'cacheado', 'crespo'] as const).map(type => (
+                  <HairTypeSection
+                    key={type}
+                    type={type}
+                    products={productsByType[type]}
+                    isExpanded={expandedSections[type]}
+                    onToggle={() => toggleSection(type)}
+                    onAddToCart={addToCart}
+                    onViewDetails={setSelectedProduct}
+                    isInCart={isInCart}
+                    formatPrice={formatPrice}
+                  />
+                ))}
+              </div>
+            ) : viewMode === 'collections' ? (
+              /* Visualização por Coleções */
+              <div className="space-y-6">
+                {(['CLASSIC', 'PREMIUM', 'GOLD', 'RAPUNZEL', 'PROFESSIONAL'] as const).map(collection => (
+                  <CollectionSection
+                    key={collection}
+                    collection={collection}
+                    products={productsByCollection[collection]}
+                    isExpanded={expandedCollections[collection]}
+                    onToggle={() => toggleCollection(collection)}
+                    onAddToCart={addToCart}
+                    onViewDetails={setSelectedProduct}
+                    isInCart={isInCart}
+                    formatPrice={formatPrice}
+                  />
+                ))}
+              </div>
             ) : (
+              /* Visualização em Grade Tradicional */
               <motion.div
                 layout
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
@@ -423,19 +682,16 @@ export default function MegaHairCatalog() {
                         <span className="absolute top-2 left-2 bg-black/80 text-white px-2 py-1 text-xs">
                           {product.length}cm
                         </span>
-                        <div className="relative w-full h-full">
-                          <Image
-                            src={product.image}
-                            alt={product.name}
-                            fill
-                            className="object-cover"
-                            loading="lazy"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.src = '/images/placeholder-product.jpg';
-                            }}
-                          />
-                        </div>
+                        <OptimizedMegaHairImage
+                          src={product.image}
+                          alt={product.name}
+                          productName={product.name}
+                          productType={product.type}
+                          priority={index < 6}
+                          className="w-full h-full"
+                          showSkeleton={true}
+                          lazy={index >= 6}
+                        />
                       </div>
                     </Link>
 
@@ -528,11 +784,15 @@ export default function MegaHairCatalog() {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="relative h-96 rounded-lg overflow-hidden">
-                    <Image
+                    <OptimizedMegaHairImage
                       src={selectedProduct.image}
                       alt={selectedProduct.name}
-                      fill
-                      className="object-cover"
+                      productName={selectedProduct.name}
+                      productType={selectedProduct.type}
+                      priority={true}
+                      className="w-full h-full rounded-lg"
+                      showSkeleton={true}
+                      lazy={false}
                     />
                   </div>
 

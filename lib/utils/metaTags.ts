@@ -28,8 +28,9 @@ export function generateProductMeta(product: any): Metadata {
   const productDescription = product.description || product.descricao || 'Produto de beleza brasileiro premium';
   const productBrand = product.brand || product.marca || BRAND_NAME;
   const productPrice = product.preco_eur || product.price || 0;
-  const productImage = Array.isArray(product.images || product.imagens)
-    ? (product.images || product.imagens)[0]
+  const imagesArray = product.images || product.imagens || [];
+  const productImage = Array.isArray(imagesArray) && imagesArray.length > 0
+    ? imagesArray[0]
     : DEFAULT_META.defaultImage;
 
   // Category-specific keywords
@@ -149,12 +150,12 @@ export function generateProductMeta(product: any): Metadata {
       url: `${BASE_URL}/produto/${product.id}`,
       siteName: DEFAULT_META.siteName,
       locale: DEFAULT_META.locale,
-      images: [{
+      images: productImage ? [{
         url: productImage.startsWith('http') ? productImage : `${BASE_URL}${productImage}`,
         width: 1200,
         height: 630,
         alt: `${productName} - ${productBrand}`
-      }],
+      }] : [],
       // Product-specific OG tags
       ...(productPrice > 0 && {
         'product:price:amount': productPrice.toString(),

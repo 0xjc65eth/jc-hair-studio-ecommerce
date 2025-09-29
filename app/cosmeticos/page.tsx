@@ -5,250 +5,89 @@ import Link from 'next/link';
 import { Button } from '../../components/ui/Button';
 import ProductCard from '../../components/products/ProductCard';
 import { useCart } from '../../lib/stores/cartStore'; // Import cart store for shopping cart functionality
-import { ShoppingBag, Search, Filter, Heart, Eye, Shuffle, Grid, List, Palette, Sparkles } from 'lucide-react';
-import { allTintasData } from '../../lib/data/tintasProducts';
+import { ShoppingBag, Search, Filter, Heart, Eye, Shuffle, Grid, List, Palette, Sparkles, Droplets, Brush } from 'lucide-react';
+import { allTintasCapilares } from '../../lib/data/tintasCapilares';
+import { allEsmaltesImpala } from '../../lib/data/esmaltesImpala';
+import { allPerfumesWepink } from '../../lib/data/perfumesWepink';
 
-// Função para gerar dados das tintas com numeração sequencial
-const gerarTintasLOreal = () => {
-  const tintasLOreal = [];
-  for (let i = 1; i <= 22; i++) {
-    tintasLOreal.push({
-      id: `loreal-${i}`,
-      nome: `L'Oréal Paris Excellence Creme ${i} - Tom Profissional`,
-      marca: 'L\'ORÉAL PARIS',
-      categoria: 'Coloração Permanente',
-      cor: i <= 5 ? 'Preto/Castanho' : i <= 10 ? 'Castanho' : i <= 15 ? 'Louro Escuro' : 'Louro Claro',
-      tom: `${i}`,
-      descricao: 'Coloração permanente L\'Oréal com triplo cuidado e cobertura 100% dos brancos.',
-      imagem: `/images/products/tinta_loreal/tinta_loreal_${i}.PNG`,
-      pricing: {
-        basePrice: 12.80,
-        ourPrice: 19.20,
-        discountPrice: 17.28,
-        savings: 1.92,
-        margin: '38%'
-      },
-      rating: 4.5 + ((i % 4) * 0.1),
-      reviewsCount: 50 + (i * 7),
-      inStock: true,
-      tags: ['permanente', 'cobertura total', 'loreal'],
-      badge: i <= 10 ? 'BESTSELLER' : 'PREMIUM'
-    });
-  }
-  return tintasLOreal;
+// Dados dos produtos profissionalmente organizados
+const tintasCapilares = allTintasCapilares;
+const esmaltesImpala = allEsmaltesImpala;
+const perfumesWepink = allPerfumesWepink;
+
+// Todos os produtos organizados por categoria
+const allProducts = {
+  tintas: tintasCapilares,
+  esmaltes: esmaltesImpala,
+  perfumes: perfumesWepink
 };
 
-const gerarTintasBioColor = () => {
-  const tintasBioColor = [];
-  for (let i = 1; i <= 23; i++) {
-    tintasBioColor.push({
-      id: `biocolor-${i}`,
-      nome: `BioColor Coloração Creme ${i} - Tom Natural`,
-      marca: 'BIOCOLOR',
-      categoria: 'Coloração Creme',
-      cor: i <= 6 ? 'Preto/Castanho' : i <= 12 ? 'Castanho' : i <= 18 ? 'Louro Escuro' : 'Louro Claro',
-      tom: `${i}`,
-      descricao: 'Coloração creme BioColor com mais hidratação, pronta em 20 minutos.',
-      imagem: `/images/products/tinta_biocolor/tinta_biocolor_${i}.PNG`,
-      pricing: {
-        basePrice: 6.50,
-        ourPrice: 9.75,
-        discountPrice: 8.78,
-        savings: 0.97,
-        margin: '28%'
-      },
-      rating: 4.4 + ((i % 4) * 0.1),
-      reviewsCount: 30 + (i * 6),
-      inStock: true,
-      tags: ['hidratação', 'rápido', 'natural'],
-      badge: 'NATURAL'
-    });
-  }
-  return tintasBioColor;
-};
-
-const gerarTintasBeautyColor = () => {
-  const tintasBeautyColor = [];
-  // Apenas produtos com imagens reais validadas (removendo placeholder da posição 1)
-  const produtosComImagensReais = [
-    2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-    21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
-    37, 38, 39, 40, 41, 42, 43, 44, 45, 46
-  ]; // Removido: 1 (placeholder rosa), 11 (possível placeholder)
-
-  produtosComImagensReais.forEach((i) => {
-    tintasBeautyColor.push({
-      id: `beautycolor-${i}`,
-      nome: `Beauty Color Kit ${i} - Tom Especial`,
-      marca: 'BEAUTY COLOR',
-      categoria: 'Coloração Premium',
-      cor: i <= 10 ? 'Preto/Castanho' : i <= 20 ? 'Castanho' : i <= 30 ? 'Louro Escuro' : i <= 40 ? 'Louro Claro' : 'Especiais',
-      tom: `${i}`,
-      descricao: 'Coloração Beauty Color com óleos nobres e tecnologia avançada.',
-      imagem: `/images/products/tinta_beauty_color/tinta_beauty_color_${i}.PNG`,
-      pricing: {
-        basePrice: 8.90,
-        ourPrice: 13.35,
-        discountPrice: 12.02,
-        savings: 1.33,
-        margin: '32%'
-      },
-      rating: 4.3 + ((i % 5) * 0.1),
-      reviewsCount: 40 + (i * 4),
-      inStock: i % 20 !== 0, // 95% em estoque
-      tags: ['premium', 'óleos nobres', 'beauty color'],
-      badge: i % 3 === 0 ? 'PREMIUM' : i % 5 === 0 ? 'BESTSELLER' : 'NOVO'
-    });
-  });
-  return tintasBeautyColor;
-};
-
-const gerarTintasAmend = () => {
-  const tintasAmend = [];
-  const tons = ['8.1', '7.0', '6.3', '5.4', '4.0', '9.1'];
-  const cores = ['Louro Cinza Claro', 'Louro Médio', 'Louro Dourado', 'Castanho Médio', 'Castanho Natural', 'Louro Muito Claro'];
-
-  for (let i = 1; i <= 6; i++) {
-    tintasAmend.push({
-      id: `amend-${i}`,
-      nome: `Amend Magnific Color ${tons[i-1]} - ${cores[i-1]}`,
-      marca: 'AMEND',
-      categoria: 'Coloração Profissional',
-      cor: cores[i-1],
-      tom: tons[i-1],
-      descricao: 'Coloração profissional Amend com keratina e proteção antifade.',
-      imagem: `/images/products/tinta_amend/tinta_amend_${i}.PNG`,
-      pricing: {
-        basePrice: 15.20,
-        ourPrice: 22.80,
-        discountPrice: 20.52,
-        savings: 2.28,
-        margin: '35%'
-      },
-      rating: 4.7 + ((i % 3) * 0.1),
-      reviewsCount: 60 + (i * 10),
-      inStock: true,
-      tags: ['keratina', 'antifade', 'profissional'],
-      badge: 'PROFISSIONAL'
-    });
-  }
-  return tintasAmend;
-};
-
-const gerarTintasNutrisse = () => {
-  const tintasNutrisse = [];
-  for (let i = 1; i <= 9; i++) {
-    tintasNutrisse.push({
-      id: `nutrisse-${i}`,
-      nome: `Garnier Nutrisse Creme ${i} - Nutrição Intensa`,
-      marca: 'GARNIER NUTRISSE',
-      categoria: 'Coloração Nutritiva',
-      cor: i <= 3 ? 'Preto/Castanho' : i <= 6 ? 'Castanho' : i <= 9 ? 'Louro Escuro' : 'Louro Claro',
-      tom: `${i}`,
-      descricao: 'Coloração nutritiva Garnier com 4 óleos e cobertura 100% dos brancos.',
-      imagem: `/images/products/tinta_nutrisse/tinta_nutrisse_${i}.PNG`,
-      pricing: {
-        basePrice: 10.50,
-        ourPrice: 15.75,
-        discountPrice: 14.18,
-        savings: 1.57,
-        margin: '30%'
-      },
-      rating: 4.6 + ((i % 3) * 0.1),
-      reviewsCount: 70 + (i * 8),
-      inStock: true,
-      tags: ['nutritiva', '4 óleos', 'garnier'],
-      badge: 'NUTRITIVO'
-    });
-  }
-  return tintasNutrisse;
-};
-
-const gerarTintasAltaModa = () => {
-  const tintasAltaModa = [];
-  for (let i = 1; i <= 29; i++) {
-    tintasAltaModa.push({
-      id: `altamoda-${i}`,
-      nome: `Alfaparf Alta Moda ${i} - Pigmentos Micronizados`,
-      marca: 'ALFAPARF',
-      categoria: 'Coloração Italiana',
-      cor: i <= 8 ? 'Preto/Castanho' : i <= 15 ? 'Castanho' : i <= 22 ? 'Louro Escuro' : 'Louro Claro',
-      tom: `${i}`,
-      descricao: 'Coloração italiana Alfaparf com pigmentos micronizados e máximo brilho.',
-      imagem: `/images/products/tinta_alta_moda_/tinta_alta_moda__${i}.PNG`,
-      pricing: {
-        basePrice: 18.90,
-        ourPrice: 28.35,
-        discountPrice: 25.52,
-        savings: 2.83,
-        margin: '40%'
-      },
-      rating: 4.8 + ((i % 2) * 0.1),
-      reviewsCount: 80 + (i * 5),
-      inStock: true,
-      tags: ['italiana', 'pigmentos micronizados', 'alfaparf'],
-      badge: 'IMPORTADA'
-    });
-  }
-  return tintasAltaModa;
-};
-
-
-// Cosméticos reorganizado - apenas tintas capilares
-// Removido: esmaltes e perfumes conforme solicitado
-
-// Apenas tintas capilares - conforme solicitado
-const tintasCapilares = allTintasData; // Usar dados oficiais das tintas
-
-// Todos os produtos são apenas tintas capilares agora
-const allProducts = [...tintasCapilares];
-
-// Filtros específicos apenas para tintas capilares
+// Marcas por categoria
 const marcasTintas = [
-  { value: 'L\'ORÉAL PARIS', label: "L'Oréal Paris", count: 0 },
-  { value: 'BIOCOLOR', label: 'BioColor', count: 0 },
-  { value: 'BEAUTY COLOR', label: 'Beauty Color', count: 0 },
-  { value: 'AMEND', label: 'Amend', count: 0 },
-  { value: 'GARNIER NUTRISSE', label: 'Garnier Nutrisse', count: 0 },
-  { value: 'ALFAPARF', label: 'Alfaparf Alta Moda', count: 0 }
+  { value: 'Biocolor', label: 'Biocolor', count: 0 },
+  { value: 'Wella', label: 'Wella', count: 0 },
+  { value: 'Alfaparf', label: 'Alfaparf', count: 0 }
 ];
 
+const marcasEsmaltes = [
+  { value: 'IMPALA', label: 'IMPALA', count: 0 }
+];
+
+const marcasPerfumes = [
+  { value: 'WEPINK', label: 'WEPINK', count: 0 }
+];
+
+// Categorias por seção
 const categoriasTintas = [
-  { value: 'permanente', label: 'Coloração Permanente' },
-  { value: 'temporaria', label: 'Coloração Temporária' },
-  { value: 'creme', label: 'Coloração Creme' },
-  { value: 'premium', label: 'Coloração Premium' },
-  { value: 'profissional', label: 'Coloração Profissional' },
-  { value: 'nutritiva', label: 'Coloração Nutritiva' },
-  { value: 'italiana', label: 'Coloração Italiana' }
+  { value: 'coloracao-permanente', label: 'Coloração Permanente' },
+  { value: 'coloracao-sem-amonia', label: 'Sem Amônia' },
+  { value: 'coloracao-profissional', label: 'Profissional' },
+  { value: 'coloracao-premium', label: 'Premium' }
 ];
 
-const coresTintas = [
-  { value: 'louro', label: 'Louro', color: '#F4E4BC' },
-  { value: 'castanho', label: 'Castanho', color: '#8B4513' },
-  { value: 'preto', label: 'Preto', color: '#000000' },
-  { value: 'ruivo', label: 'Ruivo', color: '#CD5C5C' },
-  { value: 'cinza', label: 'Cinza', color: '#808080' },
-  { value: 'ameixa', label: 'Ameixa', color: '#673147' },
-  { value: 'natural', label: 'Natural', color: '#DEB887' }
+const categoriasEsmaltes = [
+  { value: 'esmalte-cremoso', label: 'Cremoso' },
+  { value: 'esmalte-perolado', label: 'Perolado' },
+  { value: 'esmalte-glitter', label: 'Glitter' },
+  { value: 'base-tratamento', label: 'Base e Tratamento' }
+];
+
+const categoriasPerfumes = [
+  { value: 'desodorante-colonia', label: 'Desodorante Colônia' },
+  { value: 'colonia-infantil', label: 'Colônia Infantil' }
+];
+
+// Filtros específicos por categoria
+const familiasCorEsmaltes = [
+  { value: 'Rosa', label: 'Rosa', color: '#FFB6C1' },
+  { value: 'Vermelho', label: 'Vermelho', color: '#DC143C' },
+  { value: 'Azul', label: 'Azul', color: '#4169E1' },
+  { value: 'Neutro', label: 'Neutro', color: '#D3D3D3' },
+  { value: 'Marrom', label: 'Marrom', color: '#8B4513' },
+  { value: 'Roxo', label: 'Roxo', color: '#8B008B' },
+  { value: 'Verde', label: 'Verde', color: '#32CD32' },
+  { value: 'Clássico', label: 'Clássico', color: '#000000' }
+];
+
+const publicosPerfumes = [
+  { value: 'Feminino', label: 'Feminino' },
+  { value: 'Masculino', label: 'Masculino' },
+  { value: 'Unissex', label: 'Unissex' },
+  { value: 'Infantil', label: 'Infantil' }
 ];
 
 const faixasPreco = [
-  { value: '5-10', label: '€5 - €10' },
-  { value: '10-15', label: '€10 - €15' },
-  { value: '15-20', label: '€15 - €20' },
-  { value: '20-25', label: '€20 - €25' },
-  { value: '25+', label: '€25+' }
+  { value: '20-30', label: '€20 - €30' },
+  { value: '30-50', label: '€30 - €50' },
+  { value: '50-70', label: '€50 - €70' },
+  { value: '70+', label: '€70+' }
 ];
 
-// Apenas tintas capilares
-const tintasOnly = tintasCapilares;
-
 // Componente principal
-export default function TintasPage() {
-  // Estados para filtros - apenas tintas
-  const [activeSection, setActiveSection] = useState('tintas'); // apenas 'tintas'
-  const [filteredProducts, setFilteredProducts] = useState(allProducts);
+export default function CosmeticosPage() {
+  // Estados para filtros - três categorias
+  const [activeSection, setActiveSection] = useState('tintas');
+  const [filteredProducts, setFilteredProducts] = useState(allProducts.tintas);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedBrand, setSelectedBrand] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -265,7 +104,7 @@ export default function TintasPage() {
    * Add product to shopping cart
    * Converts the product data format to match cart item structure
    * Opens cart drawer after successful addition for immediate user feedback
-   * @param {Object} product - Product object from tintasCapilares array
+   * @param {Object} product - Product object from any category
    */
   const handleAddToCart = (product) => {
     // Convert product format to cart item format
@@ -277,7 +116,7 @@ export default function TintasPage() {
         price: product.pricing.discountPrice, // Use discounted price
         images: [
           {
-            url: product.imagem,
+            url: product.images ? product.images[0] : product.imagem || '/placeholder-product.jpg',
             alt: product.nome,
             isMain: true
           }
@@ -286,7 +125,7 @@ export default function TintasPage() {
         description: product.descricao
       },
       quantity: 1, // Default quantity for new items
-      variant: null // No variants for hair color products
+      variant: null // No variants for cosmetic products
     };
 
     // Add item to cart store (automatically saves to localStorage)
@@ -298,41 +137,53 @@ export default function TintasPage() {
 
   // Aplicar filtros
   useEffect(() => {
-    // Apenas tintas capilares
-    let baseProducts = [...tintasOnly];
+    // Selecionar produtos baseado na seção ativa
+    let baseProducts = [...allProducts[activeSection]];
 
     let filtered = baseProducts;
 
     // Filtro de busca
     if (searchTerm) {
-      filtered = filtered.filter(product =>
-        product.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.marca.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.cor.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.tom.includes(searchTerm)
-      );
+      filtered = filtered.filter(product => {
+        const searchFields = [
+          product.nome,
+          product.marca,
+          product.cor,
+          product.tom || '',
+          product.familiaCorr || '',
+          product.publico || ''
+        ];
+        return searchFields.some(field =>
+          field.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      });
     }
 
     // Filtro por marca
     if (selectedBrand) {
       filtered = filtered.filter(product =>
-        product.marca.includes(selectedBrand)
+        product.marca === selectedBrand
       );
     }
 
     // Filtro por categoria
     if (selectedCategory) {
       filtered = filtered.filter(product =>
-        product.categoria.toLowerCase().includes(selectedCategory)
+        product.subcategoria === selectedCategory
       );
     }
 
-    // Filtro por cor
+    // Filtro por cor (específico para cada tipo)
     if (selectedColor) {
-      filtered = filtered.filter(product =>
-        product.cor.toLowerCase().includes(selectedColor) ||
-        product.tags.some(tag => tag.includes(selectedColor))
-      );
+      filtered = filtered.filter(product => {
+        if (activeSection === 'esmaltes') {
+          return product.familiaCorr === selectedColor;
+        } else if (activeSection === 'perfumes') {
+          return product.publico === selectedColor;
+        } else {
+          return product.cor.toLowerCase().includes(selectedColor.toLowerCase());
+        }
+      });
     }
 
     // Filtro por preço
@@ -353,7 +204,7 @@ export default function TintasPage() {
         filtered.sort((a, b) => b.pricing.discountPrice - a.pricing.discountPrice);
         break;
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
+        filtered.sort((a, b) => (b.rating || 4.5) - (a.rating || 4.5));
         break;
       case 'brand':
         filtered.sort((a, b) => a.marca.localeCompare(b.marca));
@@ -381,9 +232,76 @@ export default function TintasPage() {
     setSelectedPriceRange('');
   };
 
-  // Apenas marcas de tintas
+  // Obter marcas baseado na seção ativa
   const getAvailableBrands = () => {
-    return marcasTintas;
+    switch (activeSection) {
+      case 'esmaltes':
+        return marcasEsmaltes;
+      case 'perfumes':
+        return marcasPerfumes;
+      default:
+        return marcasTintas;
+    }
+  };
+
+  // Obter categorias baseado na seção ativa
+  const getAvailableCategories = () => {
+    switch (activeSection) {
+      case 'esmaltes':
+        return categoriasEsmaltes;
+      case 'perfumes':
+        return categoriasPerfumes;
+      default:
+        return categoriasTintas;
+    }
+  };
+
+  // Obter filtros de cor baseado na seção ativa
+  const getColorFilters = () => {
+    switch (activeSection) {
+      case 'esmaltes':
+        return familiasCorEsmaltes;
+      case 'perfumes':
+        return publicosPerfumes;
+      default:
+        return [];
+    }
+  };
+
+  // Obter título da seção
+  const getSectionTitle = () => {
+    switch (activeSection) {
+      case 'esmaltes':
+        return 'Esmaltes IMPALA';
+      case 'perfumes':
+        return 'Perfumes WEPINK';
+      default:
+        return 'Tintas Capilares';
+    }
+  };
+
+  // Obter descrição da seção
+  const getSectionDescription = () => {
+    switch (activeSection) {
+      case 'esmaltes':
+        return 'Coleção completa de esmaltes IMPALA brasileiros com cores autênticas';
+      case 'perfumes':
+        return 'Perfumes brasileiros WEPINK para todos os públicos e ocasiões';
+      default:
+        return 'Tintas capilares profissionais das melhores marcas';
+    }
+  };
+
+  // Obter ícone da seção
+  const getSectionIcon = () => {
+    switch (activeSection) {
+      case 'esmaltes':
+        return Brush;
+      case 'perfumes':
+        return Droplets;
+      default:
+        return Palette;
+    }
   };
 
   return (
@@ -393,36 +311,70 @@ export default function TintasPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center text-white">
             <div className="flex items-center justify-center mb-4">
-              <Palette className="w-8 h-8 mr-3" />
+              {React.createElement(getSectionIcon(), { className: 'w-8 h-8 mr-3' })}
               <h1 className="text-4xl md:text-5xl font-bold">
-                Tintas Capilares
+                {getSectionTitle()}
               </h1>
             </div>
             <p className="text-xl mb-8 opacity-90">
-              Tintas capilares premium das melhores marcas
+              {getSectionDescription()}
             </p>
             <div className="flex items-center justify-center gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <ShoppingBag className="w-5 h-5" />
-                <span>{allProducts.length} produtos disponíveis</span>
+                <span>{filteredProducts.length} produtos disponíveis</span>
               </div>
               <div className="flex items-center gap-2">
                 <Sparkles className="w-5 h-5" />
-                <span>Imagens Reais Validadas</span>
+                <span>Imagens Reais dos Rótulos</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Navigation Tabs - Apenas Tintas */}
+      {/* Navigation Tabs - Três Categorias */}
       <div className="bg-white border-b sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex space-x-8 py-4">
+          <div className="flex space-x-8 py-4 overflow-x-auto">
             <button
-              className="px-4 py-2 font-medium text-purple-600 border-b-2 border-purple-600"
+              onClick={() => {
+                setActiveSection('tintas');
+                clearAllFilters();
+              }}
+              className={`px-4 py-2 font-medium whitespace-nowrap transition-colors ${
+                activeSection === 'tintas'
+                  ? 'text-purple-600 border-b-2 border-purple-600'
+                  : 'text-gray-600 hover:text-purple-600'
+              }`}
             >
-              🎨 Tintas Capilares ({tintasOnly.length})
+              🎨 Tintas Capilares ({allProducts.tintas.length})
+            </button>
+            <button
+              onClick={() => {
+                setActiveSection('esmaltes');
+                clearAllFilters();
+              }}
+              className={`px-4 py-2 font-medium whitespace-nowrap transition-colors ${
+                activeSection === 'esmaltes'
+                  ? 'text-purple-600 border-b-2 border-purple-600'
+                  : 'text-gray-600 hover:text-purple-600'
+              }`}
+            >
+              💅 Esmaltes IMPALA ({allProducts.esmaltes.length})
+            </button>
+            <button
+              onClick={() => {
+                setActiveSection('perfumes');
+                clearAllFilters();
+              }}
+              className={`px-4 py-2 font-medium whitespace-nowrap transition-colors ${
+                activeSection === 'perfumes'
+                  ? 'text-purple-600 border-b-2 border-purple-600'
+                  : 'text-gray-600 hover:text-purple-600'
+              }`}
+            >
+              🌸 Perfumes WEPINK ({allProducts.perfumes.length})
             </button>
           </div>
         </div>
@@ -490,7 +442,8 @@ export default function TintasPage() {
                 {/* Categoria */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Tipo de Coloração
+                    {activeSection === 'tintas' ? 'Tipo de Coloração' :
+                     activeSection === 'esmaltes' ? 'Acabamento' : 'Tipo'}
                   </label>
                   <select
                     value={selectedCategory}
@@ -498,7 +451,7 @@ export default function TintasPage() {
                     className="w-full p-3 border border-purple-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-300"
                   >
                     <option value="">Todos os tipos</option>
-                    {categoriasTintas.map(cat => (
+                    {getAvailableCategories().map(cat => (
                       <option key={cat.value} value={cat.value}>
                         {cat.label}
                       </option>
@@ -506,31 +459,35 @@ export default function TintasPage() {
                   </select>
                 </div>
 
-                {/* Cores */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Cor
-                  </label>
-                  <div className="grid grid-cols-2 gap-2">
-                    {coresTintas.map(cor => (
-                      <button
-                        key={cor.value}
-                        onClick={() => setSelectedColor(selectedColor === cor.value ? '' : cor.value)}
-                        className={`flex items-center gap-2 p-2 rounded-lg border transition-colors ${
-                          selectedColor === cor.value
-                            ? 'border-purple-500 bg-purple-50'
-                            : 'border-gray-200 hover:border-purple-300'
-                        }`}
-                      >
-                        <div
-                          className="w-4 h-4 rounded-full border border-gray-300"
-                          style={{ backgroundColor: cor.color }}
-                        />
-                        <span className="text-sm">{cor.label}</span>
-                      </button>
-                    ))}
+                {/* Cores/Filtros específicos */}
+                {getColorFilters().length > 0 && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-3">
+                      {activeSection === 'esmaltes' ? 'Família de Cor' : 'Público-Alvo'}
+                    </label>
+                    <div className="grid grid-cols-2 gap-2">
+                      {getColorFilters().map(item => (
+                        <button
+                          key={item.value}
+                          onClick={() => setSelectedColor(selectedColor === item.value ? '' : item.value)}
+                          className={`flex items-center gap-2 p-2 rounded-lg border transition-colors ${
+                            selectedColor === item.value
+                              ? 'border-purple-500 bg-purple-50'
+                              : 'border-gray-200 hover:border-purple-300'
+                          }`}
+                        >
+                          {item.color && (
+                            <div
+                              className="w-4 h-4 rounded-full border border-gray-300"
+                              style={{ backgroundColor: item.color }}
+                            />
+                          )}
+                          <span className="text-sm">{item.label}</span>
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Preço */}
                 <div>
@@ -571,7 +528,7 @@ export default function TintasPage() {
             {/* Controles de ordenação */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 bg-white p-4 rounded-lg shadow-sm">
               <div className="text-sm text-gray-600">
-                Mostrando {filteredProducts.length} de {allProducts.length} produtos
+                Mostrando {filteredProducts.length} de {allProducts[activeSection].length} produtos
               </div>
 
               <div className="flex items-center gap-4">
@@ -627,7 +584,7 @@ export default function TintasPage() {
                     <div className="relative">
                       <Link href={`/produto/${product.id}`}>
                         <img
-                          src={product.imagem}
+                          src={product.images ? product.images[0] : product.imagem || '/placeholder-product.jpg'}
                           alt={product.nome}
                           className="w-full h-48 object-cover rounded-t-lg cursor-pointer hover:opacity-90 transition-opacity"
                         />
@@ -659,12 +616,19 @@ export default function TintasPage() {
                         </h3>
                       </Link>
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
-                          Tom {product.tom}
-                        </span>
+                        {product.tom && (
+                          <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                            Tom {product.tom}
+                          </span>
+                        )}
                         <span className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded">
                           {product.cor}
                         </span>
+                        {product.volume && (
+                          <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">
+                            {product.volume}
+                          </span>
+                        )}
                       </div>
 
                       <div className="flex items-center gap-1 mb-3">
@@ -672,7 +636,7 @@ export default function TintasPage() {
                           <div
                             key={i}
                             className={`w-3 h-3 ${
-                              i < Math.floor(product.rating)
+                              i < Math.floor(product.rating || 4.5)
                                 ? 'text-yellow-400'
                                 : 'text-gray-300'
                             }`}
@@ -681,7 +645,7 @@ export default function TintasPage() {
                           </div>
                         ))}
                         <span className="text-xs text-gray-500 ml-1">
-                          ({product.reviewsCount})
+                          ({product.reviewsCount || 127})
                         </span>
                       </div>
 
@@ -741,7 +705,7 @@ export default function TintasPage() {
               Por que escolher nossos cosméticos?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Oferecemos apenas as melhores marcas com imagens reais e preços exclusivos
+              Organizamos profissionalmente cada categoria com produtos autênticos e preços exclusivos
             </p>
           </div>
 
@@ -750,32 +714,32 @@ export default function TintasPage() {
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎨</span>
               </div>
-              <h3 className="font-semibold mb-2">Cores Autênticas</h3>
-              <p className="text-sm text-gray-600">Imagens reais validadas uma por uma</p>
+              <h3 className="font-semibold mb-2">Tintas Profissionais</h3>
+              <p className="text-sm text-gray-600">Biocolor, Wella e Alfaparf com alta cobertura</p>
             </div>
 
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏆</span>
+                <span className="text-2xl">💅</span>
               </div>
-              <h3 className="font-semibold mb-2">Marcas Premium</h3>
-              <p className="text-sm text-gray-600">L'Oréal, Beauty Color, Amend, Garnier, BioColor e Alfaparf</p>
+              <h3 className="font-semibold mb-2">Esmaltes IMPALA</h3>
+              <p className="text-sm text-gray-600">54+ cores brasileiras organizadas por família</p>
             </div>
 
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">✨</span>
+                <span className="text-2xl">🌸</span>
               </div>
-              <h3 className="font-semibold mb-2">Qualidade Profissional</h3>
-              <p className="text-sm text-gray-600">Tintas capilares de alta qualidade</p>
+              <h3 className="font-semibold mb-2">Perfumes WEPINK</h3>
+              <p className="text-sm text-gray-600">33 fragrâncias para todos os públicos</p>
             </div>
 
             <div className="text-center p-6">
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💰</span>
+                <span className="text-2xl">✅</span>
               </div>
-              <h3 className="font-semibold mb-2">Preços Especiais</h3>
-              <p className="text-sm text-gray-600">Descontos exclusivos garantidos</p>
+              <h3 className="font-semibold mb-2">Separação Profissional</h3>
+              <p className="text-sm text-gray-600">Cada categoria totalmente organizada</p>
             </div>
           </div>
         </div>

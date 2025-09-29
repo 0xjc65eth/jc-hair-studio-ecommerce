@@ -1,0 +1,291 @@
+{
+  "category": "Perfumes",
+  "subcategory": "Perfumes WEPINK - Segunda Metade",
+  "products": [
+    {
+      "id": "wepink-king-blue-deep-desodorante-colonia-100ml",
+      "nome": "WEPINK King Blue Deep Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "100ml",
+      "familia_olfativa": "Aquática Amadeirada",
+      "descricao": "Perfume masculino brasileiro com notas aquáticas profundas e amadeiradas",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "masculino",
+      "images": ["/images/products/perfumes/perfume_16_king-blue-deep-desodorante-colônia-10-wepink-masculino(1)_masculino.png"],
+      "pricing": {
+        "basePrice": 79.90,
+        "ourPrice": 59.90,
+        "discountPrice": 54.90
+      },
+      "badge": "PREMIUM"
+    },
+    {
+      "id": "wepink-king-blue-desodorante-colonia-100ml",
+      "nome": "WEPINK King Blue Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "100ml",
+      "familia_olfativa": "Aquática Fresca",
+      "descricao": "Perfume masculino brasileiro com notas aquáticas refrescantes",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "masculino",
+      "images": ["/images/products/perfumes/perfume_17_king-blue-desodorante-colônia-10-wepink-masculino_masculino.png"],
+      "pricing": {
+        "basePrice": 74.90,
+        "ourPrice": 54.90,
+        "discountPrice": 49.90
+      },
+      "badge": "BESTSELLER"
+    },
+    {
+      "id": "wepink-le-grand-club-sweet-lady-desodorante-colonia-100ml",
+      "nome": "WEPINK Le Grand Club Sweet Lady Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "100ml",
+      "familia_olfativa": "Floral Doce",
+      "descricao": "Perfume feminino brasileiro com notas florais doces e elegantes",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "feminino",
+      "images": ["/images/products/perfumes/perfume_18_le-grand-club-sweet-lady-desodorante-colônia-10-wepink_feminino.png"],
+      "pricing": {
+        "basePrice": 84.90,
+        "ourPrice": 64.90,
+        "discountPrice": 59.90
+      },
+      "badge": "PREMIUM"
+    },
+    {
+      "id": "wepink-liberte-exclusif-desodorante-colonia-100ml",
+      "nome": "WEPINK Liberté Exclusif Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "100ml",
+      "familia_olfativa": "Floral Frutal",
+      "descricao": "Perfume unissex brasileiro com notas florais e frutais exclusivas",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "unissex",
+      "images": ["/images/products/perfumes/perfume_19_liberté-exclusif-desodorante-colônia-10-wepink_unissex.png"],
+      "pricing": {
+        "basePrice": 89.90,
+        "ourPrice": 69.90,
+        "discountPrice": 64.90
+      },
+      "badge": "EXCLUSIVO"
+    },
+    {
+      "id": "wepink-lion-blanc-desodorante-colonia-100ml",
+      "nome": "WEPINK Lion Blanc Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "100ml",
+      "familia_olfativa": "Amadeirada Fresca",
+      "descricao": "Perfume masculino brasileiro com notas amadeiradas frescas e elegantes",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "masculino",
+      "images": ["/images/products/perfumes/perfume_20_lion-blanc-desodorante-colônia-10-wepink-masculino_masculino.png"],
+      "pricing": {
+        "basePrice": 79.90,
+        "ourPrice": 59.90,
+        "discountPrice": 54.90
+      },
+      "badge": "PREMIUM"
+    },
+    {
+      "id": "wepink-lion-noir-fusion-desodorante-colonia-100ml",
+      "nome": "WEPINK Lion Noir Fusion Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "100ml",
+      "familia_olfativa": "Oriental Amadeirada",
+      "descricao": "Perfume masculino brasileiro com notas orientais e amadeiradas intensas",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "masculino",
+      "images": ["/images/products/perfumes/perfume_21_lion-noir-desodorante-colônia-10-wepink-masculino_masculino.png", "/images/products/perfumes/perfume_22_lion-noir-desodorante-colônia-10-wepink-masculino(1)_masculino.png"],
+      "pricing": {
+        "basePrice": 84.90,
+        "ourPrice": 64.90,
+        "discountPrice": 59.90
+      },
+      "badge": "PREMIUM"
+    },
+    {
+      "id": "wepink-merry-christmas-desodorante-colonia-100ml",
+      "nome": "WEPINK Merry Christmas Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "100ml",
+      "familia_olfativa": "Especiada Festiva",
+      "descricao": "Perfume unissex brasileiro com notas especiadas e festivas de Natal",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "unissex",
+      "images": ["/images/products/perfumes/perfume_23_merry-christmas-desodorante-colônia-10-wepink_unissex.png", "/images/products/perfumes/perfume_24_merry-christmas-desodorante-colônia-10-wepink(1)_unissex.png"],
+      "pricing": {
+        "basePrice": 79.90,
+        "ourPrice": 59.90,
+        "discountPrice": 54.90
+      },
+      "badge": "EDIÇÃO LIMITADA"
+    },
+    {
+      "id": "wepink-pureblixx-darkest-desodorante-colonia-100ml",
+      "nome": "WEPINK Pureblixx Darkest Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "100ml",
+      "familia_olfativa": "Oriental Intensa",
+      "descricao": "Perfume masculino brasileiro com notas orientais intensas e marcantes",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "masculino",
+      "images": ["/images/products/perfumes/perfume_25_pureblixx-darkest-desodorante-colônia-10-wepink-masculino_masculino.png"],
+      "pricing": {
+        "basePrice": 89.90,
+        "ourPrice": 69.90,
+        "discountPrice": 64.90
+      },
+      "badge": "PREMIUM"
+    },
+    {
+      "id": "wepink-queen-pink-desodorante-colonia-100ml",
+      "nome": "WEPINK Queen Pink Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "100ml",
+      "familia_olfativa": "Floral Frutal",
+      "descricao": "Perfume feminino brasileiro com notas florais e frutais vibrantes",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "feminino",
+      "images": ["/images/products/perfumes/perfume_26_queen-pink-desodorante-colônia-10-wepink_feminino.png"],
+      "pricing": {
+        "basePrice": 79.90,
+        "ourPrice": 59.90,
+        "discountPrice": 54.90
+      },
+      "badge": "BESTSELLER"
+    },
+    {
+      "id": "wepink-red-obsidian-desodorante-colonia-100ml",
+      "nome": "WEPINK Red Obsidian Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "100ml",
+      "familia_olfativa": "Oriental Especiada",
+      "descricao": "Perfume masculino brasileiro com notas orientais especiadas e intensas",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "masculino",
+      "images": ["/images/products/perfumes/perfume_27_red-obsidian-desodorante-colônia-10-wepink-masculino_masculino.png"],
+      "pricing": {
+        "basePrice": 84.90,
+        "ourPrice": 64.90,
+        "discountPrice": 59.90
+      },
+      "badge": "PREMIUM"
+    },
+    {
+      "id": "wepink-scarlette-desodorante-colonia-50ml",
+      "nome": "WEPINK Scarlette Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "50ml",
+      "familia_olfativa": "Floral Oriental",
+      "descricao": "Perfume feminino brasileiro com notas florais orientais sedutoras",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "feminino",
+      "images": ["/images/products/perfumes/perfume_28_scarlette-desodorante-colônia-5-wepink_feminino.png"],
+      "pricing": {
+        "basePrice": 64.90,
+        "ourPrice": 49.90,
+        "discountPrice": 44.90
+      },
+      "badge": "COMPACTO"
+    },
+    {
+      "id": "wepink-the-rainy-desodorante-colonia-70ml",
+      "nome": "WEPINK The Rainy Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "70ml",
+      "familia_olfativa": "Aquática Fresca",
+      "descricao": "Perfume unissex brasileiro com notas aquáticas frescas como chuva",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "unissex",
+      "images": ["/images/products/perfumes/perfume_29_the-rainy-desodorante-colônia-7-wepink_unissex.png"],
+      "pricing": {
+        "basePrice": 69.90,
+        "ourPrice": 54.90,
+        "discountPrice": 49.90
+      },
+      "badge": "REFRESCANTE"
+    },
+    {
+      "id": "wepink-vf-bloom-desodorante-colonia-70ml",
+      "nome": "WEPINK VF Bloom Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "70ml",
+      "familia_olfativa": "Floral Delicada",
+      "descricao": "Perfume feminino brasileiro com notas florais delicadas e elegantes",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "feminino",
+      "images": ["/images/products/perfumes/perfume_30_vf-bloom-desodorante-colônia-7-wepink_feminino.png"],
+      "pricing": {
+        "basePrice": 69.90,
+        "ourPrice": 54.90,
+        "discountPrice": 49.90
+      },
+      "badge": "DELICADO"
+    },
+    {
+      "id": "wepink-vf-seduce-desodorante-colonia-70ml",
+      "nome": "WEPINK VF Seduce Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "70ml",
+      "familia_olfativa": "Oriental Sedutora",
+      "descricao": "Perfume feminino brasileiro com notas orientais sedutoras e envolventes",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "feminino",
+      "images": ["/images/products/perfumes/perfume_31_vf-seduce-desodorante-colônia-7-wepink_feminino.png"],
+      "pricing": {
+        "basePrice": 69.90,
+        "ourPrice": 54.90,
+        "discountPrice": 49.90
+      },
+      "badge": "SEDUTOR"
+    },
+    {
+      "id": "wepink-wonderful-desodorante-colonia-100ml",
+      "nome": "WEPINK Wonderful Desodorante Colônia",
+      "marca": "WEPINK",
+      "tipo": "Desodorante Colônia",
+      "volume": "100ml",
+      "familia_olfativa": "Floral Frutal",
+      "descricao": "Perfume unissex brasileiro com notas florais frutais maravilhosas",
+      "categoria": "perfumes",
+      "subcategoria": "desodorante-colonia",
+      "genero": "unissex",
+      "images": ["/images/products/perfumes/perfume_32_wonderful-desodorante-colônia-10-wepink_unissex.png"],
+      "pricing": {
+        "basePrice": 79.90,
+        "ourPrice": 59.90,
+        "discountPrice": 54.90
+      },
+      "badge": "BESTSELLER"
+    }
+  ]
+}

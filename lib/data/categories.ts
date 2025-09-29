@@ -78,146 +78,8 @@ export const progressivasBtxProducts: Product[] = [
   }
 ];
 
-// TRATAMENTOS CAPILARES (10 produtos)
+// TRATAMENTOS CAPILARES - removidos produtos placeholder conforme solicitado
 export const tratamentosCapilaresProducts: Product[] = [
-  {
-    id: 'trat-001',
-    name: 'Máscara Reparadora Absolut',
-    brand: 'Kerastase',
-    price: 125.90,
-    rating: 4.8,
-    reviewCount: 345,
-    image: '/images/products/produtos_de_hidratacao/produtos_de_hidratacao_1.jpg',
-    isPopular: true,
-    description: 'Máscara reparadora para cabelos extremamente danificados',
-    features: ['Reparação profunda', 'Cabelos danificados', 'Nutrição intensa', 'Força e elasticidade'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'trat-002',
-    name: 'Ampola Reconstruction 12ml',
-    brand: 'L\'Oreal',
-    price: 45.50,
-    originalPrice: 55.00,
-    rating: 4.6,
-    reviewCount: 289,
-    image: '/images/products/produtos_de_hidratacao/produtos_de_hidratacao_2.jpg',
-    discount: 17,
-    description: 'Ampola de reconstrução capilar intensiva',
-    features: ['Reconstrução', 'Uso intensivo', 'Quebra zero', 'Cabelos fortes'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'trat-003',
-    name: 'Sérum Anti-Queda Crescimento',
-    brand: 'Vichy',
-    price: 89.90,
-    rating: 4.7,
-    reviewCount: 456,
-    image: '/images/products/produtos_de_hidratacao/produtos_de_hidratacao_3.jpg',
-    isNew: true,
-    description: 'Sérum para combater queda e estimular crescimento',
-    features: ['Anti-queda', 'Estimula crescimento', 'Fortalece raiz', 'Densidade'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'trat-004',
-    name: 'Óleo Capilar Argan & Macadâmia',
-    brand: 'Moroccanoil',
-    price: 165.00,
-    rating: 4.9,
-    reviewCount: 378,
-    image: '/images/products/produtos_de_hidratacao/produtos_de_hidratacao_4.jpg',
-    isPopular: true,
-    description: 'Óleo nutritivo com argan e macadâmia',
-    features: ['Nutrição profunda', 'Brilho intenso', 'Proteção', 'Maciez sedosa'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'trat-005',
-    name: 'Leave-in Hidratante 300ml',
-    brand: 'Pantene',
-    price: 35.90,
-    rating: 4.4,
-    reviewCount: 567,
-    image: '/images/products/produtos_de_hidratacao/produtos_de_hidratacao_5.jpg',
-    description: 'Leave-in para hidratação diária',
-    features: ['Hidratação diária', 'Proteção térmica', 'Desembaraça', 'Maciez'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'trat-006',
-    name: 'Cronograma Capilar Completo',
-    brand: 'Seda',
-    price: 78.50,
-    originalPrice: 95.00,
-    rating: 4.5,
-    reviewCount: 234,
-    image: '/images/products/produtos_de_hidratacao/produtos_de_hidratacao_6.jpg',
-    discount: 17,
-    description: 'Kit completo para cronograma capilar',
-    features: ['Kit completo', 'Hidratação', 'Nutrição', 'Reconstrução'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'trat-007',
-    name: 'Tônico Fortalecedor Raiz',
-    brand: 'Phyto',
-    price: 95.90,
-    rating: 4.6,
-    reviewCount: 178,
-    image: '/images/products/produtos_de_hidratacao/produtos_de_hidratacao_7.jpg',
-    description: 'Tônico para fortalecer a raiz e estimular crescimento',
-    features: ['Fortalece raiz', 'Estimula crescimento', 'Circulação', 'Densidade'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'trat-008',
-    name: 'Máscara Matizadora Platinum',
-    brand: 'Blondme',
-    price: 68.90,
-    rating: 4.7,
-    reviewCount: 298,
-    image: '/images/products/produtos_de_hidratacao/produtos_de_hidratacao_8.jpg',
-    description: 'Máscara matizadora para cabelos loiros',
-    features: ['Matiza amarelado', 'Tons platinados', 'Hidratação', 'Brilho'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'trat-009',
-    name: 'Protetor Térmico Professional',
-    brand: 'Tresemmé',
-    price: 42.50,
-    rating: 4.3,
-    reviewCount: 445,
-    image: '/images/products/produtos_de_hidratacao/produtos_de_hidratacao_9.jpg',
-    description: 'Proteção térmica até 230°C',
-    features: ['Proteção 230°C', 'Anti-frizz', 'Brilho', 'Movimento natural'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'trat-010',
-    name: 'Vitamina Capilar Growth',
-    brand: 'Novex',
-    price: 55.90,
-    rating: 4.5,
-    reviewCount: 189,
-    image: '/images/products/produtos_de_hidratacao/produtos_de_hidratacao_10.jpg',
-    isNew: true,
-    description: 'Complexo vitamínico para crescimento capilar',
-    features: ['Complexo vitamínico', 'Crescimento', 'Fortalecimento', 'Nutrição'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
   // PRODUTOS WEPINK - TRATAMENTOS CAPILARES
   {
     id: 'wepink-trat-001',
@@ -867,9 +729,9 @@ export const beautyCategories: Category[] = [
     id: 'tratamentos-capilares',
     name: 'Tratamentos Capilares',
     slug: 'tratamentos-capilares',
-    description: 'Máscaras, ampolas e tratamentos intensivos para todos os tipos de cabelo',
+    description: 'Produtos WEPINK para tratamentos capilares profissionais',
     image: '/images/categories/tratamentos.jpg',
-    productCount: 18,
+    productCount: 8,
     products: tratamentosCapilaresProducts
   },
   {
