@@ -7,7 +7,7 @@ import { categories } from '../data/categories';
 import { getLegacyCompatibleProducts } from '../data/megaHairProducts';
 import { getAllMakeupProducts, getMakeupProductById } from '../data/makeupProducts';
 import { allTintasData, getTintaById } from '../data/tintasProducts';
-import { wepinkPerfumesProducts } from '../data/perfumesProducts';
+import { allPerfumesData } from '../data/perfumesProducts';
 
 interface UnifiedProduct {
   id: string;
@@ -140,8 +140,8 @@ export class ProductResolver {
       marca: product.marca || product.brand || 'Marca não informada',
       description: product.description || product.descricao || 'Descrição não disponível',
       descricao: product.descricao || product.description || 'Descrição não disponível',
-      images: product.images || product.imagens || [],
-      imagens: product.imagens || product.images || [],
+      images: product.images || product.imagens || (product.imagem ? [product.imagem] : []),
+      imagens: product.imagens || product.images || (product.imagem ? [product.imagem] : []),
       badge: product.badge,
       preco_eur: product.preco_eur || product.pricing?.discountPrice || product.price || 0,
       category: product.category || 'Produtos Capilares',
@@ -327,7 +327,7 @@ export class ProductResolver {
       if (isDev) {
         console.log(`🎯 ProductResolver: WEPINK pattern detected, searching perfumes...`);
       }
-      product = wepinkPerfumesProducts.find(p => p.id === productId);
+      product = allPerfumesData.find(p => p.id === productId);
       if (product) {
         source = 'perfumes-validated';
         if (isDev) {
@@ -495,7 +495,7 @@ export class ProductResolver {
     });
 
     // WEPINK perfumes products
-    wepinkPerfumesProducts.forEach(perfume => {
+    allPerfumesData.forEach(perfume => {
       const exists = allProducts.some(p => p.id === perfume.id);
       if (!exists) {
         allProducts.push(this.normalizeProduct(perfume, 'perfumes'));
