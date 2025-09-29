@@ -7,8 +7,7 @@ import Link from 'next/link';
 import { ArrowLeft, Heart, Share2, ShoppingBag, Star, Truck, Shield, RotateCcw, Award } from 'lucide-react';
 import { useCart } from '@/lib/stores/cartStore';
 import { toast } from 'react-toastify';
-// import { useProductData } from '../../../lib/hooks/useProductData'; // Removido - usando apenas productResolver
-import { getAllAvailableProducts } from '../../../lib/services/productResolver';
+import { resolveProductById, getAllAvailableProducts } from '../../../lib/services/productResolver';
 import ImageCarousel from '../../../components/products/ImageCarousel';
 import { ProductSchema } from '../../../components/seo/SchemaMarkup';
 
@@ -18,7 +17,6 @@ export default function ProductDetailPage() {
   const { addItem } = useCart();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [isClient, setIsClient] = useState(false);
 
   // Debug logging - John Carmack style: if there's a problem, show it clearly
@@ -30,45 +28,27 @@ export default function ProductDetailPage() {
   const [quantity, setQuantity] = useState(1);
   const [selectedVariant, setSelectedVariant] = useState(0);
 
-  // Client-side hydration
+  // Client-side hydration and product resolution
   useEffect(() => {
     setIsClient(true);
-  }, []);
 
-  // Fetch product data from API
-  useEffect(() => {
-    const fetchProduct = async () => {
-      if (!params.id || !isClient) return;
-
+    if (params.id) {
+      console.log(`🔍 ProductDetailPage: Resolving product ID "${params.id}"`);
       try {
-        setLoading(true);
-        console.log(`🔍 ProductDetailPage: Fetching product ID "${params.id}"`);
-
-        const response = await fetch(`/api/products/${params.id}`);
-
-        if (response.ok) {
-          const data = await response.json();
-          if (data.success) {
-            console.log(`✅ ProductDetailPage: Successfully loaded product "${data.data.name}"`);
-            setProduct(data.data);
-          } else {
-            console.error(`❌ ProductDetailPage: API returned error: ${data.message}`);
-            setError(data.message || 'Produto não encontrado');
-          }
+        const resolvedProduct = resolveProductById(params.id as string);
+        if (resolvedProduct) {
+          console.log(`✅ ProductDetailPage: Successfully resolved product "${resolvedProduct.name || resolvedProduct.nome}"`);
+          setProduct(resolvedProduct);
         } else {
-          console.error(`❌ ProductDetailPage: HTTP error ${response.status}`);
-          setError('Erro ao carregar produto');
+          console.log(`❌ ProductDetailPage: Product "${params.id}" not found`);
         }
-      } catch (err) {
-        console.error('❌ ProductDetailPage: Network error:', err);
-        setError('Erro ao conectar com o servidor');
+      } catch (error) {
+        console.error('❌ ProductDetailPage: Error resolving product:', error);
       } finally {
         setLoading(false);
       }
-    };
-
-    fetchProduct();
-  }, [params.id, isClient]);
+    }
+  }, [params.id]);
 
   if (loading) {
     return (
@@ -81,13 +61,11 @@ export default function ProductDetailPage() {
     );
   }
 
-  if (error || !product) {
+  if (!product) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">
-            {error || 'Produto não encontrado'}
-          </h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Produto não encontrado</h1>
           <Link
             href="/produtos"
             className="text-amber-600 hover:text-amber-700 font-medium"
