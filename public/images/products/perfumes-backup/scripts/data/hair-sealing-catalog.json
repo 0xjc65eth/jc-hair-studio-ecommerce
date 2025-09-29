@@ -1,0 +1,192 @@
+{
+  "selagem": {
+    "name": "Selagem Capilar",
+    "icon": "🔒",
+    "products": [
+      {
+        "id": "nika-bella-selagem-organica-0-formol",
+        "name": "Nika Bella Selagem Orgânica 0% Formol",
+        "brand": "Nika Bella",
+        "description": "Selagem orgânica profissional livre de formol para todos os tipos de cabelo. Fórmula avançada que promove alisamento natural com proteção e nutrição dos fios.",
+        "price_brl": 165.90,
+        "price_eur": 32.45,
+        "images": [
+          "/images/products/selagem/selagem_1.png"
+        ],
+        "colors": ["Branco/Verde"],
+        "features": [
+          "0% Formol",
+          "Selagem Orgânica",
+          "Todos Tipos Cabelo",
+          "Alisamento Natural",
+          "Proteção dos Fios",
+          "1L Professional"
+        ],
+        "stock": 18,
+        "rating": 4.6,
+        "reviews": 127
+      },
+      {
+        "id": "let-me-be-selante-passo-unico",
+        "name": "Let Me Be Selante Passo Único Semi-Definitiva",
+        "brand": "Let Me Be",
+        "description": "Selante sem formol com colágeno, fito queratina e manteiga de karité. Tecnologia CLX-E termoativa que promove realinhamento capilar com brilho intenso.",
+        "price_brl": 109.90,
+        "price_eur": 22.49,
+        "images": [
+          "/images/products/selagem/selagem_2.png"
+        ],
+        "colors": ["Cinza"],
+        "features": [
+          "Passo Único",
+          "Colágeno",
+          "Fito Queratina",
+          "Manteiga de Karité",
+          "Tecnologia CLX-E",
+          "1000ml"
+        ],
+        "stock": 24,
+        "rating": 4.5,
+        "reviews": 189
+      },
+      {
+        "id": "lala-cosmetics-plastica-fios-selagem-termica",
+        "name": "Lala Cosmetics Plástica dos Fios Selagem Térmica",
+        "brand": "Lala Cosmetics",
+        "description": "Selagem térmica com arginina e açaí para cabelos profissionais. Fórmula que promove reconstrução molecular e selagem duradoura com proteção térmica.",
+        "price_brl": 128.50,
+        "price_eur": 25.82,
+        "images": [
+          "/images/products/selagem/selagem_3.png"
+        ],
+        "colors": ["Rosa"],
+        "features": [
+          "Selagem Térmica",
+          "Arginina + Açaí",
+          "Reconstrução Molecular",
+          "Proteção Térmica",
+          "Uso Profissional",
+          "960ml"
+        ],
+        "stock": 16,
+        "rating": 4.4,
+        "reviews": 98
+      },
+      {
+        "id": "dos-coracoes-rosa-mosqueta-liso-espelhado",
+        "name": "Dos Corações Rosa Mosqueta Selagem Liso Espelhado",
+        "brand": "Dos Corações",
+        "description": "Selagem premium com óleo de rosa mosqueta para liso espelhado. Fórmula 5D que proporciona alisamento profundo com nutrição e brilho intenso.",
+        "price_brl": 185.00,
+        "price_eur": 36.18,
+        "images": [
+          "/images/products/selagem/selagem_4.png"
+        ],
+        "colors": ["Branco"],
+        "features": [
+          "Óleo Rosa Mosqueta",
+          "Liso Espelhado",
+          "Fórmula 5D",
+          "Passo Único",
+          "Alisamento Profundo",
+          "1L Premium"
+        ],
+        "stock": 12,
+        "rating": 4.8,
+        "reviews": 156
+      },
+      {
+        "id": "flo-lifetime-keratin-repair-reducing-protein",
+        "name": "FLO Lifetime Keratin Repair Reducing Protein",
+        "brand": "FLO Lifetime",
+        "description": "Proteína redutora com queratina para reparo capilar intensivo. Fórmula concentrada que reconstrói fibras danificadas proporcionando efeito alisante duradouro.",
+        "price_brl": 145.80,
+        "price_eur": 29.15,
+        "images": [
+          "/images/products/selagem/selagem_5.png"
+        ],
+        "colors": ["Branco/Marrom"],
+        "features": [
+          "Proteína Redutora",
+          "Queratina Repair",
+          "Reparo Intensivo",
+          "Reconstrói Fibras",
+          "Efeito Alisante",
+          "1L Professional"
+        ],
+        "stock": 21,
+        "rating": 4.7,
+        "reviews": 134
+      },
+      {
+        "id": "tropicalis-reducing-protein-phytoactives",
+        "name": "Tropicalis Reducing Protein com Fitoativos",
+        "brand": "Tropicalis",
+        "description": "Proteína redutora enriquecida com fitoativos tropicais. Fórmula orgânica que promove alisamento natural respeitando a estrutura capilar com nutrição profunda.",
+        "price_brl": 135.90,
+        "price_eur": 27.22,
+        "images": [
+          "/images/products/selagem/selagem_6.png"
+        ],
+        "colors": ["Verde/Dourado"],
+        "features": [
+          "Fitoativos Tropicais",
+          "Proteína Redutora",
+          "Fórmula Orgânica",
+          "Alisamento Natural",
+          "Nutrição Profunda",
+          "1000ml"
+        ],
+        "stock": 19,
+        "rating": 4.6,
+        "reviews": 112
+      },
+      {
+        "id": "borella-selagem-organica-3d-semi-definitiva",
+        "name": "Bórella Selagem Orgânica 3D Semi-Definitiva",
+        "brand": "Bórella",
+        "description": "Selagem orgânica 3D sem formol com passo único. Biocomplex com 19 aminoácidos, ácido hialurônico e queratina para alisamento duradouro até 3 meses.",
+        "price_brl": 129.90,
+        "price_eur": 26.04,
+        "images": [
+          "/images/products/selagem/selagem_7.png"
+        ],
+        "colors": ["Branco/Azul"],
+        "features": [
+          "Selagem 3D",
+          "0% Formol",
+          "19 Aminoácidos",
+          "Ácido Hialurônico",
+          "Duração 3 Meses",
+          "1000ml"
+        ],
+        "stock": 27,
+        "rating": 4.7,
+        "reviews": 203
+      },
+      {
+        "id": "lusty-organic-protein-volume-reducer",
+        "name": "Lusty Organic Protein Volume Reducer Straightening Blow",
+        "brand": "Lusty",
+        "description": "Proteína orgânica redutora de volume com efeito alisante. Escova orgânica que controla frizz e proporciona alisamento natural com selagem molecular.",
+        "price_brl": 118.50,
+        "price_eur": 24.27,
+        "images": [
+          "/images/products/selagem/selagem_8.png"
+        ],
+        "colors": ["Branco"],
+        "features": [
+          "Proteína Orgânica",
+          "Redutora de Volume",
+          "Efeito Alisante",
+          "Escova Orgânica",
+          "Controla Frizz",
+          "Selagem Molecular"
+        ],
+        "stock": 22,
+        "rating": 4.5,
+        "reviews": 167
+      }
+    ]
+  }
+}

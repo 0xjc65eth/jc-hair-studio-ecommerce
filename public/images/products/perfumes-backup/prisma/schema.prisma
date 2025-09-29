@@ -1,0 +1,1015 @@
+// JC Hair Studio's 62 - E-commerce Database Schema
+// Prisma schema file for hair extensions e-commerce - MongoDB
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGODB_URI")
+}
+
+// ================================
+// USER MANAGEMENT
+// ================================
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  password  String?
+  name      String?
+  phone     String?
+  locale    String   @default("pt")
+  image     String?
+
+  // OAuth fields
+  googleId     String?  @unique
+  facebookId   String?  @unique
+  twitterId    String?  @unique
+  avatar       String?
+
+  // NextAuth required fields
+  emailVerified DateTime?
+  
+  // Profile info
+  firstName    String?
+  lastName     String?
+  dateOfBirth  DateTime?
+  gender       Gender?
+  
+  // Preferences
+  newsletter   Boolean  @default(false)
+  marketing    Boolean  @default(false)
+  
+  // Status
+  isActive     Boolean  @default(true)
+  isVerified   Boolean  @default(false)
+  role         UserRole @default(CUSTOMER)
+
+  // Programa de Pontos
+  totalPoints     Int      @default(0)
+  availablePoints Int      @default(0)
+  usedPoints      Int      @default(0)
+  tierLevel       TierLevel @default(BRONZE)
+  tierProgress    Int      @default(0)
+  
+  // Timestamps
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  lastLoginAt  DateTime?
+  
+  // Relations - MongoDB ObjectId refs
+  addressIds   String[] @db.ObjectId
+  orderIds     String[] @db.ObjectId
+  reviewIds    String[] @db.ObjectId
+  wishlistIds  String[] @db.ObjectId
+  cartItemIds  String[] @db.ObjectId
+
+  // NextAuth relations
+  accounts Account[]
+  sessions Session[]
+
+  @@map("users")
+}
+
+enum UserRole {
+  CUSTOMER
+  ADMIN
+  SUPER_ADMIN
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
+  PREFER_NOT_TO_SAY
+}
+
+enum TierLevel {
+  BRONZE
+  SILVER
+  GOLD
+  PLATINUM
+  DIAMOND
+}
+
+model Address {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+  
+  // Address details
+  type        AddressType @default(SHIPPING)
+  firstName   String
+  lastName    String
+  company     String?
+  
+  // Location
+  street1     String
+  street2     String?
+  city        String
+  state       String?
+  postalCode  String
+  country     String   @default("PT")
+  
+  // Contact
+  phone       String?
+  
+  // Flags
+  isDefault   Boolean  @default(false)
+  isActive    Boolean  @default(true)
+  
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@map("addresses")
+}
+
+enum AddressType {
+  SHIPPING
+  BILLING
+  BOTH
+}
+
+// ================================
+// PRODUCT CATALOG
+// ================================
+
+model Category {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  slug        String   @unique
+  description String?
+  
+  // SEO & Marketing
+  metaTitle       String?
+  metaDescription String?
+  keywords        String?
+  
+  // Media
+  image           String?
+  banner          String?
+  
+  // Hierarchy - using String ref for MongoDB
+  parentId        String?  @db.ObjectId
+  childrenIds     String[] @db.ObjectId
+  
+  // Display
+  displayOrder    Int      @default(0)
+  isActive        Boolean  @default(true)
+  isFeatured      Boolean  @default(false)
+  
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  // Product relations
+  productIds      String[] @db.ObjectId
+  
+  @@map("categories")
+}
+
+model Product {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  slug        String   @unique
+  description String?
+  shortDesc   String?
+  
+  // SKU & Inventory
+  sku         String   @unique
+  barcode     String?
+  
+  
+  // Physical attributes
+  weight      Float?   // in grams
+  length      Int?     // hair length in cm
+  
+  // Hair-specific attributes
+  hairType    HairType?
+  hairTexture HairTexture?
+  hairColor   String?
+  hairOrigin  String?
+  
+  // Brazilian product attributes
+  brand       String?
+  productLine String?
+  volume      String?   // 1000ml, 500ml, etc
+  
+  // Product type for Brazilian hair studio
+  productType ProductType @default(HAIR_EXTENSION)
+  
+  // Stock
+  trackQuantity Boolean @default(true)
+  quantity      Int     @default(0)
+  lowStockAlert Int     @default(5)
+  
+  // Status
+  status        ProductStatus @default(DRAFT)
+  isDigital     Boolean       @default(false)
+  requiresShipping Boolean    @default(true)
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?
+  keywords        String?
+  
+  // Display
+  displayOrder    Int     @default(0)
+  isFeatured      Boolean @default(false)
+  
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  publishedAt     DateTime?
+  
+  // Relations - ObjectId arrays for MongoDB
+  categoryIds     String[] @db.ObjectId
+  variantIds      String[] @db.ObjectId
+  imageIds        String[] @db.ObjectId
+  reviewIds       String[] @db.ObjectId
+  tagIds          String[] @db.ObjectId
+  optionIds       String[] @db.ObjectId
+  
+  // Embedded images array (alternative to separate collection)
+  images          ProductImage[]
+  
+  // Embedded options array
+  options         ProductOption[]
+
+  // Inventory relations
+  inventory       Inventory[]
+  lowStockAlerts  LowStockAlert[]
+
+  @@map("products")
+}
+
+enum ProductStatus {
+  DRAFT
+  ACTIVE
+  ARCHIVED
+  OUT_OF_STOCK
+}
+
+enum ProductType {
+  HAIR_EXTENSION
+  HAIR_TREATMENT
+  NAIL_POLISH
+  MAKEUP
+  TOOL_PROFESSIONAL
+  BODY_CARE
+  HAIR_CARE
+}
+
+enum HairType {
+  STRAIGHT
+  WAVY
+  CURLY
+  COILY
+  MIXED
+}
+
+enum HairTexture {
+  FINE
+  MEDIUM
+  COARSE
+  EXTRA_COARSE
+}
+
+// Embedded type for product images
+type ProductImage {
+  url          String
+  alt          String?
+  title        String?
+  displayOrder Int     @default(0)
+  isMain       Boolean @default(false)
+}
+
+// Embedded type for product options
+type ProductOption {
+  id           String      @default(cuid())
+  name         String      // "Cor", "Tamanho", "Volume"
+  displayName  String      // "Escolha a cor", "Selecione o tamanho"
+  type         OptionType  @default(SELECT)
+  isRequired   Boolean     @default(true)
+  displayOrder Int         @default(0)
+  values       ProductOptionValue[]
+}
+
+enum OptionType {
+  SELECT      // Dropdown
+  RADIO       // Radio buttons
+  COLOR       // Color picker
+  SIZE        // Size selector
+}
+
+// Embedded type for option values
+type ProductOptionValue {
+  id              String  @default(cuid())
+  value           String  // "Preto", "60cm", "1000ml"
+  label           String? // Display label if different from value
+  hexColor        String? // For color options
+  quantity        Int     @default(0)
+  isActive        Boolean @default(true)
+  displayOrder    Int     @default(0)
+}
+
+model ProductVariant {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  productId String   @db.ObjectId
+  
+  // Variant details
+  name      String
+  sku       String   @unique
+  
+  // Specific attributes
+  size      String?  // 50cm, 60cm, etc.
+  color     String?  // Color name or code
+  
+  
+  // Stock override
+  quantity  Int      @default(0)
+  
+  // Status
+  isActive  Boolean  @default(true)
+  
+  // Display
+  displayOrder Int   @default(0)
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Inventory relations
+  inventory     Inventory[]
+  lowStockAlerts LowStockAlert[]
+
+  @@map("product_variants")
+}
+
+// ================================
+// TAGS SYSTEM
+// ================================
+
+model Tag {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String   @unique
+  slug        String   @unique
+  description String?
+  color       String?  // Hex color for tag display
+  
+  // Display
+  displayOrder Int     @default(0)
+  isActive     Boolean @default(true)
+  
+  // Timestamps
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  // Product relations
+  productIds   String[] @db.ObjectId
+  
+  @@map("tags")
+}
+
+// ================================
+// SHOPPING CART & WISHLIST
+// ================================
+
+model CartItem {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String?  @db.ObjectId
+  sessionId String?
+  productId String   @db.ObjectId
+  variantId String?  @db.ObjectId
+  
+  quantity  Int      @default(1)
+  
+  // Selected options for this cart item
+  selectedOptions Json?
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("cart_items")
+}
+
+model WishlistItem {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  productId String   @db.ObjectId
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  
+  @@unique([userId, productId])
+  @@map("wishlist_items")
+}
+
+// ================================
+// ORDER MANAGEMENT
+// ================================
+
+model Order {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  orderNumber   String   @unique
+  userId        String?  @db.ObjectId
+  
+  // Contact info (for guest orders)
+  email         String
+  phone         String?
+  
+  // Embedded address objects (no separate relations in MongoDB)
+  shippingAddress OrderAddress?
+  billingAddress  OrderAddress?
+  
+  
+  // Currency
+  currency      String   @default("EUR")
+  
+  // Status
+  status        OrderStatus @default(PENDING)
+  paymentStatus PaymentStatus @default(PENDING)
+  fulfillmentStatus FulfillmentStatus @default(PENDING)
+  
+  // Shipping
+  shippingMethod String?
+  trackingNumber String?
+  
+  // Notes
+  notes         String?
+  customerNotes String?
+  
+  // Timestamps
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  shippedAt     DateTime?
+  deliveredAt   DateTime?
+  canceledAt    DateTime?
+  
+  // Embedded order items
+  items         OrderItem[]
+  
+  // Payment IDs
+  paymentIds    String[] @db.ObjectId
+  
+  @@map("orders")
+}
+
+// Embedded address type for orders
+type OrderAddress {
+  firstName  String
+  lastName   String
+  company    String?
+  street1    String
+  street2    String?
+  city       String
+  state      String?
+  postalCode String
+  country    String
+  phone      String?
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  PARTIAL
+  FAILED
+  CANCELLED
+  REFUNDED
+}
+
+enum FulfillmentStatus {
+  PENDING
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+// Embedded order item type
+type OrderItem {
+  id        String @default(cuid())
+  productId String @db.ObjectId
+  variantId String? @db.ObjectId
+  
+  // Item details at time of purchase
+  name      String
+  sku       String
+  quantity  Int
+  
+  // Selected options snapshot
+  selectedOptions Json?
+}
+
+// ================================
+// PAYMENT SYSTEM
+// ================================
+
+model Payment {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  orderId       String   @db.ObjectId
+  
+  method        PaymentMethod
+  
+  // External references
+  stripePaymentIntentId String?
+  stripeChargeId        String?
+  paypalOrderId         String?
+  bitcoinAddress        String?
+  bitcoinTxId           String?
+  
+  // Status
+  status        PaymentStatus @default(PENDING)
+  
+  // Gateway response
+  gatewayResponse Json?
+  
+  // Timestamps
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  paidAt        DateTime?
+  failedAt      DateTime?
+  
+  @@map("payments")
+}
+
+enum PaymentMethod {
+  CREDIT_CARD
+  DEBIT_CARD
+  SEPA
+  PAYPAL
+  PIX
+  BITCOIN
+  BANK_TRANSFER
+  MULTIBANCO
+  BANCONTACT
+}
+
+// ================================
+// REVIEWS & RATINGS
+// ================================
+
+model Review {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  productId String   @db.ObjectId
+  userId    String   @db.ObjectId
+  
+  // Review content
+  rating    Int      // 1-5 stars
+  title     String?
+  content   String
+  
+  // Status
+  isVerified Boolean @default(false)
+  isPublished Boolean @default(true)
+  
+  // Helpful votes
+  helpfulCount Int   @default(0)
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@unique([productId, userId])
+  @@map("reviews")
+}
+
+// ================================
+// COUPONS & DISCOUNTS
+// ================================
+
+model Coupon {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  code        String   @unique
+  name        String
+  description String?
+  
+  
+  // Usage limits
+  usageLimit  Int?
+  usageCount  Int          @default(0)
+  usageLimitPerUser Int?   @default(1)
+  
+  // Validity
+  validFrom   DateTime
+  validTo     DateTime?
+  
+  // Status
+  isActive    Boolean      @default(true)
+  
+  // Timestamps
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  
+  @@map("coupons")
+}
+
+// ================================
+// PROGRAMA DE PONTOS
+// ================================
+
+model PointsTransaction {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+
+  // Transaction details
+  type        PointsTransactionType
+  points      Int      // Positive for earn, negative for redeem
+  description String
+
+  // References
+  orderId     String?  @db.ObjectId
+  productId   String?  @db.ObjectId
+  couponId    String?  @db.ObjectId
+
+  // Metadata
+  metadata    Json?    // Extra data like tier bonus, special promotion, etc.
+
+  // Status
+  status      PointsTransactionStatus @default(COMPLETED)
+  expiresAt   DateTime? // For points that expire
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("points_transactions")
+}
+
+enum PointsTransactionType {
+  PURCHASE        // Points earned from purchase
+  SIGNUP_BONUS    // Welcome bonus
+  BIRTHDAY_BONUS  // Birthday points
+  REVIEW_BONUS    // Points for writing reviews
+  REFERRAL_BONUS  // Points for referring friends
+  TIER_BONUS      // Tier upgrade bonus
+  REDEEM_DISCOUNT // Points redeemed for discount
+  REDEEM_PRODUCT  // Points redeemed for free product
+  EXPIRED         // Points expired
+  ADJUSTMENT      // Admin adjustment
+}
+
+enum PointsTransactionStatus {
+  PENDING
+  COMPLETED
+  CANCELLED
+  EXPIRED
+}
+
+model PointsReward {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+
+  // Reward details
+  name        String
+  description String
+  type        RewardType
+  pointsCost  Int
+
+  // Reward value
+  discountPercent  Int?     // For percentage discounts
+  discountFixed    Float?   // For fixed amount discounts
+  productId        String?  @db.ObjectId // For free products
+  freeShipping     Boolean  @default(false)
+
+  // Availability
+  minTierLevel     TierLevel @default(BRONZE)
+  maxRedemptions   Int?      // Global limit
+  maxPerUser       Int?      @default(1)
+
+  // Validity
+  validFrom   DateTime
+  validTo     DateTime?
+
+  // Status
+  isActive    Boolean  @default(true)
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("points_rewards")
+}
+
+enum RewardType {
+  PERCENTAGE_DISCOUNT
+  FIXED_DISCOUNT
+  FREE_PRODUCT
+  FREE_SHIPPING
+  TIER_UPGRADE
+}
+
+model PointsRedemption {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+  rewardId    String   @db.ObjectId
+
+  // Redemption details
+  pointsUsed  Int
+  status      RedemptionStatus @default(PENDING)
+
+  // Usage tracking
+  orderId     String?  @db.ObjectId // If used in an order
+  usedAt      DateTime?
+  expiresAt   DateTime?
+
+  // Generated coupon code for redemption
+  couponCode  String?  @unique
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("points_redemptions")
+}
+
+enum RedemptionStatus {
+  PENDING
+  ACTIVE
+  USED
+  EXPIRED
+  CANCELLED
+}
+
+enum DiscountType {
+  PERCENTAGE
+  FIXED_AMOUNT
+  FREE_SHIPPING
+}
+
+// ================================
+// CONTENT MANAGEMENT
+// ================================
+
+model Page {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  slug        String   @unique
+  content     String
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?
+  keywords        String?
+  
+  // Status
+  isPublished Boolean  @default(false)
+  
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  publishedAt DateTime?
+  
+  @@map("pages")
+}
+
+model BlogPost {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  slug        String   @unique
+  excerpt     String?
+  content     String
+  
+  // Media
+  featuredImage String?
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?
+  keywords        String?
+  
+  // Status
+  isPublished Boolean  @default(false)
+  isFeatured  Boolean  @default(false)
+  
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  publishedAt DateTime?
+  
+  @@map("blog_posts")
+}
+
+// ================================
+// NEWSLETTER & MARKETING
+// ================================
+
+model NewsletterSubscriber {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  email     String   @unique
+  name      String?
+  
+  // Preferences
+  locale    String   @default("pt")
+  interests String[]
+  source    String?  // "popup", "footer", "checkout"
+  
+  // Status
+  isActive  Boolean  @default(true)
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("newsletter_subscribers")
+}
+
+// ================================
+// SYSTEM SETTINGS
+// ================================
+
+model Setting {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  key       String   @unique
+  value     String
+  type      String   @default("string")
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("settings")
+}
+
+// ================================
+// ANALYTICS & TRACKING
+// ================================
+
+model PageView {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  path      String
+  userId    String?  @db.ObjectId
+  sessionId String
+  
+  // Request details
+  userAgent String?
+  ip        String?
+  referer   String?
+  
+  // Timestamps
+  createdAt DateTime @default(now())
+  
+  @@map("page_views")
+}
+
+model ProductView {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  productId String   @db.ObjectId
+  userId    String?  @db.ObjectId
+  sessionId String
+
+  // Timestamps
+  createdAt DateTime @default(now())
+
+  @@map("product_views")
+}
+
+// ================================
+// INVENTORY MANAGEMENT
+// ================================
+
+model Inventory {
+  id                   String   @id @default(auto()) @map("_id") @db.ObjectId
+  productId            String   @db.ObjectId
+  variantId            String?  @db.ObjectId
+
+  // Stock details
+  sku                  String   @unique
+  quantity             Int      @default(0)
+  reservedQuantity     Int      @default(0)
+  lowStockThreshold    Int      @default(5)
+  reorderPoint         Int      @default(10)
+  reorderQuantity      Int      @default(50)
+
+  // Location and tracking
+  location             String?  // Warehouse location
+  trackQuantity        Boolean  @default(true)
+
+  // Relations
+  product              Product  @relation(fields: [productId], references: [id])
+  variant              ProductVariant? @relation(fields: [variantId], references: [id])
+  stockMovements       StockMovement[]
+
+  // Timestamps
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@unique([productId, variantId])
+  @@map("inventory")
+}
+
+model StockMovement {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  inventoryId String   @db.ObjectId
+
+  // Movement details
+  type        StockMovementType
+  quantity    Int
+  reason      String
+  reference   String?  // Order ID, purchase ID, etc.
+
+  // User tracking
+  userId      String?  @db.ObjectId
+
+  // Relations
+  inventory   Inventory @relation(fields: [inventoryId], references: [id])
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+
+  @@map("stock_movements")
+}
+
+enum StockMovementType {
+  IN         // Stock added
+  OUT        // Stock sold/used
+  ADJUSTMENT // Manual adjustment
+  RESERVED   // Stock reserved for order
+  RELEASED   // Reserved stock released
+}
+
+model LowStockAlert {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  productId   String   @db.ObjectId
+  variantId   String?  @db.ObjectId
+
+  // Alert details
+  currentStock Int
+  threshold    Int
+  status       AlertStatus @default(ACTIVE)
+
+  // Relations
+  product     Product @relation(fields: [productId], references: [id])
+  variant     ProductVariant? @relation(fields: [variantId], references: [id])
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([productId, variantId])
+  @@map("low_stock_alerts")
+}
+
+enum AlertStatus {
+  ACTIVE
+  RESOLVED
+  DISMISSED
+}
+
+// ================================
+// NEXTAUTH REQUIRED MODELS
+// ================================
+
+model Account {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId            String  @db.ObjectId
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.String
+  access_token      String? @db.String
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.String
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  sessionToken String   @unique
+  userId       String   @db.ObjectId
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verificationtokens")
+}

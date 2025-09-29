@@ -1,0 +1,156 @@
+version: "3.9"
+
+services:
+  # ============================
+  # Next.js Application
+  # ============================
+  web:
+    build: .
+    container_name: jc-hair-studio-web
+    restart: always
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: development
+      PORT: 3001
+      DATABASE_URL: mongodb://mongo:27017/jc_hair_studio
+      NEXTAUTH_URL: http://localhost:3001
+      NEXTAUTH_SECRET: local-dev-secret-change-in-production
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET}
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+      FROM_EMAIL: orders@jchairstudios62.xyz
+      SUPPORT_EMAIL: suporte@jchairstudios62.xyz
+      SMTP_HOST: mailhog
+      SMTP_PORT: 1025
+    depends_on:
+      - mongo
+      - mailhog
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      - jc-hair-network
+
+  # ============================
+  # MongoDB Database
+  # ============================
+  mongo:
+    image: mongo:6
+    container_name: jc-hair-studio-db
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: jc_hair_studio
+    volumes:
+      - mongo_data:/data/db
+      - ./scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - jc-hair-network
+
+  # ============================
+  # MongoDB UI (Mongo Express)
+  # ============================
+  mongo-express:
+    image: mongo-express:latest
+    container_name: jc-hair-studio-db-ui
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password123
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin
+    depends_on:
+      - mongo
+    networks:
+      - jc-hair-network
+
+  # ============================
+  # MailHog (Email Testing)
+  # ============================
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: jc-hair-studio-mailhog
+    restart: always
+    ports:
+      - "8025:8025" # Web UI
+      - "1025:1025" # SMTP
+    networks:
+      - jc-hair-network
+
+  # ============================
+  # Redis (Para sessões e cache)
+  # ============================
+  redis:
+    image: redis:7-alpine
+    container_name: jc-hair-studio-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    networks:
+      - jc-hair-network
+
+  # ============================
+  # Test Runner (Para testes contínuos)
+  # ============================
+  test-runner:
+    build: .
+    container_name: jc-hair-studio-tests
+    restart: "no"
+    environment:
+      NODE_ENV: test
+      TEST_BASE_URL: http://web:3001
+      DATABASE_URL: mongodb://mongo:27017/jc_hair_studio_test
+    command: npm run test:loop
+    depends_on:
+      - web
+      - mongo
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      - jc-hair-network
+
+  # ============================
+  # Multi-Agent Test Suite
+  # ============================
+  multi-agent-tests:
+    build: .
+    container_name: jc-hair-studio-agents
+    restart: "no"
+    environment:
+      NODE_ENV: test
+      TEST_BASE_URL: http://web:3001
+      DATABASE_URL: mongodb://mongo:27017/jc_hair_studio_test
+    command: npm run test:agents --loop
+    depends_on:
+      - web
+      - mongo
+      - mailhog
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      - jc-hair-network
+
+volumes:
+  mongo_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  jc-hair-network:
+    driver: bridge

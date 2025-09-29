@@ -1,0 +1,238 @@
+/* Header & Navigation */
+.header-glass {
+  @apply backdrop-blur-md bg-white/90 border-b border-gray-100 sticky top-0 z-50;
+}
+
+/* Header container positioning */
+header .container-custom {
+  @apply relative z-50;
+}
+
+/* Header actions visibility */
+header .flex.items-center {
+  @apply relative z-[51];
+}
+
+.nav-link {
+  @apply text-sm font-medium text-gray-700 hover:text-black 
+         transition-colors duration-200 relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #1a1a1a;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.mobile-menu {
+  @apply lg:hidden absolute top-full left-0 right-0 bg-white border-t 
+         border-gray-100 shadow-lg py-4;
+}
+
+/* Product Cards */
+.product-card {
+  @apply relative overflow-hidden bg-white border border-gray-100 
+         hover:shadow-xl transition-all duration-300;
+}
+
+
+.product-image {
+  @apply aspect-square w-full object-cover group-hover:scale-105 
+         transition-transform duration-500;
+}
+
+.product-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 
+         transition-all duration-300 flex items-end justify-center pb-4;
+}
+
+.product-quick-view {
+  @apply bg-white text-black px-6 py-2 font-medium text-sm 
+         opacity-0 group-hover:opacity-100 transform translate-y-4 
+         group-hover:translate-y-0 transition-all duration-300;
+}
+
+/* Cart & Checkout */
+.cart-item {
+  @apply flex items-center gap-4 p-4 border-b border-gray-100 last:border-b-0;
+}
+
+.cart-counter {
+  @apply absolute -top-2 -right-2 bg-black text-white text-xs
+         rounded-full h-5 w-5 flex items-center justify-center z-[60]
+         font-semibold border-2 border-white shadow-lg;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Make cart counter more visible */
+.cart-counter::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Cart button visibility enhancement */
+[data-testid="cart-button"],
+[data-testid="mobile-cart-button"] {
+  @apply relative min-w-[44px] min-h-[44px] flex items-center justify-center;
+}
+
+[data-testid="cart-button"]:hover,
+[data-testid="mobile-cart-button"]:hover {
+  @apply bg-gray-100 rounded-lg scale-105 shadow-md;
+}
+
+[data-testid="cart-button"]:active,
+[data-testid="mobile-cart-button"]:active {
+  @apply scale-95;
+}
+
+/* Enhanced visibility when cart has items */
+[data-testid="cart-button"]:has(.cart-counter),
+[data-testid="mobile-cart-button"]:has(.cart-counter) {
+  @apply ring-2 ring-gray-200 bg-gray-50 rounded-lg;
+}
+
+.price-display {
+  @apply font-medium text-lg;
+}
+
+.price-original {
+  @apply text-gray-400 line-through text-sm ml-2;
+}
+
+/* Forms */
+.form-group {
+  @apply space-y-2;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.form-error {
+  @apply text-red-500 text-sm;
+}
+
+.form-success {
+  @apply text-green-500 text-sm;
+}
+
+/* Language Selector */
+.language-selector {
+  @apply relative inline-block text-left;
+}
+
+.language-dropdown {
+  @apply absolute right-0 mt-2 w-48 origin-top-right bg-white 
+         border border-gray-200 divide-y divide-gray-100 rounded-md 
+         shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50;
+}
+
+.language-option {
+  @apply flex items-center px-4 py-2 text-sm text-gray-700 
+         hover:bg-gray-50 hover:text-gray-900;
+}
+
+/* Currency & Format */
+.currency-eur {
+  @apply after:content-['€'] after:ml-1 after:text-sm after:text-gray-500;
+}
+
+/* Loading States */
+.skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+.skeleton-text {
+  @apply h-4 bg-gray-200 rounded animate-pulse;
+}
+
+.skeleton-image {
+  @apply aspect-square bg-gray-200 rounded animate-pulse;
+}
+
+/* Toast Notifications */
+.toast {
+  @apply fixed bottom-4 right-4 max-w-sm bg-white border border-gray-200 
+         rounded-md shadow-lg p-4 transform transition-all duration-300 z-50;
+}
+
+.toast.success {
+  @apply border-green-200 bg-green-50;
+}
+
+.toast.error {
+  @apply border-red-200 bg-red-50;
+}
+
+.toast.info {
+  @apply border-blue-200 bg-blue-50;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
+}
+
+/* Responsive breakpoints customization */
+@media (max-width: 640px) {
+  .container-custom {
+    @apply px-3;
+  }
+  
+  .section-padding {
+    @apply py-12;
+  }
+  
+  .text-hero {
+    @apply text-3xl;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

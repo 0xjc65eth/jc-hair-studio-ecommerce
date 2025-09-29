@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "totalProducts": 287,
+    "totalCategories": 14,
+    "totalBrands": 51,
+    "priceRange": {
+      "min": 5.15,
+      "max": 385
+    },
+    "generated": "2025-09-19T02:20:22.092Z"
+  },
+  "categories": {
+    "Coloração": [
+      {
+        "key": "tinta_amend",
+        "name": "Coloração Capilar",
+        "count": 6
+      },
+      {
+        "key": "tinta_nutrisse",
+        "name": "Coloração Capilar",
+        "count": 10
+      },
+      {
+        "key": "tinta_alta_moda_",
+        "name": "Coloração Capilar",
+        "count": 29
+      },
+      {
+        "key": "tinta_beauty_color",
+        "name": "Coloração Capilar",
+        "count": 46
+      },
+      {
+        "key": "tinta_excllusiv",
+        "name": "Coloração Capilar",
+        "count": 24
+      },
+      {
+        "key": "tinta_biocolor",
+        "name": "Coloração Capilar",
+        "count": 23
+      },
+      {
+        "key": "tinta_wella",
+        "name": "Coloração Capilar",
+        "count": 43
+      },
+      {
+        "key": "tinta_loreal",
+        "name": "Coloração Capilar",
+        "count": 22
+      }
+    ],
+    "Tratamentos": [
+      {
+        "key": "progressivas",
+        "name": "Tratamentos Progressivos Diversos",
+        "count": 21
+      },
+      {
+        "key": "selagem",
+        "name": "Selagem Capilar",
+        "count": 8
+      },
+      {
+        "key": "botox",
+        "name": "Produtos Botox Capilar",
+        "count": 14
+      },
+      {
+        "key": "relaxamentos",
+        "name": "Relaxamentos Capilares",
+        "count": 11
+      }
+    ],
+    "Cuidados": [
+      {
+        "key": "bio_extratus_produtos_",
+        "name": "Produtos Capilares",
+        "count": 14
+      },
+      {
+        "key": "hidratacao",
+        "name": "Produtos de Hidratação",
+        "count": 16
+      }
+    ]
+  },
+  "filters": {
+    "brands": [
+      "Afro Hair",
+      "Alta Moda",
+      "Amazon Oil",
+      "Amend",
+      "Anaconda",
+      "Beauty Color",
+      "Bio Extratus",
+      "Biocolor",
+      "Bonequinha",
+      "Brazilicious",
+      "Bóratx",
+      "Bórella",
+      "Cadiveu",
+      "CocoCHOCO",
+      "Dos Corações",
+      "Embelleze",
+      "Empodera",
+      "Etna Hair",
+      "Excllusiv",
+      "FLO Lifetime",
+      "FT Cosmetics",
+      "Forever Liss",
+      "Garnier Nutrisse",
+      "Genérico",
+      "HairLife",
+      "I Belo Capelo",
+      "Inya",
+      "L'Oréal Paris",
+      "La Grace",
+      "Lala Cosmetics",
+      "Lanox",
+      "Let Me Be",
+      "Lusty",
+      "Luxury Professional",
+      "Maria Escandalosa",
+      "Nika Bella",
+      "Novex",
+      "Nuance",
+      "Orgânico",
+      "Plástica dos Fios",
+      "Probelle",
+      "Prohall",
+      "Richée",
+      "Rofer",
+      "Roffer",
+      "Salon Line",
+      "T'ZAHA",
+      "TopVip",
+      "Tropicalis",
+      "Versus",
+      "Wella Professionals"
+    ],
+    "treatments": [
+      "Botox Capilar",
+      "Hidratação",
+      "Progressiva",
+      "Reconstrução",
+      "Relaxamento",
+      "Selagem"
+    ],
+    "hairTypes": [
+      "Cacheado",
+      "Crespo",
+      "Liso",
+      "Todos os tipos"
+    ],
+    "formulas": [
+      "Livre de Formol",
+      "Natural",
+      "Orgânico",
+      "Profissional",
+      "Vegano"
+    ],
+    "priceRanges": [
+      {
+        "min": 0,
+        "max": 50,
+        "label": "Até R$ 50"
+      },
+      {
+        "min": 50,
+        "max": 100,
+        "label": "R$ 50 - R$ 100"
+      },
+      {
+        "min": 100,
+        "max": 200,
+        "label": "R$ 100 - R$ 200"
+      },
+      {
+        "min": 200,
+        "max": 500,
+        "label": "R$ 200 - R$ 500"
+      },
+      {
+        "min": 500,
+        "max": null,
+        "label": "Acima de R$ 500"
+      }
+    ]
+  }
+}

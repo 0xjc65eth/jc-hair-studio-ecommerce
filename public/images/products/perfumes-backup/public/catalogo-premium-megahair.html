@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC Hair Studio's 62 - Catálogo Premium Mega Hair</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #d4af37;
+            --secondary: #2c2c2c;
+            --accent: #f5f5f5;
+            --text: #333;
+            --shadow: rgba(0,0,0,0.1);
+            --premium: #8B7355;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            color: white;
+            padding: 3rem 0;
+            box-shadow: 0 8px 30px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--primary), #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--primary);
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .expert-credentials {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), #f4e4c1);
+            color: var(--secondary);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Professional Tips */
+        .professional-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 3rem auto;
+            max-width: 1400px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px var(--shadow);
+        }
+
+        .professional-section h3 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tip-card {
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-card h4 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tip-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Filters */
+        .filters {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 3rem auto;
+            max-width: 1400px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px var(--shadow);
+        }
+
+        .filter-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-section h3 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--primary);
+            background: white;
+            color: var(--secondary);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), #f4e4c1);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .filter-btn:hover::before,
+        .filter-btn.active::before {
+            left: 0;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .clear-filters {
+            background: linear-gradient(135deg, #ff6b6b, #ff5252);
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+        }
+
+        .clear-filters:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.5);
+        }
+
+        /* Product Grid */
+        .products-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .stats-bar {
+            background: linear-gradient(135deg, var(--primary), #f4e4c1);
+            color: var(--secondary);
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+            font-size: 1.1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px var(--shadow);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            border: 1px solid #f0f0f0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.2);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+        }
+
+        .quality-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+        }
+
+        .product-image-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            filter: brightness(1.05) contrast(1.02);
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .product-description {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .product-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .spec-tag {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 0.6rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text);
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+
+        .spec-tag.length {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            color: #1976d2;
+            border-color: #bbdefb;
+        }
+
+        .spec-tag.type {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            color: #7b1fa2;
+            border-color: #e1bee7;
+        }
+
+        .spec-tag.color {
+            background: linear-gradient(135deg, #fff3e0, #ffcc02);
+            color: #e65100;
+            border-color: #ffcc02;
+        }
+
+        .product-price {
+            font-size: 2.2rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: baseline;
+            gap: 0.8rem;
+        }
+
+        .product-price small {
+            font-size: 0.9rem;
+            color: #777;
+            font-weight: normal;
+        }
+
+        .professional-note {
+            background: linear-gradient(135deg, #e8f5e8, #d4edd4);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: #2e7d32;
+            line-height: 1.4;
+        }
+
+        .whatsapp-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            margin: 3% auto;
+            padding: 3rem;
+            width: 90%;
+            max-width: 900px;
+            border-radius: 25px;
+            position: relative;
+            animation: slideIn 0.3s;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: #999;
+            transition: all 0.3s;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #f8f9fa;
+        }
+
+        .close:hover {
+            color: white;
+            background: #dc3545;
+            transform: rotate(90deg);
+        }
+
+        .modal-image {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .modal-title {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .professional-advice {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--primary);
+        }
+
+        .professional-advice h5 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .professional-advice p {
+            color: #856404;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .modal-specs {
+            margin: 2rem 0;
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 15px;
+        }
+
+        .modal-specs h4 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+
+        .spec-item strong {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .spec-item span {
+            color: #495057;
+            font-weight: 500;
+        }
+
+        .modal-price {
+            font-size: 2.8rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .modal-price small {
+            font-size: 1rem;
+            color: #666;
+            font-weight: normal;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .filter-group {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .modal-content {
+                margin: 2% auto;
+                padding: 2rem;
+                width: 95%;
+            }
+
+            .product-info {
+                padding: 1.5rem;
+            }
+
+            .modal-title {
+                font-size: 2rem;
+            }
+        }
+
+        .loading, .no-products {
+            text-align: center;
+            padding: 4rem;
+            font-size: 1.3rem;
+            color: var(--text);
+            background: white;
+            border-radius: 20px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .no-products {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">JC HAIR STUDIO'S 62</h1>
+            <p class="tagline">MEGA HAIR PREMIUM COLLECTION</p>
+            <div class="expert-credentials">
+                🏆 Especialista com 30+ Anos de Experiência • Cabelo 100% Humano Remy Europeu
+            </div>
+        </div>
+    </header>
+
+    <div class="professional-section">
+        <h3>💡 Consultoria Especializada - Mais de 3 Décadas de Experiência</h3>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <h4>🎨 Harmonização Cromática Profissional</h4>
+                <p>Como especialista há 30 anos, recomendo sempre escolher tons 1-2 níveis mais claros que sua base natural. Para loiros, considere a temperatura (quente/fria) da pele. Castanhos beneficiam-se de reflexos dourados sutis.</p>
+            </div>
+            <div class="tip-card">
+                <h4>📏 Cálculo de Comprimento Técnico</h4>
+                <p>A regra profissional: adicione 15-20cm ao seu cabelo atual para transição imperceptível. Para texturas onduladas/cacheadas, considere que o cabelo "encurta" 10-15% após aplicação devido ao movimento natural.</p>
+            </div>
+            <div class="tip-card">
+                <h4>🔬 Qualidade Remy - Diferencial Técnico</h4>
+                <p>Cabelo Remy possui cutículas alinhadas unidirecionalmente, garantindo brilho natural, resistência ao embaraço e durabilidade vitalícia. É o padrão ouro em extensões, usado exclusivamente por profissionais.</p>
+            </div>
+            <div class="tip-card">
+                <h4>⚗️ Compatibilidade Química</h4>
+                <p>Nosso cabelo 100% humano aceita todos os processos: coloração (até 3 tons mais claros), descoloração, permanente e relaxamento. Tempo de processamento idêntico ao cabelo natural - sem surpresas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="filters">
+        <div class="filter-group">
+            <div class="filter-section">
+                <h3 data-filter="length">📏 Comprimento Técnico</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="length" data-value="30">30cm - Bob Clássico</button>
+                    <button class="filter-btn" data-filter="length" data-value="35">35cm - Chanel Alongado</button>
+                    <button class="filter-btn" data-filter="length" data-value="40">40cm - Médio Estruturado</button>
+                    <button class="filter-btn" data-filter="length" data-value="45">45cm - Long Bob</button>
+                    <button class="filter-btn" data-filter="length" data-value="50">50cm - Longo Clássico</button>
+                    <button class="filter-btn" data-filter="length" data-value="55">55cm - Longo Moderno</button>
+                    <button class="filter-btn" data-filter="length" data-value="60">60cm - Extra Longo</button>
+                    <button class="filter-btn" data-filter="length" data-value="65">65cm - Glamour</button>
+                    <button class="filter-btn" data-filter="length" data-value="70">70cm - Super Longo</button>
+                    <button class="filter-btn" data-filter="length" data-value="75">75cm - Dramatic</button>
+                    <button class="filter-btn" data-filter="length" data-value="80">80cm - Ultra</button>
+                    <button class="filter-btn" data-filter="length" data-value="90">90cm - Rapunzel</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3 data-filter="type">💇‍♀️ Estrutura Capilar</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="type" data-value="liso">Liso Sedoso (Straight)</button>
+                    <button class="filter-btn" data-filter="type" data-value="ondulado">Ondulado Natural (Body Wave)</button>
+                    <button class="filter-btn" data-filter="type" data-value="cacheado">Cacheado Definido (Curly)</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3 data-filter="color">🎨 Codificação Cromática Profissional</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="color" data-value="loiro">Loiro (Níveis 7-10)</button>
+                    <button class="filter-btn" data-filter="color" data-value="castanho">Castanho (Níveis 4-6)</button>
+                    <button class="filter-btn" data-filter="color" data-value="preto">Preto (Níveis 1-3)</button>
+                    <button class="filter-btn" data-filter="color" data-value="ruivo">Ruivo (Séries .3/.4)</button>
+                    <button class="filter-btn" data-filter="color" data-value="platinado">Platinado (Nível 10+)</button>
+                    <button class="filter-btn" data-filter="color" data-value="mel">Mel (Reflexos .3/.7)</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3 data-filter="price">💎 Investimento Premium</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-filter="price" data-value="60-100">€60 - €100 (Iniciante)</button>
+                    <button class="filter-btn" data-filter="price" data-value="100-150">€100 - €150 (Intermediário)</button>
+                    <button class="filter-btn" data-filter="price" data-value="150-200">€150 - €200 (Profissional)</button>
+                    <button class="filter-btn" data-filter="price" data-value="200+">€200+ (Master Class)</button>
+                </div>
+            </div>
+        </div>
+        <button class="clear-filters" onclick="clearFilters()">🔄 Exibir Catálogo Completo</button>
+    </div>
+
+    <div class="products-container">
+        <div class="stats-bar" id="statsBar">
+            💎 Carregando Catálogo Exclusivo...
+        </div>
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <h2 id="modalTitle" class="modal-title"></h2>
+            
+            <div class="professional-advice">
+                <h5>💁‍♀️ Recomendação do Especialista:</h5>
+                <p id="professionalAdvice"></p>
+            </div>
+            
+            <div class="modal-specs">
+                <h4>📋 Especificações Técnicas Detalhadas</h4>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <strong>Comprimento Real:</strong>
+                        <span id="modalLength"></span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Estrutura Capilar:</strong>
+                        <span id="modalType"></span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Código de Cor:</strong>
+                        <span id="modalColor"></span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Classificação:</strong>
+                        <span id="modalStructure"></span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Origem Certificada:</strong>
+                        <span>Cabelo Europeu Premium</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Qualidade:</strong>
+                        <span>100% Humano Remy Hair</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Durabilidade:</strong>
+                        <span>Vitalícia com Manutenção</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Processos Aceitos:</strong>
+                        <span>Coloração, Permanente, Relaxamento</span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Gramatura:</strong>
+                        <span id="modalWeight"></span>
+                    </div>
+                    <div class="spec-item">
+                        <strong>Compatibilidade:</strong>
+                        <span>Todas as técnicas de aplicação</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="professional-note">
+                ✅ Certificado de Qualidade • 🚚 Frete Expresso Grátis acima de €150 • 🔄 Garantia de Satisfação
+            </div>
+            
+            <div class="modal-price" id="modalPrice">
+                <small>Investimento Profissional:</small>
+            </div>
+            
+            <button class="whatsapp-btn" onclick="contactWhatsApp()">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Consultoria Especializada via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Professional Hair Extensions Database - 30 Years Experience
+        const products = [
+            // CABELOS LISOS - STRAIGHT COLLECTION (28 produtos)
+            {
+                id: 1,
+                name: "Mega Hair Liso Profissional 35cm #2",
+                image: "https://i.ibb.co/cjrxk2b/35-Cms-2-1800x.webp",
+                type: "liso",
+                color: "castanho",
+                colorCode: "#2 - Castanho Escuro Natural",
+                length: 35,
+                weight: "100g (Densidade Profissional)",
+                price: 75,
+                description: "Cabelo liso natural, densidade profissional, acabamento sedoso"
+            },
+            {
+                id: 2,
+                name: "Mega Hair Liso Premium 45cm #4",
+                image: "https://i.ibb.co/FkfbxFMC/45-Cms-2-1800x.webp",
+                type: "liso",
+                color: "castanho",
+                colorCode: "#4 - Castanho Chocolate Médio",
+                length: 45,
+                weight: "110g (Volume Premium)",
+                price: 85,
+                description: "Textura sedosa premium, movimento natural, brilho intenso"
+            },
+            {
+                id: 3,
+                name: "Mega Hair Liso Clássico 45cm",
+                image: "https://i.ibb.co/HpY09846/45-Cms-1800x.webp",
+                type: "liso",
+                color: "castanho",
+                colorCode: "#6 - Castanho Claro Dourado",
+                length: 45,
+                weight: "110g (Trama Dupla)",
+                price: 85,
+                description: "Clássico atemporal, reflexos dourados naturais"
+            },
+            {
+                id: 4,
+                name: "Mega Hair Liso Platinum 50cm",
+                image: "https://i.ibb.co/C3m13MrM/Bulk-2-main-50-1800x.webp",
+                type: "liso",
+                color: "loiro",
+                colorCode: "#613 - Loiro Platinado Escandinavo",
+                length: 50,
+                weight: "120g (Luxury Grade)",
+                price: 110,
+                featured: true,
+                description: "Loiro platinado nórdico, máxima sofisticação europeia"
+            },
+            {
+                id: 5,
+                name: "Mega Hair Liso Chocolate 60cm",
+                image: "https://i.ibb.co/LDRwKvd5/Bulk-2-main-60-1800x.webp",
+                type: "liso",
+                color: "castanho",
+                colorCode: "#4 - Castanho Chocolate Sedoso",
+                length: 60,
+                weight: "130g (Extra Volume)",
+                price: 125,
+                description: "Chocolate sedoso brasileiro, densidade superior"
+            },
+            {
+                id: 6,
+                name: "Mega Hair Liso Natural 50cm",
+                image: "https://i.ibb.co/fdpT51RJ/Bulk-4-main-50-1800x.webp",
+                type: "liso",
+                color: "preto",
+                colorCode: "#1B - Preto Natural Brasileiro",
+                length: 50,
+                weight: "120g (Virgin Quality)",
+                price: 100,
+                description: "Preto natural brasileiro, estrutura virgem intacta"
+            },
+            {
+                id: 7,
+                name: "Mega Hair Liso Jet Black 60cm",
+                image: "https://i.ibb.co/hJxTk1vj/Bulk-4-main-60-1800x.webp",
+                type: "liso",
+                color: "preto",
+                colorCode: "#1 - Preto Jet Intenso",
+                length: 60,
+                weight: "130g (Premium Density)",
+                price: 120,
+                description: "Preto intenso asiático, brilho espelhado natural"
+            },
+            {
+                id: 8,
+                name: "Mega Hair Liso Dourado 65cm",
+                image: "https://i.ibb.co/3M8nRQr/65-Cms-1800x.webp",
+                type: "liso",
+                color: "loiro",
+                colorCode: "#27 - Loiro Dourado Honey",
+                length: 65,
+                weight: "140g (Warm Tone)",
+                price: 140,
+                description: "Dourado mel natural, reflexos calorosos únicos"
+            },
+            {
+                id: 9,
+                name: "Mega Hair Liso Premium 65cm",
+                image: "https://i.ibb.co/6P7BvJZ/65-Cms-2-1800x.webp",
+                type: "liso",
+                color: "castanho",
+                colorCode: "#4/6 - Castanho Piano Balayage",
+                length: 65,
+                weight: "140g (Balayage Effect)",
+                price: 145,
+                description: "Efeito piano profissional, transição perfeita"
+            },
+            {
+                id: 10,
+                name: "Mega Hair Liso Chocolate 70cm",
+                image: "https://i.ibb.co/HBM3Y4r/70-Cms-1800x.webp",
+                type: "liso",
+                color: "castanho",
+                colorCode: "#2/4 - Chocolate Ombré Natural",
+                length: 70,
+                weight: "150g (Ombré Style)",
+                price: 160,
+                description: "Ombré chocolate natural, degradê profissional"
+            },
+            {
+                id: 11,
+                name: "Mega Hair Liso Caramelo 70cm",
+                image: "https://i.ibb.co/f1S4KJG/70-Cms-2-1800x.webp",
+                type: "liso",
+                color: "mel",
+                colorCode: "#27/30 - Caramelo Dimensional",
+                length: 70,
+                weight: "150g (Dimensional)",
+                price: 165,
+                description: "Caramelo dimensional, profundidade cromática única"
+            },
+            {
+                id: 12,
+                name: "Mega Hair Liso Platinum 75cm",
+                image: "https://i.ibb.co/ZVf8nNj/75-Cms-1800x.webp",
+                type: "liso",
+                color: "platinado",
+                colorCode: "#60 - Platinado Gelo Nórdico",
+                length: 75,
+                weight: "160g (Nordic Ice)",
+                price: 175,
+                featured: true,
+                description: "Platinado gelo nórdico, tom frio absoluto"
+            },
+            {
+                id: 13,
+                name: "Mega Hair Liso Caramelo 75cm",
+                image: "https://i.ibb.co/7Q1pJhF/75-Cms-2-1800x.webp",
+                type: "liso",
+                color: "mel",
+                colorCode: "#30 - Caramelo Premium Dourado",
+                length: 75,
+                weight: "160g (Golden Premium)",
+                price: 170,
+                description: "Caramelo premium dourado, luminosidade excepcional"
+            },
+            {
+                id: 14,
+                name: "Mega Hair Liso Ruivo 80cm",
+                image: "https://i.ibb.co/HN8Y4pF/80-Cms-1800x.webp",
+                type: "liso",
+                color: "ruivo",
+                colorCode: "#33 - Ruivo Cobre Intenso",
+                length: 80,
+                weight: "170g (Copper Intense)",
+                price: 185,
+                description: "Ruivo cobre intenso, vibrância natural duradoura"
+            },
+            {
+                id: 15,
+                name: "Mega Hair Liso Chocolate 80cm",
+                image: "https://i.ibb.co/vxPjM4q/80-Cms-2-1800x.webp",
+                type: "liso",
+                color: "castanho",
+                colorCode: "#4 - Chocolate Suíço Premium",
+                length: 80,
+                weight: "170g (Swiss Premium)",
+                price: 180,
+                description: "Chocolate suíço premium, densidade máxima"
+            },
+            {
+                id: 16,
+                name: "Mega Hair Liso Ash Blonde 85cm",
+                image: "https://i.ibb.co/RCbT4pD/85-Cms-1800x.webp",
+                type: "liso",
+                color: "loiro",
+                colorCode: "#18 - Loiro Ash Escandinavo",
+                length: 85,
+                weight: "180g (Scandinavian Ash)",
+                price: 190,
+                description: "Ash blonde escandinavo, tom frio sofisticado"
+            },
+            {
+                id: 17,
+                name: "Mega Hair Liso Honey 85cm",
+                image: "https://i.ibb.co/YpGnRhQ/85-Cms-2-1800x.webp",
+                type: "liso",
+                color: "mel",
+                colorCode: "#27 - Honey Premium Dourado",
+                length: 85,
+                weight: "180g (Premium Golden)",
+                price: 185,
+                description: "Honey premium dourado, reflexos solares naturais"
+            },
+            {
+                id: 18,
+                name: "Mega Hair Liso Mix Color 70cm",
+                image: "https://i.ibb.co/VY0RjYCn/Cabelo-30-4cb5aee5-24f8-4286-8165-532f5bae9cab-1800x.webp",
+                type: "liso",
+                color: "loiro",
+                colorCode: "#24/613 - Mix Dourado Platinado",
+                length: 70,
+                weight: "150g (Gold Platinum Mix)",
+                price: 155,
+                description: "Mix dourado platinado, dimensionalidade única"
+            },
+            {
+                id: 19,
+                name: "Mega Hair Liso Preto Azulado",
+                image: "https://i.ibb.co/7JvNdSJ/Cabelo-1-1800x.webp",
+                type: "liso",
+                color: "preto",
+                colorCode: "#1 - Preto Azulado Natural",
+                length: 55,
+                weight: "125g (Natural Blue Black)",
+                price: 115,
+                description: "Preto azulado natural, reflexo sutil elegante"
+            },
+            {
+                id: 20,
+                name: "Mega Hair Liso Castanho Natural",
+                image: "https://i.ibb.co/CbZL8vm/Cabelo-2-1800x.webp",
+                type: "liso",
+                color: "castanho",
+                colorCode: "#4 - Castanho Natural Brasileiro",
+                length: 60,
+                weight: "130g (Brazilian Natural)",
+                price: 125,
+                description: "Castanho natural brasileiro, textura autêntica"
+            },
+            {
+                id: 21,
+                name: "Mega Hair Liso Dourado Claro",
+                image: "https://i.ibb.co/1KQR3pR/Cabelo-3-1800x.webp",
+                type: "liso",
+                color: "loiro",
+                colorCode: "#22 - Dourado Claro Luminoso",
+                length: 65,
+                weight: "140g (Luminous Light)",
+                price: 145,
+                description: "Dourado claro luminoso, brilho solar natural"
+            },
+            {
+                id: 22,
+                name: "Mega Hair Liso Chocolate Escuro",
+                image: "https://i.ibb.co/w41yn7j/Cabelo-4-1800x.webp",
+                type: "liso",
+                color: "castanho",
+                colorCode: "#2 - Chocolate Escuro Intenso",
+                length: 70,
+                weight: "150g (Dark Intense)",
+                price: 160,
+                description: "Chocolate escuro intenso, profundidade máxima"
+            },
+            {
+                id: 23,
+                name: "Mega Hair Liso Mel Dourado",
+                image: "https://i.ibb.co/7R8pVhY/Cabelo-5-1800x.webp",
+                type: "liso",
+                color: "mel",
+                colorCode: "#27 - Mel Dourado Premium",
+                length: 75,
+                weight: "160g (Premium Honey)",
+                price: 170,
+                description: "Mel dourado premium, calidez natural única"
+            },
+            {
+                id: 24,
+                name: "Mega Hair Liso Loiro Médio",
+                image: "https://i.ibb.co/xzBvHqR/Cabelo-6-1800x.webp",
+                type: "liso",
+                color: "loiro",
+                colorCode: "#24 - Loiro Médio Dourado",
+                length: 65,
+                weight: "140g (Medium Golden)",
+                price: 145,
+                description: "Loiro médio dourado, equilíbrio perfeito"
+            },
+            {
+                id: 25,
+                name: "Mega Hair Liso Platinado Supreme",
+                image: "https://i.ibb.co/vPJcgkL/Cabelo-8-1800x.webp",
+                type: "liso",
+                color: "platinado",
+                colorCode: "#613 - Platinado Supreme",
+                length: 80,
+                weight: "170g (Supreme Platinum)",
+                price: 185,
+                featured: true,
+                description: "Platinado supreme, máxima clareza cromática"
+            },
+            {
+                id: 26,
+                name: "Mega Hair Liso Castanho Avelã",
+                image: "https://i.ibb.co/X71gPcK/Cabelo-9-1800x.webp",
+                type: "liso",
+                color: "castanho",
+                colorCode: "#6 - Castanho Avelã Claro",
+                length: 70,
+                weight: "150g (Light Hazelnut)",
+                price: 160,
+                description: "Castanho avelã claro, naturalidade sofisticada"
+            },
+            {
+                id: 27,
+                name: "Mega Hair Liso Dourado Premium",
+                image: "https://i.ibb.co/WBnJdqV/Cabelo-10-1800x.webp",
+                type: "liso",
+                color: "loiro",
+                colorCode: "#27/613 - Dourado Premium Mix",
+                length: 75,
+                weight: "160g (Premium Gold Mix)",
+                price: 175,
+                description: "Dourado premium mix, luminosidade excepcional"
+            },
+            {
+                id: 28,
+                name: "Mega Hair Liso Rapunzel 90cm",
+                image: "https://i.ibb.co/k234Rgh/Cabelo-11-1800x.webp",
+                type: "liso",
+                color: "castanho",
+                colorCode: "#4/27 - Castanho Rapunzel",
+                length: 90,
+                weight: "190g (Rapunzel Collection)",
+                price: 220,
+                featured: true,
+                description: "Coleção Rapunzel exclusiva, comprimento extremo"
+            },
+
+            // CABELOS ONDULADOS - BODY WAVE COLLECTION (11 produtos)
+            {
+                id: 29,
+                name: "Mega Hair Ondulado Natural 35cm",
+                image: "https://i.ibb.co/cjrxk2b/35-Cms-2-1800x.webp",
+                type: "ondulado",
+                color: "castanho",
+                colorCode: "#4 - Castanho Ondulado Natural",
+                length: 35,
+                weight: "85g (Natural Wave)",
+                price: 70,
+                description: "Ondas naturais suaves, movimento fluido autêntico"
+            },
+            {
+                id: 30,
+                name: "Mega Hair Ondulado Hollywood 45cm",
+                image: "https://i.ibb.co/FkfbxFMC/45-Cms-2-1800x.webp",
+                type: "ondulado",
+                color: "castanho",
+                colorCode: "#6 - Castanho Hollywood Wave",
+                length: 45,
+                weight: "95g (Hollywood Style)",
+                price: 85,
+                description: "Ondas Hollywood glamourosas, estilo cinematográfico"
+            },
+            {
+                id: 31,
+                name: "Mega Hair Ondulado Brasileiro 45cm",
+                image: "https://i.ibb.co/HpY09846/45-Cms-1800x.webp",
+                type: "ondulado",
+                color: "castanho",
+                colorCode: "#2 - Castanho Brasileiro Wave",
+                length: 45,
+                weight: "95g (Brazilian Wave)",
+                price: 85,
+                description: "Body wave brasileiro autêntico, densidade natural"
+            },
+            {
+                id: 32,
+                name: "Mega Hair Ondulado Sereia 50cm",
+                image: "https://i.ibb.co/C3m13MrM/Bulk-2-main-50-1800x.webp",
+                type: "ondulado",
+                color: "loiro",
+                colorCode: "#613 - Loiro Sereia Ondulado",
+                length: 50,
+                weight: "110g (Mermaid Wave)",
+                price: 110,
+                description: "Ondas sereia platinadas, fantasia aquática"
+            },
+            {
+                id: 33,
+                name: "Mega Hair Ondulado Chocolate 60cm",
+                image: "https://i.ibb.co/LDRwKvd5/Bulk-2-main-60-1800x.webp",
+                type: "ondulado",
+                color: "castanho",
+                colorCode: "#4 - Chocolate Ondulado Sedoso",
+                length: 60,
+                weight: "125g (Silky Chocolate)",
+                price: 125,
+                description: "Chocolate ondulado sedoso, textura premium"
+            },
+            {
+                id: 34,
+                name: "Mega Hair Ondulado Preto 60cm",
+                image: "https://i.ibb.co/hJxTk1vj/Bulk-4-main-60-1800x.webp",
+                type: "ondulado",
+                color: "preto",
+                colorCode: "#1 - Preto Ondulado Intenso",
+                length: 60,
+                weight: "125g (Intense Black Wave)",
+                price: 120,
+                description: "Preto ondulado intenso, movimento elegante"
+            },
+            {
+                id: 35,
+                name: "Mega Hair Ondulado Dourado 65cm",
+                image: "https://i.ibb.co/3M8nRQr/65-Cms-1800x.webp",
+                type: "ondulado",
+                color: "loiro",
+                colorCode: "#27 - Dourado Ondulado Honey",
+                length: 65,
+                weight: "135g (Honey Golden Wave)",
+                price: 140,
+                description: "Dourado honey ondulado, calidez radiante"
+            },
+            {
+                id: 36,
+                name: "Mega Hair Ondulado Piano 70cm",
+                image: "https://i.ibb.co/HBM3Y4r/70-Cms-1800x.webp",
+                type: "ondulado",
+                color: "castanho",
+                colorCode: "#2/4 - Piano Ondulado Ombré",
+                length: 70,
+                weight: "145g (Piano Ombré Wave)",
+                price: 160,
+                description: "Piano ondulado ombré, dimensionalidade única"
+            },
+            {
+                id: 37,
+                name: "Mega Hair Ondulado Caramelo 75cm",
+                image: "https://i.ibb.co/7Q1pJhF/75-Cms-2-1800x.webp",
+                type: "ondulado",
+                color: "mel",
+                colorCode: "#30 - Caramelo Ondulado Premium",
+                length: 75,
+                weight: "155g (Premium Caramel Wave)",
+                price: 170,
+                description: "Caramelo ondulado premium, movimento luxuoso"
+            },
+            {
+                id: 38,
+                name: "Mega Hair Ondulado Ruivo 80cm",
+                image: "https://i.ibb.co/HN8Y4pF/80-Cms-1800x.webp",
+                type: "ondulado",
+                color: "ruivo",
+                colorCode: "#33 - Ruivo Ondulado Cobre",
+                length: 80,
+                weight: "165g (Copper Wave)",
+                price: 185,
+                description: "Ruivo ondulado cobre, vibrância em movimento"
+            },
+            {
+                id: 39,
+                name: "Mega Hair Ondulado Goddess 85cm",
+                image: "https://i.ibb.co/RCbT4pD/85-Cms-1800x.webp",
+                type: "ondulado",
+                color: "loiro",
+                colorCode: "#18 - Ash Ondulado Goddess",
+                length: 85,
+                weight: "175g (Goddess Ash Wave)",
+                price: 190,
+                featured: true,
+                description: "Ondas goddess ash, elegância celestial"
+            },
+
+            // CABELOS CACHEADOS - CURLY COLLECTION (5 produtos)
+            {
+                id: 40,
+                name: "Mega Hair Cacheado Natural 40cm",
+                image: "https://i.ibb.co/VWB0T3jf/Cabelo-7-1800x.webp",
+                type: "cacheado",
+                color: "castanho",
+                colorCode: "#4 - Castanho Cacheado 3B",
+                length: 40,
+                weight: "90g (Natural Curl 3B)",
+                price: 80,
+                description: "Cachos naturais 3B, definição perfeita autêntica"
+            },
+            {
+                id: 41,
+                name: "Mega Hair Cacheado Afro 45cm",
+                image: "https://i.ibb.co/VWB0T3jf/Cabelo-7-1800x.webp",
+                type: "cacheado",
+                color: "preto",
+                colorCode: "#1B - Preto Afro 3C",
+                length: 45,
+                weight: "95g (Afro Curl 3C)",
+                price: 90,
+                description: "Cachos afro 3C premium, volume máximo natural"
+            },
+            {
+                id: 42,
+                name: "Mega Hair Cacheado Kinky 50cm",
+                image: "https://i.ibb.co/VWB0T3jf/Cabelo-7-1800x.webp",
+                type: "cacheado",
+                color: "castanho",
+                colorCode: "#2 - Castanho Kinky 4A",
+                length: 50,
+                weight: "105g (Kinky Curl 4A)",
+                price: 105,
+                description: "Textura kinky 4A, densidade suprema africana"
+            },
+            {
+                id: 43,
+                name: "Mega Hair Cacheado Supreme 60cm",
+                image: "https://i.ibb.co/VWB0T3jf/Cabelo-7-1800x.webp",
+                type: "cacheado",
+                color: "preto",
+                colorCode: "#1 - Preto Supreme Curl",
+                length: 60,
+                weight: "125g (Supreme Curl)",
+                price: 130,
+                featured: true,
+                description: "Cachos supreme premium, definição máxima"
+            },
+            {
+                id: 44,
+                name: "Mega Hair Cacheado Chocolate 55cm",
+                image: "https://i.ibb.co/VWB0T3jf/Cabelo-7-1800x.webp",
+                type: "cacheado",
+                color: "castanho",
+                colorCode: "#4 - Chocolate Cacheado Premium",
+                length: 55,
+                weight: "115g (Premium Chocolate Curl)",
+                price: 115,
+                description: "Chocolate cacheado premium, movimento natural"
+            }
+        ];
+
+        // Professional advice database - 30+ years expertise
+        const professionalAdvice = {
+            'liso': {
+                'loiro': 'Como especialista há 30 anos, recomendo esta tonalidade para criar luminosidade natural. Aplicação ideal: micro anel ou queratina. Manutenção: shampoo violeta semanal, hidratação quinzenal com máscara matizadora. Duração: vitalícia com cuidados adequados.',
+                'castanho': 'Excelente escolha para volume e comprimento natural. Técnica recomendada: fita adesiva ou entrelaçamento para movimento fluido. Cuidados: hidratação profissional quinzenal, óleo de argan nas pontas. Resistente a processos químicos.',
+                'preto': 'Ideal para densidade máxima e cobertura total. Aplicação profissional com técnica entrelaçada garante naturalidade. Manutenção mínima, aceita todos os tratamentos químicos. Durabilidade excepcional - investimento vitalício.',
+                'ruivo': 'Tonalidade especial que requer expertise técnica. Recomendo proteção térmica constante e matização específica. Retoque profissional a cada 6-8 semanas. Resultado: vibrância duradoura com técnica correta.',
+                'platinado': 'Máximo nível de sofisticação técnica. Aplicação cuidadosa para transição imperceptível. Matização profissional mensal obrigatória. Shampoo específico para loiros. Investimento em qualidade suprema.',
+                'mel': 'Versatilidade cromática excepcional. Combina com múltiplas bases capilares. Ideal para técnicas de mechas. Proteção solar capilar essencial. Manutenção simples, resultado sempre natural.'
+            },
+            'ondulado': {
+                'default': 'Ondas naturais requerem técnica específica de manutenção. Use finalizadores sem álcool, durma com coque frouxo, reative com borrifador (água + leave-in). Pentear apenas com condicionador.'
+            },
+            'cacheado': {
+                'default': 'Cachos demandam hidratação intensiva. Técnica de fitagem profissional, co-wash semanal, máscara reconstrutora quinzenal. Jamais pentear a seco. Finalização com creme para cachos específico.'
+            }
+        };
+
+        // Hair structure technical descriptions
+        const hairStructures = {
+            'liso': 'Cutículas perfeitamente alinhadas unidirecionalmente, máximo reflexo de luz, resistência superior ao embaraço',
+            'ondulado': 'Padrão em S natural (2A-2C), estrutura flexível, volume controlado, movimento fluido',
+            'cacheado': 'Espirais definidas (3A-4C), estrutura porosa controlada, máxima definição, volume natural'
+        };
+
+        // Active filters
+        let activeFilters = {
+            type: null,
+            color: null,
+            length: null,
+            price: null
+        };
+
+        // Initialize
+        window.onload = function() {
+            displayProducts(products);
+            setupFilterButtons();
+            updateStatsBar(products);
+        };
+
+        // Display products
+        function displayProducts(productsToShow) {
+            const grid = document.getElementById('productsGrid');
+            
+            if (productsToShow.length === 0) {
+                grid.innerHTML = '<div class="no-products">❌ Nenhum produto encontrado com os filtros selecionados.<br><small>Ajuste os filtros ou entre em contato para produtos sob encomenda.</small></div>';
+                return;
+            }
+            
+            grid.innerHTML = productsToShow.map(product => `
+                <div class="product-card" onclick="openModal(${product.id})">
+                    ${product.featured ? '<span class="product-badge">🏆 TOP MASTER</span>' : ''}
+                    <span class="quality-badge">100% REMY</span>
+                    <div class="product-image-container">
+                        <img src="${product.image}" 
+                             alt="${product.name}" 
+                             class="product-image"
+                             loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-specs">
+                            <span class="spec-tag length">📏 ${product.length}cm</span>
+                            <span class="spec-tag type">💇‍♀️ ${getTextureDescription(product.type)}</span>
+                            <span class="spec-tag color">🎨 ${product.colorCode.split(' - ')[0]}</span>
+                        </div>
+                        <div class="product-price">
+                            €${product.price}
+                            <small>frete grátis €150+</small>
+                        </div>
+                        <div class="professional-note">
+                            ✨ Cabelo 100% Humano Remy • Durabilidade Vitalícia
+                        </div>
+                        <button class="whatsapp-btn">
+                            📱 Consultoria Especializada
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Update stats bar
+        function updateStatsBar(productsToShow) {
+            const statsBar = document.getElementById('statsBar');
+            const total = productsToShow.length;
+            const featured = productsToShow.filter(p => p.featured).length;
+            
+            if (total === products.length) {
+                statsBar.innerHTML = `💎 Catálogo Completo: ${total} Extensões Premium • 🏆 ${featured} Master Class • 🚚 Frete Expresso Grátis €150+`;
+            } else {
+                statsBar.innerHTML = `🔍 Seleção Filtrada: ${total} produtos • 🏆 ${featured} Master Class • 🔄 <a href="#" onclick="clearFilters()" style="color: #2c2c2c; text-decoration: underline;">Ver catálogo completo</a>`;
+            }
+        }
+
+        // Get texture description
+        function getTextureDescription(type) {
+            const descriptions = {
+                'liso': 'Liso Sedoso',
+                'ondulado': 'Ondulado Natural',
+                'cacheado': 'Cacheado Definido'
+            };
+            return descriptions[type] || type;
+        }
+
+        // Setup filter buttons
+        function setupFilterButtons() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filterType = this.getAttribute('data-filter');
+                    const filterValue = this.getAttribute('data-value');
+                    
+                    // Toggle active state
+                    if (this.classList.contains('active')) {
+                        this.classList.remove('active');
+                        activeFilters[filterType] = null;
+                    } else {
+                        // Remove active from other buttons in same category
+                        document.querySelectorAll(`.filter-btn[data-filter="${filterType}"]`).forEach(b => {
+                            b.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                        activeFilters[filterType] = filterValue;
+                    }
+                    
+                    filterProducts();
+                });
+            });
+        }
+
+        // Filter products
+        function filterProducts() {
+            let filtered = products;
+            
+            // Filter by type
+            if (activeFilters.type) {
+                filtered = filtered.filter(p => p.type === activeFilters.type);
+            }
+            
+            // Filter by color
+            if (activeFilters.color) {
+                filtered = filtered.filter(p => p.color === activeFilters.color);
+            }
+            
+            // Filter by length
+            if (activeFilters.length) {
+                const targetLength = parseInt(activeFilters.length);
+                filtered = filtered.filter(p => Math.abs(p.length - targetLength) <= 5);
+            }
+            
+            // Filter by price
+            if (activeFilters.price) {
+                const range = activeFilters.price;
+                if (range === '60-100') {
+                    filtered = filtered.filter(p => p.price >= 60 && p.price <= 100);
+                } else if (range === '100-150') {
+                    filtered = filtered.filter(p => p.price > 100 && p.price <= 150);
+                } else if (range === '150-200') {
+                    filtered = filtered.filter(p => p.price > 150 && p.price <= 200);
+                } else if (range === '200+') {
+                    filtered = filtered.filter(p => p.price > 200);
+                }
+            }
+            
+            displayProducts(filtered);
+            updateStatsBar(filtered);
+        }
+
+        // Clear all filters
+        function clearFilters() {
+            activeFilters = {
+                type: null,
+                color: null,
+                length: null,
+                price: null
+            };
+            
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            displayProducts(products);
+            updateStatsBar(products);
+        }
+
+        // Modal functions
+        function openModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            // Get professional advice
+            const advice = professionalAdvice[product.type]?.[product.color] || 
+                          professionalAdvice[product.type]?.['default'] ||
+                          'Produto premium de qualidade Master Class. Recomendo consulta especializada para orientações técnicas de aplicação e manutenção profissional personalizada.';
+            
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalTitle').textContent = product.name;
+            document.getElementById('modalLength').textContent = `${product.length}cm (±1cm variação natural)`;
+            document.getElementById('modalType').textContent = getTextureDescription(product.type);
+            document.getElementById('modalColor').textContent = product.colorCode;
+            document.getElementById('modalStructure').textContent = hairStructures[product.type];
+            document.getElementById('modalWeight').textContent = product.weight;
+            document.getElementById('modalPrice').innerHTML = `€${product.price} <small>+ frete (grátis acima de €150)</small>`;
+            document.getElementById('professionalAdvice').textContent = advice;
+            
+            document.getElementById('productModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // WhatsApp contact - NÚMERO CORRIGIDO PARA BÉLGICA
+        function contactWhatsApp() {
+            const phoneNumber = '32470032758'; // Número da Bélgica CORRIGIDO
+            const modal = document.getElementById('productModal');
+            const productName = document.getElementById('modalTitle').textContent;
+            const productSpecs = `${document.getElementById('modalLength').textContent} - ${document.getElementById('modalColor').textContent}`;
+            const productPrice = document.getElementById('modalPrice').textContent.replace(/\s+/g, ' ').trim();
+            
+            const message = `🌟 *JC HAIR STUDIO'S 62 - CONSULTA ESPECIALIZADA*
+
+👋 Olá! Gostaria de informações sobre:
+
+📦 *${productName}*
+📏 *Especificações:* ${productSpecs}
+💰 *${productPrice}*
+
+🎯 *Interesse em:*
+• ✅ Disponibilidade e prazo de entrega para Europa
+• 💳 Condições de pagamento (parcelamento disponível)
+• 🚚 Frete expresso (grátis acima de €150)
+• 🎨 Análise de compatibilidade com meu cabelo
+• 🔧 Orientação técnica de aplicação profissional
+• 🔄 Garantia de qualidade e política de troca
+
+💁‍♀️ *Experiência de 30+ anos garantindo o melhor resultado!*
+
+Obrigado(a)! 😊`;
+            
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Utility function
+        function capitalizeFirst(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        // Preload images for better performance
+        document.addEventListener('DOMContentLoaded', function() {
+            products.forEach(product => {
+                const img = new Image();
+                img.src = product.image;
+            });
+        });
+    </script>
+</body>
+</html>
