@@ -7,7 +7,7 @@ import { categories } from '../data/categories';
 import { getLegacyCompatibleProducts } from '../data/megaHairProducts';
 import { getAllMakeupProducts, getMakeupProductById } from '../data/makeupProducts';
 import { allTintasData, getTintaById } from '../data/tintasProducts';
-import { wepinkPerfumesProducts } from '../data/perfumesData';
+import { wepinkPerfumesProducts } from '../data/perfumesProducts';
 
 interface UnifiedProduct {
   id: string;
