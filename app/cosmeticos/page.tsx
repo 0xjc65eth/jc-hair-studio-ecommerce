@@ -6,8 +6,7 @@ import { Button } from '../../components/ui/Button';
 import ProductCard from '../../components/products/ProductCard';
 import { useCart } from '../../lib/stores/cartStore'; // Import cart store for shopping cart functionality
 import { ShoppingBag, Search, Filter, Heart, Eye, Shuffle, Grid, List, Palette, Sparkles } from 'lucide-react';
-import { allEsmaltesData } from '../../lib/data/esmaltesProducts';
-import { allPerfumesData } from '../../lib/data/perfumesProducts';
+import { allTintasData } from '../../lib/data/tintasProducts';
 
 // Função para gerar dados das tintas com numeração sequencial
 const gerarTintasLOreal = () => {
@@ -195,82 +194,23 @@ const gerarTintasAltaModa = () => {
 };
 
 
-// Converter esmaltes IMPALA oficiais para formato compatível
-const esmaltesFormatados = allEsmaltesData.map(esmalte => ({
-  id: esmalte.id,
-  nome: esmalte.nome,
-  marca: esmalte.marca,
-  categoria: 'Esmaltes',
-  cor: esmalte.cores?.[0]?.nome || 'Variado',
-  tom: esmalte.cores?.[0]?.codigo || '',
-  descricao: esmalte.descricao,
-  imagem: esmalte.imagens[0],
-  pricing: esmalte.pricing,
-  rating: 4.5 + (Math.random() * 0.4), // Ratings altos para IMPALA oficial
-  reviewsCount: 30 + Math.floor(Math.random() * 40),
-  inStock: true,
-  tags: esmalte.tags,
-  badge: esmalte.badge
-}));
+// Cosméticos reorganizado - apenas tintas capilares
+// Removido: esmaltes e perfumes conforme solicitado
 
-// Converter perfumes WEPINK para formato compatível
-const perfumesFormatados = allPerfumesData.map(perfume => ({
-  id: perfume.id,
-  nome: perfume.nome,
-  marca: perfume.marca,
-  categoria: 'Perfumes',
-  cor: perfume.genero === 'feminino' ? 'Feminino' : perfume.genero === 'masculino' ? 'Masculino' : 'Unissex',
-  tom: perfume.especificacoes.volume,
-  descricao: perfume.descricao,
-  imagem: perfume.imagem,
-  pricing: perfume.pricing,
-  rating: perfume.rating,
-  reviewsCount: perfume.reviews,
-  inStock: true,
-  tags: [...perfume.tags, perfume.especificacoes.familia_olfativa].filter(Boolean),
-  badge: perfume.badge || 'NOVO',
-  genero: perfume.genero,
-  volume: perfume.especificacoes.volume,
-  familia: perfume.especificacoes.familia_olfativa
-}));
+// Apenas tintas capilares - conforme solicitado
+const tintasCapilares = allTintasData; // Usar dados oficiais das tintas
 
-// Dados das tintas capilares
-const tintasCapilares = [
-  ...gerarTintasLOreal(),      // 22 produtos
-  ...gerarTintasBioColor(),    // 23 produtos
-  ...gerarTintasBeautyColor(), // 44 produtos (removidos 2 placeholders)
-  ...gerarTintasAmend(),       // 6 produtos
-  ...gerarTintasNutrisse(),    // 9 produtos
-  ...gerarTintasAltaModa(),    // 29 produtos
-]; // Total: 133 produtos de tinta capilar
+// Todos os produtos são apenas tintas capilares agora
+const allProducts = [...tintasCapilares];
 
-// Produtos separados (não misturados)
-const esmaltesData = [...esmaltesFormatados];     // 56 produtos IMPALA oficiais
-const perfumesData = [...perfumesFormatados];    // 15 perfumes WEPINK selecionados
-
-// Todos os produtos combinados
-const allProducts = [
-  ...tintasCapilares,
-  ...esmaltesData,
-  ...perfumesData
-]; // Total: 204 produtos
-
-// Filtros específicos por categoria
+// Filtros específicos apenas para tintas capilares
 const marcasTintas = [
-  { value: 'LOREAL', label: "L'Oréal Paris", count: 22 },
-  { value: 'BIOCOLOR', label: 'BioColor', count: 23 },
-  { value: 'BEAUTY COLOR', label: 'Beauty Color', count: 44 },
-  { value: 'AMEND', label: 'Amend', count: 6 },
-  { value: 'GARNIER', label: 'Garnier Nutrisse', count: 9 },
-  { value: 'ALFAPARF', label: 'Alfaparf Alta Moda', count: 29 }
-];
-
-const marcasEsmaltes = [
-  { value: 'IMPALA', label: 'IMPALA', count: 56 }
-];
-
-const marcasPerfumes = [
-  { value: 'WEPINK', label: 'WEPINK', count: 15 }
+  { value: 'L\'ORÉAL PARIS', label: "L'Oréal Paris", count: 0 },
+  { value: 'BIOCOLOR', label: 'BioColor', count: 0 },
+  { value: 'BEAUTY COLOR', label: 'Beauty Color', count: 0 },
+  { value: 'AMEND', label: 'Amend', count: 0 },
+  { value: 'GARNIER NUTRISSE', label: 'Garnier Nutrisse', count: 0 },
+  { value: 'ALFAPARF', label: 'Alfaparf Alta Moda', count: 0 }
 ];
 
 const categoriasTintas = [
@@ -301,15 +241,13 @@ const faixasPreco = [
   { value: '25+', label: '€25+' }
 ];
 
-// Produtos já separados corretamente
-const tintasOnly = tintasCapilares;  // Apenas tintas capilares
-const esmaltesOnly = esmaltesData;   // Apenas esmaltes IMPALA
-const perfumesOnly = perfumesData;   // Apenas perfumes WEPINK
+// Apenas tintas capilares
+const tintasOnly = tintasCapilares;
 
 // Componente principal
 export default function TintasPage() {
-  // Estados para filtros
-  const [activeSection, setActiveSection] = useState('todos'); // 'todos', 'tintas', 'esmaltes', 'perfumes'
+  // Estados para filtros - apenas tintas
+  const [activeSection, setActiveSection] = useState('tintas'); // apenas 'tintas'
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedBrand, setSelectedBrand] = useState('');
@@ -360,21 +298,8 @@ export default function TintasPage() {
 
   // Aplicar filtros
   useEffect(() => {
-    // Determinar base de produtos baseada na seção ativa
-    let baseProducts = [];
-    switch (activeSection) {
-      case 'tintas':
-        baseProducts = [...tintasOnly];
-        break;
-      case 'esmaltes':
-        baseProducts = [...esmaltesOnly];
-        break;
-      case 'perfumes':
-        baseProducts = [...perfumesOnly];
-        break;
-      default:
-        baseProducts = [...allProducts];
-    }
+    // Apenas tintas capilares
+    let baseProducts = [...tintasOnly];
 
     let filtered = baseProducts;
 
@@ -456,18 +381,9 @@ export default function TintasPage() {
     setSelectedPriceRange('');
   };
 
-  // Get available brands based on active section
+  // Apenas marcas de tintas
   const getAvailableBrands = () => {
-    switch (activeSection) {
-      case 'tintas':
-        return marcasTintas;
-      case 'esmaltes':
-        return marcasEsmaltes;
-      case 'perfumes':
-        return marcasPerfumes;
-      default:
-        return [...marcasTintas, ...marcasEsmaltes, ...marcasPerfumes];
-    }
+    return marcasTintas;
   };
 
   return (
@@ -479,11 +395,11 @@ export default function TintasPage() {
             <div className="flex items-center justify-center mb-4">
               <Palette className="w-8 h-8 mr-3" />
               <h1 className="text-4xl md:text-5xl font-bold">
-                Cosméticos & Beleza
+                Tintas Capilares
               </h1>
             </div>
             <p className="text-xl mb-8 opacity-90">
-              Tintas capilares premium, esmaltes IMPALA e perfumes WEPINK para um visual completo
+              Tintas capilares premium das melhores marcas
             </p>
             <div className="flex items-center justify-center gap-6 text-sm">
               <div className="flex items-center gap-2">
@@ -499,49 +415,14 @@ export default function TintasPage() {
         </div>
       </section>
 
-      {/* Navigation Tabs */}
+      {/* Navigation Tabs - Apenas Tintas */}
       <div className="bg-white border-b sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex space-x-8 py-4">
             <button
-              onClick={() => setActiveSection('todos')}
-              className={`px-4 py-2 font-medium transition-colors ${
-                activeSection === 'todos'
-                  ? 'text-purple-600 border-b-2 border-purple-600'
-                  : 'text-gray-600 hover:text-purple-600'
-              }`}
-            >
-              🛍️ Todos ({allProducts.length})
-            </button>
-            <button
-              onClick={() => setActiveSection('tintas')}
-              className={`px-4 py-2 font-medium transition-colors ${
-                activeSection === 'tintas'
-                  ? 'text-purple-600 border-b-2 border-purple-600'
-                  : 'text-gray-600 hover:text-purple-600'
-              }`}
+              className="px-4 py-2 font-medium text-purple-600 border-b-2 border-purple-600"
             >
               🎨 Tintas Capilares ({tintasOnly.length})
-            </button>
-            <button
-              onClick={() => setActiveSection('esmaltes')}
-              className={`px-4 py-2 font-medium transition-colors ${
-                activeSection === 'esmaltes'
-                  ? 'text-purple-600 border-b-2 border-purple-600'
-                  : 'text-gray-600 hover:text-purple-600'
-              }`}
-            >
-              💅 Esmaltes IMPALA ({esmaltesOnly.length})
-            </button>
-            <button
-              onClick={() => setActiveSection('perfumes')}
-              className={`px-4 py-2 font-medium transition-colors ${
-                activeSection === 'perfumes'
-                  ? 'text-purple-600 border-b-2 border-purple-600'
-                  : 'text-gray-600 hover:text-purple-600'
-              }`}
-            >
-              🌺 Perfumes WEPINK ({perfumesOnly.length})
             </button>
           </div>
         </div>
@@ -878,7 +759,7 @@ export default function TintasPage() {
                 <span className="text-2xl">🏆</span>
               </div>
               <h3 className="font-semibold mb-2">Marcas Premium</h3>
-              <p className="text-sm text-gray-600">L'Oréal, Beauty Color, Amend, Garnier, BioColor, Alfaparf, IMPALA e WEPINK</p>
+              <p className="text-sm text-gray-600">L'Oréal, Beauty Color, Amend, Garnier, BioColor e Alfaparf</p>
             </div>
 
             <div className="text-center p-6">
@@ -886,7 +767,7 @@ export default function TintasPage() {
                 <span className="text-2xl">✨</span>
               </div>
               <h3 className="font-semibold mb-2">Qualidade Profissional</h3>
-              <p className="text-sm text-gray-600">Tintas, esmaltes e perfumes de alta qualidade</p>
+              <p className="text-sm text-gray-600">Tintas capilares de alta qualidade</p>
             </div>
 
             <div className="text-center p-6">

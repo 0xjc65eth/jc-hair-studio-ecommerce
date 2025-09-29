@@ -69,8 +69,8 @@ export default function MegaHairCatalog() {
     inStock: false
   });
 
-  // Generate products once usando sistema unificado
-  const allProducts = useMemo(() => generateProducts(), []);
+  // Mega hair removido - lista vazia conforme solicitado
+  const allProducts = useMemo(() => [], []);
 
   // Filter products based on current filters
   const filteredProducts = useMemo(() => {
@@ -218,7 +218,7 @@ export default function MegaHairCatalog() {
               Mega Hair Professional
             </h1>
             <p className="text-gray-600 mb-6">
-              {allProducts.length} produtos • Extensões de cabelo premium
+              Produtos removidos temporariamente
             </p>
             <div className="flex items-center justify-center gap-4 text-sm text-gray-500">
               <span>{filteredProducts.filter(p => p.inStock).length} em estoque</span>
@@ -384,109 +384,17 @@ export default function MegaHairCatalog() {
             )}
           </AnimatePresence>
 
-          {/* Products Grid */}
+          {/* Produtos removidos */}
           <div className="flex-1">
-            {filteredProducts.length === 0 ? (
-              <div className="text-center py-20">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-light text-gray-600 mb-2">
-                  Nenhum produto encontrado
-                </h3>
-                <p className="text-gray-500 mb-6">
-                  Tente ajustar os filtros ou limpar todas as seleções
-                </p>
-                <button
-                  onClick={clearAllFilters}
-                  className="px-6 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors"
-                >
-                  Limpar Filtros
-                </button>
-              </div>
-            ) : (
-              <motion.div
-                layout
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-              >
-                {filteredProducts.map((product, index) => (
-                  <div
-                    key={product.id}
-                    className="bg-white border border-gray-200 overflow-hidden group"
-                  >
-                    {/* Product Image */}
-                    <Link href={`/produto/${product.id}`} className="block">
-                      <div className="relative h-48 bg-gray-100">
-                        {!product.inStock && (
-                          <div className="absolute inset-0 bg-white/80 flex items-center justify-center z-10">
-                            <span className="text-gray-600 text-sm">Esgotado</span>
-                          </div>
-                        )}
-                        <span className="absolute top-2 left-2 bg-black/80 text-white px-2 py-1 text-xs">
-                          {product.length}cm
-                        </span>
-                        <div className="relative w-full h-full">
-                          <Image
-                            src={product.image}
-                            alt={product.name}
-                            fill
-                            className="object-cover"
-                            loading="lazy"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.src = '/placeholder-product.jpg';
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </Link>
-
-                    {/* Product Info */}
-                    <div className="p-4">
-                      <div className="text-xs text-gray-500 mb-1">
-                        {typeNames[product.type]}
-                      </div>
-                      <h3 className="text-sm font-medium mb-2 text-gray-900">
-                        {product.name}
-                      </h3>
-
-                      {/* Specs */}
-                      <div className="text-xs text-gray-500 mb-3">
-                        {product.length}cm • {product.weight}g • {product.origin}
-                      </div>
-
-                      {/* Price */}
-                      <div className="mb-3">
-                        <div className="text-lg font-medium text-gray-900">{formatPrice(product.price)}</div>
-                      </div>
-
-                      {/* Action Buttons */}
-                      <div className="space-y-2">
-                        <button
-                          onClick={() => addToCart(product)}
-                          disabled={!product.inStock}
-                          className={`w-full py-2 text-sm font-medium transition-colors ${
-                            product.inStock
-                              ? isInCart(product.id)
-                                ? 'bg-gray-900 text-white'
-                                : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                              : 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                          }`}
-                        >
-                          {!product.inStock ? 'Esgotado' :
-                           isInCart(product.id) ? 'No Carrinho' : 'Adicionar'}
-                        </button>
-
-                        <Link
-                          href={`/produto/${product.id}`}
-                          className="block w-full py-2 text-center text-sm text-gray-600 hover:text-gray-900 border border-gray-200 hover:border-gray-300 transition-colors"
-                        >
-                          Ver Detalhes
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </motion.div>
-            )}
+            <div className="text-center py-20">
+              <div className="text-6xl mb-4">📦</div>
+              <h3 className="text-2xl font-light text-gray-600 mb-2">
+                Produtos removidos temporariamente
+              </h3>
+              <p className="text-gray-500 mb-6">
+                A seção de mega hair foi removida conforme solicitado
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -627,18 +535,7 @@ export default function MegaHairCatalog() {
       {/* Schema Markup for Category Rich Snippets */}
       <CategorySchema
         category="Mega Hair Brasileiro"
-        products={filteredProducts.map(product => ({
-          id: product.id.toString(),
-          name: product.name,
-          brand: "JC Hair Studio's 62",
-          price: product.price,
-          preco_eur: product.price,
-          images: [product.image],
-          category: 'mega-hair',
-          inStock: product.inStock,
-          rating: product.rating,
-          reviews: product.reviews
-        }))}
+        products={[]}
       />
     </div>
   );
