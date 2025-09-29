@@ -6,6 +6,8 @@ import { getStaticProductById, getAllStaticProducts } from '../data/staticProduc
 import { categories } from '../data/categories';
 import { getLegacyCompatibleProducts } from '../data/megaHairProducts';
 import { getAllMakeupProducts, getMakeupProductById } from '../data/makeupProducts';
+import { allTintasData, getTintaById } from '../data/tintasProducts';
+import { wepinkPerfumesProducts } from '../data/perfumesData';
 
 interface UnifiedProduct {
   id: string;
@@ -303,7 +305,38 @@ export class ProductResolver {
       }
     }
 
-    // Method 5: Try mega hair products (legacy compatible - fallback)
+    // ENHANCED METHOD 5: Tintas capilares with brand validation
+    if (!product && (productId.includes('loreal-') || productId.includes('biocolor-') ||
+        productId.includes('beauty-color-') || productId.includes('amend-') ||
+        productId.includes('wella-') || productId.includes('nutrisse-') ||
+        productId.includes('excllusiv-') || productId.includes('altamoda-'))) {
+      if (isDev) {
+        console.log(`🎯 ProductResolver: Tintas pattern detected, searching tintas...`);
+      }
+      product = getTintaById(productId);
+      if (product) {
+        source = 'tintas-validated';
+        if (isDev) {
+          console.log(`✅ ProductResolver: Found tintas product - ${product.nome}`);
+        }
+      }
+    }
+
+    // ENHANCED METHOD 6: WEPINK perfumes with validation
+    if (!product && productId.includes('wepink-')) {
+      if (isDev) {
+        console.log(`🎯 ProductResolver: WEPINK pattern detected, searching perfumes...`);
+      }
+      product = wepinkPerfumesProducts.find(p => p.id === productId);
+      if (product) {
+        source = 'perfumes-validated';
+        if (isDev) {
+          console.log(`✅ ProductResolver: Found perfume product - ${product.name}`);
+        }
+      }
+    }
+
+    // Method 7: Try mega hair products (legacy compatible - fallback)
     if (!product) {
       const megaHairProducts = getLegacyCompatibleProducts();
       for (const mappedId of allPossibleIds) {
@@ -450,6 +483,22 @@ export class ProductResolver {
       );
       if (!exists) {
         allProducts.push(this.normalizeProduct(product, 'megahair'));
+      }
+    });
+
+    // Tintas capilares products
+    allTintasData.forEach(tinta => {
+      const exists = allProducts.some(p => p.id === tinta.id);
+      if (!exists) {
+        allProducts.push(this.normalizeProduct(tinta, 'tintas'));
+      }
+    });
+
+    // WEPINK perfumes products
+    wepinkPerfumesProducts.forEach(perfume => {
+      const exists = allProducts.some(p => p.id === perfume.id);
+      if (!exists) {
+        allProducts.push(this.normalizeProduct(perfume, 'perfumes'));
       }
     });
 
