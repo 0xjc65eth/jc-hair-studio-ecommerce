@@ -5,9 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
-    "build": "SKIP_TYPE_CHECK=true SKIP_LINT=true npx next build",
+    "build": "next build",
     "build:production": "NODE_ENV=production npm run build:pre-check && npm run build:optimized",
-    "build:vercel": "echo 'Starting Vercel optimized build...' && NODE_OPTIONS='--max-old-space-size=2048' SKIP_TYPE_CHECK=true SKIP_LINT=true NEXT_TELEMETRY_DISABLED=1 next build",
+    "build:vercel": "echo 'Starting Vercel optimized build...' && NODE_OPTIONS='--max-old-space-size=8192' SKIP_TYPE_CHECK=true SKIP_LINT=true NEXT_TELEMETRY_DISABLED=1 next build",
     "build:optimized": "npm run optimize:build && npm run build:vercel",
     "build:check": "npm run type-check:safe && npm run lint:safe",
     "build:pre-check": "echo 'Running pre-build checks...' && npm run type-check:production && npm run lint:production",
@@ -117,8 +117,8 @@
     "@types/nodemailer": "^7.0.1",
     "@types/pdfkit": "^0.17.3",
     "@types/qrcode": "^1.5.5",
-    "@types/react": "^19.1.12",
-    "@types/react-dom": "^19.1.9",
+    "@types/react": "^18.3.25",
+    "@types/react-dom": "^18.3.7",
     "amazon-sp-api": "^1.1.7",
     "autoprefixer": "^10.4.21",
     "axios": "^1.12.2",
@@ -142,7 +142,7 @@
     "lucide-react": "^0.544.0",
     "mongoose": "^8.18.1",
     "negotiator": "^0.6.4",
-    "next": "^15.5.4",
+    "next": "^14.2.33",
     "next-auth": "^4.24.11",
     "next-pwa": "^5.6.0",
     "node-fetch": "^3.3.2",
@@ -151,9 +151,9 @@
     "postcss": "^8.5.6",
     "puppeteer": "^24.22.0",
     "qrcode": "^1.5.4",
-    "react": "^19.1.1",
+    "react": "^18.3.1",
     "react-country-region-selector": "^4.0.2",
-    "react-dom": "^19.1.1",
+    "react-dom": "^18.3.1",
     "react-hook-form": "^7.62.0",
     "react-hotkeys-hook": "^5.1.0",
     "react-infinite-scroll-component": "^6.1.0",
@@ -209,7 +209,7 @@
     "wait-on": "^9.0.1"
   },
   "engines": {
-    "node": ">=20.18.1",
+    "node": ">=20.18.0",
     "npm": ">=8.0.0"
   }
 }

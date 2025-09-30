@@ -1,0 +1,112 @@
+{
+  "compilerOptions": {
+    // Target and library configuration for optimal Next.js 15 build
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "webworker"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+
+    // ✅ STRICT TYPE CHECKING - Production Ready
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+
+    // CRITICAL: Force consistent casing for case-sensitive environments
+    "forceConsistentCasingInFileNames": true,
+
+    // Module resolution and compilation optimizations - Next.js 15
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": false,
+
+    // ✅ Next.js 15 optimizations
+    "moduleDetection": "force",
+    "noEmitOnError": true,
+
+    // Build performance optimizations
+    "useDefineForClassFields": true,
+    "verbatimModuleSyntax": false,
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
+    "removeComments": true,
+    "importHelpers": true,
+    "downlevelIteration": false,
+
+    // Type checking optimizations
+    "assumeChangesOnlyAffectDirectDependencies": true,
+
+    // Next.js 15 plugin
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+
+    // Path mapping for absolute imports
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/*": ["components/*"],
+      "@/lib/*": ["lib/*"],
+      "@/types/*": ["types/*"],
+      "@/app/*": ["app/*"],
+      "@/styles/*": ["styles/*"],
+      "@/utils/*": ["utils/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/config/*": ["config/*"]
+    }
+  },
+
+  // Files to include in compilation
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+
+  // Files to exclude from compilation
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".next",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "playwright-report",
+    "test-results"
+  ],
+
+  // TypeScript Node configuration
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "ES2022",
+      "esModuleInterop": true
+    }
+  }
+}

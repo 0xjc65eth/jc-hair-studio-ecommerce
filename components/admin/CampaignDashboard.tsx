@@ -520,7 +520,7 @@ export default function CampaignDashboard() {
               <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
               <div>
                 <p className="text-sm text-gray-700">
-                  <strong>Campanhas Meta Ads</strong> têm frequência alta (>3).
+                  <strong>Campanhas Meta Ads</strong> têm frequência alta ({'>'}3).
                   Recomendamos criar novos creativos para reduzir fadiga do público.
                 </p>
               </div>

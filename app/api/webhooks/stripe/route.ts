@@ -150,7 +150,8 @@ export async function POST(request: NextRequest) {
 
   try {
     const body = await request.text();
-    const sig = headers().get('stripe-signature');
+    const headersList = await headers();
+    const sig = headersList.get('stripe-signature');
 
     if (!sig) {
       logger.error(`❌ [${requestId}] No Stripe signature found`);
@@ -777,9 +778,6 @@ async function sendReferralNotification(data: any) {
   }
 }
 
-// Configuração para o Next.js
-export const config = {
-  api: {
-    bodyParser: false, // Stripe requer o body cru
-  },
-};
+// Configuração para Next.js 14 (route segment config)
+export const dynamic = 'force-dynamic';
+export const maxDuration = 60;
