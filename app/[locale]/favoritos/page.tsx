@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { Heart, ShoppingBag, X, Filter } from 'lucide-react';
@@ -122,6 +122,8 @@ export default function FavoritosPage() {
           images: product.image ? [{
             url: product.image,
             alt: product.name,
+            title: product.name,
+            displayOrder: 0,
             isMain: true
           }] : [],
           status: product.inStock ? 'ACTIVE' as any : 'OUT_OF_STOCK' as any,
@@ -299,7 +301,7 @@ export default function FavoritosPage() {
               Nenhum produto encontrado
             </h3>
             <p className="text-gray-600 mb-4">
-              Não há produtos favoritos na categoria "{filterCategory}".
+              Não há produtos favoritos na categoria &quot;{filterCategory}&quot;.
             </p>
             <button
               onClick={() => setFilterCategory('all')}

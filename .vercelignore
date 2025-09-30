@@ -89,3 +89,54 @@ coverage/
 yarn.lock
 pnpm-lock.yaml
 package-lock.json.backup
+
+# Additional test files and reports
+comprehensive-*.mjs
+ecommerce-*.mjs
+*-test.png
+header-*.png
+notification-logs.json
+test-*.json
+analyze-*.js
+system-check.mjs
+webhook-test.mjs
+monitor-*.mjs
+validate-*.mjs
+
+# Additional documentation
+GOOGLE-OAUTH-CONFIG.md
+REFERRAL-SYSTEM.md
+RELATORIO-TESTES-COMPLETO.md
+
+# Development scripts
+scripts/create-test-*
+scripts/fix-*
+scripts/seed-*
+
+# Additional environment files
+.env.production.local
+.env.vercel
+.env.local.backup.*
+
+# Build optimization exclusions
+public/videos/large/
+public/images/unoptimized/
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# Source maps (reduce bundle size)
+.next/static/chunks/pages/_app-*.js.map
+.next/static/chunks/pages/_document-*.js.map
+.next/static/css/*.css.map
+*.map
+
+# Large development dependencies
+node_modules/@playwright/
+node_modules/@types/
+node_modules/typescript/
+node_modules/eslint/
+
+# Build optimization scripts
+scripts/optimize-build.js

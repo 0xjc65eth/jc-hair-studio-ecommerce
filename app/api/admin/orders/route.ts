@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { connectDB } from '@/lib/mongodb/connection';
 import { Order } from '@/lib/mongodb/schemas/order.schema';
 import { Types } from 'mongoose';
+import { withAdminAuth } from '@/lib/admin/auth-middleware';
 
 function getStripeSecretKey() {
     const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
@@ -41,7 +42,7 @@ async function logOperation(operation: string, details: any) {
   console.log(`[${timestamp}] ADMIN ORDERS ${operation}:`, JSON.stringify(details, null, 2));
 }
 
-export async function GET(request: NextRequest) {
+async function getHandler(request: NextRequest) {
   try {
     await logOperation('GET_STARTED', { timestamp: new Date().toISOString() });
 
@@ -291,7 +292,7 @@ export async function GET(request: NextRequest) {
   }
 }
 
-export async function POST(request: NextRequest) {
+async function postHandler(request: NextRequest) {
   try {
     const orderData = await request.json();
     await logOperation('POST_STARTED', { hasOrderData: !!orderData });
@@ -542,7 +543,7 @@ export async function addOrderFromWebhook(orderData: any) {
 }
 
 // PUT method for updating order status
-export async function PUT(request: NextRequest) {
+async function putHandler(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const orderId = searchParams.get('id');
@@ -639,7 +640,7 @@ export async function PUT(request: NextRequest) {
 }
 
 // DELETE method for canceling orders
-export async function DELETE(request: NextRequest) {
+async function deleteHandler(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const orderId = searchParams.get('id');
@@ -712,3 +713,9 @@ export async function DELETE(request: NextRequest) {
     }, { status: 500 });
   }
 }
+
+// Export protected endpoints with admin authentication
+export const GET = withAdminAuth(getHandler);
+export const POST = withAdminAuth(postHandler);
+export const PUT = withAdminAuth(putHandler);
+export const DELETE = withAdminAuth(deleteHandler);

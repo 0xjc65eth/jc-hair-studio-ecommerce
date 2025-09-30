@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { Search, Filter, ArrowUp, ArrowDown, Grid, List, Zap, Shield, Award, Flame } from 'lucide-react';
 import { ProductCard, ProductCardSkeleton } from '@/components/ui/ProductCard';
 import { FilterSidebar } from '@/components/ui/FilterSidebar';
@@ -47,8 +48,8 @@ async function getProducts(category = 'ferramentas-profissionais'): Promise<Prod
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000);
     
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/products?category=${category}`, {
-      cache: 'no-store',
+    const response = await fetch(`/api/products?category=${category}`, {
+      next: { revalidate: 3600 },
       signal: controller.signal,
       headers: {
         'Content-Type': 'application/json'
@@ -295,11 +296,11 @@ export default function FerramentasProfissionaisPage() {
           <nav className="flex" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-2 text-sm">
               <li>
-                <a href="/" className="text-gray-500 hover:text-gray-700">Início</a>
+                <Link href="/" className="text-gray-500 hover:text-gray-700">Início</Link>
               </li>
               <li className="text-gray-400">/</li>
               <li>
-                <a href="/produtos" className="text-gray-500 hover:text-gray-700">Produtos</a>
+                <Link href="/produtos" className="text-gray-500 hover:text-gray-700">Produtos</Link>
               </li>
               <li className="text-gray-400">/</li>
               <li className="text-gray-900 font-medium">Ferramentas Profissionais</li>

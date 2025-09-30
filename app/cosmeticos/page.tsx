@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import { Button } from '../../components/ui/Button';
+import { Button } from '@/components/ui/Button';
 import ProductCard from '../../components/products/ProductCard';
 import { useCart } from '../../lib/stores/cartStore'; // Import cart store for shopping cart functionality
 import { ShoppingBag, Search, Filter, Heart, Eye, Shuffle, Grid, List, Palette, Sparkles, Droplets, Brush } from 'lucide-react';

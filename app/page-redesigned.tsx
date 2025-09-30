@@ -28,8 +28,8 @@ async function getFeaturedProducts(): Promise<Product[]> {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000);
     
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/products?featured=true&limit=6`, {
-      cache: 'no-store',
+    const response = await fetch(`/api/products?featured=true&limit=6`, {
+      next: { revalidate: 900 }, // Cache for 15 minutes
       signal: controller.signal,
       headers: {
         'Content-Type': 'application/json'

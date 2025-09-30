@@ -43,30 +43,52 @@ interface Product {
 }
 
 async function getProducts(category = 'progressivas-alisamentos'): Promise<Product[]> {
+  // During build time, return static data to avoid external API calls
+  if (process.env.NODE_ENV === 'production' && !process.env.VERCEL_ENV) {
+    return getFallbackProducts();
+  }
+
   try {
+    // Use internal service directly during build to avoid HTTP calls
+    if (typeof window === 'undefined') {
+      const { MongoProductService } = await import('@/lib/services/mongoProductService');
+      const result = await MongoProductService.getProducts({
+        category: [category],
+        limit: 20,
+        sortBy: 'newest'
+      });
+      return result.products || [];
+    }
+
+    // Client-side fetch with proper caching
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 5000);
-    
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/products?category=${category}`, {
-      cache: 'no-store',
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
+
+    const response = await fetch(`/api/products?category=${category}`, {
+      next: { revalidate: 3600 }, // Cache for 1 hour
       signal: controller.signal,
       headers: {
         'Content-Type': 'application/json'
       }
     });
-    
+
     clearTimeout(timeoutId);
-    
+
     if (!response.ok) {
       throw new Error('Failed to fetch products');
     }
-    
+
     const data = await response.json();
     return data.data?.products || [];
   } catch (error) {
     console.error('Error fetching products:', error);
-    // Return mock data for now
-    return [
+    return getFallbackProducts();
+  }
+}
+
+function getFallbackProducts(): Product[] {
+  // Static fallback products for build time
+  return [
       {
         id: '1',
         name: 'Kit Progressiva Vogue Premium',
@@ -122,7 +144,6 @@ async function getProducts(category = 'progressivas-alisamentos'): Promise<Produ
         category: 'Progressivas e Alisamentos'
       }
     ];
-  }
 }
 
 const categoryFilters = [

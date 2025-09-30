@@ -5,6 +5,7 @@
 
 import { Schema, model, models, Document, Types } from 'mongoose';
 import { z } from 'zod';
+import { getSafeModel, configureSchemaForServerless, initializeSchemaIndexes } from '../schema-manager';
 
 // Zod validation schemas
 export const ProductImageZodSchema = z.object({
@@ -283,25 +284,32 @@ const ProductSeoSchema = new Schema<IProductSeo>({
   title: { type: String, required: true, maxlength: 60 },
   description: { type: String, required: true, maxlength: 160 },
   keywords: [{ type: String }],
-  slug: { 
-    type: String, 
-    required: true, 
+  slug: {
+    type: String,
+    required: true,
     unique: true,
+    sparse: true, // Prevent duplicate index warnings
     match: /^[a-z0-9-]+$/
   },
 });
 
 const ProductSchema = new Schema<IProduct>({
   // Informações básicas
-  name: { type: String, required: true, maxlength: 200 },
+  name: {
+    type: String,
+    required: true,
+    maxlength: 200,
+    index: true // Single field index, not unique to avoid conflicts
+  },
   description: { type: String, required: true, minlength: 10, maxlength: 2000 },
   shortDescription: { type: String, maxlength: 300 },
-  
+
   // SKU e identificação
-  sku: { 
-    type: String, 
-    required: true, 
+  sku: {
+    type: String,
+    required: true,
     unique: true,
+    sparse: true, // Prevent duplicate index warnings
     match: /^[A-Z0-9-]+$/
   },
   barcode: { type: String },
@@ -370,10 +378,34 @@ const ProductSchema = new Schema<IProduct>({
   wishlistCount: { type: Number, default: 0, min: 0 },
 }, {
   timestamps: true,
-  collection: 'products',
-  suppressReservedKeysWarning: true
+  collection: 'products'
 });
 
-// Create and export the model
-export const Product = models.Product || model<IProduct>('Product', ProductSchema);
+// Configure schema for serverless environment
+configureSchemaForServerless(ProductSchema);
+
+// Define indexes for the product schema
+const productIndexes = [
+  { spec: { name: 1 }, options: { background: true } },
+  { spec: { 'seo.slug': 1 }, options: { unique: true, sparse: true, background: true } },
+  { spec: { sku: 1 }, options: { unique: true, sparse: true, background: true } },
+  { spec: { categoryIds: 1 }, options: { background: true } },
+  { spec: { brandId: 1 }, options: { background: true } },
+  { spec: { isActive: 1, isVisible: 1 }, options: { background: true } },
+  { spec: { isFeatured: 1, isActive: 1 }, options: { background: true } },
+  { spec: { createdAt: -1 }, options: { background: true } },
+  { spec: { averageRating: -1, reviewCount: -1 }, options: { background: true } },
+  { spec: { tags: 1 }, options: { background: true } },
+  { spec: { price: 1 }, options: { background: true } },
+  { spec: { stock: 1, isActive: 1 }, options: { background: true } }
+];
+
+// Create and export the model with proper index handling
+export const Product = getSafeModel<IProduct>('Product', ProductSchema, 'products');
+
+// Initialize indexes asynchronously
+if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-production-build') {
+  initializeSchemaIndexes(Product, productIndexes).catch(console.error);
+}
+
 export default Product;

@@ -137,6 +137,26 @@ export default function MegaHairCatalog() {
   const filteredProducts = useMemo(() => {
     let filtered = [...allProducts];
 
+    // Search query filter
+    if (searchQuery) {
+      const searchLower = searchQuery.toLowerCase();
+      filtered = filtered.filter(product => {
+        const searchFields = [
+          product.name,
+          product.type,
+          product.color,
+          product.origin,
+          product.badge,
+          product.description,
+          product.technicalSpecs
+        ].filter(Boolean);
+
+        return searchFields.some(field =>
+          field?.toLowerCase().includes(searchLower)
+        );
+      });
+    }
+
     if (filters.type !== 'todos') {
       filtered = filtered.filter(p => p.type === filters.type);
     }
@@ -146,16 +166,10 @@ export default function MegaHairCatalog() {
     if (filters.length !== 'todos') {
       filtered = filtered.filter(p => p.length === parseInt(filters.length));
     }
-    if (filters.priceRange !== 'todos') {
-      const [min, max] = filters.priceRange.split('-').map(Number);
-      filtered = filtered.filter(p => {
-        if (max) {
-          return p.price >= min && p.price <= max;
-        } else {
-          return p.price >= min;
-        }
-      });
-    }
+
+    // Price range filter using slider
+    filtered = filtered.filter(p => p.price >= priceRange[0] && p.price <= priceRange[1]);
+
     if (filters.collection !== 'todos') {
       filtered = filtered.filter(p => {
         // Determinar coleção baseada no preço se não estiver definida
@@ -178,7 +192,7 @@ export default function MegaHairCatalog() {
     }
 
     return filtered;
-  }, [allProducts, filters]);
+  }, [allProducts, filters, searchQuery, priceRange]);
 
   // Agrupar produtos por tipo de cabelo
   const productsByType = useMemo(() => {
@@ -544,6 +558,95 @@ export default function MegaHairCatalog() {
           </div>
         </div>
       </motion.section>
+
+      {/* Smart Search & Quick Actions Bar */}
+      <section className="bg-white/90 backdrop-blur-lg border-b border-gray-100 sticky top-0 z-30">
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <div className="flex flex-col lg:flex-row gap-4 items-center">
+            {/* Smart Search */}
+            <div className="flex-1 relative">
+              <div className="relative">
+                <svg className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Buscar por tipo, cor, comprimento... ex: 'liso ruivo 60cm'"
+                  className="w-full pl-12 pr-4 py-3 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-rose-500 focus:border-transparent text-gray-900 placeholder-gray-500"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+            </div>
+
+            {/* Quick Action Buttons */}
+            <div className="flex items-center gap-3">
+              {/* Quiz Button */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setShowQuiz(true)}
+                className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-xl text-sm font-medium shadow-lg hover:shadow-xl transition-all"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Quiz Cabelo
+              </motion.button>
+
+              {/* Comparison Toggle */}
+              {compareProducts.length > 0 && (
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setShowComparison(true)}
+                  className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-xl text-sm font-medium shadow-lg hover:shadow-xl transition-all relative"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                  Comparar ({compareProducts.length})
+                </motion.button>
+              )}
+
+              {/* Wishlist Toggle */}
+              {wishlist.length > 0 && (
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center gap-2 bg-gradient-to-r from-rose-600 to-pink-600 text-white px-4 py-2 rounded-xl text-sm font-medium shadow-lg hover:shadow-xl transition-all relative"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                  </svg>
+                  Favoritos ({wishlist.length})
+                </motion.button>
+              )}
+            </div>
+          </div>
+
+          {/* Search Results Info */}
+          {searchQuery && (
+            <div className="mt-3 text-sm text-gray-600">
+              {filteredProducts.length > 0 ? (
+                <span>✨ Encontrados <strong>{filteredProducts.length}</strong> produtos para "{searchQuery}"</span>
+              ) : (
+                <span>😔 Nenhum produto encontrado para "{searchQuery}". Tente termos como "liso", "cacheado", "ruivo"</span>
+              )}
+            </div>
+          )}
+        </div>
+      </section>
 
       {/* Enhanced Filter Bar */}
       <section className="bg-white border-b border-gray-100">
@@ -982,6 +1085,45 @@ export default function MegaHairCatalog() {
 
                         {/* Quick Actions */}
                         <div className="absolute top-3 right-3 z-20 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                          {/* Wishlist Button */}
+                          <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              toggleWishlist(product.id);
+                            }}
+                            className={`w-10 h-10 backdrop-blur rounded-full flex items-center justify-center shadow-lg transition-colors ${
+                              isInWishlist(product.id)
+                                ? 'bg-rose-500 text-white'
+                                : 'bg-white/90 hover:bg-white text-gray-700'
+                            }`}
+                          >
+                            <svg className="w-5 h-5" fill={isInWishlist(product.id) ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                          </motion.button>
+
+                          {/* Compare Button */}
+                          <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              toggleCompare(product);
+                            }}
+                            className={`w-10 h-10 backdrop-blur rounded-full flex items-center justify-center shadow-lg transition-colors ${
+                              isComparing(product.id)
+                                ? 'bg-blue-500 text-white'
+                                : 'bg-white/90 hover:bg-white text-gray-700'
+                            }`}
+                          >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                          </motion.button>
+
+                          {/* Quick View Button */}
                           <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
@@ -1296,6 +1438,293 @@ export default function MegaHairCatalog() {
         )}
       </AnimatePresence>
 
+      {/* Hair Compatibility Quiz Modal */}
+      <AnimatePresence>
+        {showQuiz && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+            onClick={() => setShowQuiz(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0, y: 50 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.8, opacity: 0, y: 50 }}
+              className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl"
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h2 className="text-2xl font-bold">Quiz de Compatibilidade</h2>
+                    <p className="text-purple-100">Encontre seu mega hair ideal em 3 perguntas</p>
+                  </div>
+                  <button
+                    onClick={() => setShowQuiz(false)}
+                    className="w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div className="p-8">
+                <div className="space-y-8">
+                  {/* Question 1: Hair Type */}
+                  <div>
+                    <h3 className="text-lg font-bold mb-4 text-gray-900">1. Qual é a textura do seu cabelo natural?</h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      {[
+                        { type: 'liso', label: 'Liso (1A-2A)', icon: '━', desc: 'Cabelo escorrido ou com leve ondulação' },
+                        { type: 'ondulado', label: 'Ondulado (2C-3A)', icon: '∼', desc: 'Ondas marcadas e movimento natural' },
+                        { type: 'cacheado', label: 'Cacheado (3C)', icon: '◯', desc: 'Cachos pequenos e bem definidos' },
+                        { type: 'crespo', label: 'Crespo (4A-4C)', icon: '※', desc: 'Cachos muito fechados ou textura afro' }
+                      ].map((option) => (
+                        <motion.button
+                          key={option.type}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          onClick={() => handleFilterChange('type', option.type)}
+                          className={`p-4 rounded-xl border-2 text-left transition-all ${
+                            filters.type === option.type
+                              ? 'border-purple-500 bg-purple-50'
+                              : 'border-gray-200 hover:border-purple-300'
+                          }`}
+                        >
+                          <div className="flex items-center gap-3 mb-2">
+                            <span className="text-2xl">{option.icon}</span>
+                            <span className="font-semibold text-gray-900">{option.label}</span>
+                          </div>
+                          <p className="text-sm text-gray-600">{option.desc}</p>
+                        </motion.button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Question 2: Desired Color */}
+                  <div>
+                    <h3 className="text-lg font-bold mb-4 text-gray-900">2. Que cor você deseja?</h3>
+                    <div className="grid grid-cols-3 gap-3">
+                      {[
+                        { color: 'preto', label: 'Preto Natural', bg: 'bg-gray-900' },
+                        { color: 'castanho', label: 'Castanho', bg: 'bg-amber-800' },
+                        { color: 'loiro', label: 'Loiro', bg: 'bg-yellow-400' },
+                        { color: 'ruivo', label: 'Ruivo', bg: 'bg-orange-600' },
+                        { color: 'grisalho', label: 'Grisalho', bg: 'bg-gray-400' },
+                        { color: 'ombre', label: 'Ombré Hair', bg: 'bg-gradient-to-r from-gray-800 to-yellow-400' }
+                      ].map((option) => (
+                        <motion.button
+                          key={option.color}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={() => handleFilterChange('color', option.color)}
+                          className={`p-3 rounded-xl border-2 text-center transition-all ${
+                            filters.color === option.color
+                              ? 'border-purple-500 ring-2 ring-purple-200'
+                              : 'border-gray-200 hover:border-purple-300'
+                          }`}
+                        >
+                          <div className={`w-8 h-8 ${option.bg} rounded-full mx-auto mb-2`}></div>
+                          <span className="text-sm font-medium text-gray-900">{option.label}</span>
+                        </motion.button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Question 3: Budget */}
+                  <div>
+                    <h3 className="text-lg font-bold mb-4 text-gray-900">3. Qual seu orçamento ideal?</h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      {[
+                        { range: [50, 100], label: '€50 - €100', desc: 'Coleção Classic - Ótimo custo-benefício' },
+                        { range: [100, 150], label: '€100 - €150', desc: 'Coleção Premium - Qualidade superior' },
+                        { range: [150, 200], label: '€150 - €200', desc: 'Coleção Gold - Luxo e exclusividade' },
+                        { range: [200, 300], label: '€200 - €300', desc: 'Coleção Rapunzel - Máxima qualidade' }
+                      ].map((option, index) => (
+                        <motion.button
+                          key={index}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          onClick={() => setPriceRange(option.range)}
+                          className={`p-4 rounded-xl border-2 text-left transition-all ${
+                            priceRange[0] === option.range[0] && priceRange[1] === option.range[1]
+                              ? 'border-purple-500 bg-purple-50'
+                              : 'border-gray-200 hover:border-purple-300'
+                          }`}
+                        >
+                          <div className="font-semibold text-gray-900 mb-1">{option.label}</div>
+                          <p className="text-sm text-gray-600">{option.desc}</p>
+                        </motion.button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Results */}
+                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6">
+                    <h3 className="text-lg font-bold mb-3 text-gray-900">
+                      ✨ Produtos recomendados para você: {filteredProducts.length}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      Com base nas suas respostas, encontramos os produtos perfeitos para seu cabelo!
+                    </p>
+                    <div className="flex gap-3">
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => {
+                          setShowQuiz(false);
+                          // Scroll to results
+                          document.querySelector('.max-w-7xl')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all"
+                      >
+                        Ver Resultados
+                      </motion.button>
+                      <button
+                        onClick={() => {
+                          clearAllFilters();
+                          setPriceRange([0, 300]);
+                        }}
+                        className="bg-gray-100 text-gray-700 px-6 py-3 rounded-xl font-medium hover:bg-gray-200 transition-colors"
+                      >
+                        Refazer Quiz
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Product Comparison Modal */}
+      <AnimatePresence>
+        {showComparison && compareProducts.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+            onClick={() => setShowComparison(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0, y: 50 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.8, opacity: 0, y: 50 }}
+              className="bg-white rounded-3xl max-w-6xl w-full max-h-[90vh] overflow-hidden shadow-2xl"
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h2 className="text-2xl font-bold">Comparar Produtos</h2>
+                    <p className="text-blue-100">Compare até 3 produtos lado a lado</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={clearComparison}
+                      className="px-4 py-2 bg-white/20 backdrop-blur rounded-lg text-sm hover:bg-white/30 transition-colors"
+                    >
+                      Limpar Tudo
+                    </button>
+                    <button
+                      onClick={() => setShowComparison(false)}
+                      className="w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 overflow-auto max-h-[calc(90vh-120px)]">
+                <div className={`grid grid-cols-${compareProducts.length} gap-6`}>
+                  {compareProducts.map((product, index) => (
+                    <div key={product.id} className="bg-gray-50 rounded-2xl p-4">
+                      {/* Product Image */}
+                      <div className="relative h-48 bg-white rounded-xl mb-4 overflow-hidden">
+                        <OptimizedMegaHairImage
+                          src={product.image}
+                          alt={product.name}
+                          productName={product.name}
+                          productType={product.type}
+                          className="w-full h-full"
+                          showSkeleton={true}
+                        />
+                        <button
+                          onClick={() => toggleCompare(product)}
+                          className="absolute top-2 right-2 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center text-xs hover:bg-red-600 transition-colors"
+                        >
+                          ×
+                        </button>
+                      </div>
+
+                      {/* Product Details */}
+                      <div className="space-y-3">
+                        <h3 className="font-bold text-gray-900 text-sm line-clamp-2">{product.name}</h3>
+
+                        <div className="text-2xl font-bold text-rose-600">{formatPrice(product.price)}</div>
+
+                        <div className="space-y-2 text-sm">
+                          <div className="flex justify-between">
+                            <span className="text-gray-600">Tipo:</span>
+                            <span className="font-medium">{typeNames[product.type]}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-gray-600">Cor:</span>
+                            <span className="font-medium">{product.color}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-gray-600">Comprimento:</span>
+                            <span className="font-medium">{product.length}cm</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-gray-600">Peso:</span>
+                            <span className="font-medium">{product.weight}g</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-gray-600">Origem:</span>
+                            <span className="font-medium">{product.origin}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-gray-600">Avaliação:</span>
+                            <div className="flex items-center gap-1">
+                              <span className="font-medium">{product.rating}</span>
+                              <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button
+                          onClick={() => addToCart(product)}
+                          disabled={!product.inStock}
+                          className={`w-full py-3 rounded-xl font-medium transition-all ${
+                            product.inStock
+                              ? 'bg-gradient-to-r from-rose-600 to-pink-600 text-white hover:shadow-lg'
+                              : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                          }`}
+                        >
+                          {product.inStock ? 'Adicionar ao Carrinho' : 'Esgotado'}
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Premium Testimonials & Trust Section */}
       <section className="bg-gradient-to-r from-gray-50 to-rose-50 py-20">
         <div className="max-w-7xl mx-auto px-4">
@@ -1400,6 +1829,125 @@ export default function MegaHairCatalog() {
           </motion.div>
         </div>
       </section>
+
+      {/* Smart Recommendations Section */}
+      {filteredProducts.length > 0 && (
+        <section className="bg-white py-16 border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-rose-600 bg-clip-text text-transparent">
+                Recomendações Personalizadas
+              </h2>
+              <p className="text-xl text-gray-600">
+                Baseado no seu interesse, você também pode gostar de:
+              </p>
+            </motion.div>
+
+            {/* Smart Recommendations Grid */}
+            <div className="grid md:grid-cols-4 gap-6">
+              {allProducts
+                .filter(p => !filteredProducts.some(fp => fp.id === p.id))
+                .slice(0, 4)
+                .map((product, index) => (
+                  <motion.div
+                    key={`rec-${product.id}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ y: -5 }}
+                    className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-4 border border-gray-100 hover:shadow-lg transition-all group"
+                  >
+                    <div className="relative h-40 bg-gray-100 rounded-xl mb-4 overflow-hidden">
+                      <OptimizedMegaHairImage
+                        src={product.image}
+                        alt={product.name}
+                        productName={product.name}
+                        productType={product.type}
+                        className="w-full h-full group-hover:scale-110 transition-transform duration-500"
+                        showSkeleton={true}
+                        lazy={true}
+                      />
+                      <div className="absolute top-2 left-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                        Recomendado
+                      </div>
+                    </div>
+
+                    <h3 className="font-bold text-sm text-gray-900 mb-2 line-clamp-2">{product.name}</h3>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-lg font-bold text-rose-600">{formatPrice(product.price)}</span>
+                      <div className="flex items-center gap-1">
+                        <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <span className="text-xs text-gray-500">{product.rating}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => addToCart(product)}
+                        disabled={!product.inStock}
+                        className={`flex-1 py-2 rounded-lg text-xs font-medium transition-all ${
+                          product.inStock
+                            ? 'bg-gradient-to-r from-rose-600 to-pink-600 text-white hover:shadow-md'
+                            : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                        }`}
+                      >
+                        {product.inStock ? 'Adicionar' : 'Esgotado'}
+                      </button>
+                      <button
+                        onClick={() => toggleWishlist(product.id)}
+                        className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all ${
+                          isInWishlist(product.id)
+                            ? 'bg-rose-500 text-white'
+                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        }`}
+                      >
+                        <svg className="w-4 h-4" fill={isInWishlist(product.id) ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                      </button>
+                    </div>
+                  </motion.div>
+                ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Live Chat Widget */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0, x: 100 }}
+        animate={{ opacity: 1, scale: 1, x: 0 }}
+        transition={{ delay: 2 }}
+        className="fixed bottom-20 right-6 z-40"
+      >
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="bg-gradient-to-r from-green-600 to-emerald-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center relative group"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+
+          {/* Chat bubble */}
+          <div className="absolute bottom-16 right-0 bg-white rounded-2xl p-3 shadow-xl opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 pointer-events-none min-w-48">
+            <div className="text-sm text-gray-900 font-medium mb-1">💬 Posso ajudar?</div>
+            <div className="text-xs text-gray-600">Chat com especialista em mega hair</div>
+            <div className="absolute -bottom-2 right-4 w-4 h-4 bg-white transform rotate-45 border-r border-b border-gray-200"></div>
+          </div>
+
+          {/* Online indicator */}
+          <span className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white animate-pulse"></span>
+        </motion.button>
+      </motion.div>
 
       {/* Schema Markup for Category Rich Snippets */}
       <CategorySchema

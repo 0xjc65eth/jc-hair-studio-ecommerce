@@ -1,6 +1,6 @@
 /* Header & Navigation */
 .header-glass {
-  @apply backdrop-blur-md bg-white/90 border-b border-gray-100 sticky top-0 z-50;
+  @apply backdrop-blur-md bg-white/95 border-b border-gray-100 sticky top-0 z-50;
 }
 
 /* Header container positioning */
@@ -11,6 +11,16 @@ header .container-custom {
 /* Header actions visibility */
 header .flex.items-center {
   @apply relative z-[51];
+}
+
+/* Ensure header actions are properly positioned */
+.lg\\:flex.items-center.space-x-2 {
+  @apply z-[52] relative;
+}
+
+/* Mobile header actions */
+.flex.lg\\:hidden.items-center {
+  @apply z-[52] relative;
 }
 
 .nav-link {
@@ -69,34 +79,39 @@ header .flex.items-center {
 }
 
 .cart-counter {
-  @apply absolute -top-2 -right-2 bg-black text-white text-xs
-         rounded-full h-5 w-5 flex items-center justify-center z-[60]
-         font-semibold border-2 border-white shadow-lg;
+  @apply absolute -top-2 -right-2 bg-red-500 text-white text-xs
+         rounded-full h-6 w-6 flex items-center justify-center z-[61]
+         font-bold border-2 border-white shadow-lg;
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  min-width: 24px;
+  font-size: 11px;
 }
 
 /* Make cart counter more visible */
 .cart-counter::before {
   content: '';
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: rgba(0, 0, 0, 0.1);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: rgba(239, 68, 68, 0.2);
   border-radius: 50%;
   z-index: -1;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 /* Cart button visibility enhancement */
 [data-testid="cart-button"],
 [data-testid="mobile-cart-button"] {
-  @apply relative min-w-[44px] min-h-[44px] flex items-center justify-center;
+  @apply relative min-w-[50px] min-h-[50px] flex items-center justify-center
+         border border-transparent rounded-lg transition-all duration-200
+         hover:border-gray-200 hover:bg-gray-50;
 }
 
 [data-testid="cart-button"]:hover,
 [data-testid="mobile-cart-button"]:hover {
-  @apply bg-gray-100 rounded-lg scale-105 shadow-md;
+  @apply bg-gray-100 scale-105 shadow-md border-gray-300;
 }
 
 [data-testid="cart-button"]:active,
@@ -107,7 +122,13 @@ header .flex.items-center {
 /* Enhanced visibility when cart has items */
 [data-testid="cart-button"]:has(.cart-counter),
 [data-testid="mobile-cart-button"]:has(.cart-counter) {
-  @apply ring-2 ring-gray-200 bg-gray-50 rounded-lg;
+  @apply ring-2 ring-black/20 bg-gray-50 border-gray-200 shadow-sm;
+}
+
+/* Make cart icon more prominent */
+[data-testid="cart-button"] svg,
+[data-testid="mobile-cart-button"] svg {
+  @apply w-6 h-6 stroke-2;
 }
 
 .price-display {

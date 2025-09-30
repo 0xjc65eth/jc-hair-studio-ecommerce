@@ -970,6 +970,275 @@ enum AlertStatus {
 }
 
 // ================================
+// REFERRAL SYSTEM
+// ================================
+
+model ReferralCode {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId     String   @db.ObjectId
+  code       String   @unique
+
+  // Status
+  isActive   Boolean  @default(true)
+  maxUses    Int      @default(100) // Limite de usos
+  currentUses Int     @default(0)
+
+  // Rewards configuration
+  referrerRewardType   ReferralRewardType @default(PERCENTAGE)
+  referrerRewardValue  Float              @default(0.10) // 10% default
+  refereeRewardType    ReferralRewardType @default(PERCENTAGE)
+  refereeRewardValue   Float              @default(0.05) // 5% default
+
+  // Validity
+  validFrom  DateTime @default(now())
+  validTo    DateTime?
+
+  // Timestamps
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("referral_codes")
+}
+
+model Referral {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  referralCodeId   String   @db.ObjectId
+  referrerId       String   @db.ObjectId // Quem indicou
+  refereeId        String   @db.ObjectId // Quem foi indicado
+
+  // Status
+  status           ReferralStatus @default(PENDING)
+
+  // Tracking
+  ipAddress        String?
+  userAgent        String?
+  source           String? // "link", "social", "email"
+
+  // First purchase tracking
+  firstPurchaseId  String?  @db.ObjectId
+  firstPurchaseAt  DateTime?
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@unique([referralCodeId, refereeId])
+  @@map("referrals")
+}
+
+model ReferralReward {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  referralId       String   @db.ObjectId
+  userId           String   @db.ObjectId // Quem recebeu o reward
+  type             ReferralRewardType
+
+  // Reward details
+  rewardType       RewardDeliveryType
+  value            Float    // Valor em EUR ou porcentagem
+  points           Int      @default(0) // Pontos concedidos
+
+  // Cashback details
+  cashbackAmount   Float    @default(0) // Valor em dinheiro
+  cashbackStatus   CashbackStatus @default(PENDING)
+
+  // Order reference
+  orderId          String?  @db.ObjectId
+
+  // Generated coupon for discount rewards
+  couponCode       String?  @unique
+
+  // Status
+  status           RewardStatus @default(PENDING)
+
+  // Processing
+  processedAt      DateTime?
+  paidAt           DateTime?
+  expiresAt        DateTime?
+
+  // Timestamps
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("referral_rewards")
+}
+
+model ReferralCashback {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId          String   @db.ObjectId
+
+  // Cashback details
+  totalEarned     Float    @default(0) // Total ganho
+  totalPaid       Float    @default(0) // Total pago
+  availableBalance Float   @default(0) // Saldo disponível
+  pendingBalance   Float   @default(0) // Saldo pendente
+
+  // Bank details for payout
+  bankAccount     String?
+  bankName        String?
+  accountHolder   String?
+
+  // Payout preferences
+  minPayoutAmount Float    @default(25.0) // Mínimo €25 para saque
+  payoutMethod    PayoutMethod @default(BANK_TRANSFER)
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([userId])
+  @@map("referral_cashbacks")
+}
+
+model CashbackPayout {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId          String   @db.ObjectId
+  cashbackId      String   @db.ObjectId
+
+  // Payout details
+  amount          Float
+  method          PayoutMethod
+  status          PayoutStatus @default(PENDING)
+
+  // Payment details
+  transactionId   String?
+  bankAccount     String?
+  bankName        String?
+
+  // Processing
+  requestedAt     DateTime @default(now())
+  processedAt     DateTime?
+  paidAt          DateTime?
+  failedAt        DateTime?
+
+  // Error tracking
+  errorMessage    String?
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("cashback_payouts")
+}
+
+model ReferralTier {
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  name                String   @unique
+  description         String?
+
+  // Requirements
+  minReferrals        Int      @default(0)
+  minTotalSales       Float    @default(0) // Valor mínimo em vendas
+
+  // Benefits
+  referrerRewardBonus Float    @default(0) // Bonus adicional para o referrer
+  refereeRewardBonus  Float    @default(0) // Bonus adicional para o referee
+  cashbackMultiplier  Float    @default(1.0) // Multiplicador de cashback
+
+  // Special perks
+  freeShipping        Boolean  @default(false)
+  prioritySupport     Boolean  @default(false)
+  exclusiveProducts   Boolean  @default(false)
+
+  // Display
+  badgeIcon           String?
+  badgeColor          String?
+  displayOrder        Int      @default(0)
+
+  // Status
+  isActive            Boolean  @default(true)
+
+  // Timestamps
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@map("referral_tiers")
+}
+
+model UserReferralStats {
+  id                    String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId                String   @unique @db.ObjectId
+
+  // Current tier
+  currentTierId         String?  @db.ObjectId
+
+  // Statistics
+  totalReferrals        Int      @default(0)
+  successfulReferrals   Int      @default(0) // Referrals que fizeram compra
+  totalReferralSales    Float    @default(0) // Valor total em vendas
+  totalRewardsEarned    Float    @default(0)
+  totalCashbackEarned   Float    @default(0)
+  totalPointsEarned     Int      @default(0)
+
+  // Monthly stats
+  monthlyReferrals      Int      @default(0)
+  monthlyReferralSales  Float    @default(0)
+  lastMonthlyReset      DateTime @default(now())
+
+  // Engagement
+  profileViews          Int      @default(0)
+  linkClicks            Int      @default(0)
+  socialShares          Int      @default(0)
+
+  // Timestamps
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  @@map("user_referral_stats")
+}
+
+enum ReferralStatus {
+  PENDING     // Usuário se registrou mas não comprou
+  QUALIFIED   // Primeira compra realizada
+  REWARDED    // Recompensas processadas
+  CANCELLED   // Cancelado (usuário removido, etc.)
+}
+
+enum ReferralRewardType {
+  PERCENTAGE  // Porcentagem de desconto
+  FIXED       // Valor fixo
+  POINTS      // Pontos no sistema
+  CASHBACK    // Dinheiro real
+}
+
+enum RewardDeliveryType {
+  DISCOUNT_COUPON // Cupom de desconto
+  STORE_CREDIT    // Crédito na loja
+  CASHBACK        // Dinheiro real
+  LOYALTY_POINTS  // Pontos de fidelidade
+}
+
+enum CashbackStatus {
+  PENDING     // Aguardando processamento
+  AVAILABLE   // Disponível para saque
+  PAID        // Pago
+  CANCELLED   // Cancelado
+}
+
+enum RewardStatus {
+  PENDING     // Aguardando processamento
+  APPROVED    // Aprovado
+  DELIVERED   // Entregue
+  USED        // Usado
+  EXPIRED     // Expirado
+  CANCELLED   // Cancelado
+}
+
+enum PayoutMethod {
+  BANK_TRANSFER
+  PAYPAL
+  PIX
+  STORE_CREDIT
+}
+
+enum PayoutStatus {
+  PENDING     // Aguardando processamento
+  PROCESSING  // Em processamento
+  COMPLETED   // Concluído
+  FAILED      // Falhou
+  CANCELLED   // Cancelado
+}
+
+// ================================
 // NEXTAUTH REQUIRED MODELS
 // ================================
 

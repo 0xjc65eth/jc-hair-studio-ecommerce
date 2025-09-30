@@ -10,9 +10,9 @@ async function logOperation(operation: string, details: any) {
 }
 
 // GET single order by ID
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const orderId = params.id;
+    const { id: orderId } = await params;
     await logOperation('GET_SINGLE_STARTED', { orderId });
 
     if (!orderId) {
@@ -144,9 +144,9 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 }
 
 // PUT update single order
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const orderId = params.id;
+    const { id: orderId } = await params;
     const updateData = await request.json();
 
     await logOperation('PUT_SINGLE_STARTED', { orderId, updateData });
@@ -303,9 +303,9 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
 }
 
 // DELETE (cancel) single order
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const orderId = params.id;
+    const { id: orderId } = await params;
     await logOperation('DELETE_SINGLE_STARTED', { orderId });
 
     if (!orderId) {

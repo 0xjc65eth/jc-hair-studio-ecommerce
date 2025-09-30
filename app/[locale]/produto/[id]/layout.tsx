@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import { resolveProductById } from '@/lib/services/productResolver';
 import { generateProductMeta } from '@/lib/utils/metaTags';

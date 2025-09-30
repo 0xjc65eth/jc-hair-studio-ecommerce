@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Clock, Globe, MessageCircle, Send, FileImage, HelpCircle, ShoppingCart, Truck, CreditCard } from 'lucide-react';
