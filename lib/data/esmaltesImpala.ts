@@ -38,7 +38,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Amore Perolado.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -52,7 +52,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Ballet Clássico Cremoso_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -66,7 +66,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Chamego meu_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -80,7 +80,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Coisa Linda Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -94,7 +94,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Confeti Cremoso_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -108,7 +108,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Compartilhar Preguiça_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -122,7 +122,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Descomplicada Cremoso_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -136,7 +136,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Fascinação Cremoso_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -150,7 +150,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Gatinha Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -164,7 +164,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Menina Bonita.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -178,7 +178,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Na Ponta do Pé Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -192,7 +192,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Roça Rosa Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -206,7 +206,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Sabe que é Gostosa Cremoso_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -220,7 +220,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Toda Dengosa Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -234,7 +234,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-glitter",
     images: ["/images/products/esmaltes/Impala Viva Ame e Brilhe Glitter_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -250,7 +250,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Allure Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -264,7 +264,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Amante Perolado_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -278,7 +278,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Amor Perolado_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -292,7 +292,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Maria Cereja Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -306,7 +306,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Querer Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -320,7 +320,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Royal Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -334,7 +334,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Vinho Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -350,7 +350,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Abrigo Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -364,7 +364,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Flutua Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -378,7 +378,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Imensidão Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -392,7 +392,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Laguna Cremoso_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -406,7 +406,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Sossego_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -420,7 +420,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-metalico",
     images: ["/images/products/esmaltes/Impala Confiante e Imprevisível Metal Likee.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -436,7 +436,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Collant Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -450,7 +450,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Branco Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -464,7 +464,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Essencial Cremoso_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -478,7 +478,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Dádiva Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -492,7 +492,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Inocense Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -506,7 +506,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Jane Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -520,7 +520,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Serena.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -534,7 +534,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Sutileza Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -550,7 +550,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Café Café Cremoso_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Marrom"
   },
@@ -564,7 +564,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Coffee Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Marrom"
   },
@@ -578,7 +578,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Crochê Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Marrom"
   },
@@ -592,7 +592,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Sofisticado Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Marrom"
   },
@@ -606,7 +606,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Terra Molhada Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Marrom"
   },
@@ -622,7 +622,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Acalanto Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -636,7 +636,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Lenny Perolado.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -650,7 +650,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Dizeres Perolado.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -664,7 +664,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Lembrança Perolado_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -678,7 +678,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Lua Perolado_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -692,7 +692,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Sonho Perolado.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -708,7 +708,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Equilíbrio Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Verde"
   },
@@ -722,7 +722,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Semear Perolado.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Verde"
   },
@@ -736,7 +736,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Solta o Agronejo Cremoso.jpg"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Verde"
   },
@@ -752,7 +752,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Marilyn Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Fashion"
   },
@@ -766,7 +766,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Top Pop_.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Fashion"
   },
@@ -780,7 +780,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Zaz.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Fashion"
   },
@@ -796,7 +796,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Preto Cremoso.webp"],
-    pricing: { basePrice: 12.90, ourPrice: 8.90, discountPrice: 7.90 },
+    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90 },
     badge: "BRASILEIRO",
     familiaCorr: "Clássico"
   },
@@ -812,7 +812,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "base-tratamento",
     images: ["/images/products/esmaltes/Impala Base Bomba Cremoso.webp"],
-    pricing: { basePrice: 14.90, ourPrice: 10.90, discountPrice: 9.90 },
+    pricing: { basePrice: 7.45, ourPrice: 10.90, discountPrice: 9.90 },
     badge: "TRATAMENTO",
     familiaCorr: "Tratamento"
   },
@@ -826,7 +826,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "base-tratamento",
     images: ["/images/products/esmaltes/Impala Base para Unhas Fracas Tratamento_.webp"],
-    pricing: { basePrice: 14.90, ourPrice: 10.90, discountPrice: 9.90 },
+    pricing: { basePrice: 7.45, ourPrice: 10.90, discountPrice: 9.90 },
     badge: "TRATAMENTO",
     familiaCorr: "Tratamento"
   }

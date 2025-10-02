@@ -39,7 +39,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_1_4dreams-desodorante-colônia-7-wepink_feminino.png"],
-    pricing: { basePrice: 69.90, ourPrice: 49.90, discountPrice: 44.90 },
+    pricing: { basePrice: 62.91, ourPrice: 49.90, discountPrice: 44.90 },
     badge: "PREMIUM",
     publico: "Feminino"
   },
@@ -54,7 +54,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_10_heaven-bride-desodorante-colônia-10-wepink_feminino.png"],
-    pricing: { basePrice: 89.90, ourPrice: 64.90, discountPrice: 59.90 },
+    pricing: { basePrice: 80.91, ourPrice: 64.90, discountPrice: 59.90 },
     badge: "ESPECIAL",
     publico: "Feminino"
   },
@@ -69,7 +69,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_18_le-grand-club-sweet-lady-desodorante-colônia-10-wepink_feminino.png"],
-    pricing: { basePrice: 89.90, ourPrice: 64.90, discountPrice: 59.90 },
+    pricing: { basePrice: 80.91, ourPrice: 64.90, discountPrice: 59.90 },
     badge: "PREMIUM",
     publico: "Feminino"
   },
@@ -84,7 +84,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_26_queen-pink-desodorante-colônia-10-wepink_feminino.png"],
-    pricing: { basePrice: 79.90, ourPrice: 56.90, discountPrice: 52.90 },
+    pricing: { basePrice: 71.91, ourPrice: 56.90, discountPrice: 52.90 },
     badge: "BESTSELLER",
     publico: "Feminino"
   },
@@ -99,7 +99,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_28_scarlette-desodorante-colônia-5-wepink_feminino.png"],
-    pricing: { basePrice: 59.90, ourPrice: 42.90, discountPrice: 39.90 },
+    pricing: { basePrice: 53.91, ourPrice: 42.90, discountPrice: 39.90 },
     badge: "PREMIUM",
     publico: "Feminino"
   },
@@ -114,7 +114,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_30_vf-bloom-desodorante-colônia-7-wepink_feminino.png"],
-    pricing: { basePrice: 69.90, ourPrice: 49.90, discountPrice: 44.90 },
+    pricing: { basePrice: 62.91, ourPrice: 49.90, discountPrice: 44.90 },
     badge: "DELICADA",
     publico: "Feminino"
   },
@@ -129,7 +129,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_31_vf-seduce-desodorante-colônia-7-wepink_feminino.png"],
-    pricing: { basePrice: 69.90, ourPrice: 49.90, discountPrice: 44.90 },
+    pricing: { basePrice: 62.91, ourPrice: 49.90, discountPrice: 44.90 },
     badge: "SEDUTORA",
     publico: "Feminino"
   },
@@ -146,7 +146,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_2_bourbon-desodorante-colônia-10-wepink-masculino_masculino.png"],
-    pricing: { basePrice: 79.90, ourPrice: 56.90, discountPrice: 52.90 },
+    pricing: { basePrice: 71.91, ourPrice: 56.90, discountPrice: 52.90 },
     badge: "CLÁSSICO",
     publico: "Masculino"
   },
@@ -161,7 +161,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_3_bourbon-desodorante-colônia-10-wepink-masculino(1)_masculino.png"],
-    pricing: { basePrice: 99.90, ourPrice: 72.90, discountPrice: 69.90 },
+    pricing: { basePrice: 89.91, ourPrice: 72.90, discountPrice: 69.90 },
     badge: "PREMIUM",
     publico: "Masculino"
   },
@@ -176,7 +176,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_4_bourbon-silver-desodorante-colônia-10-wepink-masculino_masculino.png"],
-    pricing: { basePrice: 79.90, ourPrice: 56.90, discountPrice: 52.90 },
+    pricing: { basePrice: 71.91, ourPrice: 56.90, discountPrice: 52.90 },
     badge: "MODERNO",
     publico: "Masculino"
   },
@@ -191,7 +191,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_11_heaven-groom-desodorante-colônia-10-wepink-masculino_masculino.png"],
-    pricing: { basePrice: 89.90, ourPrice: 64.90, discountPrice: 59.90 },
+    pricing: { basePrice: 80.91, ourPrice: 64.90, discountPrice: 59.90 },
     badge: "ESPECIAL",
     publico: "Masculino"
   },
@@ -206,7 +206,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_17_king-blue-desodorante-colônia-10-wepink-masculino_masculino.png"],
-    pricing: { basePrice: 79.90, ourPrice: 56.90, discountPrice: 52.90 },
+    pricing: { basePrice: 71.91, ourPrice: 56.90, discountPrice: 52.90 },
     badge: "REFRESCANTE",
     publico: "Masculino"
   },
@@ -221,7 +221,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_15_king-blue-deep-desodorante-colônia-10-wepink-masculino_masculino.png"],
-    pricing: { basePrice: 89.90, ourPrice: 64.90, discountPrice: 59.90 },
+    pricing: { basePrice: 80.91, ourPrice: 64.90, discountPrice: 59.90 },
     badge: "INTENSO",
     publico: "Masculino"
   },
@@ -236,7 +236,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_16_king-blue-deep-desodorante-colônia-10-wepink-masculino(1)_masculino.png"],
-    pricing: { basePrice: 99.90, ourPrice: 72.90, discountPrice: 69.90 },
+    pricing: { basePrice: 89.91, ourPrice: 72.90, discountPrice: 69.90 },
     badge: "PREMIUM",
     publico: "Masculino"
   },
@@ -251,7 +251,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_20_lion-blanc-desodorante-colônia-10-wepink-masculino_masculino.png"],
-    pricing: { basePrice: 89.90, ourPrice: 64.90, discountPrice: 59.90 },
+    pricing: { basePrice: 80.91, ourPrice: 64.90, discountPrice: 59.90 },
     badge: "SOFISTICADO",
     publico: "Masculino"
   },
@@ -266,7 +266,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_21_lion-noir-desodorante-colônia-10-wepink-masculino_masculino.png"],
-    pricing: { basePrice: 89.90, ourPrice: 64.90, discountPrice: 59.90 },
+    pricing: { basePrice: 80.91, ourPrice: 64.90, discountPrice: 59.90 },
     badge: "INTENSO",
     publico: "Masculino"
   },
@@ -281,7 +281,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_22_lion-noir-desodorante-colônia-10-wepink-masculino(1)_masculino.png"],
-    pricing: { basePrice: 99.90, ourPrice: 72.90, discountPrice: 69.90 },
+    pricing: { basePrice: 89.91, ourPrice: 72.90, discountPrice: 69.90 },
     badge: "PREMIUM",
     publico: "Masculino"
   },
@@ -296,7 +296,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_25_pureblixx-darkest-desodorante-colônia-10-wepink-masculino_masculino.png"],
-    pricing: { basePrice: 89.90, ourPrice: 64.90, discountPrice: 59.90 },
+    pricing: { basePrice: 80.91, ourPrice: 64.90, discountPrice: 59.90 },
     badge: "MARCANTE",
     publico: "Masculino"
   },
@@ -311,7 +311,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_27_red-obsidian-desodorante-colônia-10-wepink-masculino_masculino.png"],
-    pricing: { basePrice: 89.90, ourPrice: 64.90, discountPrice: 59.90 },
+    pricing: { basePrice: 80.91, ourPrice: 64.90, discountPrice: 59.90 },
     badge: "ESPECIADO",
     publico: "Masculino"
   },
@@ -328,7 +328,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_5_celebrate-relics-desodorante-colônia-10-wepink_unissex.png"],
-    pricing: { basePrice: 79.90, ourPrice: 56.90, discountPrice: 52.90 },
+    pricing: { basePrice: 71.91, ourPrice: 56.90, discountPrice: 52.90 },
     badge: "CELEBRAÇÃO",
     publico: "Unissex"
   },
@@ -343,7 +343,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_6_crave-desodorante-colônia-10-wepink_unissex.png"],
-    pricing: { basePrice: 79.90, ourPrice: 56.90, discountPrice: 52.90 },
+    pricing: { basePrice: 71.91, ourPrice: 56.90, discountPrice: 52.90 },
     badge: "MODERNO",
     publico: "Unissex"
   },
@@ -358,7 +358,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_7_divine-desodorante-colônia-10-wepink_unissex.png"],
-    pricing: { basePrice: 79.90, ourPrice: 56.90, discountPrice: 52.90 },
+    pricing: { basePrice: 71.91, ourPrice: 56.90, discountPrice: 52.90 },
     badge: "DIVINO",
     publico: "Unissex"
   },
@@ -373,7 +373,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_9_fatal-rouge-desodorante-colônia-100-ml-wepink_unissex.png"],
-    pricing: { basePrice: 89.90, ourPrice: 64.90, discountPrice: 59.90 },
+    pricing: { basePrice: 80.91, ourPrice: 64.90, discountPrice: 59.90 },
     badge: "SEDUTOR",
     publico: "Unissex"
   },
@@ -388,7 +388,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_12_infinity-cosmik-desodorante-colônia-7-wepink_unissex.png"],
-    pricing: { basePrice: 69.90, ourPrice: 49.90, discountPrice: 44.90 },
+    pricing: { basePrice: 62.91, ourPrice: 49.90, discountPrice: 44.90 },
     badge: "FUTURÍSTICO",
     publico: "Unissex"
   },
@@ -403,7 +403,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_13_infinity-cosmik-desodorante-colônia-7-wepink(1)_unissex.png"],
-    pricing: { basePrice: 79.90, ourPrice: 56.90, discountPrice: 52.90 },
+    pricing: { basePrice: 71.91, ourPrice: 56.90, discountPrice: 52.90 },
     badge: "PREMIUM",
     publico: "Unissex"
   },
@@ -418,7 +418,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_14_infinity-xis-desodorante-colônia-7-wepink_unissex.png"],
-    pricing: { basePrice: 69.90, ourPrice: 49.90, discountPrice: 44.90 },
+    pricing: { basePrice: 62.91, ourPrice: 49.90, discountPrice: 44.90 },
     badge: "MISTERIOSO",
     publico: "Unissex"
   },
@@ -433,7 +433,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_19_liberté-exclusif-desodorante-colônia-10-wepink_unissex.png"],
-    pricing: { basePrice: 89.90, ourPrice: 64.90, discountPrice: 59.90 },
+    pricing: { basePrice: 80.91, ourPrice: 64.90, discountPrice: 59.90 },
     badge: "EXCLUSIVO",
     publico: "Unissex"
   },
@@ -448,7 +448,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_23_merry-christmas-desodorante-colônia-10-wepink_unissex.png"],
-    pricing: { basePrice: 89.90, ourPrice: 64.90, discountPrice: 59.90 },
+    pricing: { basePrice: 80.91, ourPrice: 64.90, discountPrice: 59.90 },
     badge: "EDIÇÃO LIMITADA",
     publico: "Unissex"
   },
@@ -463,7 +463,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_24_merry-christmas-desodorante-colônia-10-wepink(1)_unissex.png"],
-    pricing: { basePrice: 99.90, ourPrice: 72.90, discountPrice: 69.90 },
+    pricing: { basePrice: 89.91, ourPrice: 72.90, discountPrice: 69.90 },
     badge: "PREMIUM",
     publico: "Unissex"
   },
@@ -478,7 +478,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_29_the-rainy-desodorante-colônia-7-wepink_unissex.png"],
-    pricing: { basePrice: 69.90, ourPrice: 49.90, discountPrice: 44.90 },
+    pricing: { basePrice: 62.91, ourPrice: 49.90, discountPrice: 44.90 },
     badge: "INSPIRADOR",
     publico: "Unissex"
   },
@@ -493,7 +493,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "desodorante-colonia",
     images: ["/images/products/perfumes/perfume_32_wonderful-desodorante-colônia-10-wepink_unissex.png"],
-    pricing: { basePrice: 79.90, ourPrice: 56.90, discountPrice: 52.90 },
+    pricing: { basePrice: 71.91, ourPrice: 56.90, discountPrice: 52.90 },
     badge: "MARAVILHOSO",
     publico: "Unissex"
   },
@@ -510,7 +510,7 @@ export const perfumesWepink: PerfumeWepink[] = [
     categoria: "perfumes",
     subcategoria: "colonia-infantil",
     images: ["/images/products/perfumes/perfume_8_fantasy-kids-blue-dragon-colônia-10-wepink_unissex.png"],
-    pricing: { basePrice: 49.90, ourPrice: 35.90, discountPrice: 32.90 },
+    pricing: { basePrice: 44.91, ourPrice: 35.90, discountPrice: 32.90 },
     badge: "INFANTIL",
     publico: "Infantil"
   }
