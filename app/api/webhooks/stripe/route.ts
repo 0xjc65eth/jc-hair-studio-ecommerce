@@ -161,43 +161,30 @@ export async function POST(request: NextRequest) {
     let event: Stripe.Event;
 
     try {
-      // Verificar a assinatura do webhook
+      // Verificar a assinatura do webhook - REQUIRED for security
       event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
       logger.info(`✅ [${requestId}] Webhook signature verified: ${event.type}`);
     } catch (err: any) {
       logger.error(`❌ [${requestId}] Webhook signature verification failed: ${err.message}`);
-
-      // Fallback: try to parse the event manually for testing purposes
-      try {
-        event = JSON.parse(body) as Stripe.Event;
-        logger.warn(`⚠️ [${requestId}] Processing unsigned webhook event (TESTING MODE): ${event.type}`);
-
-        // Add a flag to indicate this is an unsigned event
-        (event as any).__unsigned = true;
-      } catch (parseErr) {
-        logger.error(`❌ [${requestId}] Failed to parse webhook body: ${parseErr}`);
-        return NextResponse.json(
-          { error: `Webhook Error: ${err.message}`, requestId },
-          { status: 400 }
-        );
-      }
+      // Return error immediately - do NOT process unsigned events
+      return NextResponse.json(
+        { error: `Webhook signature verification failed: ${err.message}`, requestId },
+        { status: 400 }
+      );
     }
-
-    // Processar diferentes tipos de eventos
-    const isUnsigned = !!(event as any).__unsigned;
 
     try {
       switch (event.type) {
         case 'payment_intent.succeeded':
-          await handlePaymentSuccess(event.data.object as Stripe.PaymentIntent, requestId, isUnsigned);
+          await handlePaymentSuccess(event.data.object as Stripe.PaymentIntent, requestId);
           break;
 
         case 'payment_intent.payment_failed':
-          await handlePaymentFailed(event.data.object as Stripe.PaymentIntent, requestId, isUnsigned);
+          await handlePaymentFailed(event.data.object as Stripe.PaymentIntent, requestId);
           break;
 
         case 'charge.dispute.created':
-          await handleDispute(event.data.object as Stripe.Dispute, requestId, isUnsigned);
+          await handleDispute(event.data.object as Stripe.Dispute, requestId);
           break;
 
         case 'checkout.session.completed':
@@ -227,15 +214,14 @@ export async function POST(request: NextRequest) {
         requestId,
         eventType: event.type,
         eventId: event.id,
-        error: eventError,
-        isUnsigned
+        error: eventError
       });
     }
 
     // Retornar sucesso
     logger.info(`✅ [${requestId}] Webhook processed successfully: ${event.type}`);
     return NextResponse.json(
-      { received: true, type: event.type, requestId, unsigned: isUnsigned },
+      { received: true, type: event.type, requestId },
       { status: 200 }
     );
 
@@ -247,8 +233,7 @@ export async function POST(request: NextRequest) {
       requestId,
       eventType: 'unknown',
       eventId: 'unknown',
-      error,
-      isUnsigned: false
+      error
     });
 
     return NextResponse.json(
@@ -260,8 +245,8 @@ export async function POST(request: NextRequest) {
 
 // ==================== HANDLERS DOS EVENTOS ====================
 
-async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent, requestId: string, isUnsigned: boolean = false) {
-  logger.info(`🎉 [${requestId}] Payment succeeded: ${paymentIntent.id} ${isUnsigned ? '(UNSIGNED)' : ''}`);
+async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent, requestId: string) {
+  logger.info(`🎉 [${requestId}] Payment succeeded: ${paymentIntent.id}`);
 
   const orderId = paymentIntent.id;
   const amount = paymentIntent.amount / 100; // Convert from cents
@@ -310,14 +295,13 @@ async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent, request
       eventType: 'payment_intent.succeeded',
       eventId: paymentIntent.id,
       error,
-      orderData,
-      isUnsigned
+      orderData
     });
   }
 }
 
-async function handlePaymentFailed(paymentIntent: Stripe.PaymentIntent, requestId: string, isUnsigned: boolean = false) {
-  logger.info(`❌ [${requestId}] Payment failed: ${paymentIntent.id} ${isUnsigned ? '(UNSIGNED)' : ''}`);
+async function handlePaymentFailed(paymentIntent: Stripe.PaymentIntent, requestId: string) {
+  logger.info(`❌ [${requestId}] Payment failed: ${paymentIntent.id}`);
 
   const customerEmail = paymentIntent.metadata.customerEmail;
   if (customerEmail) {
@@ -342,8 +326,8 @@ async function handlePaymentFailed(paymentIntent: Stripe.PaymentIntent, requestI
   }
 }
 
-async function handleDispute(dispute: Stripe.Dispute, requestId: string, isUnsigned: boolean = false) {
-  logger.info(`⚠️ [${requestId}] Dispute created: ${dispute.id} ${isUnsigned ? '(UNSIGNED)' : ''}`);
+async function handleDispute(dispute: Stripe.Dispute, requestId: string) {
+  logger.info(`⚠️ [${requestId}] Dispute created: ${dispute.id}`);
 
   await sendEmailWithRetry({
     to: process.env.SUPPORT_EMAIL || 'suporte@jchairstudios62.com',
@@ -640,7 +624,6 @@ async function sendFailureNotification(data: any) {
           <p><strong>Request ID:</strong> ${data.requestId}</p>
           <p><strong>Event Type:</strong> ${data.eventType}</p>
           <p><strong>Event ID:</strong> ${data.eventId}</p>
-          <p><strong>Is Unsigned:</strong> ${data.isUnsigned ? 'Yes' : 'No'}</p>
           <p><strong>Error:</strong> ${data.error?.message || 'Erro desconhecido'}</p>
           <p><strong>Stack Trace:</strong></p>
           <pre style="background: #f5f5f5; padding: 10px; overflow-x: auto;">${data.error?.stack || 'N/A'}</pre>

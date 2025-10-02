@@ -10,15 +10,12 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    // Verify admin authentication - accept either session or admin password
+    // Verify admin authentication - require valid session
     const session = await getServerSession();
-    const adminPassword = body.adminPassword;
 
-    const isAuthorized = session || (adminPassword === 'juliojuliana62');
-
-    if (!isAuthorized) {
+    if (!session || !['ADMIN', 'SUPER_ADMIN'].includes(session.user?.role || '')) {
       return NextResponse.json(
-        { success: false, error: 'Unauthorized' },
+        { success: false, error: 'Unauthorized - Admin access required' },
         { status: 401 }
       );
     }

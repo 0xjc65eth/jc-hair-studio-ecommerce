@@ -9,6 +9,7 @@ import { countries, getShippingCost } from '@/lib/config/shipping';
 
 // Componente de pagamento otimizado
 import { StripePayment } from './StripePayment';
+import { PromoCodeInput } from './PromoCodeInput';
 import {
   ArrowLeft,
   CreditCard,
@@ -75,6 +76,11 @@ export default function CheckoutPage() {
   const [orderComplete, setOrderComplete] = useState(false);
   const [paymentIntentId, setPaymentIntentId] = useState<string>('');
   const [paymentMethod] = useState<'stripe'>('stripe');
+
+  // Promo code state
+  const [promoDiscount, setPromoDiscount] = useState(0);
+  const [promoFreeShipping, setPromoFreeShipping] = useState(false);
+  const [promoCodeId, setPromoCodeId] = useState<string>('');
 
   // Client technical information for fraud prevention and order tracking
   const [clientInfo, setClientInfo] = useState({
@@ -309,8 +315,10 @@ export default function CheckoutPage() {
 
   const taxAmount = getTaxAmount();
   const total = getTotal();
-  const shippingCost = getShippingCost(customerInfo.country);
-  const finalTotal = total + shippingCost;
+  const baseShippingCost = getShippingCost(customerInfo.country);
+  const shippingCost = promoFreeShipping ? 0 : baseShippingCost;
+  const subtotalWithDiscount = Math.max(0, total - promoDiscount);
+  const finalTotal = subtotalWithDiscount + shippingCost;
 
   const handleCustomerInfoChange = (field: string, value: string) => {
     if (field.startsWith('address.')) {
@@ -328,6 +336,19 @@ export default function CheckoutPage() {
         [field]: value
       }));
     }
+  };
+
+  // Promo code handlers
+  const handlePromoApplied = (discount: number, freeShipping: boolean, codeId: string) => {
+    setPromoDiscount(discount);
+    setPromoFreeShipping(freeShipping);
+    setPromoCodeId(codeId);
+  };
+
+  const handlePromoRemoved = () => {
+    setPromoDiscount(0);
+    setPromoFreeShipping(false);
+    setPromoCodeId('');
   };
 
   /**
@@ -971,6 +992,7 @@ export default function CheckoutPage() {
                           quantity: item.quantity,
                           price: item.variant?.price || item.product.price,
                         }))}
+                        promoCodeId={promoCodeId}
                         onSuccess={handlePaymentSuccess}
                         onError={handlePaymentError}
                       />
@@ -991,6 +1013,7 @@ export default function CheckoutPage() {
                           quantity: 1,
                           price: finalTotal,
                         }]}
+                        promoCodeId={promoCodeId}
                         onSuccess={() => {}}
                         onError={() => {}}
                       />
@@ -1051,11 +1074,32 @@ export default function CheckoutPage() {
                     ))}
                   </div>
 
+                  {/* Promo Code Input */}
+                  <div className="border-t border-gray-200 pt-4">
+                    <PromoCodeInput
+                      cartTotal={total}
+                      cartItems={items.map(item => ({
+                        productId: item.product._id,
+                        category: item.product.category,
+                        quantity: item.quantity,
+                        price: item.variant?.price || item.product.price
+                      }))}
+                      onPromoApplied={handlePromoApplied}
+                      onPromoRemoved={handlePromoRemoved}
+                    />
+                  </div>
+
                   <div className="border-t border-gray-200 pt-4 space-y-2">
                     <div className="flex justify-between text-sm">
                       <span>Subtotal:</span>
                       <span>€{subtotal.toFixed(2)}</span>
                     </div>
+                    {promoDiscount > 0 && (
+                      <div className="flex justify-between text-sm text-green-600">
+                        <span>Desconto Promocional:</span>
+                        <span>-€{promoDiscount.toFixed(2)}</span>
+                      </div>
+                    )}
                     <div className="flex justify-between text-sm">
                       <span>IVA (23%):</span>
                       <span>€{taxAmount.toFixed(2)}</span>
@@ -1067,6 +1111,9 @@ export default function CheckoutPage() {
                       </span>
                       <span className={shippingCost === 0 ? 'text-green-600' : ''}>
                         {shippingCost === 0 ? 'Grátis' : `€${shippingCost.toFixed(2)}`}
+                        {promoFreeShipping && baseShippingCost > 0 && (
+                          <span className="ml-1 text-xs">(Promo aplicado)</span>
+                        )}
                       </span>
                     </div>
                     <div className="bg-gradient-to-r from-green-50 to-green-100 -mx-4 px-4 py-3 rounded-lg">

@@ -495,11 +495,10 @@ export default function AdminPanel() {
       // Call shipping API to create label
       const response = await fetch('/api/admin/shipping/create-label', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...shippingData,
-          adminPassword: 'juliojuliana62'
-        })
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(shippingData)
       });
 
       const result = await response.json();
@@ -1503,6 +1502,70 @@ export default function AdminPanel() {
     );
   };
 
+  const renderPromoCodes = () => {
+    return (
+      <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h3 className="text-lg font-bold text-gray-900">Códigos Promocionais</h3>
+            <p className="text-gray-600 text-sm">Gerencie cupons de desconto e campanhas promocionais</p>
+          </div>
+          <Button
+            onClick={() => router.push('/admin/promo-codes/create')}
+            className="bg-gradient-to-r from-purple-600 to-pink-600"
+          >
+            <Plus className="h-4 w-4 mr-2" />
+            Criar Código
+          </Button>
+        </div>
+
+        <div className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 text-white shadow-lg">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-purple-100 text-sm">Total de Códigos</p>
+                  <p className="text-3xl font-bold">-</p>
+                </div>
+                <Tag className="w-12 h-12 text-purple-200" />
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-6 text-white shadow-lg">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-green-100 text-sm">Códigos Ativos</p>
+                  <p className="text-3xl font-bold">-</p>
+                </div>
+                <CheckCircle className="w-12 h-12 text-green-200" />
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 text-white shadow-lg">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-blue-100 text-sm">Total de Usos</p>
+                  <p className="text-3xl font-bold">-</p>
+                </div>
+                <TrendingUp className="w-12 h-12 text-blue-200" />
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t pt-4">
+            <Button
+              onClick={() => router.push('/admin/promo-codes')}
+              variant="outline"
+              className="w-full"
+            >
+              Acessar Painel Completo de Códigos Promocionais
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const renderTracking = () => (
     <div className="space-y-6">
       {/* Estatísticas de Rastreamento */}
@@ -1721,6 +1784,7 @@ export default function AdminPanel() {
       case 'notifications': return renderNotifications();
       case 'inventory': return renderInventory();
       case 'coupons': return renderCoupons();
+      case 'promo-codes': return renderPromoCodes();
       case 'tracking': return renderTracking();
       case 'reports': return renderReports();
       default: return renderDashboard();
@@ -1831,6 +1895,7 @@ export default function AdminPanel() {
               { id: 'notifications', name: 'Notificações', icon: Bell },
               { id: 'inventory', name: 'Inventário', icon: Package },
               { id: 'coupons', name: 'Cupons', icon: Tag },
+              { id: 'promo-codes', name: 'Códigos Promo', icon: Tag },
               { id: 'tracking', name: 'Rastreamento', icon: MapPin },
               { id: 'reports', name: 'Relatórios', icon: FileText },
             ].map((tab) => (
