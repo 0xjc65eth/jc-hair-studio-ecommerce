@@ -27,6 +27,9 @@ function mapToGoogleCategory(category: string): string {
   return mapping[category] || '469 > Health & Beauty > Personal Care';
 }
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export async function GET() {
   try {
     const allProducts: any[] = [];
@@ -103,11 +106,17 @@ export async function GET() {
       status: 200,
       headers: {
         'Content-Type': 'application/xml; charset=utf-8',
-        'Cache-Control': 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400',
+        'Cache-Control': 'public, max-age=0, must-revalidate',
+        'X-Content-Type-Options': 'nosniff',
       },
     });
   } catch (error) {
     console.error('Product feed error:', error);
-    return new NextResponse('Error generating feed', { status: 500 });
+    return new NextResponse('<?xml version="1.0" encoding="UTF-8"?><error>Feed generation failed</error>', {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/xml; charset=utf-8',
+      },
+    });
   }
 }
