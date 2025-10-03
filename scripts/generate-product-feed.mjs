@@ -97,14 +97,18 @@ function generateProductXml(product) {
     ? (product.images[0].startsWith('http') ? product.images[0] : `${SITE_URL}${product.images[0]}`)
     : `${SITE_URL}/images/placeholder.jpg`;
 
+  // Get price from pricing object or direct price field
+  const price = product.pricing?.ourPrice || product.price;
+  const salePrice = product.pricing?.discountPrice;
+
   // Calculate availability
-  const availability = (product.stock && product.stock > 0) ? 'in stock' : 'out of stock';
+  const availability = (product.inStock || product.stock > 0 || product.stockQuantity > 0) ? 'in stock' : 'out of stock';
 
   // Get condition (new for all products)
   const condition = 'new';
 
   // Generate description (max 5000 chars for Google)
-  let description = product.description || product.name;
+  let description = product.description || product.shortDesc || product.name;
   if (description.length > 5000) {
     description = description.substring(0, 4997) + '...';
   }
@@ -121,14 +125,14 @@ function generateProductXml(product) {
         return `<g:additional_image_link>${escapeXml(imgUrl)}</g:additional_image_link>`;
       }).join('\n      ') : ''}
       <g:availability>${availability}</g:availability>
-      <g:price>${product.price} EUR</g:price>
-      ${product.compareAtPrice ? `<g:sale_price>${product.price} EUR</g:sale_price>` : ''}
+      <g:price>${price} EUR</g:price>
+      ${salePrice ? `<g:sale_price>${salePrice} EUR</g:sale_price>` : ''}
       <g:brand>${escapeXml(product.brand || 'JC Hair Studio')}</g:brand>
       <g:condition>${condition}</g:condition>
       <g:google_product_category>${escapeXml(mapToGoogleCategory(product.category))}</g:google_product_category>
       <g:product_type>${escapeXml(product.category)}</g:product_type>
       ${product.gtin ? `<g:gtin>${escapeXml(product.gtin)}</g:gtin>` : ''}
-      ${product.mpn ? `<g:mpn>${escapeXml(product.mpn)}</g:mpn>` : ''}
+      ${product.mpn || product.sku ? `<g:mpn>${escapeXml(product.mpn || product.sku)}</g:mpn>` : ''}
       <g:item_group_id>${escapeXml(product.category)}</g:item_group_id>
       ${product.color ? `<g:color>${escapeXml(product.color)}</g:color>` : ''}
       ${product.size ? `<g:size>${escapeXml(product.size)}</g:size>` : ''}
@@ -167,7 +171,7 @@ function generateFeed(products) {
 </rss>`;
 
   const items = products
-    .filter(p => p.id && p.name && p.price)
+    .filter(p => p.id && p.name && (p.price || p.pricing?.ourPrice))
     .map(generateProductXml)
     .join('\n');
 
