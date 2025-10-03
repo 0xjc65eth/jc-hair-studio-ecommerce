@@ -82,7 +82,10 @@
     "amazon:sync:dry": "npx tsx scripts/amazon/sync-to-amazon.ts --dry-run",
     "amazon:validate": "npx tsx scripts/amazon/sync-to-amazon.ts --validate-only",
     "amazon:sync:mega-hair": "npx tsx scripts/amazon/sync-to-amazon.ts --category=mega-hair",
-    "amazon:help": "npx tsx scripts/amazon/sync-to-amazon.ts --help"
+    "amazon:help": "npx tsx scripts/amazon/sync-to-amazon.ts --help",
+    "seo:submit": "node scripts/submit-to-search-engines.mjs",
+    "seo:generate-feed": "node scripts/generate-product-feed.mjs",
+    "seo:all": "npm run seo:generate-feed && npm run seo:submit"
   },
   "keywords": [
     "ecommerce",
