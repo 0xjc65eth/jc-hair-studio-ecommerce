@@ -66,9 +66,15 @@ export default function CheckoutPage() {
     clearCart
   } = useCart();
 
-  // Cart state tracking for checkout - prevent race condition with localStorage loading
+  /**
+   * WHY: Track client-side mount to prevent hydration mismatches
+   * HOW: useState defaults to false, set to true only on client mount
+   *
+   * IMPORTANT: No cartInitialized state needed! The CartProvider + useCartInitializer
+   * hook already handles localStorage hydration at the app root level. This component
+   * simply waits for client mount, then reads directly from the Zustand store.
+   */
   const [mounted, setMounted] = useState(false);
-  const [cartInitialized, setCartInitialized] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
   const [showUrgency, setShowUrgency] = useState(true);
   const [timeLeft, setTimeLeft] = useState(15 * 60); // 15 minutes countdown
@@ -171,13 +177,22 @@ export default function CheckoutPage() {
   };
 
   /**
-   * Cart initialization effect - DEFINITIVE SOLUTION for race condition
-   * Also captures client technical information for security and tracking
+   * WHY: Initialize component on client mount and capture security data
+   * HOW: Set mounted flag and fetch client IP for fraud prevention
+   *
+   * IMPORTANT: No cart initialization logic needed here! The CartProvider at the app
+   * root level already handles localStorage hydration before this component renders.
+   * We only need to capture client info for security purposes.
    */
   useEffect(() => {
+    // WHY: Mark component as mounted to prevent SSR hydration issues
+    // HOW: Set flag that allows component to render client-specific content
     setMounted(true);
 
-    // Capture client information for security and order tracking
+    /**
+     * WHY: Capture client technical information for fraud prevention and order tracking
+     * HOW: Fetch IP address and browser info, store in state for later use in payment API
+     */
     const captureClientInfo = async () => {
       try {
         // Get user agent from browser
@@ -218,78 +233,28 @@ export default function CheckoutPage() {
       }
     };
 
-    // Force immediate check of localStorage on mount
-    const checkCartImmediately = () => {
-      if (typeof window !== 'undefined') {
-        const savedCart = localStorage.getItem('jc-cart-storage-manual');
-        console.log('🔍 IMMEDIATE CHECKOUT CHECK:', {
-          savedCart: savedCart ? JSON.parse(savedCart).length : 0,
-          currentItems: items.length
-        });
-
-        // If we have saved data, give it more time to load
-        if (savedCart && JSON.parse(savedCart).length > 0) {
-          console.log('📦 FOUND SAVED CART - Waiting for store update...');
-          // Give more time for complex cart data
-          setTimeout(() => setCartInitialized(true), 300);
-        } else {
-          console.log('📭 NO SAVED CART - Initialize immediately');
-          // No saved data, safe to initialize immediately
-          setCartInitialized(true);
-        }
-      } else {
-        // Server-side, initialize after hydration
-        setTimeout(() => setCartInitialized(true), 500);
-      }
-    };
-
-    // Execute both initialization tasks
+    // Execute client info capture
     captureClientInfo();
-    checkCartImmediately();
   }, []);
 
-  // Additional effect - if items appear, cart is definitely ready
-  useEffect(() => {
-    if (mounted && items.length > 0) {
-      console.log('✅ ITEMS DETECTED - Cart definitely initialized');
-      setCartInitialized(true);
-    }
-  }, [mounted, items]);
-
-  // Failsafe - ensure we don't get stuck in loading forever
-  useEffect(() => {
-    const failsafeTimer = setTimeout(() => {
-      console.log('⏰ FAILSAFE TIMEOUT - Force initializing cart');
-      setCartInitialized(true);
-    }, 2000); // 2 second failsafe
-
-    return () => clearTimeout(failsafeTimer);
-  }, []);
-
-  // Don't render until mounted to avoid hydration issues
+  /**
+   * WHY: Prevent server-side rendering issues
+   * HOW: Return null until client-side JavaScript loads and cart is hydrated
+   *
+   * IMPORTANT: By the time mounted=true, the CartProvider has already hydrated
+   * the Zustand store from localStorage. No additional delays needed!
+   */
   if (!mounted) return null;
 
-  // Show loading while cart is initializing - prevent race condition
-  if (!cartInitialized) {
-    return (
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container-custom text-center">
-          <div className="max-w-md mx-auto">
-            <div className="w-8 h-8 border-2 border-amber-600 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
-            <h1 className="text-2xl font-playfair font-light mb-4 text-gray-900">
-              Carregando Carrinho...
-            </h1>
-            <p className="text-gray-600">
-              Verificando seus produtos...
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Only redirect if cart is empty AND we know it's been properly initialized
-  if (isEmpty && cartInitialized) {
+  /**
+   * WHY: Show empty cart warning when no items exist
+   * HOW: Check isEmpty flag from Zustand store (already hydrated by CartProvider)
+   *
+   * IMPORTANT: No initialization check needed! By the time this component mounts,
+   * the CartProvider has already loaded cart data from localStorage into Zustand.
+   * The isEmpty flag accurately reflects the cart state without any race conditions.
+   */
+  if (isEmpty) {
     return (
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="container-custom text-center">
