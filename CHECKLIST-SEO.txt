@@ -13,6 +13,7 @@
 [ ] 1.3 Clicar em "Adicionar propriedade"
 [ ] 1.4 Escolher "Prefixo do URL"
 [ ] 1.5 Digite: https://jchairstudios62.xyz
+
 [ ] 1.6 Verificar propriedade (Tag HTML ou arquivo)
         → Se precisar da tag, ME ENVIE que eu adiciono
 [ ] 1.7 Ir em "Sitemaps" no menu lateral
