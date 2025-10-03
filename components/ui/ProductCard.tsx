@@ -3,13 +3,12 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Heart, 
-  ShoppingCart, 
-  Eye, 
-  Star, 
-  Scale, 
+import {
+  Heart,
+  ShoppingCart,
+  Eye,
+  Star,
+  Scale,
   Share2,
   Zap
 } from 'lucide-react';
@@ -21,12 +20,17 @@ import {
   useUIStore
 } from '@/lib/store';
 import { useCart } from '@/lib/stores/cartStore';
-import { 
-  formatCurrency, 
+import {
+  formatCurrency,
   calculateDiscountPercentage,
   calculateProfessionalPrice,
-  getImageUrl 
+  getImageUrl
 } from '@/lib/utils';
+
+// PERFORMANCE OPTIMIZATION: Substituído framer-motion por CSS animations
+// - Redução de bundle size: framer-motion só usado quando absolutamente necessário
+// - Melhor performance: CSS transitions para hover/interações simples
+// - GPU acceleration automática com CSS transforms
 
 interface ProductCardProps {
   product: Product;
@@ -163,15 +167,29 @@ export function ProductCard({
   };
   
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -5 }}
-      className={`${cardVariants[variant]} ${className}`}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
+    <div
+      className={`${cardVariants[variant]} ${className} transition-all duration-300 hover:-translate-y-1.5 animate-fade-in-up`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
+      {/* CSS Keyframes for card animation */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fadeInUp 0.5s ease-out forwards;
+        }
+      `}</style>
+
       <Link href={`/produto/${product.slug}`}>
         <div className={imageVariants[variant]}>
           {/* Main Product Image */}
@@ -236,77 +254,80 @@ export function ProductCard({
             )}
           </div>
           
-          {/* Quick Actions */}
-          {showQuickActions && (
-            <AnimatePresence>
-              {isHovered && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-2 right-2 flex flex-col space-y-1"
-                >
-                  <button
-                    onClick={handleWishlistToggle}
-                    className={`p-2 rounded-full transition-colors ${
-                      isInWishlistState
-                        ? 'bg-red-500 text-white'
-                        : 'bg-white/80 hover:bg-white text-gray-700'
-                    }`}
-                    title={isInWishlistState ? 'Remover da wishlist' : 'Adicionar à wishlist'}
-                  >
-                    <Heart className={`w-4 h-4 ${isInWishlistState ? 'fill-current' : ''}`} />
-                  </button>
-                  
-                  <button
-                    onClick={handleComparisonToggle}
-                    className={`p-2 rounded-full transition-colors ${
-                      isInComparisonState
-                        ? 'bg-blue-500 text-white'
-                        : 'bg-white/80 hover:bg-white text-gray-700'
-                    }`}
-                    title="Comparar produto"
-                  >
-                    <Scale className="w-4 h-4" />
-                  </button>
-                  
-                  <button
-                    onClick={handleQuickView}
-                    className="p-2 bg-white/80 hover:bg-white text-gray-700 rounded-full transition-colors"
-                    title="Visualização rápida"
-                  >
-                    <Eye className="w-4 h-4" />
-                  </button>
-                  
-                  <button
-                    onClick={handleShare}
-                    className="p-2 bg-white/80 hover:bg-white text-gray-700 rounded-full transition-colors"
-                    title="Compartilhar"
-                  >
-                    <Share2 className="w-4 h-4" />
-                  </button>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          )}
-          
-          {/* Quick Add to Cart */}
-          <AnimatePresence>
-            {isHovered && product.inStock && (
-              <motion.button
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                onClick={handleAddToCart}
-                className="absolute bottom-2 right-2 bg-black text-white px-3 py-2 rounded-full 
-                         hover:bg-gray-800 transition-colors flex items-center space-x-1"
-                title="Adicionar ao carrinho"
+          {/* Quick Actions - CSS Transitions */}
+          {showQuickActions && isHovered && (
+            <div className="absolute top-2 right-2 flex flex-col space-y-1 transition-all duration-200 animate-fade-in">
+              <button
+                onClick={handleWishlistToggle}
+                className={`p-2 rounded-full transition-colors ${
+                  isInWishlistState
+                    ? 'bg-red-500 text-white'
+                    : 'bg-white/80 hover:bg-white text-gray-700'
+                }`}
+                title={isInWishlistState ? 'Remover da wishlist' : 'Adicionar à wishlist'}
               >
-                <ShoppingCart className="w-4 h-4" />
-                <span className="text-sm">Adicionar</span>
-              </motion.button>
-            )}
-          </AnimatePresence>
+                <Heart className={`w-4 h-4 ${isInWishlistState ? 'fill-current' : ''}`} />
+              </button>
+
+              <button
+                onClick={handleComparisonToggle}
+                className={`p-2 rounded-full transition-colors ${
+                  isInComparisonState
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-white/80 hover:bg-white text-gray-700'
+                }`}
+                title="Comparar produto"
+              >
+                <Scale className="w-4 h-4" />
+              </button>
+
+              <button
+                onClick={handleQuickView}
+                className="p-2 bg-white/80 hover:bg-white text-gray-700 rounded-full transition-colors"
+                title="Visualização rápida"
+              >
+                <Eye className="w-4 h-4" />
+              </button>
+
+              <button
+                onClick={handleShare}
+                className="p-2 bg-white/80 hover:bg-white text-gray-700 rounded-full transition-colors"
+                title="Compartilhar"
+              >
+                <Share2 className="w-4 h-4" />
+              </button>
+            </div>
+          )}
+
+          {/* Quick Add to Cart - CSS Transitions */}
+          {isHovered && product.inStock && (
+            <button
+              onClick={handleAddToCart}
+              className="absolute bottom-2 right-2 bg-black text-white px-3 py-2 rounded-full
+                       hover:bg-gray-800 transition-all duration-200 flex items-center space-x-1 animate-fade-in"
+              title="Adicionar ao carrinho"
+            >
+              <ShoppingCart className="w-4 h-4" />
+              <span className="text-sm">Adicionar</span>
+            </button>
+          )}
+
+          <style jsx>{`
+            @keyframes fadeIn {
+              from {
+                opacity: 0;
+                transform: translateY(10px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+
+            .animate-fade-in {
+              animation: fadeIn 0.2s ease-out forwards;
+            }
+          `}</style>
         </div>
         
         {/* Product Info */}
@@ -370,7 +391,7 @@ export function ProductCard({
           )}
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 }
 
