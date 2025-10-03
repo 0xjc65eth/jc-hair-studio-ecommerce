@@ -160,7 +160,7 @@ function generateFeed(products) {
   const header = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
   <channel>
-    <title>JC Hair Studio's 62 - Premium Hair Extensions & Brazilian Cosmetics</title>
+    <title>JC Hair Studio 62 - Premium Hair Extensions &amp; Brazilian Cosmetics</title>
     <link>${SITE_URL}</link>
     <description>Premium Brazilian hair extensions, straightening treatments, and authentic Brazilian cosmetics. 100% human hair, professional salon quality.</description>
     <language>pt-PT</language>
