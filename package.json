@@ -85,7 +85,8 @@
     "amazon:help": "npx tsx scripts/amazon/sync-to-amazon.ts --help",
     "seo:submit": "node scripts/submit-to-search-engines.mjs",
     "seo:generate-feed": "node scripts/generate-product-feed.mjs",
-    "seo:all": "npm run seo:generate-feed && npm run seo:submit"
+    "seo:all": "npm run seo:generate-feed && npm run seo:submit",
+    "seo:auto": "node scripts/auto-seo-complete.mjs"
   },
   "keywords": [
     "ecommerce",
