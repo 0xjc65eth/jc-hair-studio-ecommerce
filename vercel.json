@@ -1,12 +1,21 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/feed",
-      "destination": "/api/google-feed"
+      "src": "/product-feed.xml",
+      "dest": "/product-feed.xml",
+      "headers": {
+        "Content-Type": "application/xml; charset=utf-8",
+        "Cache-Control": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"
+      }
     },
     {
-      "source": "/product-feed.xml",
-      "destination": "/api/google-feed"
+      "src": "/feed",
+      "dest": "/product-feed.xml",
+      "headers": {
+        "Content-Type": "application/xml; charset=utf-8",
+        "Cache-Control": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"
+      }
     }
-  ]
+  ],
+  "trailingSlash": false
 }

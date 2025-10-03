@@ -190,7 +190,15 @@ const nextConfig = {
   },
 
   async rewrites() {
-    return [];
+    return {
+      beforeFiles: [
+        // Product feed for Google Merchant Center
+        {
+          source: '/feed',
+          destination: '/product-feed.xml',
+        },
+      ],
+    };
   },
 
   // Page generation optimization
