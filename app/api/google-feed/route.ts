@@ -2,8 +2,9 @@ import { NextResponse } from 'next/server';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 
+// Force static generation at build time
 export const dynamic = 'force-static';
-export const revalidate = 3600;
+export const revalidate = 3600; // Revalidate every hour
 
 export async function GET() {
   try {
