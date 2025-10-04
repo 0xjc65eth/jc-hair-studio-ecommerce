@@ -144,7 +144,7 @@ Produtos capilares brasileiros. Mega hair natural, progressivas, maquiagem. Entr
 🛠️ MANUTENÇÃO SEMANAL:
    npm run seo:auto
 
-📊 ACOMPANHAR RESULTADOS:
+📊 ACOMPANHAR RESULTADOS:nao 
    - Google Search Console → Performance
    - Google Merchant → Status dos produtos
    - Google Business → Visualizações

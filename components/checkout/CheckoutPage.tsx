@@ -10,6 +10,8 @@ import { countries, getShippingCost } from '@/lib/config/shipping';
 // Componente de pagamento otimizado
 import { StripePayment } from './StripePayment';
 import { PromoCodeInput } from './PromoCodeInput';
+import { ShippingSelector } from './ShippingSelector';
+import type { ShippingRate } from '@/lib/shipping/shipping-apis';
 import {
   ArrowLeft,
   CreditCard,
@@ -87,6 +89,9 @@ export default function CheckoutPage() {
   const [promoDiscount, setPromoDiscount] = useState(0);
   const [promoFreeShipping, setPromoFreeShipping] = useState(false);
   const [promoCodeId, setPromoCodeId] = useState<string>('');
+
+  // Selected shipping method state
+  const [selectedShipping, setSelectedShipping] = useState<ShippingRate | null>(null);
 
   // Client technical information for fraud prevention and order tracking
   const [clientInfo, setClientInfo] = useState({
@@ -280,8 +285,9 @@ export default function CheckoutPage() {
 
   const taxAmount = getTaxAmount();
   const total = getTotal();
-  const baseShippingCost = getShippingCost(customerInfo.country);
-  const shippingCost = promoFreeShipping ? 0 : baseShippingCost;
+
+  // Use selected shipping rate or fallback to static cost
+  const shippingCost = selectedShipping ? selectedShipping.price : (promoFreeShipping ? 0 : getShippingCost(customerInfo.country));
   const subtotalWithDiscount = Math.max(0, total - promoDiscount);
   const finalTotal = subtotalWithDiscount + shippingCost;
 
@@ -478,6 +484,23 @@ export default function CheckoutPage() {
             taxAmount: taxAmount,
             shippingCost: shippingCost,
             finalTotal: finalTotal
+          },
+
+          // Shipping method details
+          shippingMethod: selectedShipping ? {
+            carrier: selectedShipping.carrier,
+            service: selectedShipping.service,
+            price: selectedShipping.price,
+            estimatedDays: selectedShipping.estimatedDays,
+            tracking: selectedShipping.tracking,
+            insurance: selectedShipping.insurance
+          } : {
+            carrier: 'Standard',
+            service: customerInfo.deliveryMethod,
+            price: shippingCost,
+            estimatedDays: '3-5',
+            tracking: false,
+            insurance: false
           },
 
           // Technical information for fraud prevention and tracking
@@ -892,25 +915,28 @@ export default function CheckoutPage() {
                         required
                       />
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Método de Entrega *
-                      </label>
-                      <select
-                        value={customerInfo.deliveryMethod}
-                        onChange={(e) => handleCustomerInfoChange('deliveryMethod', e.target.value)}
-                        className="input-luxury w-full"
-                        required
-                      >
-                        <option value="standard">Entrega Standard (3-5 dias úteis)</option>
-                        <option value="express">Entrega Express (1-2 dias úteis)</option>
-                        <option value="priority">Entrega Prioritária (24h)</option>
-                        <option value="pickup">Recolha na Loja</option>
-                      </select>
-                    </div>
                   </div>
 
                 </div>
+
+                {/* Shipping Selector - Dynamic Rates */}
+                <ShippingSelector
+                  destination={{
+                    country: customerInfo.country,
+                    postalCode: customerInfo.address.zipCode,
+                    city: customerInfo.address.city,
+                    address: `${customerInfo.address.street}, ${customerInfo.address.number}`,
+                    name: customerInfo.name,
+                  }}
+                  cartTotal={total}
+                  onShippingSelect={(rate) => {
+                    setSelectedShipping(rate);
+                    if (rate) {
+                      handleCustomerInfoChange('deliveryMethod', `${rate.carrier} - ${rate.service}`);
+                    }
+                  }}
+                  selectedShipping={selectedShipping}
+                />
 
                 {/* Payment Section - Same Page */}
                 <div className="bg-white border-2 border-green-200 rounded-lg p-6 relative overflow-hidden">

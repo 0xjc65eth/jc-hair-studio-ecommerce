@@ -14,6 +14,7 @@ import {
   Globe,
   Mail,
   Phone,
+  Search,
 } from 'lucide-react';
 
 /**
@@ -115,6 +116,7 @@ export function AdminLayout({
     { id: 'shipping', name: 'Envios', icon: Truck },
     { id: 'notifications', name: 'Notificações', icon: Bell },
     { id: 'inventory', name: 'Inventário', icon: Package },
+    { id: 'seo', name: 'SEO & Marketing', icon: Search },
     { id: 'coupons', name: 'Cupons', icon: Tag },
     { id: 'tracking', name: 'Rastreamento', icon: MapPin },
     { id: 'reports', name: 'Relatórios', icon: FileText },

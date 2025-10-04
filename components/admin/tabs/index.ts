@@ -10,3 +10,5 @@
 export { DashboardTab } from './DashboardTab';
 export { OrdersTab } from './OrdersTab';
 export { NotificationsTab } from './NotificationsTab';
+export { SeoTab } from './SeoTab';
+export { ShippingRatesTab } from './ShippingRatesTab';

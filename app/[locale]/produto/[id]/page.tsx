@@ -8,6 +8,8 @@ import { ArrowLeft, Heart, Share2, ShoppingBag, Star, Truck, Shield, RotateCcw, 
 import ImageCarousel from '@/components/products/ImageCarousel';
 import { resolveProductById, getAllAvailableProducts } from '@/lib/services/productResolver';
 import { ProductSchema } from '@/components/seo/SchemaMarkup';
+import { CategoryBackButton } from '@/components/navigation/BackButton';
+import { getLocaleFromPath } from '@/lib/utils/navigation';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -77,8 +79,21 @@ export default function ProductDetailPage() {
     )
     .slice(0, 4);
 
+  const locale = params.locale as string | undefined;
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Back Button */}
+      <div className="bg-white border-b">
+        <div className="max-w-7xl mx-auto px-4 py-3">
+          <CategoryBackButton
+            productCategory={product.category}
+            locale={locale}
+            variant="ghost"
+          />
+        </div>
+      </div>
+
       {/* Breadcrumb */}
       <div className="bg-gray-50 border-b">
         <div className="max-w-7xl mx-auto px-4 py-4">

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="800" fill="white"/>
+  
+  <!-- Circle border -->
+  <circle cx="400" cy="300" r="180" stroke="#1a1a1a" stroke-width="8" fill="none"/>
+  
+  <!-- Hair wave patterns -->
+  <path d="M280 260c80-40 160-40 240 0" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M280 280c80-40 160-40 240 0" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M280 300c80-40 160-40 240 0" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M280 320c80-40 160-40 240 0" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M300 340c80-40 160-40 240 0" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Number 62 -->
+  <text x="400" y="230" text-anchor="middle" fill="#1a1a1a" font-family="Georgia, serif" font-size="48" font-weight="bold" font-style="italic">62</text>
+  
+  <!-- Brand name -->
+  <text x="400" y="550" text-anchor="middle" fill="#1a1a1a" font-family="Georgia, serif" font-size="64" font-weight="bold">JC HAIR STUDIO</text>
+  
+  <!-- Tagline -->
+  <text x="400" y="620" text-anchor="middle" fill="#666666" font-family="Arial, sans-serif" font-size="32">Premium Brazilian Hair Extensions</text>
+  
+  <!-- Location -->
+  <text x="400" y="670" text-anchor="middle" fill="#999999" font-family="Arial, sans-serif" font-size="28">Portugal</text>
+</svg>

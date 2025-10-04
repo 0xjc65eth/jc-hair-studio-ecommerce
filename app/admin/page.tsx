@@ -3,7 +3,8 @@
 import { useState, FormEvent } from 'react';
 import { useAuth, useDashboardStats } from '@/components/admin/hooks';
 import { AdminLayout } from '@/components/admin/shared/AdminLayout';
-import { DashboardTab, OrdersTab, NotificationsTab } from '@/components/admin/tabs';
+import { DashboardTab, OrdersTab, NotificationsTab, SeoTab, ShippingRatesTab } from '@/components/admin/tabs';
+import { ProfessionalSidebar } from '@/components/admin/shared/ProfessionalSidebar';
 import { OrderDetailModal } from '@/components/admin/modals/OrderDetailModal';
 import { LowStockAlerts } from '@/components/admin/LowStockAlerts';
 
@@ -147,6 +148,12 @@ export default function AdminPanel() {
           </div>
         );
 
+      case 'seo':
+        return <SeoTab />;
+
+      case 'shipping-rates':
+        return <ShippingRatesTab />;
+
       default:
         return <DashboardTab />;
     }
@@ -218,23 +225,69 @@ export default function AdminPanel() {
 
   // ==================== MAIN ADMIN PANEL ====================
   /**
-   * Painel administrativo principal
-   * Utiliza AdminLayout para estrutura comum
+   * Painel administrativo principal com sidebar profissional
    */
   return (
-    <>
-      <AdminLayout
+    <div className="flex min-h-screen bg-gray-50">
+      {/* Professional Sidebar */}
+      <ProfessionalSidebar
         activeTab={activeTab}
         onTabChange={setActiveTab}
-        stats={{
-          totalOrders: stats.totalOrders,
-          totalRevenue: stats.totalRevenue,
-          pendingOrders: stats.pendingOrders,
+        onLogout={() => {
+          localStorage.removeItem('admin_authenticated');
+          localStorage.removeItem('admin_session');
+          window.location.reload();
         }}
-        statsLoading={statsLoading}
-      >
-        {renderTabContent()}
-      </AdminLayout>
+      />
+
+      {/* Main Content */}
+      <main className="flex-1 overflow-x-hidden">
+        {/* Header */}
+        <div className="bg-white border-b border-gray-200 px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">
+                {activeTab === 'dashboard' && 'Dashboard'}
+                {activeTab === 'orders' && 'Gestão de Pedidos'}
+                {activeTab === 'shipping' && 'Gestão de Envios'}
+                {activeTab === 'shipping-rates' && 'Tarifas de Envio'}
+                {activeTab === 'notifications' && 'Notificações'}
+                {activeTab === 'inventory' && 'Inventário'}
+                {activeTab === 'seo' && 'SEO & Marketing'}
+                {activeTab === 'coupons' && 'Cupons'}
+                {activeTab === 'tracking' && 'Rastreamento'}
+                {activeTab === 'reports' && 'Relatórios'}
+              </h1>
+              <p className="text-sm text-gray-600 mt-1">
+                JC Hair Studio - Painel Administrativo
+              </p>
+            </div>
+
+            {/* Quick Stats */}
+            {!statsLoading && (
+              <div className="hidden md:flex items-center gap-6">
+                <div className="text-right">
+                  <p className="text-xs text-gray-500">Pedidos</p>
+                  <p className="text-lg font-bold text-gray-900">{stats.totalOrders}</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs text-gray-500">Receita</p>
+                  <p className="text-lg font-bold text-green-600">€{stats.totalRevenue.toFixed(2)}</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-xs text-gray-500">Pendentes</p>
+                  <p className="text-lg font-bold text-orange-600">{stats.pendingOrders}</p>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-6">
+          {renderTabContent()}
+        </div>
+      </main>
 
       {/* Order Detail Modal */}
       <OrderDetailModal
@@ -250,6 +303,6 @@ export default function AdminPanel() {
           // Implementar lógica de atualização de status
         }}
       />
-    </>
+    </div>
   );
 }
