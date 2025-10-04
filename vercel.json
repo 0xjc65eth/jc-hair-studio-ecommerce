@@ -1,20 +1,36 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "/product-feed.xml",
-      "dest": "/product-feed.xml",
-      "headers": {
-        "Content-Type": "application/xml; charset=utf-8",
-        "Cache-Control": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"
-      }
+      "source": "/feed",
+      "destination": "/product-feed.xml"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/product-feed.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"
+        }
+      ]
     },
     {
-      "src": "/feed",
-      "dest": "/product-feed.xml",
-      "headers": {
-        "Content-Type": "application/xml; charset=utf-8",
-        "Cache-Control": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"
-      }
+      "source": "/feed",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400"
+        }
+      ]
     }
   ],
   "trailingSlash": false
