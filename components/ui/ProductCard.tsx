@@ -168,27 +168,10 @@ export function ProductCard({
   
   return (
     <div
-      className={`${cardVariants[variant]} ${className} transition-all duration-300 hover:-translate-y-1.5 animate-fade-in-up`}
+      className={`${cardVariants[variant]} ${className} transition-all duration-300 hover:-translate-y-1.5`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* CSS Keyframes for card animation */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in-up {
-          animation: fadeInUp 0.5s ease-out forwards;
-        }
-      `}</style>
 
       <Link href={`/produto/${product.slug}`}>
         <div className={imageVariants[variant]}>
@@ -304,30 +287,13 @@ export function ProductCard({
             <button
               onClick={handleAddToCart}
               className="absolute bottom-2 right-2 bg-black text-white px-3 py-2 rounded-full
-                       hover:bg-gray-800 transition-all duration-200 flex items-center space-x-1 animate-fade-in"
+                       hover:bg-gray-800 transition-all duration-200 flex items-center space-x-1"
               title="Adicionar ao carrinho"
             >
               <ShoppingCart className="w-4 h-4" />
               <span className="text-sm">Adicionar</span>
             </button>
           )}
-
-          <style jsx>{`
-            @keyframes fadeIn {
-              from {
-                opacity: 0;
-                transform: translateY(10px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
-
-            .animate-fade-in {
-              animation: fadeIn 0.2s ease-out forwards;
-            }
-          `}</style>
         </div>
         
         {/* Product Info */}
@@ -367,6 +333,39 @@ export function ProductCard({
             </div>
           )}
           
+          {/* Price */}
+          <div className="mt-2 mb-2">
+            {showProfessionalPrice && isProfessional ? (
+              <div className="space-y-1">
+                <div className="flex items-baseline space-x-2">
+                  <span className="text-lg font-bold text-purple-600">
+                    {formatCurrency(calculateProfessionalPrice(product.price))}
+                  </span>
+                  <span className="text-sm text-gray-400 line-through">
+                    {formatCurrency(product.price)}
+                  </span>
+                </div>
+                <span className="text-xs text-purple-600 font-medium">Preço Profissional</span>
+              </div>
+            ) : (
+              <div className="flex items-baseline space-x-2">
+                <span className="text-lg font-bold text-gray-900">
+                  {formatCurrency(product.price)}
+                </span>
+                {product.originalPrice && product.originalPrice > product.price && (
+                  <>
+                    <span className="text-sm text-gray-400 line-through">
+                      {formatCurrency(product.originalPrice)}
+                    </span>
+                    <span className="text-xs font-semibold text-red-500">
+                      -{calculateDiscountPercentage(product.originalPrice, product.price)}%
+                    </span>
+                  </>
+                )}
+              </div>
+            )}
+          </div>
+
           {/* Stock Status */}
           <div className="flex items-center justify-end">
             {!product.inStock && (
@@ -375,7 +374,7 @@ export function ProductCard({
               </span>
             )}
           </div>
-          
+
           {/* Tags */}
           {product.tags && product.tags.length > 0 && variant !== 'compact' && (
             <div className="flex flex-wrap gap-1 mt-2">
