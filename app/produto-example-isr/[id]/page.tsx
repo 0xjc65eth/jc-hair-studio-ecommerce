@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
           alt: product.name || product.nome,
         },
       ],
-      type: 'product',
+      type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
