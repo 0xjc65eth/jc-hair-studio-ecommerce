@@ -9,7 +9,6 @@ import ImageCarousel from '@/components/products/ImageCarousel';
 import { resolveProductById, getAllAvailableProducts } from '@/lib/services/productResolver';
 import { ProductSchema } from '@/components/seo/SchemaMarkup';
 import { CategoryBackButton } from '@/components/navigation/BackButton';
-import { getLocaleFromPath } from '@/lib/utils/navigation';
 
 export default function ProductDetailPage() {
   const params = useParams();
