@@ -1,5 +1,6 @@
 'use client';
 
+// Force cache refresh - BackButton implementation v1.0
 import React, { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
