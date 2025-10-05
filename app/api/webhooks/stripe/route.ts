@@ -687,9 +687,4 @@ function parseItemsFromMetadata(metadata: any): Array<{name: string, quantity: n
   }
 }
 
-// Configuração para o Next.js
-export const config = {
-  api: {
-    bodyParser: false, // Stripe requer o body cru
-  },
-};
+// Configuração para o Next.js - bodyParser é desabilitado automaticamente para webhooks no App Router
