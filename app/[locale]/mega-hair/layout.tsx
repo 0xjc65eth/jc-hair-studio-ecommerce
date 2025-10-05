@@ -1,3 +1,4 @@
+import React from 'react';
 import { Metadata } from 'next';
 import { generateCategoryMeta } from '@/lib/utils/metaTags';
 import { generateUnifiedCatalog } from '@/lib/data/megaHairProducts';

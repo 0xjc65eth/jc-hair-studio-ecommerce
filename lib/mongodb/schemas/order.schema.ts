@@ -6,6 +6,7 @@
 import { Schema, model, models, Document } from 'mongoose';
 import { z } from 'zod';
 import { AddressZodSchema } from './user.schema';
+import { getSafeModel, configureSchemaForServerless, initializeSchemaIndexes } from '../schema-manager';
 
 // Zod validation schemas
 export const OrderItemZodSchema = z.object({
@@ -348,10 +349,12 @@ const NotificationSchema = new Schema<IOrderNotification>({
 
 const OrderSchema = new Schema<IOrder>({
   // Identificação
-  orderNumber: { 
-    type: String, 
-    required: true, 
-    unique: true 
+  orderNumber: {
+    type: String,
+    required: true,
+    unique: true,
+    sparse: true, // Prevent duplicate index warnings
+    index: true
   },
   
   // Cliente
@@ -362,8 +365,16 @@ const OrderSchema = new Schema<IOrder>({
   items: [OrderItemSchema],
   
   // Endereços (importing from user schema structure)
-  shippingAddress: { type: Schema.Types.Mixed, required: true },
-  billingAddress: { type: Schema.Types.Mixed, required: true },
+  shippingAddress: {
+    type: Schema.Types.Mixed,
+    required: true
+    // Note: No automatic indexing on nested fields to prevent conflicts
+  },
+  billingAddress: {
+    type: Schema.Types.Mixed,
+    required: true
+    // Note: No automatic indexing on nested fields to prevent conflicts
+  },
   
   // Valores
   subtotal: { type: Number, required: true, min: 0 },
@@ -414,10 +425,35 @@ const OrderSchema = new Schema<IOrder>({
   utmSource: { type: String },
   utmMedium: { type: String },
   utmCampaign: { type: String },
-}, { 
+}, {
   timestamps: true,
   collection: 'orders'
 });
+
+// Configure schema for serverless environment
+configureSchemaForServerless(OrderSchema);
+
+// Define indexes for the order schema
+const orderIndexes = [
+  { spec: { orderNumber: 1 }, options: { unique: true, sparse: true, background: true } },
+  { spec: { userId: 1 }, options: { background: true } },
+  { spec: { status: 1 }, options: { background: true } },
+  { spec: { paymentStatus: 1 }, options: { background: true } },
+  { spec: { createdAt: -1 }, options: { background: true } },
+  { spec: { userId: 1, status: 1 }, options: { background: true } },
+  { spec: { userId: 1, createdAt: -1 }, options: { background: true } },
+  { spec: { 'customerInfo.email': 1 }, options: { background: true } },
+  // Address-specific indexes without conflicts
+  { spec: { 'shippingAddress.postalCode': 1 }, options: { sparse: true, background: true } },
+  { spec: { 'billingAddress.postalCode': 1 }, options: { sparse: true, background: true } },
+  // Status and date combinations
+  { spec: { status: 1, confirmedAt: -1 }, options: { sparse: true, background: true } },
+  { spec: { status: 1, shippedAt: -1 }, options: { sparse: true, background: true } },
+  { spec: { status: 1, deliveredAt: -1 }, options: { sparse: true, background: true } },
+  // Additional useful indexes
+  { spec: { total: -1 }, options: { background: true } },
+  { spec: { userId: 1, total: -1 }, options: { background: true } }
+];
 
 // Virtual properties
 OrderSchema.virtual('itemCount').get(function() {
@@ -598,6 +634,12 @@ OrderSchema.statics.getRevenueStats = function(startDate: Date, endDate: Date) {
   ]);
 };
 
-// Create and export the model
-export const Order = models.Order || model<IOrder>('Order', OrderSchema);
+// Create and export the model with proper index handling
+export const Order = getSafeModel<IOrder>('Order', OrderSchema, 'orders');
+
+// Initialize indexes asynchronously
+if (typeof window === 'undefined' && process.env.NEXT_PHASE !== 'phase-production-build') {
+  initializeSchemaIndexes(Order, orderIndexes).catch(console.error);
+}
+
 export default Order;

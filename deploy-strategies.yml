@@ -1,0 +1,74 @@
+# Deployment Strategies Configuration
+# Multi-platform deployment strategy for JC Hair Studio
+
+strategies:
+  primary:
+    name: "Vercel"
+    priority: 1
+    config_file: "vercel.json"
+    build_command: "npm run build:vercel"
+    environment:
+      - NODE_OPTIONS: "--max-old-space-size=4096 --optimize-for-size"
+      - SKIP_TYPE_CHECK: "true"
+      - SKIP_LINT: "true"
+    success_criteria:
+      - build_time_max: "600s"
+      - memory_usage_max: "1024MB"
+      - bundle_size_max: "5MB"
+
+  fallback_1:
+    name: "Netlify"
+    priority: 2
+    config_file: "netlify.toml"
+    build_command: "npm run build:netlify"
+    environment:
+      - NODE_OPTIONS: "--max-old-space-size=4096"
+      - SKIP_TYPE_CHECK: "true"
+      - NETLIFY: "true"
+
+  fallback_2:
+    name: "Railway"
+    priority: 3
+    config_file: "railway.toml"
+    build_command: "npm run build:production"
+    environment:
+      - NODE_ENV: "production"
+      - NODE_OPTIONS: "--max-old-space-size=4096"
+
+  fallback_3:
+    name: "Docker (Self-hosted)"
+    priority: 4
+    config_file: "Dockerfile.production"
+    build_command: "docker build -f Dockerfile.production -t jc-hair-studio ."
+    run_command: "docker run -p 3000:3000 jc-hair-studio"
+
+  emergency:
+    name: "Static Export"
+    priority: 5
+    build_command: "npm run build:static && npm run export"
+    output_directory: "out"
+    deployment_method: "ftp_upload"
+
+monitoring:
+  health_checks:
+    - endpoint: "/api/health"
+    - expected_status: 200
+    - timeout: "30s"
+    - retry_count: 3
+
+  performance_metrics:
+    - core_web_vitals: true
+    - lighthouse_score_min: 85
+    - first_contentful_paint_max: "2s"
+    - largest_contentful_paint_max: "4s"
+
+automation:
+  trigger_conditions:
+    - git_push_to_main: true
+    - manual_deployment: true
+    - scheduled_deployment: "daily_03:00_UTC"
+
+  failure_handling:
+    - auto_rollback: true
+    - notification_channels: ["email", "slack"]
+    - max_retry_attempts: 2

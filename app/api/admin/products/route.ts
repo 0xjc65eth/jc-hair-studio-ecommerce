@@ -2,8 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { connectDB } from '@/lib/mongodb/connection';
 import { Product } from '@/lib/models/Product';
 import { Category } from '@/lib/models/Category';
+import { withAdminAuth } from '@/lib/admin/auth-middleware';
 
-export async function GET(request: NextRequest) {
+async function getHandler(request: NextRequest) {
   try {
     await connectDB();
 
@@ -169,3 +170,145 @@ async function getFeaturedProducts() {
     }
   });
 }
+
+// POST - Create new product
+async function postHandler(request: NextRequest) {
+  try {
+    await connectDB();
+    const productData = await request.json();
+
+    // Validate required fields
+    if (!productData.name || !productData.category) {
+      return NextResponse.json(
+        { success: false, error: 'Name and category are required' },
+        { status: 400 }
+      );
+    }
+
+    // Generate SKU if not provided
+    if (!productData.sku) {
+      productData.sku = `${productData.category.toUpperCase()}-${Date.now()}`;
+    }
+
+    // Set defaults
+    const productWithDefaults = {
+      featured: false,
+      status: 'active',
+      stock: { available: 0, reserved: 0 },
+      pricing: { basePrice: 0, salePrice: null },
+      ...productData
+    };
+
+    const product = new Product(productWithDefaults);
+    const savedProduct = await product.save();
+
+    console.log('✅ Product created:', savedProduct.sku);
+
+    return NextResponse.json({
+      success: true,
+      product: savedProduct,
+      message: 'Product created successfully'
+    });
+
+  } catch (error) {
+    console.error('❌ Error creating product:', error);
+    return NextResponse.json({
+      success: false,
+      error: 'Failed to create product',
+      details: error instanceof Error ? error.message : String(error)
+    }, { status: 500 });
+  }
+}
+
+// PUT - Update existing product
+async function putHandler(request: NextRequest) {
+  try {
+    await connectDB();
+    const { searchParams } = new URL(request.url);
+    const id = searchParams.get('id');
+    const updateData = await request.json();
+
+    if (!id) {
+      return NextResponse.json(
+        { success: false, error: 'Product ID is required' },
+        { status: 400 }
+      );
+    }
+
+    const product = await Product.findByIdAndUpdate(
+      id,
+      { $set: updateData },
+      { new: true, runValidators: true }
+    );
+
+    if (!product) {
+      return NextResponse.json(
+        { success: false, error: 'Product not found' },
+        { status: 404 }
+      );
+    }
+
+    console.log('✅ Product updated:', product.sku);
+
+    return NextResponse.json({
+      success: true,
+      product,
+      message: 'Product updated successfully'
+    });
+
+  } catch (error) {
+    console.error('❌ Error updating product:', error);
+    return NextResponse.json({
+      success: false,
+      error: 'Failed to update product',
+      details: error instanceof Error ? error.message : String(error)
+    }, { status: 500 });
+  }
+}
+
+// DELETE - Remove product
+async function deleteHandler(request: NextRequest) {
+  try {
+    await connectDB();
+    const { searchParams } = new URL(request.url);
+    const id = searchParams.get('id');
+
+    if (!id) {
+      return NextResponse.json(
+        { success: false, error: 'Product ID is required' },
+        { status: 400 }
+      );
+    }
+
+    const product = await Product.findByIdAndDelete(id);
+
+    if (!product) {
+      return NextResponse.json(
+        { success: false, error: 'Product not found' },
+        { status: 404 }
+      );
+    }
+
+    console.log('✅ Product deleted:', product.sku);
+
+    return NextResponse.json({
+      success: true,
+      product: { _id: product._id, sku: product.sku, name: product.name },
+      message: 'Product deleted successfully'
+    });
+
+  } catch (error) {
+    console.error('❌ Error deleting product:', error);
+    return NextResponse.json({
+      success: false,
+      error: 'Failed to delete product',
+      details: error instanceof Error ? error.message : String(error)
+    }, { status: 500 });
+  }
+}
+
+// Export protected endpoints with admin authentication
+export const GET = withAdminAuth(getHandler);
+export const POST = withAdminAuth(postHandler);
+export const PUT = withAdminAuth(putHandler);
+export const DELETE = withAdminAuth(deleteHandler);

@@ -4,7 +4,7 @@ import { forwardRef, useEffect, HTMLAttributes } from 'react';
 import { createPortal } from 'react-dom';
 import { clsx } from 'clsx';
 import { X } from 'lucide-react';
-import Button from './Button';
+import { Button } from './Button';
 
 export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
   isOpen: boolean;
@@ -304,8 +304,8 @@ const ConfirmModal = forwardRef<HTMLDivElement, ConfirmModalProps>(
 
 ConfirmModal.displayName = 'ConfirmModal';
 
-export default Modal;
 export {
+  Modal,
   ModalHeader,
   ModalContent,
   ModalFooter,

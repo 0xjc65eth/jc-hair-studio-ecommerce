@@ -32,6 +32,7 @@ interface StripePaymentProps {
     quantity: number;
     price: number;
   }>;
+  promoCodeId?: string;
   onSuccess: (paymentIntentId: string) => void;
   onError: (error: string) => void;
 }
@@ -280,6 +281,7 @@ export const StripePayment: React.FC<StripePaymentProps> = (props) => {
           currency: props.currency || 'eur',
           customerInfo: props.customerInfo,
           items: props.items,
+          promoCodeId: props.promoCodeId || undefined,
         };
 
         // Use faster fetch with timeout

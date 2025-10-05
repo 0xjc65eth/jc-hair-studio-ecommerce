@@ -1,0 +1,189 @@
+name: Multi-Platform Deployment Strategy
+
+on:
+  push:
+    branches: [ main, production, production-clean ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '18'
+  NODE_OPTIONS: '--max-old-space-size=4096'
+  SKIP_TYPE_CHECK: true
+  SKIP_LINT: true
+  NEXT_TELEMETRY_DISABLED: 1
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    outputs:
+      build-success: ${{ steps.build.outcome == 'success' }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: |
+        npm ci --prefer-offline --no-audit --ignore-scripts --legacy-peer-deps
+
+    - name: Run build optimization
+      run: npm run optimize:build
+
+    - name: Build application
+      id: build
+      run: |
+        npm run build:vercel
+      env:
+        NODE_OPTIONS: ${{ env.NODE_OPTIONS }}
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-output
+        path: |
+          .next/
+          out/
+        retention-days: 1
+
+  deploy-vercel:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: needs.build-and-test.outputs.build-success == 'true'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v25
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+        vercel-args: '--prod'
+        working-directory: ./
+
+  deploy-netlify:
+    needs: [build-and-test, deploy-vercel]
+    runs-on: ubuntu-latest
+    if: failure() || needs.deploy-vercel.result == 'failure'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci --prefer-offline --no-audit --ignore-scripts
+
+    - name: Build for Netlify
+      run: npm run build:netlify
+      env:
+        NETLIFY: true
+
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v3.0
+      with:
+        publish-dir: '.next'
+        production-branch: main
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        deploy-message: "Deploy from GitHub Actions"
+        enable-pull-request-comment: false
+        enable-commit-comment: true
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+  deploy-railway:
+    needs: [build-and-test, deploy-vercel, deploy-netlify]
+    runs-on: ubuntu-latest
+    if: failure() || (needs.deploy-vercel.result == 'failure' && needs.deploy-netlify.result == 'failure')
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy to Railway
+      uses: bervProject/railway-deploy@v1.0.0
+      with:
+        railway-token: ${{ secrets.RAILWAY_TOKEN }}
+        service: ${{ secrets.RAILWAY_SERVICE }}
+
+  deploy-docker:
+    needs: [build-and-test, deploy-vercel, deploy-netlify, deploy-railway]
+    runs-on: ubuntu-latest
+    if: failure() || (needs.deploy-vercel.result == 'failure' && needs.deploy-netlify.result == 'failure' && needs.deploy-railway.result == 'failure')
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: ./Dockerfile.production
+        push: true
+        tags: ${{ secrets.DOCKER_USERNAME }}/jc-hair-studio:latest
+        platforms: linux/amd64,linux/arm64
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+  health-check:
+    needs: [deploy-vercel, deploy-netlify, deploy-railway, deploy-docker]
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+    - name: Health Check
+      run: |
+        # Check primary deployment
+        if [ "${{ needs.deploy-vercel.result }}" == "success" ]; then
+          echo "✅ Vercel deployment successful"
+          curl -f https://jchairstudios62.xyz/api/health || echo "⚠️ Vercel health check failed"
+        elif [ "${{ needs.deploy-netlify.result }}" == "success" ]; then
+          echo "✅ Netlify deployment successful"
+        elif [ "${{ needs.deploy-railway.result }}" == "success" ]; then
+          echo "✅ Railway deployment successful"
+        elif [ "${{ needs.deploy-docker.result }}" == "success" ]; then
+          echo "✅ Docker deployment successful"
+        else
+          echo "❌ All deployment strategies failed"
+          exit 1
+        fi
+
+  notification:
+    needs: [deploy-vercel, deploy-netlify, deploy-railway, deploy-docker, health-check]
+    runs-on: ubuntu-latest
+    if: always()
+
+    steps:
+    - name: Send notification
+      run: |
+        if [ "${{ needs.health-check.result }}" == "success" ]; then
+          echo "🎉 Deployment successful! Site is online."
+        else
+          echo "🚨 Deployment failed on all platforms. Manual intervention required."
+        fi

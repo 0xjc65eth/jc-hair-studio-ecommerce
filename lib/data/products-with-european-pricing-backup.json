@@ -133,35 +133,6 @@
           "images": ["/images/products/botox/botox_2.png"]
         },
         {
-          "id": "inoar-ghair-alemanha-1l",
-          "name": "Inoar GHair Progressiva Alemã 1L",
-          "slug": "inoar-ghair-progressiva-alema-1l",
-          "brand": "Inoar",
-          "shortDesc": "Progressiva alemã com tecnologia avançada para alisamento perfeito",
-          "description": "Progressiva desenvolvida com tecnologia alemã que proporciona alisamento perfeito, brilho intenso e proteção térmica. Durabilidade de até 5 meses.",
-          "sku": "INO-GH-1L-001",
-          "category": "Progressivas e BTX",
-          "subcategory": "Progressivas",
-          "finalidade": "Alisamento com tecnologia alemã de última geração",
-          "volume": "1L",
-          "pricing": {
-            "basePrice": 180.00,
-            "ourPrice": 198.00,
-            "discountPrice": 158.40,
-            "savings": 39.60,
-            "margin": "10%",
-            "competitive": "Estimativa baseada em posicionamento premium alemão"
-          },
-          "tags": ["alemã", "tecnologia avançada", "longa duração", "premium"],
-          "rating": 4.9,
-          "reviewsCount": 234,
-          "inStock": true,
-          "stockQuantity": 18,
-          "weight": 1000,
-          "labels": ["PREMIUM", "ALEMÃ"],
-          "images": ["/images/products/progressivas_diversas/progressivas_diversas_1.JPG"]
-        },
-        {
           "id": "btx-professional-premium-01",
           "name": "BTX Professional Premium Reconstruction 01",
           "slug": "btx-professional-premium-01",
@@ -188,7 +159,7 @@
           "stockQuantity": 32,
           "weight": 500,
           "labels": ["PREMIUM", "SEM FORMOL"],
-          "images": ["/images/products/downloaded/IMG-8737.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8737.png"]
         },
         {
           "id": "progressiva-advanced-02",
@@ -217,7 +188,7 @@
           "stockQuantity": 18,
           "weight": 1000,
           "labels": ["AVANÇADO", "PROFISSIONAL"],
-          "images": ["/images/products/downloaded/IMG-8739.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8739.png"]
         },
         {
           "id": "btx-repair-intensive-03",
@@ -246,7 +217,7 @@
           "stockQuantity": 25,
           "weight": 300,
           "labels": ["REPARADOR", "INTENSIVO"],
-          "images": ["/images/products/downloaded/IMG-8740.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8740.png"]
         },
         {
           "id": "progressiva-keratin-04",
@@ -275,7 +246,7 @@
           "stockQuantity": 22,
           "weight": 800,
           "labels": ["QUERATINA", "SUAVIDADE"],
-          "images": ["/images/products/downloaded/IMG-8741.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8741.png"]
         },
         {
           "id": "btx-collagen-boost-05",
@@ -304,7 +275,7 @@
           "stockQuantity": 28,
           "weight": 400,
           "labels": ["COLÁGENO", "FIRMEZA"],
-          "images": ["/images/products/downloaded/IMG-8748.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8748.png"]
         },
         {
           "id": "progressiva-silk-protein-06",
@@ -333,7 +304,7 @@
           "stockQuantity": 19,
           "weight": 600,
           "labels": ["PROTEÍNA SEDA", "SEDOSIDADE"],
-          "images": ["/images/products/downloaded/IMG-8752.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8752.png"]
         },
         {
           "id": "btx-vitamin-complex-07",
@@ -362,7 +333,7 @@
           "stockQuantity": 31,
           "weight": 350,
           "labels": ["VITAMÍNICO", "REVITALIZANTE"],
-          "images": ["/images/products/downloaded/IMG-8753.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8753.png"]
         },
         {
           "id": "progressiva-nano-technology-08",
@@ -391,7 +362,7 @@
           "stockQuantity": 15,
           "weight": 750,
           "labels": ["NANOTECNOLOGIA", "SUPERIOR"],
-          "images": ["/images/products/downloaded/IMG-8757.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8757.png"]
         },
         {
           "id": "btx-argan-oil-09",
@@ -420,7 +391,7 @@
           "stockQuantity": 24,
           "weight": 450,
           "labels": ["ARGAN", "LUXO"],
-          "images": ["/images/products/downloaded/IMG-8758.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8758.png"]
         },
         {
           "id": "progressiva-diamond-shine-10",
@@ -449,7 +420,7 @@
           "stockQuantity": 12,
           "weight": 900,
           "labels": ["BRILHO DIAMANTE", "LUMINOSO"],
-          "images": ["/images/products/downloaded/IMG-8759.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8759.png"]
         },
         {
           "id": "advanced-progressive-system-11",
@@ -478,7 +449,7 @@
           "stockQuantity": 22,
           "weight": 500,
           "labels": ["PREMIUM"],
-          "images": ["/images/products/downloaded/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"]
+          "images": ["/images/products/produtos_diversos/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"]
         },
         {
           "id": "btx-ultra-reconstruction-12",
@@ -507,7 +478,7 @@
           "stockQuantity": 15,
           "weight": 1000,
           "labels": ["ULTRA"],
-          "images": ["/images/products/downloaded/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"]
+          "images": ["/images/products/produtos_diversos/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"]
         },
         {
           "id": "luxury-progressive-gold-13",
@@ -536,7 +507,7 @@
           "stockQuantity": 12,
           "weight": 500,
           "labels": ["LUXURY"],
-          "images": ["/images/products/downloaded/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png"]
+          "images": ["/images/products/produtos_diversos/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png"]
         },
         {
           "id": "professional-btx-therapy-14",
@@ -565,7 +536,7 @@
           "stockQuantity": 20,
           "weight": 1000,
           "labels": ["PROFESSIONAL"],
-          "images": ["/images/products/downloaded/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png"]
+          "images": ["/images/products/produtos_diversos/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png"]
         },
         {
           "id": "premium-btx-diamond-15",
@@ -594,7 +565,7 @@
           "stockQuantity": 10,
           "weight": 1000,
           "labels": ["DIAMOND"],
-          "images": ["/images/products/downloaded/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png"]
+          "images": ["/images/products/produtos_diversos/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png"]
         },
         {
           "id": "royal-progressive-platinum-16",
@@ -623,7 +594,7 @@
           "stockQuantity": 14,
           "weight": 500,
           "labels": ["ROYAL"],
-          "images": ["/images/products/downloaded/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"]
+          "images": ["/images/products/produtos_diversos/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"]
         }
       ]
     },
@@ -1652,7 +1623,7 @@
           "stockQuantity": 45,
           "weight": 80,
           "labels": ["PREMIUM", "PROFISSIONAL"],
-          "images": ["/images/products/downloaded/Design-sem-nome-png.png"]
+          "images": ["/images/products/produtos_diversos/Design-sem-nome-png.png"]
         },
         {
           "id": "professional-color-02",
@@ -1682,7 +1653,7 @@
           "stockQuantity": 42,
           "weight": 80,
           "labels": ["PREMIUM", "PROFISSIONAL"],
-          "images": ["/images/products/downloaded/Design-sem-nome-png-1.png"]
+          "images": ["/images/products/produtos_diversos/Design-sem-nome-png-1.png"]
         },
         {
           "id": "professional-color-03",
@@ -1712,7 +1683,7 @@
           "stockQuantity": 47,
           "weight": 80,
           "labels": ["PREMIUM", "PROFISSIONAL"],
-          "images": ["/images/products/downloaded/Design-sem-nome-png-2.png"]
+          "images": ["/images/products/produtos_diversos/Design-sem-nome-png-2.png"]
         },
         {
           "id": "professional-color-04",
@@ -1742,7 +1713,7 @@
           "stockQuantity": 39,
           "weight": 80,
           "labels": ["PREMIUM", "PROFISSIONAL"],
-          "images": ["/images/products/downloaded/Design-sem-nome-png-3.png"]
+          "images": ["/images/products/produtos_diversos/Design-sem-nome-png-3.png"]
         },
         {
           "id": "intensive-color-05",
@@ -1772,7 +1743,7 @@
           "stockQuantity": 52,
           "weight": 80,
           "labels": ["INTENSIVA", "VIBRANTE"],
-          "images": ["/images/products/downloaded/E50589-AE-AFCE-4-FD5-8-D43-C27-A34-DDEEE0.png"]
+          "images": ["/images/products/produtos_diversos/E50589-AE-AFCE-4-FD5-8-D43-C27-A34-DDEEE0.png"]
         },
         {
           "id": "salon-grade-color-06",
@@ -1802,7 +1773,7 @@
           "stockQuantity": 35,
           "weight": 80,
           "labels": ["SALÃO", "QUALIDADE"],
-          "images": ["/images/products/downloaded/E56-EA869-F48-B-4925-A000-3-D712-D35-B1-C2.png"]
+          "images": ["/images/products/produtos_diversos/E56-EA869-F48-B-4925-A000-3-D712-D35-B1-C2.png"]
         },
         {
           "id": "ultra-color-07",
@@ -1832,7 +1803,7 @@
           "stockQuantity": 41,
           "weight": 80,
           "labels": ["ULTRA", "AVANÇADO"],
-          "images": ["/images/products/downloaded/EE902623-2-BC1-445-D-9-D31-071404310-ADE.png"]
+          "images": ["/images/products/produtos_diversos/EE902623-2-BC1-445-D-9-D31-071404310-ADE.png"]
         },
         {
           "id": "master-color-08",
@@ -1862,7 +1833,7 @@
           "stockQuantity": 28,
           "weight": 80,
           "labels": ["MASTER", "PERFEIÇÃO"],
-          "images": ["/images/products/downloaded/IMG-8698.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8698.png"]
         },
         {
           "id": "elite-color-09",
@@ -1892,7 +1863,7 @@
           "stockQuantity": 33,
           "weight": 80,
           "labels": ["ELITE", "EXCEPCIONAL"],
-          "images": ["/images/products/downloaded/IMG-8711.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8711.png"]
         },
         {
           "id": "platinum-color-10",
@@ -1922,7 +1893,7 @@
           "stockQuantity": 25,
           "weight": 80,
           "labels": ["PLATINUM", "EXCELÊNCIA"],
-          "images": ["/images/products/downloaded/IMG-8712.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8712.png"]
         },
         {
           "id": "advanced-treatment-system-16",
@@ -1951,7 +1922,7 @@
           "stockQuantity": 22,
           "weight": 320,
           "labels": ["RECOVERY"],
-          "images": ["/images/products/downloaded/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"]
+          "images": ["/images/products/produtos_diversos/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"]
         },
         {
           "id": "intensive-repair-therapy-17",
@@ -1980,7 +1951,7 @@
           "stockQuantity": 18,
           "weight": 270,
           "labels": ["GOLD"],
-          "images": ["/images/products/downloaded/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png"]
+          "images": ["/images/products/produtos_diversos/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png"]
         },
         {
           "id": "professional-nutrition-complex-18",
@@ -2009,7 +1980,7 @@
           "stockQuantity": 25,
           "weight": 520,
           "labels": ["PLATINUM"],
-          "images": ["/images/products/downloaded/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png"]
+          "images": ["/images/products/produtos_diversos/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png"]
         },
         {
           "id": "ultra-hydration-therapy-19",
@@ -2038,7 +2009,7 @@
           "stockQuantity": 20,
           "weight": 320,
           "labels": ["DIAMOND"],
-          "images": ["/images/products/downloaded/Design-sem-nome-png-1.png"]
+          "images": ["/images/products/produtos_diversos/Design-sem-nome-png-1.png"]
         },
         {
           "id": "regenerative-treatment-premium-20",
@@ -2067,7 +2038,7 @@
           "stockQuantity": 15,
           "weight": 270,
           "labels": ["REGENERATIVE"],
-          "images": ["/images/products/downloaded/Design-sem-nome-png-2.png"]
+          "images": ["/images/products/produtos_diversos/Design-sem-nome-png-2.png"]
         }
       ]
     },
@@ -2182,12 +2153,12 @@
           "cor": "Amêndoa",
           "volume": "30ml",
           "pricing": {
-            "basePrice": 32.00,
-            "ourPrice": 35.20,
-            "discountPrice": 28.16,
-            "savings": 7.04,
-            "margin": "10%",
-            "competitive": "Baseado em bases premium do mercado europeu"
+            "basePrice": 1.00,
+            "ourPrice": 1.00,
+            "discountPrice": 1.00,
+            "savings": 0.00,
+            "margin": "0%",
+            "competitive": "PRODUTO TESTE - Valor mínimo para testar notificações"
           },
           "tags": ["mari maria", "base", "amêndoa", "profissional"],
           "rating": 4.7,
@@ -2197,6 +2168,36 @@
           "weight": 50,
           "labels": ["BESTSELLER"],
           "images": ["/images/products/mari-maria-bases/mari-maria-base-amndoa.png"]
+        },
+        {
+          "id": "teste-juliana",
+          "name": "Teste Juliana",
+          "slug": "teste-juliana",
+          "brand": "JC Hair Studio",
+          "shortDesc": "Produto de teste Juliana para validação do sistema",
+          "description": "Produto especial criado para teste do sistema de e-commerce. Perfeito para validar funcionalidades de compra, pagamento e notificações.",
+          "sku": "TJ-TEST-001",
+          "category": "Maquiagem Premium",
+          "subcategory": "Teste",
+          "finalidade": "Produto de teste para validação do sistema",
+          "cor": "Universal",
+          "volume": "1un",
+          "pricing": {
+            "basePrice": 1.00,
+            "ourPrice": 1.00,
+            "discountPrice": 1.00,
+            "savings": 0.00,
+            "margin": "0%",
+            "competitive": "PRODUTO TESTE - Valor especial para Juliana"
+          },
+          "tags": ["teste", "juliana", "validação", "sistema"],
+          "rating": 5.0,
+          "reviewsCount": 1,
+          "inStock": true,
+          "stockQuantity": 100,
+          "weight": 10,
+          "labels": ["TESTE", "ESPECIAL"],
+          "images": ["/images/products/placeholder-product.jpg"]
         },
         {
           "id": "mari-maria-base-baunilha",
@@ -3306,7 +3307,7 @@
           "stockQuantity": 45,
           "weight": 15,
           "labels": ["PREMIUM", "MATTE"],
-          "images": ["/images/products/downloaded/IMG-8713.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8713.png"]
         },
         {
           "id": "premium-foundation-02",
@@ -3336,7 +3337,7 @@
           "stockQuantity": 38,
           "weight": 50,
           "labels": ["FULL COVERAGE", "LONGA DURAÇÃO"],
-          "images": ["/images/products/downloaded/IMG-8716.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8716.png"]
         },
         {
           "id": "premium-concealer-03",
@@ -3366,7 +3367,7 @@
           "stockQuantity": 52,
           "weight": 25,
           "labels": ["HD", "COBERTURA PERFEITA"],
-          "images": ["/images/products/downloaded/IMG-8718.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8718.png"]
         },
         {
           "id": "premium-mascara-04",
@@ -3396,7 +3397,7 @@
           "stockQuantity": 41,
           "weight": 30,
           "labels": ["VOLUME EXTREMO", "SEM GRUMOS"],
-          "images": ["/images/products/downloaded/IMG-8720.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8720.png"]
         },
         {
           "id": "premium-eyeshadow-05",
@@ -3426,7 +3427,7 @@
           "stockQuantity": 28,
           "weight": 80,
           "labels": ["12 CORES", "ALTA PIGMENTAÇÃO"],
-          "images": ["/images/products/downloaded/IMG-8725.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8725.png"]
         },
         {
           "id": "premium-blush-06",
@@ -3456,7 +3457,7 @@
           "stockQuantity": 46,
           "weight": 35,
           "labels": ["NATURAL", "LUMINOSO"],
-          "images": ["/images/products/downloaded/IMG-8727.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8727.png"]
         },
         {
           "id": "premium-eyeliner-07",
@@ -3486,7 +3487,7 @@
           "stockQuantity": 55,
           "weight": 20,
           "labels": ["PRECISION", "TRAÇOS PERFEITOS"],
-          "images": ["/images/products/downloaded/IMG-8733.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8733.png"]
         },
         {
           "id": "premium-powder-08",
@@ -3516,7 +3517,65 @@
           "stockQuantity": 43,
           "weight": 40,
           "labels": ["TRANSLÚCIDO", "FIXAÇÃO"],
-          "images": ["/images/products/downloaded/IMG-8734.png"]
+          "images": ["/images/products/produtos_diversos/IMG-8734.png"]
+        },
+        {
+          "id": "juliana-teste",
+          "name": "juliana teste",
+          "slug": "juliana-teste",
+          "brand": "JC Hair Studio",
+          "shortDesc": "Produto de teste Juliana - valor promocional 1 euro",
+          "description": "Produto especial de teste com nome Juliana. Valor promocional de 1 euro para testes do sistema.",
+          "sku": "JC-JULIANA-TEST-001",
+          "category": "Maquiagem Premium",
+          "subcategory": "Teste",
+          "finalidade": "Produto de teste Juliana",
+          "volume": "1 unidade",
+          "pricing": {
+            "basePrice": 1.00,
+            "ourPrice": 1.00,
+            "discountPrice": 1.00,
+            "savings": 0.00,
+            "margin": "0%",
+            "competitive": "Valor de teste especial"
+          },
+          "tags": ["teste", "juliana", "promocional", "especial"],
+          "rating": 5.0,
+          "reviewsCount": 1,
+          "inStock": true,
+          "stockQuantity": 999,
+          "weight": 10,
+          "labels": ["TESTE", "PROMOCIONAL"],
+          "images": ["/placeholder-product.jpg"]
+        },
+        {
+          "id": "produto-teste-001",
+          "name": "🧪 Produto Teste - Email System",
+          "slug": "produto-teste-email-system",
+          "brand": "JC Hair Studio",
+          "shortDesc": "Produto específico para testar o sistema de emails de confirmação",
+          "description": "Produto específico para testar o sistema de emails de confirmação. Valor mínimo para facilitar testes de pagamento e notificações.",
+          "sku": "TEST-EMAIL-001",
+          "category": "Maquiagem Premium",
+          "subcategory": "Produtos de Teste",
+          "finalidade": "Testar sistema de emails",
+          "volume": "Digital",
+          "pricing": {
+            "basePrice": 1.00,
+            "ourPrice": 1.00,
+            "discountPrice": 1.00,
+            "savings": 0.00,
+            "margin": "0%",
+            "competitive": "Valor mínimo para testes"
+          },
+          "tags": ["teste", "email", "pagamento", "confirmacao"],
+          "rating": 5.0,
+          "reviewsCount": 1,
+          "inStock": true,
+          "stockQuantity": 999,
+          "weight": 0,
+          "labels": ["TESTE", "EMAIL"],
+          "images": ["/placeholder-product.jpg"]
         },
         {
           "id": "elite-coloracao-premium-11",
@@ -3545,7 +3604,7 @@
           "stockQuantity": 28,
           "weight": 80,
           "labels": ["ELITE"],
-          "images": ["/images/products/downloaded/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png"]
+          "images": ["/images/products/produtos_diversos/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png"]
         },
         {
           "id": "supreme-color-intensive-12",
@@ -3574,7 +3633,7 @@
           "stockQuantity": 32,
           "weight": 120,
           "labels": ["SUPREME"],
-          "images": ["/images/products/downloaded/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png"]
+          "images": ["/images/products/produtos_diversos/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png"]
         },
         {
           "id": "luxury-color-diamond-13",
@@ -3603,7 +3662,7 @@
           "stockQuantity": 18,
           "weight": 80,
           "labels": ["DIAMOND"],
-          "images": ["/images/products/downloaded/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png"]
+          "images": ["/images/products/produtos_diversos/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png"]
         },
         {
           "id": "professional-color-platinum-14",
@@ -3632,7 +3691,7 @@
           "stockQuantity": 25,
           "weight": 120,
           "labels": ["PLATINUM"],
-          "images": ["/images/products/downloaded/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png"]
+          "images": ["/images/products/produtos_diversos/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png"]
         },
         {
           "id": "royal-color-exclusive-15",
@@ -3661,7 +3720,7 @@
           "stockQuantity": 15,
           "weight": 80,
           "labels": ["ROYAL"],
-          "images": ["/images/products/downloaded/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png"]
+          "images": ["/images/products/produtos_diversos/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png"]
         }
       ]
     },
@@ -3728,7 +3787,7 @@
           "stockQuantity": 42,
           "weight": 300,
           "labels": ["HIDRATAÇÃO", "PREMIUM"],
-          "images": ["/images/products/downloaded/155-B6-F03-6326-45-F1-B128-C98-F218-F2-A23.png"]
+          "images": ["/images/products/produtos_diversos/155-B6-F03-6326-45-F1-B128-C98-F218-F2-A23.png"]
         },
         {
           "id": "nutricao-avancada-2",
@@ -3757,7 +3816,7 @@
           "stockQuantity": 38,
           "weight": 250,
           "labels": ["NUTRIÇÃO", "REPARAÇÃO"],
-          "images": ["/images/products/downloaded/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"]
+          "images": ["/images/products/produtos_diversos/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"]
         },
         {
           "id": "reconstrucao-total-3",
@@ -3786,7 +3845,7 @@
           "stockQuantity": 35,
           "weight": 200,
           "labels": ["RECONSTRUÇÃO", "PROTEICO"],
-          "images": ["/images/products/downloaded/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"]
+          "images": ["/images/products/produtos_diversos/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"]
         },
         {
           "id": "mascara-nutritiva-4",
@@ -3815,7 +3874,7 @@
           "stockQuantity": 44,
           "weight": 500,
           "labels": ["NATURAL", "BRILHO"],
-          "images": ["/images/products/downloaded/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png"]
+          "images": ["/images/products/produtos_diversos/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png"]
         },
         {
           "id": "ampola-fortalecimento-5",
@@ -3844,7 +3903,7 @@
           "stockQuantity": 28,
           "weight": 100,
           "labels": ["FORTALECIMENTO", "CONCENTRADO"],
-          "images": ["/images/products/downloaded/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png"]
+          "images": ["/images/products/produtos_diversos/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png"]
         },
         {
           "id": "serum-anti-frizz-6",
@@ -3873,7 +3932,7 @@
           "stockQuantity": 52,
           "weight": 100,
           "labels": ["ANTI-FRIZZ", "DEFINIÇÃO"],
-          "images": ["/images/products/downloaded/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png"]
+          "images": ["/images/products/produtos_diversos/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png"]
         },
         {
           "id": "oleo-capilar-7",
@@ -3902,7 +3961,7 @@
           "stockQuantity": 41,
           "weight": 60,
           "labels": ["VITAMÍNICO", "BRILHO"],
-          "images": ["/images/products/downloaded/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"]
+          "images": ["/images/products/produtos_diversos/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"]
         },
         {
           "id": "creme-leave-in-8",
@@ -3931,7 +3990,7 @@
           "stockQuantity": 59,
           "weight": 150,
           "labels": ["PROTEÇÃO", "LEAVE-IN"],
-          "images": ["/images/products/downloaded/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png"]
+          "images": ["/images/products/produtos_diversos/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png"]
         },
         {
           "id": "mascara-reparadora-9",
@@ -3960,7 +4019,7 @@
           "stockQuantity": 33,
           "weight": 400,
           "labels": ["PÓS-QUÍMICA", "REPARAÇÃO"],
-          "images": ["/images/products/downloaded/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png"]
+          "images": ["/images/products/produtos_diversos/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png"]
         },
         {
           "id": "tonico-crescimento-10",
@@ -3989,7 +4048,7 @@
           "stockQuantity": 27,
           "weight": 120,
           "labels": ["CRESCIMENTO", "ESTIMULANTE"],
-          "images": ["/images/products/downloaded/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png"]
+          "images": ["/images/products/produtos_diversos/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png"]
         },
         {
           "id": "spray-termoativo-11",
@@ -4018,7 +4077,7 @@
           "stockQuantity": 48,
           "weight": 200,
           "labels": ["PROTEÇÃO TÉRMICA", "MODELAGEM"],
-          "images": ["/images/products/downloaded/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png"]
+          "images": ["/images/products/produtos_diversos/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png"]
         },
         {
           "id": "condicionador-profundo-12",
@@ -4047,7 +4106,7 @@
           "stockQuantity": 56,
           "weight": 350,
           "labels": ["PROFUNDO", "RESTAURADOR"],
-          "images": ["/images/products/downloaded/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png"]
+          "images": ["/images/products/produtos_diversos/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png"]
         },
         {
           "id": "serum-antiqueda-13",
@@ -4076,7 +4135,7 @@
           "stockQuantity": 22,
           "weight": 50,
           "labels": ["ANTIQUEDA", "FORTALECEDOR"],
-          "images": ["/images/products/downloaded/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"]
+          "images": ["/images/products/produtos_diversos/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"]
         },
         {
           "id": "mascara-detox-14",
@@ -4105,7 +4164,7 @@
           "stockQuantity": 39,
           "weight": 250,
           "labels": ["DETOX", "PURIFICANTE"],
-          "images": ["/images/products/downloaded/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png"]
+          "images": ["/images/products/produtos_diversos/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png"]
         },
         {
           "id": "ampola-shock-15",
@@ -4134,7 +4193,7 @@
           "stockQuantity": 18,
           "weight": 80,
           "labels": ["SHOCK", "EMERGÊNCIA"],
-          "images": ["/images/products/downloaded/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png"]
+          "images": ["/images/products/produtos_diversos/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png"]
         }
       ]
     }

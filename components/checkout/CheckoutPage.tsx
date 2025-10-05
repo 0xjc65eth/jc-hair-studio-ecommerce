@@ -9,6 +9,9 @@ import { countries, getShippingCost } from '@/lib/config/shipping';
 
 // Componente de pagamento otimizado
 import { StripePayment } from './StripePayment';
+import { PromoCodeInput } from './PromoCodeInput';
+import { ShippingSelector } from './ShippingSelector';
+import type { ShippingRate } from '@/lib/shipping/shipping-apis';
 import {
   ArrowLeft,
   CreditCard,
@@ -65,9 +68,15 @@ export default function CheckoutPage() {
     clearCart
   } = useCart();
 
-  // Cart state tracking for checkout - prevent race condition with localStorage loading
+  /**
+   * WHY: Track client-side mount to prevent hydration mismatches
+   * HOW: useState defaults to false, set to true only on client mount
+   *
+   * IMPORTANT: No cartInitialized state needed! The CartProvider + useCartInitializer
+   * hook already handles localStorage hydration at the app root level. This component
+   * simply waits for client mount, then reads directly from the Zustand store.
+   */
   const [mounted, setMounted] = useState(false);
-  const [cartInitialized, setCartInitialized] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
   const [showUrgency, setShowUrgency] = useState(true);
   const [timeLeft, setTimeLeft] = useState(15 * 60); // 15 minutes countdown
@@ -75,6 +84,14 @@ export default function CheckoutPage() {
   const [orderComplete, setOrderComplete] = useState(false);
   const [paymentIntentId, setPaymentIntentId] = useState<string>('');
   const [paymentMethod] = useState<'stripe'>('stripe');
+
+  // Promo code state
+  const [promoDiscount, setPromoDiscount] = useState(0);
+  const [promoFreeShipping, setPromoFreeShipping] = useState(false);
+  const [promoCodeId, setPromoCodeId] = useState<string>('');
+
+  // Selected shipping method state
+  const [selectedShipping, setSelectedShipping] = useState<ShippingRate | null>(null);
 
   // Client technical information for fraud prevention and order tracking
   const [clientInfo, setClientInfo] = useState({
@@ -165,13 +182,22 @@ export default function CheckoutPage() {
   };
 
   /**
-   * Cart initialization effect - DEFINITIVE SOLUTION for race condition
-   * Also captures client technical information for security and tracking
+   * WHY: Initialize component on client mount and capture security data
+   * HOW: Set mounted flag and fetch client IP for fraud prevention
+   *
+   * IMPORTANT: No cart initialization logic needed here! The CartProvider at the app
+   * root level already handles localStorage hydration before this component renders.
+   * We only need to capture client info for security purposes.
    */
   useEffect(() => {
+    // WHY: Mark component as mounted to prevent SSR hydration issues
+    // HOW: Set flag that allows component to render client-specific content
     setMounted(true);
 
-    // Capture client information for security and order tracking
+    /**
+     * WHY: Capture client technical information for fraud prevention and order tracking
+     * HOW: Fetch IP address and browser info, store in state for later use in payment API
+     */
     const captureClientInfo = async () => {
       try {
         // Get user agent from browser
@@ -212,78 +238,28 @@ export default function CheckoutPage() {
       }
     };
 
-    // Force immediate check of localStorage on mount
-    const checkCartImmediately = () => {
-      if (typeof window !== 'undefined') {
-        const savedCart = localStorage.getItem('jc-cart-storage-manual');
-        console.log('🔍 IMMEDIATE CHECKOUT CHECK:', {
-          savedCart: savedCart ? JSON.parse(savedCart).length : 0,
-          currentItems: items.length
-        });
-
-        // If we have saved data, give it more time to load
-        if (savedCart && JSON.parse(savedCart).length > 0) {
-          console.log('📦 FOUND SAVED CART - Waiting for store update...');
-          // Give more time for complex cart data
-          setTimeout(() => setCartInitialized(true), 300);
-        } else {
-          console.log('📭 NO SAVED CART - Initialize immediately');
-          // No saved data, safe to initialize immediately
-          setCartInitialized(true);
-        }
-      } else {
-        // Server-side, initialize after hydration
-        setTimeout(() => setCartInitialized(true), 500);
-      }
-    };
-
-    // Execute both initialization tasks
+    // Execute client info capture
     captureClientInfo();
-    checkCartImmediately();
   }, []);
 
-  // Additional effect - if items appear, cart is definitely ready
-  useEffect(() => {
-    if (mounted && items.length > 0) {
-      console.log('✅ ITEMS DETECTED - Cart definitely initialized');
-      setCartInitialized(true);
-    }
-  }, [mounted, items]);
-
-  // Failsafe - ensure we don't get stuck in loading forever
-  useEffect(() => {
-    const failsafeTimer = setTimeout(() => {
-      console.log('⏰ FAILSAFE TIMEOUT - Force initializing cart');
-      setCartInitialized(true);
-    }, 2000); // 2 second failsafe
-
-    return () => clearTimeout(failsafeTimer);
-  }, []);
-
-  // Don't render until mounted to avoid hydration issues
+  /**
+   * WHY: Prevent server-side rendering issues
+   * HOW: Return null until client-side JavaScript loads and cart is hydrated
+   *
+   * IMPORTANT: By the time mounted=true, the CartProvider has already hydrated
+   * the Zustand store from localStorage. No additional delays needed!
+   */
   if (!mounted) return null;
 
-  // Show loading while cart is initializing - prevent race condition
-  if (!cartInitialized) {
-    return (
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container-custom text-center">
-          <div className="max-w-md mx-auto">
-            <div className="w-8 h-8 border-2 border-amber-600 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
-            <h1 className="text-2xl font-playfair font-light mb-4 text-gray-900">
-              Carregando Carrinho...
-            </h1>
-            <p className="text-gray-600">
-              Verificando seus produtos...
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Only redirect if cart is empty AND we know it's been properly initialized
-  if (isEmpty && cartInitialized) {
+  /**
+   * WHY: Show empty cart warning when no items exist
+   * HOW: Check isEmpty flag from Zustand store (already hydrated by CartProvider)
+   *
+   * IMPORTANT: No initialization check needed! By the time this component mounts,
+   * the CartProvider has already loaded cart data from localStorage into Zustand.
+   * The isEmpty flag accurately reflects the cart state without any race conditions.
+   */
+  if (isEmpty) {
     return (
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="container-custom text-center">
@@ -309,8 +285,11 @@ export default function CheckoutPage() {
 
   const taxAmount = getTaxAmount();
   const total = getTotal();
-  const shippingCost = getShippingCost(customerInfo.country);
-  const finalTotal = total + shippingCost;
+
+  // Use selected shipping rate or fallback to static cost
+  const shippingCost = selectedShipping ? selectedShipping.price : (promoFreeShipping ? 0 : getShippingCost(customerInfo.country));
+  const subtotalWithDiscount = Math.max(0, total - promoDiscount);
+  const finalTotal = subtotalWithDiscount + shippingCost;
 
   const handleCustomerInfoChange = (field: string, value: string) => {
     if (field.startsWith('address.')) {
@@ -328,6 +307,19 @@ export default function CheckoutPage() {
         [field]: value
       }));
     }
+  };
+
+  // Promo code handlers
+  const handlePromoApplied = (discount: number, freeShipping: boolean, codeId: string) => {
+    setPromoDiscount(discount);
+    setPromoFreeShipping(freeShipping);
+    setPromoCodeId(codeId);
+  };
+
+  const handlePromoRemoved = () => {
+    setPromoDiscount(0);
+    setPromoFreeShipping(false);
+    setPromoCodeId('');
   };
 
   /**
@@ -492,6 +484,23 @@ export default function CheckoutPage() {
             taxAmount: taxAmount,
             shippingCost: shippingCost,
             finalTotal: finalTotal
+          },
+
+          // Shipping method details
+          shippingMethod: selectedShipping ? {
+            carrier: selectedShipping.carrier,
+            service: selectedShipping.service,
+            price: selectedShipping.price,
+            estimatedDays: selectedShipping.estimatedDays,
+            tracking: selectedShipping.tracking,
+            insurance: selectedShipping.insurance
+          } : {
+            carrier: 'Standard',
+            service: customerInfo.deliveryMethod,
+            price: shippingCost,
+            estimatedDays: '3-5',
+            tracking: false,
+            insurance: false
           },
 
           // Technical information for fraud prevention and tracking
@@ -906,25 +915,28 @@ export default function CheckoutPage() {
                         required
                       />
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Método de Entrega *
-                      </label>
-                      <select
-                        value={customerInfo.deliveryMethod}
-                        onChange={(e) => handleCustomerInfoChange('deliveryMethod', e.target.value)}
-                        className="input-luxury w-full"
-                        required
-                      >
-                        <option value="standard">Entrega Standard (3-5 dias úteis)</option>
-                        <option value="express">Entrega Express (1-2 dias úteis)</option>
-                        <option value="priority">Entrega Prioritária (24h)</option>
-                        <option value="pickup">Recolha na Loja</option>
-                      </select>
-                    </div>
                   </div>
 
                 </div>
+
+                {/* Shipping Selector - Dynamic Rates */}
+                <ShippingSelector
+                  destination={{
+                    country: customerInfo.country,
+                    postalCode: customerInfo.address.zipCode,
+                    city: customerInfo.address.city,
+                    address: `${customerInfo.address.street}, ${customerInfo.address.number}`,
+                    name: customerInfo.name,
+                  }}
+                  cartTotal={total}
+                  onShippingSelect={(rate) => {
+                    setSelectedShipping(rate);
+                    if (rate) {
+                      handleCustomerInfoChange('deliveryMethod', `${rate.carrier} - ${rate.service}`);
+                    }
+                  }}
+                  selectedShipping={selectedShipping}
+                />
 
                 {/* Payment Section - Same Page */}
                 <div className="bg-white border-2 border-green-200 rounded-lg p-6 relative overflow-hidden">
@@ -971,6 +983,7 @@ export default function CheckoutPage() {
                           quantity: item.quantity,
                           price: item.variant?.price || item.product.price,
                         }))}
+                        promoCodeId={promoCodeId}
                         onSuccess={handlePaymentSuccess}
                         onError={handlePaymentError}
                       />
@@ -991,6 +1004,7 @@ export default function CheckoutPage() {
                           quantity: 1,
                           price: finalTotal,
                         }]}
+                        promoCodeId={promoCodeId}
                         onSuccess={() => {}}
                         onError={() => {}}
                       />
@@ -1051,11 +1065,32 @@ export default function CheckoutPage() {
                     ))}
                   </div>
 
+                  {/* Promo Code Input */}
+                  <div className="border-t border-gray-200 pt-4">
+                    <PromoCodeInput
+                      cartTotal={total}
+                      cartItems={items.map(item => ({
+                        productId: item.product._id,
+                        category: item.product.category,
+                        quantity: item.quantity,
+                        price: item.variant?.price || item.product.price
+                      }))}
+                      onPromoApplied={handlePromoApplied}
+                      onPromoRemoved={handlePromoRemoved}
+                    />
+                  </div>
+
                   <div className="border-t border-gray-200 pt-4 space-y-2">
                     <div className="flex justify-between text-sm">
                       <span>Subtotal:</span>
                       <span>€{subtotal.toFixed(2)}</span>
                     </div>
+                    {promoDiscount > 0 && (
+                      <div className="flex justify-between text-sm text-green-600">
+                        <span>Desconto Promocional:</span>
+                        <span>-€{promoDiscount.toFixed(2)}</span>
+                      </div>
+                    )}
                     <div className="flex justify-between text-sm">
                       <span>IVA (23%):</span>
                       <span>€{taxAmount.toFixed(2)}</span>
@@ -1067,6 +1102,9 @@ export default function CheckoutPage() {
                       </span>
                       <span className={shippingCost === 0 ? 'text-green-600' : ''}>
                         {shippingCost === 0 ? 'Grátis' : `€${shippingCost.toFixed(2)}`}
+                        {promoFreeShipping && baseShippingCost > 0 && (
+                          <span className="ml-1 text-xs">(Promo aplicado)</span>
+                        )}
                       </span>
                     </div>
                     <div className="bg-gradient-to-r from-green-50 to-green-100 -mx-4 px-4 py-3 rounded-lg">

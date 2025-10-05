@@ -1,0 +1,210 @@
+[
+  {
+    "event": "order_cancelled",
+    "orderId": "TEST-1759166393686",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166633262_ujptm63mv",
+    "timestamp": "2025-09-29T17:23:53.263Z"
+  },
+  {
+    "event": "order_delivered",
+    "orderId": "TEST-1759166393686",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166578218_ivbve1f40",
+    "timestamp": "2025-09-29T17:22:58.218Z"
+  },
+  {
+    "event": "order_shipped",
+    "orderId": "TEST-1759166393686",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166528529_zipxrfj7m",
+    "timestamp": "2025-09-29T17:22:08.530Z"
+  },
+  {
+    "event": "order_processing",
+    "orderId": "TEST-1759166393686",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166493759_icb3bn7wd",
+    "timestamp": "2025-09-29T17:21:33.759Z"
+  },
+  {
+    "event": "payment_confirmed",
+    "orderId": "TEST-1759166393686",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166446595_c5u3dxnyg",
+    "timestamp": "2025-09-29T17:20:46.595Z"
+  },
+  {
+    "event": "order_confirmed",
+    "orderId": "TEST-1759166393686",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166417460_vvjpq7mpu",
+    "timestamp": "2025-09-29T17:20:17.460Z"
+  },
+  {
+    "event": "order_confirmed",
+    "orderId": "TEST-1759166392961",
+    "customerEmail": "teste@exemplo.com",
+    "clientEmail": "teste@exemplo.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Teste Cliente",
+      "total": 125.99,
+      "itemCount": 2
+    },
+    "id": "LOG_1759166393621_vkko6ym4z",
+    "timestamp": "2025-09-29T17:19:53.621Z"
+  },
+  {
+    "event": "order_cancelled",
+    "orderId": "TEST-1759166213791",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166226960_ltuirglcr",
+    "timestamp": "2025-09-29T17:17:06.960Z"
+  },
+  {
+    "event": "order_delivered",
+    "orderId": "TEST-1759166213791",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166224758_yubj1aaq5",
+    "timestamp": "2025-09-29T17:17:04.758Z"
+  },
+  {
+    "event": "order_shipped",
+    "orderId": "TEST-1759166213791",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166222573_83evy9lca",
+    "timestamp": "2025-09-29T17:17:02.573Z"
+  },
+  {
+    "event": "order_processing",
+    "orderId": "TEST-1759166213791",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166220443_0gjq8gv77",
+    "timestamp": "2025-09-29T17:17:00.443Z"
+  },
+  {
+    "event": "payment_confirmed",
+    "orderId": "TEST-1759166213791",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166218246_u7j7b4aiz",
+    "timestamp": "2025-09-29T17:16:58.246Z"
+  },
+  {
+    "event": "order_confirmed",
+    "orderId": "TEST-1759166213791",
+    "customerEmail": "customer@example.com",
+    "clientEmail": "customer@example.com",
+    "companyEmail": "juliocesarurss62@gmail.com",
+    "clientSent": true,
+    "companySent": true,
+    "emailData": {
+      "customerName": "Maria Silva",
+      "total": 149.99,
+      "itemCount": 3
+    },
+    "id": "LOG_1759166216115_xhf3k9bsd",
+    "timestamp": "2025-09-29T17:16:56.115Z"
+  }
+]

@@ -465,15 +465,18 @@ export default function RevolutionaryHeader({ className = '' }: HeaderProps) {
               {/* Revolutionary Cart */}
               <button
                 onClick={toggleCart}
+                data-testid="cart-button"
+                aria-label="Carrinho de compras"
                 className={`p-4 rounded-xl transition-all duration-300 hover:scale-110 relative group ${
                   isScrolled
                     ? 'text-white hover:bg-emerald-700/50 hover:text-yellow-300'
                     : 'text-emerald-700 hover:bg-emerald-50 hover:text-emerald-600'
                 }`}
+                style={{ position: 'relative', zIndex: 60 }}
               >
-                <ShoppingBag className="w-6 h-6" />
+                <ShoppingBag className="w-7 h-7 group-hover:scale-110 transition-transform" />
                 {itemsCount > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-gradient-to-br from-yellow-400 to-yellow-500 text-emerald-900 text-xs font-black rounded-full h-7 w-7 flex items-center justify-center shadow-2xl group-hover:scale-125 transition-transform border-3 border-white">
+                  <span className="cart-counter" data-testid="cart-counter">
                     {itemsCount}
                   </span>
                 )}
@@ -493,13 +496,16 @@ export default function RevolutionaryHeader({ className = '' }: HeaderProps) {
 
               <button
                 onClick={toggleCart}
-                className={`p-3 rounded-xl transition-colors relative ${
+                data-testid="mobile-cart-button"
+                aria-label="Carrinho"
+                className={`p-3 rounded-xl transition-colors relative group ${
                   isScrolled ? 'text-white' : 'text-emerald-700'
                 }`}
+                style={{ position: 'relative', zIndex: 60 }}
               >
-                <ShoppingBag className="w-6 h-6" />
+                <ShoppingBag className="w-6 h-6 group-hover:scale-110 transition-transform" />
                 {itemsCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-yellow-400 text-emerald-900 text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center">
+                  <span className="cart-counter" data-testid="mobile-cart-counter">
                     {itemsCount}
                   </span>
                 )}

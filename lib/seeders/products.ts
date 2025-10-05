@@ -13,14 +13,14 @@ export const treatmentProducts = [
     subcategory: 'progressiva',
     description: 'Tratamento alisante com cana-de-açúcar Cysteine, cacau e D-panthenol. Sem formol, parabenos e ingredientes animais. Durabilidade de 3+ meses. Ideal para todos os tipos de cabelo, proporcionando alisamento máximo com hidratação profunda.',
     price: {
-      retail: 268.52,
-      professional: 222.27,
-      promotional: 199.99,
+      retail: 241.67,
+      professional: 200.04,
+      promotional: 179.99,
       currency: 'BRL'
     },
     sizes: [
-      { size: '1000ml', price: 268.52, stock: 15, barcode: '7898963522341' },
-      { size: '500ml', price: 149.90, stock: 25, barcode: '7898963522358' }
+      { size: '1000ml', price: 241.67, stock: 15, barcode: '7898963522341' },
+      { size: '500ml', price: 134.91, stock: 25, barcode: '7898963522358' }
     ],
     images: [
       { 
@@ -54,13 +54,13 @@ export const treatmentProducts = [
     subcategory: 'progressiva',
     description: 'Fórmula alemã com queratina e óleo de cacau, 0,2% formol. Kit completo com 3 produtos para ação instantânea. Permite lavagem no mesmo dia da aplicação, ideal para cabelos rebeldes.',
     price: {
-      retail: 415.87,
-      professional: 350.00,
-      promotional: 299.99,
+      retail: 374.28,
+      professional: 315.00,
+      promotional: 269.99,
       currency: 'BRL'
     },
     sizes: [
-      { size: 'Kit 3x1000ml', price: 415.87, stock: 10, barcode: '7908124000134' }
+      { size: 'Kit 3x1000ml', price: 374.28, stock: 10, barcode: '7908124000134' }
     ],
     images: [
       { 
@@ -94,13 +94,13 @@ export const treatmentProducts = [
     subcategory: 'progressiva',
     description: 'Primeiro shampoo alisante do mundo com blend de 5 ácidos. Livre de formol, alisa em uma única lavagem com durabilidade de até 3 meses. Inovação brasileira revolucionária.',
     price: {
-      retail: 545.90,
-      professional: 474.90,
-      promotional: 449.90,
+      retail: 491.31,
+      professional: 427.41,
+      promotional: 404.91,
       currency: 'BRL'
     },
     sizes: [
-      { size: '980ml', price: 474.90, stock: 8, barcode: '7898959463214' }
+      { size: '980ml', price: 427.41, stock: 8, barcode: '7898959463214' }
     ],
     images: [
       { 
@@ -134,14 +134,14 @@ export const treatmentProducts = [
     subcategory: 'botox',
     description: '100% livre de formol, com óleo de argan, coco e manteiga de karité. Redução de 90% do volume, alinhamento capilar e hidratação profunda. Durabilidade de 20-50 dias.',
     price: {
-      retail: 127.99,
-      professional: 95.00,
-      promotional: 89.90,
+      retail: 115.19,
+      professional: 85.50,
+      promotional: 80.91,
       currency: 'BRL'
     },
     sizes: [
-      { size: '1kg', price: 127.99, stock: 20, barcode: '7908030408458' },
-      { size: '250g', price: 38.90, stock: 30, barcode: '7908030408465' }
+      { size: '1kg', price: 115.19, stock: 20, barcode: '7908030408458' },
+      { size: '250g', price: 35.01, stock: 30, barcode: '7908030408465' }
     ],
     images: [
       { 
@@ -179,13 +179,13 @@ export const makeupProducts = [
     subcategory: 'base',
     description: 'Base líquida com efeito radiante natural, cobertura média e hidratação sem oleosidade. Desenvolvida especialmente para a pele brasileira.',
     price: {
-      retail: 69.90,
-      professional: 55.00,
-      promotional: 37.70,
+      retail: 62.91,
+      professional: 49.50,
+      promotional: 33.93,
       currency: 'BRL'
     },
     sizes: [
-      { size: '30ml', price: 37.70, stock: 25, barcode: '7908229401324' }
+      { size: '30ml', price: 33.93, stock: 25, barcode: '7908229401324' }
     ],
     images: [
       { 
@@ -220,13 +220,13 @@ export const makeupProducts = [
     subcategory: 'base',
     description: 'Base fluída com tons adaptados para pele brasileira, textura leve e cobertura natural. Longa duração e conforto durante todo o dia.',
     price: {
-      retail: 25.90,
-      professional: 20.00,
-      promotional: 22.90,
+      retail: 23.31,
+      professional: 18.00,
+      promotional: 20.61,
       currency: 'BRL'
     },
     sizes: [
-      { size: '30ml', price: 25.90, stock: 30, barcode: '7899562506234' }
+      { size: '30ml', price: 23.31, stock: 30, barcode: '7899562506234' }
     ],
     images: [
       { 
@@ -263,13 +263,13 @@ export const toolProducts = [
     subcategory: 'secador',
     description: 'Secador profissional com tecnologia íons negativos, tourmaline e cerâmica. Motor AC de longa durabilidade, cabo 3m e tampa removível.',
     price: {
-      retail: 639.00,
-      professional: 520.00,
-      promotional: 440.01,
+      retail: 575.10,
+      professional: 468.00,
+      promotional: 396.01,
       currency: 'BRL'
     },
     sizes: [
-      { size: 'Único', price: 440.01, stock: 12, barcode: '7898483610234' }
+      { size: 'Único', price: 396.01, stock: 12, barcode: '7898483610234' }
     ],
     images: [
       { 
@@ -303,13 +303,13 @@ export const toolProducts = [
     subcategory: 'chapinha',
     description: 'Prancha profissional com placas de titânio 32mm, temperatura até 230°C, display LED digital e cabo giratório.',
     price: {
-      retail: 768.00,
-      professional: 650.00,
-      promotional: 512.00,
+      retail: 691.20,
+      professional: 585.00,
+      promotional: 460.80,
       currency: 'BRL'
     },
     sizes: [
-      { size: 'Único', price: 512.00, stock: 8, barcode: '3030050139914' }
+      { size: 'Único', price: 460.80, stock: 8, barcode: '3030050139914' }
     ],
     images: [
       { 
@@ -346,14 +346,14 @@ export const careProducts = [
     subcategory: 'shampoo',
     description: 'Shampoo reparador com Gold Quinoa e proteínas. Repara e reestrutura a fibra capilar, proporcionando 77% mais reparação e 7x mais brilho.',
     price: {
-      retail: 236.90,
-      professional: 190.00,
-      promotional: 180.90,
+      retail: 213.21,
+      professional: 171.00,
+      promotional: 162.81,
       currency: 'BRL'
     },
     sizes: [
-      { size: '500ml', price: 180.90, stock: 20, barcode: '3474636975853' },
-      { size: '250ml', price: 105.90, stock: 30, barcode: '3474636975846' }
+      { size: '500ml', price: 162.81, stock: 20, barcode: '3474636975853' },
+      { size: '250ml', price: 95.31, stock: 30, barcode: '3474636975846' }
     ],
     images: [
       { 

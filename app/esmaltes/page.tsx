@@ -5,32 +5,11 @@ import { Button } from '../../components/ui/Button';
 import ProductCard from '../../components/products/ProductCard';
 import { useCart } from '../../lib/stores/cartStore';
 import { ShoppingBag, Search, Filter, Heart, Eye, Shuffle, Grid, List, Sparkles, Palette } from 'lucide-react';
-import { allEsmaltesData } from '../../lib/data/esmaltesProducts';
+// Esmaltes removidos - página vazia conforme solicitado
+const allProducts = [];
 
-// Converter esmaltes IMPALA oficiais para formato compatível
-const esmaltesFormatados = allEsmaltesData.map(esmalte => ({
-  id: esmalte.id,
-  nome: esmalte.nome,
-  marca: esmalte.marca,
-  categoria: 'Esmaltes',
-  cor: esmalte.cores?.[0]?.nome || 'Variado',
-  tom: esmalte.cores?.[0]?.codigo || '',
-  descricao: esmalte.descricao,
-  imagem: esmalte.imagens[0],
-  pricing: esmalte.pricing,
-  rating: 4.5 + (Math.random() * 0.4),
-  reviewsCount: 30 + Math.floor(Math.random() * 40),
-  inStock: true,
-  tags: esmalte.tags,
-  badge: esmalte.badge
-}));
-
-const allProducts = [...esmaltesFormatados];
-
-// Filtros específicos para esmaltes
-const marcasEsmaltes = [
-  { value: 'IMPALA', label: 'IMPALA', count: allProducts.length }
-];
+// Filtros específicos para esmaltes - removidos
+const marcasEsmaltes = [];
 
 const categoriasEsmaltes = [
   { value: 'cremoso', label: 'Cremoso' },

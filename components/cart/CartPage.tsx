@@ -29,51 +29,26 @@ export default function CartPage() {
     getTotal 
   } = useCart();
 
+  // WHY: Track client-side mount to prevent hydration mismatches
+  // HOW: useState defaults to false, set to true only on client mount
   const [mounted, setMounted] = useState(false);
-  const [cartInitialized, setCartInitialized] = useState(false);
   const [couponCode, setCouponCode] = useState('');
 
-  // Cart initialization effect - wait for localStorage to load before checking if empty
+  /**
+   * WHY: Prevent hydration mismatches between server and client rendering
+   * HOW: Set mounted flag on first client render, then rely on Zustand store directly
+   *
+   * IMPORTANT: No timeouts needed! The CartProvider + useCartInitializer hook
+   * already handles localStorage hydration at the app root level. This component
+   * simply waits for client mount, then reads directly from the Zustand store.
+   */
   useEffect(() => {
     setMounted(true);
-
-    // Allow time for cart to initialize from localStorage
-    const initTimer = setTimeout(() => {
-      setCartInitialized(true);
-    }, 100); // Small delay to ensure localStorage has been read
-
-    return () => clearTimeout(initTimer);
   }, []);
 
-  // Additional effect to handle cart state changes and ensure proper initialization
-  useEffect(() => {
-    if (mounted && items.length > 0) {
-      // If we have items, cart is definitely initialized
-      setCartInitialized(true);
-    }
-  }, [mounted, items]);
-
-  // Don't render until mounted to avoid hydration issues
+  // WHY: Prevent server-side rendering issues
+  // HOW: Return null until client-side JavaScript loads
   if (!mounted) return null;
-
-  // Show loading while cart is initializing - prevent race condition
-  if (!cartInitialized) {
-    return (
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="container-custom text-center">
-          <div className="max-w-md mx-auto">
-            <div className="w-8 h-8 border-2 border-amber-600 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
-            <h1 className="text-2xl font-playfair font-light mb-4 text-gray-900">
-              Carregando Carrinho...
-            </h1>
-            <p className="text-gray-600">
-              Verificando seus produtos...
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   const taxAmount = getTaxAmount();
   const total = getTotal();
@@ -82,8 +57,15 @@ export default function CartPage() {
   const shippingCost = freeShipping ? 0 : 5.99;
   const finalTotal = total + shippingCost;
 
-  // Only show empty cart message if cart is empty AND we know it's been properly initialized
-  if (isEmpty && cartInitialized) {
+  /**
+   * WHY: Show empty cart UI when no items exist
+   * HOW: Check isEmpty flag from Zustand store (already hydrated by CartProvider)
+   *
+   * IMPORTANT: No initialization check needed! By the time this component mounts,
+   * the CartProvider has already loaded cart data from localStorage into Zustand.
+   * The isEmpty flag accurately reflects the cart state.
+   */
+  if (isEmpty) {
     return (
       <div className="min-h-screen bg-gray-50 py-16">
         <div className="container-custom text-center">

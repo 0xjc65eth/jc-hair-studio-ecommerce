@@ -1,0 +1,44 @@
+name: Deploy Product Feed to GitHub Pages
+
+on:
+  push:
+    branches: [production-clean]
+    paths:
+      - 'public/product-feed.xml'
+      - 'lib/data/products-with-european-pricing.json'
+      - '.github/workflows/deploy-feed.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate Feed
+        run: node scripts/generate-product-feed.mjs
+
+      - name: Prepare deployment
+        run: |
+          mkdir -p deploy
+          cp public/product-feed.xml deploy/feed.xml
+          echo '<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="refresh" content="0; url=feed.xml"><title>JC Hair Studio Feed</title></head><body><a href="feed.xml">Product Feed</a></body></html>' > deploy/index.html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
+          publish_branch: gh-pages
+          keep_files: false
+          commit_message: 'chore: update product feed [skip ci]'

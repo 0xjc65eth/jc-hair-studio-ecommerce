@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { CreditCard, Plus, Edit2, Trash2, ArrowLeft, Shield, Calendar } from 'lucide-react';

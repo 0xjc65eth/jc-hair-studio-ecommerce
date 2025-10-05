@@ -47,8 +47,8 @@ async function getProducts(category = 'progressivas-alisamentos'): Promise<Produ
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000);
     
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/products?category=${category}`, {
-      cache: 'no-store',
+    const response = await fetch(`/api/products?category=${category}`, {
+      next: { revalidate: 3600 },
       signal: controller.signal,
       headers: {
         'Content-Type': 'application/json'

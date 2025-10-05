@@ -74,11 +74,6 @@ export default function BrazilianHeader({ className = '' }: BrazilianHeaderProps
           featured: true
         },
         {
-          name: 'Tintas Profissionais',
-          href: '/cosmeticos',
-          description: 'Wella, Koleston, Cor&Ton'
-        },
-        {
           name: 'BTX & Tratamentos',
           href: '/categoria/tratamentos-capilares',
           description: 'Botox capilar e reconstrução'

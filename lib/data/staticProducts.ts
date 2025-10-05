@@ -1637,4 +1637,5 @@ export const getAllStaticProducts = (): StaticProduct[] => {
   return allStaticProducts;
 };
 
+export const staticProducts = allStaticProducts;
 export { type StaticProduct };

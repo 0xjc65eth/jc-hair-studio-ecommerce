@@ -14,12 +14,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_1.JPG'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 189.90,
-      ourPrice: 284.85,
-      discountPrice: 259.90,
-      savings: 24.95,
-      margin: '37%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 47.00,
+      ourPrice: 47.00,
+      discountPrice: 42.30,
+      savings: 4.70,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu (£39.99)'
     }
   },
   {
@@ -30,12 +30,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_2.JPG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 199.90,
-      savings: 24.95,
-      margin: '33.4%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 47.00,
+      ourPrice: 47.00,
+      discountPrice: 42.30,
+      savings: 4.70,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu (£39.99)'
     }
   },
   {
@@ -46,12 +46,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_3.JPG'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 169.90,
-      ourPrice: 254.85,
-      discountPrice: 229.90,
-      savings: 24.95,
-      margin: '35.3%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 50.00,
+      ourPrice: 50.00,
+      discountPrice: 45.00,
+      savings: 5.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -62,12 +62,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_4.JPG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 249.90,
-      ourPrice: 374.85,
-      discountPrice: 339.90,
-      savings: 34.95,
-      margin: '36.1%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 47.00,
+      ourPrice: 47.00,
+      discountPrice: 42.30,
+      savings: 4.70,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -78,12 +78,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_5.JPG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 129.90,
-      ourPrice: 194.85,
-      discountPrice: 174.90,
-      savings: 19.95,
-      margin: '34.6%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 80.00,
+      ourPrice: 80.00,
+      discountPrice: 72.00,
+      savings: 8.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -94,12 +94,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_6.JPG'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 139.90,
-      ourPrice: 209.85,
-      discountPrice: 189.90,
-      savings: 19.95,
-      margin: '35.8%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 85.00,
+      ourPrice: 85.00,
+      discountPrice: 76.50,
+      savings: 8.50,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -110,12 +110,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_7.PNG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 159.90,
-      ourPrice: 239.85,
-      discountPrice: 219.90,
-      savings: 19.95,
-      margin: '37.5%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 95.00,
+      ourPrice: 95.00,
+      discountPrice: 85.50,
+      savings: 9.50,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -126,12 +126,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_8.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 179.90,
-      ourPrice: 269.85,
-      discountPrice: 249.90,
-      savings: 19.95,
-      margin: '38.9%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 110.00,
+      ourPrice: 110.00,
+      discountPrice: 99.00,
+      savings: 11.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -142,12 +142,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_9.png'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 204.90,
-      savings: 19.95,
-      margin: '36.7%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 90.00,
+      ourPrice: 90.00,
+      discountPrice: 81.00,
+      savings: 9.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -158,12 +158,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_10.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 119.90,
-      ourPrice: 179.85,
-      discountPrice: 159.90,
-      savings: 19.95,
-      margin: '33.4%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 70.00,
+      ourPrice: 70.00,
+      discountPrice: 63.00,
+      savings: 7.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -174,12 +174,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_11.JPG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 189.90,
-      ourPrice: 284.85,
-      discountPrice: 259.90,
-      savings: 24.95,
-      margin: '36.9%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 115.00,
+      ourPrice: 115.00,
+      discountPrice: 103.50,
+      savings: 11.50,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -190,12 +190,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_12.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 169.90,
-      ourPrice: 254.85,
-      discountPrice: 234.90,
-      savings: 19.95,
-      margin: '38.3%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 105.00,
+      ourPrice: 105.00,
+      discountPrice: 94.50,
+      savings: 10.50,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -206,12 +206,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_14.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 159.90,
-      ourPrice: 239.85,
-      discountPrice: 219.90,
-      savings: 19.95,
-      margin: '37.5%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 95.00,
+      ourPrice: 95.00,
+      discountPrice: 85.50,
+      savings: 9.50,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -222,12 +222,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_15.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 204.90,
-      savings: 19.95,
-      margin: '36.7%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 90.00,
+      ourPrice: 90.00,
+      discountPrice: 81.00,
+      savings: 9.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -238,12 +238,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_16.png'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 179.90,
-      ourPrice: 269.85,
-      discountPrice: 244.90,
-      savings: 24.95,
-      margin: '36.2%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 108.00,
+      ourPrice: 108.00,
+      discountPrice: 97.20,
+      savings: 10.80,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -254,12 +254,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_17.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 199.90,
-      ourPrice: 299.85,
-      discountPrice: 274.90,
-      savings: 24.95,
-      margin: '37.5%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 120.00,
+      ourPrice: 120.00,
+      discountPrice: 108.00,
+      savings: 12.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -270,12 +270,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_19.png'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 204.90,
-      savings: 19.95,
-      margin: '36.7%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 90.00,
+      ourPrice: 90.00,
+      discountPrice: 81.00,
+      savings: 9.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -286,12 +286,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_20.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 119.90,
-      ourPrice: 179.85,
-      discountPrice: 159.90,
-      savings: 19.95,
-      margin: '33.4%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 70.00,
+      ourPrice: 70.00,
+      discountPrice: 63.00,
+      savings: 7.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -302,12 +302,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_21.JPG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 139.90,
-      ourPrice: 209.85,
-      discountPrice: 189.90,
-      savings: 19.95,
-      margin: '35.8%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 85.00,
+      ourPrice: 85.00,
+      discountPrice: 76.50,
+      savings: 8.50,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -318,12 +318,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_22.JPG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 159.90,
-      ourPrice: 239.85,
-      discountPrice: 219.90,
-      savings: 19.95,
-      margin: '37.5%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 95.00,
+      ourPrice: 95.00,
+      discountPrice: 85.50,
+      savings: 9.50,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -334,12 +334,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_24.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 199.90,
-      ourPrice: 299.85,
-      discountPrice: 274.90,
-      savings: 24.95,
-      margin: '37.5%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 120.00,
+      ourPrice: 120.00,
+      discountPrice: 108.00,
+      savings: 12.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -350,12 +350,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_25.JPG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 169.90,
-      ourPrice: 254.85,
-      discountPrice: 234.90,
-      savings: 19.95,
-      margin: '38.3%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 105.00,
+      ourPrice: 105.00,
+      discountPrice: 94.50,
+      savings: 10.50,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -366,12 +366,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_26.JPG'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 129.90,
-      ourPrice: 194.85,
-      discountPrice: 174.90,
-      savings: 19.95,
-      margin: '34.6%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 80.00,
+      ourPrice: 80.00,
+      discountPrice: 72.00,
+      savings: 8.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -382,12 +382,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_27.png'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 219.90,
-      ourPrice: 329.85,
-      discountPrice: 304.90,
-      savings: 24.95,
-      margin: '38.7%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 135.00,
+      ourPrice: 135.00,
+      discountPrice: 121.50,
+      savings: 13.50,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -398,12 +398,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_28.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 204.90,
-      savings: 19.95,
-      margin: '36.7%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 90.00,
+      ourPrice: 90.00,
+      discountPrice: 81.00,
+      savings: 9.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -414,12 +414,12 @@ const progressivasData = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_31.PNG'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 179.90,
-      ourPrice: 269.85,
-      discountPrice: 249.90,
-      savings: 19.95,
-      margin: '38.9%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 170.00,
+      ourPrice: 170.00,
+      discountPrice: 153.00,
+      savings: 17.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -435,12 +435,12 @@ const progressivasData = [
     ],
     badge: 'LINHA COMPLETA',
     pricing: {
-      basePrice: 189.90,
-      ourPrice: 284.85,
-      discountPrice: 264.90,
-      savings: 19.95,
-      margin: '39.4%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 222.27,
+      ourPrice: 222.27,
+      discountPrice: 200.05,
+      savings: 22.22,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -453,12 +453,12 @@ const progressivasData = [
     ],
     badge: 'NOVIDADE',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 204.90,
-      savings: 19.95,
-      margin: '36.7%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 90.00,
+      ourPrice: 90.00,
+      discountPrice: 81.00,
+      savings: 9.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -473,12 +473,12 @@ const progressivasData = [
     ],
     badge: 'PROFISSIONAL',
     pricing: {
-      basePrice: 159.90,
-      ourPrice: 239.85,
-      discountPrice: 219.90,
-      savings: 19.95,
-      margin: '37.5%',
-      competitive: 'Baseado em progressivas premium europeias'
+      basePrice: 99.00,
+      ourPrice: 99.00,
+      discountPrice: 89.10,
+      savings: 9.90,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   }
 ];
@@ -492,12 +492,12 @@ const relaxamentosData = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__1.WEBP'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 45.90,
-      ourPrice: 68.85,
-      discountPrice: 62.90,
-      savings: 5.95,
-      margin: '37%',
-      competitive: 'Baseado em relaxantes premium europeus'
+      basePrice: 15.00,
+      ourPrice: 15.00,
+      discountPrice: 13.50,
+      savings: 1.50,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -508,12 +508,12 @@ const relaxamentosData = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__2.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 39.90,
-      ourPrice: 59.85,
-      discountPrice: 54.90,
-      savings: 4.95,
-      margin: '37.5%',
-      competitive: 'Baseado em relaxantes premium europeus'
+      basePrice: 12.00,
+      ourPrice: 12.00,
+      discountPrice: 10.80,
+      savings: 1.20,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -524,12 +524,12 @@ const relaxamentosData = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__3.PNG'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 42.90,
-      ourPrice: 64.35,
-      discountPrice: 59.90,
-      savings: 4.45,
-      margin: '39.6%',
-      competitive: 'Baseado em relaxantes premium europeus'
+      basePrice: 14.00,
+      ourPrice: 14.00,
+      discountPrice: 12.60,
+      savings: 1.40,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -540,12 +540,12 @@ const relaxamentosData = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__4.PNG'],
     badge: 'PROMOÇÃO',
     pricing: {
-      basePrice: 36.90,
-      ourPrice: 55.35,
-      discountPrice: 49.90,
-      savings: 5.45,
-      margin: '35.2%',
-      competitive: 'Baseado em relaxantes premium europeus'
+      basePrice: 11.00,
+      ourPrice: 11.00,
+      discountPrice: 9.90,
+      savings: 1.10,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -556,12 +556,12 @@ const relaxamentosData = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__5.PNG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 52.90,
-      ourPrice: 79.35,
-      discountPrice: 72.90,
-      savings: 6.45,
-      margin: '37.8%',
-      competitive: 'Baseado em relaxantes premium europeus'
+      basePrice: 18.00,
+      ourPrice: 18.00,
+      discountPrice: 16.20,
+      savings: 1.80,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -572,12 +572,12 @@ const relaxamentosData = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__6.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 58.90,
-      ourPrice: 88.35,
-      discountPrice: 79.90,
-      savings: 8.45,
-      margin: '35.7%',
-      competitive: 'Baseado em relaxantes premium europeus'
+      basePrice: 20.00,
+      ourPrice: 20.00,
+      discountPrice: 18.00,
+      savings: 2.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -588,12 +588,12 @@ const relaxamentosData = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__7.JPG'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 62.90,
-      ourPrice: 94.35,
-      discountPrice: 84.90,
-      savings: 9.45,
-      margin: '35%',
-      competitive: 'Baseado em relaxantes premium europeus'
+      basePrice: 22.00,
+      ourPrice: 22.00,
+      discountPrice: 19.80,
+      savings: 2.20,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -604,12 +604,12 @@ const relaxamentosData = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__8.PNG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 67.90,
-      ourPrice: 101.85,
-      discountPrice: 94.90,
-      savings: 6.95,
-      margin: '39.8%',
-      competitive: 'Baseado em relaxantes premium europeus'
+      basePrice: 25.00,
+      ourPrice: 25.00,
+      discountPrice: 22.50,
+      savings: 2.50,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -620,12 +620,12 @@ const relaxamentosData = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__9.JPG'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 49.90,
-      ourPrice: 74.85,
-      discountPrice: 69.90,
-      savings: 4.95,
-      margin: '40.1%',
-      competitive: 'Baseado em relaxantes premium europeus'
+      basePrice: 17.00,
+      ourPrice: 17.00,
+      discountPrice: 15.30,
+      savings: 1.70,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -636,12 +636,12 @@ const relaxamentosData = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__10.JPG'],
     badge: 'PROMOÇÃO',
     pricing: {
-      basePrice: 54.90,
-      ourPrice: 82.35,
-      discountPrice: 74.90,
-      savings: 7.45,
-      margin: '36.4%',
-      competitive: 'Baseado em relaxantes premium europeus'
+      basePrice: 18.00,
+      ourPrice: 18.00,
+      discountPrice: 16.20,
+      savings: 1.80,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   },
   {
@@ -652,12 +652,12 @@ const relaxamentosData = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__11.WEBP'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 89.90,
-      ourPrice: 134.85,
-      discountPrice: 124.90,
-      savings: 9.95,
-      margin: '38.9%',
-      competitive: 'Baseado em relaxantes premium europeus'
+      basePrice: 30.00,
+      ourPrice: 30.00,
+      discountPrice: 27.00,
+      savings: 3.00,
+      margin: '-10%',
+      competitive: '10% abaixo do mercado europeu'
     }
   }
 ];

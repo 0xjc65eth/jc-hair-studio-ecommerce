@@ -1,0 +1,83 @@
+{
+  "timestamp": "2025-10-03T12:03:11.209Z",
+  "site": "https://jchairstudios62.xyz",
+  "checks": {
+    "sitemap": true,
+    "robots": true,
+    "indexnow": false,
+    "google": false,
+    "cloudflare": false
+  },
+  "urls": [
+    {
+      "url": "https://jchairstudios62.xyz",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/produtos",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/mega-hair",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/maquiagem",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/cosmeticos",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/progressiva-vogue-portugal",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/tintas-wella-portugal",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/esmaltes-impala-portugal",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/mari-maria-makeup-portugal",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/pt",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/en",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/es",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://jchairstudios62.xyz/fr",
+      "status": 200,
+      "ok": true
+    }
+  ],
+  "summary": {
+    "total": 13,
+    "accessible": 13,
+    "failed": 0
+  }
+}

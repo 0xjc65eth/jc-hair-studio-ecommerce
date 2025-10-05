@@ -1,21 +1,24 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, Heart, Share2, ShoppingBag, Star, Truck, Shield, RotateCcw, Award } from 'lucide-react';
 import { useCart } from '@/lib/stores/cartStore';
 import { toast } from 'react-toastify';
-import { useProductData } from '../../../lib/hooks/useProductData';
-import ImageCarousel from '../../../components/products/ImageCarousel';
 import { resolveProductById, getAllAvailableProducts } from '../../../lib/services/productResolver';
+import ImageCarousel from '../../../components/products/ImageCarousel';
 import { ProductSchema } from '../../../components/seo/SchemaMarkup';
+import { CategoryBackButton } from '@/components/navigation/BackButton';
 
 export default function ProductDetailPage() {
   const params = useParams();
   const router = useRouter();
   const { addItem } = useCart();
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [isClient, setIsClient] = useState(false);
 
   // Debug logging - John Carmack style: if there's a problem, show it clearly
   console.log('🔍 ProductDetailPage Debug:', {
@@ -26,15 +29,45 @@ export default function ProductDetailPage() {
   const [quantity, setQuantity] = useState(1);
   const [selectedVariant, setSelectedVariant] = useState(0);
 
-  // Use the unified product resolver - one source of truth
-  const product = resolveProductById(params.id as string);
+  // Client-side hydration and product resolution
+  useEffect(() => {
+    setIsClient(true);
+
+    if (params.id) {
+      console.log(`🔍 ProductDetailPage: Resolving product ID "${params.id}"`);
+      try {
+        const resolvedProduct = resolveProductById(params.id as string);
+        if (resolvedProduct) {
+          console.log(`✅ ProductDetailPage: Successfully resolved product "${resolvedProduct.name || resolvedProduct.nome}"`);
+          setProduct(resolvedProduct);
+        } else {
+          console.log(`❌ ProductDetailPage: Product "${params.id}" not found`);
+        }
+      } catch (error) {
+        console.error('❌ ProductDetailPage: Error resolving product:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+  }, [params.id]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-amber-600 mb-4"></div>
+          <h1 className="text-xl font-medium text-gray-900">Carregando produto...</h1>
+        </div>
+      </div>
+    );
+  }
 
   if (!product) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Produto não encontrado</h1>
-          <Link 
+          <Link
             href="/produtos"
             className="text-amber-600 hover:text-amber-700 font-medium"
           >
@@ -44,6 +77,7 @@ export default function ProductDetailPage() {
       </div>
     );
   }
+
 
   const handleAddToCart = async () => {
     try {
@@ -114,8 +148,30 @@ export default function ProductDetailPage() {
     )
     .slice(0, 4);
 
+  // Prevent hydration mismatches by only showing dynamic content when client is ready
+  if (!isClient) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-amber-600 mb-4"></div>
+          <h1 className="text-xl font-medium text-gray-900">Carregando produto...</h1>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Back Button */}
+      <div className="bg-white border-b">
+        <div className="max-w-7xl mx-auto px-4 py-3">
+          <CategoryBackButton
+            productCategory={product.category}
+            variant="ghost"
+          />
+        </div>
+      </div>
+
       {/* Breadcrumb */}
       <div className="bg-gray-50 border-b">
         <div className="max-w-7xl mx-auto px-4 py-4">

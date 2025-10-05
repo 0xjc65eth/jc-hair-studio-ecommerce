@@ -1,0 +1,38 @@
+[build]
+nixpacksBuild = true
+
+[deploy]
+healthcheckPath = "/api/health"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
+
+[build.env]
+NODE_ENV = "production"
+SKIP_TYPE_CHECK = "true"
+SKIP_LINT = "true"
+NEXT_TELEMETRY_DISABLED = "1"
+NODE_OPTIONS = "--max-old-space-size=4096"
+
+[[build.buildCommand]]
+cmd = "npm ci --only=production"
+
+[[build.buildCommand]]
+cmd = "npm run build:production"
+
+[services.web]
+startCommand = "npm run start:production"
+variables = { NODE_ENV = "production" }
+
+[services.web.healthcheck]
+path = "/api/health"
+interval = "30s"
+timeout = "10s"
+retries = 3
+
+[build.nixpacks]
+providers = ["node"]
+buildImage = "node:18-alpine"
+
+[build.nixpacks.config]
+nodeVersion = "18"

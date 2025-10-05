@@ -6,6 +6,10 @@ import { getStaticProductById, getAllStaticProducts } from '../data/staticProduc
 import { categories } from '../data/categories';
 import { getLegacyCompatibleProducts } from '../data/megaHairProducts';
 import { getAllMakeupProducts, getMakeupProductById } from '../data/makeupProducts';
+import { allTintasCapilares, getTintaById } from '../data/tintasCapilares';
+import { allEsmaltesImpala, getEsmalteById } from '../data/esmaltesImpala';
+import { allPerfumesWepink, getPerfumeById } from '../data/perfumesWepink';
+import { allPerfumesData } from '../data/perfumesProducts';
 
 interface UnifiedProduct {
   id: string;
@@ -138,8 +142,8 @@ export class ProductResolver {
       marca: product.marca || product.brand || 'Marca não informada',
       description: product.description || product.descricao || 'Descrição não disponível',
       descricao: product.descricao || product.description || 'Descrição não disponível',
-      images: product.images || product.imagens || [],
-      imagens: product.imagens || product.images || [],
+      images: product.images || product.imagens || (product.image ? [product.image] : (product.imagem ? [product.imagem] : [])),
+      imagens: product.imagens || product.images || (product.image ? [product.image] : (product.imagem ? [product.imagem] : [])),
       badge: product.badge,
       preco_eur: product.preco_eur || product.pricing?.discountPrice || product.price || 0,
       category: product.category || 'Produtos Capilares',
@@ -164,10 +168,9 @@ export class ProductResolver {
 
     // ID-based detection
     if (productId.includes('mari-maria') || productId.includes('bruna-tavares')) return 'maquiagem';
-    if (productId.includes('impala-')) return 'esmalte';
-    if (productId.includes('loreal-') || productId.includes('biocolor-') ||
-        productId.includes('beautycolor-') || productId.includes('amend-') ||
-        productId.includes('nutrisse-') || productId.includes('altamoda-')) return 'tinta';
+    if (productId.includes('impala-esmalte')) return 'esmalte';
+    if (productId.includes('biocolor-') || productId.includes('wella-') || productId.includes('alfaparf-')) return 'tinta';
+    if (productId.includes('wepink-')) return 'perfume';
     if (productId.includes('cocochoco') || productId.includes('progressiva') ||
         productId.includes('relaxamento') || productId.includes('botox')) return 'progressiva';
 
@@ -179,7 +182,8 @@ export class ProductResolver {
     if (name.includes('mega hair') || name.includes('mega-hair')) return 'mega-hair';
     if (name.includes('base ') || brand.includes('mari maria') || brand.includes('bruna tavares')) return 'maquiagem';
     if (name.includes('esmalte') || brand.includes('impala')) return 'esmalte';
-    if (name.includes('tintura') || name.includes('coloração') || brand.includes('loreal') || brand.includes('biocolor')) return 'tinta';
+    if (name.includes('coloração') || name.includes('tinta') || brand.includes('biocolor') || brand.includes('wella') || brand.includes('alfaparf')) return 'tinta';
+    if (name.includes('perfume') || name.includes('colônia') || brand.includes('wepink')) return 'perfume';
     if (name.includes('progressiva') || name.includes('relaxamento') || name.includes('botox') || name.includes('cocochoco')) return 'progressiva';
 
     return 'unknown';
@@ -194,7 +198,8 @@ export class ProductResolver {
     if (path.includes('mega-hair') || path.includes('g-hair') || path.includes('/mega-hair/')) return 'mega-hair';
     if (path.includes('mari-maria') || path.includes('bruna-tavares') || path.includes('/maquiagem/')) return 'maquiagem';
     if (path.includes('esmalte') || path.includes('impala')) return 'esmalte';
-    if (path.includes('tinta_') || path.includes('/tinta/') || path.includes('loreal') || path.includes('biocolor')) return 'tinta';
+    if (path.includes('tinta_') || path.includes('produtos_diversos')) return 'tinta';
+    if (path.includes('perfume') || path.includes('wepink')) return 'perfume';
     if (path.includes('progressiva') || path.includes('relaxamento') || path.includes('botox') || path.includes('tratamento')) return 'progressiva';
 
     return 'unknown';
@@ -303,7 +308,63 @@ export class ProductResolver {
       }
     }
 
-    // Method 5: Try mega hair products (legacy compatible - fallback)
+    // METHOD 5: Tintas capilares with validation
+    if (!product && (productId.includes('biocolor-') || productId.includes('wella-') || productId.includes('alfaparf-'))) {
+      if (isDev) {
+        console.log(`🎯 ProductResolver: Tinta pattern detected, searching tintas capilares...`);
+      }
+      product = allTintasCapilares.find(p => p.id === productId);
+      if (product) {
+        source = 'tintas-validated';
+        if (isDev) {
+          console.log(`✅ ProductResolver: Found tinta product - ${product.nome}`);
+        }
+      }
+    }
+
+    // METHOD 6: Esmaltes IMPALA with validation
+    if (!product && productId.includes('impala-esmalte')) {
+      if (isDev) {
+        console.log(`🎯 ProductResolver: IMPALA esmalte pattern detected, searching esmaltes...`);
+      }
+      product = allEsmaltesImpala.find(p => p.id === productId);
+      if (product) {
+        source = 'esmaltes-validated';
+        if (isDev) {
+          console.log(`✅ ProductResolver: Found esmalte product - ${product.nome}`);
+        }
+      }
+    }
+
+    // METHOD 7: WEPINK perfumes with validation
+    if (!product && productId.includes('wepink-')) {
+      if (isDev) {
+        console.log(`🎯 ProductResolver: WEPINK pattern detected, searching perfumes...`);
+      }
+      product = allPerfumesWepink.find(p => p.id === productId);
+      if (product) {
+        source = 'perfumes-wepink-validated';
+        if (isDev) {
+          console.log(`✅ ProductResolver: Found WEPINK perfume product - ${product.nome}`);
+        }
+      }
+    }
+
+    // METHOD 8: Legacy WEPINK perfumes (fallback)
+    if (!product && productId.includes('wepink-')) {
+      if (isDev) {
+        console.log(`🎯 ProductResolver: WEPINK legacy pattern detected, searching legacy perfumes...`);
+      }
+      product = allPerfumesData.find(p => p.id === productId);
+      if (product) {
+        source = 'perfumes-legacy-validated';
+        if (isDev) {
+          console.log(`✅ ProductResolver: Found legacy perfume product - ${product.name}`);
+        }
+      }
+    }
+
+    // Method 7: Try mega hair products (legacy compatible - fallback)
     if (!product) {
       const megaHairProducts = getLegacyCompatibleProducts();
       for (const mappedId of allPossibleIds) {
@@ -450,6 +511,38 @@ export class ProductResolver {
       );
       if (!exists) {
         allProducts.push(this.normalizeProduct(product, 'megahair'));
+      }
+    });
+
+    // Tintas capilares products
+    allTintasCapilares.forEach(tinta => {
+      const exists = allProducts.some(p => p.id === tinta.id);
+      if (!exists) {
+        allProducts.push(this.normalizeProduct(tinta, 'tintas'));
+      }
+    });
+
+    // Esmaltes IMPALA products
+    allEsmaltesImpala.forEach(esmalte => {
+      const exists = allProducts.some(p => p.id === esmalte.id);
+      if (!exists) {
+        allProducts.push(this.normalizeProduct(esmalte, 'esmaltes'));
+      }
+    });
+
+    // WEPINK perfumes products (new)
+    allPerfumesWepink.forEach(perfume => {
+      const exists = allProducts.some(p => p.id === perfume.id);
+      if (!exists) {
+        allProducts.push(this.normalizeProduct(perfume, 'perfumes-wepink'));
+      }
+    });
+
+    // WEPINK perfumes products (legacy - for backward compatibility)
+    allPerfumesData.forEach(perfume => {
+      const exists = allProducts.some(p => p.id === perfume.id);
+      if (!exists) {
+        allProducts.push(this.normalizeProduct(perfume, 'perfumes-legacy'));
       }
     });
 

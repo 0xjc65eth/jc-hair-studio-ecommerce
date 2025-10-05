@@ -4,10 +4,20 @@ import bcrypt from 'bcryptjs';
 import { NextRequest } from 'next/server';
 
 // JWT Configuration
-const JWT_SECRET = process.env.JWT_SECRET || 'your-super-secret-key-change-in-production';
-const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET || 'your-refresh-secret-key';
+const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '1h';
 const JWT_REFRESH_EXPIRES_IN = process.env.JWT_REFRESH_EXPIRES_IN || '7d';
+
+// Helper to validate secrets at runtime (not during build)
+function validateSecrets() {
+  if (!JWT_SECRET) {
+    throw new Error('JWT_SECRET environment variable is required but not set');
+  }
+  if (!JWT_REFRESH_SECRET) {
+    throw new Error('JWT_REFRESH_SECRET environment variable is required but not set');
+  }
+}
 
 export interface JWTPayload {
   userId: string;
@@ -28,15 +38,16 @@ export interface AuthTokens {
  * Generate JWT access and refresh tokens
  */
 export function generateTokens(payload: Omit<JWTPayload, 'iat' | 'exp'>): AuthTokens {
-  const accessToken = jwt.sign(payload, JWT_SECRET, { 
+  validateSecrets();
+  const accessToken = jwt.sign(payload, JWT_SECRET!, { 
     expiresIn: JWT_EXPIRES_IN,
     issuer: 'jc-hair-studio',
     audience: 'jc-hair-studio-users'
   });
 
   const refreshToken = jwt.sign(
-    { userId: payload.userId }, 
-    JWT_REFRESH_SECRET, 
+    { userId: payload.userId },
+    JWT_REFRESH_SECRET!, 
     { 
       expiresIn: JWT_REFRESH_EXPIRES_IN,
       issuer: 'jc-hair-studio',
@@ -59,8 +70,9 @@ export function generateTokens(payload: Omit<JWTPayload, 'iat' | 'exp'>): AuthTo
  * Verify JWT token
  */
 export function verifyToken(token: string): JWTPayload | null {
+  validateSecrets();
   try {
-    const decoded = jwt.verify(token, JWT_SECRET, {
+    const decoded = jwt.verify(token, JWT_SECRET!, {
       issuer: 'jc-hair-studio',
       audience: 'jc-hair-studio-users'
     }) as JWTPayload;
@@ -76,8 +88,9 @@ export function verifyToken(token: string): JWTPayload | null {
  * Verify refresh token
  */
 export function verifyRefreshToken(token: string): { userId: string } | null {
+  validateSecrets();
   try {
-    const decoded = jwt.verify(token, JWT_REFRESH_SECRET, {
+    const decoded = jwt.verify(token, JWT_REFRESH_SECRET!, {
       issuer: 'jc-hair-studio',
       audience: 'jc-hair-studio-users'
     }) as { userId: string };
@@ -121,12 +134,13 @@ export async function comparePassword(password: string, hash: string): Promise<b
  * Generate secure session ID
  */
 export function generateSessionId(): string {
+  validateSecrets();
   return jwt.sign(
-    { 
+    {
       sessionId: Math.random().toString(36).substring(2) + Date.now().toString(36),
       timestamp: Date.now()
-    }, 
-    JWT_SECRET,
+    },
+    JWT_SECRET!,
     { expiresIn: '24h' }
   );
 }

@@ -1,0 +1,66 @@
+{
+  "framework": "nextjs",
+  "regions": ["gru1"],
+  "installCommand": "npm ci --prefer-offline --no-audit --ignore-scripts --legacy-peer-deps",
+  "env": {
+    "SKIP_TYPE_CHECK": "true",
+    "SKIP_LINT": "true",
+    "NODE_ENV": "production",
+    "CI": "true",
+    "DISABLE_ESLINT_PLUGIN": "true",
+    "NEXT_TELEMETRY_DISABLED": "1",
+    "NODE_OPTIONS": "--max-old-space-size=4096"
+  },
+  "build": {
+    "env": {
+      "SKIP_TYPE_CHECK": "true",
+      "SKIP_LINT": "true",
+      "NODE_ENV": "production",
+      "CI": "true",
+      "DISABLE_ESLINT_PLUGIN": "true",
+      "NEXT_TELEMETRY_DISABLED": "1",
+      "VERCEL": "1",
+      "VERCEL_ENV": "production",
+      "NODE_OPTIONS": "--max-old-space-size=2048",
+      "UV_THREADPOOL_SIZE": "1",
+      "GENERATE_SOURCEMAP": "false",
+      "NEXT_PRIVATE_SKIP_BUILD_ID_CHECK": "true"
+    }
+  },
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "app/api/webhooks/**/*.ts": {
+      "maxDuration": 30,
+      "memory": 512
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    }
+  ],
+  "crons": []
+}

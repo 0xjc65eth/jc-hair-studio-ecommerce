@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { Eye, EyeOff, User, Mail, Lock, AlertCircle, ArrowLeft } from 'lucide-react';
+import { Eye, EyeOff, User, Mail, Lock, AlertCircle, ArrowLeft, Gift } from 'lucide-react';
 
 export default function SignUpPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -14,12 +15,57 @@ export default function SignUpPage() {
     password: '',
     confirmPassword: '',
     newsletter: true,
-    terms: false
+    terms: false,
+    referralCode: ''
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [referralInfo, setReferralInfo] = useState<any>(null);
+  const [validatingReferral, setValidatingReferral] = useState(false);
+
+  // Check for referral code in URL or localStorage on mount
+  useEffect(() => {
+    const refFromUrl = searchParams.get('ref');
+    const refFromStorage = localStorage.getItem('pendingReferralCode');
+
+    if (refFromUrl) {
+      setFormData(prev => ({ ...prev, referralCode: refFromUrl }));
+      validateReferralCode(refFromUrl);
+    } else if (refFromStorage) {
+      setFormData(prev => ({ ...prev, referralCode: refFromStorage }));
+      validateReferralCode(refFromStorage);
+    }
+  }, [searchParams]);
+
+  const validateReferralCode = async (code: string) => {
+    if (!code || code.length < 4) {
+      setReferralInfo(null);
+      return;
+    }
+
+    setValidatingReferral(true);
+    try {
+      const response = await fetch(`/api/referrals/${code}`);
+      if (response.ok) {
+        const data = await response.json();
+        setReferralInfo(data.referralCode);
+        setError('');
+      } else {
+        const errorData = await response.json();
+        setReferralInfo(null);
+        if (formData.referralCode === code) {
+          setError(`Código de referral inválido: ${errorData.error}`);
+        }
+      }
+    } catch (error) {
+      console.error('Erro ao validar código de referral:', error);
+      setReferralInfo(null);
+    } finally {
+      setValidatingReferral(false);
+    }
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -27,6 +73,28 @@ export default function SignUpPage() {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
+
+    // Validate referral code when it changes
+    if (name === 'referralCode' && value.length >= 4) {
+      validateReferralCode(value);
+    } else if (name === 'referralCode' && value.length < 4) {
+      setReferralInfo(null);
+    }
+  };
+
+  const getRewardText = (type: string, value: number) => {
+    switch (type) {
+      case 'PERCENTAGE':
+        return `${(value * 100).toFixed(0)}% de desconto`
+      case 'FIXED':
+        return `€${value.toFixed(2)} de desconto`
+      case 'POINTS':
+        return `${value} pontos`
+      case 'CASHBACK':
+        return `${(value * 100).toFixed(0)}% em cashback`
+      default:
+        return 'Recompensa especial'
+    }
   };
 
   const validateForm = () => {
@@ -210,6 +278,59 @@ export default function SignUpPage() {
                     required
                   />
                 </div>
+              </div>
+
+              {/* Referral Code Field */}
+              <div>
+                <label htmlFor="referralCode" className="block text-sm font-medium text-gray-700 mb-2">
+                  Código de Referral (Opcional)
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Gift className="h-5 w-5 text-gray-400" />
+                  </div>
+                  <input
+                    type="text"
+                    id="referralCode"
+                    name="referralCode"
+                    value={formData.referralCode}
+                    onChange={handleInputChange}
+                    className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 transition-colors uppercase"
+                    placeholder="Ex: ABC12345"
+                    maxLength={10}
+                  />
+                  {validatingReferral && (
+                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
+                      <div className="w-4 h-4 border-2 border-pink-600 border-t-transparent rounded-full animate-spin" />
+                    </div>
+                  )}
+                </div>
+
+                {/* Referral Info Display */}
+                {referralInfo && (
+                  <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+                    <div className="flex items-start gap-2">
+                      <Gift className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <div className="text-sm">
+                        <p className="font-medium text-green-800">
+                          🎉 Código válido! Você ganhará:
+                        </p>
+                        <p className="text-green-700 mt-1">
+                          {getRewardText(referralInfo.refereeRewardType, referralInfo.refereeRewardValue)}
+                        </p>
+                        <p className="text-green-600 text-xs mt-1">
+                          O desconto será aplicado na sua primeira compra
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {formData.referralCode && !referralInfo && !validatingReferral && formData.referralCode.length >= 4 && (
+                  <div className="mt-2 text-sm text-red-600">
+                    Código de referral não encontrado ou inválido
+                  </div>
+                )}
               </div>
 
               {/* Password Field */}

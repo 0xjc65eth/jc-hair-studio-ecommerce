@@ -137,7 +137,9 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      * - public files (public folder)
+     * - feed (product feed for Google Merchant)
+     * - .xml files (XML feeds)
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|.*\\..*|robots.txt|sitemap.xml).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|feed|feed\\.xml|product-feed\\.xml|.*\\.xml|.*\\..*|robots\\.txt|sitemap\\.xml).*)',
   ],
 };
