@@ -54,10 +54,18 @@ export default function ProductDetailPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-amber-600 mb-4"></div>
-          <h1 className="text-xl font-medium text-gray-900">Carregando produto...</h1>
+      <div className="min-h-screen bg-white">
+        {/* Back Button - Always visible */}
+        <div className="bg-white border-b">
+          <div className="max-w-7xl mx-auto px-4 py-3">
+            <CategoryBackButton variant="ghost" />
+          </div>
+        </div>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-amber-600 mb-4"></div>
+            <h1 className="text-xl font-medium text-gray-900">Carregando produto...</h1>
+          </div>
         </div>
       </div>
     );
@@ -65,15 +73,23 @@ export default function ProductDetailPage() {
 
   if (!product) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Produto não encontrado</h1>
-          <Link
-            href="/produtos"
-            className="text-amber-600 hover:text-amber-700 font-medium"
-          >
-            ← Voltar aos produtos
-          </Link>
+      <div className="min-h-screen bg-white">
+        {/* Back Button - Always visible */}
+        <div className="bg-white border-b">
+          <div className="max-w-7xl mx-auto px-4 py-3">
+            <CategoryBackButton variant="ghost" />
+          </div>
+        </div>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Produto não encontrado</h1>
+            <Link
+              href="/produtos"
+              className="text-amber-600 hover:text-amber-700 font-medium"
+            >
+              Ver todos os produtos
+            </Link>
+          </div>
         </div>
       </div>
     );
