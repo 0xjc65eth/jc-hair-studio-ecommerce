@@ -4,16 +4,136 @@ import { headers } from 'next/headers';
 import { sendEmail, generateOrderConfirmationEmail } from '@/lib/utils/email';
 import { referralService } from '@/lib/services/referralService';
 import logger from '@/lib/logger';
+import { connectDB } from '@/lib/mongodb/connection';
+import { Order } from '@/lib/mongodb/schemas/order.schema';
+import mongoose from 'mongoose';
 
 // Inicializar Stripe com configuração otimizada
 const stripe = process.env.STRIPE_SECRET_KEY ? new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2023-10-16',
+  apiVersion: '2025-08-27.basil',
   timeout: 30000,
   maxNetworkRetries: 3,
 }) : null;
 
 // Webhook Secret do Stripe (configurado no dashboard)
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+
+// ==================== CONFIGURATION VALIDATION ====================
+
+interface ConfigValidation {
+  isValid: boolean;
+  errors: string[];
+  warnings: string[];
+}
+
+function validateEnvironmentConfig(): ConfigValidation {
+  const errors: string[] = [];
+  const warnings: string[] = [];
+
+  // Critical configs
+  if (!process.env.STRIPE_SECRET_KEY) {
+    errors.push('STRIPE_SECRET_KEY is not configured');
+  }
+  if (!process.env.STRIPE_WEBHOOK_SECRET) {
+    errors.push('STRIPE_WEBHOOK_SECRET is not configured');
+  }
+  if (!process.env.MONGODB_URI) {
+    errors.push('MONGODB_URI is not configured');
+  }
+
+  // Important but non-critical configs
+  if (!process.env.SENDGRID_API_KEY) {
+    warnings.push('SENDGRID_API_KEY not configured - emails will fail');
+  }
+  if (!process.env.SUPPORT_EMAIL) {
+    warnings.push('SUPPORT_EMAIL not configured - using default');
+  }
+  if (!process.env.FROM_EMAIL) {
+    warnings.push('FROM_EMAIL not configured - emails may not send correctly');
+  }
+
+  return {
+    isValid: errors.length === 0,
+    errors,
+    warnings
+  };
+}
+
+// Validate on startup
+const configValidation = validateEnvironmentConfig();
+if (!configValidation.isValid) {
+  logger.error('❌ CRITICAL CONFIGURATION ERRORS:', configValidation.errors);
+}
+if (configValidation.warnings.length > 0) {
+  logger.warn('⚠️ Configuration warnings:', configValidation.warnings);
+}
+
+// ==================== RATE LIMITING & IDEMPOTENCY ====================
+
+// Simple in-memory rate limiter (production should use Redis)
+const webhookRateLimiter = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_WINDOW = 60000; // 1 minute
+const MAX_REQUESTS_PER_MINUTE = 30;
+
+// Processed payment intents cache (prevent duplicate processing)
+const processedPayments = new Map<string, { processedAt: number }>();
+const PROCESSED_CACHE_TTL = 3600000; // 1 hour
+
+function checkRateLimit(identifier: string): boolean {
+  const now = Date.now();
+  const record = webhookRateLimiter.get(identifier);
+
+  if (!record || now > record.resetAt) {
+    webhookRateLimiter.set(identifier, { count: 1, resetAt: now + RATE_LIMIT_WINDOW });
+    return true;
+  }
+
+  if (record.count >= MAX_REQUESTS_PER_MINUTE) {
+    logger.warn(`⚠️ Rate limit exceeded for: ${identifier}`);
+    return false;
+  }
+
+  record.count++;
+  return true;
+}
+
+function isAlreadyProcessed(paymentIntentId: string): boolean {
+  const record = processedPayments.get(paymentIntentId);
+  if (!record) return false;
+
+  const now = Date.now();
+  if (now - record.processedAt > PROCESSED_CACHE_TTL) {
+    processedPayments.delete(paymentIntentId);
+    return false;
+  }
+
+  return true;
+}
+
+function markAsProcessed(paymentIntentId: string): void {
+  processedPayments.set(paymentIntentId, { processedAt: Date.now() });
+}
+
+// Cleanup old entries every 5 minutes
+setInterval(() => {
+  const now = Date.now();
+
+  // Clean rate limiter
+  const rateLimitKeys = Array.from(webhookRateLimiter.entries());
+  for (const [key, record] of rateLimitKeys) {
+    if (now > record.resetAt) {
+      webhookRateLimiter.delete(key);
+    }
+  }
+
+  // Clean processed payments
+  const paymentKeys = Array.from(processedPayments.entries());
+  for (const [key, record] of paymentKeys) {
+    if (now - record.processedAt > PROCESSED_CACHE_TTL) {
+      processedPayments.delete(key);
+    }
+  }
+}, 300000);
 
 // ==================== WEBHOOK TESTING ENDPOINT ====================
 
@@ -28,17 +148,42 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       message: 'Webhook Test Endpoint',
       availableTests: [
+        'config',
         'payment_success',
         'payment_failed',
         'dispute_created',
         'email_test'
       ],
-      usage: 'Add ?test=payment_success to test specific scenarios'
+      usage: 'Add ?test=config to check configuration or ?test=payment_success to test specific scenarios'
     });
   }
 
   try {
     switch (testType) {
+      case 'config':
+        const validation = validateEnvironmentConfig();
+        return NextResponse.json({
+          success: validation.isValid,
+          message: validation.isValid ? 'All critical configurations valid' : 'Configuration errors detected',
+          validation: {
+            isValid: validation.isValid,
+            errors: validation.errors,
+            warnings: validation.warnings,
+            stripe: {
+              configured: !!stripe,
+              webhookSecret: !!webhookSecret
+            },
+            mongodb: {
+              configured: !!process.env.MONGODB_URI
+            },
+            email: {
+              sendgrid: !!process.env.SENDGRID_API_KEY,
+              supportEmail: process.env.SUPPORT_EMAIL || 'default',
+              fromEmail: !!process.env.FROM_EMAIL
+            }
+          },
+          requestId
+        });
       case 'payment_success':
         await handleTestPaymentSuccess(requestId);
         break;
@@ -140,12 +285,19 @@ export async function POST(request: NextRequest) {
 
   if (!stripe) {
     logger.error(`❌ [${requestId}] Stripe not configured`);
-    return NextResponse.json({ error: 'Stripe not configured', requestId }, { status: 500 });
+    return NextResponse.json({ error: 'Service unavailable', requestId }, { status: 503 });
   }
 
   if (!webhookSecret) {
     logger.error(`❌ [${requestId}] Stripe webhook secret not configured`);
-    return NextResponse.json({ error: 'Webhook secret not configured', requestId }, { status: 500 });
+    return NextResponse.json({ error: 'Service unavailable', requestId }, { status: 503 });
+  }
+
+  // SECURITY: Rate limiting check
+  const clientIp = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
+  if (!checkRateLimit(clientIp)) {
+    logger.warn(`⚠️ [${requestId}] Rate limit exceeded for IP: ${clientIp}`);
+    return NextResponse.json({ error: 'Too many requests', requestId }, { status: 429 });
   }
 
   try {
@@ -173,52 +325,58 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    try {
-      switch (event.type) {
-        case 'payment_intent.succeeded':
-          await handlePaymentSuccess(event.data.object as Stripe.PaymentIntent, requestId);
-          break;
+    // CRITICAL FIX: Don't catch errors for payment_intent.succeeded
+    // WHY: If order save fails, we MUST return 5xx so Stripe retries
+    // HOW: Let critical errors propagate to outer catch block
+    switch (event.type) {
+      case 'payment_intent.succeeded':
+        // CRITICAL: No try-catch here - let errors propagate
+        await handlePaymentSuccess(event.data.object as Stripe.PaymentIntent, requestId);
+        break;
 
-        case 'payment_intent.payment_failed':
-          await handlePaymentFailed(event.data.object as Stripe.PaymentIntent, requestId);
-          break;
+      case 'payment_intent.payment_failed':
+      case 'charge.dispute.created':
+      case 'checkout.session.completed':
+      case 'customer.created':
+      case 'invoice.paid':
+        // Non-critical events can fail without breaking
+        try {
+          switch (event.type) {
+            case 'payment_intent.payment_failed':
+              await handlePaymentFailed(event.data.object as Stripe.PaymentIntent, requestId);
+              break;
+            case 'charge.dispute.created':
+              await handleDispute(event.data.object as Stripe.Dispute, requestId);
+              break;
+            case 'checkout.session.completed':
+              const session = event.data.object as Stripe.Checkout.Session;
+              logger.info(`✅ [${requestId}] Checkout session completed: ${session.id}`);
+              break;
+            case 'customer.created':
+              const customer = event.data.object as Stripe.Customer;
+              logger.info(`👤 [${requestId}] New customer created: ${customer.id}`);
+              break;
+            case 'invoice.paid':
+              const invoice = event.data.object as Stripe.Invoice;
+              logger.info(`📄 [${requestId}] Invoice paid: ${invoice.id}`);
+              break;
+          }
+        } catch (nonCriticalError) {
+          logger.warn(`⚠️ [${requestId}] Non-critical event failed: ${event.type}`, nonCriticalError);
+          await sendFailureNotification({
+            requestId,
+            eventType: event.type,
+            eventId: event.id,
+            error: nonCriticalError
+          });
+        }
+        break;
 
-        case 'charge.dispute.created':
-          await handleDispute(event.data.object as Stripe.Dispute, requestId);
-          break;
-
-        case 'checkout.session.completed':
-          const session = event.data.object as Stripe.Checkout.Session;
-          logger.info(`✅ [${requestId}] Checkout session completed: ${session.id}`);
-          break;
-
-        case 'customer.created':
-          const customer = event.data.object as Stripe.Customer;
-          logger.info(`👤 [${requestId}] New customer created: ${customer.id}`);
-          break;
-
-        case 'invoice.paid':
-          const invoice = event.data.object as Stripe.Invoice;
-          logger.info(`📄 [${requestId}] Invoice paid: ${invoice.id}`);
-          break;
-
-        default:
-          logger.info(`🔔 [${requestId}] Unhandled event type: ${event.type}`);
-      }
-    } catch (eventError) {
-      logger.error(`❌ [${requestId}] Error processing event ${event.type}:`, eventError);
-
-      // Even if event processing fails, we should still return 200 to Stripe
-      // to prevent retries, but log the error for investigation
-      await sendFailureNotification({
-        requestId,
-        eventType: event.type,
-        eventId: event.id,
-        error: eventError
-      });
+      default:
+        logger.info(`🔔 [${requestId}] Unhandled event type: ${event.type}`);
     }
 
-    // Retornar sucesso
+    // Retornar sucesso - only reached if no critical errors
     logger.info(`✅ [${requestId}] Webhook processed successfully: ${event.type}`);
     return NextResponse.json(
       { received: true, type: event.type, requestId },
@@ -248,6 +406,29 @@ export async function POST(request: NextRequest) {
 async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent, requestId: string) {
   logger.info(`🎉 [${requestId}] Payment succeeded: ${paymentIntent.id}`);
 
+  // IDEMPOTENCY: Check if payment already processed (in-memory cache)
+  if (isAlreadyProcessed(paymentIntent.id)) {
+    logger.info(`✅ [${requestId}] Payment already processed (cache), skipping: ${paymentIntent.id}`);
+    return; // Silently succeed - already processed
+  }
+
+  // IDEMPOTENCY: Check database for existing order with this payment intent
+  try {
+    await connectDB();
+    const existingOrder = await Order.findOne({
+      'payments.transactionId': paymentIntent.id
+    });
+
+    if (existingOrder) {
+      logger.info(`✅ [${requestId}] Order already exists in DB: ${existingOrder.orderNumber}`);
+      markAsProcessed(paymentIntent.id);
+      return; // Silently succeed - already processed
+    }
+  } catch (dbCheckError) {
+    logger.warn(`⚠️ [${requestId}] Could not check for duplicate order (non-critical):`, dbCheckError);
+    // Continue processing - better to risk duplicate than lose order
+  }
+
   const orderId = paymentIntent.id;
   const amount = paymentIntent.amount / 100; // Convert from cents
   const currency = paymentIntent.currency.toUpperCase();
@@ -272,32 +453,39 @@ async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent, request
     estimatedDelivery: calculateDeliveryTime(amount)
   };
 
-  try {
-    // Save order to database with retry logic
-    await saveOrderToDatabase(orderData, requestId);
+  // CRITICAL FIX: Order save errors MUST propagate
+  // WHY: If order save fails, webhook must return 5xx for Stripe retry
+  // HOW: Don't catch errors, let them propagate to POST handler
 
+  // Save order to database with retry logic - CRITICAL, errors will throw
+  await saveOrderToDatabase(orderData, requestId);
+
+  // Mark payment as processed after successful save
+  markAsProcessed(paymentIntent.id);
+
+  // Non-critical operations - failures are logged but don't break order
+  try {
     // Process referral if customer came through referral link
     await processReferralPurchase(paymentIntent, requestId);
+  } catch (referralError) {
+    logger.warn(`⚠️ [${requestId}] Referral processing failed (non-critical):`, referralError);
+  }
 
+  try {
     // Send confirmation email to customer with retry logic
     await sendCustomerConfirmationWithRetry(orderData, requestId);
+  } catch (emailError) {
+    logger.warn(`⚠️ [${requestId}] Customer email failed (non-critical):`, emailError);
+  }
 
+  try {
     // Send notification email to admin with retry logic
     await sendAdminNotificationWithRetry(orderData, requestId);
-
-    logger.info(`✅ [${requestId}] Order processed successfully: ${orderId}`);
-  } catch (error) {
-    logger.error(`❌ [${requestId}] Error processing order:`, error);
-
-    // Send failure notification but don't throw - webhook should still return 200
-    await sendFailureNotification({
-      requestId,
-      eventType: 'payment_intent.succeeded',
-      eventId: paymentIntent.id,
-      error,
-      orderData
-    });
+  } catch (emailError) {
+    logger.warn(`⚠️ [${requestId}] Admin email failed (non-critical):`, emailError);
   }
+
+  logger.info(`✅ [${requestId}] Order processed successfully: ${orderId}`);
 }
 
 async function handlePaymentFailed(paymentIntent: Stripe.PaymentIntent, requestId: string) {
@@ -470,86 +658,319 @@ function calculateDeliveryTime(amount: number): string {
   }
 }
 
+/**
+ * CRITICAL SECURITY FIX: Save order to MongoDB with fallback
+ * WHY: Payment succeeded but order not saved = MONEY LOSS
+ * HOW: Try MongoDB Order collection first, fallback to webhook_failures collection
+ * STRATEGY: Throw error if BOTH fail (Stripe will retry)
+ */
 async function saveOrderToDatabase(orderData: any, requestId: string) {
-  logger.info(`💾 [${requestId}] Saving order data:`, JSON.stringify(orderData, null, 2));
+  logger.info(`💾 [${requestId}] Saving order data for ${orderData.orderId}`);
 
   const maxRetries = 3;
   const retryDelay = 1000; // 1 second
 
+  // Try to save to primary MongoDB Order collection
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      // First, try to save to admin orders API if it exists
-      const baseUrl = process.env.NEXTAUTH_URL ||
-                     process.env.NEXT_PUBLIC_SITE_URL ||
-                     'https://jchairstudios62.xyz';
+      await connectDB();
 
-      try {
-        const response = await fetch(`${baseUrl}/api/admin/orders`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(orderData),
-          signal: AbortSignal.timeout(10000) // 10 second timeout
-        });
+      // Parse items from metadata if available
+      const items = parseItemsFromMetadata(orderData.metadata);
 
-        if (response.ok) {
-          logger.info(`✅ [${requestId}] Order saved to dashboard successfully (attempt ${attempt})`);
-          return; // Success, exit function
-        } else {
-          const errorText = await response.text();
-          logger.warn(`⚠️ [${requestId}] Failed to save order to dashboard (attempt ${attempt}): ${response.status} - ${errorText}`);
-        }
-      } catch (apiError) {
-        logger.warn(`⚠️ [${requestId}] Admin API not available (attempt ${attempt}):`, apiError);
-      }
+      // Create MongoDB Order document
+      const order = new Order({
+        orderNumber: orderData.orderId,
+        userId: orderData.metadata.userId || 'guest',
+        customerInfo: {
+          firstName: orderData.customerName.split(' ')[0] || 'Cliente',
+          lastName: orderData.customerName.split(' ').slice(1).join(' ') || '',
+          email: orderData.customerEmail,
+          phone: orderData.metadata.phone || '',
+        },
+        items: items.length > 0 ? items.map(item => ({
+          productId: item.productId || 'unknown',
+          name: item.name,
+          sku: item.sku || item.productId || 'N/A',
+          quantity: item.quantity,
+          unitPrice: item.price,
+          totalPrice: item.price * item.quantity,
+          image: item.image,
+        })) : [{
+          productId: 'unknown',
+          name: `${orderData.itemsCount} items`,
+          sku: 'N/A',
+          quantity: orderData.itemsCount,
+          unitPrice: orderData.total / orderData.itemsCount,
+          totalPrice: orderData.total,
+        }],
+        shippingAddress: orderData.metadata.shippingAddress
+          ? JSON.parse(orderData.metadata.shippingAddress)
+          : { street: 'N/A', city: 'N/A', state: 'N/A', postalCode: 'N/A', country: 'PT' },
+        billingAddress: orderData.metadata.billingAddress
+          ? JSON.parse(orderData.metadata.billingAddress)
+          : { street: 'N/A', city: 'N/A', state: 'N/A', postalCode: 'N/A', country: 'PT' },
+        subtotal: orderData.total,
+        shippingCost: 0,
+        taxAmount: 0,
+        discountAmount: 0,
+        total: orderData.total,
+        currency: orderData.currency,
+        status: 'confirmed',
+        paymentStatus: 'completed',
+        payments: [{
+          method: 'credit_card',
+          status: 'completed',
+          transactionId: orderData.paymentIntentId,
+          amount: orderData.total,
+          currency: orderData.currency,
+          processedAt: new Date(),
+        }],
+        confirmedAt: new Date(),
+        source: 'stripe_webhook',
+        internalNotes: `Created by Stripe webhook. Request ID: ${requestId}`,
+      });
 
-      // Fallback: Save to local file system or log storage
-      await saveOrderToFallbackStorage(orderData, requestId);
-      return; // Success, exit function
+      await order.save();
 
-    } catch (error) {
-      logger.error(`❌ [${requestId}] Error saving order (attempt ${attempt}):`, error);
+      logger.info(`✅ [${requestId}] Order saved to MongoDB successfully (attempt ${attempt}): ${orderData.orderId}`);
+      return; // Success! Exit function
+
+    } catch (mongoError) {
+      logger.error(`❌ [${requestId}] MongoDB save failed (attempt ${attempt}):`, mongoError);
 
       if (attempt < maxRetries) {
-        logger.info(`🔄 [${requestId}] Retrying in ${retryDelay}ms...`);
-        await new Promise(resolve => setTimeout(resolve, retryDelay * attempt));
+        const delay = retryDelay * attempt; // Exponential backoff
+        logger.info(`🔄 [${requestId}] Retrying MongoDB save in ${delay}ms...`);
+        await new Promise(resolve => setTimeout(resolve, delay));
       } else {
-        logger.error(`❌ [${requestId}] Failed to save order after ${maxRetries} attempts`);
-        throw error;
+        logger.error(`❌ [${requestId}] MongoDB save failed after ${maxRetries} attempts`);
+        // Don't throw yet - try fallback storage
+      }
+    }
+  }
+
+  // If we reach here, MongoDB failed - try fallback
+  logger.warn(`⚠️ [${requestId}] Primary MongoDB save failed, attempting fallback storage...`);
+  await saveOrderToFallbackStorage(orderData, requestId);
+}
+
+/**
+ * CRITICAL: Fallback storage for when primary Order collection fails
+ * WHY: Last resort to prevent money loss - save raw webhook data
+ * HOW: Save to webhook_failures collection for manual recovery
+ * STRATEGY: Throw error if this fails too (Stripe will retry)
+ */
+async function saveOrderToFallbackStorage(orderData: any, requestId: string) {
+  logger.info(`💾 [${requestId}] Using fallback storage for order: ${orderData.orderId}`);
+
+  const maxRetries = 3;
+  const retryDelay = 500; // Faster retries for fallback
+
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      await connectDB();
+
+      // Create fallback document with minimal schema requirements
+      const WebhookFailure = mongoose.models.WebhookFailure || mongoose.model('WebhookFailure', new mongoose.Schema({
+        requestId: { type: String, required: true, index: true },
+        orderId: { type: String, required: true, index: true },
+        webhookType: { type: String, required: true },
+        rawData: { type: mongoose.Schema.Types.Mixed, required: true },
+        customerEmail: { type: String, index: true },
+        total: { type: Number },
+        currency: { type: String },
+        status: { type: String, default: 'pending_manual_processing' },
+        recovered: { type: Boolean, default: false },
+        recoveredAt: { type: Date },
+        errorMessage: { type: String },
+        createdAt: { type: Date, default: Date.now },
+      }, { collection: 'webhook_failures' }));
+
+      const fallbackDoc = new WebhookFailure({
+        requestId,
+        orderId: orderData.orderId,
+        webhookType: 'payment_intent.succeeded',
+        rawData: orderData,
+        customerEmail: orderData.customerEmail,
+        total: orderData.total,
+        currency: orderData.currency,
+        status: 'pending_manual_processing',
+        errorMessage: 'Primary Order collection save failed',
+      });
+
+      await fallbackDoc.save();
+
+      logger.info(`✅ [${requestId}] Order saved to fallback storage (attempt ${attempt}): ${orderData.orderId}`);
+      logger.info(`🚨 [${requestId}] MANUAL ACTION REQUIRED: Check webhook_failures collection for order ${orderData.orderId}`);
+
+      // Schedule automatic recovery attempt after 30 seconds
+      setTimeout(() => {
+        attemptFallbackRecovery(orderData.orderId, requestId).catch(err =>
+          logger.error(`❌ Auto-recovery failed for ${orderData.orderId}:`, err)
+        );
+      }, 30000);
+
+      // Send urgent notification to admin
+      await sendEmail({
+        to: process.env.SUPPORT_EMAIL || 'suporte@jchairstudios62.com',
+        subject: `🚨 URGENTE: Order salvo em fallback - ${orderData.orderId}`,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #fff3cd; padding: 20px; border: 2px solid #f0ad4e;">
+            <h2 style="color: #d32f2f;">🚨 AÇÃO MANUAL NECESSÁRIA</h2>
+            <p><strong>Um pedido foi salvo no fallback storage porque o MongoDB principal falhou!</strong></p>
+
+            <div style="background: white; padding: 15px; border-radius: 8px; margin: 20px 0;">
+              <h3>📋 Detalhes do Pedido</h3>
+              <p><strong>Order ID:</strong> ${orderData.orderId}</p>
+              <p><strong>Request ID:</strong> ${requestId}</p>
+              <p><strong>Cliente:</strong> ${orderData.customerEmail}</p>
+              <p><strong>Valor:</strong> €${orderData.total.toFixed(2)} ${orderData.currency}</p>
+              <p><strong>Status:</strong> Pagamento confirmado pelo Stripe ✅</p>
+            </div>
+
+            <div style="background: #ffebee; padding: 15px; border-radius: 8px; margin: 20px 0;">
+              <h3>⚠️ O que aconteceu?</h3>
+              <p>O pedido não pôde ser salvo na coleção Orders principal do MongoDB.</p>
+              <p>Foi salvo automaticamente na coleção <code>webhook_failures</code> para recuperação manual.</p>
+            </div>
+
+            <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 20px 0;">
+              <h3>🔧 Passos para Recuperação</h3>
+              <ol style="line-height: 1.8;">
+                <li>Conecte ao MongoDB</li>
+                <li>Execute: <code>db.webhook_failures.findOne({orderId: "${orderData.orderId}"})</code></li>
+                <li>Copie os dados do campo <code>rawData</code></li>
+                <li>Crie manualmente o pedido na coleção <code>orders</code></li>
+                <li>Marque como recuperado: <code>db.webhook_failures.updateOne({orderId: "${orderData.orderId}"}, {$set: {recovered: true, recoveredAt: new Date()}})</code></li>
+              </ol>
+            </div>
+
+            <p style="color: #d32f2f; font-weight: bold;">⏰ URGENTE: O cliente pagou mas não tem pedido no sistema!</p>
+          </div>
+        `,
+        sandbox: false
+      }).catch(err => logger.error(`❌ [${requestId}] Failed to send fallback notification email:`, err));
+
+      return; // Success! Order is safe in fallback
+
+    } catch (fallbackError) {
+      logger.error(`❌ [${requestId}] Fallback storage failed (attempt ${attempt}):`, fallbackError);
+
+      if (attempt < maxRetries) {
+        const delay = retryDelay * attempt;
+        logger.info(`🔄 [${requestId}] Retrying fallback save in ${delay}ms...`);
+        await new Promise(resolve => setTimeout(resolve, delay));
+      } else {
+        // CRITICAL: Both primary and fallback failed
+        logger.error(`❌❌❌ [${requestId}] CRITICAL: Both primary AND fallback storage failed!`);
+        logger.error(`❌❌❌ [${requestId}] Order data: ${JSON.stringify(orderData)}`);
+
+        // Throw error - Stripe will retry the webhook
+        throw new Error(`CRITICAL: Failed to save order ${orderData.orderId} to both primary and fallback storage after ${maxRetries} attempts. Stripe will retry.`);
       }
     }
   }
 }
 
-async function saveOrderToFallbackStorage(orderData: any, requestId: string) {
-  // Fallback storage - you could implement MongoDB, file system, or other storage
-  logger.info(`💾 [${requestId}] Using fallback storage for order: ${orderData.orderId}`);
+async function attemptFallbackRecovery(orderId: string, originalRequestId: string) {
+  const recoveryId = `recovery_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  logger.info(`🔄 [${recoveryId}] Attempting auto-recovery for fallback order: ${orderId}`);
 
   try {
-    // Here you could integrate with MongoDB, PostgreSQL, or other database
-    // For now, we'll log the structured data that can be easily retrieved
-    const orderLogEntry = {
-      timestamp: new Date().toISOString(),
-      requestId,
-      orderId: orderData.orderId,
-      customerEmail: orderData.customerEmail,
-      total: orderData.total,
-      status: 'saved_to_fallback',
-      data: orderData
-    };
+    await connectDB();
 
-    logger.info(`📋 [${requestId}] FALLBACK_ORDER_STORAGE:`, JSON.stringify(orderLogEntry));
+    // Get the WebhookFailure model
+    const WebhookFailure = mongoose.models.WebhookFailure || mongoose.model('WebhookFailure', new mongoose.Schema({
+      requestId: { type: String, required: true, index: true },
+      orderId: { type: String, required: true, index: true },
+      webhookType: { type: String, required: true },
+      rawData: { type: mongoose.Schema.Types.Mixed, required: true },
+      customerEmail: { type: String, index: true },
+      total: { type: Number },
+      currency: { type: String },
+      status: { type: String, default: 'pending_manual_processing' },
+      recovered: { type: Boolean, default: false },
+      recoveredAt: { type: Date },
+      errorMessage: { type: String },
+      createdAt: { type: Date, default: Date.now },
+    }, { collection: 'webhook_failures' }));
 
-    // TODO: Implement actual fallback storage
-    // Examples:
-    // - await mongodb.collection('orders').insertOne(orderData);
-    // - await fs.writeFile(`/tmp/orders/${orderData.orderId}.json`, JSON.stringify(orderData));
-    // - await redis.set(`order:${orderData.orderId}`, JSON.stringify(orderData));
+    // Find unrecovered fallback for this order
+    const fallbackDoc = await (WebhookFailure as any).findOne({
+      orderId,
+      recovered: { $ne: true }
+    });
 
-  } catch (fallbackError) {
-    logger.error(`❌ [${requestId}] Fallback storage also failed:`, fallbackError);
-    throw fallbackError;
+    if (!fallbackDoc) {
+      logger.info(`ℹ️ [${recoveryId}] No unrecovered fallback found for ${orderId} (may have been recovered already)`);
+      return;
+    }
+
+    // Check if order already exists in main Orders collection
+    const existingOrder = await (Order as any).findOne({
+      $or: [
+        { orderNumber: orderId },
+        { 'payments.transactionId': orderId }
+      ]
+    });
+
+    if (existingOrder) {
+      logger.info(`✅ [${recoveryId}] Order ${orderId} already exists in main collection, marking fallback as recovered`);
+      await (WebhookFailure as any).updateOne(
+        { _id: fallbackDoc._id },
+        {
+          $set: {
+            recovered: true,
+            recoveredAt: new Date(),
+            status: 'auto_recovered'
+          }
+        }
+      );
+      return;
+    }
+
+    // Try to save order to main collection
+    const orderData = fallbackDoc.rawData;
+    logger.info(`🔄 [${recoveryId}] Attempting to save order to main collection: ${orderId}`);
+
+    await saveOrderToDatabase(orderData, recoveryId);
+
+    // Mark as recovered
+    await (WebhookFailure as any).updateOne(
+      { _id: fallbackDoc._id },
+      {
+        $set: {
+          recovered: true,
+          recoveredAt: new Date(),
+          status: 'auto_recovered'
+        }
+      }
+    );
+
+    logger.info(`✅ [${recoveryId}] Auto-recovery successful for order ${orderId}`);
+
+    // Send success notification to admin
+    await sendEmail({
+      to: process.env.SUPPORT_EMAIL || 'suporte@jchairstudios62.com',
+      subject: `✅ Auto-recovery bem-sucedido - ${orderId}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #4caf50;">✅ Recuperação Automática Bem-Sucedida</h2>
+          <p>O pedido <strong>${orderId}</strong> foi recuperado automaticamente do fallback storage e salvo na coleção Orders principal.</p>
+          <p><strong>Cliente:</strong> ${orderData.customerEmail}</p>
+          <p><strong>Valor:</strong> €${orderData.total.toFixed(2)} ${orderData.currency}</p>
+          <p><strong>Recovery ID:</strong> ${recoveryId}</p>
+          <p style="color: #4caf50;">✅ Nenhuma ação manual necessária.</p>
+        </div>
+      `,
+      sandbox: false
+    }).catch(err => logger.error(`❌ [${recoveryId}] Failed to send recovery notification:`, err));
+
+  } catch (error) {
+    logger.error(`❌ [${recoveryId}] Auto-recovery failed for ${orderId}:`, error);
+    // Don't throw - this is a background operation, we don't want to crash
+    // Admin will still get the original fallback notification
   }
 }
 
