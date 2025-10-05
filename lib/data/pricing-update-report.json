@@ -1,0 +1,983 @@
+{
+  "total_products": 107,
+  "updated_products": 106,
+  "maintained_products": 1,
+  "by_category": {
+    "Progressivas e BTX": {
+      "total": 20,
+      "updated": 19,
+      "maintained": 1
+    },
+    "Coloração Capilar": {
+      "total": 15,
+      "updated": 15,
+      "maintained": 0
+    },
+    "Maquiagem Premium": {
+      "total": 56,
+      "updated": 56,
+      "maintained": 0
+    },
+    "Tratamentos Capilares": {
+      "total": 16,
+      "updated": 16,
+      "maintained": 0
+    }
+  },
+  "price_changes": [
+    {
+      "name": "Cadiveu Professional Brasil Cacau Alisante 300ml",
+      "category": "Progressivas e BTX",
+      "volume": "300ml",
+      "old_price": 124.77,
+      "new_price": 73.9,
+      "difference": -50.87,
+      "percentage": -40.8
+    },
+    {
+      "name": "Forever Liss BTX Zero Formol 250g",
+      "category": "Progressivas e BTX",
+      "volume": "250g",
+      "old_price": 20.15,
+      "new_price": 52.9,
+      "difference": 32.75,
+      "percentage": 162.5
+    },
+    {
+      "name": "Forever Liss BTX Zero Formol 1Kg Profissional",
+      "category": "Progressivas e BTX",
+      "volume": "1Kg",
+      "old_price": 116.95,
+      "new_price": 162.9,
+      "difference": 45.95,
+      "percentage": 39.3
+    },
+    {
+      "name": "BTX Professional Premium Reconstruction 01",
+      "category": "Progressivas e BTX",
+      "volume": "500g",
+      "old_price": 31.24,
+      "new_price": 52.9,
+      "difference": 21.66,
+      "percentage": 69.3
+    },
+    {
+      "name": "Progressiva Advanced Smooth System 02",
+      "category": "Progressivas e BTX",
+      "volume": "1L",
+      "old_price": 145.2,
+      "new_price": 73.9,
+      "difference": -71.3,
+      "percentage": -49.1
+    },
+    {
+      "name": "BTX Repair Intensive Treatment 03",
+      "category": "Progressivas e BTX",
+      "volume": "300g",
+      "old_price": 37.66,
+      "new_price": 52.9,
+      "difference": 15.24,
+      "percentage": 40.5
+    },
+    {
+      "name": "Progressiva Keratin Complex Professional 04",
+      "category": "Progressivas e BTX",
+      "volume": "800ml",
+      "old_price": 128.13,
+      "new_price": 73.9,
+      "difference": -54.23,
+      "percentage": -42.3
+    },
+    {
+      "name": "BTX Collagen Boost Reconstruction 05",
+      "category": "Progressivas e BTX",
+      "volume": "400g",
+      "old_price": 34.23,
+      "new_price": 52.9,
+      "difference": 18.67,
+      "percentage": 54.5
+    },
+    {
+      "name": "Progressiva Silk Protein Advanced 06",
+      "category": "Progressivas e BTX",
+      "volume": "600ml",
+      "old_price": 110.44,
+      "new_price": 73.9,
+      "difference": -36.54,
+      "percentage": -33.1
+    },
+    {
+      "name": "BTX Vitamin Complex Revitalizing 07",
+      "category": "Progressivas e BTX",
+      "volume": "350g",
+      "old_price": 38.9,
+      "new_price": 52.9,
+      "difference": 14.0,
+      "percentage": 36.0
+    },
+    {
+      "name": "Progressiva Nano Technology Ultra 08",
+      "category": "Progressivas e BTX",
+      "volume": "750ml",
+      "old_price": 162.8,
+      "new_price": 73.9,
+      "difference": -88.9,
+      "percentage": -54.6
+    },
+    {
+      "name": "BTX Argan Oil Luxury Treatment 09",
+      "category": "Progressivas e BTX",
+      "volume": "450g",
+      "old_price": 46.46,
+      "new_price": 52.9,
+      "difference": 6.44,
+      "percentage": 13.9
+    },
+    {
+      "name": "Progressiva Diamond Shine Professional 10",
+      "category": "Progressivas e BTX",
+      "volume": "900ml",
+      "old_price": 172.04,
+      "new_price": 73.9,
+      "difference": -98.14,
+      "percentage": -57.0
+    },
+    {
+      "name": "Sistema Progressivo Advanced Premium 11",
+      "category": "Progressivas e BTX",
+      "volume": "500ml",
+      "old_price": 34.14,
+      "new_price": 73.9,
+      "difference": 39.76,
+      "percentage": 116.5
+    },
+    {
+      "name": "BTX Ultra Reconstruction Therapy 12",
+      "category": "Progressivas e BTX",
+      "volume": "1L",
+      "old_price": 43.03,
+      "new_price": 52.9,
+      "difference": 9.87,
+      "percentage": 22.9
+    },
+    {
+      "name": "Luxury Progressive Gold System 13",
+      "category": "Progressivas e BTX",
+      "volume": "500ml",
+      "old_price": 46.02,
+      "new_price": 73.9,
+      "difference": 27.88,
+      "percentage": 60.6
+    },
+    {
+      "name": "Professional BTX Therapy Advanced 14",
+      "category": "Progressivas e BTX",
+      "volume": "1L",
+      "old_price": 36.26,
+      "new_price": 52.9,
+      "difference": 16.64,
+      "percentage": 45.9
+    },
+    {
+      "name": "Premium BTX Diamond Collection 15",
+      "category": "Progressivas e BTX",
+      "volume": "1L",
+      "old_price": 48.93,
+      "new_price": 52.9,
+      "difference": 3.97,
+      "percentage": 8.1
+    },
+    {
+      "name": "Royal Progressive Platinum System 16",
+      "category": "Progressivas e BTX",
+      "volume": "500ml",
+      "old_price": 43.82,
+      "new_price": 73.9,
+      "difference": 30.08,
+      "percentage": 68.6
+    },
+    {
+      "name": "Coloração Profissional Advanced Color 01",
+      "category": "Coloração Capilar",
+      "volume": "60ml",
+      "old_price": 17.42,
+      "new_price": 10.95,
+      "difference": -6.47,
+      "percentage": -37.1
+    },
+    {
+      "name": "Coloração Profissional Advanced Color 02",
+      "category": "Coloração Capilar",
+      "volume": "60ml",
+      "old_price": 17.6,
+      "new_price": 10.95,
+      "difference": -6.65,
+      "percentage": -37.8
+    },
+    {
+      "name": "Coloração Profissional Advanced Color 03",
+      "category": "Coloração Capilar",
+      "volume": "60ml",
+      "old_price": 17.78,
+      "new_price": 10.95,
+      "difference": -6.83,
+      "percentage": -38.4
+    },
+    {
+      "name": "Coloração Profissional Advanced Color 04",
+      "category": "Coloração Capilar",
+      "volume": "60ml",
+      "old_price": 17.95,
+      "new_price": 10.95,
+      "difference": -7.0,
+      "percentage": -39.0
+    },
+    {
+      "name": "Coloração Intensiva Professional 05",
+      "category": "Coloração Capilar",
+      "volume": "60ml",
+      "old_price": 16.37,
+      "new_price": 10.95,
+      "difference": -5.42,
+      "percentage": -33.1
+    },
+    {
+      "name": "Coloração Salon Grade Professional 06",
+      "category": "Coloração Capilar",
+      "volume": "60ml",
+      "old_price": 18.66,
+      "new_price": 10.95,
+      "difference": -7.71,
+      "percentage": -41.3
+    },
+    {
+      "name": "Ultra Color Professional 07",
+      "category": "Coloração Capilar",
+      "volume": "60ml",
+      "old_price": 20.06,
+      "new_price": 10.95,
+      "difference": -9.11,
+      "percentage": -45.4
+    },
+    {
+      "name": "Master Color Professional 08",
+      "category": "Coloração Capilar",
+      "volume": "60ml",
+      "old_price": 21.56,
+      "new_price": 10.95,
+      "difference": -10.61,
+      "percentage": -49.2
+    },
+    {
+      "name": "Elite Color Professional 09",
+      "category": "Coloração Capilar",
+      "volume": "60ml",
+      "old_price": 22.18,
+      "new_price": 10.95,
+      "difference": -11.23,
+      "percentage": -50.6
+    },
+    {
+      "name": "Platinum Color Professional 10",
+      "category": "Coloração Capilar",
+      "volume": "60ml",
+      "old_price": 23.58,
+      "new_price": 10.95,
+      "difference": -12.63,
+      "percentage": -53.6
+    },
+    {
+      "name": "Advanced Treatment System Recovery 16",
+      "category": "Coloração Capilar",
+      "volume": "300ml",
+      "old_price": 26.22,
+      "new_price": 10.95,
+      "difference": -15.27,
+      "percentage": -58.2
+    },
+    {
+      "name": "Intensive Repair Therapy Gold 17",
+      "category": "Coloração Capilar",
+      "volume": "250ml",
+      "old_price": 31.33,
+      "new_price": 10.95,
+      "difference": -20.38,
+      "percentage": -65.0
+    },
+    {
+      "name": "Professional Nutrition Complex Platinum 18",
+      "category": "Coloração Capilar",
+      "volume": "500ml",
+      "old_price": 37.22,
+      "new_price": 10.95,
+      "difference": -26.27,
+      "percentage": -70.6
+    },
+    {
+      "name": "Ultra Hydration Therapy Diamond 19",
+      "category": "Coloração Capilar",
+      "volume": "300ml",
+      "old_price": 34.23,
+      "new_price": 10.95,
+      "difference": -23.28,
+      "percentage": -68.0
+    },
+    {
+      "name": "Regenerative Treatment Premium System 20",
+      "category": "Coloração Capilar",
+      "volume": "250ml",
+      "old_price": 40.3,
+      "new_price": 10.95,
+      "difference": -29.35,
+      "percentage": -72.8
+    },
+    {
+      "name": "Base BT Skin D30 - Tom Escuro",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 24.2,
+      "new_price": 26.9,
+      "difference": 2.7,
+      "percentage": 11.2
+    },
+    {
+      "name": "Base BT Skin F10 - Tom Claro",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 24.2,
+      "new_price": 26.9,
+      "difference": 2.7,
+      "percentage": 11.2
+    },
+    {
+      "name": "Base BT Skin M20 - Tom Médio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 24.2,
+      "new_price": 26.9,
+      "difference": 2.7,
+      "percentage": 11.2
+    },
+    {
+      "name": "Base Mari Maria - Tom Amêndoa",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 1,
+      "new_price": 26.9,
+      "difference": 25.9,
+      "percentage": 2590.0
+    },
+    {
+      "name": "Teste Juliana",
+      "category": "Maquiagem Premium",
+      "volume": "1un",
+      "old_price": 1,
+      "new_price": 16.95,
+      "difference": 15.95,
+      "percentage": 1595.0
+    },
+    {
+      "name": "Base Mari Maria - Tom Baunilha",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 28.56,
+      "new_price": 26.9,
+      "difference": -1.66,
+      "percentage": -5.8
+    },
+    {
+      "name": "Base Mari Maria - Tom Bege Claro",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 29.36,
+      "new_price": 26.9,
+      "difference": -2.46,
+      "percentage": -8.4
+    },
+    {
+      "name": "Base Mari Maria - Tom Bege Escuro",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 29.76,
+      "new_price": 26.9,
+      "difference": -2.86,
+      "percentage": -9.6
+    },
+    {
+      "name": "Base Mari Maria - Tom Bege Médio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 30.16,
+      "new_price": 26.9,
+      "difference": -3.26,
+      "percentage": -10.8
+    },
+    {
+      "name": "Base Mari Maria - Tom Cacau",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 30.56,
+      "new_price": 26.9,
+      "difference": -3.66,
+      "percentage": -12.0
+    },
+    {
+      "name": "Base Mari Maria - Tom Canela",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 30.96,
+      "new_price": 26.9,
+      "difference": -4.06,
+      "percentage": -13.1
+    },
+    {
+      "name": "Base Mari Maria - Tom Caramelo",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 31.36,
+      "new_price": 26.9,
+      "difference": -4.46,
+      "percentage": -14.2
+    },
+    {
+      "name": "Base Mari Maria - Tom Chocolate",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 31.76,
+      "new_price": 26.9,
+      "difference": -4.86,
+      "percentage": -15.3
+    },
+    {
+      "name": "Base Mari Maria - Tom Nude",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 32.16,
+      "new_price": 26.9,
+      "difference": -5.26,
+      "percentage": -16.4
+    },
+    {
+      "name": "Base BT Skin D10 - Tom Dourado",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 22,
+      "new_price": 26.9,
+      "difference": 4.9,
+      "percentage": 22.3
+    },
+    {
+      "name": "Base BT Skin D20 - Tom Dourado",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 22.25,
+      "new_price": 26.9,
+      "difference": 4.65,
+      "percentage": 20.9
+    },
+    {
+      "name": "Base BT Skin D40 - Tom Dourado",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 22.75,
+      "new_price": 26.9,
+      "difference": 4.15,
+      "percentage": 18.2
+    },
+    {
+      "name": "Base BT Skin D50 - Tom Dourado",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 23,
+      "new_price": 26.9,
+      "difference": 3.9,
+      "percentage": 17.0
+    },
+    {
+      "name": "Base BT Skin D60 - Tom Dourado",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 23.25,
+      "new_price": 26.9,
+      "difference": 3.65,
+      "percentage": 15.7
+    },
+    {
+      "name": "Base BT Skin F20 - Tom Frio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 22.25,
+      "new_price": 26.9,
+      "difference": 4.65,
+      "percentage": 20.9
+    },
+    {
+      "name": "Base BT Skin F30 - Tom Frio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 22.5,
+      "new_price": 26.9,
+      "difference": 4.4,
+      "percentage": 19.6
+    },
+    {
+      "name": "Base BT Skin F40 - Tom Frio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 22.75,
+      "new_price": 26.9,
+      "difference": 4.15,
+      "percentage": 18.2
+    },
+    {
+      "name": "Base BT Skin F50 - Tom Frio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 23,
+      "new_price": 26.9,
+      "difference": 3.9,
+      "percentage": 17.0
+    },
+    {
+      "name": "Base BT Skin F60 - Tom Frio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 23.25,
+      "new_price": 26.9,
+      "difference": 3.65,
+      "percentage": 15.7
+    },
+    {
+      "name": "Base BT Skin L10 - Tom Livre",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 23.5,
+      "new_price": 26.9,
+      "difference": 3.4,
+      "percentage": 14.5
+    },
+    {
+      "name": "Base BT Skin L20 - Tom Livre",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 23.75,
+      "new_price": 26.9,
+      "difference": 3.15,
+      "percentage": 13.3
+    },
+    {
+      "name": "Base BT Skin L30 - Tom Livre",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 24,
+      "new_price": 26.9,
+      "difference": 2.9,
+      "percentage": 12.1
+    },
+    {
+      "name": "Base BT Skin L40 - Tom Livre",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 24.25,
+      "new_price": 26.9,
+      "difference": 2.65,
+      "percentage": 10.9
+    },
+    {
+      "name": "Base BT Skin L50 - Tom Livre",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 24.5,
+      "new_price": 26.9,
+      "difference": 2.4,
+      "percentage": 9.8
+    },
+    {
+      "name": "Base BT Skin L60 - Tom Livre",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 24.75,
+      "new_price": 26.9,
+      "difference": 2.15,
+      "percentage": 8.7
+    },
+    {
+      "name": "Base BT Skin M10 - Tom Médio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 25,
+      "new_price": 26.9,
+      "difference": 1.9,
+      "percentage": 7.6
+    },
+    {
+      "name": "Base BT Skin M30 - Tom Médio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 25.25,
+      "new_price": 26.9,
+      "difference": 1.65,
+      "percentage": 6.5
+    },
+    {
+      "name": "Base BT Skin M40 - Tom Médio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 25.5,
+      "new_price": 26.9,
+      "difference": 1.4,
+      "percentage": 5.5
+    },
+    {
+      "name": "Base BT Skin M50 - Tom Médio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 25.75,
+      "new_price": 26.9,
+      "difference": 1.15,
+      "percentage": 4.5
+    },
+    {
+      "name": "Base BT Skin M60 - Tom Médio",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 26,
+      "new_price": 26.9,
+      "difference": 0.9,
+      "percentage": 3.5
+    },
+    {
+      "name": "Base BT Skin T10 - Tom Tropicália",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 26.25,
+      "new_price": 26.9,
+      "difference": 0.65,
+      "percentage": 2.5
+    },
+    {
+      "name": "Base BT Skin T20 - Tom Tropicália",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 26.5,
+      "new_price": 26.9,
+      "difference": 0.4,
+      "percentage": 1.5
+    },
+    {
+      "name": "Base BT Skin T30 - Tom Tropicália",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 26.75,
+      "new_price": 26.9,
+      "difference": 0.15,
+      "percentage": 0.6
+    },
+    {
+      "name": "Base BT Skin T40 - Tom Tropicália",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 27,
+      "new_price": 26.9,
+      "difference": -0.1,
+      "percentage": -0.4
+    },
+    {
+      "name": "Base BT Skin T50 - Tom Tropicália",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 27.25,
+      "new_price": 26.9,
+      "difference": -0.35,
+      "percentage": -1.3
+    },
+    {
+      "name": "Base BT Skin T60 - Tom Tropicália",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 27.5,
+      "new_price": 26.9,
+      "difference": -0.6,
+      "percentage": -2.2
+    },
+    {
+      "name": "Batom Premium Matte Luxo 01",
+      "category": "Maquiagem Premium",
+      "volume": "3.5g",
+      "old_price": 28.6,
+      "new_price": 16.95,
+      "difference": -11.65,
+      "percentage": -40.7
+    },
+    {
+      "name": "Base Líquida Premium Full Coverage 02",
+      "category": "Maquiagem Premium",
+      "volume": "30ml",
+      "old_price": 33.44,
+      "new_price": 26.9,
+      "difference": -6.54,
+      "percentage": -19.6
+    },
+    {
+      "name": "Corretivo Premium High Definition 03",
+      "category": "Maquiagem Premium",
+      "volume": "6ml",
+      "old_price": 25.08,
+      "new_price": 16.95,
+      "difference": -8.13,
+      "percentage": -32.4
+    },
+    {
+      "name": "Máscara para Cílios Premium Volume 04",
+      "category": "Maquiagem Premium",
+      "volume": "8ml",
+      "old_price": 23.58,
+      "new_price": 22.9,
+      "difference": -0.68,
+      "percentage": -2.9
+    },
+    {
+      "name": "Paleta de Sombras Premium Luxury 05",
+      "category": "Maquiagem Premium",
+      "volume": "12 x 2g",
+      "old_price": 39.6,
+      "new_price": 34.9,
+      "difference": -4.7,
+      "percentage": -11.9
+    },
+    {
+      "name": "Blush Premium Glow Natural 06",
+      "category": "Maquiagem Premium",
+      "volume": "8g",
+      "old_price": 21.56,
+      "new_price": 16.95,
+      "difference": -4.61,
+      "percentage": -21.4
+    },
+    {
+      "name": "Delineador Premium Precision 07",
+      "category": "Maquiagem Premium",
+      "volume": "2ml",
+      "old_price": 20.06,
+      "new_price": 16.95,
+      "difference": -3.11,
+      "percentage": -15.5
+    },
+    {
+      "name": "Pó Compacto Premium Translúcido 08",
+      "category": "Maquiagem Premium",
+      "volume": "10g",
+      "old_price": 22.88,
+      "new_price": 16.95,
+      "difference": -5.93,
+      "percentage": -25.9
+    },
+    {
+      "name": "juliana teste",
+      "category": "Maquiagem Premium",
+      "volume": "1 unidade",
+      "old_price": 1,
+      "new_price": 16.95,
+      "difference": 15.95,
+      "percentage": 1595.0
+    },
+    {
+      "name": "🧪 Produto Teste - Email System",
+      "category": "Maquiagem Premium",
+      "volume": "Digital",
+      "old_price": 1,
+      "new_price": 16.95,
+      "difference": 15.95,
+      "percentage": 1595.0
+    },
+    {
+      "name": "Elite Coloração Premium Pro 11",
+      "category": "Maquiagem Premium",
+      "volume": "60ml",
+      "old_price": 19.71,
+      "new_price": 16.95,
+      "difference": -2.76,
+      "percentage": -14.0
+    },
+    {
+      "name": "Supreme Color Intensive System 12",
+      "category": "Maquiagem Premium",
+      "volume": "100ml",
+      "old_price": 22.7,
+      "new_price": 16.95,
+      "difference": -5.75,
+      "percentage": -25.3
+    },
+    {
+      "name": "Luxury Color Diamond Collection 13",
+      "category": "Maquiagem Premium",
+      "volume": "60ml",
+      "old_price": 25.43,
+      "new_price": 16.95,
+      "difference": -8.48,
+      "percentage": -33.3
+    },
+    {
+      "name": "Professional Color Platinum Advanced 14",
+      "category": "Maquiagem Premium",
+      "volume": "100ml",
+      "old_price": 23.32,
+      "new_price": 16.95,
+      "difference": -6.37,
+      "percentage": -27.3
+    },
+    {
+      "name": "Royal Color Exclusive Edition 15",
+      "category": "Maquiagem Premium",
+      "volume": "60ml",
+      "old_price": 28.34,
+      "new_price": 16.95,
+      "difference": -11.39,
+      "percentage": -40.2
+    },
+    {
+      "name": "Bio Extratus Hidratação Intensiva",
+      "category": "Tratamentos Capilares",
+      "volume": "500g",
+      "old_price": 13.2,
+      "new_price": 28.9,
+      "difference": 15.7,
+      "percentage": 118.9
+    },
+    {
+      "name": "Hidratação Premium Intensiva Advanced",
+      "category": "Tratamentos Capilares",
+      "volume": "300g",
+      "old_price": 16.28,
+      "new_price": 28.9,
+      "difference": 12.62,
+      "percentage": 77.5
+    },
+    {
+      "name": "Nutrição Avançada Repair System",
+      "category": "Tratamentos Capilares",
+      "volume": "250ml",
+      "old_price": 14.78,
+      "new_price": 28.9,
+      "difference": 14.12,
+      "percentage": 95.5
+    },
+    {
+      "name": "Reconstrução Total Protein Complex",
+      "category": "Tratamentos Capilares",
+      "volume": "200ml",
+      "old_price": 19.36,
+      "new_price": 28.9,
+      "difference": 9.54,
+      "percentage": 49.3
+    },
+    {
+      "name": "Máscara Nutritiva Argan & Karité",
+      "category": "Tratamentos Capilares",
+      "volume": "500g",
+      "old_price": 17.16,
+      "new_price": 22.9,
+      "difference": 5.74,
+      "percentage": 33.4
+    },
+    {
+      "name": "Ampola Fortalecimento Intensivo",
+      "category": "Tratamentos Capilares",
+      "volume": "12ml x 6 ampolas",
+      "old_price": 22,
+      "new_price": 28.9,
+      "difference": 6.9,
+      "percentage": 31.4
+    },
+    {
+      "name": "Sérum Anti-Frizz Controle Total",
+      "category": "Tratamentos Capilares",
+      "volume": "100ml",
+      "old_price": 12.76,
+      "new_price": 28.9,
+      "difference": 16.14,
+      "percentage": 126.5
+    },
+    {
+      "name": "Óleo Capilar Multivitamínico",
+      "category": "Tratamentos Capilares",
+      "volume": "60ml",
+      "old_price": 15.14,
+      "new_price": 28.9,
+      "difference": 13.76,
+      "percentage": 90.9
+    },
+    {
+      "name": "Creme Leave-in Proteção Total",
+      "category": "Tratamentos Capilares",
+      "volume": "150ml",
+      "old_price": 12.14,
+      "new_price": 28.9,
+      "difference": 16.76,
+      "percentage": 138.1
+    },
+    {
+      "name": "Máscara Reparadora Pós-Química",
+      "category": "Tratamentos Capilares",
+      "volume": "400g",
+      "old_price": 18.92,
+      "new_price": 22.9,
+      "difference": 3.98,
+      "percentage": 21.0
+    },
+    {
+      "name": "Tônico Crescimento Acelerado",
+      "category": "Tratamentos Capilares",
+      "volume": "120ml",
+      "old_price": 22.88,
+      "new_price": 28.9,
+      "difference": 6.02,
+      "percentage": 26.3
+    },
+    {
+      "name": "Spray Termoativo Proteção Máxima",
+      "category": "Tratamentos Capilares",
+      "volume": "200ml",
+      "old_price": 13.73,
+      "new_price": 28.9,
+      "difference": 15.17,
+      "percentage": 110.5
+    },
+    {
+      "name": "Condicionador Profundo Restaurador",
+      "category": "Tratamentos Capilares",
+      "volume": "350ml",
+      "old_price": 14.26,
+      "new_price": 28.9,
+      "difference": 14.64,
+      "percentage": 102.7
+    },
+    {
+      "name": "Sérum Antiqueda Fortalecedor",
+      "category": "Tratamentos Capilares",
+      "volume": "50ml",
+      "old_price": 25.08,
+      "new_price": 28.9,
+      "difference": 3.82,
+      "percentage": 15.2
+    },
+    {
+      "name": "Máscara Detox Purificante",
+      "category": "Tratamentos Capilares",
+      "volume": "250g",
+      "old_price": 16.54,
+      "new_price": 22.9,
+      "difference": 6.36,
+      "percentage": 38.5
+    },
+    {
+      "name": "Ampola Shock Reconstruction",
+      "category": "Tratamentos Capilares",
+      "volume": "15ml x 4 ampolas",
+      "old_price": 28.16,
+      "new_price": 28.9,
+      "difference": 0.74,
+      "percentage": 2.6
+    }
+  ]
+}
