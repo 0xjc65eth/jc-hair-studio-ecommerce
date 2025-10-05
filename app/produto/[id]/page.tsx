@@ -12,6 +12,7 @@ import { resolveProductById, getAllAvailableProducts } from '../../../lib/servic
 import ImageCarousel from '../../../components/products/ImageCarousel';
 import { ProductSchema } from '../../../components/seo/SchemaMarkup';
 import { CategoryBackButton } from '@/components/navigation/BackButton';
+import WishlistButton from '@/components/catalogo/WishlistButton';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -143,6 +144,28 @@ export default function ProductDetailPage() {
   const handleQuantityChange = (newQuantity: number) => {
     if (newQuantity >= 1) {
       setQuantity(newQuantity);
+    }
+  };
+
+  const handleShare = async () => {
+    const shareData = {
+      title: product.nome || product.name,
+      text: `Confira ${product.nome || product.name} - €${(product.preco_eur || product.pricing?.discountPrice || 0).toFixed(2)}`,
+      url: typeof window !== 'undefined' ? window.location.href : '',
+    };
+
+    try {
+      if (navigator.share) {
+        // Use native share on mobile
+        await navigator.share(shareData);
+        console.log('Produto compartilhado com sucesso!');
+      } else {
+        // Fallback: copy to clipboard
+        await navigator.clipboard.writeText(shareData.url);
+        toast.success('Link copiado para a área de transferência!');
+      }
+    } catch (error) {
+      console.error('Erro ao compartilhar:', error);
     }
   };
 
@@ -332,12 +355,18 @@ export default function ProductDetailPage() {
                   <ShoppingBag className="w-5 h-5" />
                   Adicionar ao Carrinho
                 </button>
-                
-                <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
-                  <Heart className="w-5 h-5 text-gray-600" />
-                </button>
-                
-                <button className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+
+                <WishlistButton
+                  productId={product.id}
+                  size="lg"
+                  className="!w-auto px-4"
+                />
+
+                <button
+                  onClick={handleShare}
+                  className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+                  title="Compartilhar produto"
+                >
                   <Share2 className="w-5 h-5 text-gray-600" />
                 </button>
               </div>
