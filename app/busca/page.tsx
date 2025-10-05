@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Search, Filter, Grid, List, ChevronDown, X, Heart, ShoppingCart, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -172,7 +172,7 @@ const SearchProductCard = ({ product, variant = 'vertical' }: { product: Product
   );
 };
 
-export default function BuscaPage() {
+function BuscaContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const query = searchParams.get('q') || '';
@@ -597,5 +597,17 @@ export default function BuscaPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function BuscaPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-gray-600 border-t-transparent rounded-full animate-spin" />
+      </div>
+    }>
+      <BuscaContent />
+    </Suspense>
   );
 }
