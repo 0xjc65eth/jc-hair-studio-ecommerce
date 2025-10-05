@@ -10,8 +10,10 @@ import { HomepageSchema } from '../components/seo/SchemaMarkup';
 import FacebookPixel from '../components/analytics/FacebookPixel';
 import GoogleAnalytics from '../components/analytics/GoogleAnalytics';
 import LiveChat from '../components/ui/LiveChat';
-import CartAbandonmentRecovery from '../components/cart/CartAbandonmentRecovery';
-import PerformanceOptimizer from '../components/performance/PerformanceOptimizer';
+import { Analytics } from '@vercel/analytics/next';
+// REMOVED: PerformanceOptimizer - fought Next.js optimizations, caused hydration errors
+// WHY: Next.js 14 already optimizes images, fonts, prefetching, and caching
+// HOW: Component mutated DOM during render, duplicated Next.js features
 import '../styles/globals.css';
 import '../styles/components.css';
 
@@ -179,11 +181,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta itemProp="image" content="/og-image.jpg" />
         
         {/* Google Analytics 4 */}
-        {process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_GA_ID && (
+        {process.env.NODE_ENV === 'production' && (
           <>
             <script
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              src="https://www.googletagmanager.com/gtag/js?id=G-W6SPHYF1T9"
             />
             <script
               dangerouslySetInnerHTML={{
@@ -191,7 +193,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                  gtag('config', 'G-W6SPHYF1T9', {
                     page_title: document.title,
                     page_location: window.location.href,
                     custom_map: {
@@ -280,30 +282,26 @@ export default function RootLayout({ children }: RootLayoutProps) {
           Pular para o conteúdo principal
         </a>
 
-        {/* Performance Optimization Wrapper */}
-        <PerformanceOptimizer>
-          {/* Main App Structure */}
-          <AuthProvider>
-            <CartInitializer>
-              <div className="min-h-screen flex flex-col">
-                {/* Header */}
-                <RevolutionaryHeader />
+        {/* Main App Structure - PerformanceOptimizer removed for Next.js compatibility */}
+        <AuthProvider>
+          <CartInitializer>
+            <div className="min-h-screen flex flex-col">
+              {/* Header */}
+              <RevolutionaryHeader />
 
-                {/* Main Content */}
-                <main id="main-content" className="flex-1 pt-16 lg:pt-20">
-                  {children}
-                </main>
+              {/* Main Content */}
+              <main id="main-content" className="flex-1 pt-16 lg:pt-20">
+                {children}
+              </main>
 
-                {/* Footer */}
-                <Footer />
+              {/* Footer */}
+              <Footer />
 
-                {/* Conversion Optimization Components */}
-                <LiveChat />
-                <CartAbandonmentRecovery />
-              </div>
-            </CartInitializer>
-          </AuthProvider>
-        </PerformanceOptimizer>
+              {/* Conversion Optimization Components */}
+              <LiveChat />
+            </div>
+          </CartInitializer>
+        </AuthProvider>
 
         {/* Global Loading Indicator */}
         <div id="global-loading" className="fixed inset-0 bg-white/80 backdrop-blur-sm z-50 hidden items-center justify-center">
@@ -323,6 +321,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <HomepageSchema />
 
         {/* Analytics & Tracking */}
+        <Analytics />
         {process.env.NODE_ENV === 'production' && (
           <>
             {process.env.NEXT_PUBLIC_GA_ID && (
