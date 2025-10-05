@@ -1,13 +1,19 @@
 import sgMail from '@sendgrid/mail';
 import logger from '@/lib/logger';
 
+// Helper to clean env vars (remove newlines added by vercel env pull)
+function cleanEnv(value: string | undefined): string | undefined {
+  return value?.trim().replace(/[\n\r]/g, '');
+}
+
 // Configuração condicional do SendGrid
-const SENDGRID_ENABLED = !!process.env.SENDGRID_API_KEY && process.env.SENDGRID_API_KEY !== 'SG.your-sendgrid-api-key' && process.env.SENDGRID_API_KEY.startsWith('SG.');
+const SENDGRID_API_KEY = cleanEnv(process.env.SENDGRID_API_KEY);
+const SENDGRID_ENABLED = !!SENDGRID_API_KEY && SENDGRID_API_KEY !== 'SG.your-sendgrid-api-key' && SENDGRID_API_KEY.startsWith('SG.');
 const FORCE_SEND_EMAILS = process.env.FORCE_SEND_EMAILS === 'true';
 const SANDBOX_MODE = process.env.SENDGRID_SANDBOX_MODE === 'true';
 
 if (SENDGRID_ENABLED || FORCE_SEND_EMAILS) {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+  sgMail.setApiKey(SENDGRID_API_KEY!);
   logger.info('SendGrid configurado com sucesso', {
     enabled: SENDGRID_ENABLED,
     forceSend: FORCE_SEND_EMAILS,
@@ -50,8 +56,8 @@ export async function sendEmail(emailData: EmailData): Promise<boolean> {
     }
 
     const msg = {
-      to: emailData.to,
-      from: `${process.env.FROM_NAME || 'JC Hair Studio\'s 62'} <${process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz'}>`,
+      to: cleanEnv(emailData.to) || emailData.to,
+      from: `${cleanEnv(process.env.FROM_NAME) || 'JC Hair Studio\'s 62'} <${cleanEnv(process.env.FROM_EMAIL) || 'orders@jchairstudios62.xyz'}>`,
       subject: emailData.subject,
       text: emailData.text,
       html: emailData.html,
