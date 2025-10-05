@@ -55,10 +55,13 @@ export default function ProductDetailPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-white">
-        {/* Back Button - Always visible */}
+        {/* Back Button - Server-safe version */}
         <div className="bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 py-3">
-            <CategoryBackButton variant="ghost" />
+            <Link href="/produtos" className="inline-flex items-center gap-2 text-gray-600 hover:text-amber-600 hover:bg-amber-50 px-3 py-2 rounded-lg font-medium transition-all duration-200">
+              <ArrowLeft className="w-4 h-4" />
+              <span>Voltar</span>
+            </Link>
           </div>
         </div>
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -74,10 +77,13 @@ export default function ProductDetailPage() {
   if (!product) {
     return (
       <div className="min-h-screen bg-white">
-        {/* Back Button - Always visible */}
+        {/* Back Button - Server-safe version */}
         <div className="bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 py-3">
-            <CategoryBackButton variant="ghost" />
+            <Link href="/produtos" className="inline-flex items-center gap-2 text-gray-600 hover:text-amber-600 hover:bg-amber-50 px-3 py-2 rounded-lg font-medium transition-all duration-200">
+              <ArrowLeft className="w-4 h-4" />
+              <span>Voltar</span>
+            </Link>
           </div>
         </div>
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">
