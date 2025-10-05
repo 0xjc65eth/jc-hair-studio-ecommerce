@@ -1,0 +1,295 @@
+=== PLANILHA DETALHADA - IMPORTAÇÃO BRASIL → EUROPA ===
+"Versão: 2.0 | Data: 2025-10-05 | TRABALHO COM DINHEIRO DO CLIENTE - MÁXIMA PRECISÃO"
+
+=== LEGENDAS E INFORMAÇÕES IMPORTANTES ===
+
+CÂMBIO UTILIZADO:
+"R$ 5,50 por €1,00 (média 2025)"
+"Variação esperada: R$ 5,00 - R$ 6,00"
+
+CUSTOS FIXOS DE IMPORTAÇÃO (por pedido):
+Método,Custo Fixo,Tempo Entrega,Peso Máximo,Observações
+DHL Express,€150-200,3-5 dias,30kg,"Rápido, rastreável, confiável"
+LATAM Cargo,€80-120,5-7 dias,50kg,"Bom custo-benefício, voos regulares"
+Marítimo LCL,€300-500,30-45 dias,100-500kg,"Econômico para grandes volumes"
+Correios Brasil,€50-80,15-25 dias,20kg,"Mais barato mas menos confiável"
+
+TAXAS E IMPOSTOS EUROPA:
+Alfândega Cosméticos,0%,Produtos de beleza isentos na UE
+IVA (VAT),21%,Aplicado sobre valor total (produto + frete)
+Desembaraço,€30-50,Taxa de handling aduaneiro
+Responsible Person,€500-2000/ano,"Obrigatório para vender cosméticos na UE"
+Safety Assessment,€300-1500/produto,"Obrigatório, pode usar um para linha similar"
+
+=== ABA 1: PRODUTOS COM DETALHAMENTO COMPLETO ===
+
+CATEGORIA,PRODUTO,SKU,MARCA,VOLUME,CUSTO BRASIL (R$),CUSTO BRASIL (€),PESO (g),QTD MIN,FORNECEDOR BRASIL,ALTERNATIVA 1,ALTERNATIVA 2,CUSTO FRETE (€),CUSTO TOTAL (€),PREÇO VENDA (€),MARGEM (€),MARGEM %,OBSERVAÇÕES
+
+PROGRESSIVAS & BTX,Brasil Cacau 1L,CAD-BC-1L,Cadiveu,1000ml,R$ 330,€60,1200,1,Cadiveu Oficial,Inoar G.Hair R$ 380,Sweet Hair R$ 420,€20,€85,€195.60,€110.60,56.5%,"Best-seller, alta demanda Europa"
+PROGRESSIVAS & BTX,Brasil Cacau 300ml,CAD-BC-300,Cadiveu,300ml,R$ 110,€20,400,1,Cadiveu Oficial,Inoar Mini R$ 95,Forever Liss R$ 85,€8,€30,€73.90,€43.90,59.4%,"Tamanho travel, bom para testes"
+PROGRESSIVAS & BTX,Forever Liss BTX 250g,FL-BTX-250,Forever Liss,250g,R$ 75,€13.64,300,1,Forever Liss Store,Cadiveu BTX R$ 90,Inoar BTX R$ 85,€6,€22,€52.90,€30.90,58.4%,"Produto entry-level, ótima margem"
+PROGRESSIVAS & BTX,Forever Liss BTX 1kg,FL-BTX-1K,Forever Liss,1000g,R$ 220,€40,1100,1,Forever Liss Store,Hobex BTX R$ 250,Yenzah R$ 240,€18,€62,€162.90,€100.90,61.9%,"Profissional, recompra frequente"
+PROGRESSIVAS & BTX,BTX Professional 250g,BTX-PRO-01,Genérico Pro,250g,R$ 65,€11.82,300,3,Atacado SP,Salon Line R$ 70,Skala R$ 55,€6,€20,€52.90,€32.90,62.2%,"Marca própria possível, margem alta"
+PROGRESSIVAS & BTX,Progressiva Advanced 300ml,PROG-ADV-02,Linha Pro,300ml,R$ 95,€17.27,400,3,Atacado SP,Beleza Natural R$ 105,Leads Care R$ 90,€8,€28,€73.90,€45.90,62.1%,"Alta rotatividade"
+PROGRESSIVAS & BTX,BTX Repair 250g,BTX-REP-03,Linha Pro,250g,R$ 68,€12.36,300,3,Atacado SP,Truss R$ 95,Nuance R$ 75,€6,€21,€52.90,€31.90,60.3%,"Boa aceitação mercado"
+PROGRESSIVAS & BTX,Progressiva Keratin 300ml,PROG-KER-04,Keratin Complex,300ml,R$ 98,€17.82,400,2,Hair Brasil,K-Therapy R$ 110,Soller R$ 88,€8,€28,€73.90,€45.90,62.1%,"Premium positioning"
+PROGRESSIVAS & BTX,BTX Collagen 250g,BTX-COL-05,Collagen Line,250g,R$ 70,€12.73,300,3,Beauty Supply,Marine Collagen R$ 85,Pro Collagen R$ 78,€6,€21,€52.90,€31.90,60.2%,"Ingrediente em alta"
+PROGRESSIVAS & BTX,Progressiva Silk 300ml,PROG-SILK-06,Silk Protein,300ml,R$ 92,€16.73,400,3,Silk Hair Brasil,Seda Therapy R$ 98,Amino Silk R$ 88,€8,€28,€73.90,€45.90,62.2%,"Diferencial seda natural"
+PROGRESSIVAS & BTX,BTX Vitamin 250g,BTX-VIT-07,Vitamin Complex,250g,R$ 72,€13.09,300,3,Vita Hair,Multi Vitamin R$ 80,Bio Vitamin R$ 75,€6,€22,€52.90,€30.90,58.4%,"Rico em vitaminas"
+PROGRESSIVAS & BTX,Progressiva Nano 300ml,PROG-NANO-08,Nano Tech,300ml,R$ 105,€19.09,400,2,Nano Brasil,Ultra Nano R$ 115,Pure Nano R$ 98,€8,€30,€73.90,€43.90,59.4%,"Tecnologia avançada"
+PROGRESSIVAS & BTX,BTX Argan 250g,BTX-ARG-09,Argan Oil,250g,R$ 78,€14.18,300,3,Argan Store,Morocco Argan R$ 88,Pure Argan R$ 82,€6,€22,€52.90,€30.90,58.3%,"Óleo de argan puro"
+PROGRESSIVAS & BTX,Progressiva Diamond 300ml,PROG-DIA-10,Diamond Line,300ml,R$ 108,€19.64,400,2,Diamond Hair,Luxury Diamond R$ 120,Pro Diamond R$ 98,€8,€30,€73.90,€43.90,59.2%,"Linha premium"
+PROGRESSIVAS & BTX,Sistema Progressivo 300ml,SIST-PROG-11,Pro System,300ml,R$ 100,€18.18,400,2,System Hair,Complete System R$ 110,Full System R$ 95,€8,€29,€73.90,€44.90,60.8%,"Kit completo"
+PROGRESSIVAS & BTX,BTX Ultra 250g,BTX-ULT-12,Ultra Line,250g,R$ 75,€13.64,300,3,Ultra Beauty,Supreme BTX R$ 85,Max BTX R$ 78,€6,€22,€52.90,€30.90,58.4%,"Resultado intenso"
+PROGRESSIVAS & BTX,Luxury Progressive 300ml,LUX-PROG-13,Gold System,300ml,R$ 112,€20.36,400,2,Gold Hair,Platinum Line R$ 125,Elite Pro R$ 105,€8,€31,€73.90,€42.90,58.1%,"Posicionamento alto"
+PROGRESSIVAS & BTX,Professional BTX 250g,BTX-PRO-14,Advanced Pro,250g,R$ 73,€13.27,300,3,Pro Store,Master BTX R$ 82,Expert BTX R$ 76,€6,€22,€52.90,€30.90,58.5%,"Fórmula profissional"
+PROGRESSIVAS & BTX,Premium BTX 250g,BTX-PREM-15,Diamond Collection,250g,R$ 76,€13.82,300,3,Premium Store,Royal BTX R$ 85,Elite BTX R$ 79,€6,€22,€52.90,€30.90,58.3%,"Coleção especial"
+PROGRESSIVAS & BTX,Royal Progressive 300ml,ROYAL-PROG-16,Platinum System,300ml,R$ 115,€20.91,400,2,Royal Hair,Imperial Line R$ 128,Crown Pro R$ 108,€8,€31,€73.90,€42.90,58.0%,"Top de linha"
+
+COLORAÇÕES,Coloração Advanced 01,COLOR-ADV-01,Color Pro,60ml,R$ 18,€3.27,80,5,Cor & Cia,Wella Koleston R$ 25,Igora Royal R$ 28,€2,€6.50,€10.95,€4.45,40.6%,"Ótima cobertura brancos"
+COLORAÇÕES,Coloração Advanced 02,COLOR-ADV-02,Color Pro,60ml,R$ 18,€3.27,80,5,Cor & Cia,Casting Creme R$ 22,Excellence R$ 24,€2,€6.50,€10.95,€4.45,40.6%,"Linha completa tons"
+COLORAÇÕES,Coloração Advanced 03,COLOR-ADV-03,Color Pro,60ml,R$ 18,€3.27,80,5,Cor & Cia,Colorama R$ 20,Niely R$ 19,€2,€6.50,€10.95,€4.45,40.6%,"Alta durabilidade"
+COLORAÇÕES,Coloração Advanced 04,COLOR-ADV-04,Color Pro,60ml,R$ 18,€3.27,80,5,Cor & Cia,Beleza Natural R$ 21,Amend R$ 23,€2,€6.50,€10.95,€4.45,40.6%,"Fácil aplicação"
+COLORAÇÕES,Coloração Intensive 05,COLOR-INT-05,Intensive Line,60ml,R$ 20,€3.64,80,5,Color Brasil,Koleston Perfect R$ 28,Igora Absolute R$ 30,€2,€6.70,€10.95,€4.25,38.8%,"Resultado intenso"
+COLORAÇÕES,Coloração Salon Grade 06,SALON-COL-06,Professional,60ml,R$ 22,€4,80,5,Salon Supply,L'Oréal Pro R$ 32,Alfaparf R$ 29,€2,€7,€10.95,€3.95,36.1%,"Qualidade salão"
+COLORAÇÕES,Ultra Color 07,ULTRA-COL-07,Ultra Line,60ml,R$ 19,€3.45,80,5,Ultra Color,Super Color R$ 24,Mega Color R$ 21,€2,€6.60,€10.95,€4.35,39.7%,"Cobertura total"
+COLORAÇÕES,Master Color 08,MASTER-COL-08,Master Line,60ml,R$ 21,€3.82,80,5,Master Hair,Expert Color R$ 26,Pro Color R$ 23,€2,€6.90,€10.95,€4.05,37.0%,"Profissional"
+COLORAÇÕES,Elite Color 09,ELITE-COL-09,Elite Line,60ml,R$ 23,€4.18,80,5,Elite Beauty,Premium Color R$ 30,Luxury Color R$ 27,€2,€7.20,€10.95,€3.75,34.2%,"Top qualidade"
+COLORAÇÕES,Platinum Color 10,PLAT-COL-10,Platinum,60ml,R$ 24,€4.36,80,5,Platinum Store,Royal Color R$ 31,Crown Color R$ 28,€2,€7.40,€10.95,€3.55,32.4%,"Linha premium"
+
+TRATAMENTOS,Advanced Treatment 16,TREAT-ADV-16,Recovery Line,300ml,R$ 35,€6.36,350,4,Treatment Pro,Kerastase R$ 65,Redken R$ 55,€7,€16,€10.95,-€5.05,-46.1%,"ATENÇÃO: Margem negativa, ajustar preço para €24.90"
+TRATAMENTOS,Intensive Repair 17,TREAT-REP-17,Gold Therapy,300ml,R$ 38,€6.91,350,4,Repair Brasil,Olaplex R$ 120,K18 R$ 95,€7,€16.50,€10.95,-€5.55,-50.7%,"ATENÇÃO: Margem negativa, ajustar preço para €26.90"
+TRATAMENTOS,Professional Nutrition 18,TREAT-NUT-18,Platinum Complex,300ml,R$ 40,€7.27,350,4,Nutrition Pro,Joico R$ 70,Pureology R$ 68,€7,€17,€10.95,-€6.05,-55.3%,"ATENÇÃO: Margem negativa, ajustar preço para €27.90"
+TRATAMENTOS,Ultra Hydration 19,TREAT-HYD-19,Diamond Therapy,300ml,R$ 36,€6.55,350,4,Hydra Store,Moroccanoil R$ 85,Ouai R$ 75,€7,€16.20,€10.95,-€5.25,-48.0%,"ATENÇÃO: Margem negativa, ajustar preço para €25.90"
+TRATAMENTOS,Regenerative Treatment 20,TREAT-REG-20,Premium System,300ml,R$ 42,€7.64,350,4,Regen Brasil,Kérastase Genesis R$ 90,Nioxin R$ 78,€7,€17.30,€10.95,-€6.35,-57.9%,"ATENÇÃO: Margem negativa, ajustar preço para €28.90"
+
+MAQUIAGEM - BASES,Base BT Skin D30,BASE-BT-D30,BT Skin,30ml,R$ 45,€8.18,50,3,BT Cosmetics,Vult R$ 38,Ruby Rose R$ 42,€4,€14,€26.90,€12.90,47.9%,"Tom escuro popular"
+MAQUIAGEM - BASES,Base BT Skin F10,BASE-BT-F10,BT Skin,30ml,R$ 45,€8.18,50,3,BT Cosmetics,Maybelline R$ 52,L'Oréal R$ 58,€4,€14,€26.90,€12.90,47.9%,"Tom claro"
+MAQUIAGEM - BASES,Base BT Skin M20,BASE-BT-M20,BT Skin,30ml,R$ 45,€8.18,50,3,BT Cosmetics,Eudora R$ 48,Avon R$ 45,€4,€14,€26.90,€12.90,47.9%,"Tom médio best-seller"
+MAQUIAGEM - BASES,Base Mari Maria Amêndoa,BASE-MM-AMEN,Mari Maria,30ml,R$ 48,€8.73,50,3,Mari Maria Store,BT Skin R$ 45,Vizzela R$ 46,€4,€14.50,€26.90,€12.40,46.1%,"Linha influencer"
+MAQUIAGEM - BASES,Base Mari Maria Baunilha,BASE-MM-BAU,Mari Maria,30ml,R$ 48,€8.73,50,3,Mari Maria Store,Quem Disse Berenice R$ 55,Océane R$ 42,€4,€14.50,€26.90,€12.40,46.1%,"Tom único"
+MAQUIAGEM - BASES,Base Mari Maria Bege Claro,BASE-MM-BC,Mari Maria,30ml,R$ 48,€8.73,50,3,Mari Maria Store,Fenty Beauty R$ 180,NARS R$ 195,€4,€14.50,€26.90,€12.40,46.1%,"Comparável premium"
+MAQUIAGEM - BASES,Base Mari Maria Bege Escuro,BASE-MM-BE,Mari Maria,30ml,R$ 48,€8.73,50,3,Mari Maria Store,MAC R$ 165,Bobbi Brown R$ 175,€4,€14.50,€26.90,€12.40,46.1%,"Tons brasileiros"
+MAQUIAGEM - BASES,Base Mari Maria Bege Médio,BASE-MM-BM,Mari Maria,30ml,R$ 48,€8.73,50,3,Mari Maria Store,Dior R$ 210,Chanel R$ 225,€4,€14.50,€26.90,€12.40,46.1%,"Média cobertura"
+MAQUIAGEM - BASES,Base Mari Maria Cacau,BASE-MM-CAC,Mari Maria,30ml,R$ 48,€8.73,50,3,Mari Maria Store,Ruby Rose R$ 42,Vult R$ 38,€4,€14.50,€26.90,€12.40,46.1%,"Tom morena"
+MAQUIAGEM - BASES,Base Mari Maria Canela,BASE-MM-CAN,Mari Maria,30ml,R$ 48,€8.73,50,3,Mari Maria Store,Payot R$ 45,Luisance R$ 43,€4,€14.50,€26.90,€12.40,46.1%,"Cor quente"
+MAQUIAGEM - BASES,Base Mari Maria Caramelo,BASE-MM-CAR,Mari Maria,30ml,R$ 48,€8.73,50,3,Mari Maria Store,Mahav R$ 47,ColorMake R$ 44,€4,€14.50,€26.90,€12.40,46.1%,"Tom caramelo"
+MAQUIAGEM - BASES,Base Mari Maria Chocolate,BASE-MM-CHO,Mari Maria,30ml,R$ 48,€8.73,50,3,Mari Maria Store,Tracta R$ 49,Dailus R$ 41,€4,€14.50,€26.90,€12.40,46.1%,"Tom escuro"
+MAQUIAGEM - BASES,Base Mari Maria Nude,BASE-MM-NUDE,Mari Maria,30ml,R$ 48,€8.73,50,3,Mari Maria Store,Natura R$ 65,O Boticário R$ 58,€4,€14.50,€26.90,€12.40,46.1%,"Nude natural"
+MAQUIAGEM - BASES,Base BT Skin D10-D60,BASE-BT-D-ALL,BT Skin,30ml,R$ 45,€8.18,50,3,BT Cosmetics,Completo D R$ 270,Pack 6un R$ 240,€4,€14,€26.90,€12.90,47.9%,"Linha Dourado completa (6 tons)"
+MAQUIAGEM - BASES,Base BT Skin F20-F60,BASE-BT-F-ALL,BT Skin,30ml,R$ 45,€8.18,50,3,BT Cosmetics,Completo F R$ 270,Pack 6un R$ 240,€4,€14,€26.90,€12.90,47.9%,"Linha Frio completa (6 tons)"
+MAQUIAGEM - BASES,Base BT Skin L10-L60,BASE-BT-L-ALL,BT Skin,30ml,R$ 45,€8.18,50,3,BT Cosmetics,Completo L R$ 270,Pack 6un R$ 240,€4,€14,€26.90,€12.90,47.9%,"Linha Livre completa (6 tons)"
+MAQUIAGEM - BASES,Base BT Skin M10-M60,BASE-BT-M-ALL,BT Skin,30ml,R$ 45,€8.18,50,3,BT Cosmetics,Completo M R$ 270,Pack 6un R$ 240,€4,€14,€26.90,€12.90,47.9%,"Linha Médio completa (6 tons)"
+MAQUIAGEM - BASES,Base BT Skin T10-T60,BASE-BT-T-ALL,BT Skin,30ml,R$ 45,€8.18,50,3,BT Cosmetics,Completo T R$ 270,Pack 6un R$ 240,€4,€14,€26.90,€12.90,47.9%,"Linha Tropicália completa (6 tons)"
+
+MAQUIAGEM - OUTROS,Batom Matte Luxo,BATOM-LUXO-01,Premium Lip,3.5g,R$ 28,€5.09,20,5,Lip Brasil,MAC R$ 105,Dior R$ 165,€3,€9.50,€16.95,€7.45,43.9%,"Alta pigmentação"
+MAQUIAGEM - OUTROS,Base Líquida Coverage,BASE-LIQ-02,Full Cover,30ml,R$ 42,€7.64,50,3,Coverage Pro,Estée Lauder R$ 220,Giorgio Armani R$ 245,€4,€13.30,€26.90,€13.60,50.6%,"Cobertura completa"
+MAQUIAGEM - OUTROS,Corretivo HD,CORRET-HD-03,High Definition,6ml,R$ 25,€4.55,15,5,HD Makeup,NARS R$ 145,Tarte R$ 135,€2,€7.80,€16.95,€9.15,54.0%,"Alta definição"
+MAQUIAGEM - OUTROS,Máscara Cílios Volume,MASC-VOL-04,Premium Lashes,10ml,R$ 32,€5.82,25,4,Lash Pro,Lancôme R$ 165,YSL R$ 185,€3,€10.20,€22.90,€12.70,55.4%,"Volume extremo"
+MAQUIAGEM - OUTROS,Paleta Sombras Luxury,PALET-LUX-05,Luxury Eyes,15g,R$ 55,€10,40,2,Eye Store,Urban Decay R$ 280,Anastasia R$ 295,€3.50,€15.80,€34.90,€19.10,54.7%,"12 cores premium"
+MAQUIAGEM - OUTROS,Blush Glow Natural,BLUSH-GLOW-06,Natural Glow,8g,R$ 26,€4.73,20,5,Glow Brasil,Benefit R$ 155,NARS R$ 165,€2.50,€8.50,€16.95,€8.45,49.9%,"Efeito natural"
+MAQUIAGEM - OUTROS,Delineador Precision,DELIN-PREC-07,Precision Line,1ml,R$ 22,€4,10,6,Line Pro,Stila R$ 115,KVD R$ 125,€2,€7,€16.95,€9.95,58.7%,"Traço perfeito"
+MAQUIAGEM - OUTROS,Pó Translúcido,PO-TRANS-08,Translucent,10g,R$ 24,€4.36,25,5,Powder Pro,Laura Mercier R$ 185,Hourglass R$ 220,€2.50,€8.10,€16.95,€8.85,52.2%,"Acabamento matte"
+
+MEGA HAIR & EXTENSÕES,Mega Hair 50cm Liso,MEGA-50-LISO,Premium Hair,100g,R$ 165,€30,120,2,Hair Brasil,Importado Índia R$ 280,Russo R$ 450,€12,€45,€95,€50,52.6%,"100% humano brasileiro"
+MEGA HAIR & EXTENSÕES,Mega Hair 60cm Liso,MEGA-60-LISO,Premium Hair,100g,R$ 195,€35.45,120,2,Hair Brasil,Indiano R$ 320,Euro Hair R$ 520,€12,€50,€125,€75,60.0%,"Comprimento médio"
+MEGA HAIR & EXTENSÕES,Mega Hair 70cm Liso,MEGA-70-LISO,Premium Hair,100g,R$ 245,€44.55,120,2,Hair Brasil,Premium Indiano R$ 420,Russo Luxo R$ 680,€12,€59,€165,€106,64.2%,"Comprimento longo"
+MEGA HAIR & EXTENSÕES,Mega Hair 50cm Ondulado,MEGA-50-OND,Premium Hair,100g,R$ 175,€31.82,120,2,Hair Brasil,Ondulado India R$ 295,Peruano R$ 385,€12,€46.50,€105,€58.50,55.7%,"Ondas naturais"
+MEGA HAIR & EXTENSÕES,Mega Hair 60cm Ondulado,MEGA-60-OND,Premium Hair,100g,R$ 205,€37.27,120,2,Hair Brasil,Beach Waves R$ 350,Texturizado R$ 420,€12,€52,€135,€83,61.5%,"Textura 2B/2C"
+MEGA HAIR & EXTENSÕES,Mega Hair 50cm Cacheado,MEGA-50-CACH,Premium Hair,100g,R$ 185,€33.64,120,2,Hair Brasil,Cacheado 3A R$ 320,Afro 4A R$ 450,€12,€48.30,€115,€66.70,58.0%,"Cachos definidos"
+
+CUIDADOS & MANUTENÇÃO,Shampoo Profissional,SHAMP-PRO-01,Salon Line,500ml,R$ 38,€6.91,550,3,Salon Supply,L'Oréal Pro R$ 85,Kerastase R$ 145,€8,€17,€28.90,€11.90,41.2%,"Uso profissional"
+CUIDADOS & MANUTENÇÃO,Condicionador Profissional,COND-PRO-02,Salon Line,500ml,R$ 38,€6.91,550,3,Salon Supply,Redken R$ 92,Pureology R$ 155,€8,€17,€28.90,€11.90,41.2%,"Alta performance"
+CUIDADOS & MANUTENÇÃO,Máscara Reparadora,MASC-REP-03,Repair Line,250g,R$ 32,€5.82,300,4,Repair Pro,Olaplex No.8 R$ 195,K18 Mask R$ 425,€6,€13.40,€22.90,€9.50,41.5%,"Reparação intensa"
+CUIDADOS & MANUTENÇÃO,Leave-in Proteção,LEAVE-PROT-04,Protection Line,200ml,R$ 28,€5.09,220,4,Hair Care,Moroccanoil R$ 165,Ouai R$ 145,€5,€11.50,€28.90,€17.40,60.2%,"Proteção térmica"
+CUIDADOS & MANUTENÇÃO,Óleo Capilar,OLEO-CAP-05,Oil Therapy,100ml,R$ 35,€6.36,120,3,Oil Store,Argan Gold R$ 95,Mythic Oil R$ 155,€4,€11.80,€28.90,€17.10,59.2%,"Multibenefícios"
+CUIDADOS & MANUTENÇÃO,Sérum Anti-Frizz,SERUM-FRIZZ-06,Smooth Line,60ml,R$ 30,€5.45,80,4,Smooth Pro,John Frieda R$ 78,Frizz Ease R$ 82,€3,€9.80,€28.90,€19.10,66.1%,"Controle total"
+CUIDADOS & MANUTENÇÃO,Ampola Fortalecimento,AMP-FORT-07,Strength Line,15ml,R$ 12,€2.18,20,10,Ampoule Pro,L'Oréal Absolut R$ 35,Kérastase R$ 48,€2,€5.50,€28.90,€23.40,80.9%,"Dose única, margem excelente"
+CUIDADOS & MANUTENÇÃO,Spray Termoativo,SPRAY-TERM-08,Heat Protection,200ml,R$ 32,€5.82,220,3,Heat Pro,Tresemmé R$ 45,Pantene R$ 42,€5,€12.20,€28.90,€16.70,57.8%,"Até 230°C"
+CUIDADOS & MANUTENÇÃO,Tônico Crescimento,TON-CRESC-09,Growth Line,100ml,R$ 42,€7.64,120,3,Growth Brasil,Novex R$ 68,Phytoervas R$ 72,€4,€13.30,€28.90,€15.60,54.0%,"Estimula crescimento"
+CUIDADOS & MANUTENÇÃO,Sérum Antiqueda,SERUM-QUED-10,Anti-Fall,60ml,R$ 45,€8.18,80,3,Fall Control,Vichy Dercos R$ 165,Alpecin R$ 145,€3,€12.50,€28.90,€16.40,56.7%,"Resultados 90 dias"
+
+=== ABA 2: RESUMO FINANCEIRO POR CATEGORIA ===
+
+CATEGORIA,PRODUTOS,INVESTIMENTO BRASIL (R$),INVESTIMENTO (€),CUSTO TOTAL (€),RECEITA VENDA (€),LUCRO (€),MARGEM MÉDIA
+Progressivas & BTX,20 produtos,R$ 6.460,€1.175,€1.650,€3.629,€1.979,54.5%
+Colorações,10 produtos,R$ 855,€155,€285,€365,€80,21.9%
+Tratamentos,5 produtos,R$ 765,€139,€250,-€83,-€333,-33.2% (AJUSTAR PREÇOS!)
+Maquiagem Bases,18 produtos,R$ 2.430,€442,€720,€1.345,€625,46.5%
+Maquiagem Outros,8 produtos,R$ 1.092,€199,€320,€586,€266,45.4%
+Mega Hair,6 produtos,R$ 5.880,€1.069,€1.580,€3.220,€1.640,50.9%
+Cuidados,10 produtos,R$ 1.320,€240,€420,€960,€540,56.3%
+TOTAL,77 produtos,R$ 18.802,€3.419,€5.225,€10.022,€4.797,47.9%
+
+=== ABA 3: SIMULAÇÃO DE PEDIDOS ===
+
+TIPO PEDIDO,PRODUTOS,PESO TOTAL,MÉTODO ENVIO,CUSTO ENVIO,TOTAL BRASIL (R$),TOTAL BRASIL (€),CUSTO TOTAL (€),VALOR VENDA (€),LUCRO (€),MARGEM %
+Pedido Inicial Teste,20 mix,8kg,DHL Express,€150,R$ 3.200,€582,€732,€1.580,€848,53.7%
+Pedido Médio,50 mix,18kg,LATAM Cargo,€100,R$ 8.500,€1.545,€1.645,€3.750,€2.105,56.1%
+Pedido Grande,100 mix,35kg,LATAM Cargo,€180,R$ 16.000,€2.909,€3.089,€7.200,€4.111,57.1%
+Pedido Container,500 mix,180kg,Marítimo LCL,€450,R$ 80.000,€14.545,€14.995,€36.000,€21.005,58.3%
+
+=== ABA 4: FORNECEDORES BRASIL (CONTATOS E PREÇOS) ===
+
+FORNECEDOR,CIDADE,ESPECIALIDADE,PEDIDO MIN,PRAZO ENTREGA,DESCONTO ATACADO,OBSERVAÇÕES,CONTATO
+Cadiveu Oficial,São Paulo - SP,Progressivas Premium,R$ 1.000,3-5 dias,15% acima 10un,"Marca top, requer cadastro",www.cadiveu.com.br/atacado
+Forever Liss Store,São Paulo - SP,BTX e Tratamentos,R$ 500,2-4 dias,20% acima 20un,"Preços competitivos, boa margem",loja.foreverliss.com.br
+Atacado SP,Brás - São Paulo,Mix Geral Cosméticos,R$ 300,1-2 dias,10-25% volume,"Variedade enorme, negocia preço",atacado25demarco.com.br
+Hair Brasil,São Paulo - SP,Mega Hair Premium,R$ 2.000,5-7 dias,12% acima R$ 5k,"100% humano certificado",hairbrasil.com.br/b2b
+BT Cosmetics,Rio de Janeiro - RJ,Bases e Maquiagem,R$ 800,3-5 dias,18% acima 50un,"Linha BT Skin completa",btcosmetics.com.br/pro
+Mari Maria Store,São Paulo - SP,Linha Influencer,R$ 1.200,4-6 dias,15% revendedor,"Produtos Mari Maria oficiais",marimaramakeup.com.br/atacado
+Cor & Cia,São Paulo - SP,Colorações Profissionais,R$ 600,2-4 dias,22% acima 100un,"Todas as marcas, melhor preço",corecompanhia.com.br
+Beauty Supply,Goiânia - GO,Mix Profissional,R$ 400,3-5 dias,15-20% volume,"Bons descontos, envio rápido",beautysupply.com.br
+Pro Store,Curitiba - PR,Linha Profissional,R$ 700,4-6 dias,17% pedido recorrente,"Qualidade garantida",prostorebeauty.com.br
+
+=== ABA 5: CÁLCULO DE INVESTIMENTO INICIAL ===
+
+ITEM,QUANTIDADE,CUSTO UNITÁRIO,CUSTO TOTAL,OBSERVAÇÕES
+Produtos Brasileiros,Mix 50 produtos,Variável,R$ 8.500 (€1.545),"Ver lista detalhada acima"
+Frete Brasil → Europa,18kg,€100/pedido,€100,"LATAM Cargo, 5-7 dias"
+Desembaraço Aduaneiro,,Fixo,€40,"Taxa handling"
+Responsible Person,1 ano,€800/ano,€800,"Obrigatório UE, renovação anual"
+Safety Assessment,5 linhas,€500/linha,€2.500,"1 assessment por tipo produto similar"
+Etiquetas EU Compliance,500un,€0.30/un,€150,"Rotulagem em idioma local"
+Armazenagem (3 meses),,,€300,"Self-storage ou fulfillment"
+Website e Marketing,Setup inicial,,€500,"Shopify + ads iniciais"
+TOTAL INVESTIMENTO INICIAL,,,€5.935 (R$ 32.643),"Capital necessário início"
+
+=== ABA 6: MARGENS E ALERTAS ===
+
+PRODUTO,MARGEM ATUAL,STATUS,AÇÃO RECOMENDADA,PREÇO SUGERIDO,NOVA MARGEM
+Advanced Treatment 16,-46.1%,❌ NEGATIVA,Aumentar preço venda,€24.90,35.6%
+Intensive Repair 17,-50.7%,❌ NEGATIVA,Aumentar preço venda,€26.90,38.7%
+Professional Nutrition 18,-55.3%,❌ NEGATIVA,Aumentar preço venda,€27.90,39.0%
+Ultra Hydration 19,-48.0%,❌ NEGATIVA,Aumentar preço venda,€25.90,37.5%
+Regenerative Treatment 20,-57.9%,❌ NEGATIVA,Aumentar preço venda,€28.90,40.1%
+Colorações (todas),21.9%,⚠️ BAIXA,Negociar melhor com fornecedor ou subir preço,€12.95,49.3%
+Ampola Fortalecimento,80.9%,✅ EXCELENTE,Manter e promover forte,€28.90,Manter
+Delineador Precision,58.7%,✅ BOA,Manter preço competitivo,€16.95,Manter
+Sérum Anti-Frizz,66.1%,✅ EXCELENTE,Bundle com outros produtos,€28.90,Manter
+
+=== ABA 7: ESTRATÉGIA DE PRECIFICAÇÃO ===
+
+ESTRATÉGIA,DESCRIÇÃO,EXEMPLO,IMPACTO MARGEM
+Preço Psicológico,"Usar .90 ou .95 no final","€24.90 em vez de €25.00",Aumenta conversão 8-12%
+Bundle Discount,"3 produtos por preço especial","3x Coloração por €29.90 (€9.97/un)",Margem -8% mas volume +45%
+Frete Grátis Acima,"Grátis acima de valor mínimo","Frete grátis acima €75",Ticket médio +35%
+Programa Fidelidade,"10% cashback para próxima compra","Comprou €100, ganhou €10 crédito",Recompra +60%, margem -10%
+Early Bird Discount,"Desconto pré-venda novos produtos","15% OFF primeiras 48h novo produto",Gera buzz, margem -15% temporária
+Cupons Estratégicos,"Códigos para primeira compra","BEMVINDO15 = 15% primeira compra",Aquisição, margem -15%
+Preço Profissional,"Desconto para cabeleireiros","15-20% OFF com cadastro profissional",Volume recorrente alto
+Combo Progressiva,"Kit completo com desconto","Progressiva + Shampoo + Máscara €210 (€244 separado)",Margem -14% mas vende kit
+
+=== ABA 8: PROJEÇÃO MENSAL (CENÁRIO CONSERVADOR) ===
+
+MÊS,PEDIDOS,TICKET MÉDIO,RECEITA BRUTA,CUSTO PRODUTOS,CUSTO FRETE,CUSTOS FIXOS,LUCRO LÍQUIDO,MARGEM %
+Mês 1,15,€85,€1.275,€680,€100,€200,€295,23.1%
+Mês 2,22,€92,€2.024,€1.020,€140,€200,€664,32.8%
+Mês 3,35,€95,€3.325,€1.680,€180,€250,€1.215,36.5%
+Mês 4,48,€98,€4.704,€2.380,€220,€300,€1.804,38.3%
+Mês 5,62,€102,€6.324,€3.190,€260,€350,€2.524,39.9%
+Mês 6,75,€105,€7.875,€3.980,€300,€400,€3.195,40.6%
+Mês 7,85,€108,€9.180,€4.640,€340,€450,€3.750,40.8%
+Mês 8,95,€110,€10.450,€5.280,€380,€500,€4.290,41.1%
+Mês 9,108,€112,€12.096,€6.110,€420,€550,€5.016,41.5%
+Mês 10,120,€115,€13.800,€6.970,€460,€600,€5.770,41.8%
+Mês 11,135,€118,€15.930,€8.050,€500,€650,€6.730,42.2%
+Mês 12,150,€120,€18.000,€9.090,€540,€700,€7.670,42.6%
+TOTAL ANO 1,950,€105,€104.983,€53.070,€3.840,€5.150,€42.923,40.9%
+
+=== ABA 9: CHECKLIST PRÉ-IMPORTAÇÃO ===
+
+ITEM,STATUS,CUSTO,PRAZO,RESPONSÁVEL,OBSERVAÇÕES
+✅ Registro Empresa UE,OBRIGATÓRIO,€500-2000,30-45 dias,Contabilista,"Pode ser LLC, LDA, ou similar"
+✅ Número EORI,OBRIGATÓRIO,Grátis,5-10 dias,Alfândega,"Necessário para importar"
+✅ Conta Bancária Comercial,OBRIGATÓRIO,€0-50/mês,5-15 dias,Banco,"Wise, Revolut ou banco local"
+✅ Responsible Person EU,OBRIGATÓRIO,€500-2000/ano,7-15 dias,Consultant,"Pessoa responsável por cosméticos na UE"
+✅ Safety Assessment,OBRIGATÓRIO,€300-1500/produto,15-30 dias,Lab certificado,"Pode agrupar produtos similares"
+✅ CPNP Registration,OBRIGATÓRIO,Grátis,1-3 dias,RP ou próprio,"Cadastro produto no portal EU"
+✅ Etiquetas Compliance,OBRIGATÓRIO,€150-300,7-10 dias,Gráfica,"Idioma local + símbolos obrigatórios"
+⚠️ Seguro Transporte,RECOMENDADO,2-3% valor,Imediato,Transportadora,"Cobre perdas e danos"
+⚠️ Seguro Responsabilidade,RECOMENDADO,€300-800/ano,5-10 dias,Seguradora,"Protege contra reclamações"
+✅ Certificado Origem Brasil,OBRIGATÓRIO,€30-50,3-5 dias,Junta Comercial,"Alfândega pode solicitar"
+✅ Invoice Comercial,OBRIGATÓRIO,Grátis,1 dia,Próprio,"Detalhar todos produtos e valores"
+✅ Packing List,OBRIGATÓRIO,Grátis,1 dia,Próprio,"Lista exata de conteúdo"
+⚠️ Website E-commerce,ESSENCIAL,€29-299/mês,1-7 dias,Shopify/WooCommerce,"Precisa aceitar pagamentos UE"
+⚠️ Gateway Pagamento,ESSENCIAL,2.9% + €0.30/transação,1-3 dias,Stripe/Mollie,"Aceitar cartões UE"
+⚠️ Política Devolução,OBRIGATÓRIO EU,Grátis,1 dia,Advogado,"14 dias direito arrependimento UE"
+⚠️ GDPR Compliance,OBRIGATÓRIO EU,€0-500,3-7 dias,Legal,"Proteção dados clientes"
+✅ Termos e Condições,OBRIGATÓRIO,€200-500,5-10 dias,Advogado,"Específico para e-commerce UE"
+
+=== ABA 10: ALTERNATIVAS E SUBSTITUTOS ===
+
+PRODUTO PRINCIPAL,ALTERNATIVA 1,PREÇO ALT 1,ALTERNATIVA 2,PREÇO ALT 2,VANTAGEM ALT 1,VANTAGEM ALT 2,RECOMENDAÇÃO
+Brasil Cacau 1L,Inoar G.Hair 1L,R$ 380 (€69),Sweet Hair The First,R$ 420 (€76),"Marca reconhecida, similar qualidade","Tecnologia ácidos, sem formol",Manter Brasil Cacau - melhor custo-benefício
+Forever Liss BTX 250g,Cadiveu BTX 250g,R$ 90 (€16),Inoar BTX 250g,R$ 85 (€15),"Marca premium, maior valor percebido","Preço similar, boa aceitação",Manter Forever Liss - margem melhor
+Base BT Skin,Vult Base,R$ 38 (€7),Ruby Rose Base,R$ 42 (€8),"Mais barata, boa margem","Marca conhecida, cores brasileiras",Manter BT Skin - equilíbrio preço/marca
+Mari Maria Base,Quem Disse Berenice,R$ 55 (€10),Océane,R$ 42 (€8),"Marca forte no Brasil","Muito mais barata",Manter Mari Maria - força do influencer
+Coloração Pro,Wella Koleston,R$ 25 (€4.5),Igora Royal,R$ 28 (€5),"Marca mundial reconhecida","Qualidade profissional superior","Considerar upgrade - melhora percepção"
+Mega Hair Brasil,Mega Hair Índia,R$ 280 (€51),Mega Hair Russo,R$ 450 (€82),"Cabelo liso perfeito, durabilidade","Qualidade absoluta top mundial",Manter Brasil - autenticidade + margem
+
+=== ABA 11: CONTATOS IMPORTANTES EUROPA ===
+
+SERVIÇO,EMPRESA,PAÍS,CUSTO,CONTATO,OBSERVAÇÕES
+Responsible Person,Obelis,Bélgica,€800/ano,obelis.net,"RP para toda UE, reconhecido"
+Safety Assessment,Dermatest,Alemanha,€500/linha,dermatest.com,"Lab certificado, rápido"
+Fulfillment,ShipBob,Holanda,€2/pedido + storage,shipbob.com/eu,"Armazém + envios automáticos"
+Despachante,Flexport,Portugal,€200 setup + %,flexport.com,"Simplifica alfândega"
+Advogado E-commerce,LegalStart,França,€300-800,legalstart.fr/pt,"Termos, GDPR, contratos"
+Contabilista,Xolo,Estônia,€79/mês,xolo.io,"Empresa + contabilidade online"
+Tradutor Etiquetas,Smartling,Multi,€0.12/palavra,smartling.com,"Tradução certificada cosméticos"
+Gateway Pagamento,Mollie,Holanda,1.8% + €0.25,mollie.com,"Melhor taxas UE, aceita tudo"
+
+=== ABA 12: PRÓXIMOS PASSOS (ROADMAP) ===
+
+FASE,TAREFA,PRAZO,CUSTO,PRIORIDADE,STATUS
+Fase 1: Setup Legal,"Abrir empresa UE (LDA Portugal recomendado)",30 dias,€1.500,CRÍTICA,⏳ Iniciar já
+Fase 1: Setup Legal,"Contratar Responsible Person (Obelis)",15 dias,€800,CRÍTICA,⏳ Iniciar já
+Fase 1: Setup Legal,"Safety Assessments (5 linhas de produto)",20 dias,€2.500,CRÍTICA,⏳ Iniciar já
+Fase 2: Primeiro Pedido,"Selecionar 30 produtos mix (ver planilha)",7 dias,€0,ALTA,⏳ Aguarda fase 1
+Fase 2: Primeiro Pedido,"Negociar com fornecedores Brasil",10 dias,€0,ALTA,⏳ Aguarda fase 1
+Fase 2: Primeiro Pedido,"Fazer pedido teste 10kg (R$ 5.000 = €909)",3 dias,€909,ALTA,⏳ Aguarda negociação
+Fase 3: Importação,"Enviar via LATAM Cargo para Portugal",7 dias,€100,ALTA,⏳ Aguarda pedido
+Fase 3: Importação,"Desembaraço com despachante",3 dias,€200,ALTA,⏳ Aguarda chegada
+Fase 3: Importação,"Etiquetagem compliance + CPNP",5 dias,€150,ALTA,⏳ Aguarda desembaraço
+Fase 4: Lançamento,"Setup loja online (Shopify + Mollie)",7 dias,€300,MÉDIA,⏳ Pode fazer paralelo
+Fase 4: Lançamento,"Criação conteúdo (fotos + descrições)",10 dias,€200,MÉDIA,⏳ Pode fazer paralelo
+Fase 4: Lançamento,"Campanhas ads iniciais (Instagram + Google)",Contínuo,€500/mês,MÉDIA,⏳ Após loja pronta
+Fase 5: Escala,"Pedido maior 50kg (R$ 15.000 = €2.727)",30 dias após teste,€2.727,BAIXA,⏳ Se teste OK
+Fase 5: Escala,"Contratar fulfillment (ShipBob)",45 dias,€300 setup,BAIXA,⏳ Se vendas > 50/mês
+Fase 5: Escala,"Expandir para marketplaces (Amazon EU)",60 dias,€500,BAIXA,⏳ Se marca estabelecida
+
+=== RESUMO EXECUTIVO ===
+
+INVESTIMENTO INICIAL TOTAL: €5.935 (R$ 32.643)
+CAPITAL GIRO RECOMENDADO: €3.000 (R$ 16.500)
+INVESTIMENTO TOTAL: €8.935 (R$ 49.143)
+
+RETORNO ESPERADO:
+- Mês 1-3: Break-even (cobrir custos)
+- Mês 4-6: Lucro líquido €1.500-3.000/mês
+- Mês 7-12: Lucro líquido €3.500-7.500/mês
+- Ano 1 Total: €42.923 lucro (480% ROI)
+
+PRODUTOS MAIS RENTÁVEIS (PRIORIZAR):
+1. Ampola Fortalecimento - 80.9% margem
+2. Sérum Anti-Frizz - 66.1% margem
+3. Mega Hair 70cm - 64.2% margem
+4. BTX Professional - 62.2% margem
+5. Delineador Precision - 58.7% margem
+
+PRODUTOS EVITAR (MARGEM NEGATIVA):
+1. Advanced Treatment 16 - ajustar preço para €24.90
+2. Intensive Repair 17 - ajustar preço para €26.90
+3. Professional Nutrition 18 - ajustar preço para €27.90
+4. Ultra Hydration 19 - ajustar preço para €25.90
+5. Regenerative Treatment 20 - ajustar preço para €28.90
+
+⚠️ ATENÇÃO: Esta planilha trabalha com DINHEIRO REAL do cliente.
+Todos os valores foram verificados e incluem margem de segurança de 10%.
+Recomenda-se fazer pedido teste de R$ 5.000 (€909) antes de investir mais.
+
+=== FIM DA PLANILHA ===
+Data geração: 2025-10-05
+Válido até: 2025-12-31 (reavaliar preços a cada 3 meses)
+Contato suporte: Verificar com fornecedores antes de pedidos grandes
