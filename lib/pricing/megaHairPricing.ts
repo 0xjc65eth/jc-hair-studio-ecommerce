@@ -1,11 +1,16 @@
 /**
  * Sistema de Pricing Inteligente para Mega Hair
- * Baseado em pesquisa de mercado brasileiro (2024-2025)
+ * Baseado em custo real de importação Europa-Brasil
  *
- * Dados coletados de:
- * - DonaChique: R$ 130-187 por kit (37.5g, 50-61cm)
- * - Dana Mega Hair: R$ 2,235 (200g, 70cm, virgem)
- * - Análise de mercado: margem 200-300%
+ * DADOS CRÍTICOS:
+ * - Custo base: €70 por 100g, 50cm (cabelo liso padrão)
+ * - Margem alvo: 45-55% para competitividade
+ * - Margem padrão aplicada: 50% (preço venda = €105 / 100g)
+ * - Volumes disponíveis: 100g, 200g, 300g, 500g
+ * - Variações: comprimento (50cm, 60cm, 70cm), textura (liso, ondulado, cacheado)
+ *
+ * FÓRMULA DE PREÇO:
+ * Preço Final = (Custo Base × Multiplicador Volume × Multiplicador Comprimento × Multiplicador Textura) × (1 + Margem)
  */
 
 import {
@@ -22,6 +27,35 @@ import {
   PricingStrategy
 } from '../../types/pricing';
 
+// Constantes de custo baseadas em dados reais de importação
+const COST_BASE_EUR = 70; // Custo base por 100g, 50cm
+const MARGIN_TARGET = 0.50; // 50% margem
+const BASE_WEIGHT = 100; // Peso base em gramas
+const BASE_LENGTH = 50; // Comprimento base em cm
+
+// Sistema de descontos progressivos por volume
+const VOLUME_DISCOUNTS = {
+  100: 0,      // Sem desconto
+  200: 0.10,   // 10% desconto
+  300: 0.15,   // 15% desconto
+  500: 0.20    // 20% desconto
+};
+
+// Multiplicadores por comprimento (custo aumenta com comprimento)
+const LENGTH_MULTIPLIERS = {
+  50: 1.0,     // Base
+  60: 1.3,     // +30%
+  70: 1.6      // +60%
+};
+
+// Multiplicadores por textura (complexidade de processamento)
+const TEXTURE_MULTIPLIERS = {
+  'STRAIGHT': 1.0,    // Liso - base
+  'WAVY': 1.15,       // Ondulado - +15%
+  'CURLY': 1.30,      // Cacheado - +30%
+  'COILY': 1.45       // Crespo - +45%
+};
+
 export class MegaHairPricingEngine {
   private config: PricingConfig;
   private marketReferences: MarketPriceReference[];
@@ -31,6 +65,103 @@ export class MegaHairPricingEngine {
     this.config = this.getDefaultConfig();
     this.marketReferences = this.getMarketReferences();
     this.strategies = this.getPricingStrategies();
+  }
+
+  /**
+   * Calcula preço baseado no custo real de importação (€70/100g)
+   * Com margem de 50% e descontos progressivos por volume
+   */
+  calculateImportPrice(
+    weight: number,      // 100, 200, 300, 500
+    length: number,      // 50, 60, 70
+    texture: 'STRAIGHT' | 'WAVY' | 'CURLY' | 'COILY'
+  ): {
+    costPrice: number;
+    volumeDiscount: number;
+    lengthMultiplier: number;
+    textureMultiplier: number;
+    finalCost: number;
+    margin: number;
+    salePrice: number;
+    profitMargin: number;
+  } {
+    // 1. Calcular custo base por peso
+    const baseCostForWeight = (COST_BASE_EUR * weight) / BASE_WEIGHT;
+
+    // 2. Aplicar multiplicador de comprimento
+    const lengthMultiplier = LENGTH_MULTIPLIERS[length as keyof typeof LENGTH_MULTIPLIERS] || 1.0;
+    const costAfterLength = baseCostForWeight * lengthMultiplier;
+
+    // 3. Aplicar multiplicador de textura
+    const textureMultiplier = TEXTURE_MULTIPLIERS[texture];
+    const costAfterTexture = costAfterLength * textureMultiplier;
+
+    // 4. Aplicar desconto por volume
+    const volumeDiscount = VOLUME_DISCOUNTS[weight as keyof typeof VOLUME_DISCOUNTS] || 0;
+    const finalCost = costAfterTexture * (1 - volumeDiscount);
+
+    // 5. Aplicar margem de lucro
+    const salePrice = finalCost * (1 + MARGIN_TARGET);
+
+    // 6. Calcular margem real
+    const profitMargin = ((salePrice - finalCost) / finalCost) * 100;
+
+    return {
+      costPrice: Math.round(baseCostForWeight * 100) / 100,
+      volumeDiscount: volumeDiscount * 100,
+      lengthMultiplier,
+      textureMultiplier,
+      finalCost: Math.round(finalCost * 100) / 100,
+      margin: MARGIN_TARGET * 100,
+      salePrice: Math.round(salePrice * 100) / 100,
+      profitMargin: Math.round(profitMargin * 100) / 100
+    };
+  }
+
+  /**
+   * Gera tabela completa de preços para todas as variações
+   */
+  generatePriceTable(): Array<{
+    weight: number;
+    length: number;
+    texture: string;
+    cost: number;
+    price: number;
+    discount: number;
+    margin: number;
+  }> {
+    const weights = [100, 200, 300, 500];
+    const lengths = [50, 60, 70];
+    const textures: Array<'STRAIGHT' | 'WAVY' | 'CURLY' | 'COILY'> = ['STRAIGHT', 'WAVY', 'CURLY', 'COILY'];
+
+    const priceTable: Array<{
+      weight: number;
+      length: number;
+      texture: string;
+      cost: number;
+      price: number;
+      discount: number;
+      margin: number;
+    }> = [];
+
+    for (const weight of weights) {
+      for (const length of lengths) {
+        for (const texture of textures) {
+          const pricing = this.calculateImportPrice(weight, length, texture);
+          priceTable.push({
+            weight,
+            length,
+            texture,
+            cost: pricing.finalCost,
+            price: pricing.salePrice,
+            discount: pricing.volumeDiscount,
+            margin: pricing.profitMargin
+          });
+        }
+      }
+    }
+
+    return priceTable;
   }
 
   /**

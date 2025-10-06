@@ -219,7 +219,7 @@ function ProductGrid({ products }: { products: Product[] }) {
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {products.map((product) => (
         <ProductCard
           key={product.id}
@@ -346,7 +346,7 @@ export default function ProgressivasAlisamentosPage() {
 
             {/* Products Grid */}
             <Suspense fallback={
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {[...Array(9)].map((_, i) => (
                   <ProductCardSkeleton key={i} variant="default" />
                 ))}

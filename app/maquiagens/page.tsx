@@ -3,11 +3,15 @@
 import React, { useState } from 'react';
 import { Button } from '../../components/ui/Button';
 import ErrorBoundary from '../../components/ui/ErrorBoundary';
-import ProductCard from '../../components/products/ProductCard';
+import ProductCard from '../../components/products/SimpleProductCard';
 import { ShoppingBag, Search, Filter } from 'lucide-react';
+import { getAllMakeupProducts } from '../../lib/data/makeupProducts';
 
-// Mari Maria Products
-const mariMariaProducts = [
+// Get all makeup products
+const allMakeupProducts = getAllMakeupProducts();
+
+// Mari Maria Products (kept for reference but will use imported data)
+const mariMariaProducts_old = [
   {
     id: 'mari-maria-base-amndoa',
     nome: 'Base Mari Maria - Tom Amêndoa',
@@ -422,7 +426,7 @@ export default function MaquiagensPage() {
   const [filtroMarca, setFiltroMarca] = useState('todas');
   const [termoBusca, setTermoBusca] = useState('');
 
-  const todosProdutos = [...mariMariaProducts, ...brunaTavaresProducts, ...wepinkVirginiaProducts, ...baseFranProducts];
+  const todosProdutos = allMakeupProducts;
 
   const produtosFiltrados = todosProdutos.filter(produto => {
     const matchMarca = filtroMarca === 'todas' || produto.marca.toLowerCase().includes(filtroMarca.toLowerCase());
@@ -443,7 +447,7 @@ export default function MaquiagensPage() {
                 Maquiagens Premium
               </h1>
               <p className="text-xl lg:text-2xl text-purple-100 mb-8 max-w-2xl mx-auto">
-                Descubra nossa exclusiva coleção de bases Mari Maria, Bruna Tavares, Wepink Virginia e Base Fran
+                Descubra nossa coleção exclusiva de maquiagens: Mari Maria, Bruna Tavares, Wepink Virginia, Base Fran e PAM by Pamella
               </p>
               <div className="flex items-center justify-center gap-4 text-sm">
                 <span className="flex items-center gap-2">
@@ -482,6 +486,7 @@ export default function MaquiagensPage() {
                     <option value="bruna tavares">Bruna Tavares</option>
                     <option value="wepink virginia">Wepink Virginia</option>
                     <option value="fran by franciny ehlke">Fran by Franciny Ehlke</option>
+                    <option value="pam by pamella">PAM by Pamella</option>
                   </select>
                 </div>
               </div>

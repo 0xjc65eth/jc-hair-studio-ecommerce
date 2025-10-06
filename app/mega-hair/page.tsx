@@ -455,7 +455,7 @@ export default function MegaHairCatalog() {
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
 
         <div className="relative z-10 py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-[1440px] mx-auto">
             <motion.div
               initial="initial"
               animate="animate"
@@ -536,7 +536,7 @@ export default function MegaHairCatalog() {
               {/* Premium Stats */}
               <motion.div
                 variants={fadeInUp}
-                className="grid grid-cols-2 md:grid-cols-4 gap-4"
+                className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4"
               >
                 {[
                   { value: `${allProducts.length}+`, label: 'Produtos Premium' },
@@ -561,7 +561,7 @@ export default function MegaHairCatalog() {
 
       {/* Smart Search & Quick Actions Bar */}
       <section className="bg-white/90 backdrop-blur-lg border-b border-gray-100 sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col lg:flex-row gap-4 items-center">
             {/* Smart Search */}
             <div className="flex-1 relative">
@@ -650,7 +650,7 @@ export default function MegaHairCatalog() {
 
       {/* Enhanced Filter Bar */}
       <section className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center gap-4">
               <button
@@ -750,8 +750,9 @@ export default function MegaHairCatalog() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="flex gap-8">
+      <section className="py-16">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex gap-8">
           {/* Filter Sidebar */}
           <AnimatePresence>
             {showFilters && (
@@ -1040,7 +1041,7 @@ export default function MegaHairCatalog() {
               /* Visualização em Grade Tradicional */
               <motion.div
                 layout
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
               >
                 {filteredProducts.map((product, index) => (
                   <motion.div
@@ -1256,7 +1257,8 @@ export default function MegaHairCatalog() {
             )}
           </div>
         </div>
-      </div>
+          </div>
+      </section>
 
       {/* Floating Cart Indicator */}
       <AnimatePresence>
@@ -1727,7 +1729,7 @@ export default function MegaHairCatalog() {
 
       {/* Premium Testimonials & Trust Section */}
       <section className="bg-gradient-to-r from-gray-50 to-rose-50 py-20">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1743,7 +1745,7 @@ export default function MegaHairCatalog() {
           </motion.div>
 
           {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {[
               {
                 name: "Maria Silva",
@@ -1833,7 +1835,7 @@ export default function MegaHairCatalog() {
       {/* Smart Recommendations Section */}
       {filteredProducts.length > 0 && (
         <section className="bg-white py-16 border-t border-gray-100">
-          <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1849,7 +1851,7 @@ export default function MegaHairCatalog() {
             </motion.div>
 
             {/* Smart Recommendations Grid */}
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {allProducts
                 .filter(p => !filteredProducts.some(fp => fp.id === p.id))
                 .slice(0, 4)

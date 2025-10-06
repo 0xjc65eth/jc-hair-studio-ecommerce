@@ -1,7 +1,5 @@
 // Geo-targeting Middleware for Pan-European SEO
 import { NextRequest, NextResponse } from 'next/server';
-import { match } from '@formatjs/intl-localematcher';
-import Negotiator from 'negotiator';
 
 // Supported locales for 27+ European countries
 const locales = [
@@ -81,17 +79,7 @@ function getLocale(request: NextRequest): string {
     return countryToLocale[country];
   }
 
-  // Fallback to Accept-Language header
-  const negotiatorHeaders: Record<string, string> = {};
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
-
-  const languages = new Negotiator({ headers: negotiatorHeaders }).languages();
-
-  try {
-    return match(languages, locales, defaultLocale);
-  } catch {
-    return defaultLocale;
-  }
+  return defaultLocale;
 }
 
 // Currency mapping for different regions

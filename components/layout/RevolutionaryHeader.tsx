@@ -72,10 +72,11 @@ export default function RevolutionaryHeader({ className = '' }: HeaderProps) {
       active: pathname.startsWith('/produtos'),
       hasDropdown: true,
       dropdownItems: [
-        { name: '🇧🇷 Progressivas Vogue', href: '/categoria/progressivas-alisamentos' },
-        { name: '✨ BTX Capilar Premium', href: '/categoria/tratamentos-capilares' },
-        { name: '🌿 Shampoos Brasileiros', href: '/categoria/shampoos-condicionadores' },
-        { name: '🔥 Ferramentas Profissionais', href: '/categoria/ferramentas-profissionais' },
+        { name: 'PROGRESSIVA', href: '/categoria/progressivas' },
+        { name: 'BOTOX - SELAGEM', href: '/categoria/botox-selagem' },
+        { name: 'SHAMPOO & CONDICIONADOR', href: '/categoria/shampoos-condicionadores' },
+        { name: 'TRATAMENTO CAPILAR', href: '/categoria/tratamentos-capilares' },
+        { name: 'Ferramentas Profissionais', href: '/categoria/ferramentas-profissionais' },
       ]
     },
     { name: 'Maquiagem Brasileira', href: '/maquiagens', active: pathname === '/maquiagens' },
@@ -358,23 +359,25 @@ export default function RevolutionaryHeader({ className = '' }: HeaderProps) {
 
                       {((item.name === 'Mega Hair Brasileiro' && isMegaHairDropdownOpen) ||
                         (item.name === 'Produtos Capilares' && isProductsDropdownOpen)) && item.dropdownItems && (
-                        <div className="absolute top-full left-0 mt-4 w-80 bg-gradient-to-br from-white to-emerald-50 rounded-3xl shadow-2xl border-3 border-emerald-100 py-4 z-50 backdrop-blur-xl">
-                          {/* Enhanced Dropdown Header */}
-                          <div className="px-6 pb-3 border-b border-emerald-100">
-                            <span className="text-emerald-700 font-bold text-base flex items-center">
-                              <Crown className="w-5 h-5 mr-3 text-yellow-500" />
-                              {item.name}
-                            </span>
+                        <div className="absolute top-full left-0 pt-2 z-50">
+                          <div className="w-80 bg-gradient-to-br from-white to-emerald-50 rounded-3xl shadow-2xl border-3 border-emerald-100 py-4 backdrop-blur-xl">
+                            {/* Enhanced Dropdown Header */}
+                            <div className="px-6 pb-3 border-b border-emerald-100">
+                              <span className="text-emerald-700 font-bold text-base flex items-center">
+                                <Crown className="w-5 h-5 mr-3 text-yellow-500" />
+                                {item.name}
+                              </span>
+                            </div>
+                            {item.dropdownItems.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.href}
+                                href={dropdownItem.href}
+                                className="block px-6 py-4 text-sm text-emerald-700 hover:bg-gradient-to-r hover:from-emerald-50 hover:to-yellow-50 hover:text-emerald-800 transition-all duration-300 font-medium border-l-4 border-transparent hover:border-yellow-400 mx-3 rounded-xl"
+                              >
+                                {dropdownItem.name}
+                              </Link>
+                            ))}
                           </div>
-                          {item.dropdownItems.map((dropdownItem) => (
-                            <Link
-                              key={dropdownItem.href}
-                              href={dropdownItem.href}
-                              className="block px-6 py-4 text-sm text-emerald-700 hover:bg-gradient-to-r hover:from-emerald-50 hover:to-yellow-50 hover:text-emerald-800 transition-all duration-300 font-medium border-l-4 border-transparent hover:border-yellow-400 mx-3 rounded-xl"
-                            >
-                              {dropdownItem.name}
-                            </Link>
-                          ))}
                         </div>
                       )}
                     </div>

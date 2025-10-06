@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { Search, Filter, Grid, List, ChevronDown, X, Heart, ShoppingCart, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SearchBar } from '@/components/ui/SearchBar';
-// import { ProductCard } from '@/components/products/ProductCard';
+// import { ProductCard } from '@/components/products/SimpleProductCard';
 // import { FilterSidebar } from '@/components/ui/FilterSidebar';
 import { categories } from '@/lib/data/categories';
 import { staticProducts } from '@/lib/data/staticProducts';

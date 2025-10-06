@@ -1282,3 +1282,308 @@ model VerificationToken {
   @@unique([identifier, token])
   @@map("verificationtokens")
 }
+
+// ================================
+// LOGS & AUDIT SYSTEM
+// ================================
+
+model SystemLog {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+
+  // Log details
+  type        LogType
+  level       LogLevel  @default(INFO)
+  category    LogCategory @default(SYSTEM)
+
+  // Content
+  message     String
+  details     Json?     // Detailed log information
+  stackTrace  String?   // For errors
+
+  // Context
+  userId      String?   @db.ObjectId
+  sessionId   String?
+  ipAddress   String?
+  userAgent   String?
+
+  // References
+  orderId     String?   @db.ObjectId
+  productId   String?   @db.ObjectId
+  paymentId   String?   @db.ObjectId
+
+  // Metadata
+  metadata    Json?     // Additional context data
+  tags        String[]  // For easier filtering
+
+  // Timestamps
+  createdAt   DateTime  @default(now())
+
+  @@index([type])
+  @@index([level])
+  @@index([category])
+  @@index([createdAt])
+  @@index([userId])
+  @@index([orderId])
+  @@map("system_logs")
+}
+
+model AuditLog {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+
+  // Action details
+  action      AuditAction
+  entity      AuditEntity
+  entityId    String?  @db.ObjectId
+
+  // Who performed the action
+  userId      String?  @db.ObjectId
+  userName    String?
+  userEmail   String?
+
+  // What changed
+  changes     Json?    // Before/after values
+  oldValue    Json?
+  newValue    Json?
+
+  // Context
+  ipAddress   String?
+  userAgent   String?
+  sessionId   String?
+
+  // Status
+  status      AuditStatus @default(SUCCESS)
+  errorMessage String?
+
+  // Metadata
+  metadata    Json?
+  tags        String[]
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+
+  @@index([action])
+  @@index([entity])
+  @@index([userId])
+  @@index([createdAt])
+  @@index([status])
+  @@map("audit_logs")
+}
+
+model OrderLog {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  orderId     String   @db.ObjectId
+
+  // Event details
+  event       OrderLogEvent
+  status      String?   // Order status at the time
+
+  // Content
+  message     String
+  details     Json?
+
+  // Actor
+  userId      String?  @db.ObjectId
+  userName    String?
+  source      String?  // "admin", "customer", "system", "webhook"
+
+  // Context
+  ipAddress   String?
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+
+  @@index([orderId])
+  @@index([event])
+  @@index([createdAt])
+  @@map("order_logs")
+}
+
+model PaymentLog {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  paymentId   String   @db.ObjectId
+  orderId     String?  @db.ObjectId
+
+  // Event details
+  event       PaymentLogEvent
+  status      PaymentStatus
+
+  // Payment details
+  amount      Float?
+  currency    String?  @default("EUR")
+  method      PaymentMethod?
+
+  // Gateway info
+  gateway     String?  // "stripe", "paypal", etc.
+  gatewayResponse Json?
+  transactionId String?
+
+  // Error tracking
+  errorCode   String?
+  errorMessage String?
+
+  // Metadata
+  metadata    Json?
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+
+  @@index([paymentId])
+  @@index([orderId])
+  @@index([event])
+  @@index([status])
+  @@index([createdAt])
+  @@map("payment_logs")
+}
+
+model EmailLog {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+
+  // Email details
+  to          String
+  from        String?
+  subject     String
+  template    String?
+
+  // Status
+  status      EmailStatus
+  provider    EmailProvider @default(SENDGRID)
+
+  // References
+  orderId     String?  @db.ObjectId
+  userId      String?  @db.ObjectId
+
+  // Tracking
+  messageId   String?
+  attempts    Int      @default(1)
+
+  // Error tracking
+  errorMessage String?
+  errorCode   String?
+
+  // Metadata
+  metadata    Json?
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  sentAt      DateTime?
+  deliveredAt DateTime?
+  failedAt    DateTime?
+
+  @@index([to])
+  @@index([status])
+  @@index([orderId])
+  @@index([createdAt])
+  @@map("email_logs")
+}
+
+// Enums for Logs System
+
+enum LogType {
+  INFO
+  WARNING
+  ERROR
+  CRITICAL
+  DEBUG
+  SECURITY
+}
+
+enum LogLevel {
+  DEBUG
+  INFO
+  WARN
+  ERROR
+  FATAL
+}
+
+enum LogCategory {
+  SYSTEM        // System-level logs
+  ORDER         // Order-related logs
+  PAYMENT       // Payment-related logs
+  EMAIL         // Email notifications
+  AUTH          // Authentication
+  API           // API requests
+  DATABASE      // Database operations
+  INVENTORY     // Inventory changes
+  SECURITY      // Security events
+  PERFORMANCE   // Performance metrics
+}
+
+enum AuditAction {
+  CREATE
+  UPDATE
+  DELETE
+  VIEW
+  EXPORT
+  LOGIN
+  LOGOUT
+  APPROVE
+  REJECT
+  REFUND
+  SHIP
+  CANCEL
+  RESTORE
+}
+
+enum AuditEntity {
+  ORDER
+  PRODUCT
+  USER
+  PAYMENT
+  INVENTORY
+  COUPON
+  SETTINGS
+  CATEGORY
+  REVIEW
+  SHIPPING
+}
+
+enum AuditStatus {
+  SUCCESS
+  FAILED
+  PARTIAL
+}
+
+enum OrderLogEvent {
+  CREATED
+  UPDATED
+  CONFIRMED
+  PAYMENT_RECEIVED
+  PAYMENT_FAILED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  REFUNDED
+  NOTE_ADDED
+  STATUS_CHANGED
+  ADDRESS_CHANGED
+  ITEMS_CHANGED
+}
+
+enum PaymentLogEvent {
+  INITIATED
+  PROCESSING
+  SUCCEEDED
+  FAILED
+  REFUNDED
+  PARTIAL_REFUND
+  CANCELLED
+  EXPIRED
+  WEBHOOK_RECEIVED
+}
+
+enum EmailStatus {
+  PENDING
+  SENT
+  DELIVERED
+  FAILED
+  BOUNCED
+  REJECTED
+}
+
+enum EmailProvider {
+  SENDGRID
+  GMAIL
+  RESEND
+  SES
+}

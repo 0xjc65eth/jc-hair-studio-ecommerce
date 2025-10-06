@@ -621,7 +621,150 @@ export async function sendPaymentConfirmationEmail(data: PaymentEmailData): Prom
       to: customerEmail,
       from: `${process.env.FROM_NAME || 'JC Hair Studio\'s 62'} <${process.env.FROM_EMAIL || 'orders@jchairstudios62.xyz'}>`,
       subject: `💳 Pagamento Aprovado - Pedido #${orderId} - JC Hair Studio's 62`,
-      html: `Payment confirmation email content here`
+      html: `
+      <!DOCTYPE html>
+      <html lang="pt">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagamento Confirmado - JC Hair Studio's 62</title>
+      </head>
+      <body style="margin: 0; padding: 0; background-color: #f9fafb; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">
+        <div style="max-width: 600px; margin: 0 auto; background: #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+
+          <!-- Header with Gradient Background -->
+          <div style="background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%); padding: 40px 24px; text-align: center;">
+            <h1 style="color: white; margin: 0 0 8px 0; font-size: 32px; font-weight: 700;">JC Hair Studio's 62</h1>
+            <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 16px;">✨ Tradição Familiar há mais de 40 anos ✨</p>
+          </div>
+
+          <!-- Success Banner -->
+          <div style="background: linear-gradient(90deg, #10b981, #059669); margin: 0; padding: 24px; text-align: center;">
+            <div style="display: inline-flex; align-items: center; background: rgba(255,255,255,0.2); padding: 12px 24px; border-radius: 50px;">
+              <span style="font-size: 24px; margin-right: 8px;">💳</span>
+              <span style="color: white; font-weight: 600; font-size: 18px;">Pagamento Confirmado!</span>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div style="padding: 40px 32px;">
+
+            <!-- Personal Greeting -->
+            <div style="text-align: center; margin-bottom: 32px;">
+              <h2 style="color: #1f2937; margin: 0 0 12px 0; font-size: 28px; font-weight: 700;">Olá, ${customerName}! 👋</h2>
+              <p style="color: #6b7280; margin: 0; font-size: 16px; line-height: 1.6;">Recebemos a confirmação do seu pagamento! Seu pedido já está sendo processado.</p>
+            </div>
+
+            <!-- Payment Details Card -->
+            <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border: 2px solid #10b981; border-radius: 20px; padding: 32px; margin-bottom: 32px;">
+              <h3 style="color: #065f46; margin: 0 0 20px 0; font-size: 20px; font-weight: 700; text-align: center;">💰 Detalhes do Pagamento</h3>
+
+              <div style="background: white; border-radius: 16px; padding: 24px; margin-bottom: 16px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #e5e7eb;">
+                  <span style="color: #6b7280; font-weight: 500;">Pedido:</span>
+                  <span style="color: #1f2937; font-weight: 600;">#${orderId}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #e5e7eb;">
+                  <span style="color: #6b7280; font-weight: 500;">Método de Pagamento:</span>
+                  <span style="color: #1f2937; font-weight: 600;">${paymentMethod}</span>
+                </div>
+                ${transactionId ? `
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #e5e7eb;">
+                  <span style="color: #6b7280; font-weight: 500;">ID da Transação:</span>
+                  <span style="color: #1f2937; font-weight: 600; font-family: monospace; font-size: 12px;">${transactionId}</span>
+                </div>` : ''}
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #e5e7eb;">
+                  <span style="color: #6b7280; font-weight: 500;">Data do Pagamento:</span>
+                  <span style="color: #1f2937; font-weight: 600;">${paymentDate}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 12px;">
+                  <span style="color: #1f2937; font-weight: 700; font-size: 18px;">Valor Total:</span>
+                  <span style="color: #10b981; font-weight: 700; font-size: 24px;">${currency} ${total.toFixed(2)}</span>
+                </div>
+              </div>
+
+              <div style="background: rgba(16, 185, 129, 0.1); border-radius: 12px; padding: 16px; text-align: center;">
+                <span style="color: #065f46; font-weight: 600; font-size: 14px;">✅ STATUS: PAGAMENTO APROVADO</span>
+              </div>
+            </div>
+
+            <!-- Next Steps Timeline -->
+            <div style="background: white; border: 2px solid #e5e7eb; border-radius: 20px; padding: 32px; margin: 32px 0;">
+              <h3 style="color: #1f2937; margin: 0 0 24px 0; font-size: 20px; font-weight: 700; text-align: center;">📋 Próximas Etapas</h3>
+
+              <div style="position: relative;">
+                <div style="position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #10b981, #059669); opacity: 0.3;"></div>
+
+                <div style="margin-bottom: 24px; position: relative; padding-left: 60px;">
+                  <div style="position: absolute; left: 8px; top: 8px; width: 24px; height: 24px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 12px;">✓</div>
+                  <h4 style="margin: 0 0 8px 0; color: #1f2937; font-weight: 600;">✅ Pagamento Confirmado</h4>
+                  <p style="margin: 0; color: #6b7280; font-size: 14px; line-height: 1.5;">Recebemos e confirmamos seu pagamento</p>
+                </div>
+
+                <div style="margin-bottom: 24px; position: relative; padding-left: 60px;">
+                  <div style="position: absolute; left: 8px; top: 8px; width: 24px; height: 24px; background: #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 12px;">2</div>
+                  <h4 style="margin: 0 0 8px 0; color: #1f2937; font-weight: 600;">📦 Separação dos Produtos</h4>
+                  <p style="margin: 0; color: #6b7280; font-size: 14px; line-height: 1.5;">Em andamento - 1 dia útil</p>
+                </div>
+
+                <div style="margin-bottom: 24px; position: relative; padding-left: 60px;">
+                  <div style="position: absolute; left: 8px; top: 8px; width: 24px; height: 24px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 12px;">3</div>
+                  <h4 style="margin: 0 0 8px 0; color: #1f2937; font-weight: 600;">🚚 Envio com Rastreamento</h4>
+                  <p style="margin: 0; color: #6b7280; font-size: 14px; line-height: 1.5;">Código será enviado por email</p>
+                </div>
+
+                <div style="position: relative; padding-left: 60px;">
+                  <div style="position: absolute; left: 8px; top: 8px; width: 24px; height: 24px; background: #8b5cf6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 12px;">4</div>
+                  <h4 style="margin: 0 0 8px 0; color: #1f2937; font-weight: 600;">🏠 Entrega no Endereço</h4>
+                  <p style="margin: 0; color: #6b7280; font-size: 14px; line-height: 1.5;">Prazo estimado: ${estimatedDelivery}</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp Contact -->
+            <div style="background: linear-gradient(135deg, #25d366, #128c7e); border-radius: 20px; padding: 32px; margin: 32px 0; text-align: center; color: white;">
+              <h3 style="margin: 0 0 16px 0; font-size: 20px; font-weight: 700;">💬 Precisa de Ajuda?</h3>
+              <p style="margin: 0 0 24px 0; opacity: 0.9;">Nossa equipe está sempre disponível!</p>
+
+              <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                <a href="https://wa.me/351928375226" style="display: inline-flex; align-items: center; background: rgba(255,255,255,0.2); color: white; padding: 12px 20px; text-decoration: none; border-radius: 50px; font-weight: 600;">
+                  <span style="margin-right: 8px;">📱</span>
+                  Portugal: +351 928375226
+                </a>
+                <a href="https://wa.me/32472384027" style="display: inline-flex; align-items: center; background: rgba(255,255,255,0.2); color: white; padding: 12px 20px; text-decoration: none; border-radius: 50px; font-weight: 600;">
+                  <span style="margin-right: 8px;">📱</span>
+                  Bélgica: +32 472384027
+                </a>
+              </div>
+            </div>
+
+            <!-- Thank You -->
+            <div style="text-align: center; padding: 32px 0;">
+              <h3 style="color: #1f2937; margin: 0 0 16px 0; font-size: 24px; font-weight: 700;">Obrigado pela sua confiança! ✨</h3>
+              <p style="color: #6b7280; margin: 0; font-size: 16px;">Estamos empolgados para entregar seus produtos!</p>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div style="background: #1f2937; color: white; padding: 40px 32px; text-align: center;">
+            <h4 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 600;">JC Hair Studio's 62</h4>
+            <p style="margin: 0; opacity: 0.8; font-size: 14px;">Tradição Familiar há mais de 40 anos</p>
+
+            <div style="margin: 24px 0; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 12px;">
+              <p style="margin: 0; font-size: 14px; opacity: 0.9;">
+                🌟 Nossa Missão: Oferecer produtos premium para realçar sua beleza natural
+              </p>
+            </div>
+
+            <div style="font-size: 12px; opacity: 0.6;">
+              © 2024 JC Hair Studio's 62. Todos os direitos reservados.<br>
+              Este email foi enviado para ${customerEmail}
+            </div>
+          </div>
+        </div>
+      </body>
+      </html>
+      `
     };
 
     if (SENDGRID_ENABLED || FORCE_SEND_EMAILS) {

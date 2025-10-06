@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '../../../components/ui/Button';
 import ErrorBoundary from '../../../components/ui/ErrorBoundary';
-import ProductCard from '../../../components/products/ProductCard';
+import ProductCard from '../../../components/products/SimpleProductCard';
 import { ShoppingBag, Search, Filter } from 'lucide-react';
 
 // Mari Maria Products

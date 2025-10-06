@@ -157,11 +157,11 @@ export default function ProductCard({
           {descricao}
         </p>
 
-        {pricing && (
+        {pricing && pricing.savings !== undefined && (
           <div className="mb-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice.toFixed(2)}</span>
-              <span className="text-lg font-bold text-green-600">€{pricing.discountPrice.toFixed(2)}</span>
+              <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice?.toFixed(2)}</span>
+              <span className="text-lg font-bold text-green-600">€{pricing.discountPrice?.toFixed(2)}</span>
             </div>
             <div className="text-center">
               <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">

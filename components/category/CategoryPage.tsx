@@ -127,10 +127,10 @@ export default function CategoryPage({ category, className = '' }: CategoryPageP
   };
 
   return (
-    <div className={`min-h-screen bg-gray-50 ${className}`}>
+    <div className={`min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 ${className}`}>
       {/* Header da Categoria */}
       <div className="bg-white border-b">
-        <div className="container-custom py-8">
+        <div className="container mx-auto px-4 py-8">
           <div className="max-w-3xl">
             <h1 className="text-3xl sm:text-4xl font-light text-gray-900 mb-4">
               {category.name}
@@ -142,7 +142,7 @@ export default function CategoryPage({ category, className = '' }: CategoryPageP
         </div>
       </div>
 
-      <div className="container-custom py-8">
+      <div className="container mx-auto px-4 py-16">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar com Filtros */}
           <CategoryFilters

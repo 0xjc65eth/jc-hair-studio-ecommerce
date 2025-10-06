@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '../../components/ui/Button';
-import ProductCard from '../../components/products/ProductCard';
+import ProductCard from '../../components/products/SimpleProductCard';
 import { useCart } from '../../lib/stores/cartStore';
 import { ShoppingBag, Search, Filter, Heart, Eye, Shuffle, Grid, List, Sparkles, Palette } from 'lucide-react';
 // Esmaltes removidos - página vazia conforme solicitado

@@ -9,6 +9,7 @@ import { getAllMakeupProducts, getMakeupProductById } from '../data/makeupProduc
 import { allTintasCapilares, getTintaById } from '../data/tintasCapilares';
 import { allEsmaltesImpala, getEsmalteById } from '../data/esmaltesImpala';
 import { allPerfumesWepink, getPerfumeById } from '../data/perfumesWepink';
+import { allPerfumesOBoticario, getPerfumeOBoticarioById } from '../data/perfumesOBoticario';
 import { allPerfumesData } from '../data/perfumesProducts';
 
 interface UnifiedProduct {
@@ -171,6 +172,7 @@ export class ProductResolver {
     if (productId.includes('impala-esmalte')) return 'esmalte';
     if (productId.includes('biocolor-') || productId.includes('wella-') || productId.includes('alfaparf-')) return 'tinta';
     if (productId.includes('wepink-')) return 'perfume';
+    if (productId.includes('boticario-')) return 'perfume-boticario';
     if (productId.includes('cocochoco') || productId.includes('progressiva') ||
         productId.includes('relaxamento') || productId.includes('botox')) return 'progressiva';
 
@@ -278,16 +280,14 @@ export class ProductResolver {
     }
 
     // ENHANCED METHOD 3: Makeup products with prefix validation
-    if (!product && (productId.includes('mari-maria') || productId.includes('bruna-tavares'))) {
+    if (!product && (productId.includes('mari-maria') || productId.includes('bruna-tavares') || productId.includes('pam-by-pamella') || productId.includes('bt-'))) {
       console.log(`🎯 ProductResolver: Makeup product pattern detected, searching makeup products...`);
       for (const mappedId of allPossibleIds) {
-        if (mappedId.includes('mari-maria') || mappedId.includes('bruna-tavares')) {
-          product = getMakeupProductById(mappedId);
-          if (product) {
-            source = 'makeup-validated';
-            console.log(`✅ ProductResolver: Found makeup product - ${product.name || product.nome}`);
-            break;
-          }
+        product = getMakeupProductById(mappedId);
+        if (product) {
+          source = 'makeup-validated';
+          console.log(`✅ ProductResolver: Found makeup product - ${product.name || product.nome}`);
+          break;
         }
       }
     }
@@ -350,7 +350,21 @@ export class ProductResolver {
       }
     }
 
-    // METHOD 8: Legacy WEPINK perfumes (fallback)
+    // METHOD 8: O Boticário perfumes with validation
+    if (!product && productId.includes('boticario-')) {
+      if (isDev) {
+        console.log(`🎯 ProductResolver: O Boticário pattern detected, searching perfumes...`);
+      }
+      product = allPerfumesOBoticario.find(p => p.id === productId);
+      if (product) {
+        source = 'perfumes-boticario-validated';
+        if (isDev) {
+          console.log(`✅ ProductResolver: Found O Boticário perfume product - ${product.nome}`);
+        }
+      }
+    }
+
+    // METHOD 9: Legacy WEPINK perfumes (fallback)
     if (!product && productId.includes('wepink-')) {
       if (isDev) {
         console.log(`🎯 ProductResolver: WEPINK legacy pattern detected, searching legacy perfumes...`);
@@ -535,6 +549,14 @@ export class ProductResolver {
       const exists = allProducts.some(p => p.id === perfume.id);
       if (!exists) {
         allProducts.push(this.normalizeProduct(perfume, 'perfumes-wepink'));
+      }
+    });
+
+    // O Boticário perfumes products
+    allPerfumesOBoticario.forEach(perfume => {
+      const exists = allProducts.some(p => p.id === perfume.id);
+      if (!exists) {
+        allProducts.push(this.normalizeProduct(perfume, 'perfumes-boticario'));
       }
     });
 

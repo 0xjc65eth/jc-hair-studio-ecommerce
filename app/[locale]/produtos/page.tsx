@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/Button';
-import ProductCard from '@/components/products/ProductCard';
+import ProductCard from '@/components/products/SimpleProductCard';
 import { ShoppingBag, Search, Filter } from 'lucide-react';
 
 const progressivasData = [

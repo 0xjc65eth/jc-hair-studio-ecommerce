@@ -9,10 +9,12 @@ export default function CategorySlugPage() {
   const params = useParams();
   const slug = params.slug as string;
 
-  // Encontrar a categoria pelo slug/id
-  const category = categories.find(cat => cat.id === slug);
+  // Encontrar a categoria pelo slug
+  const category = categories.find(cat => cat.slug === slug || cat.id === slug);
 
   if (!category) {
+    console.error(`Categoria não encontrada para slug: ${slug}`);
+    console.log('Categorias disponíveis:', categories.map(c => ({ id: c.id, slug: c.slug })));
     notFound();
   }
 
