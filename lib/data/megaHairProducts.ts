@@ -1,8 +1,8 @@
 /**
  * Mega Hair Products - PREÇOS CORRETOS BASEADOS EM CUSTO REAL
  * Custo REAL confirmado pelo cliente: €70 por 100g de 50cm
- * Incremento: +37% a cada 10cm
- * Margem mínima: 50%
+ * Incremento: +20% a cada 10cm
+ * Margem: Liso 50% | Ondulado 52.4% | Cacheado 54.5%
  * Venda: Apenas 100g para todos comprimentos
  *
  * IMPORTANTE: Trabalho com dinheiro do cliente - valores verificados
@@ -36,7 +36,7 @@ export interface MegaHairProductCorrected {
 }
 
 export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
-  // 40CM - €44.10 custo (€70 - 37%)
+  // 40CM - €58.33 custo (€70 - 20%)
   {
     id: 'mega-hair-40cm-liso-preto',
     sku: 'MEGA-40-LISO-PRETO',
@@ -46,10 +46,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/liso/40cm/grisalho-mix-liso-1a.jpg'],
     badge: 'COMPACTO',
     pricing: {
-      basePrice: 44.10,
-      ourPrice: 88.20,
-      discountPrice: 79.40,
-      savings: 8.80,
+      basePrice: 58.33,
+      ourPrice: 87.50,
+      discountPrice: 78.75,
+      savings: 8.75,
       margin: '50.0%',
       competitive: 'Preço competitivo vs extensões brasileiras 40cm na Europa (€95-120). Cabelo 100% humano autêntico.'
     },
@@ -57,7 +57,7 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 40,
     weight: '100g',
     type: 'liso',
-    color: 'Preto Natural',
+    color: 'Ombré Grisalho',
     origin: 'Brasil',
     rating: 4.7,
     reviews: 156,
@@ -71,10 +71,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     descricao: 'Mega Hair ondulado brasileiro preto natural 40cm, 100g. Ondas naturais tipo 3A, movimento perfeito e volume equilibrado.',
     imagens: ['/images/mega-hair/ondulado/40cm/preto-natural-ondulado-3a.jpg'],
     pricing: {
-      basePrice: 44.10,
-      ourPrice: 92.60,
-      discountPrice: 83.30,
-      savings: 9.30,
+      basePrice: 58.33,
+      ourPrice: 88.90,
+      discountPrice: 80.01,
+      savings: 8.89,
       margin: '52.4%',
       competitive: 'Ondulado brasileiro vs europeu (€105-135). Textura autêntica 2B/2C.'
     },
@@ -82,7 +82,7 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 40,
     weight: '100g',
     type: 'ondulado',
-    color: 'Castanho Natural',
+    color: 'Preto Natural',
     origin: 'Brasil',
     rating: 4.6,
     reviews: 134,
@@ -97,10 +97,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/cacheado/45cm/ruivo-cacheado-3c.jpg'],
     badge: 'CACHOS',
     pricing: {
-      basePrice: 44.10,
-      ourPrice: 97.00,
-      discountPrice: 87.30,
-      savings: 9.70,
+      basePrice: 58.33,
+      ourPrice: 90.12,
+      discountPrice: 81.11,
+      savings: 9.01,
       margin: '54.5%',
       competitive: 'Cacheado brasileiro 40cm único na Europa (€110-145). Cachos autênticos 3A.'
     },
@@ -108,7 +108,7 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 40,
     weight: '100g',
     type: 'cacheado',
-    color: 'Castanho Natural',
+    color: 'Ruivo Intenso',
     origin: 'Brasil',
     rating: 4.8,
     reviews: 178,
@@ -126,9 +126,9 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     badge: 'BEST SELLER',
     pricing: {
       basePrice: 70.00,
-      ourPrice: 140.00,
-      discountPrice: 126.00,
-      savings: 14.00,
+      ourPrice: 105.00,
+      discountPrice: 94.50,
+      savings: 10.50,
       margin: '50.0%',
       competitive: 'Best-seller! Preço justo vs mercado europeu (€140-180). Comprimento ideal para transformação natural.'
     },
@@ -152,9 +152,9 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     badge: 'POPULAR',
     pricing: {
       basePrice: 70.00,
-      ourPrice: 147.00,
-      discountPrice: 132.30,
-      savings: 14.70,
+      ourPrice: 106.68,
+      discountPrice: 96.01,
+      savings: 10.67,
       margin: '52.4%',
       competitive: 'Ondulado 50cm vs importados (€155-195). Textura beach waves brasileira autêntica.'
     },
@@ -162,7 +162,7 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 50,
     weight: '100g',
     type: 'ondulado',
-    color: 'Castanho Natural',
+    color: 'Preto Natural',
     origin: 'Brasil',
     rating: 4.8,
     reviews: 289,
@@ -178,9 +178,9 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     badge: 'ALTA DEMANDA',
     pricing: {
       basePrice: 70.00,
-      ourPrice: 154.00,
-      discountPrice: 138.60,
-      savings: 15.40,
+      ourPrice: 108.15,
+      discountPrice: 97.33,
+      savings: 10.81,
       margin: '54.5%',
       competitive: 'Cacheado brasileiro 50cm raridade europeia (€165-210). Cachos definidos tipo 3A.'
     },
@@ -188,14 +188,14 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 50,
     weight: '100g',
     type: 'cacheado',
-    color: 'Castanho Natural',
+    color: 'Borgonha Profunda',
     origin: 'Brasil',
     rating: 4.9,
     reviews: 267,
     inStock: true
   },
 
-  // 60CM - €95.90 custo (€70 + 37%)
+  // 60CM - €84.00 custo (€70 + 20%)
   {
     id: 'mega-hair-60cm-liso-preto',
     sku: 'MEGA-60-LISO-PRETO',
@@ -205,10 +205,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/liso/60cm/loiro-platinado-liso-1a.jpg'],
     badge: 'SOFISTICADO',
     pricing: {
-      basePrice: 95.90,
-      ourPrice: 191.80,
-      discountPrice: 172.60,
-      savings: 19.20,
+      basePrice: 84.00,
+      ourPrice: 126.00,
+      discountPrice: 113.40,
+      savings: 12.60,
       margin: '50.0%',
       competitive: 'Liso 60cm premium vs mercado (€195-250). Comprimento longo para visual impactante.'
     },
@@ -216,7 +216,7 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 60,
     weight: '100g',
     type: 'liso',
-    color: 'Preto Natural',
+    color: 'Loiro Platinado',
     origin: 'Brasil',
     rating: 4.8,
     reviews: 198,
@@ -231,10 +231,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/ondulado/30cm/preto-natural-ondulado-2c.jpg'],
     badge: 'DESLUMBRANTE',
     pricing: {
-      basePrice: 95.90,
-      ourPrice: 201.40,
-      discountPrice: 181.30,
-      savings: 20.10,
+      basePrice: 84.00,
+      ourPrice: 128.02,
+      discountPrice: 115.21,
+      savings: 12.80,
       margin: '52.4%',
       competitive: 'Ondulado 60cm vs importados europa (€210-270). Ondas sereia brasileiras.'
     },
@@ -242,7 +242,7 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 60,
     weight: '100g',
     type: 'ondulado',
-    color: 'Castanho Natural',
+    color: 'Preto Natural',
     origin: 'Brasil',
     rating: 4.7,
     reviews: 167,
@@ -257,10 +257,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/cacheado/55cm/borgonha-cacheado-3c.jpg'],
     badge: 'STATEMENT',
     pricing: {
-      basePrice: 95.90,
-      ourPrice: 212.10,
-      discountPrice: 191.10,
-      savings: 21.00,
+      basePrice: 84.00,
+      ourPrice: 129.78,
+      discountPrice: 116.80,
+      savings: 12.98,
       margin: '54.5%',
       competitive: 'Cacheado 60cm raridade absoluta (€225-295). Volume máximo tipo 3A.'
     },
@@ -268,14 +268,14 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 60,
     weight: '100g',
     type: 'cacheado',
-    color: 'Castanho Natural',
+    color: 'Borgonha Profunda',
     origin: 'Brasil',
     rating: 4.9,
     reviews: 145,
     inStock: true
   },
 
-  // 70CM - €131.38 custo (€95.90 + 37%)
+  // 70CM - €100.80 custo (€84 + 20%)
   {
     id: 'mega-hair-70cm-liso-preto',
     sku: 'MEGA-70-LISO-PRETO',
@@ -285,10 +285,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/liso/70cm/preto-natural-liso-1a.jpg'],
     badge: 'EXTRA LONG',
     pricing: {
-      basePrice: 131.38,
-      ourPrice: 262.76,
-      discountPrice: 236.50,
-      savings: 26.26,
+      basePrice: 100.80,
+      ourPrice: 151.20,
+      discountPrice: 136.08,
+      savings: 15.12,
       margin: '50.0%',
       competitive: 'Extra long 70cm ultra raro na Europa (€280-370). Comprimento de capa de revista.'
     },
@@ -311,10 +311,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/ondulado/30cm/preto-natural-ondulado-2c.jpg'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 131.38,
-      ourPrice: 275.90,
-      discountPrice: 248.30,
-      savings: 27.60,
+      basePrice: 100.80,
+      ourPrice: 153.62,
+      discountPrice: 138.26,
+      savings: 15.36,
       margin: '52.4%',
       competitive: 'Ondulado 70cm peça de colecionador (€295-390). Ondas goddess brasileiras.'
     },
@@ -322,7 +322,7 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 70,
     weight: '100g',
     type: 'ondulado',
-    color: 'Castanho Natural',
+    color: 'Preto Natural',
     origin: 'Brasil',
     rating: 4.9,
     reviews: 78,
@@ -337,10 +337,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/cacheado/55cm/borgonha-cacheado-3c.jpg'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 131.38,
-      ourPrice: 289.60,
-      discountPrice: 260.60,
-      savings: 29.00,
+      basePrice: 100.80,
+      ourPrice: 155.74,
+      discountPrice: 140.16,
+      savings: 15.57,
       margin: '54.5%',
       competitive: 'Cacheado 70cm ultra raro na Europa (€310-420). Volume dramático tipo 3A.'
     },
@@ -348,14 +348,14 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 70,
     weight: '100g',
     type: 'cacheado',
-    color: 'Castanho Natural',
+    color: 'Borgonha Profunda',
     origin: 'Brasil',
     rating: 5.0,
     reviews: 67,
     inStock: true
   },
 
-  // 80CM - €179.99 custo (€131.38 + 37%)
+  // 80CM - €120.96 custo (€100.80 + 20%)
   {
     id: 'mega-hair-80cm-liso-preto',
     sku: 'MEGA-80-LISO-PRETO',
@@ -365,10 +365,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/liso/80cm/castanho-chocolate-liso-2a.jpg'],
     badge: 'LUXURY',
     pricing: {
-      basePrice: 179.99,
-      ourPrice: 359.98,
-      discountPrice: 324.00,
-      savings: 35.98,
+      basePrice: 120.96,
+      ourPrice: 181.44,
+      discountPrice: 163.30,
+      savings: 18.14,
       margin: '50.0%',
       competitive: 'Luxury 80cm raríssimo (€380-520). Comprimento de passarela internacional.'
     },
@@ -376,7 +376,7 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 80,
     weight: '100g',
     type: 'liso',
-    color: 'Preto Natural',
+    color: 'Castanho Chocolate',
     origin: 'Brasil',
     rating: 5.0,
     reviews: 45,
@@ -391,10 +391,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/ondulado/40cm/preto-natural-ondulado-3a.jpg'],
     badge: 'LUXURY',
     pricing: {
-      basePrice: 179.99,
-      ourPrice: 378.00,
-      discountPrice: 340.20,
-      savings: 37.80,
+      basePrice: 120.96,
+      ourPrice: 184.34,
+      discountPrice: 165.91,
+      savings: 18.43,
       margin: '52.4%',
       competitive: 'Ondulado 80cm peça única (€400-550). Ondas de cinema Hollywood.'
     },
@@ -402,7 +402,7 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 80,
     weight: '100g',
     type: 'ondulado',
-    color: 'Castanho Natural',
+    color: 'Preto Natural',
     origin: 'Brasil',
     rating: 5.0,
     reviews: 34,
@@ -417,10 +417,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/cacheado/45cm/ruivo-cacheado-3c.jpg'],
     badge: 'LUXURY',
     pricing: {
-      basePrice: 179.99,
-      ourPrice: 396.00,
-      discountPrice: 356.40,
-      savings: 39.60,
+      basePrice: 120.96,
+      ourPrice: 186.88,
+      discountPrice: 168.19,
+      savings: 18.69,
       margin: '54.5%',
       competitive: 'Cacheado 80cm peça de museu (€420-580). Volume extremo tipo 3A.'
     },
@@ -428,14 +428,14 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 80,
     weight: '100g',
     type: 'cacheado',
-    color: 'Castanho Natural',
+    color: 'Ruivo Intenso',
     origin: 'Brasil',
     rating: 5.0,
     reviews: 28,
     inStock: true
   },
 
-  // 90CM - €246.59 custo (€179.99 + 37%) - RAPUNZEL COLLECTION
+  // 90CM - €145.15 custo (€120.96 + 20%) - RAPUNZEL COLLECTION
   {
     id: 'mega-hair-90cm-liso-preto',
     sku: 'MEGA-90-LISO-PRETO',
@@ -445,10 +445,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/liso/90cm/preto-natural-liso-2a.jpg'],
     badge: 'RAPUNZEL',
     pricing: {
-      basePrice: 246.59,
-      ourPrice: 493.18,
-      discountPrice: 443.86,
-      savings: 49.32,
+      basePrice: 145.15,
+      ourPrice: 217.73,
+      discountPrice: 195.96,
+      savings: 21.77,
       margin: '50.0%',
       competitive: 'Coleção Rapunzel única na Europa (€520-720). Comprimento extremo de 90cm - peça de museu.'
     },
@@ -471,10 +471,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/ondulado/30cm/preto-natural-ondulado-2c.jpg'],
     badge: 'RAPUNZEL',
     pricing: {
-      basePrice: 246.59,
-      ourPrice: 518.00,
-      discountPrice: 466.20,
-      savings: 51.80,
+      basePrice: 145.15,
+      ourPrice: 221.21,
+      discountPrice: 199.09,
+      savings: 22.12,
       margin: '52.4%',
       competitive: 'Ondulado 90cm conto de fadas (€545-750). Ondas Rapunzel brasileiras.'
     },
@@ -482,7 +482,7 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 90,
     weight: '100g',
     type: 'ondulado',
-    color: 'Castanho Natural',
+    color: 'Preto Natural',
     origin: 'Brasil',
     rating: 5.0,
     reviews: 15,
@@ -497,10 +497,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     imagens: ['/images/mega-hair/cacheado/35cm/preto-natural-cacheado-3c.jpg'],
     badge: 'RAPUNZEL',
     pricing: {
-      basePrice: 246.59,
-      ourPrice: 542.80,
-      discountPrice: 488.50,
-      savings: 54.30,
+      basePrice: 145.15,
+      ourPrice: 224.26,
+      discountPrice: 201.83,
+      savings: 22.43,
       margin: '54.5%',
       competitive: 'Cacheado 90cm obra de arte (€570-800). Cachos Rapunzel tipo 3A únicos.'
     },
@@ -508,7 +508,7 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     length: 90,
     weight: '100g',
     type: 'cacheado',
-    color: 'Castanho Natural',
+    color: 'Preto Natural',
     origin: 'Brasil',
     rating: 5.0,
     reviews: 12,
