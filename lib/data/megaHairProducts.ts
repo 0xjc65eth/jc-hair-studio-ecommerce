@@ -40,10 +40,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-40cm-liso-preto',
     sku: 'MEGA-40-LISO-PRETO',
-    nome: 'Mega Hair Liso Preto 40cm - 100g',
+    nome: 'Mega Hair Liso Ombré Grisalho 40cm - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair 100% cabelo humano brasileiro natural liso preto, 40cm de comprimento, 100g. Perfeito para quem busca volume e comprimento moderado com máxima naturalidade.',
-    imagens: ['/images/mega-hair/liso/50cm/preto-natural-liso-1a.jpg'],
+    descricao: 'Mega Hair 100% cabelo humano brasileiro natural liso com efeito ombré castanho para loiro acinzentado, 40cm de comprimento, 100g. Perfeito para quem busca volume e comprimento moderado com efeito de iluminação natural.',
+    imagens: ['/images/mega-hair/liso/40cm/grisalho-mix-liso-1a.jpg'],
     badge: 'COMPACTO',
     pricing: {
       basePrice: 44.10,
@@ -66,10 +66,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-40cm-ondulado',
     sku: 'MEGA-40-OND',
-    nome: 'Mega Hair Ondulado 40cm - 100g',
+    nome: 'Mega Hair Ondulado Preto 40cm - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair ondulado brasileiro 40cm, 100g. Ondas naturais tipo 2B/2C, movimento perfeito e volume equilibrado.',
-    imagens: ['/images/mega-hair/ondulado/40cm/castanho-ondulado-2b.jpg'],
+    descricao: 'Mega Hair ondulado brasileiro preto natural 40cm, 100g. Ondas naturais tipo 3A, movimento perfeito e volume equilibrado.',
+    imagens: ['/images/mega-hair/ondulado/40cm/preto-natural-ondulado-3a.jpg'],
     pricing: {
       basePrice: 44.10,
       ourPrice: 92.60,
@@ -91,10 +91,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-40cm-cacheado',
     sku: 'MEGA-40-CACH',
-    nome: 'Mega Hair Cacheado 40cm - 100g',
+    nome: 'Mega Hair Cacheado Ruivo 40cm - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair cacheado brasileiro 40cm, 100g. Cachos tipo 3A/3B definidos, volume natural e textura vibrante.',
-    imagens: ['/images/mega-hair/cacheado/45cm/castanho-cacheado-3a.jpg'],
+    descricao: 'Mega Hair cacheado brasileiro ruivo intenso 40cm, 100g. Cachos tipo 3C definidos, volume natural e textura vibrante com tons cobre.',
+    imagens: ['/images/mega-hair/cacheado/45cm/ruivo-cacheado-3c.jpg'],
     badge: 'CACHOS',
     pricing: {
       basePrice: 44.10,
@@ -145,10 +145,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-50cm-ondulado',
     sku: 'MEGA-50-OND',
-    nome: 'Mega Hair Ondulado 50cm - 100g',
+    nome: 'Mega Hair Ondulado Preto 50cm - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair ondulado brasileiro 50cm, 100g. Ondas tipo 2B/2C com balanço natural. Comprimento versátil e muito procurado.',
-    imagens: ['/images/mega-hair/ondulado/40cm/castanho-ondulado-2b.jpg'],
+    descricao: 'Mega Hair ondulado brasileiro preto natural 50cm, 100g. Ondas tipo 3A com balanço natural. Comprimento versátil e muito procurado.',
+    imagens: ['/images/mega-hair/ondulado/40cm/preto-natural-ondulado-3a.jpg'],
     badge: 'POPULAR',
     pricing: {
       basePrice: 70.00,
@@ -171,10 +171,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-50cm-cacheado',
     sku: 'MEGA-50-CACH',
-    nome: 'Mega Hair Cacheado 50cm - 100g',
+    nome: 'Mega Hair Cacheado Borgonha 50cm - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair cacheado brasileiro 50cm, 100g. Cachos 3A/3B vibrantes com movimento natural. Alta demanda!',
-    imagens: ['/images/mega-hair/cacheado/45cm/castanho-cacheado-3a.jpg'],
+    descricao: 'Mega Hair cacheado brasileiro borgonha profunda 50cm, 100g. Cachos 3C vibrantes com movimento natural e reflexos roxo-avinados. Alta demanda!',
+    imagens: ['/images/mega-hair/cacheado/55cm/borgonha-cacheado-3c.jpg'],
     badge: 'ALTA DEMANDA',
     pricing: {
       basePrice: 70.00,
@@ -199,10 +199,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-60cm-liso-preto',
     sku: 'MEGA-60-LISO-PRETO',
-    nome: 'Mega Hair Liso Preto 60cm - 100g',
+    nome: 'Mega Hair Liso Loiro Platinado 60cm - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair liso preto brasileiro 60cm, 100g. Comprimento longo sofisticado, transformação dramática com elegância.',
-    imagens: ['/images/mega-hair/liso/60cm/preto-natural-liso-1a.jpg'],
+    descricao: 'Mega Hair liso loiro platinado brasileiro 60cm, 100g. Comprimento longo sofisticado, transformação dramática com elegância e brilho premium.',
+    imagens: ['/images/mega-hair/liso/60cm/loiro-platinado-liso-1a.jpg'],
     badge: 'SOFISTICADO',
     pricing: {
       basePrice: 95.90,
@@ -225,10 +225,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-60cm-ondulado',
     sku: 'MEGA-60-OND',
-    nome: 'Mega Hair Ondulado 60cm - 100g',
+    nome: 'Mega Hair Ondulado Preto 60cm - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair ondulado brasileiro 60cm, 100g. Ondas longas deslumbrantes tipo 2B/2C, volume e movimento de sereia.',
-    imagens: ['/images/mega-hair/ondulado/40cm/castanho-ondulado-2b.jpg'],
+    descricao: 'Mega Hair ondulado brasileiro preto natural 60cm, 100g. Ondas longas deslumbrantes tipo 2C, volume e movimento de sereia.',
+    imagens: ['/images/mega-hair/ondulado/30cm/preto-natural-ondulado-2c.jpg'],
     badge: 'DESLUMBRANTE',
     pricing: {
       basePrice: 95.90,
@@ -251,10 +251,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-60cm-cacheado',
     sku: 'MEGA-60-CACH',
-    nome: 'Mega Hair Cacheado 60cm - 100g',
+    nome: 'Mega Hair Cacheado Borgonha 60cm - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair cacheado brasileiro 60cm, 100g. Cachos longos tipo 3A volumosos e dramáticos. Peça statement!',
-    imagens: ['/images/mega-hair/cacheado/45cm/castanho-cacheado-3a.jpg'],
+    descricao: 'Mega Hair cacheado brasileiro borgonha profunda 60cm, 100g. Cachos longos tipo 3C volumosos e dramáticos com reflexos roxos. Peça statement!',
+    imagens: ['/images/mega-hair/cacheado/55cm/borgonha-cacheado-3c.jpg'],
     badge: 'STATEMENT',
     pricing: {
       basePrice: 95.90,
@@ -305,10 +305,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-70cm-ondulado',
     sku: 'MEGA-70-OND',
-    nome: 'Mega Hair Ondulado 70cm Extra Long - 100g',
+    nome: 'Mega Hair Ondulado Preto 70cm Extra Long - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair ondulado brasileiro 70cm, 100g. Ondas extra longas tipo 2B/2C, visual de deusa grega.',
-    imagens: ['/images/mega-hair/ondulado/40cm/castanho-ondulado-2b.jpg'],
+    descricao: 'Mega Hair ondulado brasileiro preto natural 70cm, 100g. Ondas extra longas tipo 2C, visual de deusa grega.',
+    imagens: ['/images/mega-hair/ondulado/30cm/preto-natural-ondulado-2c.jpg'],
     badge: 'EXCLUSIVO',
     pricing: {
       basePrice: 131.38,
@@ -331,10 +331,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-70cm-cacheado',
     sku: 'MEGA-70-CACH',
-    nome: 'Mega Hair Cacheado 70cm Extra Long - 100g',
+    nome: 'Mega Hair Cacheado Borgonha 70cm Extra Long - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair cacheado brasileiro 70cm, 100g. Cachos extra longos, volume máximo dramático.',
-    imagens: ['/images/mega-hair/cacheado/45cm/castanho-cacheado-3a.jpg'],
+    descricao: 'Mega Hair cacheado brasileiro borgonha profunda 70cm, 100g. Cachos extra longos tipo 3C com reflexos roxos, volume máximo dramático.',
+    imagens: ['/images/mega-hair/cacheado/55cm/borgonha-cacheado-3c.jpg'],
     badge: 'EXCLUSIVO',
     pricing: {
       basePrice: 131.38,
@@ -359,10 +359,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-80cm-liso-preto',
     sku: 'MEGA-80-LISO-PRETO',
-    nome: 'Mega Hair Liso Preto 80cm Luxury - 100g',
+    nome: 'Mega Hair Liso Castanho Chocolate 80cm Luxury - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair liso preto brasileiro 80cm, 100g. Coleção Luxury - comprimento espetacular de passarela.',
-    imagens: ['/images/mega-hair/liso/80cm/preto-natural-liso-1a.jpg'],
+    descricao: 'Mega Hair liso castanho chocolate brasileiro 80cm, 100g. Coleção Luxury - comprimento espetacular de passarela com tons ricos.',
+    imagens: ['/images/mega-hair/liso/80cm/castanho-chocolate-liso-2a.jpg'],
     badge: 'LUXURY',
     pricing: {
       basePrice: 179.99,
@@ -385,10 +385,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-80cm-ondulado',
     sku: 'MEGA-80-OND',
-    nome: 'Mega Hair Ondulado 80cm Luxury - 100g',
+    nome: 'Mega Hair Ondulado Preto 80cm Luxury - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair ondulado brasileiro 80cm, 100g. Ondas luxury tipo 2B/2C de cinema.',
-    imagens: ['/images/mega-hair/ondulado/40cm/castanho-ondulado-2b.jpg'],
+    descricao: 'Mega Hair ondulado brasileiro preto natural 80cm, 100g. Ondas luxury tipo 3A de cinema.',
+    imagens: ['/images/mega-hair/ondulado/40cm/preto-natural-ondulado-3a.jpg'],
     badge: 'LUXURY',
     pricing: {
       basePrice: 179.99,
@@ -411,10 +411,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-80cm-cacheado',
     sku: 'MEGA-80-CACH',
-    nome: 'Mega Hair Cacheado 80cm Luxury - 100g',
+    nome: 'Mega Hair Cacheado Ruivo 80cm Luxury - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair cacheado brasileiro 80cm, 100g. Cachos luxury volumosos extremos.',
-    imagens: ['/images/mega-hair/cacheado/45cm/castanho-cacheado-3a.jpg'],
+    descricao: 'Mega Hair cacheado brasileiro ruivo intenso 80cm, 100g. Cachos luxury tipo 3C volumosos extremos com tons cobre.',
+    imagens: ['/images/mega-hair/cacheado/45cm/ruivo-cacheado-3c.jpg'],
     badge: 'LUXURY',
     pricing: {
       basePrice: 179.99,
@@ -441,8 +441,8 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
     sku: 'MEGA-90-LISO-PRETO',
     nome: 'Mega Hair Liso Preto 90cm Rapunzel - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair 100% cabelo humano brasileiro liso preto, 90cm, 100g. Coleção Rapunzel - Nossa peça mais exclusiva e espetacular!',
-    imagens: ['/images/mega-hair/liso/90cm/preto-natural-liso-1a.jpg'],
+    descricao: 'Mega Hair 100% cabelo humano brasileiro liso preto natural, 90cm, 100g. Coleção Rapunzel - Nossa peça mais exclusiva e espetacular!',
+    imagens: ['/images/mega-hair/liso/90cm/preto-natural-liso-2a.jpg'],
     badge: 'RAPUNZEL',
     pricing: {
       basePrice: 246.59,
@@ -465,10 +465,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-90cm-ondulado',
     sku: 'MEGA-90-OND',
-    nome: 'Mega Hair Ondulado 90cm Rapunzel - 100g',
+    nome: 'Mega Hair Ondulado Preto 90cm Rapunzel - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair ondulado brasileiro 90cm, 100g. Ondas Rapunzel de conto de fadas, para quem sonha grande.',
-    imagens: ['/images/mega-hair/ondulado/40cm/castanho-ondulado-2b.jpg'],
+    descricao: 'Mega Hair ondulado brasileiro preto natural 90cm, 100g. Ondas tipo 2C Rapunzel de conto de fadas, para quem sonha grande.',
+    imagens: ['/images/mega-hair/ondulado/30cm/preto-natural-ondulado-2c.jpg'],
     badge: 'RAPUNZEL',
     pricing: {
       basePrice: 246.59,
@@ -491,10 +491,10 @@ export const megaHairProductsCorrected: MegaHairProductCorrected[] = [
   {
     id: 'mega-hair-90cm-cacheado',
     sku: 'MEGA-90-CACH',
-    nome: 'Mega Hair Cacheado 90cm Rapunzel - 100g',
+    nome: 'Mega Hair Cacheado Preto 90cm Rapunzel - 100g',
     marca: 'JC Hair Studio Premium',
-    descricao: 'Mega Hair cacheado brasileiro 90cm, 100g. Cachos Rapunzel volumosos de princesa brasileira.',
-    imagens: ['/images/mega-hair/cacheado/45cm/castanho-cacheado-3a.jpg'],
+    descricao: 'Mega Hair cacheado brasileiro preto natural 90cm, 100g. Cachos tipo 3C Rapunzel volumosos de princesa brasileira.',
+    imagens: ['/images/mega-hair/cacheado/35cm/preto-natural-cacheado-3c.jpg'],
     badge: 'RAPUNZEL',
     pricing: {
       basePrice: 246.59,
