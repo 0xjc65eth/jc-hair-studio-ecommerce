@@ -12,7 +12,7 @@ export const mariMariaProducts = [
     descricao: 'Base líquida profissional Mari Maria no tom Amêndoa. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-amndoa.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 32.00, ourPrice: 35.20, discountPrice: 28.16, savings: 7.04, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
+    pricing: { basePrice: 22.40, ourPrice: 24.64, discountPrice: 19.71, savings: 4.93, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
     category: 'Maquiagem'
   },
   {
@@ -22,7 +22,7 @@ export const mariMariaProducts = [
     descricao: 'Base líquida profissional Mari Maria no tom Baunilha. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-baunilha.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 32.50, ourPrice: 35.75, discountPrice: 28.60, savings: 7.15, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
+    pricing: { basePrice: 22.75, ourPrice: 25.03, discountPrice: 20.02, savings: 5.01, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
     category: 'Maquiagem'
   },
   {
@@ -32,7 +32,7 @@ export const mariMariaProducts = [
     descricao: 'Base líquida profissional Mari Maria no tom Bege Claro. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-bege-claro.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 33.50, ourPrice: 36.85, discountPrice: 29.48, savings: 7.37, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
+    pricing: { basePrice: 23.45, ourPrice: 25.80, discountPrice: 20.64, savings: 5.16, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
     category: 'Maquiagem'
   },
   {
@@ -42,7 +42,7 @@ export const mariMariaProducts = [
     descricao: 'Base líquida profissional Mari Maria no tom Bege Escuro. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-bege-escuro.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 34.00, ourPrice: 37.40, discountPrice: 29.92, savings: 7.48, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
+    pricing: { basePrice: 23.80, ourPrice: 26.18, discountPrice: 20.94, savings: 5.24, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
     category: 'Maquiagem'
   },
   {
@@ -52,7 +52,7 @@ export const mariMariaProducts = [
     descricao: 'Base líquida profissional Mari Maria no tom Bege Médio. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-bege-mdio.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 34.50, ourPrice: 37.95, discountPrice: 30.36, savings: 7.59, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
+    pricing: { basePrice: 24.15, ourPrice: 26.57, discountPrice: 21.26, savings: 5.31, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
     category: 'Maquiagem'
   },
   {
@@ -62,7 +62,7 @@ export const mariMariaProducts = [
     descricao: 'Base líquida profissional Mari Maria no tom Cacau. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-cacau.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 35.00, ourPrice: 38.50, discountPrice: 30.80, savings: 7.70, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
+    pricing: { basePrice: 24.50, ourPrice: 26.95, discountPrice: 21.56, savings: 5.39, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
     category: 'Maquiagem'
   },
   {
@@ -72,7 +72,7 @@ export const mariMariaProducts = [
     descricao: 'Base líquida profissional Mari Maria no tom Canela. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-canela.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 35.50, ourPrice: 39.05, discountPrice: 31.24, savings: 7.81, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
+    pricing: { basePrice: 24.85, ourPrice: 27.34, discountPrice: 21.87, savings: 5.47, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
     category: 'Maquiagem'
   },
   {
@@ -82,7 +82,7 @@ export const mariMariaProducts = [
     descricao: 'Base líquida profissional Mari Maria no tom Caramelo. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-caramelo.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 36.00, ourPrice: 39.60, discountPrice: 31.68, savings: 7.92, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
+    pricing: { basePrice: 25.20, ourPrice: 27.72, discountPrice: 22.18, savings: 5.54, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
     category: 'Maquiagem'
   },
   {
@@ -92,7 +92,7 @@ export const mariMariaProducts = [
     descricao: 'Base líquida profissional Mari Maria no tom Chocolate. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-chocolate.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 36.50, ourPrice: 40.15, discountPrice: 32.12, savings: 8.03, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
+    pricing: { basePrice: 25.55, ourPrice: 28.11, discountPrice: 22.49, savings: 5.62, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
     category: 'Maquiagem'
   },
   {
@@ -102,7 +102,7 @@ export const mariMariaProducts = [
     descricao: 'Base líquida profissional Mari Maria no tom Nude. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-nude.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 37.00, ourPrice: 40.70, discountPrice: 32.56, savings: 8.14, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
+    pricing: { basePrice: 25.90, ourPrice: 28.49, discountPrice: 22.79, savings: 5.70, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' },
     category: 'Maquiagem'
   }
 ];
@@ -740,7 +740,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Tint labial aquoso com cor Cherry. Textura ultra leve que hidrata e deixa os lábios com cor vibrante e natural.',
     imagens: ['/images/products/mari-maria-lipsticks/Acqua-Tint---Cherry---Mari-Maria-Makeup.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 18.00, ourPrice: 19.80, discountPrice: 15.84, savings: 3.96, margin: '10%', competitive: 'Baseado em tints labiais premium' },
+    pricing: { basePrice: 12.60, ourPrice: 13.86, discountPrice: 11.09, savings: 2.77, margin: '10%', competitive: 'Baseado em tints labiais premium' },
     category: 'Maquiagem'
   },
   {
@@ -750,7 +750,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Tint labial aquoso com cor Jam. Acabamento natural e duradouro com hidratação intensa.',
     imagens: ['/images/products/mari-maria-lipsticks/Acqua-Tint---Jam---Mari-Maria-Makeup.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 18.50, ourPrice: 20.35, discountPrice: 16.28, savings: 4.07, margin: '10%', competitive: 'Baseado em tints labiais premium' },
+    pricing: { basePrice: 12.95, ourPrice: 14.25, discountPrice: 11.40, savings: 2.85, margin: '10%', competitive: 'Baseado em tints labiais premium' },
     category: 'Maquiagem'
   },
   {
@@ -760,7 +760,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Tint labial aquoso com cor Rouge. Tom vermelho sofisticado com textura leve e confortável.',
     imagens: ['/images/products/mari-maria-lipsticks/Acqua-Tint---Rouge---Mari-Maria-Makeup.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 19.00, ourPrice: 20.90, discountPrice: 16.72, savings: 4.18, margin: '10%', competitive: 'Baseado em tints labiais premium' },
+    pricing: { basePrice: 13.30, ourPrice: 14.63, discountPrice: 11.70, savings: 2.93, margin: '10%', competitive: 'Baseado em tints labiais premium' },
     category: 'Maquiagem'
   },
   {
@@ -770,7 +770,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Batom líquido matte com textura cremosa. Cor Blazing - vermelho intenso e marcante.',
     imagens: ['/images/products/mari-maria-lipsticks/Batom-Liquido-Creamy-Matte---Blazing---Mari-Maria-Makeup.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 22.00, ourPrice: 24.20, discountPrice: 19.36, savings: 4.84, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
+    pricing: { basePrice: 15.40, ourPrice: 16.94, discountPrice: 13.55, savings: 3.39, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
     category: 'Maquiagem'
   },
   {
@@ -780,7 +780,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Batom líquido matte com textura cremosa. Cor Classy - nude elegante e atemporal.',
     imagens: ['/images/products/mari-maria-lipsticks/Batom-Liquido-Creamy-Matte---Classy---Mari-Maria-Makeup.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 22.50, ourPrice: 24.75, discountPrice: 19.80, savings: 4.95, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
+    pricing: { basePrice: 15.75, ourPrice: 17.33, discountPrice: 13.86, savings: 3.47, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
     category: 'Maquiagem'
   },
   {
@@ -790,7 +790,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Batom líquido matte com textura cremosa. Cor Frosty - rosado suave e delicado.',
     imagens: ['/images/products/mari-maria-lipsticks/Batom-Liquido-Creamy-Matte---Frosty---Mari-Maria-Makeup.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 23.00, ourPrice: 25.30, discountPrice: 20.24, savings: 5.06, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
+    pricing: { basePrice: 16.10, ourPrice: 17.71, discountPrice: 14.17, savings: 3.54, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
     category: 'Maquiagem'
   },
   {
@@ -800,7 +800,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Batom líquido matte com textura cremosa. Cor Hera - nude rosado moderno.',
     imagens: ['/images/products/mari-maria-lipsticks/Batom-Liquido-Creamy-Matte---Hera---Mari-Maria-Makeup.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 23.50, ourPrice: 25.85, discountPrice: 20.68, savings: 5.17, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
+    pricing: { basePrice: 16.45, ourPrice: 18.10, discountPrice: 14.48, savings: 3.62, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
     category: 'Maquiagem'
   },
   {
@@ -810,7 +810,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Batom líquido matte com textura cremosa. Cor Lavish - marrom luxuoso e sofisticado.',
     imagens: ['/images/products/mari-maria-lipsticks/Batom-Liquido-Creamy-Matte---Lavish---Mari-Maria-Makeup.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 24.00, ourPrice: 26.40, discountPrice: 21.12, savings: 5.28, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
+    pricing: { basePrice: 16.80, ourPrice: 18.48, discountPrice: 14.78, savings: 3.70, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
     category: 'Maquiagem'
   },
   {
@@ -820,7 +820,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Batom líquido matte com textura cremosa. Cor Posh - nude elegante e versátil.',
     imagens: ['/images/products/mari-maria-lipsticks/Batom-Liquido-Creamy-Matte---Posh---Mari-Maria-Makeup.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 24.50, ourPrice: 26.95, discountPrice: 21.56, savings: 5.39, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
+    pricing: { basePrice: 17.15, ourPrice: 18.87, discountPrice: 15.10, savings: 3.77, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
     category: 'Maquiagem'
   },
   {
@@ -830,7 +830,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Batom líquido matte com textura cremosa. Cor Rose Nude - rosado nude perfeito para o dia a dia.',
     imagens: ['/images/products/mari-maria-lipsticks/Batom-Liquido-Creamy-Matte---Rose-Nude---Mari-Maria-Makeup.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 25.00, ourPrice: 27.50, discountPrice: 22.00, savings: 5.50, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
+    pricing: { basePrice: 17.50, ourPrice: 19.25, discountPrice: 15.40, savings: 3.85, margin: '10%', competitive: 'Baseado em batons líquidos premium' },
     category: 'Maquiagem'
   },
   {
@@ -840,7 +840,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Gloss labial com efeito plump. Aroma Bergamota - aumenta o volume dos lábios com brilho intenso.',
     imagens: ['/images/products/mari-maria-lipsticks/Gloss-Plump-Fire-Kiss---Bergamota---Mari-Maria-Makeup.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 20.00, ourPrice: 22.00, discountPrice: 17.60, savings: 4.40, margin: '10%', competitive: 'Baseado em gloss labiais com efeito plump' },
+    pricing: { basePrice: 14.00, ourPrice: 15.40, discountPrice: 12.32, savings: 3.08, margin: '10%', competitive: 'Baseado em gloss labiais com efeito plump' },
     category: 'Maquiagem'
   },
   {
@@ -850,7 +850,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Gloss labial com efeito plump. Aroma Bubble Gum - efeito volumizador com brilho e hidratação.',
     imagens: ['/images/products/mari-maria-lipsticks/Gloss-Plump-Fire-Kiss---Bubble-Gum---Mari-Maria-Makeup.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 20.50, ourPrice: 22.55, discountPrice: 18.04, savings: 4.51, margin: '10%', competitive: 'Baseado em gloss labiais com efeito plump' },
+    pricing: { basePrice: 14.35, ourPrice: 15.79, discountPrice: 12.63, savings: 3.16, margin: '10%', competitive: 'Baseado em gloss labiais com efeito plump' },
     category: 'Maquiagem'
   },
   {
@@ -860,7 +860,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Hidratante labial com cor. Sabor Açaí - tratamento labial com toque de cor natural.',
     imagens: ['/images/products/mari-maria-lipsticks/Lip-Juice---Açaí---Mari-Maria-Makeup.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 16.00, ourPrice: 17.60, discountPrice: 14.08, savings: 3.52, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
+    pricing: { basePrice: 11.20, ourPrice: 12.32, discountPrice: 9.86, savings: 2.46, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
     category: 'Maquiagem'
   },
   {
@@ -870,7 +870,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Hidratante labial com cor. Sabor Blueberry - hidratação profunda com cor vibrante.',
     imagens: ['/images/products/mari-maria-lipsticks/Lip-Juice---Blueberry---Mari-Maria-Makeup.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 16.50, ourPrice: 18.15, discountPrice: 14.52, savings: 3.63, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
+    pricing: { basePrice: 11.55, ourPrice: 12.71, discountPrice: 10.17, savings: 2.54, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
     category: 'Maquiagem'
   },
   {
@@ -880,7 +880,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Hidratante labial com cor. Sabor Coco - nutrição intensa com toque tropical.',
     imagens: ['/images/products/mari-maria-lipsticks/Lip-Juice---Coco---Mari-Maria-Makeup.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 17.00, ourPrice: 18.70, discountPrice: 14.96, savings: 3.74, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
+    pricing: { basePrice: 11.90, ourPrice: 13.09, discountPrice: 10.47, savings: 2.62, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
     category: 'Maquiagem'
   },
   {
@@ -890,7 +890,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Hidratante labial com cor. Sabor Melancia - frescor e hidratação com cor natural.',
     imagens: ['/images/products/mari-maria-lipsticks/Lip-Juice---Melancia---Mari-Maria-Makeup.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 17.50, ourPrice: 19.25, discountPrice: 15.40, savings: 3.85, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
+    pricing: { basePrice: 12.25, ourPrice: 13.48, discountPrice: 10.78, savings: 2.70, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
     category: 'Maquiagem'
   },
   {
@@ -900,7 +900,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Hidratante labial com cor. Sabor Menta - refrescância e hidratação prolongada.',
     imagens: ['/images/products/mari-maria-lipsticks/Lip-Juice---Menta---Mari-Maria-Makeup.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 18.00, ourPrice: 19.80, discountPrice: 15.84, savings: 3.96, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
+    pricing: { basePrice: 12.60, ourPrice: 13.86, discountPrice: 11.09, savings: 2.77, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
     category: 'Maquiagem'
   },
   {
@@ -910,7 +910,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Hidratante labial com cor. Sabor Morango - hidratação deliciosa com cor suave.',
     imagens: ['/images/products/mari-maria-lipsticks/Lip-Juice---Morango---Mari-Maria-Makeup.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 18.50, ourPrice: 20.35, discountPrice: 16.28, savings: 4.07, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
+    pricing: { basePrice: 12.95, ourPrice: 14.25, discountPrice: 11.40, savings: 2.85, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
     category: 'Maquiagem'
   },
   {
@@ -920,7 +920,7 @@ export const mariMariaLipsticksProducts = [
     descricao: 'Hidratante labial com cor. Sabor Tangerina - vitamina e hidratação com cor vibrante.',
     imagens: ['/images/products/mari-maria-lipsticks/Lip-Juice---Tangerina---Mari-Maria-Makeup.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 19.00, ourPrice: 20.90, discountPrice: 16.72, savings: 4.18, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
+    pricing: { basePrice: 13.30, ourPrice: 14.63, discountPrice: 11.70, savings: 2.93, margin: '10%', competitive: 'Baseado em tratamentos labiais coloridos' },
     category: 'Maquiagem'
   }
 ];

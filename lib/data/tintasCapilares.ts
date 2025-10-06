@@ -815,7 +815,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 78,
       ourPrice: 55,
-      discountPrice: 49
+      discountPrice: 49,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -832,7 +834,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 85,
       ourPrice: 62,
-      discountPrice: 57
+      discountPrice: 57,
+      margin: '27%',
+      competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
     },
     badge: 'VEGANA'
   },
@@ -849,7 +853,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 78,
       ourPrice: 55,
-      discountPrice: 49
+      discountPrice: 49,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -866,7 +872,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 78,
       ourPrice: 55,
-      discountPrice: 49
+      discountPrice: 49,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -883,7 +891,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 85,
       ourPrice: 62,
-      discountPrice: 57
+      discountPrice: 57,
+      margin: '27%',
+      competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
     },
     badge: 'VEGANA'
   },
@@ -900,7 +910,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 78,
       ourPrice: 55,
-      discountPrice: 49
+      discountPrice: 49,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -917,7 +929,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 78,
       ourPrice: 55,
-      discountPrice: 49
+      discountPrice: 49,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -934,7 +948,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 85,
       ourPrice: 62,
-      discountPrice: 57
+      discountPrice: 57,
+      margin: '27%',
+      competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
     },
     badge: 'VEGANA'
   },
@@ -951,7 +967,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 85,
       ourPrice: 62,
-      discountPrice: 57
+      discountPrice: 57,
+      margin: '27%',
+      competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
     },
     badge: 'VEGANA'
   },
@@ -968,7 +986,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 78,
       ourPrice: 55,
-      discountPrice: 49
+      discountPrice: 49,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -985,7 +1005,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 78,
       ourPrice: 55,
-      discountPrice: 49
+      discountPrice: 49,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1002,7 +1024,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 80,
       ourPrice: 56,
-      discountPrice: 50
+      discountPrice: 50,
+      margin: '30%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1019,7 +1043,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 80,
       ourPrice: 56,
-      discountPrice: 50
+      discountPrice: 50,
+      margin: '30%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1036,7 +1062,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 80,
       ourPrice: 56,
-      discountPrice: 50
+      discountPrice: 50,
+      margin: '30%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1053,7 +1081,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 80,
       ourPrice: 56,
-      discountPrice: 50
+      discountPrice: 50,
+      margin: '30%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1070,7 +1100,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 80,
       ourPrice: 56,
-      discountPrice: 50
+      discountPrice: 50,
+      margin: '30%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1087,7 +1119,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 80,
       ourPrice: 56,
-      discountPrice: 50
+      discountPrice: 50,
+      margin: '30%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1104,7 +1138,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 85,
       ourPrice: 62,
-      discountPrice: 57
+      discountPrice: 57,
+      margin: '27%',
+      competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
     },
     badge: 'VEGANA'
   },
@@ -1121,7 +1157,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 80,
       ourPrice: 56,
-      discountPrice: 50
+      discountPrice: 50,
+      margin: '30%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1138,7 +1176,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 80,
       ourPrice: 56,
-      discountPrice: 50
+      discountPrice: 50,
+      margin: '30%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1155,7 +1195,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 80,
       ourPrice: 56,
-      discountPrice: 50
+      discountPrice: 50,
+      margin: '30%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1172,7 +1214,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 80,
       ourPrice: 56,
-      discountPrice: 50
+      discountPrice: 50,
+      margin: '30%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1189,7 +1233,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 82,
       ourPrice: 58,
-      discountPrice: 52
+      discountPrice: 52,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1206,7 +1252,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 82,
       ourPrice: 58,
-      discountPrice: 52
+      discountPrice: 52,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1223,7 +1271,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 82,
       ourPrice: 58,
-      discountPrice: 52
+      discountPrice: 52,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1240,7 +1290,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 82,
       ourPrice: 58,
-      discountPrice: 52
+      discountPrice: 52,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1257,7 +1309,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 82,
       ourPrice: 58,
-      discountPrice: 52
+      discountPrice: 52,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1274,7 +1328,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 82,
       ourPrice: 58,
-      discountPrice: 52
+      discountPrice: 52,
+      margin: '29%',
+      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1291,7 +1347,9 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 85,
       ourPrice: 62,
-      discountPrice: 57
+      discountPrice: 57,
+      margin: '27%',
+      competitive: 'Super clareador profissional com preço justo comparado a produtos europeus (€12-18).'
     },
     badge: 'SUPER CLAREADOR'
   }
@@ -1313,7 +1371,9 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 45,
       ourPrice: 32,
-      discountPrice: 29
+      discountPrice: 29,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1330,7 +1390,9 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 45,
       ourPrice: 32,
-      discountPrice: 29
+      discountPrice: 29,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1347,7 +1409,9 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 45,
       ourPrice: 32,
-      discountPrice: 29
+      discountPrice: 29,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1364,7 +1428,9 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 48,
       ourPrice: 34,
-      discountPrice: 31
+      discountPrice: 31,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1381,7 +1447,9 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 48,
       ourPrice: 34,
-      discountPrice: 31
+      discountPrice: 31,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1398,7 +1466,9 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 48,
       ourPrice: 34,
-      discountPrice: 31
+      discountPrice: 31,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1415,7 +1485,9 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 48,
       ourPrice: 34,
-      discountPrice: 31
+      discountPrice: 31,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1432,7 +1504,9 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 50,
       ourPrice: 35,
-      discountPrice: 32
+      discountPrice: 32,
+      margin: '30%',
+      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1449,7 +1523,9 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 50,
       ourPrice: 35,
-      discountPrice: 32
+      discountPrice: 32,
+      margin: '30%',
+      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1466,7 +1542,9 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 52,
       ourPrice: 37,
-      discountPrice: 34
+      discountPrice: 34,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   }
@@ -1488,7 +1566,9 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 46,
-      discountPrice: 42
+      discountPrice: 42,
+      margin: '29%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1505,7 +1585,9 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 46,
-      discountPrice: 42
+      discountPrice: 42,
+      margin: '29%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1522,7 +1604,9 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 46,
-      discountPrice: 42
+      discountPrice: 42,
+      margin: '29%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1539,7 +1623,9 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 46,
-      discountPrice: 42
+      discountPrice: 42,
+      margin: '29%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1556,7 +1642,9 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 46,
-      discountPrice: 42
+      discountPrice: 42,
+      margin: '29%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1573,7 +1661,9 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 46,
-      discountPrice: 42
+      discountPrice: 42,
+      margin: '29%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   }
