@@ -79,6 +79,3 @@ CardFooter.displayName = "CardFooter"
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
-
-// For backward compatibility with existing imports that expect ProductCard from this file
-export { default as ProductCard } from '../products/ProductCard'

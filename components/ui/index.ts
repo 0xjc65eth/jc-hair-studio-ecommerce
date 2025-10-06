@@ -11,8 +11,7 @@ export {
   CardTitle,
   CardDescription,
   CardContent,
-  CardFooter,
-  ProductCard
+  CardFooter
 } from './Card';
 export type { CardProps } from './Card';
 
