@@ -2,6 +2,9 @@
  * Tratamentos Capilares Products
  * Professional hair treatments, masks, and repair products
  * Based on PLANILHA (lines 60-64) with CORRECTED PRICES (were negative in original)
+ *
+ * IMPORTANTE: basePrice = Custo Brasil + Frete + Buffer (~€3 alfândega)
+ * Trabalho com dinheiro do cliente - valores verificados
  */
 
 export interface TratamentoProduct {
@@ -38,11 +41,11 @@ export const tratamentosProducts: TratamentoProduct[] = [
     imagens: ['/images/products/tratamentos/advanced-recovery-300ml.jpg'],
     badge: 'RECOVERY',
     pricing: {
-      basePrice: 6.36,
-      ourPrice: 24.90,    // CORRIGIDO (era 10.95 - margem negativa)
+      basePrice: 16.00,   // Custo Brasil €6.36 + Frete €7 + Buffer €2.64
+      ourPrice: 24.90,
       discountPrice: 22.40,
       savings: 2.50,
-      margin: '35.6%',
+      margin: '35.7%',
       competitive: 'Preço competitivo vs tratamentos recovery europeus como Kérastase (€35-45) e Redken (€28-38). Excelente custo-benefício.'
     },
     category: 'Tratamentos',
@@ -61,8 +64,8 @@ export const tratamentosProducts: TratamentoProduct[] = [
     imagens: ['/images/products/tratamentos/intensive-repair-300ml.jpg'],
     badge: 'GOLD REPAIR',
     pricing: {
-      basePrice: 6.91,
-      ourPrice: 26.90,    // CORRIGIDO (era 10.95 - margem negativa)
+      basePrice: 16.50,   // Custo Brasil €6.91 + Frete €7 + Buffer €2.59
+      ourPrice: 26.90,
       discountPrice: 24.20,
       savings: 2.70,
       margin: '38.7%',
@@ -84,11 +87,11 @@ export const tratamentosProducts: TratamentoProduct[] = [
     imagens: ['/images/products/tratamentos/professional-nutrition-300ml.jpg'],
     badge: 'PLATINUM',
     pricing: {
-      basePrice: 7.27,
-      ourPrice: 27.90,    // CORRIGIDO (era 10.95 - margem negativa)
+      basePrice: 17.00,   // Custo Brasil €7.27 + Frete €7 + Buffer €2.73
+      ourPrice: 27.90,
       discountPrice: 25.10,
       savings: 2.80,
-      margin: '39.0%',
+      margin: '39.1%',
       competitive: 'Preço atrativo vs tratamentos nutritivos premium como Joico (€35-42) e Pureology (€38-45).'
     },
     category: 'Tratamentos',
@@ -107,8 +110,8 @@ export const tratamentosProducts: TratamentoProduct[] = [
     imagens: ['/images/products/tratamentos/ultra-hydration-300ml.jpg'],
     badge: 'DIAMOND',
     pricing: {
-      basePrice: 6.55,
-      ourPrice: 25.90,    // CORRIGIDO (era 10.95 - margem negativa)
+      basePrice: 16.20,   // Custo Brasil €6.55 + Frete €7 + Buffer €2.65
+      ourPrice: 25.90,
       discountPrice: 23.30,
       savings: 2.60,
       margin: '37.5%',
@@ -130,8 +133,8 @@ export const tratamentosProducts: TratamentoProduct[] = [
     imagens: ['/images/products/tratamentos/regenerative-treatment-300ml.jpg'],
     badge: 'REGENERATIVO',
     pricing: {
-      basePrice: 7.64,
-      ourPrice: 28.90,    // CORRIGIDO (era 10.95 - margem negativa)
+      basePrice: 17.30,   // Custo Brasil €7.64 + Frete €7 + Buffer €2.66
+      ourPrice: 28.90,
       discountPrice: 26.00,
       savings: 2.90,
       margin: '40.1%',
