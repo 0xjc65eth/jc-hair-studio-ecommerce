@@ -531,4 +531,28 @@ export function getMegaHairBySku(sku: string): MegaHairProductCorrected | undefi
   return megaHairProductsCorrected.find(p => p.sku === sku);
 }
 
+// Legacy compatibility function for old pages
+export function getLegacyCompatibleProducts() {
+  return megaHairProductsCorrected.map(product => ({
+    id: product.id,
+    name: product.nome,
+    price: product.pricing.discountPrice,
+    originalPrice: product.pricing.ourPrice,
+    image: product.imagens[0],
+    category: product.category,
+    rating: product.rating,
+    reviews: product.reviews,
+    badge: product.badge,
+    length: product.length,
+    type: product.type,
+    color: product.color,
+    inStock: product.inStock
+  }));
+}
+
+// Legacy compatibility - empty function for old code
+export function generateUnifiedCatalog() {
+  return megaHairProductsCorrected;
+}
+
 export default megaHairProductsCorrected;
