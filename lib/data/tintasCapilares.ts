@@ -18,6 +18,8 @@ export interface TintaCapilar {
     basePrice: number;
     ourPrice: number;
     discountPrice: number;
+    margin: string;
+    competitive: string;
   };
   badge?: string;
 }
@@ -27,392 +29,438 @@ export interface TintaCapilar {
 export const biocolorProducts: TintaCapilar[] = [
   {
     id: 'biocolor-1-0-preto',
-    nome: 'Biocolor 1.0 Preto',
+    nome: 'Biocolor 1.0 Preto Super-Azulado',
     marca: 'Biocolor',
     tom: '1.0',
-    cor: 'Preto',
-    descricao: 'Coloração permanente Biocolor com fórmula hidratante enriquecida com óleos naturais. Tom 1.0 Preto intenso e profundo, cobertura total de fios brancos.',
+    cor: 'Preto Super-Azulado',
+    descricao: 'Coloração permanente Biocolor com fórmula hidratante. Tom 1.0 Preto Super-Azulado, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8733.png'],
     pricing: {
       basePrice: 42,
       ourPrice: 29,
-      discountPrice: 26
+      discountPrice: 26,
+      margin: '31%',
+      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'COBERTURA TOTAL'
   },
   {
     id: 'biocolor-2-0-preto-azulado',
-    nome: 'Biocolor 2.0 Preto Azulado',
+    nome: 'Biocolor 2.0 Preto Azulado Em Alta',
     marca: 'Biocolor',
     tom: '2.0',
-    cor: 'Preto Azulado',
-    descricao: 'Coloração permanente com reflexos azulados. Fórmula nutritiva que garante cor intensa e brilho duradouro.',
+    cor: 'Preto Azulado Em Alta',
+    descricao: 'Coloração permanente com reflexos azulados. Tom 2.0 Preto Azulado Em Alta, tá pronta em 20 minutos. Mais hidratação para seu cabelo, cobertura perfeita dos fios brancos, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8757.png'],
     pricing: {
       basePrice: 42,
       ourPrice: 29,
-      discountPrice: 26
+      discountPrice: 26,
+      margin: '31%',
+      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'REFLEXOS AZULADOS'
   },
   {
     id: 'biocolor-3-0-castanho-escuro',
-    nome: 'Biocolor 3.0 Castanho Escuro',
+    nome: 'Biocolor 3.0 Castanho Escuro Super',
     marca: 'Biocolor',
     tom: '3.0',
-    cor: 'Castanho Escuro',
-    descricao: 'Coloração permanente tom castanho escuro natural. Hidratação profunda e cobertura uniforme de fios brancos.',
+    cor: 'Castanho Escuro Super',
+    descricao: 'Coloração permanente tom 3.0 Castanho Escuro Super. Tá pronta em 20 minutos, mais hidratação para seu cabelo. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8725.png'],
     pricing: {
       basePrice: 42,
       ourPrice: 29,
-      discountPrice: 26
+      discountPrice: 26,
+      margin: '31%',
+      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'HIDRATANTE'
   },
   {
     id: 'biocolor-4-0-castanho-medio',
-    nome: 'Biocolor 4.0 Castanho Médio',
+    nome: 'Biocolor 4.0 Castanho Médio Muito Brilho',
     marca: 'Biocolor',
     tom: '4.0',
-    cor: 'Castanho Médio',
-    descricao: 'Coloração permanente castanho médio natural. Fórmula com óleos vegetais para nutrição e brilho intenso.',
+    cor: 'Castanho Médio Muito Brilho',
+    descricao: 'Coloração permanente tom 4.0 Castanho Médio Muito Brilho. Tá pronta em 20 minutos, mais hidratação. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8777.png'],
     pricing: {
       basePrice: 43,
       ourPrice: 30,
-      discountPrice: 27
+      discountPrice: 27,
+      margin: '30%',
+      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'NUTRITIVA'
   },
   {
     id: 'biocolor-4-5-castanho-acaju',
-    nome: 'Biocolor 4.5 Castanho Acaju',
+    nome: 'Biocolor 4.5 Acaju Escuro Poderoso',
     marca: 'Biocolor',
     tom: '4.5',
-    cor: 'Castanho Acaju',
-    descricao: 'Coloração permanente com reflexos acaju vibrantes. Cor intensa e duradoura com brilho espetacular.',
+    cor: 'Acaju Escuro Poderoso',
+    descricao: 'Coloração permanente tom 4.5 Acaju Escuro Poderoso. Tá pronta em 20 minutos, mais hidratação. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8903.png'],
     pricing: {
       basePrice: 43,
       ourPrice: 30,
-      discountPrice: 27
+      discountPrice: 27,
+      margin: '30%',
+      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'REFLEXOS ACAJU'
   },
   {
     id: 'biocolor-4-7-castanho-marrom',
-    nome: 'Biocolor 4.7 Castanho Marrom',
+    nome: 'Biocolor 4.7 Marrom Escuro De Moda',
     marca: 'Biocolor',
     tom: '4.7',
-    cor: 'Castanho Marrom',
-    descricao: 'Coloração permanente com reflexos marrom. Tom quente e natural com máxima cobertura de brancos.',
+    cor: 'Marrom Escuro De Moda',
+    descricao: 'Coloração permanente tom 4.7 Marrom Escuro De Moda. Tá pronta em 20 minutos, mais hidratação. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8875.png'],
     pricing: {
       basePrice: 43,
       ourPrice: 30,
-      discountPrice: 27
+      discountPrice: 27,
+      margin: '30%',
+      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'TOM QUENTE'
   },
   {
     id: 'biocolor-5-0-castanho-claro',
-    nome: 'Biocolor 5.0 Castanho Claro',
+    nome: 'Biocolor 5.0 Castanho Claro Luxuoso',
     marca: 'Biocolor',
     tom: '5.0',
-    cor: 'Castanho Claro',
-    descricao: 'Coloração permanente castanho claro natural. Fórmula hidratante para cabelos macios e brilhantes.',
+    cor: 'Castanho Claro Luxuoso',
+    descricao: 'Coloração permanente tom 5.0 Castanho Claro Luxuoso. Tá pronta em 20 minutos, mais hidratação. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8780.png'],
     pricing: {
       basePrice: 43,
       ourPrice: 30,
-      discountPrice: 27
+      discountPrice: 27,
+      margin: '30%',
+      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'HIDRATANTE'
   },
   {
     id: 'biocolor-5-1-castanho-claro-cinza',
-    nome: 'Biocolor 5.1 Castanho Claro Acinzentado',
+    nome: 'Biocolor 5.1 Castanho Cinza Chic',
     marca: 'Biocolor',
     tom: '5.1',
-    cor: 'Castanho Claro Acinzentado',
-    descricao: 'Coloração permanente com reflexos cinza. Tom moderno e sofisticado com cobertura total.',
+    cor: 'Castanho Cinza Chic',
+    descricao: 'Coloração permanente tom 5.1 Castanho Cinza Chic. Tá pronta em 20 minutos, mais hidratação. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-9055.png'],
     pricing: {
       basePrice: 43,
       ourPrice: 30,
-      discountPrice: 27
+      discountPrice: 27,
+      margin: '30%',
+      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'TOM MODERNO'
   },
   {
     id: 'biocolor-5-3-castanho-claro-dourado',
-    nome: 'Biocolor 5.3 Castanho Claro Dourado',
+    nome: 'Biocolor 5.3 Castanho Claro Dourado Super',
     marca: 'Biocolor',
     tom: '5.3',
-    cor: 'Castanho Claro Dourado',
-    descricao: 'Coloração permanente com reflexos dourados. Luminosidade e brilho intenso para cabelos radiantes.',
+    cor: 'Castanho Claro Dourado Super',
+    descricao: 'Coloração permanente tom 5.3 Castanho Claro Dourado Super. Tá pronta em 20 minutos, mais hidratação. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-9020.png'],
     pricing: {
       basePrice: 43,
       ourPrice: 30,
-      discountPrice: 27
+      discountPrice: 27,
+      margin: '30%',
+      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'LUMINOSO'
   },
   {
     id: 'biocolor-5-59-castanho-claro-acaju',
-    nome: 'Biocolor 5.59 Castanho Claro Acaju Intenso',
+    nome: 'Biocolor 5.59 Acaju Púrpura Intensíssimo',
     marca: 'Biocolor',
     tom: '5.59',
-    cor: 'Castanho Claro Acaju Intenso',
-    descricao: 'Coloração permanente com reflexos acaju vibrantes. Cor intensa e duradoura com brilho espetacular.',
+    cor: 'Acaju Púrpura Intensíssimo',
+    descricao: 'Coloração permanente tom 5.59 Acaju Púrpura Intensíssimo. Tá pronta em 20 minutos, mais hidratação. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8904.png'],
     pricing: {
       basePrice: 43,
       ourPrice: 30,
-      discountPrice: 27
+      discountPrice: 27,
+      margin: '30%',
+      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'ACAJU INTENSO'
   },
   {
     id: 'biocolor-6-0-louro-escuro',
-    nome: 'Biocolor 6.0 Louro Escuro',
+    nome: 'Biocolor 6.0 Louro Escuro Chique',
     marca: 'Biocolor',
     tom: '6.0',
-    cor: 'Louro Escuro',
-    descricao: 'Coloração permanente louro escuro natural. Fórmula nutritiva para cabelos saudáveis e brilhantes.',
+    cor: 'Louro Escuro Chique',
+    descricao: 'Coloração permanente Biocolor com fórmula hidratante. Tom 6.0 Louro Escuro Chique, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8766.png'],
     pricing: {
       basePrice: 44,
       ourPrice: 31,
-      discountPrice: 28
+      discountPrice: 28,
+      margin: '30%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'NUTRITIVA'
   },
   {
     id: 'biocolor-6-1-louro-escuro-cinza',
-    nome: 'Biocolor 6.1 Louro Escuro Acinzentado',
+    nome: 'Biocolor 6.1 Louro Cinza Escuro Moderno',
     marca: 'Biocolor',
     tom: '6.1',
-    cor: 'Louro Escuro Acinzentado',
-    descricao: 'Coloração permanente com reflexos cinza. Tom frio e sofisticado com cobertura total de brancos.',
+    cor: 'Louro Cinza Escuro Moderno',
+    descricao: 'Coloração permanente Biocolor com reflexos cinza. Tom 6.1 Louro Cinza Escuro Moderno, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8845.png'],
     pricing: {
       basePrice: 44,
       ourPrice: 31,
-      discountPrice: 28
+      discountPrice: 28,
+      margin: '30%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'TOM FRIO'
   },
   {
     id: 'biocolor-6-66-vermelho-cereja',
-    nome: 'Biocolor 6.66 Vermelho Cereja',
+    nome: 'Biocolor 6.66 Vermelho Intenso É Arraso',
     marca: 'Biocolor',
     tom: '6.66',
-    cor: 'Vermelho Cereja',
-    descricao: 'Coloração permanente vermelho cereja vibrante. Cor intensa e duradoura com brilho espetacular.',
+    cor: 'Vermelho Intenso É Arraso',
+    descricao: 'Coloração permanente Biocolor vermelho vibrante. Tom 6.66 Vermelho Intenso É Arraso, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8829.png'],
     pricing: {
       basePrice: 44,
       ourPrice: 31,
-      discountPrice: 28
+      discountPrice: 28,
+      margin: '30%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'VERMELHO INTENSO'
   },
   {
     id: 'biocolor-6-7-chocolate',
-    nome: 'Biocolor 6.7 Chocolate',
+    nome: 'Biocolor 6.7 Chocolate Para Brilhar',
     marca: 'Biocolor',
     tom: '6.7',
-    cor: 'Chocolate',
-    descricao: 'Coloração permanente tom chocolate rico. Reflexos marrom quentes e naturais com cobertura total.',
+    cor: 'Chocolate Para Brilhar',
+    descricao: 'Coloração permanente Biocolor tom chocolate. Tom 6.7 Chocolate Para Brilhar, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8819.png'],
     pricing: {
       basePrice: 44,
       ourPrice: 31,
-      discountPrice: 28
+      discountPrice: 28,
+      margin: '30%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'CHOCOLATE'
   },
   {
     id: 'biocolor-7-0-louro-medio',
-    nome: 'Biocolor 7.0 Louro Médio',
+    nome: 'Biocolor 7.0 Louro Médio Divino',
     marca: 'Biocolor',
     tom: '7.0',
-    cor: 'Louro Médio',
-    descricao: 'Coloração permanente louro médio natural. Hidratação intensa e cor uniforme com brilho radiante.',
+    cor: 'Louro Médio Divino',
+    descricao: 'Coloração permanente Biocolor louro médio. Tom 7.0 Louro Médio Divino, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8853.png'],
     pricing: {
       basePrice: 44,
       ourPrice: 31,
-      discountPrice: 28
+      discountPrice: 28,
+      margin: '30%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'BRILHO RADIANTE'
   },
   {
     id: 'biocolor-7-1-louro-medio-cinza',
-    nome: 'Biocolor 7.1 Louro Médio Acinzentado',
+    nome: 'Biocolor 7.1 Louro Cinza Médio É Poderoso',
     marca: 'Biocolor',
     tom: '7.1',
-    cor: 'Louro Médio Acinzentado',
-    descricao: 'Coloração permanente com reflexos cinza. Tom platinado moderno e sofisticado.',
+    cor: 'Louro Cinza Médio É Poderoso',
+    descricao: 'Coloração permanente Biocolor com reflexos cinza. Tom 7.1 Louro Cinza Médio É Poderoso, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8855.png'],
     pricing: {
       basePrice: 44,
       ourPrice: 31,
-      discountPrice: 28
+      discountPrice: 28,
+      margin: '30%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'PLATINADO'
   },
   {
     id: 'biocolor-7-3-louro-medio-dourado',
-    nome: 'Biocolor 7.3 Louro Médio Dourado',
+    nome: 'Biocolor 7.3 Louro Dourado Super De Brilho',
     marca: 'Biocolor',
     tom: '7.3',
-    cor: 'Louro Médio Dourado',
-    descricao: 'Coloração permanente com reflexos dourados. Luminosidade intensa e cor vibrante.',
+    cor: 'Louro Dourado Super De Brilho',
+    descricao: 'Coloração permanente Biocolor com reflexos dourados. Tom 7.3 Louro Dourado Super De Brilho, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8831.png'],
     pricing: {
       basePrice: 44,
       ourPrice: 31,
-      discountPrice: 28
+      discountPrice: 28,
+      margin: '30%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'DOURADO'
   },
   {
     id: 'biocolor-7-44-cobre-intenso',
-    nome: 'Biocolor 7.44 Cobre Intenso',
+    nome: 'Biocolor 7.44 Cobre Intenso Fabuloso',
     marca: 'Biocolor',
     tom: '7.44',
-    cor: 'Cobre Intenso',
-    descricao: 'Coloração permanente cobre intenso. Reflexos acobreados vibrantes e duradouros com máximo brilho.',
+    cor: 'Cobre Intenso Fabuloso',
+    descricao: 'Coloração permanente Biocolor cobre. Tom 7.44 Cobre Intenso Fabuloso, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8830.png'],
     pricing: {
       basePrice: 44,
       ourPrice: 31,
-      discountPrice: 28
+      discountPrice: 28,
+      margin: '30%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'COBRE INTENSO'
   },
   {
     id: 'biocolor-8-0-louro-claro',
-    nome: 'Biocolor 8.0 Louro Claro',
+    nome: 'Biocolor 8.0 Louro Claro Tá Com Tudo',
     marca: 'Biocolor',
     tom: '8.0',
-    cor: 'Louro Claro',
-    descricao: 'Coloração permanente louro claro natural. Fórmula hidratante para cabelos sedosos e iluminados.',
+    cor: 'Louro Claro Tá Com Tudo',
+    descricao: 'Coloração permanente Biocolor louro claro. Tom 8.0 Louro Claro Tá Com Tudo, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8883.png'],
     pricing: {
       basePrice: 45,
       ourPrice: 32,
-      discountPrice: 29
+      discountPrice: 29,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'ILUMINADO'
   },
   {
     id: 'biocolor-8-1-louro-claro-cinza',
-    nome: 'Biocolor 8.1 Louro Claro Acinzentado',
+    nome: 'Biocolor 8.1 Louro Cinza Claro Brilho',
     marca: 'Biocolor',
     tom: '8.1',
-    cor: 'Louro Claro Acinzentado',
-    descricao: 'Coloração permanente com reflexos cinza platinado. Tom frio e moderno com cobertura perfeita.',
+    cor: 'Louro Cinza Claro Brilho',
+    descricao: 'Coloração permanente Biocolor com reflexos cinza. Tom 8.1 Louro Cinza Claro Brilho, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8820.png'],
     pricing: {
       basePrice: 45,
       ourPrice: 32,
-      discountPrice: 29
+      discountPrice: 29,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'CINZA PLATINADO'
   },
   {
     id: 'biocolor-9-0-louro-muito-claro',
-    nome: 'Biocolor 9.0 Louro Muito Claro',
+    nome: 'Biocolor 9.0 Louro Superclaro É Lindo Já',
     marca: 'Biocolor',
     tom: '9.0',
-    cor: 'Louro Muito Claro',
-    descricao: 'Coloração permanente louro muito claro. Máxima luminosidade e brilho radiante para louras.',
+    cor: 'Louro Superclaro É Lindo Já',
+    descricao: 'Coloração permanente Biocolor louro superclaro. Tom 9.0 Louro Superclaro É Lindo Já, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8882.png'],
     pricing: {
       basePrice: 45,
       ourPrice: 32,
-      discountPrice: 29
+      discountPrice: 29,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'SUPER CLARO'
   },
   {
     id: 'biocolor-10-0-louro-clarissimo',
-    nome: 'Biocolor 10.0 Louro Claríssimo',
+    nome: 'Biocolor 10.0 Louro Ultraclaro Sensacional',
     marca: 'Biocolor',
     tom: '10.0',
-    cor: 'Louro Claríssimo',
-    descricao: 'Coloração permanente louro claríssimo. Tom ultra claro com máxima luminosidade e brilho.',
+    cor: 'Louro Ultraclaro Sensacional',
+    descricao: 'Coloração permanente Biocolor louro ultraclaro. Tom 10.0 Louro Ultraclaro Sensacional, tá pronta em 20 minutos. Cobertura perfeita dos fios brancos, proteção total da cor, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8858.png'],
     pricing: {
       basePrice: 45,
       ourPrice: 32,
-      discountPrice: 29
+      discountPrice: 29,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'ULTRA CLARO'
   },
   {
     id: 'biocolor-12-11-super-clareador',
-    nome: 'Biocolor 12.11 Super Clareador Platinado',
+    nome: 'Biocolor 12.11 Louríssimo Platinado De Arrasar',
     marca: 'Biocolor',
     tom: '12.11',
-    cor: 'Super Clareador Platinado',
-    descricao: 'Super clareador permanente com reflexos platinados. Clareia até 7 tons com resultado louro platinado.',
+    cor: 'Louríssimo Platinado De Arrasar',
+    descricao: 'Super clareador permanente Biocolor. Tom 12.11 Louríssimo Platinado De Arrasar, tá pronto em 20 minutos. Clareia até 7 tons com resultado ultra platinado, cobertura perfeita dos fios brancos, com silicone, proteína e filtro UV.',
     categoria: 'tintas-capilares',
     subcategoria: 'super-clareador',
     images: ['/images/products/produtos_diversos/IMG-9023.png'],
     pricing: {
       basePrice: 45,
       ourPrice: 32,
-      discountPrice: 29
+      discountPrice: 29,
+      margin: '29%',
+      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'SUPER CLAREADOR'
   }
@@ -434,7 +482,9 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 45,
-      discountPrice: 41
+      discountPrice: 41,
+      margin: '31%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -451,7 +501,9 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 45,
-      discountPrice: 41
+      discountPrice: 41,
+      margin: '31%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -460,7 +512,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     nome: 'Wella Koleston 60 Louro Escuro',
     marca: 'Wella Koleston',
     tom: '60',
-    cor: 'Louro Escuro',
+    cor: 'Louro Escuro Chique',
     descricao: 'Coloração permanente profissional Wella Koleston. Tom 60 louro escuro natural com brilho intenso e duradouro.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -468,7 +520,9 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 45,
-      discountPrice: 41
+      discountPrice: 41,
+      margin: '31%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -477,7 +531,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     nome: 'Wella Koleston 71 Louro Médio Acinzentado',
     marca: 'Wella Koleston',
     tom: '71',
-    cor: 'Louro Médio Acinzentado',
+    cor: 'Louro Cinza Médio É Poderoso',
     descricao: 'Coloração permanente profissional com reflexos cinza. Tom 71 louro médio acinzentado moderno e sofisticado.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -485,7 +539,9 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 45,
-      discountPrice: 41
+      discountPrice: 41,
+      margin: '31%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -494,7 +550,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     nome: 'Wella Koleston 73 Louro Médio Dourado',
     marca: 'Wella Koleston',
     tom: '73',
-    cor: 'Louro Médio Dourado',
+    cor: 'Louro Dourado Super De Brilho',
     descricao: 'Coloração permanente profissional com reflexos dourados. Tom 73 louro médio dourado luminoso e radiante.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -502,7 +558,9 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 45,
-      discountPrice: 41
+      discountPrice: 41,
+      margin: '31%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -519,7 +577,9 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 45,
-      discountPrice: 41
+      discountPrice: 41,
+      margin: '31%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -536,7 +596,9 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 45,
-      discountPrice: 41
+      discountPrice: 41,
+      margin: '31%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -553,7 +615,9 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 45,
-      discountPrice: 41
+      discountPrice: 41,
+      margin: '31%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -570,7 +634,9 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 45,
-      discountPrice: 41
+      discountPrice: 41,
+      margin: '31%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -579,7 +645,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     nome: 'Wella Koleston 7744 Cobre Intenso',
     marca: 'Wella Koleston',
     tom: '7744',
-    cor: 'Cobre Intenso',
+    cor: 'Cobre Intenso Fabuloso',
     descricao: 'Coloração permanente profissional cobre. Tom 7744 louro médio cobre intenso com reflexos acobreados vibrantes.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -587,7 +653,9 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 45,
-      discountPrice: 41
+      discountPrice: 41,
+      margin: '31%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -604,7 +672,9 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 65,
       ourPrice: 45,
-      discountPrice: 41
+      discountPrice: 41,
+      margin: '31%',
+      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   }
@@ -626,7 +696,9 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 52,
       ourPrice: 37,
-      discountPrice: 34
+      discountPrice: 34,
+      margin: '29%',
+      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   },
@@ -643,7 +715,9 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 52,
       ourPrice: 37,
-      discountPrice: 34
+      discountPrice: 34,
+      margin: '29%',
+      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   },
@@ -660,7 +734,9 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 52,
       ourPrice: 37,
-      discountPrice: 34
+      discountPrice: 34,
+      margin: '29%',
+      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   },
@@ -677,7 +753,9 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 52,
       ourPrice: 37,
-      discountPrice: 34
+      discountPrice: 34,
+      margin: '29%',
+      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   },
@@ -694,7 +772,9 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 52,
       ourPrice: 37,
-      discountPrice: 34
+      discountPrice: 34,
+      margin: '29%',
+      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   },
@@ -711,7 +791,9 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     pricing: {
       basePrice: 52,
       ourPrice: 37,
-      discountPrice: 34
+      discountPrice: 34,
+      margin: '29%',
+      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   }
@@ -912,7 +994,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     nome: 'Alfaparf Alta Moda 6.0 Louro Escuro',
     marca: 'Alfaparf Alta Moda',
     tom: '6.0',
-    cor: 'Louro Escuro',
+    cor: 'Louro Escuro Chique',
     descricao: 'Coloração permanente profissional Alfaparf. Tom 6.0 louro escuro natural com brilho intenso italiano.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -929,7 +1011,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     nome: 'Alfaparf Alta Moda 6.1 Louro Escuro Acinzentado',
     marca: 'Alfaparf Alta Moda',
     tom: '6.1',
-    cor: 'Louro Escuro Acinzentado',
+    cor: 'Louro Cinza Escuro Moderno',
     descricao: 'Coloração permanente profissional com reflexos cinza. Tom 6.1 louro escuro acinzentado moderno.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -980,7 +1062,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     nome: 'Alfaparf Alta Moda 6.7 Chocolate',
     marca: 'Alfaparf Alta Moda',
     tom: '6.7',
-    cor: 'Chocolate',
+    cor: 'Chocolate Para Brilhar',
     descricao: 'Coloração permanente profissional tom chocolate. Tom 6.7 louro escuro marrom chocolate rico e intenso.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -997,7 +1079,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     nome: 'Alfaparf Alta Moda 7.0 Louro Médio',
     marca: 'Alfaparf Alta Moda',
     tom: '7.0',
-    cor: 'Louro Médio',
+    cor: 'Louro Médio Divino',
     descricao: 'Coloração permanente profissional Alfaparf. Tom 7.0 louro médio natural com tecnologia italiana de brilho.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -1031,7 +1113,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     nome: 'Alfaparf Alta Moda 7.1 Louro Médio Acinzentado',
     marca: 'Alfaparf Alta Moda',
     tom: '7.1',
-    cor: 'Louro Médio Acinzentado',
+    cor: 'Louro Cinza Médio É Poderoso',
     descricao: 'Coloração permanente profissional com reflexos cinza. Tom 7.1 louro médio acinzentado platinado.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -1099,7 +1181,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     nome: 'Alfaparf Alta Moda 8.1 Louro Claro Acinzentado',
     marca: 'Alfaparf Alta Moda',
     tom: '8.1',
-    cor: 'Louro Claro Acinzentado',
+    cor: 'Louro Cinza Claro Brilho',
     descricao: 'Coloração permanente profissional com reflexos cinza platinado. Tom 8.1 louro claro acinzentado moderno.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -1133,7 +1215,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     nome: 'Alfaparf Alta Moda 9.0 Louro Muito Claro',
     marca: 'Alfaparf Alta Moda',
     tom: '9.0',
-    cor: 'Louro Muito Claro',
+    cor: 'Louro Superclaro É Lindo Já',
     descricao: 'Coloração permanente profissional Alfaparf. Tom 9.0 louro muito claro com máxima luminosidade italiana.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -1342,7 +1424,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     nome: 'Garnier Nutrisse 80 Louro Claro',
     marca: 'Garnier Nutrisse',
     tom: '80',
-    cor: 'Louro Claro',
+    cor: 'Louro Claro Tá Com Tudo',
     descricao: 'Coloração permanente nutritiva Garnier. Tom 80 louro claro luminoso com óleos de abacate, oliva e karité.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
@@ -1359,7 +1441,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     nome: 'Garnier Nutrisse 81 Louro Claro Acinzentado',
     marca: 'Garnier Nutrisse',
     tom: '81',
-    cor: 'Louro Claro Acinzentado',
+    cor: 'Louro Cinza Claro Brilho',
     descricao: 'Coloração permanente nutritiva com reflexos cinza. Tom 81 louro claro acinzentado platinado com tripla nutrição.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
@@ -1432,7 +1514,7 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     nome: 'Amend Magnific Color 6.7 Chocolate',
     marca: 'Amend Magnific Color',
     tom: '6.7',
-    cor: 'Chocolate',
+    cor: 'Chocolate Para Brilhar',
     descricao: 'Coloração permanente profissional tom chocolate. Tom 6.7 louro escuro marrom chocolate rico com tecnologia de micro partículas.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -1449,7 +1531,7 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     nome: 'Amend Magnific Color 7.3 Louro Médio Dourado',
     marca: 'Amend Magnific Color',
     tom: '7.3',
-    cor: 'Louro Médio Dourado',
+    cor: 'Louro Dourado Super De Brilho',
     descricao: 'Coloração permanente profissional com reflexos dourados. Tom 7.3 louro médio dourado luminoso e radiante.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
@@ -1483,7 +1565,7 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     nome: 'Amend Magnific Color 8.1 Louro Claro Acinzentado',
     marca: 'Amend Magnific Color',
     tom: '8.1',
-    cor: 'Louro Claro Acinzentado',
+    cor: 'Louro Cinza Claro Brilho',
     descricao: 'Coloração permanente profissional com reflexos cinza platinado. Tom 8.1 louro claro acinzentado moderno.',
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
