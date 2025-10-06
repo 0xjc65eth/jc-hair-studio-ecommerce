@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ProductImage } from '@/components/seo/OptimizedImage';
-import { generateUnifiedCatalog } from '@/lib/data/megaHairProducts';
+import { getLegacyCompatibleProducts } from '@/lib/data/megaHairProducts';
 
 export const metadata: Metadata = {
   title: 'Mega Hair Brasileiro 100% Humano Premium | Extensões Capilares Autênticas',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 export default function MegaHairBrasileiroPage() {
-  const megaHairProducts = generateUnifiedCatalog().slice(0, 12);
+  const megaHairProducts = getLegacyCompatibleProducts().slice(0, 12);
 
   return (
     <>
@@ -302,7 +302,7 @@ export default function MegaHairBrasileiroPage() {
                 <div key={product.id} className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="relative aspect-square">
                     <ProductImage
-                      src={product.images[0]?.url || '/images/placeholder-product-brasileiro.jpg'}
+                      src={product.image || '/images/placeholder-product-brasileiro.jpg'}
                       productName={product.name}
                       category="Mega Hair"
                       brand="Brasileiro"
@@ -314,7 +314,7 @@ export default function MegaHairBrasileiroPage() {
                   <div className="p-4">
                     <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">{product.name}</h3>
                     <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-amber-600">€{product.price}</span>
+                      <span className="text-lg font-bold text-amber-600">€{product.price?.toFixed(2)}</span>
                       <div className="flex items-center gap-1">
                         <span className="text-yellow-400">★</span>
                         <span className="text-sm text-gray-600">{product.rating?.toFixed(1)}</span>
