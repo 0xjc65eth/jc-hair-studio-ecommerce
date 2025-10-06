@@ -308,8 +308,8 @@ export class ProductResolver {
       }
     }
 
-    // METHOD 5: Tintas capilares with validation
-    const tintaBrands = ['biocolor-', 'wella-', 'alfaparf-', 'loreal-', 'garnier-', 'schwarzkopf-', 'revlon-', 'clairol-', 'matrix-', 'redken-', 'paul-mitchell-', 'aveda-', 'keune-', 'amend-'];
+    // METHOD 5: Tintas capilares with validation (apenas marcas disponíveis)
+    const tintaBrands = ['biocolor-', 'wella-', 'alfaparf-', 'loreal-', 'garnier-', 'amend-'];
     if (!product && tintaBrands.some(brand => productId.includes(brand))) {
       if (isDev) {
         console.log(`🎯 ProductResolver: Tinta pattern detected, searching tintas capilares...`);
