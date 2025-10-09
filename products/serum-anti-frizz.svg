@@ -1,0 +1,51 @@
+<!-- Placeholder for Anti-Frizz Serum product image -->
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0E68C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bottle9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6347;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#FF4500;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg9)"/>
+  
+  <!-- Bottle -->
+  <rect x="150" y="80" width="100" height="240" rx="12" fill="url(#bottle9)"/>
+  
+  <!-- Pump dispenser -->
+  <rect x="185" y="65" width="30" height="20" rx="3" fill="#C0C0C0"/>
+  <rect x="195" y="50" width="10" height="20" rx="2" fill="#808080"/>
+  
+  <!-- Label area -->
+  <rect x="160" y="120" width="80" height="140" rx="5" fill="#FFFFFF" opacity="0.95"/>
+  
+  <!-- Brand text -->
+  <text x="200" y="140" text-anchor="middle" font-family="serif" font-size="11" font-weight="bold" fill="#FF6347">SMOOTH</text>
+  <text x="200" y="155" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#FF4500">SERUM</text>
+  <text x="200" y="170" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#FF6347">ANTI-FRIZZ</text>
+  
+  <!-- Smooth wave illustration -->
+  <path d="M 170 190 Q 185 185 200 190 T 230 190" stroke="#FF6347" stroke-width="3" fill="none"/>
+  <path d="M 170 200 Q 185 195 200 200 T 230 200" stroke="#FFD700" stroke-width="2" fill="none"/>
+  
+  <!-- Shield icon for protection -->
+  <path d="M 200 210 L 190 220 Q 190 230 200 235 Q 210 230 210 220 Z" fill="#FF6347" opacity="0.7"/>
+  
+  <!-- Instant action badge -->
+  <rect x="165" y="240" width="70" height="12" rx="6" fill="#FF6347" opacity="0.9"/>
+  <text x="200" y="248" text-anchor="middle" font-family="sans-serif" font-size="6" fill="white">AÇÃO INSTANTÂNEA</text>
+  
+  <!-- Long lasting -->
+  <text x="200" y="262" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#666">LONGA DURAÇÃO</text>
+  
+  <!-- Volume -->
+  <text x="200" y="275" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#666">150ml</text>
+  
+  <!-- Shine effect -->
+  <rect x="165" y="90" width="10" height="180" rx="5" fill="white" opacity="0.4"/>
+</svg>
