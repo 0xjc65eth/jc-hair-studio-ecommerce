@@ -5,11 +5,11 @@
     "products": [
       {
         "id": "cocochoco-professional-original",
-        "name": "CocoCHOCO Professional Original Premium Keratin Treatment",
+        "name": "CocoCHOCO Professional Original Premium Keratin Treatment 1000ML",
         "brand": "CocoCHOCO",
         "description": "Tratamento premium de queratina brasileira com chocolate para alisamento e brilho profissionais. Fórmula livre de formaldeído para resultados seguros e duradouros.",
-        "price_brl": 320.00,
-        "price_eur": 61.32,
+        "price_brl": 124.89,
+        "price_eur": 23.93,
         "images": [
           "/images/products/progressivas_diversas/progressivas_diversas_1.JPG"
         ],
@@ -28,11 +28,11 @@
       },
       {
         "id": "cocochoco-professional-gold",
-        "name": "CocoCHOCO Professional Gold Extra Shine",
+        "name": "CocoCHOCO Professional Gold Extra Shine 250ML",
         "brand": "CocoCHOCO",
         "description": "Tratamento premium de queratina dourado com brilho extra. Enriquecido com ouro 24k para máximo brilho e suavidade, ideal para resultados profissionais.",
-        "price_brl": 380.00,
-        "price_eur": 71.84,
+        "price_brl": 43.30,
+        "price_eur": 8.30,
         "images": [
           "/images/products/progressivas_diversas/progressivas_diversas_2.JPG",
           "/images/products/progressivas_diversas/progressivas_diversas_4.JPG"
@@ -43,7 +43,7 @@
           "Extra Shine",
           "Premium Keratin",
           "Brilho Máximo",
-          "250ml + 1000ml",
+          "250ml",
           "Uso Profissional"
         ],
         "stock": 12,
@@ -55,8 +55,8 @@
         "name": "T'ZAHA Diamante Total Liss Therapy 3D",
         "brand": "T'ZAHA",
         "description": "Kit completo de terapia capilar 3D com shampoo e gloss. Tratamento sem formol com tecnologia Diamante para alisamento e brilho intenso.",
-        "price_brl": 180.50,
-        "price_eur": 35.64,
+        "price_brl": 72.32,
+        "price_eur": 13.86,
         "images": [
           "/images/products/progressivas_diversas/progressivas_diversas_3.JPG"
         ],

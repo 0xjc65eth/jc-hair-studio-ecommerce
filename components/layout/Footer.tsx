@@ -20,31 +20,40 @@ export default function Footer() {
   
   const footerLinks = {
     produtos: [
-      { name: 'Mega Hair', href: '/categoria/mega-hair' },
-      { name: 'Progressiva Vogue', href: '/categoria/progressiva' },
-      { name: 'Extensões Naturais', href: '/categoria/extensoes' },
-      { name: 'Acessórios', href: '/categoria/acessorios' },
-      { name: 'Kits Completos', href: '/categoria/kits' },
+      { name: 'Mega Hair Brasileiro', href: '/mega-hair', description: 'Extensões 100% humanas' },
+      { name: 'Progressivas & Alisamentos', href: '/categoria/progressivas-alisamentos', description: 'Tratamentos profissionais' },
+      { name: 'Tratamentos Capilares', href: '/categoria/tratamentos-capilares', description: 'Cuidados especializados' },
+      { name: 'Maquiagem Brasileira', href: '/maquiagens', description: 'Cosméticos originais' },
+      { name: 'Perfumes Brasileiros', href: '/perfumes-brasileiros', description: 'Fragrâncias autênticas' },
+      { name: 'Ver Todos os Produtos', href: '/produtos', description: 'Catálogo completo', featured: true },
+    ],
+    categorias: [
+      { name: 'Shampoos & Condicionadores', href: '/categoria/shampoos-condicionadores' },
+      { name: 'Ferramentas Profissionais', href: '/categoria/ferramentas-profissionais' },
+      { name: 'Esmaltes Impala', href: '/esmaltes-impala-portugal' },
+      { name: 'Progressiva Vogue', href: '/progressiva-vogue-portugal' },
+      { name: 'Kits Completos', href: '/kits-completos' },
     ],
     atendimento: [
-      { name: 'Como Comprar', href: '/ajuda/como-comprar' },
-      { name: 'Formas de Pagamento', href: '/ajuda/pagamento' },
-      { name: 'Envio e Entrega', href: '/ajuda/envio' },
-      { name: 'Trocas e Devoluções', href: '/ajuda/devolucoes' },
-      { name: 'FAQ', href: '/ajuda/faq' },
+      { name: 'Como Comprar', href: '/como-comprar', icon: '🛒' },
+      { name: 'Envio e Entrega', href: '/envio-entrega', icon: '📦' },
+      { name: 'Formas de Pagamento', href: '/formas-pagamento', icon: '💳' },
+      { name: 'Trocas e Devoluções', href: '/trocas-devolucoes', icon: '🔄' },
+      { name: 'FAQ - Perguntas Frequentes', href: '/faq', icon: '❓' },
+      { name: 'Trabalhe Conosco', href: '/trabalhe-conosco', icon: '👥' },
     ],
     empresa: [
       { name: 'Sobre Nós', href: '/sobre' },
-      { name: 'Nossa História', href: '/sobre/historia' },
-      { name: 'Trabalhe Conosco', href: '/carreiras' },
-      { name: 'Imprensa', href: '/imprensa' },
+      { name: 'Nossa História', href: '/nossa-historia' },
       { name: 'Contato', href: '/contato' },
+      { name: 'Imprensa', href: '/imprensa' },
+      { name: 'Blog', href: '/blog' },
     ],
     legal: [
-      { name: 'Política de Privacidade', href: '/privacidade' },
-      { name: 'Termos de Uso', href: '/termos' },
-      { name: 'Política de Cookies', href: '/cookies' },
-      { name: 'LGPD', href: '/lgpd' },
+      { name: 'Política de Privacidade', href: '/legal/politica-privacidade' },
+      { name: 'Termos de Uso', href: '/legal/termos-uso' },
+      { name: 'Política de Cookies', href: '/legal/politica-cookies' },
+      { name: 'LGPD', href: '/legal/lgpd' },
     ],
   };
 
@@ -68,15 +77,15 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
           {/* Brand Section */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="inline-block mb-6">
+          <div className="lg:col-span-3">
+            <Link href="/" className="inline-block mb-6" title="Voltar à página inicial">
               <div className="flex items-center">
                 <div className="relative w-10 h-10">
                   <Image
                     src="/logo-white.svg"
-                    alt="JC Hair Studio's 62"
+                    alt="JC Hair Studio's 62 - Produtos Brasileiros Premium"
                     fill
                     className="object-contain"
                   />
@@ -88,11 +97,13 @@ export default function Footer() {
                 </div>
               </div>
             </Link>
-            
+
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Especialistas em extensões de cabelo premium. 
-              Transformamos sonhos em realidade com qualidade 
-              e elegância há mais de uma década.
+              <strong className="text-gray-300">Produtos Capilares Brasileiros Premium</strong>
+              <br />
+              Mega hair 100% humano, progressivas originais,
+              maquiagem e cosméticos brasileiros.
+              Mais de 40 anos de tradição familiar.
             </p>
             
             {/* Contact Info */}
@@ -140,17 +151,49 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Products */}
-          <div>
-            <h4 className="text-lg font-medium mb-6">Produtos</h4>
+          {/* Products - Main Categories */}
+          <div className="lg:col-span-2">
+            <h4 className="text-lg font-medium mb-6 text-amber-400">Produtos Principais</h4>
             <ul className="space-y-3">
               {footerLinks.produtos.map((link) => (
                 <li key={link.href}>
-                  <Link 
+                  <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                    className={`group flex flex-col text-sm transition-colors ${
+                      link.featured
+                        ? 'text-amber-400 hover:text-amber-300 font-semibold'
+                        : 'text-gray-400 hover:text-white'
+                    }`}
+                    title={link.description}
                   >
-                    {link.name}
+                    <span className="group-hover:translate-x-1 transition-transform inline-block">
+                      {link.name}
+                    </span>
+                    {link.description && (
+                      <span className="text-xs text-gray-500 mt-0.5">
+                        {link.description}
+                      </span>
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Categories */}
+          <div className="lg:col-span-2">
+            <h4 className="text-lg font-medium mb-6 text-amber-400">Categorias</h4>
+            <ul className="space-y-3">
+              {footerLinks.categorias.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors text-sm group"
+                    title={`Ver produtos de ${link.name}`}
+                  >
+                    <span className="group-hover:translate-x-1 transition-transform inline-block">
+                      {link.name}
+                    </span>
                   </Link>
                 </li>
               ))}
@@ -158,54 +201,63 @@ export default function Footer() {
           </div>
 
           {/* Customer Service */}
-          <div>
-            <h4 className="text-lg font-medium mb-6">Atendimento</h4>
+          <div className="lg:col-span-2">
+            <h4 className="text-lg font-medium mb-6 text-amber-400">Atendimento</h4>
             <ul className="space-y-3">
               {footerLinks.atendimento.map((link) => (
                 <li key={link.href}>
-                  <Link 
+                  <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group"
+                    title={link.name}
                   >
-                    {link.name}
+                    {link.icon && <span className="text-base">{link.icon}</span>}
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      {link.name}
+                    </span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Company */}
-          <div>
-            <h4 className="text-lg font-medium mb-6">Empresa</h4>
-            <ul className="space-y-3">
-              {footerLinks.empresa.map((link) => (
-                <li key={link.href}>
-                  <Link 
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Company & Legal Combined */}
+          <div className="lg:col-span-3">
+            <div className="mb-8">
+              <h4 className="text-lg font-medium mb-6 text-amber-400">Empresa</h4>
+              <ul className="space-y-3">
+                {footerLinks.empresa.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors text-sm group"
+                      title={link.name}
+                    >
+                      <span className="group-hover:translate-x-1 transition-transform inline-block">
+                        {link.name}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Legal */}
-          <div>
-            <h4 className="text-lg font-medium mb-6">Legal</h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.href}>
-                  <Link 
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div>
+              <h4 className="text-sm font-medium mb-4 text-gray-400">Legal</h4>
+              <ul className="space-y-2">
+                {footerLinks.legal.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-500 hover:text-gray-300 transition-colors text-xs"
+                      title={link.name}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Acqua Fresca Eau de Toilette, 100ml.png"],
-    pricing: { basePrice: 89.90, ourPrice: 69.90, discountPrice: 64.90, savings: 25.00, margin: "22%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 51.20, ourPrice: 64.90, discountPrice: 58.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "REFRESCANTE",
     publico: "Feminino"
   },
@@ -59,7 +59,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Anni Eau de Toilette, 100ml.png"],
-    pricing: { basePrice: 79.90, ourPrice: 59.90, discountPrice: 54.90, savings: 25.00, margin: "25%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 43.40, ourPrice: 54.90, discountPrice: 49.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "JOVEM",
     publico: "Feminino"
   },
@@ -74,7 +74,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Anni Sweety Eau de Toilette, 100ml.png"],
-    pricing: { basePrice: 79.90, ourPrice: 59.90, discountPrice: 54.90, savings: 25.00, margin: "25%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 43.40, ourPrice: 54.90, discountPrice: 49.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "DOCE",
     publico: "Feminino"
   },
@@ -89,7 +89,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Celebre Eau de Toilette Feminino, 100ml.png"],
-    pricing: { basePrice: 89.90, ourPrice: 69.90, discountPrice: 64.90, savings: 25.00, margin: "22%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 51.20, ourPrice: 64.90, discountPrice: 58.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "ELEGANTE",
     publico: "Feminino"
   },
@@ -104,7 +104,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Coffee Woman Eau de Toilette, 100ml.png"],
-    pricing: { basePrice: 99.90, ourPrice: 79.90, discountPrice: 74.90, savings: 25.00, margin: "20%", competitive: "Preço atrativo vs mercado europeu onde O Boticário oficial vende EDT premium a €35-40" },
+    pricing: { basePrice: 59.20, ourPrice: 74.90, discountPrice: 67.40, savings: 5.00, margin: "21%", competitive: "Preço atrativo vs mercado europeu onde O Boticário oficial vende EDT premium a €35-40" },
     badge: "SOFISTICADO",
     publico: "Feminino"
   },
@@ -119,7 +119,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Coffee Woman Duo Eau de Toilette 100ml.png"],
-    pricing: { basePrice: 109.90, ourPrice: 89.90, discountPrice: 84.90, savings: 25.00, margin: "18%", competitive: "Preço atrativo vs mercado europeu onde O Boticário oficial vende EDT premium a €35-40" },
+    pricing: { basePrice: 67.10, ourPrice: 84.90, discountPrice: 76.40, savings: 5.00, margin: "21%", competitive: "Preço atrativo vs mercado europeu onde O Boticário oficial vende EDT premium a €35-40" },
     badge: "INTENSO",
     publico: "Feminino"
   },
@@ -134,7 +134,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Coffee Woman Seduction Eau de Toilette, 100ml.png"],
-    pricing: { basePrice: 109.90, ourPrice: 89.90, discountPrice: 84.90, savings: 25.00, margin: "18%", competitive: "Preço atrativo vs mercado europeu onde O Boticário oficial vende EDT premium a €35-40" },
+    pricing: { basePrice: 67.10, ourPrice: 84.90, discountPrice: 76.40, savings: 5.00, margin: "21%", competitive: "Preço atrativo vs mercado europeu onde O Boticário oficial vende EDT premium a €35-40" },
     badge: "SEDUTOR",
     publico: "Feminino"
   },
@@ -149,7 +149,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Egeo Dolce Eau de Toilette, 90ml.png"],
-    pricing: { basePrice: 79.90, ourPrice: 59.90, discountPrice: 54.90, savings: 25.00, margin: "25%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 43.40, ourPrice: 54.90, discountPrice: 49.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "IRRESISTÍVEL",
     publico: "Feminino"
   },
@@ -164,7 +164,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Egeo Vanilla Vibe Eau de Toilette, 90ml.png"],
-    pricing: { basePrice: 79.90, ourPrice: 59.90, discountPrice: 54.90, savings: 25.00, margin: "25%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 43.40, ourPrice: 54.90, discountPrice: 49.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "VIBRANTE",
     publico: "Feminino"
   },
@@ -179,7 +179,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Floratta Blue Eau de Toilette, 75ml.png"],
-    pricing: { basePrice: 89.90, ourPrice: 69.90, discountPrice: 64.90, savings: 25.00, margin: "22%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende Floratta a €31.99" },
+    pricing: { basePrice: 51.20, ourPrice: 64.90, discountPrice: 58.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende Floratta a €31.99" },
     badge: "AQUÁTICO",
     publico: "Feminino"
   },
@@ -194,7 +194,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Floratta Cerejeira em Flor Eau de Toilette, 75ml.png"],
-    pricing: { basePrice: 89.90, ourPrice: 69.90, discountPrice: 64.90, savings: 25.00, margin: "22%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende Floratta a €31.99" },
+    pricing: { basePrice: 51.20, ourPrice: 64.90, discountPrice: 58.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende Floratta a €31.99" },
     badge: "DELICADO",
     publico: "Feminino"
   },
@@ -209,7 +209,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Floratta L_Amore Eau de Toilette, 75ml.png"],
-    pricing: { basePrice: 89.90, ourPrice: 69.90, discountPrice: 64.90, savings: 25.00, margin: "22%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende Floratta a €31.99" },
+    pricing: { basePrice: 51.20, ourPrice: 64.90, discountPrice: 58.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende Floratta a €31.99" },
     badge: "ROMÂNTICO",
     publico: "Feminino"
   },
@@ -224,7 +224,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Floratta Love Flower Eau de Toilette, 75ml.png"],
-    pricing: { basePrice: 89.90, ourPrice: 69.90, discountPrice: 64.90, savings: 25.00, margin: "22%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende Floratta a €31.99" },
+    pricing: { basePrice: 51.20, ourPrice: 64.90, discountPrice: 58.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende Floratta a €31.99" },
     badge: "PRIMAVERIL",
     publico: "Feminino"
   },
@@ -239,7 +239,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Floratta My Blue Eau de Toilette, 75ml.png"],
-    pricing: { basePrice: 89.90, ourPrice: 69.90, discountPrice: 64.90, savings: 25.00, margin: "22%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende Floratta a €31.99" },
+    pricing: { basePrice: 51.20, ourPrice: 64.90, discountPrice: 58.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende Floratta a €31.99" },
     badge: "ÚNICO",
     publico: "Feminino"
   },
@@ -254,7 +254,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Glamour Eau de Toilette, 75ml.png"],
-    pricing: { basePrice: 89.90, ourPrice: 69.90, discountPrice: 64.90, savings: 25.00, margin: "22%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 51.20, ourPrice: 64.90, discountPrice: 58.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "GLAMOUROSO",
     publico: "Feminino"
   },
@@ -269,7 +269,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Glamour Diva Eau de Toilette, 75 ml.png"],
-    pricing: { basePrice: 89.90, ourPrice: 69.90, discountPrice: 64.90, savings: 25.00, margin: "22%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 51.20, ourPrice: 64.90, discountPrice: 58.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "PODEROSO",
     publico: "Feminino"
   },
@@ -284,7 +284,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Glamour Secrets Black Eau de Toilette 75ml.png"],
-    pricing: { basePrice: 89.90, ourPrice: 69.90, discountPrice: 64.90, savings: 25.00, margin: "22%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 51.20, ourPrice: 64.90, discountPrice: 58.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "MISTERIOSO",
     publico: "Feminino"
   },
@@ -299,7 +299,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Liz Eau de Toilette, 100ml.png"],
-    pricing: { basePrice: 79.90, ourPrice: 59.90, discountPrice: 54.90, savings: 25.00, margin: "25%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 43.40, ourPrice: 54.90, discountPrice: 49.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "CLÁSSICO",
     publico: "Feminino"
   },
@@ -314,7 +314,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Liz Sublime Eau de Toilette, 100ml.png"],
-    pricing: { basePrice: 89.90, ourPrice: 69.90, discountPrice: 64.90, savings: 25.00, margin: "22%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 51.20, ourPrice: 64.90, discountPrice: 58.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "SUBLIME",
     publico: "Feminino"
   },
@@ -329,7 +329,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Thaty Eau de Toilette, 100ml.png"],
-    pricing: { basePrice: 69.90, ourPrice: 49.90, discountPrice: 44.90, savings: 25.00, margin: "29%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
+    pricing: { basePrice: 35.50, ourPrice: 44.90, discountPrice: 40.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde O Boticário oficial vende EDT a €31-35" },
     badge: "DESCONTRAÍDO",
     publico: "Feminino"
   },
@@ -346,7 +346,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Eau de Parfum Desobediente, 100ml.png"],
-    pricing: { basePrice: 129.90, ourPrice: 99.90, discountPrice: 94.90, savings: 35.00, margin: "23%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
+    pricing: { basePrice: 75, ourPrice: 94.90, discountPrice: 85.40, savings: 5.00, margin: "21%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
     badge: "OUSADO",
     publico: "Feminino"
   },
@@ -361,7 +361,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Elysée Eau de Parfum, 50ml.png"],
-    pricing: { basePrice: 119.90, ourPrice: 89.90, discountPrice: 84.90, savings: 35.00, margin: "25%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
+    pricing: { basePrice: 67.10, ourPrice: 84.90, discountPrice: 76.40, savings: 5.00, margin: "21%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
     badge: "PREMIUM",
     publico: "Feminino"
   },
@@ -376,7 +376,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Elysée Blanc Eau de Parfum, 50ml.png"],
-    pricing: { basePrice: 119.90, ourPrice: 89.90, discountPrice: 84.90, savings: 35.00, margin: "25%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
+    pricing: { basePrice: 67.10, ourPrice: 84.90, discountPrice: 76.40, savings: 5.00, margin: "21%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
     badge: "PURO",
     publico: "Feminino"
   },
@@ -391,7 +391,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Elysée Nuit Eau de Parfum, 50ml.png"],
-    pricing: { basePrice: 119.90, ourPrice: 89.90, discountPrice: 84.90, savings: 35.00, margin: "25%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
+    pricing: { basePrice: 67.10, ourPrice: 84.90, discountPrice: 76.40, savings: 5.00, margin: "21%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
     badge: "NOTURNO",
     publico: "Feminino"
   },
@@ -406,7 +406,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Elysée Succès Eau de Parfum, 50ml.png"],
-    pricing: { basePrice: 119.90, ourPrice: 89.90, discountPrice: 84.90, savings: 35.00, margin: "25%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
+    pricing: { basePrice: 67.10, ourPrice: 84.90, discountPrice: 76.40, savings: 5.00, margin: "21%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
     badge: "VENCEDOR",
     publico: "Feminino"
   },
@@ -421,7 +421,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Floratta Fleur Suprême Eau de Parfum, 75ml.png"],
-    pricing: { basePrice: 129.90, ourPrice: 99.90, discountPrice: 94.90, savings: 35.00, margin: "23%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
+    pricing: { basePrice: 75, ourPrice: 94.90, discountPrice: 85.40, savings: 5.00, margin: "21%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
     badge: "LUXUOSO",
     publico: "Feminino"
   },
@@ -436,7 +436,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Lily Eau de Parfum, 75ml.png"],
-    pricing: { basePrice: 129.90, ourPrice: 99.90, discountPrice: 94.90, savings: 35.00, margin: "23%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
+    pricing: { basePrice: 75, ourPrice: 94.90, discountPrice: 85.40, savings: 5.00, margin: "21%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
     badge: "ELEGANTE",
     publico: "Feminino"
   },
@@ -451,7 +451,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Lily Absolu Eau De Parfum, 75ml.png"],
-    pricing: { basePrice: 139.90, ourPrice: 109.90, discountPrice: 104.90, savings: 35.00, margin: "21%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €50-60" },
+    pricing: { basePrice: 82.90, ourPrice: 104.90, discountPrice: 94.40, savings: 5.00, margin: "21%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €50-60" },
     badge: "ABSOLUTO",
     publico: "Feminino"
   },
@@ -466,7 +466,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Lily Lumière Eau de Parfum, 75ml.png"],
-    pricing: { basePrice: 129.90, ourPrice: 99.90, discountPrice: 94.90, savings: 35.00, margin: "23%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
+    pricing: { basePrice: 75, ourPrice: 94.90, discountPrice: 85.40, savings: 5.00, margin: "21%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
     badge: "LUMINOSO",
     publico: "Feminino"
   },
@@ -481,7 +481,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Love Lily Eau de Parfum, 75ml.png"],
-    pricing: { basePrice: 129.90, ourPrice: 99.90, discountPrice: 94.90, savings: 35.00, margin: "23%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
+    pricing: { basePrice: 75, ourPrice: 94.90, discountPrice: 85.40, savings: 5.00, margin: "21%", competitive: "Excelente valor vs mercado europeu onde EDP premium custa €45-55" },
     badge: "ROMÂNTICO",
     publico: "Feminino"
   },
@@ -498,7 +498,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Body Splash Cuide-se Bem Pessegura, 200ml.png"],
-    pricing: { basePrice: 49.90, ourPrice: 34.90, discountPrice: 29.90, savings: 20.00, margin: "30%", competitive: "Preço competitivo vs mercado europeu onde Body Splashes custam €12-15" },
+    pricing: { basePrice: 23.60, ourPrice: 29.90, discountPrice: 26.90, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde Body Splashes custam €12-15" },
     badge: "REFRESCANTE",
     publico: "Feminino"
   },
@@ -513,7 +513,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Body Splash Nativa Spa Ameixa, 200ml.png"],
-    pricing: { basePrice: 54.90, ourPrice: 39.90, discountPrice: 34.90, savings: 20.00, margin: "27%", competitive: "Preço competitivo vs mercado europeu onde Body Splashes custam €12-15" },
+    pricing: { basePrice: 27.60, ourPrice: 34.90, discountPrice: 31.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde Body Splashes custam €12-15" },
     badge: "SPA",
     publico: "Feminino"
   },
@@ -528,7 +528,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Body Splash Nativa Spa Ameixa Negra, 200ml.png"],
-    pricing: { basePrice: 54.90, ourPrice: 39.90, discountPrice: 34.90, savings: 20.00, margin: "27%", competitive: "Preço competitivo vs mercado europeu onde Body Splashes custam €12-15" },
+    pricing: { basePrice: 27.60, ourPrice: 34.90, discountPrice: 31.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde Body Splashes custam €12-15" },
     badge: "SOFISTICADO",
     publico: "Feminino"
   },
@@ -543,7 +543,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Body Splash Nativa Spa Caviar, 200ml.png"],
-    pricing: { basePrice: 59.90, ourPrice: 44.90, discountPrice: 39.90, savings: 20.00, margin: "25%", competitive: "Ótimo valor vs mercado europeu onde Body Splashes premium custam €15-18" },
+    pricing: { basePrice: 31.50, ourPrice: 39.90, discountPrice: 35.90, savings: 5.00, margin: "21%", competitive: "Ótimo valor vs mercado europeu onde Body Splashes premium custam €15-18" },
     badge: "LUXUOSO",
     publico: "Feminino"
   },
@@ -558,7 +558,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Body Splash Nativa Spa Morango Ruby, 200ml.png"],
-    pricing: { basePrice: 54.90, ourPrice: 39.90, discountPrice: 34.90, savings: 20.00, margin: "27%", competitive: "Preço competitivo vs mercado europeu onde Body Splashes custam €12-15" },
+    pricing: { basePrice: 27.60, ourPrice: 34.90, discountPrice: 31.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde Body Splashes custam €12-15" },
     badge: "VIBRANTE",
     publico: "Feminino"
   },
@@ -573,7 +573,7 @@ export const perfumesOBoticario: PerfumeOBoticario[] = [
     categoria: "cosmeticos",
     subcategoria: "perfumes-boticario",
     images: ["/images/products/perfumes-o-boticario/Body Splash Nativa Spa Quinoa, 200ml.png"],
-    pricing: { basePrice: 54.90, ourPrice: 39.90, discountPrice: 34.90, savings: 20.00, margin: "27%", competitive: "Preço competitivo vs mercado europeu onde Body Splashes custam €12-15" },
+    pricing: { basePrice: 27.60, ourPrice: 34.90, discountPrice: 31.40, savings: 5.00, margin: "21%", competitive: "Preço competitivo vs mercado europeu onde Body Splashes custam €12-15" },
     badge: "NUTRITIVO",
     publico: "Feminino"
   }

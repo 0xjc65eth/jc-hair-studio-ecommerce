@@ -37,12 +37,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8733.png'],
-    pricing: {
-      basePrice: 42,
-      ourPrice: 29,
-      discountPrice: 26,
-      margin: '31%',
-      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço acessível comparado a colorações europeias (€35-45), com fórmula de qualidade profissional.'
     },
     badge: 'COBERTURA TOTAL'
   },
@@ -56,12 +51,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8757.png'],
-    pricing: {
-      basePrice: 42,
-      ourPrice: 29,
-      discountPrice: 26,
-      margin: '31%',
-      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço acessível comparado a colorações europeias (€35-45), com fórmula de qualidade profissional.'
     },
     badge: 'REFLEXOS AZULADOS'
   },
@@ -75,12 +65,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8725.png'],
-    pricing: {
-      basePrice: 42,
-      ourPrice: 29,
-      discountPrice: 26,
-      margin: '31%',
-      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço acessível comparado a colorações europeias (€35-45), com fórmula de qualidade profissional.'
     },
     badge: 'HIDRATANTE'
   },
@@ -94,12 +79,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8777.png'],
-    pricing: {
-      basePrice: 43,
-      ourPrice: 30,
-      discountPrice: 27,
-      margin: '30%',
-      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'NUTRITIVA'
   },
@@ -113,12 +93,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8903.png'],
-    pricing: {
-      basePrice: 43,
-      ourPrice: 30,
-      discountPrice: 27,
-      margin: '30%',
-      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'REFLEXOS ACAJU'
   },
@@ -132,12 +107,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8875.png'],
-    pricing: {
-      basePrice: 43,
-      ourPrice: 30,
-      discountPrice: 27,
-      margin: '30%',
-      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'TOM QUENTE'
   },
@@ -151,12 +121,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8780.png'],
-    pricing: {
-      basePrice: 43,
-      ourPrice: 30,
-      discountPrice: 27,
-      margin: '30%',
-      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'HIDRATANTE'
   },
@@ -170,12 +135,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-9055.png'],
-    pricing: {
-      basePrice: 43,
-      ourPrice: 30,
-      discountPrice: 27,
-      margin: '30%',
-      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'TOM MODERNO'
   },
@@ -189,12 +149,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-9020.png'],
-    pricing: {
-      basePrice: 43,
-      ourPrice: 30,
-      discountPrice: 27,
-      margin: '30%',
-      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'LUMINOSO'
   },
@@ -208,12 +163,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8904.png'],
-    pricing: {
-      basePrice: 43,
-      ourPrice: 30,
-      discountPrice: 27,
-      margin: '30%',
-      competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço acessível comparado a colorações europeias (€8-12), com fórmula de qualidade profissional.'
     },
     badge: 'ACAJU INTENSO'
   },
@@ -227,12 +177,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8766.png'],
-    pricing: {
-      basePrice: 44,
-      ourPrice: 31,
-      discountPrice: 28,
-      margin: '30%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'NUTRITIVA'
   },
@@ -246,12 +191,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8845.png'],
-    pricing: {
-      basePrice: 44,
-      ourPrice: 31,
-      discountPrice: 28,
-      margin: '30%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'TOM FRIO'
   },
@@ -265,12 +205,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8829.png'],
-    pricing: {
-      basePrice: 44,
-      ourPrice: 31,
-      discountPrice: 28,
-      margin: '30%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'VERMELHO INTENSO'
   },
@@ -284,12 +219,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8819.png'],
-    pricing: {
-      basePrice: 44,
-      ourPrice: 31,
-      discountPrice: 28,
-      margin: '30%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'CHOCOLATE'
   },
@@ -303,12 +233,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8853.png'],
-    pricing: {
-      basePrice: 44,
-      ourPrice: 31,
-      discountPrice: 28,
-      margin: '30%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'BRILHO RADIANTE'
   },
@@ -322,12 +247,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8855.png'],
-    pricing: {
-      basePrice: 44,
-      ourPrice: 31,
-      discountPrice: 28,
-      margin: '30%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'PLATINADO'
   },
@@ -341,12 +261,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8831.png'],
-    pricing: {
-      basePrice: 44,
-      ourPrice: 31,
-      discountPrice: 28,
-      margin: '30%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'DOURADO'
   },
@@ -360,12 +275,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8830.png'],
-    pricing: {
-      basePrice: 44,
-      ourPrice: 31,
-      discountPrice: 28,
-      margin: '30%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'COBRE INTENSO'
   },
@@ -379,12 +289,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8883.png'],
-    pricing: {
-      basePrice: 45,
-      ourPrice: 32,
-      discountPrice: 29,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'ILUMINADO'
   },
@@ -398,12 +303,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8820.png'],
-    pricing: {
-      basePrice: 45,
-      ourPrice: 32,
-      discountPrice: 29,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'CINZA PLATINADO'
   },
@@ -417,12 +317,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8882.png'],
-    pricing: {
-      basePrice: 45,
-      ourPrice: 32,
-      discountPrice: 29,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'SUPER CLARO'
   },
@@ -436,12 +331,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-permanente',
     images: ['/images/products/produtos_diversos/IMG-8858.png'],
-    pricing: {
-      basePrice: 45,
-      ourPrice: 32,
-      discountPrice: 29,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'ULTRA CLARO'
   },
@@ -455,12 +345,7 @@ export const biocolorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'super-clareador',
     images: ['/images/products/produtos_diversos/IMG-9023.png'],
-    pricing: {
-      basePrice: 45,
-      ourPrice: 32,
-      discountPrice: 29,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações europeias (€8-12), ideal para tons louros.'
     },
     badge: 'SUPER CLAREADOR'
   }
@@ -479,12 +364,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8739.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 45,
-      discountPrice: 41,
-      margin: '31%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -498,12 +378,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8759.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 45,
-      discountPrice: 41,
-      margin: '31%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -517,12 +392,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8720.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 45,
-      discountPrice: 41,
-      margin: '31%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -536,12 +406,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8774.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 45,
-      discountPrice: 41,
-      margin: '31%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -555,12 +420,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8741.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 45,
-      discountPrice: 41,
-      margin: '31%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -574,12 +434,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8713.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 45,
-      discountPrice: 41,
-      margin: '31%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -593,12 +448,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8764.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 45,
-      discountPrice: 41,
-      margin: '31%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -612,12 +462,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8770.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 45,
-      discountPrice: 41,
-      margin: '31%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -631,12 +476,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8761.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 45,
-      discountPrice: 41,
-      margin: '31%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -650,12 +490,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8778.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 45,
-      discountPrice: 41,
-      margin: '31%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -669,12 +504,7 @@ export const wellaKolestonProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8767.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 45,
-      discountPrice: 41,
-      margin: '31%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), tecnologia ME+.'
     },
     badge: 'PROFISSIONAL'
   }
@@ -693,12 +523,7 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-sem-amonia',
     images: ['/images/products/produtos_diversos/IMG-8716.png'],
-    pricing: {
-      basePrice: 52,
-      ourPrice: 37,
-      discountPrice: 34,
-      margin: '29%',
-      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   },
@@ -712,12 +537,7 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-sem-amonia',
     images: ['/images/products/produtos_diversos/IMG-8727.png'],
-    pricing: {
-      basePrice: 52,
-      ourPrice: 37,
-      discountPrice: 34,
-      margin: '29%',
-      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   },
@@ -731,12 +551,7 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-sem-amonia',
     images: ['/images/products/produtos_diversos/IMG-8718.png'],
-    pricing: {
-      basePrice: 52,
-      ourPrice: 37,
-      discountPrice: 34,
-      margin: '29%',
-      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   },
@@ -750,12 +565,7 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-sem-amonia',
     images: ['/images/products/produtos_diversos/IMG-8752.png'],
-    pricing: {
-      basePrice: 52,
-      ourPrice: 37,
-      discountPrice: 34,
-      margin: '29%',
-      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   },
@@ -769,12 +579,7 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-sem-amonia',
     images: ['/images/products/produtos_diversos/IMG-8768.png'],
-    pricing: {
-      basePrice: 52,
-      ourPrice: 37,
-      discountPrice: 34,
-      margin: '29%',
-      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   },
@@ -788,12 +593,7 @@ export const wellaSoftColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-sem-amonia',
     images: ['/images/products/produtos_diversos/IMG-8767.png'],
-    pricing: {
-      basePrice: 52,
-      ourPrice: 37,
-      discountPrice: 34,
-      margin: '29%',
-      competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente valor comparado a colorações sem amônia europeias (€6-10), fórmula suave.'
     },
     badge: 'SEM AMÔNIA'
   }
@@ -812,12 +612,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8810.png'],
-    pricing: {
-      basePrice: 78,
-      ourPrice: 55,
-      discountPrice: 49,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -831,12 +626,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-vegana',
     images: ['/images/products/produtos_diversos/IMG-8977.png'],
-    pricing: {
-      basePrice: 85,
-      ourPrice: 62,
-      discountPrice: 57,
-      margin: '27%',
-      competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
     },
     badge: 'VEGANA'
   },
@@ -850,12 +640,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-9032.png'],
-    pricing: {
-      basePrice: 78,
-      ourPrice: 55,
-      discountPrice: 49,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -869,12 +654,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8898.png'],
-    pricing: {
-      basePrice: 78,
-      ourPrice: 55,
-      discountPrice: 49,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -888,12 +668,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-vegana',
     images: ['/images/products/produtos_diversos/IMG-8986.png'],
-    pricing: {
-      basePrice: 85,
-      ourPrice: 62,
-      discountPrice: 57,
-      margin: '27%',
-      competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
     },
     badge: 'VEGANA'
   },
@@ -907,12 +682,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8846.png'],
-    pricing: {
-      basePrice: 78,
-      ourPrice: 55,
-      discountPrice: 49,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -926,12 +696,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8885.png'],
-    pricing: {
-      basePrice: 78,
-      ourPrice: 55,
-      discountPrice: 49,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -945,12 +710,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-vegana',
     images: ['/images/products/produtos_diversos/IMG-8985.png'],
-    pricing: {
-      basePrice: 85,
-      ourPrice: 62,
-      discountPrice: 57,
-      margin: '27%',
-      competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
     },
     badge: 'VEGANA'
   },
@@ -964,12 +724,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-vegana',
     images: ['/images/products/produtos_diversos/IMG-8987.png'],
-    pricing: {
-      basePrice: 85,
-      ourPrice: 62,
-      discountPrice: 57,
-      margin: '27%',
-      competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
     },
     badge: 'VEGANA'
   },
@@ -983,12 +738,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8880.png'],
-    pricing: {
-      basePrice: 78,
-      ourPrice: 55,
-      discountPrice: 49,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1002,12 +752,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8861.png'],
-    pricing: {
-      basePrice: 78,
-      ourPrice: 55,
-      discountPrice: 49,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1021,12 +766,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8862.png'],
-    pricing: {
-      basePrice: 80,
-      ourPrice: 56,
-      discountPrice: 50,
-      margin: '30%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1040,12 +780,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8852.png'],
-    pricing: {
-      basePrice: 80,
-      ourPrice: 56,
-      discountPrice: 50,
-      margin: '30%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1059,12 +794,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8869.png'],
-    pricing: {
-      basePrice: 80,
-      ourPrice: 56,
-      discountPrice: 50,
-      margin: '30%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1078,12 +808,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8872.png'],
-    pricing: {
-      basePrice: 80,
-      ourPrice: 56,
-      discountPrice: 50,
-      margin: '30%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1097,12 +822,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8769.png'],
-    pricing: {
-      basePrice: 80,
-      ourPrice: 56,
-      discountPrice: 50,
-      margin: '30%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1116,12 +836,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8800.png'],
-    pricing: {
-      basePrice: 80,
-      ourPrice: 56,
-      discountPrice: 50,
-      margin: '30%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1135,12 +850,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-vegana',
     images: ['/images/products/produtos_diversos/IMG-8966.png'],
-    pricing: {
-      basePrice: 85,
-      ourPrice: 62,
-      discountPrice: 57,
-      margin: '27%',
-      competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Linha vegana premium com preço competitivo frente a colorações italianas veganas (€12-18).'
     },
     badge: 'VEGANA'
   },
@@ -1154,12 +864,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8868.png'],
-    pricing: {
-      basePrice: 80,
-      ourPrice: 56,
-      discountPrice: 50,
-      margin: '30%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1173,12 +878,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8826.png'],
-    pricing: {
-      basePrice: 80,
-      ourPrice: 56,
-      discountPrice: 50,
-      margin: '30%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1192,12 +892,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8857.png'],
-    pricing: {
-      basePrice: 80,
-      ourPrice: 56,
-      discountPrice: 50,
-      margin: '30%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1211,12 +906,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-9043.png'],
-    pricing: {
-      basePrice: 80,
-      ourPrice: 56,
-      discountPrice: 50,
-      margin: '30%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1230,12 +920,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-9053.png'],
-    pricing: {
-      basePrice: 82,
-      ourPrice: 58,
-      discountPrice: 52,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1249,12 +934,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-9008.png'],
-    pricing: {
-      basePrice: 82,
-      ourPrice: 58,
-      discountPrice: 52,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1268,12 +948,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8832.png'],
-    pricing: {
-      basePrice: 82,
-      ourPrice: 58,
-      discountPrice: 52,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1287,12 +962,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8877.png'],
-    pricing: {
-      basePrice: 82,
-      ourPrice: 58,
-      discountPrice: 52,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1306,12 +976,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-9036.png'],
-    pricing: {
-      basePrice: 82,
-      ourPrice: 58,
-      discountPrice: 52,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1325,12 +990,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8901.png'],
-    pricing: {
-      basePrice: 82,
-      ourPrice: 58,
-      discountPrice: 52,
-      margin: '29%',
-      competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço premium compatível com colorações italianas (€10-15), qualidade profissional Alfaparf.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1344,12 +1004,7 @@ export const alfaparfAltaModaProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'super-clareador',
     images: ['/images/products/produtos_diversos/IMG-8900.png'],
-    pricing: {
-      basePrice: 85,
-      ourPrice: 62,
-      discountPrice: 57,
-      margin: '27%',
-      competitive: 'Super clareador profissional com preço justo comparado a produtos europeus (€12-18).'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Super clareador profissional com preço justo comparado a produtos europeus (€12-18).'
     },
     badge: 'SUPER CLAREADOR'
   }
@@ -1368,12 +1023,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
     images: ['/images/products/produtos_diversos/IMG-8965.png'],
-    pricing: {
-      basePrice: 45,
-      ourPrice: 32,
-      discountPrice: 29,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1387,12 +1037,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
     images: ['/images/products/produtos_diversos/IMG-8933.png'],
-    pricing: {
-      basePrice: 45,
-      ourPrice: 32,
-      discountPrice: 29,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1406,12 +1051,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
     images: ['/images/products/produtos_diversos/IMG-8981.png'],
-    pricing: {
-      basePrice: 45,
-      ourPrice: 32,
-      discountPrice: 29,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1425,12 +1065,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
     images: ['/images/products/produtos_diversos/IMG-8984.png'],
-    pricing: {
-      basePrice: 48,
-      ourPrice: 34,
-      discountPrice: 31,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1444,12 +1079,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
     images: ['/images/products/produtos_diversos/IMG-8912.png'],
-    pricing: {
-      basePrice: 48,
-      ourPrice: 34,
-      discountPrice: 31,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1463,12 +1093,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
     images: ['/images/products/produtos_diversos/IMG-8923.png'],
-    pricing: {
-      basePrice: 48,
-      ourPrice: 34,
-      discountPrice: 31,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1482,12 +1107,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
     images: ['/images/products/produtos_diversos/IMG-8980.png'],
-    pricing: {
-      basePrice: 48,
-      ourPrice: 34,
-      discountPrice: 31,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1501,12 +1121,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
     images: ['/images/products/produtos_diversos/IMG-8902.png'],
-    pricing: {
-      basePrice: 50,
-      ourPrice: 35,
-      discountPrice: 32,
-      margin: '30%',
-      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1520,12 +1135,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
     images: ['/images/products/produtos_diversos/IMG-8961.png'],
-    pricing: {
-      basePrice: 50,
-      ourPrice: 35,
-      discountPrice: 32,
-      margin: '30%',
-      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   },
@@ -1539,12 +1149,7 @@ export const garnierNutrisseProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-nutritiva',
     images: ['/images/products/produtos_diversos/IMG-8962.png'],
-    pricing: {
-      basePrice: 52,
-      ourPrice: 37,
-      discountPrice: 34,
-      margin: '29%',
-      competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Excelente custo-benefício frente a colorações nutritivas europeias (€8-12), tripla nutrição.'
     },
     badge: 'NUTRITIVA'
   }
@@ -1563,12 +1168,7 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8918.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 46,
-      discountPrice: 42,
-      margin: '29%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1582,12 +1182,7 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8953.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 46,
-      discountPrice: 42,
-      margin: '29%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1601,12 +1196,7 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8940.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 46,
-      discountPrice: 42,
-      margin: '29%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1620,12 +1210,7 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8976.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 46,
-      discountPrice: 42,
-      margin: '29%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1639,12 +1224,7 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8973.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 46,
-      discountPrice: 42,
-      margin: '29%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   },
@@ -1658,12 +1238,7 @@ export const amendMagnificColorProducts: TintaCapilar[] = [
     categoria: 'tintas-capilares',
     subcategoria: 'coloracao-profissional',
     images: ['/images/products/produtos_diversos/IMG-8979.png'],
-    pricing: {
-      basePrice: 65,
-      ourPrice: 46,
-      discountPrice: 42,
-      margin: '29%',
-      competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
+    pricing: { basePrice: 12.0, ourPrice: 16.0, discountPrice: 14.4, savings: 1.6, margin: "25%", competitive: 'Preço competitivo comparado a colorações profissionais europeias (€10-15), micro partículas.'
     },
     badge: 'PROFISSIONAL'
   }

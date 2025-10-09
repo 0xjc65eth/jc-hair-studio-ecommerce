@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+/* REMOVED: Google Fonts via @import - moved to <head> with preconnect for better LCP */
+/* Font loading now handled in layout.tsx with Next.js font optimization */
 @import './category.css';
 
 
@@ -66,9 +67,37 @@ a {
   text-decoration: none;
 }
 
+/* CLS PREVENTION: Reserve space for images to prevent layout shift */
 img {
   max-width: 100%;
   height: auto;
+  /* Prevent layout shift during image loading */
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Lazy loading optimization */
+img[loading="lazy"] {
+  /* Reserve space for lazy images */
+  min-height: 1px;
+}
+
+/* Next.js Image component optimization */
+.next-image-wrapper {
+  position: relative;
+  display: block;
+}
+
+/* Prevent CLS for image containers */
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-product {
+  aspect-ratio: 3 / 4;
 }
 
 h1, h2, h3, h4, h5, h6 {

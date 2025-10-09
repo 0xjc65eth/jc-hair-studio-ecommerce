@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { FAQSchema, BreadcrumbSchema } from '../../../components/seo/UnifiedSchema'
 
 export default function FaqPage() {
   const [activeCategory, setActiveCategory] = useState('produtos')
@@ -223,8 +224,23 @@ export default function FaqPage() {
     setOpenFaq(openFaq === index ? null : index)
   }
 
+  // Prepare FAQs for schema - combine all categories
+  const allFaqs = Object.values(faqs).flat().map(faq => ({
+    question: faq.question,
+    answer: faq.answer
+  }))
+
+  // Breadcrumbs for SEO
+  const breadcrumbs = [
+    { name: 'Início', url: '/' },
+    { name: 'FAQ - Perguntas Frequentes', url: '/faq' }
+  ]
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Schema.org Structured Data */}
+      <FAQSchema faqs={allFaqs} />
+      <BreadcrumbSchema breadcrumbs={breadcrumbs} />
       {/* Header */}
       <header className="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">

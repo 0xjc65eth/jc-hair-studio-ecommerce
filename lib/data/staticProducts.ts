@@ -22,33 +22,33 @@ interface StaticProduct {
 const progressivasData: StaticProduct[] = [
   {
     id: 'cocochoco-original-premium',
-    nome: 'COCOCHOCO Original Premium Keratin Treatment',
+    nome: 'COCOCHOCO Original Premium Keratin Treatment 1000ML',
     marca: 'COCOCHOCO PROFESSIONAL',
     descricao: 'Tratamento premium de queratina com terapia de chocolate. Fórmula profissional que proporciona alisamento duradouro, brilho intenso e nutrição profunda para resultados excepcionais.',
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_1.JPG'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 189.90,
-      ourPrice: 284.85,
-      discountPrice: 259.90,
-      savings: 24.95,
-      margin: '37%',
+      basePrice: 124.89,
+      ourPrice: 124.89,
+      discountPrice: 124.89,
+      savings: 0,
+      margin: '0%',
       competitive: 'Baseado em progressivas premium europeias'
     }
   },
   {
     id: 'cocochoco-gold-premium',
-    nome: 'COCOCHOCO Gold Premium Keratin Treatment',
+    nome: 'COCOCHOCO Gold Premium Keratin Treatment 250ML',
     marca: 'COCOCHOCO PROFESSIONAL',
     descricao: 'Tratamento de queratina dourado com brilho extra. Fórmula premium para resultados profissionais com máximo brilho e alisamento perfeito.',
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_2.JPG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 199.90,
-      savings: 24.95,
-      margin: '33.4%',
+      basePrice: 43.30,
+      ourPrice: 43.30,
+      discountPrice: 43.30,
+      savings: 0,
+      margin: '0%',
       competitive: 'Baseado em progressivas premium europeias'
     }
   },
@@ -60,11 +60,11 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_3.JPG'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 169.90,
-      ourPrice: 254.85,
-      discountPrice: 229.90,
-      savings: 24.95,
-      margin: '35.3%',
+      basePrice: 72.32,
+      ourPrice: 72.32,
+      discountPrice: 72.32,
+      savings: 0,
+      margin: '0%',
       competitive: 'Baseado em progressivas premium europeias'
     }
   },
@@ -76,11 +76,11 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_4.JPG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 249.90,
-      ourPrice: 374.85,
-      discountPrice: 339.90,
-      savings: 34.95,
-      margin: '36.1%',
+      basePrice: 130.21,
+      ourPrice: 130.21,
+      discountPrice: 130.21,
+      savings: 0,
+      margin: '0%',
       competitive: 'Baseado em progressivas premium europeias'
     }
   },
@@ -92,10 +92,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_5.JPG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 129.90,
-      ourPrice: 194.85,
-      discountPrice: 174.90,
-      savings: 19.95,
+      basePrice: 174.9,
+      ourPrice: 174.9,
+      discountPrice: 174.9,
+      savings: 0,
       margin: '34.6%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -108,10 +108,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_6.JPG'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 139.90,
-      ourPrice: 209.85,
-      discountPrice: 189.90,
-      savings: 19.95,
+      basePrice: 189.9,
+      ourPrice: 189.9,
+      discountPrice: 189.9,
+      savings: 0,
       margin: '35.8%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -124,10 +124,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_7.PNG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 159.90,
-      ourPrice: 239.85,
-      discountPrice: 219.90,
-      savings: 19.95,
+      basePrice: 219.9,
+      ourPrice: 219.9,
+      discountPrice: 219.9,
+      savings: 0,
       margin: '37.5%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -140,10 +140,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_8.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 179.90,
-      ourPrice: 269.85,
-      discountPrice: 249.90,
-      savings: 19.95,
+      basePrice: 249.9,
+      ourPrice: 249.9,
+      discountPrice: 249.9,
+      savings: 0,
       margin: '38.9%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -156,10 +156,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_9.png'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 204.90,
-      savings: 19.95,
+      basePrice: 204.9,
+      ourPrice: 204.9,
+      discountPrice: 204.9,
+      savings: 0,
       margin: '36.7%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -172,10 +172,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_10.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 119.90,
-      ourPrice: 179.85,
-      discountPrice: 159.90,
-      savings: 19.95,
+      basePrice: 159.9,
+      ourPrice: 159.9,
+      discountPrice: 159.9,
+      savings: 0,
       margin: '33.4%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -188,10 +188,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_11.JPG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 189.90,
-      ourPrice: 284.85,
-      discountPrice: 259.90,
-      savings: 24.95,
+      basePrice: 259.9,
+      ourPrice: 259.9,
+      discountPrice: 259.9,
+      savings: 0,
       margin: '36.9%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -204,10 +204,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_12.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 169.90,
-      ourPrice: 254.85,
-      discountPrice: 234.90,
-      savings: 19.95,
+      basePrice: 234.9,
+      ourPrice: 234.9,
+      discountPrice: 234.9,
+      savings: 0,
       margin: '38.3%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -220,10 +220,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_14.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 159.90,
-      ourPrice: 239.85,
-      discountPrice: 219.90,
-      savings: 19.95,
+      basePrice: 219.9,
+      ourPrice: 219.9,
+      discountPrice: 219.9,
+      savings: 0,
       margin: '37.5%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -236,10 +236,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_15.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 204.90,
-      savings: 19.95,
+      basePrice: 204.9,
+      ourPrice: 204.9,
+      discountPrice: 204.9,
+      savings: 0,
       margin: '36.7%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -252,10 +252,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_16.png'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 179.90,
-      ourPrice: 269.85,
-      discountPrice: 244.90,
-      savings: 24.95,
+      basePrice: 244.9,
+      ourPrice: 244.9,
+      discountPrice: 244.9,
+      savings: 0,
       margin: '36.2%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -268,10 +268,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_17.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 199.90,
-      ourPrice: 299.85,
-      discountPrice: 274.90,
-      savings: 24.95,
+      basePrice: 274.9,
+      ourPrice: 274.9,
+      discountPrice: 274.9,
+      savings: 0,
       margin: '37.5%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -284,10 +284,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_19.png'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 204.90,
-      savings: 19.95,
+      basePrice: 204.9,
+      ourPrice: 204.9,
+      discountPrice: 204.9,
+      savings: 0,
       margin: '36.7%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -300,10 +300,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_20.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 119.90,
-      ourPrice: 179.85,
-      discountPrice: 159.90,
-      savings: 19.95,
+      basePrice: 159.9,
+      ourPrice: 159.9,
+      discountPrice: 159.9,
+      savings: 0,
       margin: '33.4%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -316,10 +316,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_21.JPG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 139.90,
-      ourPrice: 209.85,
-      discountPrice: 189.90,
-      savings: 19.95,
+      basePrice: 189.9,
+      ourPrice: 189.9,
+      discountPrice: 189.9,
+      savings: 0,
       margin: '35.8%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -332,10 +332,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_22.JPG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 159.90,
-      ourPrice: 239.85,
-      discountPrice: 219.90,
-      savings: 19.95,
+      basePrice: 219.9,
+      ourPrice: 219.9,
+      discountPrice: 219.9,
+      savings: 0,
       margin: '37.5%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -348,10 +348,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_24.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 199.90,
-      ourPrice: 299.85,
-      discountPrice: 274.90,
-      savings: 24.95,
+      basePrice: 274.9,
+      ourPrice: 274.9,
+      discountPrice: 274.9,
+      savings: 0,
       margin: '37.5%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -364,10 +364,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_25.JPG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 169.90,
-      ourPrice: 254.85,
-      discountPrice: 234.90,
-      savings: 19.95,
+      basePrice: 234.9,
+      ourPrice: 234.9,
+      discountPrice: 234.9,
+      savings: 0,
       margin: '38.3%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -380,10 +380,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_26.JPG'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 129.90,
-      ourPrice: 194.85,
-      discountPrice: 174.90,
-      savings: 19.95,
+      basePrice: 174.9,
+      ourPrice: 174.9,
+      discountPrice: 174.9,
+      savings: 0,
       margin: '34.6%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -396,10 +396,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_27.png'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 219.90,
-      ourPrice: 329.85,
-      discountPrice: 304.90,
-      savings: 24.95,
+      basePrice: 304.9,
+      ourPrice: 304.9,
+      discountPrice: 304.9,
+      savings: 0,
       margin: '38.7%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -412,10 +412,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_28.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 204.90,
-      savings: 19.95,
+      basePrice: 204.9,
+      ourPrice: 204.9,
+      discountPrice: 204.9,
+      savings: 0,
       margin: '36.7%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -428,10 +428,10 @@ const progressivasData: StaticProduct[] = [
     imagens: ['/images/products/progressivas_diversas/progressivas_diversas_31.PNG'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 179.90,
-      ourPrice: 269.85,
-      discountPrice: 249.90,
-      savings: 19.95,
+      basePrice: 249.9,
+      ourPrice: 249.9,
+      discountPrice: 249.9,
+      savings: 0,
       margin: '38.9%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -449,10 +449,10 @@ const progressivasData: StaticProduct[] = [
     ],
     badge: 'LINHA COMPLETA',
     pricing: {
-      basePrice: 189.90,
-      ourPrice: 284.85,
-      discountPrice: 264.90,
-      savings: 19.95,
+      basePrice: 264.9,
+      ourPrice: 264.9,
+      discountPrice: 264.9,
+      savings: 0,
       margin: '39.4%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -467,10 +467,10 @@ const progressivasData: StaticProduct[] = [
     ],
     badge: 'NOVIDADE',
     pricing: {
-      basePrice: 149.90,
-      ourPrice: 224.85,
-      discountPrice: 204.90,
-      savings: 19.95,
+      basePrice: 204.9,
+      ourPrice: 204.9,
+      discountPrice: 204.9,
+      savings: 0,
       margin: '36.7%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -487,10 +487,10 @@ const progressivasData: StaticProduct[] = [
     ],
     badge: 'PROFISSIONAL',
     pricing: {
-      basePrice: 159.90,
-      ourPrice: 239.85,
-      discountPrice: 219.90,
-      savings: 19.95,
+      basePrice: 219.9,
+      ourPrice: 219.9,
+      discountPrice: 219.9,
+      savings: 0,
       margin: '37.5%',
       competitive: 'Baseado em progressivas premium europeias'
     }
@@ -506,10 +506,10 @@ const relaxamentosData: StaticProduct[] = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__1.WEBP'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 45.90,
-      ourPrice: 68.85,
-      discountPrice: 62.90,
-      savings: 5.95,
+      basePrice: 62.9,
+      ourPrice: 62.9,
+      discountPrice: 62.9,
+      savings: 0,
       margin: '37%',
       competitive: 'Baseado em relaxantes premium europeus'
     }
@@ -522,10 +522,10 @@ const relaxamentosData: StaticProduct[] = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__2.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 39.90,
-      ourPrice: 59.85,
-      discountPrice: 54.90,
-      savings: 4.95,
+      basePrice: 54.9,
+      ourPrice: 54.9,
+      discountPrice: 54.9,
+      savings: 0,
       margin: '37.5%',
       competitive: 'Baseado em relaxantes premium europeus'
     }
@@ -538,10 +538,10 @@ const relaxamentosData: StaticProduct[] = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__3.PNG'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 42.90,
-      ourPrice: 64.35,
-      discountPrice: 59.90,
-      savings: 4.45,
+      basePrice: 59.9,
+      ourPrice: 59.9,
+      discountPrice: 59.9,
+      savings: 0,
       margin: '39.6%',
       competitive: 'Baseado em relaxantes premium europeus'
     }
@@ -554,10 +554,10 @@ const relaxamentosData: StaticProduct[] = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__4.PNG'],
     badge: 'PROMOÇÃO',
     pricing: {
-      basePrice: 36.90,
-      ourPrice: 55.35,
-      discountPrice: 49.90,
-      savings: 5.45,
+      basePrice: 49.9,
+      ourPrice: 49.9,
+      discountPrice: 49.9,
+      savings: 0,
       margin: '35.2%',
       competitive: 'Baseado em relaxantes premium europeus'
     }
@@ -570,10 +570,10 @@ const relaxamentosData: StaticProduct[] = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__5.PNG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 52.90,
-      ourPrice: 79.35,
-      discountPrice: 72.90,
-      savings: 6.45,
+      basePrice: 72.9,
+      ourPrice: 72.9,
+      discountPrice: 72.9,
+      savings: 0,
       margin: '37.8%',
       competitive: 'Baseado em relaxantes premium europeus'
     }
@@ -586,10 +586,10 @@ const relaxamentosData: StaticProduct[] = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__6.PNG'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 58.90,
-      ourPrice: 88.35,
-      discountPrice: 79.90,
-      savings: 8.45,
+      basePrice: 79.9,
+      ourPrice: 79.9,
+      discountPrice: 79.9,
+      savings: 0,
       margin: '35.7%',
       competitive: 'Baseado em relaxantes premium europeus'
     }
@@ -602,10 +602,10 @@ const relaxamentosData: StaticProduct[] = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__7.JPG'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 62.90,
-      ourPrice: 94.35,
-      discountPrice: 84.90,
-      savings: 9.45,
+      basePrice: 84.9,
+      ourPrice: 84.9,
+      discountPrice: 84.9,
+      savings: 0,
       margin: '35%',
       competitive: 'Baseado em relaxantes premium europeus'
     }
@@ -618,10 +618,10 @@ const relaxamentosData: StaticProduct[] = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__8.PNG'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 67.90,
-      ourPrice: 101.85,
-      discountPrice: 94.90,
-      savings: 6.95,
+      basePrice: 94.9,
+      ourPrice: 94.9,
+      discountPrice: 94.9,
+      savings: 0,
       margin: '39.8%',
       competitive: 'Baseado em relaxantes premium europeus'
     }
@@ -634,10 +634,10 @@ const relaxamentosData: StaticProduct[] = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__9.JPG'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 49.90,
-      ourPrice: 74.85,
-      discountPrice: 69.90,
-      savings: 4.95,
+      basePrice: 69.9,
+      ourPrice: 69.9,
+      discountPrice: 69.9,
+      savings: 0,
       margin: '40.1%',
       competitive: 'Baseado em relaxantes premium europeus'
     }
@@ -650,10 +650,10 @@ const relaxamentosData: StaticProduct[] = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__10.JPG'],
     badge: 'PROMOÇÃO',
     pricing: {
-      basePrice: 54.90,
-      ourPrice: 82.35,
-      discountPrice: 74.90,
-      savings: 7.45,
+      basePrice: 74.9,
+      ourPrice: 74.9,
+      discountPrice: 74.9,
+      savings: 0,
       margin: '36.4%',
       competitive: 'Baseado em relaxantes premium europeus'
     }
@@ -666,10 +666,10 @@ const relaxamentosData: StaticProduct[] = [
     imagens: ['/images/products/relaxamentos_/relaxamentos__11.WEBP'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 89.90,
-      ourPrice: 134.85,
-      discountPrice: 124.90,
-      savings: 9.95,
+      basePrice: 124.9,
+      ourPrice: 124.9,
+      discountPrice: 124.9,
+      savings: 0,
       margin: '38.9%',
       competitive: 'Baseado em relaxantes premium europeus'
     }
@@ -685,10 +685,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/produtos_de_hidratacao/produtos_de_hidratacao_1.WEBP'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 10.59,
-      ourPrice: 15.89,
-      discountPrice: 14.50,
-      savings: 1.39,
+      basePrice: 14.5,
+      ourPrice: 14.5,
+      discountPrice: 14.5,
+      savings: 0,
       margin: '37%',
       competitive: 'Baseado em produtos de hidratação europeus'
     }
@@ -701,10 +701,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/produtos_de_hidratacao/produtos_de_hidratacao_2.WEBP'],
     badge: 'PROFISSIONAL',
     pricing: {
-      basePrice: 9.16,
-      ourPrice: 13.74,
-      discountPrice: 12.50,
-      savings: 1.24,
+      basePrice: 12.5,
+      ourPrice: 12.5,
+      discountPrice: 12.5,
+      savings: 0,
       margin: '36%',
       competitive: 'Baseado em produtos de hidratação europeus'
     }
@@ -717,10 +717,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/produtos_de_hidratacao/produtos_de_hidratacao_3.WEBP'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 10.89,
-      ourPrice: 16.34,
-      discountPrice: 14.90,
-      savings: 1.44,
+      basePrice: 14.9,
+      ourPrice: 14.9,
+      discountPrice: 14.9,
+      savings: 0,
       margin: '37%',
       competitive: 'Baseado em produtos de hidratação europeus'
     }
@@ -733,10 +733,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/produtos_de_hidratacao/produtos_de_hidratacao_5.WEBP'],
     badge: 'KIT COMPLETO',
     pricing: {
-      basePrice: 13.90,
-      ourPrice: 20.85,
-      discountPrice: 18.90,
-      savings: 1.95,
+      basePrice: 18.9,
+      ourPrice: 18.9,
+      discountPrice: 18.9,
+      savings: 0,
       margin: '36%',
       competitive: 'Baseado em produtos de hidratação europeus'
     }
@@ -749,10 +749,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/produtos_de_hidratacao/produtos_de_hidratacao_6.WEBP'],
     badge: 'EXCLUSIVO',
     pricing: {
-      basePrice: 11.48,
-      ourPrice: 17.22,
-      discountPrice: 15.50,
-      savings: 1.72,
+      basePrice: 15.5,
+      ourPrice: 15.5,
+      discountPrice: 15.5,
+      savings: 0,
       margin: '35%',
       competitive: 'Baseado em produtos de hidratação europeus'
     }
@@ -765,10 +765,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/produtos_de_hidratacao/produtos_de_hidratacao_9.PNG'],
     badge: 'VEGANA',
     pricing: {
-      basePrice: 8.78,
-      ourPrice: 13.17,
-      discountPrice: 11.90,
-      savings: 1.27,
+      basePrice: 11.9,
+      ourPrice: 11.9,
+      discountPrice: 11.9,
+      savings: 0,
       margin: '35%',
       competitive: 'Baseado em produtos de hidratação europeus'
     }
@@ -781,10 +781,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/produtos_de_hidratacao/produtos_de_hidratacao_10.PNG'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 7.75,
-      ourPrice: 11.63,
-      discountPrice: 10.50,
-      savings: 1.13,
+      basePrice: 10.5,
+      ourPrice: 10.5,
+      discountPrice: 10.5,
+      savings: 0,
       margin: '35%',
       competitive: 'Baseado em produtos de hidratação europeus'
     }
@@ -797,10 +797,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/produtos_de_hidratacao/produtos_de_hidratacao_11.WEBP'],
     badge: 'BEST SELLER',
     pricing: {
-      basePrice: 6.59,
-      ourPrice: 9.89,
-      discountPrice: 8.90,
-      savings: 0.99,
+      basePrice: 8.9,
+      ourPrice: 8.9,
+      discountPrice: 8.9,
+      savings: 0,
       margin: '35%',
       competitive: 'Baseado em produtos de hidratação europeus'
     }
@@ -813,10 +813,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/botox/botox_1.png'],
     badge: 'SEM FORMOL',
     pricing: {
-      basePrice: 9.66,
-      ourPrice: 14.49,
-      discountPrice: 13.10,
-      savings: 1.39,
+      basePrice: 13.1,
+      ourPrice: 13.1,
+      discountPrice: 13.1,
+      savings: 0,
       margin: '36%',
       competitive: 'Baseado em produtos de reconstrução europeus'
     }
@@ -829,10 +829,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/botox/botox_2.png'],
     badge: 'ORGÂNICO',
     pricing: {
-      basePrice: 12.60,
-      ourPrice: 18.90,
-      discountPrice: 17.10,
-      savings: 1.80,
+      basePrice: 17.1,
+      ourPrice: 17.1,
+      discountPrice: 17.1,
+      savings: 0,
       margin: '36%',
       competitive: 'Baseado em produtos de reconstrução europeus'
     }
@@ -845,10 +845,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/botox/botox_3.png'],
     badge: 'ZERO FORMOL',
     pricing: {
-      basePrice: 11.18,
-      ourPrice: 16.77,
-      discountPrice: 15.20,
-      savings: 1.57,
+      basePrice: 15.2,
+      ourPrice: 15.2,
+      discountPrice: 15.2,
+      savings: 0,
       margin: '36%',
       competitive: 'Baseado em produtos de reconstrução europeus'
     }
@@ -861,10 +861,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/botox/botox_4.png'],
     badge: 'RECONSTRUÇÃO',
     pricing: {
-      basePrice: 10.48,
-      ourPrice: 15.72,
-      discountPrice: 14.20,
-      savings: 1.52,
+      basePrice: 14.2,
+      ourPrice: 14.2,
+      discountPrice: 14.2,
+      savings: 0,
       margin: '36%',
       competitive: 'Baseado em produtos de reconstrução europeus'
     }
@@ -877,10 +877,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/botox/botox_6.png'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 16.58,
-      ourPrice: 24.87,
-      discountPrice: 22.50,
-      savings: 2.37,
+      basePrice: 22.5,
+      ourPrice: 22.5,
+      discountPrice: 22.5,
+      savings: 0,
       margin: '36%',
       competitive: 'Baseado em produtos de reconstrução europeus'
     }
@@ -893,10 +893,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/botox/botox_7.png'],
     badge: 'INSTANTÂNEO',
     pricing: {
-      basePrice: 15.32,
-      ourPrice: 22.98,
-      discountPrice: 20.80,
-      savings: 2.18,
+      basePrice: 20.8,
+      ourPrice: 20.8,
+      discountPrice: 20.8,
+      savings: 0,
       margin: '36%',
       competitive: 'Baseado em produtos de reconstrução europeus'
     }
@@ -909,10 +909,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/botox/botox_8.png'],
     badge: 'FORÇA SUPER',
     pricing: {
-      basePrice: 19.78,
-      ourPrice: 29.67,
-      discountPrice: 26.90,
-      savings: 2.77,
+      basePrice: 26.9,
+      ourPrice: 26.9,
+      discountPrice: 26.9,
+      savings: 0,
       margin: '36%',
       competitive: 'Baseado em produtos de reconstrução europeus'
     }
@@ -925,10 +925,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/botox/botox_9.png'],
     badge: 'NATURAL',
     pricing: {
-      basePrice: 13.42,
-      ourPrice: 20.13,
-      discountPrice: 18.20,
-      savings: 1.93,
+      basePrice: 18.2,
+      ourPrice: 18.2,
+      discountPrice: 18.2,
+      savings: 0,
       margin: '36%',
       competitive: 'Baseado em produtos de reconstrução europeus'
     }
@@ -941,10 +941,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/botox/botox_10.png'],
     badge: 'TRIPLA AÇÃO',
     pricing: {
-      basePrice: 11.52,
-      ourPrice: 17.28,
-      discountPrice: 15.60,
-      savings: 1.68,
+      basePrice: 15.6,
+      ourPrice: 15.6,
+      discountPrice: 15.6,
+      savings: 0,
       margin: '35%',
       competitive: 'Baseado em produtos de reconstrução europeus'
     }
@@ -957,10 +957,10 @@ const tratamentosData: StaticProduct[] = [
     imagens: ['/images/products/botox/botox_18.png'],
     badge: 'MATIZADORA',
     pricing: {
-      basePrice: 17.87,
-      ourPrice: 26.81,
-      discountPrice: 24.30,
-      savings: 2.51,
+      basePrice: 24.3,
+      ourPrice: 24.3,
+      discountPrice: 24.3,
+      savings: 0,
       margin: '36%',
       competitive: 'Baseado em produtos de reconstrução europeus'
     }
@@ -982,10 +982,10 @@ const cosmeticsData: StaticProduct[] = [
       imagens: [`/images/products/tinta_loreal/tinta_loreal_${id}.PNG`],
       badge: id <= 10 ? 'BESTSELLER' : 'PREMIUM',
       pricing: {
-        basePrice: 12.80,
-        ourPrice: 19.20,
-        discountPrice: 17.28,
-        savings: 1.92,
+      basePrice: 17.28,
+      ourPrice: 17.28,
+      discountPrice: 17.28,
+      savings: 0,
         margin: '38%',
         competitive: 'Baseado em tintas capilares premium europeias'
       }
@@ -1004,10 +1004,10 @@ const cosmeticsData: StaticProduct[] = [
       imagens: [`/images/products/tinta_biocolor/tinta_biocolor_${id}.PNG`],
       badge: 'NATURAL',
       pricing: {
-        basePrice: 6.50,
-        ourPrice: 9.75,
-        discountPrice: 8.78,
-        savings: 0.97,
+      basePrice: 8.78,
+      ourPrice: 8.78,
+      discountPrice: 8.78,
+      savings: 0,
         margin: '28%',
         competitive: 'Baseado em tintas capilares premium europeias'
       }
@@ -1031,10 +1031,10 @@ const cosmeticsData: StaticProduct[] = [
         imagens: [`/images/products/tinta_beauty_color/tinta_beauty_color_${id}.PNG`],
         badge: id % 3 === 0 ? 'PREMIUM' : id % 5 === 0 ? 'BESTSELLER' : 'NOVO',
         pricing: {
-          basePrice: 8.90,
-          ourPrice: 13.35,
-          discountPrice: 12.02,
-          savings: 1.33,
+      basePrice: 12.02,
+      ourPrice: 12.02,
+      discountPrice: 12.02,
+      savings: 0,
           margin: '32%',
           competitive: 'Baseado em tintas capilares premium europeias'
         }
@@ -1055,10 +1055,10 @@ const cosmeticsData: StaticProduct[] = [
       imagens: [`/images/products/tinta_amend/tinta_amend_${id}.PNG`],
       badge: 'PROFISSIONAL',
       pricing: {
-        basePrice: 15.20,
-        ourPrice: 22.80,
-        discountPrice: 20.52,
-        savings: 2.28,
+      basePrice: 20.52,
+      ourPrice: 20.52,
+      discountPrice: 20.52,
+      savings: 0,
         margin: '35%',
         competitive: 'Baseado em tintas capilares premium europeias'
       }
@@ -1077,10 +1077,10 @@ const cosmeticsData: StaticProduct[] = [
       imagens: [`/images/products/tinta_nutrisse/tinta_nutrisse_${id}.PNG`],
       badge: 'NUTRITIVO',
       pricing: {
-        basePrice: 10.50,
-        ourPrice: 15.75,
-        discountPrice: 14.18,
-        savings: 1.57,
+      basePrice: 14.18,
+      ourPrice: 14.18,
+      discountPrice: 14.18,
+      savings: 0,
         margin: '30%',
         competitive: 'Baseado em tintas capilares premium europeias'
       }
@@ -1099,10 +1099,10 @@ const cosmeticsData: StaticProduct[] = [
       imagens: [`/images/products/tinta_alta_moda_/tinta_alta_moda__${id}.PNG`],
       badge: 'IMPORTADA',
       pricing: {
-        basePrice: 18.90,
-        ourPrice: 28.35,
-        discountPrice: 25.52,
-        savings: 2.83,
+      basePrice: 25.52,
+      ourPrice: 25.52,
+      discountPrice: 25.52,
+      savings: 0,
         margin: '40%',
         competitive: 'Baseado em tintas capilares premium europeias'
       }
@@ -1156,10 +1156,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/products/g-hair/g-hair-1.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 60.00,
-      ourPrice: 85.00,
-      discountPrice: 85.00,
-      savings: 0.00,
+      basePrice: 85,
+      ourPrice: 85,
+      discountPrice: 85,
+      savings: 0,
       margin: '41.7%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1172,10 +1172,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/products/g-hair/g-hair-2.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 65.00,
-      ourPrice: 90.00,
-      discountPrice: 90.00,
-      savings: 0.00,
+      basePrice: 90,
+      ourPrice: 90,
+      discountPrice: 90,
+      savings: 0,
       margin: '38.4%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1188,10 +1188,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/products/g-hair/g-hair-3.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 55.00,
-      ourPrice: 75.00,
-      discountPrice: 75.00,
-      savings: 0.00,
+      basePrice: 75,
+      ourPrice: 75,
+      discountPrice: 75,
+      savings: 0,
       margin: '36.7%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1204,10 +1204,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/products/g-hair/g-hair-4.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 70.00,
-      ourPrice: 95.00,
-      discountPrice: 95.00,
-      savings: 0.00,
+      basePrice: 95,
+      ourPrice: 95,
+      discountPrice: 95,
+      savings: 0,
       margin: '36.8%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1220,10 +1220,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/products/g-hair/g-hair-5.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 60.00,
-      ourPrice: 80.00,
-      discountPrice: 80.00,
-      savings: 0.00,
+      basePrice: 80,
+      ourPrice: 80,
+      discountPrice: 80,
+      savings: 0,
       margin: '33.3%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1236,10 +1236,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/products/g-hair/g-hair-6.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 65.00,
-      ourPrice: 88.00,
-      discountPrice: 88.00,
-      savings: 0.00,
+      basePrice: 88,
+      ourPrice: 88,
+      discountPrice: 88,
+      savings: 0,
       margin: '35.4%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1252,10 +1252,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/products/g-hair/inoar-ghair-alemanha-3.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 55.00,
-      ourPrice: 72.00,
-      discountPrice: 72.00,
-      savings: 0.00,
+      basePrice: 72,
+      ourPrice: 72,
+      discountPrice: 72,
+      savings: 0,
       margin: '30.9%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1268,10 +1268,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/products/g-hair/g-hair-1.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 60.00,
-      ourPrice: 82.00,
-      discountPrice: 82.00,
-      savings: 0.00,
+      basePrice: 82,
+      ourPrice: 82,
+      discountPrice: 82,
+      savings: 0,
       margin: '36.8%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1284,10 +1284,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/products/g-hair/g-hair-2.png'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 68.00,
-      ourPrice: 92.00,
-      discountPrice: 92.00,
-      savings: 0.00,
+      basePrice: 92,
+      ourPrice: 92,
+      discountPrice: 92,
+      savings: 0,
       margin: '35.2%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1300,10 +1300,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/products/g-hair/g-hair-3.png'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 58.00,
-      ourPrice: 78.00,
-      discountPrice: 78.00,
-      savings: 0.00,
+      basePrice: 78,
+      ourPrice: 78,
+      discountPrice: 78,
+      savings: 0,
       margin: '34.4%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1316,10 +1316,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/mega-hair/mega-hair-011.jpg'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 73.00,
-      ourPrice: 98.00,
-      discountPrice: 98.00,
-      savings: 0.00,
+      basePrice: 98,
+      ourPrice: 98,
+      discountPrice: 98,
+      savings: 0,
       margin: '34.2%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1332,10 +1332,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/mega-hair/mega-hair-012.jpg'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 80.00,
-      ourPrice: 105.00,
-      discountPrice: 105.00,
-      savings: 0.00,
+      basePrice: 105,
+      ourPrice: 105,
+      discountPrice: 105,
+      savings: 0,
       margin: '31.2%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1348,10 +1348,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/mega-hair/mega-hair-013.jpg'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 62.00,
-      ourPrice: 83.00,
-      discountPrice: 83.00,
-      savings: 0.00,
+      basePrice: 83,
+      ourPrice: 83,
+      discountPrice: 83,
+      savings: 0,
       margin: '33.8%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1364,10 +1364,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/mega-hair/mega-hair-014.jpg'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 65.00,
-      ourPrice: 87.00,
-      discountPrice: 87.00,
-      savings: 0.00,
+      basePrice: 87,
+      ourPrice: 87,
+      discountPrice: 87,
+      savings: 0,
       margin: '33.8%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1380,10 +1380,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/mega-hair/mega-hair-015.jpg'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 72.00,
-      ourPrice: 95.00,
-      discountPrice: 95.00,
-      savings: 0.00,
+      basePrice: 95,
+      ourPrice: 95,
+      discountPrice: 95,
+      savings: 0,
       margin: '32.0%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1396,10 +1396,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/mega-hair/mega-hair-016.jpg'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 60.00,
-      ourPrice: 81.00,
-      discountPrice: 81.00,
-      savings: 0.00,
+      basePrice: 81,
+      ourPrice: 81,
+      discountPrice: 81,
+      savings: 0,
       margin: '35.0%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1412,10 +1412,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/mega-hair/mega-hair-017.jpg'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 56.00,
-      ourPrice: 74.00,
-      discountPrice: 74.00,
-      savings: 0.00,
+      basePrice: 74,
+      ourPrice: 74,
+      discountPrice: 74,
+      savings: 0,
       margin: '32.4%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1428,10 +1428,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/mega-hair/mega-hair-018.jpg'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 67.00,
-      ourPrice: 89.00,
-      discountPrice: 89.00,
-      savings: 0.00,
+      basePrice: 89,
+      ourPrice: 89,
+      discountPrice: 89,
+      savings: 0,
       margin: '33.0%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1444,10 +1444,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/mega-hair/mega-hair-019.jpg'],
     badge: 'NOVO',
     pricing: {
-      basePrice: 62.00,
-      ourPrice: 84.00,
-      discountPrice: 84.00,
-      savings: 0.00,
+      basePrice: 84,
+      ourPrice: 84,
+      discountPrice: 84,
+      savings: 0,
       margin: '35.4%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1460,10 +1460,10 @@ const megaHairData: StaticProduct[] = [
     imagens: ['/images/mega-hair/mega-hair-020.jpg'],
     badge: 'PREMIUM',
     pricing: {
-      basePrice: 75.00,
-      ourPrice: 97.00,
-      discountPrice: 97.00,
-      savings: 0.00,
+      basePrice: 97,
+      ourPrice: 97,
+      discountPrice: 97,
+      savings: 0,
       margin: '29.4%',
       competitive: 'Baseado em mega hair premium do mercado europeu'
     }
@@ -1479,7 +1479,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida profissional Mari Maria no tom Amêndoa. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-amndoa.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 32.00, ourPrice: 35.20, discountPrice: 28.16, savings: 7.04, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 28.16,
+      ourPrice: 28.16,
+      discountPrice: 28.16,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'mari-maria-base-baunilha',
@@ -1488,7 +1492,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida profissional Mari Maria no tom Baunilha. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-baunilha.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 32.50, ourPrice: 35.75, discountPrice: 28.60, savings: 7.15, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 28.6,
+      ourPrice: 28.6,
+      discountPrice: 28.6,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'mari-maria-base-bege-claro',
@@ -1497,7 +1505,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida profissional Mari Maria no tom Bege Claro. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-bege-claro.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 33.50, ourPrice: 36.85, discountPrice: 29.48, savings: 7.37, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 29.48,
+      ourPrice: 29.48,
+      discountPrice: 29.48,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'mari-maria-base-bege-escuro',
@@ -1506,7 +1518,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida profissional Mari Maria no tom Bege Escuro. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-bege-escuro.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 34.00, ourPrice: 37.40, discountPrice: 29.92, savings: 7.48, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 29.92,
+      ourPrice: 29.92,
+      discountPrice: 29.92,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'mari-maria-base-bege-medio',
@@ -1515,7 +1531,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida profissional Mari Maria no tom Bege Médio. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-bege-mdio.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 34.50, ourPrice: 37.95, discountPrice: 30.36, savings: 7.59, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 30.36,
+      ourPrice: 30.36,
+      discountPrice: 30.36,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'mari-maria-base-cacau',
@@ -1524,7 +1544,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida profissional Mari Maria no tom Cacau. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-cacau.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 35.00, ourPrice: 38.50, discountPrice: 30.80, savings: 7.70, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 30.8,
+      ourPrice: 30.8,
+      discountPrice: 30.8,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'mari-maria-base-canela',
@@ -1533,7 +1557,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida profissional Mari Maria no tom Canela. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-canela.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 35.50, ourPrice: 39.05, discountPrice: 31.24, savings: 7.81, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 31.24,
+      ourPrice: 31.24,
+      discountPrice: 31.24,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'mari-maria-base-caramelo',
@@ -1542,7 +1570,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida profissional Mari Maria no tom Caramelo. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-caramelo.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 36.00, ourPrice: 39.60, discountPrice: 31.68, savings: 7.92, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 31.68,
+      ourPrice: 31.68,
+      discountPrice: 31.68,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'mari-maria-base-chocolate',
@@ -1551,7 +1583,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida profissional Mari Maria no tom Chocolate. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-chocolate.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 36.50, ourPrice: 40.15, discountPrice: 32.12, savings: 8.03, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 32.12,
+      ourPrice: 32.12,
+      discountPrice: 32.12,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'mari-maria-base-nude',
@@ -1560,7 +1596,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida profissional Mari Maria no tom Nude. Acabamento natural e cobertura modulável para todos os tipos de pele.',
     imagens: ['/images/products/mari-maria-bases/mari-maria-base-nude.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 37.00, ourPrice: 40.70, discountPrice: 32.56, savings: 8.14, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 32.56,
+      ourPrice: 32.56,
+      discountPrice: 32.56,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   // Bruna Tavares Products
   {
@@ -1570,7 +1610,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida BT Skin com fórmula avançada, cobertura natural e alta pigmentação. Desenvolvida com ácido hialurônico para hidratação prolongada.',
     imagens: ['/images/products/bruna-tavares-bt-skin/BT Skin D10 Base Bruna Tavares.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 25.00, ourPrice: 27.50, discountPrice: 22.00, savings: 5.50, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 22,
+      ourPrice: 22,
+      discountPrice: 22,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'bruna-tavares-bt-skin-d20',
@@ -1579,7 +1623,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida BT Skin especialmente desenvolvida para peles com subtom quente. Fórmula com ácido hialurônico e proteção contra luz azul.',
     imagens: ['/images/products/bruna-tavares-bt-skin/BT Skin D20 Base Bruna Tavares.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 26.00, ourPrice: 28.60, discountPrice: 22.88, savings: 5.72, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 22.88,
+      ourPrice: 22.88,
+      discountPrice: 22.88,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'bruna-tavares-bt-skin-d30',
@@ -1588,7 +1636,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida com cobertura natural, alta pigmentação e acabamento aveludado. Ideal para peles escuras com subtom quente.',
     imagens: ['/images/products/bruna-tavares-bt-skin/BT Skin D30 Base Bruna Tavares.png'],
     badge: 'DESTAQUE',
-    pricing: { basePrice: 27.50, ourPrice: 30.25, discountPrice: 24.20, savings: 6.05, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 24.2,
+      ourPrice: 24.2,
+      discountPrice: 24.2,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'bruna-tavares-bt-skin-f10',
@@ -1597,7 +1649,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida BT Skin especialmente desenvolvida para peles claras com subtom frio. Fórmula com ácido hialurônico.',
     imagens: ['/images/products/bruna-tavares-bt-skin/BT Skin F10 Base Bruna Tavares.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 25.50, ourPrice: 28.05, discountPrice: 22.44, savings: 5.61, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 22.44,
+      ourPrice: 22.44,
+      discountPrice: 22.44,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'bruna-tavares-bt-skin-l10',
@@ -1606,7 +1662,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida BT Skin para peles muito claras. Cobertura natural com acabamento sedoso e longa duração.',
     imagens: ['/images/products/bruna-tavares-bt-skin/BT Skin L10 Base Bruna Tavares.png'],
     badge: 'BESTSELLER',
-    pricing: { basePrice: 24.50, ourPrice: 26.95, discountPrice: 21.56, savings: 5.39, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 21.56,
+      ourPrice: 21.56,
+      discountPrice: 21.56,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
   {
     id: 'bruna-tavares-bt-skin-m10',
@@ -1615,7 +1675,11 @@ const maquiagensData: StaticProduct[] = [
     descricao: 'Base líquida BT Skin para peles médias. Fórmula avançada com proteção e hidratação prolongada.',
     imagens: ['/images/products/bruna-tavares-bt-skin/BT Skin M10 Base Bruna Tavares.png'],
     badge: 'PREMIUM',
-    pricing: { basePrice: 26.50, ourPrice: 29.15, discountPrice: 23.32, savings: 5.83, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
+    pricing: {
+      basePrice: 23.32,
+      ourPrice: 23.32,
+      discountPrice: 23.32,
+      savings: 0, margin: '10%', competitive: 'Baseado em bases premium do mercado europeu' }
   },
 ];
 

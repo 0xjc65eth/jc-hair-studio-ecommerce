@@ -219,7 +219,7 @@ export default function MegaHairBrasileiroPage() {
               <div className="relative">
                 <div className="grid grid-cols-2 gap-4">
                   <ProductImage
-                    src="/images/mega-hair/mega-hair-001.jpg"
+                    src="/images/mega-hair/cacheado/55cm/borgonha-cacheado-3c.jpg"
                     productName="Mega Hair Cacheado Brasileiro"
                     category="Extensão Capilar"
                     brand="JC Hair Studio's 62"
@@ -227,7 +227,7 @@ export default function MegaHairBrasileiroPage() {
                     fill
                   />
                   <ProductImage
-                    src="/images/mega-hair/mega-hair-002.jpg"
+                    src="/images/mega-hair/liso/50cm/preto-natural-liso-1a.jpg"
                     productName="Mega Hair Liso Brasileiro"
                     category="Extensão Capilar"
                     brand="JC Hair Studio's 62"

@@ -39,14 +39,25 @@ const nextConfig = {
     ],
   },
 
-  // Performance optimizations
+  // Performance optimizations - CORE WEB VITALS BOOST
   experimental: {
     serverActions: {
       allowedOrigins: ['localhost:3001', 'jc-hair-studio.vercel.app'],
     },
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@heroicons/react'],
+    optimizePackageImports: ['lucide-react', '@heroicons/react', 'framer-motion', 'react-toastify'],
     cpus: 1,
+    // Optimize server components
+    serverComponentsExternalPackages: ['@prisma/client', 'mongoose', 'bcryptjs'],
+    // Modern optimizations
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
 
   // Output configuration for Vercel
@@ -161,7 +172,7 @@ const nextConfig = {
     CUSTOM_BUILD_ID: process.env.VERCEL_GIT_COMMIT_SHA || 'local-build',
   },
 
-  // Headers for security and performance
+  // Headers for security and performance - CORE WEB VITALS OPTIMIZATION
   async headers() {
     return [
       {
@@ -178,6 +189,66 @@ const nextConfig = {
           {
             key: 'Server',
             value: 'JC Hair Studio'
+          },
+          // Cache Control for better performance
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          },
+          // Preload critical resources
+          {
+            key: 'Link',
+            value: '<https://fonts.googleapis.com>; rel=preconnect; crossorigin, <https://fonts.gstatic.com>; rel=preconnect; crossorigin'
+          }
+        ]
+      },
+      // Static assets cache - 1 year
+      {
+        source: '/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      // Images cache - 1 year
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      // Public assets cache - 1 year
+      {
+        source: '/:path*.{jpg,jpeg,png,gif,webp,avif,svg,ico}',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      // Font files cache - 1 year
+      {
+        source: '/:path*.{woff,woff2,ttf,otf,eot}',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      // CSS and JS cache - shorter for potential updates
+      {
+        source: '/:path*.{css,js}',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=604800, stale-while-revalidate=86400'
           }
         ]
       }

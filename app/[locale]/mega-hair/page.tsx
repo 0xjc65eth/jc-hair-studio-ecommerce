@@ -1,905 +1,208 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
-import { getLegacyCompatibleProducts } from '../../../lib/data/megaHairProducts';
-import { useCart } from '../../../lib/stores/cartStore';
-import { CategorySchema } from '@/components/seo/SchemaMarkup';
-import OptimizedMegaHairImage, { useMegaHairImagePreload } from '@/components/mega-hair/OptimizedMegaHairImage';
-import HairTypeSection from '@/components/mega-hair/HairTypeSection';
-import CollectionSection from '@/components/mega-hair/CollectionSection';
+import React, { useState } from 'react';
+import { Button } from '../../../components/ui/Button';
+import ErrorBoundary from '../../../components/ui/ErrorBoundary';
+import ProductCard from '../../../components/products/SimpleProductCard';
+import { ShoppingBag, Search, Filter } from 'lucide-react';
+import { megaHairProductsCorrected } from '../../../lib/data/megaHairProducts';
+import UnifiedSchema, { BreadcrumbSchema, FAQSchema } from '../../../components/seo/UnifiedSchema';
 
-// Enhanced product data structure (mantém compatibilidade)
-interface MegaHairProduct {
-  id: number;
-  name: string;
-  type: 'liso' | 'ondulado' | 'cacheado' | 'crespo';
-  color: 'loiro' | 'castanho' | 'preto' | 'ruivo' | 'ombre';
-  length: number;
-  price: number;
-  image: string;
-  badge?: string;
-  rating: number;
-  reviews: number;
-  inStock: boolean;
-  origin: string;
-  weight: number;
-}
+export default function MegaHairPage() {
+  const [filtroComprimento, setFiltroComprimento] = useState('todos');
+  const [filtroTextura, setFiltroTextura] = useState('todos');
+  const [termoBusca, setTermoBusca] = useState('');
 
-// Mapeamentos para compatibilidade
-const hairTypes: Array<'liso' | 'ondulado' | 'cacheado' | 'crespo'> = ['liso', 'ondulado', 'cacheado', 'crespo'];
-const hairColors: Array<'loiro' | 'castanho' | 'preto' | 'ruivo' | 'ombre'> = ['loiro', 'castanho', 'preto', 'ruivo', 'ombre'];
-const lengths = [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90];
+  const todosProdutos = megaHairProductsCorrected;
 
-const typeNames: Record<string, string> = {
-  'liso': 'Liso Natural',
-  'ondulado': 'Ondulado Suave',
-  'cacheado': 'Cacheado Definido',
-  'crespo': 'Crespo Natural'
-};
-
-// Usar sistema unificado como fonte de dados
-function generateProducts(): MegaHairProduct[] {
-  return getLegacyCompatibleProducts();
-}
-
-// Filter interfaces
-interface Filters {
-  type: string;
-  color: string;
-  length: string;
-  priceRange: string;
-  collection: string;
-  badge: string;
-  inStock: boolean;
-}
-
-export default function MegaHairCatalog() {
-  const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
-  const [selectedProduct, setSelectedProduct] = useState<MegaHairProduct | null>(null);
-  const [showFilters, setShowFilters] = useState(true);
-  const [viewMode, setViewMode] = useState<'grid' | 'categories' | 'collections'>('categories');
-  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
-    liso: true,
-    ondulado: false,
-    cacheado: false,
-    crespo: false
-  });
-  const [expandedCollections, setExpandedCollections] = useState<Record<string, boolean>>({
-    CLASSIC: true,
-    PREMIUM: false,
-    GOLD: false,
-    RAPUNZEL: false,
-    PROFESSIONAL: false
-  });
-  const { addItem: addToCartStore, getItemCount, openCart, items } = useCart();
-  const [isClient, setIsClient] = useState(false);
-
-  // Filters state
-  const [filters, setFilters] = useState<Filters>({
-    type: 'todos',
-    color: 'todos',
-    length: 'todos',
-    priceRange: 'todos',
-    collection: 'todos',
-    badge: 'todos',
-    inStock: false
+  const produtosFiltrados = todosProdutos.filter(produto => {
+    const matchComprimento = filtroComprimento === 'todos' || produto.length.toString() === filtroComprimento;
+    const matchTextura = filtroTextura === 'todos' || produto.type === filtroTextura;
+    const matchBusca = produto.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||
+                       produto.descricao.toLowerCase().includes(termoBusca.toLowerCase()) ||
+                       produto.color.toLowerCase().includes(termoBusca.toLowerCase());
+    return matchComprimento && matchTextura && matchBusca;
   });
 
-  // Generate products once usando sistema unificado
-  const allProducts = useMemo(() => generateProducts(), []);
+  // Breadcrumbs for SEO
+  const breadcrumbs = [
+    { name: 'Início', url: '/' },
+    { name: 'Mega Hair Brasileiro', url: '/mega-hair' }
+  ];
 
-  // Preload das primeiras imagens críticas
-  const criticalImages = useMemo(() =>
-    allProducts.slice(0, 6).map(p => p.image).filter(Boolean),
-    [allProducts]
-  );
-  useMegaHairImagePreload(criticalImages, 6);
-
-  // Filter products based on current filters
-  const filteredProducts = useMemo(() => {
-    let filtered = [...allProducts];
-
-    if (filters.type !== 'todos') {
-      filtered = filtered.filter(p => p.type === filters.type);
+  // FAQs for rich snippets
+  const faqs = [
+    {
+      question: 'O mega hair é 100% cabelo humano brasileiro?',
+      answer: 'Sim! Todos os nossos mega hair são 100% cabelo humano brasileiro natural, com cutículas alinhadas. Oferecemos comprimentos de 40cm a 90cm em texturas liso, ondulado e cacheado.'
+    },
+    {
+      question: 'Qual comprimento de mega hair devo escolher?',
+      answer: 'O comprimento ideal depende do seu objetivo. 50cm é nosso best-seller para transformação natural. 60-70cm para visual dramático. 40cm para volume moderado. Todos os produtos são 100g.'
+    },
+    {
+      question: 'Quanto tempo dura o mega hair brasileiro?',
+      answer: 'Com cuidados adequados, nosso mega hair brasileiro pode durar de 6 meses a 2 anos. Recomendamos produtos sem sulfato e manutenção regular para máxima durabilidade.'
+    },
+    {
+      question: 'Vocês entregam mega hair em toda a Europa?',
+      answer: 'Sim! Entregamos em Portugal, Bélgica, Espanha, França, Itália, Alemanha, Holanda e outros países europeus. Frete grátis acima de €150.'
+    },
+    {
+      question: 'Posso tingir ou alisar o mega hair?',
+      answer: 'Sim! Por ser 100% cabelo humano brasileiro, você pode tingir, alisar, cachear e usar babyliss. Recomendamos sempre usar produtos profissionais e proteção térmica.'
     }
-    if (filters.color !== 'todos') {
-      filtered = filtered.filter(p => p.color === filters.color);
-    }
-    if (filters.length !== 'todos') {
-      filtered = filtered.filter(p => p.length === parseInt(filters.length));
-    }
-    if (filters.priceRange !== 'todos') {
-      const [min, max] = filters.priceRange.split('-').map(Number);
-      filtered = filtered.filter(p => {
-        if (max) {
-          return p.price >= min && p.price <= max;
-        } else {
-          return p.price >= min;
-        }
-      });
-    }
-    if (filters.collection !== 'todos') {
-      filtered = filtered.filter(p => {
-        // Determinar coleção baseada no preço se não estiver definida
-        let collection = p.collection || 'CLASSIC';
-        if (!p.collection) {
-          if (p.price < 80) collection = 'CLASSIC';
-          else if (p.price < 130) collection = 'PREMIUM';
-          else if (p.price < 180) collection = 'GOLD';
-          else if (p.price < 220) collection = 'RAPUNZEL';
-          else collection = 'PROFESSIONAL';
-        }
-        return collection === filters.collection;
-      });
-    }
-    if (filters.badge !== 'todos') {
-      filtered = filtered.filter(p => p.badge === filters.badge);
-    }
-    if (filters.inStock) {
-      filtered = filtered.filter(p => p.inStock);
-    }
-
-    return filtered;
-  }, [allProducts, filters]);
-
-  // Agrupar produtos por tipo de cabelo
-  const productsByType = useMemo(() => {
-    const grouped = {
-      liso: [] as MegaHairProduct[],
-      ondulado: [] as MegaHairProduct[],
-      cacheado: [] as MegaHairProduct[],
-      crespo: [] as MegaHairProduct[]
-    };
-
-    filteredProducts.forEach(product => {
-      if (product.type && grouped[product.type]) {
-        grouped[product.type].push(product);
-      }
-    });
-
-    return grouped;
-  }, [filteredProducts]);
-
-  // Agrupar produtos por coleção
-  const productsByCollection = useMemo(() => {
-    const grouped = {
-      CLASSIC: [] as MegaHairProduct[],
-      PREMIUM: [] as MegaHairProduct[],
-      GOLD: [] as MegaHairProduct[],
-      RAPUNZEL: [] as MegaHairProduct[],
-      PROFESSIONAL: [] as MegaHairProduct[]
-    };
-
-    filteredProducts.forEach(product => {
-      // Determinar coleção baseada no preço se não estiver definida
-      let collection = product.collection || 'CLASSIC';
-
-      if (!product.collection) {
-        if (product.price < 80) collection = 'CLASSIC';
-        else if (product.price < 130) collection = 'PREMIUM';
-        else if (product.price < 180) collection = 'GOLD';
-        else if (product.price < 220) collection = 'RAPUNZEL';
-        else collection = 'PROFESSIONAL';
-      }
-
-      if (grouped[collection as keyof typeof grouped]) {
-        grouped[collection as keyof typeof grouped].push(product);
-      }
-    });
-
-    return grouped;
-  }, [filteredProducts]);
-
-  // Controlar expansão de seções
-  const toggleSection = (type: string) => {
-    setExpandedSections(prev => ({
-      ...prev,
-      [type]: !prev[type]
-    }));
-  };
-
-  const expandAllSections = () => {
-    setExpandedSections({
-      liso: true,
-      ondulado: true,
-      cacheado: true,
-      crespo: true
-    });
-  };
-
-  const collapseAllSections = () => {
-    setExpandedSections({
-      liso: false,
-      ondulado: false,
-      cacheado: false,
-      crespo: false
-    });
-  };
-
-  // Controlar expansão de coleções
-  const toggleCollection = (collection: string) => {
-    setExpandedCollections(prev => ({
-      ...prev,
-      [collection]: !prev[collection]
-    }));
-  };
-
-  const expandAllCollections = () => {
-    setExpandedCollections({
-      CLASSIC: true,
-      PREMIUM: true,
-      GOLD: true,
-      RAPUNZEL: true,
-      PROFESSIONAL: true
-    });
-  };
-
-  const collapseAllCollections = () => {
-    setExpandedCollections({
-      CLASSIC: false,
-      PREMIUM: false,
-      GOLD: false,
-      RAPUNZEL: false,
-      PROFESSIONAL: false
-    });
-  };
-
-  // Client-side hydration
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  // Cart is now managed by global store
-  useEffect(() => {
-    // Global cart store handles persistence automatically
-  }, [isClient]);
-
-  // Save cart to localStorage
-  // Remove old cart localStorage logic
-  useEffect(() => {
-    // Cart is now managed by global store
-  }, [isClient]);
-
-  // Simulate loading - ensure loading state is properly handled
-  useEffect(() => {
-    // Set loading to false after component mounts and client-side hydration is complete
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-
-    // Fallback: Force loading to false after maximum wait time to prevent stuck loading
-    const fallbackTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
-
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(fallbackTimer);
-    };
-  }, []);
-
-  // Additional safety check - ensure loading state resets if component re-mounts
-  useEffect(() => {
-    if (isClient && isLoading) {
-      const emergencyTimer = setTimeout(() => {
-        setIsLoading(false);
-      }, 500);
-      return () => clearTimeout(emergencyTimer);
-    }
-  }, [isClient, isLoading]);
-
-  const handleFilterChange = (filterType: keyof Filters, value: string | boolean) => {
-    setFilters(prev => ({
-      ...prev,
-      [filterType]: value
-    }));
-  };
-
-  const clearAllFilters = () => {
-    setFilters({
-      type: 'todos',
-      color: 'todos',
-      length: 'todos',
-      priceRange: 'todos',
-      collection: 'todos',
-      badge: 'todos',
-      inStock: false
-    });
-  };
-
-  const addToCart = (product: MegaHairProduct) => {
-    addToCartStore({
-      productId: product.id.toString(),
-      quantity: 1,
-      product: {
-        id: product.id.toString(),
-        name: product.name,
-        slug: `mega-hair-${product.id}`,
-        price: product.price,
-        images: [{ url: product.image, alt: product.name, isMain: true }],
-        status: 'ACTIVE' as any,
-        quantity: product.inStock ? 999 : 0,
-      },
-    });
-    openCart();
-  };
-
-  const getCartItemCount = () => {
-    return getItemCount();
-  };
-
-  const isInCart = (productId: number) => {
-    return items.some(item => item.productId === productId.toString());
-  };
-
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('de-DE', {
-      style: 'currency',
-      currency: 'EUR',
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
-    }).format(price);
-  };
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-rose-200 border-t-rose-600 rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600 font-light">Carregando catálogo...</p>
-        </div>
-      </div>
-    );
-  }
+  ];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Minimal Header */}
-      <section className="bg-white border-b border-gray-200 py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-3xl font-normal text-gray-900 mb-3">
-              Mega Hair Professional
-            </h1>
-            <p className="text-gray-600 mb-6">
-              {allProducts.length} produtos • Extensões de cabelo premium
-            </p>
-            <div className="flex items-center justify-center gap-4 text-sm text-gray-500">
-              <span>{filteredProducts.filter(p => p.inStock).length} em estoque</span>
-              <span>•</span>
-              <span>{getCartItemCount()} no carrinho</span>
+    <ErrorBoundary>
+      {/* Schema.org Structured Data */}
+      <BreadcrumbSchema breadcrumbs={breadcrumbs} />
+      <FAQSchema faqs={faqs} />
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 text-white py-20 mt-16 lg:mt-20">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl lg:text-6xl font-playfair font-bold mb-6">
+                Mega Hair Brasileiro Premium
+              </h1>
+              <p className="text-xl lg:text-2xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                Extensões 100% cabelo humano brasileiro natural - De 40cm a 90cm
+              </p>
+              <div className="flex items-center justify-center gap-4 text-sm">
+                <span className="flex items-center gap-2">
+                  <ShoppingBag className="w-4 h-4" />
+                  {todosProdutos.length} produtos disponíveis
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Enhanced Filter Bar */}
-      <section className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between py-4">
-            <div className="flex items-center gap-4">
-              <button
-                onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded text-sm hover:border-gray-400 transition-colors"
-              >
-                Filtros {showFilters ? '−' : '+'}
-              </button>
-
-              {/* Seletor de modo de visualização */}
-              <div className="flex items-center border border-gray-300 rounded overflow-hidden">
-                <button
-                  onClick={() => setViewMode('categories')}
-                  className={`px-3 py-2 text-sm transition-colors ${
-                    viewMode === 'categories'
-                      ? 'bg-rose-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50'
-                  }`}
-                >
-                  Por Tipo
-                </button>
-                <button
-                  onClick={() => setViewMode('collections')}
-                  className={`px-3 py-2 text-sm transition-colors ${
-                    viewMode === 'collections'
-                      ? 'bg-rose-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50'
-                  }`}
-                >
-                  Por Coleção
-                </button>
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`px-3 py-2 text-sm transition-colors ${
-                    viewMode === 'grid'
-                      ? 'bg-rose-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-50'
-                  }`}
-                >
-                  Grade
-                </button>
-              </div>
-
-              {/* Controles de expansão */}
-              {viewMode === 'categories' && (
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={expandAllSections}
-                    className="text-xs text-gray-600 hover:text-gray-900 underline"
-                  >
-                    Expandir Tudo
-                  </button>
-                  <span className="text-gray-300">|</span>
-                  <button
-                    onClick={collapseAllSections}
-                    className="text-xs text-gray-600 hover:text-gray-900 underline"
-                  >
-                    Recolher Tudo
-                  </button>
-                </div>
-              )}
-
-              {viewMode === 'collections' && (
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={expandAllCollections}
-                    className="text-xs text-gray-600 hover:text-gray-900 underline"
-                  >
-                    Expandir Tudo
-                  </button>
-                  <span className="text-gray-300">|</span>
-                  <button
-                    onClick={collapseAllCollections}
-                    className="text-xs text-gray-600 hover:text-gray-900 underline"
-                  >
-                    Recolher Tudo
-                  </button>
-                </div>
-              )}
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="text-sm text-gray-600">
-                {filteredProducts.length} produtos
-              </div>
-
-              {(filters.type !== 'todos' || filters.color !== 'todos' || filters.length !== 'todos' || filters.priceRange !== 'todos' || filters.inStock) && (
-                <button
-                  onClick={clearAllFilters}
-                  className="text-sm text-gray-600 hover:text-gray-900 underline"
-                >
-                  Limpar Filtros
-                </button>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="flex gap-8">
-          {/* Filter Sidebar */}
-          <AnimatePresence>
-            {showFilters && (
-              <motion.div
-                initial={{ x: -300, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: -300, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="w-80 shrink-0"
-              >
-                <div className="bg-white rounded-xl shadow-lg p-6 sticky top-32">
-                  <h3 className="text-xl font-semibold mb-6 text-gray-900">Filtrar Produtos</h3>
-
-                  {/* Type Filter */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-3">Textura</h4>
-                    <div className="space-y-2">
-                      {['todos', ...hairTypes].map(type => (
-                        <button
-                          key={type}
-                          onClick={() => handleFilterChange('type', type)}
-                          className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
-                            filters.type === type
-                              ? 'bg-rose-600 text-white shadow-lg transform scale-105'
-                              : 'bg-gray-50 hover:bg-gray-100 text-gray-700'
-                          }`}
-                        >
-                          {type === 'todos' ? 'Todos os Tipos' : typeNames[type] || type}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Color Filter */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-3">Cor</h4>
-                    <div className="space-y-2">
-                      {['todos', ...hairColors].map(color => (
-                        <button
-                          key={color}
-                          onClick={() => handleFilterChange('color', color)}
-                          className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
-                            filters.color === color
-                              ? 'bg-rose-600 text-white shadow-lg transform scale-105'
-                              : 'bg-gray-50 hover:bg-gray-100 text-gray-700'
-                          }`}
-                        >
-                          {color === 'todos' ? 'Todas as Cores' : color.charAt(0).toUpperCase() + color.slice(1)}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Length Filter */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-3">Comprimento</h4>
-                    <div className="grid grid-cols-2 gap-2">
-                      <button
-                        onClick={() => handleFilterChange('length', 'todos')}
-                        className={`px-3 py-2 rounded-lg transition-all text-sm ${
-                          filters.length === 'todos'
-                            ? 'bg-rose-600 text-white'
-                            : 'bg-gray-50 hover:bg-gray-100 text-gray-700'
-                        }`}
-                      >
-                        Todos
-                      </button>
-                      {lengths.map(length => (
-                        <button
-                          key={length}
-                          onClick={() => handleFilterChange('length', length.toString())}
-                          className={`px-3 py-2 rounded-lg transition-all text-sm ${
-                            filters.length === length.toString()
-                              ? 'bg-rose-600 text-white'
-                              : 'bg-gray-50 hover:bg-gray-100 text-gray-700'
-                          }`}
-                        >
-                          {length}cm
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Price Range Filter */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-3">Faixa de Preço</h4>
-                    <div className="space-y-2">
-                      {[
-                        { value: 'todos', label: 'Todos os Preços' },
-                        { value: '60-100', label: '€60 - €100' },
-                        { value: '100-200', label: '€100 - €200' },
-                        { value: '200-300', label: '€200 - €300' },
-                        { value: '300', label: 'Acima de €300' }
-                      ].map(range => (
-                        <button
-                          key={range.value}
-                          onClick={() => handleFilterChange('priceRange', range.value)}
-                          className={`w-full text-left px-4 py-3 rounded-lg transition-all text-sm ${
-                            filters.priceRange === range.value
-                              ? 'bg-rose-600 text-white shadow-lg'
-                              : 'bg-gray-50 hover:bg-gray-100 text-gray-700'
-                          }`}
-                        >
-                          {range.label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Stock Filter */}
-                  <div className="mb-6">
-                    <label className="flex items-center gap-3 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={filters.inStock}
-                        onChange={(e) => handleFilterChange('inStock', e.target.checked)}
-                        className="w-4 h-4 text-rose-600 bg-gray-100 border-gray-300 rounded focus:ring-rose-500"
-                      />
-                      <span className="text-sm text-gray-700">Apenas disponíveis</span>
-                    </label>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* Content Area */}
-          <div className="flex-1">
-            {filteredProducts.length === 0 ? (
-              <div className="text-center py-20">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-light text-gray-600 mb-2">
-                  Nenhum produto encontrado
-                </h3>
-                <p className="text-gray-500 mb-6">
-                  Tente ajustar os filtros ou limpar todas as seleções
-                </p>
-                <button
-                  onClick={clearAllFilters}
-                  className="px-6 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors"
-                >
-                  Limpar Filtros
-                </button>
-              </div>
-            ) : viewMode === 'categories' ? (
-              /* Visualização por Categorias */
-              <div className="space-y-6">
-                {(['liso', 'ondulado', 'cacheado', 'crespo'] as const).map(type => (
-                  <HairTypeSection
-                    key={type}
-                    type={type}
-                    products={productsByType[type]}
-                    isExpanded={expandedSections[type]}
-                    onToggle={() => toggleSection(type)}
-                    onAddToCart={addToCart}
-                    onViewDetails={setSelectedProduct}
-                    isInCart={isInCart}
-                    formatPrice={formatPrice}
+        {/* Filters Section */}
+        <section className="py-8 bg-white/80 backdrop-blur-sm border-b">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+              <div className="flex flex-col sm:flex-row gap-4 items-center">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder="Buscar produtos..."
+                    value={termoBusca}
+                    onChange={(e) => setTermoBusca(e.target.value)}
+                    className="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
-                ))}
+                </div>
+                <div className="flex items-center gap-2">
+                  <Filter className="w-4 h-4 text-gray-600" />
+                  <select
+                    value={filtroComprimento}
+                    onChange={(e) => setFiltroComprimento(e.target.value)}
+                    className="px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  >
+                    <option value="todos">Todos os comprimentos</option>
+                    <option value="40">40cm</option>
+                    <option value="50">50cm</option>
+                    <option value="60">60cm</option>
+                    <option value="70">70cm</option>
+                    <option value="80">80cm</option>
+                    <option value="90">90cm</option>
+                  </select>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Filter className="w-4 h-4 text-gray-600" />
+                  <select
+                    value={filtroTextura}
+                    onChange={(e) => setFiltroTextura(e.target.value)}
+                    className="px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  >
+                    <option value="todos">Todas as texturas</option>
+                    <option value="liso">Liso</option>
+                    <option value="ondulado">Ondulado</option>
+                    <option value="cacheado">Cacheado</option>
+                  </select>
+                </div>
               </div>
-            ) : viewMode === 'collections' ? (
-              /* Visualização por Coleções */
-              <div className="space-y-6">
-                {(['CLASSIC', 'PREMIUM', 'GOLD', 'RAPUNZEL', 'PROFESSIONAL'] as const).map(collection => (
-                  <CollectionSection
-                    key={collection}
-                    collection={collection}
-                    products={productsByCollection[collection]}
-                    isExpanded={expandedCollections[collection]}
-                    onToggle={() => toggleCollection(collection)}
-                    onAddToCart={addToCart}
-                    onViewDetails={setSelectedProduct}
-                    isInCart={isInCart}
-                    formatPrice={formatPrice}
+              <div className="text-sm text-gray-600">
+                Mostrando {produtosFiltrados.length} de {todosProdutos.length} produtos
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Products Grid */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            {produtosFiltrados.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {produtosFiltrados.map((produto) => (
+                  <ProductCard
+                    key={produto.id}
+                    id={produto.id}
+                    nome={produto.nome}
+                    marca={produto.marca}
+                    descricao={produto.descricao}
+                    imagens={produto.imagens}
+                    badge={produto.badge}
+                    pricing={produto.pricing}
+                    length={produto.length}
+                    type={produto.type}
+                    color={produto.color}
+                    rating={produto.rating}
+                    reviews={produto.reviews}
+                    inStock={produto.inStock}
                   />
                 ))}
               </div>
             ) : (
-              /* Visualização em Grade Tradicional */
-              <motion.div
-                layout
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-              >
-                {filteredProducts.map((product, index) => (
-                  <div
-                    key={product.id}
-                    className="bg-white border border-gray-200 overflow-hidden group"
-                  >
-                    {/* Product Image */}
-                    <Link href={`/produto/${product.id}`} className="block">
-                      <div className="relative h-48 bg-gray-100">
-                        {!product.inStock && (
-                          <div className="absolute inset-0 bg-white/80 flex items-center justify-center z-10">
-                            <span className="text-gray-600 text-sm">Esgotado</span>
-                          </div>
-                        )}
-                        <span className="absolute top-2 left-2 bg-black/80 text-white px-2 py-1 text-xs">
-                          {product.length}cm
-                        </span>
-                        <OptimizedMegaHairImage
-                          src={product.image}
-                          alt={product.name}
-                          productName={product.name}
-                          productType={product.type}
-                          priority={index < 6}
-                          className="w-full h-full"
-                          showSkeleton={true}
-                          lazy={index >= 6}
-                        />
-                      </div>
-                    </Link>
-
-                    {/* Product Info */}
-                    <div className="p-4">
-                      <div className="text-xs text-gray-500 mb-1">
-                        {typeNames[product.type]}
-                      </div>
-                      <h3 className="text-sm font-medium mb-2 text-gray-900">
-                        {product.name}
-                      </h3>
-
-                      {/* Specs */}
-                      <div className="text-xs text-gray-500 mb-3">
-                        {product.length}cm • {product.weight}g • {product.origin}
-                      </div>
-
-                      {/* Price */}
-                      <div className="mb-3">
-                        <div className="text-lg font-medium text-gray-900">{formatPrice(product.price)}</div>
-                      </div>
-
-                      {/* Action Buttons */}
-                      <div className="space-y-2">
-                        <button
-                          onClick={() => addToCart(product)}
-                          disabled={!product.inStock}
-                          className={`w-full py-2 text-sm font-medium transition-colors ${
-                            product.inStock
-                              ? isInCart(product.id)
-                                ? 'bg-gray-900 text-white'
-                                : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                              : 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                          }`}
-                        >
-                          {!product.inStock ? 'Esgotado' :
-                           isInCart(product.id) ? 'No Carrinho' : 'Adicionar'}
-                        </button>
-
-                        <Link
-                          href={`/produto/${product.id}`}
-                          className="block w-full py-2 text-center text-sm text-gray-600 hover:text-gray-900 border border-gray-200 hover:border-gray-300 transition-colors"
-                        >
-                          Ver Detalhes
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </motion.div>
+              <div className="text-center py-16">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                  Nenhum produto encontrado
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Tente ajustar os filtros ou termo de busca
+                </p>
+                <Button
+                  onClick={() => {
+                    setFiltroComprimento('todos');
+                    setFiltroTextura('todos');
+                    setTermoBusca('');
+                  }}
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white"
+                >
+                  Limpar filtros
+                </Button>
+              </div>
             )}
           </div>
-        </div>
+        </section>
+
+        {/* Newsletter Section */}
+        <section className="py-16 bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl lg:text-4xl font-playfair font-bold mb-4">
+              Fique por dentro das novidades
+            </h2>
+            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+              Cadastre-se para receber ofertas exclusivas e lançamentos em primeira mão
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Seu melhor e-mail"
+                className="flex-1 px-4 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+              />
+              <Button className="bg-white text-purple-600 hover:bg-purple-50 px-8 py-3 rounded-full font-medium">
+                Inscrever-se
+              </Button>
+            </div>
+          </div>
+        </section>
       </div>
-
-      {/* Product Detail Modal */}
-      <AnimatePresence>
-        {selectedProduct && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
-            onClick={() => setSelectedProduct(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-auto"
-              onClick={e => e.stopPropagation()}
-            >
-              <div className="p-8">
-                <div className="flex justify-between items-start mb-6">
-                  <div>
-                    <h2 className="text-3xl font-light text-gray-900 mb-2">
-                      {selectedProduct.name}
-                    </h2>
-                    <div className="text-sm text-rose-600 font-medium">
-                      {typeNames[selectedProduct.type]} • {selectedProduct.origin}
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => setSelectedProduct(null)}
-                    className="text-gray-400 hover:text-gray-600 text-3xl font-light"
-                  >
-                    ×
-                  </button>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="relative h-96 rounded-lg overflow-hidden">
-                    <OptimizedMegaHairImage
-                      src={selectedProduct.image}
-                      alt={selectedProduct.name}
-                      productName={selectedProduct.name}
-                      productType={selectedProduct.type}
-                      priority={true}
-                      className="w-full h-full rounded-lg"
-                      showSkeleton={true}
-                      lazy={false}
-                    />
-                  </div>
-
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-3">Especificações</h3>
-                      <div className="space-y-3 text-sm text-gray-600">
-                        <div className="flex justify-between py-2 border-b">
-                          <span>Comprimento:</span>
-                          <span className="font-medium">{selectedProduct.length} cm</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b">
-                          <span>Peso:</span>
-                          <span className="font-medium">{selectedProduct.weight} gramas</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b">
-                          <span>Textura:</span>
-                          <span className="font-medium">{typeNames[selectedProduct.type]}</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b">
-                          <span>Cor:</span>
-                          <span className="font-medium">{selectedProduct.color.charAt(0).toUpperCase() + selectedProduct.color.slice(1)}</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b">
-                          <span>Origem:</span>
-                          <span className="font-medium">{selectedProduct.origin}</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b">
-                          <span>Disponibilidade:</span>
-                          <span className={`font-medium ${selectedProduct.inStock ? 'text-green-600' : 'text-red-600'}`}>
-                            {selectedProduct.inStock ? 'Em estoque' : 'Indisponível'}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-3">Avaliações</h3>
-                      <div className="flex items-center gap-3">
-                        <div className="flex text-yellow-400">
-                          {[...Array(5)].map((_, i) => (
-                            <span key={i} className="text-lg">
-                              {i < Math.floor(selectedProduct.rating) ? '★' : '☆'}
-                            </span>
-                          ))}
-                        </div>
-                        <span className="text-gray-600">
-                          {selectedProduct.rating.toFixed(1)} ({selectedProduct.reviews} avaliações)
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="pt-6 border-t">
-                      <div className="mb-6">
-                        <div className="text-4xl font-light text-rose-600 mb-2">
-                          {formatPrice(selectedProduct.price)}
-                        </div>
-                        <div className="text-sm text-gray-500">
-                          Por 100g + Frete para toda Europa
-                        </div>
-                      </div>
-
-                      <button
-                        onClick={() => {
-                          addToCart(selectedProduct);
-                          setSelectedProduct(null);
-                        }}
-                        disabled={!selectedProduct.inStock}
-                        className={`w-full py-4 rounded-lg font-medium text-lg transition-all ${
-                          selectedProduct.inStock
-                            ? 'bg-rose-600 text-white hover:bg-rose-700'
-                            : 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                        }`}
-                      >
-                        {selectedProduct.inStock ? 'Adicionar ao Carrinho' : 'Produto Indisponível'}
-                      </button>
-
-                      <div className="text-xs text-gray-500 text-center space-y-1 mt-4">
-                        <p>• Entrega em 5-10 dias úteis para toda Europa</p>
-                        <p>• Frete grátis para pedidos acima de €500</p>
-                        <p>• Garantia de qualidade de 30 dias</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Schema Markup for Category Rich Snippets */}
-      <CategorySchema
-        category="Mega Hair Brasileiro"
-        products={filteredProducts.map(product => ({
-          id: product.id.toString(),
-          name: product.name,
-          brand: "JC Hair Studio's 62",
-          price: product.price,
-          preco_eur: product.price,
-          images: [product.image],
-          category: 'mega-hair',
-          inStock: product.inStock,
-          rating: product.rating,
-          reviews: product.reviews
-        }))}
-      />
-    </div>
+    </ErrorBoundary>
   );
 }

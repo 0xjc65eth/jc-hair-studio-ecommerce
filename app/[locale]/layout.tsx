@@ -8,6 +8,7 @@ import { ToastProvider } from '../../lib/providers/ToastProvider';
 import { AuthProvider } from '../../lib/providers/auth-provider';
 import { CartInitializer } from '../../lib/providers/CartProvider';
 import { HomepageSchema } from '../../components/seo/SchemaMarkup';
+import { OrganizationSchema, WebsiteSchema } from '../../components/seo/UnifiedSchema';
 import FacebookPixel from '../../components/analytics/FacebookPixel';
 import GoogleAnalytics from '../../components/analytics/GoogleAnalytics';
 import LiveChat from '../../components/ui/LiveChat';
@@ -122,7 +123,8 @@ export default async function LocaleLayout({
       <head>
         <GoogleAnalytics />
         <FacebookPixel />
-        <HomepageSchema />
+        <OrganizationSchema />
+        <WebsiteSchema />
       </head>
       <body className={`${inter.className} antialiased`}>
         <AuthProvider>

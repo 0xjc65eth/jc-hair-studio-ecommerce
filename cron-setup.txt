@@ -1,0 +1,7 @@
+# Cron job para submissão automática de sitemap (executar toda segunda-feira às 3h)
+0 3 * * 1 cd '/Users/juliocesar/Jc-hair-studio'\''s 62  ecommerce/jc-hair-studio' && ./auto-submit-sitemap.sh
+
+# Alternativas de frequência:
+# Diariamente às 3h: 0 3 * * * 
+# Semanalmente (segunda-feira): 0 3 * * 1
+# A cada 3 dias: 0 3 */3 * *

@@ -116,22 +116,70 @@ export default function ProductDetailPage() {
         </div>
       </div>
 
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 border-b">
+      {/* Breadcrumb with SEO markup */}
+      <nav className="bg-gray-50 border-b" aria-label="Breadcrumb">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center space-x-2 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-gray-700">Início</Link>
+          <ol
+            className="flex items-center space-x-2 text-sm"
+            itemScope
+            itemType="https://schema.org/BreadcrumbList"
+          >
+            <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+              <Link
+                href="/"
+                className="text-gray-500 hover:text-amber-600 transition-colors font-medium"
+                itemProp="item"
+                title="Voltar à página inicial"
+              >
+                <span itemProp="name">Início</span>
+              </Link>
+              <meta itemProp="position" content="1" />
+            </li>
             <span className="text-gray-400">/</span>
-            <Link href="/produtos" className="text-gray-500 hover:text-gray-700">Produtos</Link>
+
+            <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+              <Link
+                href="/produtos"
+                className="text-gray-500 hover:text-amber-600 transition-colors font-medium"
+                itemProp="item"
+                title="Ver todos os produtos brasileiros"
+              >
+                <span itemProp="name">Produtos</span>
+              </Link>
+              <meta itemProp="position" content="2" />
+            </li>
             <span className="text-gray-400">/</span>
-            <Link href={`/categoria/${product.category?.toLowerCase().replace(/\s+/g, '-') || 'produto'}`} className="text-gray-500 hover:text-gray-700">
-              {product.category || 'Produto'}
-            </Link>
-            <span className="text-gray-400">/</span>
-            <span className="text-gray-900 font-medium">{product.name}</span>
-          </div>
+
+            {product.category && (
+              <>
+                <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+                  <Link
+                    href={`/categoria/${product.category?.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="text-gray-500 hover:text-amber-600 transition-colors font-medium"
+                    itemProp="item"
+                    title={`Ver produtos de ${product.category}`}
+                  >
+                    <span itemProp="name">{product.category}</span>
+                  </Link>
+                  <meta itemProp="position" content="3" />
+                </li>
+                <span className="text-gray-400">/</span>
+              </>
+            )}
+
+            <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
+              <span
+                className="text-gray-900 font-semibold"
+                itemProp="name"
+                aria-current="page"
+              >
+                {product.name}
+              </span>
+              <meta itemProp="position" content="4" />
+            </li>
+          </ol>
         </div>
-      </div>
+      </nav>
 
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid lg:grid-cols-2 gap-12">
@@ -295,38 +343,97 @@ export default function ProductDetailPage() {
           </div>
         </div>
 
-        {/* Produtos relacionados */}
+        {/* Produtos relacionados com SEO otimizado */}
         {relatedProducts.length > 0 && (
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Produtos Relacionados</h3>
+          <section className="mt-16" aria-labelledby="related-products-heading">
+            <div className="flex items-center justify-between mb-8">
+              <h2 id="related-products-heading" className="text-2xl lg:text-3xl font-bold text-gray-900">
+                Você Também Pode Gostar
+              </h2>
+              <Link
+                href={`/categoria/${product.category?.toLowerCase().replace(/\s+/g, '-')}`}
+                className="text-amber-600 hover:text-amber-700 font-medium text-sm flex items-center gap-1"
+                title={`Ver mais produtos de ${product.category}`}
+              >
+                Ver mais
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedProducts.map((relatedProduct) => (
-                <Link
+                <article
                   key={relatedProduct.id}
-                  href={`/produto/${relatedProduct.id}`}
-                  className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300"
+                  className="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="aspect-square bg-gray-50 overflow-hidden">
-                    <ImageCarousel
-                      images={relatedProduct.images || relatedProduct.imagens || ['/placeholder-product.jpg']}
-                      productName={relatedProduct.name || relatedProduct.nome}
-                      className="w-full h-full group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2 line-clamp-2">
-                      {relatedProduct.name || relatedProduct.nome}
-                    </h4>
-                    <div className="flex items-center gap-2">
-                      <span className="text-lg font-bold text-amber-600">
-                        €{(relatedProduct.preco_eur || relatedProduct.pricing?.discountPrice || 0).toFixed(2)}
-                      </span>
+                  <Link
+                    href={`/produto/${relatedProduct.id}`}
+                    className="block"
+                    title={`Ver ${relatedProduct.name || relatedProduct.nome}`}
+                    aria-label={`Comprar ${relatedProduct.name || relatedProduct.nome}`}
+                  >
+                    <div className="aspect-square bg-gray-50 overflow-hidden relative">
+                      <ImageCarousel
+                        images={relatedProduct.images || relatedProduct.imagens || ['/placeholder-product.jpg']}
+                        productName={relatedProduct.name || relatedProduct.nome}
+                        className="w-full h-full group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
-                  </div>
-                </Link>
+
+                    <div className="p-4">
+                      {relatedProduct.brand && (
+                        <span className="text-xs text-amber-600 font-semibold uppercase tracking-wider">
+                          {relatedProduct.brand}
+                        </span>
+                      )}
+
+                      <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-amber-600 transition-colors">
+                        {relatedProduct.name || relatedProduct.nome}
+                      </h3>
+
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg font-bold text-amber-600">
+                          €{(relatedProduct.preco_eur || relatedProduct.pricing?.discountPrice || 0).toFixed(2)}
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </article>
               ))}
             </div>
-          </div>
+
+            {/* Additional contextual links */}
+            <div className="mt-8 text-center">
+              <p className="text-gray-600 mb-4">
+                Explore mais produtos da categoria <Link href={`/categoria/${product.category?.toLowerCase().replace(/\s+/g, '-')}`} className="text-amber-600 hover:text-amber-700 font-medium">{product.category}</Link>
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Link
+                  href="/mega-hair"
+                  className="text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-700 transition-colors"
+                  title="Ver mega hair brasileiro"
+                >
+                  Mega Hair Brasileiro
+                </Link>
+                <Link
+                  href="/categoria/progressivas-alisamentos"
+                  className="text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-700 transition-colors"
+                  title="Ver progressivas e alisamentos"
+                >
+                  Progressivas Premium
+                </Link>
+                <Link
+                  href="/maquiagens"
+                  className="text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-700 transition-colors"
+                  title="Ver maquiagem brasileira"
+                >
+                  Maquiagem Brasileira
+                </Link>
+              </div>
+            </div>
+          </section>
         )}
       </div>
 

@@ -110,9 +110,34 @@ const getCurrency = (locale: string, country?: string) => {
   return currencyMap[locale] || 'EUR';
 };
 
-export function middleware(request: NextRequest) {
-  // Temporarily disabled to restore original functionality
-  return NextResponse.next();
+export async function middleware(request: NextRequest) {
+  const response = NextResponse.next();
+
+  // Track 404s and redirects for SEO monitoring
+  try {
+    const url = request.nextUrl.clone();
+
+    // Add response headers for monitoring
+    response.headers.set('X-Request-Path', url.pathname);
+    response.headers.set('X-Request-Time', new Date().toISOString());
+
+    // Track referrer for broken link detection
+    const referrer = request.headers.get('referer');
+    if (referrer) {
+      response.headers.set('X-Referrer', referrer);
+    }
+
+    // Track user location for geographic analysis
+    const country = request.headers.get('CF-IPCountry') ||
+                   request.headers.get('X-Vercel-IP-Country');
+    if (country) {
+      response.headers.set('X-User-Country', country);
+    }
+  } catch (error) {
+    console.error('Middleware tracking error:', error);
+  }
+
+  return response;
 }
 
 export const config = {

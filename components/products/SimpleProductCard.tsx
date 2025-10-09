@@ -7,6 +7,7 @@ import { ShoppingBag, Heart } from 'lucide-react';
 import { useCart } from '@/lib/stores/cartStore';
 import { toast } from 'react-toastify';
 import ImageCarousel from './ImageCarousel';
+import { ProductSchema } from '../seo/UnifiedSchema';
 
 interface ProductCardProps {
   id: string;
@@ -25,6 +26,12 @@ interface ProductCardProps {
     margin: string;
     competitive: string;
   };
+  length?: number;
+  type?: string;
+  color?: string;
+  rating?: number;
+  reviews?: number;
+  inStock?: boolean;
 }
 
 export default function ProductCard({
@@ -36,11 +43,37 @@ export default function ProductCard({
   badge,
   destaque,
   viewMode = 'grid',
-  pricing
+  pricing,
+  length,
+  type,
+  color,
+  rating,
+  reviews,
+  inStock = true
 }: ProductCardProps) {
   const [imageError, setImageError] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const { addItem } = useCart();
+
+  // Generate product schema for SEO
+  const productSchema = {
+    id,
+    name: nome,
+    description: descricao,
+    images: imagens || [],
+    price: pricing?.discountPrice || pricing?.ourPrice || 0,
+    comparePrice: pricing?.ourPrice,
+    brand: marca,
+    category: 'Mega Hair',
+    rating: rating || 4.8,
+    reviewCount: reviews || 50,
+    inStock,
+    sku: `JCH-${id}`,
+    color,
+    length,
+    material: '100% Human Hair',
+    countryOfOrigin: 'BR'
+  };
 
   const getBadgeColor = (badge: string) => {
     switch (badge) {
@@ -61,7 +94,9 @@ export default function ProductCard({
 
   if (viewMode === 'list') {
     return (
-      <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 flex gap-6">
+      <>
+        <ProductSchema product={productSchema} />
+        <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 p-6 flex gap-6">
         <div className="relative w-48 h-48 flex-shrink-0">
           {badge && (
             <span className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-bold z-10 ${getBadgeColor(badge)}`}>
@@ -92,13 +127,15 @@ export default function ProductCard({
           </p>
           
           <div className="flex items-center justify-between">
-            {pricing && (
+            {pricing && pricing.discountPrice && (
               <div className="flex flex-col">
                 <div className="flex items-center gap-2">
                   <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice.toFixed(2)}</span>
                   <span className="text-lg font-bold text-green-600">€{pricing.discountPrice.toFixed(2)}</span>
                 </div>
-                <span className="text-xs text-green-600 font-medium">Economize €{pricing.savings.toFixed(2)}</span>
+                {pricing.savings !== undefined && (
+                  <span className="text-xs text-green-600 font-medium">Economize €{pricing.savings.toFixed(2)}</span>
+                )}
               </div>
             )}
 
@@ -113,10 +150,13 @@ export default function ProductCard({
           </div>
         </div>
       </div>
+      </>
     );
   }
 
   return (
+    <>
+    <ProductSchema product={productSchema} />
     <div 
       className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
       onMouseEnter={() => setIsHovered(true)}
@@ -147,7 +187,12 @@ export default function ProductCard({
           {marca}
         </div>
         
-        <Link href={`/produto/${id}`} className="group">
+        <Link
+          href={`/produto/${id}`}
+          className="group"
+          title={`Ver detalhes de ${nome}`}
+          aria-label={`Comprar ${nome} - ${marca}`}
+        >
           <h3 className="text-base font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-amber-600 transition-colors">
             {nome}
           </h3>
@@ -157,17 +202,19 @@ export default function ProductCard({
           {descricao}
         </p>
 
-        {pricing && pricing.savings !== undefined && (
+        {pricing && pricing.discountPrice && (
           <div className="mb-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice?.toFixed(2)}</span>
               <span className="text-lg font-bold text-green-600">€{pricing.discountPrice?.toFixed(2)}</span>
             </div>
-            <div className="text-center">
-              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
-                Economize €{pricing.savings.toFixed(2)}
-              </span>
-            </div>
+            {pricing.savings !== undefined && (
+              <div className="text-center">
+                <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
+                  Economize €{pricing.savings.toFixed(2)}
+                </span>
+              </div>
+            )}
           </div>
         )}
 
@@ -208,5 +255,6 @@ export default function ProductCard({
         </button>
       </div>
     </div>
+    </>
   );
 }

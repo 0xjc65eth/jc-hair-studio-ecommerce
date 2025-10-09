@@ -9,6 +9,7 @@ import { CartInitializer } from '@/lib/providers/CartProvider';
 import { HomepageSchema } from '../components/seo/SchemaMarkup';
 import FacebookPixel from '../components/analytics/FacebookPixel';
 import GoogleAnalytics from '../components/analytics/GoogleAnalytics';
+import GoogleTagManager from '../components/analytics/GoogleTagManager';
 import LiveChat from '../components/ui/LiveChat';
 import { Analytics } from '@vercel/analytics/next';
 // REMOVED: PerformanceOptimizer - fought Next.js optimizations, caused hydration errors
@@ -161,9 +162,27 @@ export default function RootLayout({ children }: RootLayoutProps) {
       suppressHydrationWarning
     >
       <head>
+        {/* CORE WEB VITALS: Preconnect to critical origins for faster LCP */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+
+        {/* RSS Feed Autodiscovery */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="JC Hair Studio's 62 - Feed RSS de Produtos"
+          href="/feed.xml"
+        />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="JC Hair Studio's 62 - Feed Atom de Produtos"
+          href="/feed.xml"
+        />
+
         {/* PWA Configuration */}
         <meta name="application-name" content="62 Beauty's 62" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -180,14 +199,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta itemProp="description" content="E-commerce especializado em extensões de cabelo de alta qualidade" />
         <meta itemProp="image" content="/og-image.jpg" />
         
-        {/* Google Analytics 4 */}
+        {/* Google Analytics 4 - OPTIMIZED FOR FID (First Input Delay) */}
         {process.env.NODE_ENV === 'production' && (
           <>
             <script
               async
+              defer
               src="https://www.googletagmanager.com/gtag/js?id=G-W6SPHYF1T9"
             />
             <script
+              defer
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
@@ -324,6 +345,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Analytics />
         {process.env.NODE_ENV === 'production' && (
           <>
+            {process.env.NEXT_PUBLIC_GTM_ID && (
+              <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+            )}
             {process.env.NEXT_PUBLIC_GA_ID && (
               <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
             )}

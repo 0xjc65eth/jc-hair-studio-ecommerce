@@ -40,7 +40,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Amore Perolado.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Preço excepcional comparado aos esmaltes perolados europeus que custam €6-8." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Preço excepcional comparado aos esmaltes perolados europeus que custam €12-15." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -54,7 +54,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Ballet Clássico Cremoso_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Excelente valor para esmalte cremoso de alta qualidade, bem abaixo dos preços europeus de €4-6." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Excelente valor para esmalte cremoso de alta qualidade, bem abaixo dos preços europeus de €4-6." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -68,7 +68,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Chamego meu_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Tom rosa médio cremoso com ótima durabilidade, preço muito competitivo." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Tom rosa médio cremoso com ótima durabilidade, preço muito competitivo." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -82,7 +82,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Coisa Linda Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Rosa vibrante cremoso de longa duração, excelente alternativa aos esmaltes europeus caros." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Rosa vibrante cremoso de longa duração, excelente alternativa aos esmaltes europeus caros." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -96,7 +96,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Confeti Cremoso_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Efeito glitter deslumbrante a preço muito mais acessível que esmaltes glitter europeus (€7-10)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Efeito glitter deslumbrante a preço muito mais acessível que esmaltes glitter europeus (€7-10)." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -110,7 +110,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Compartilhar Preguiça_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Nude rosado perfeito para o dia a dia, preço muito competitivo comparado a nudes europeus." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Nude rosado perfeito para o dia a dia, preço muito competitivo comparado a nudes europeus." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -124,7 +124,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Descomplicada Cremoso_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Rosa natural descomplicado com excelente custo-benefício e durabilidade." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Rosa natural descomplicado com excelente custo-benefício e durabilidade." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -138,7 +138,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Fascinação Cremoso_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Tom rosa fascinante cremoso com acabamento profissional a preço acessível." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Tom rosa fascinante cremoso com acabamento profissional a preço acessível." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -152,7 +152,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Gatinha Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Rosa divertido e jovial com ótima cobertura, muito mais em conta que marcas europeias." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Rosa divertido e jovial com ótima cobertura, muito mais em conta que marcas europeias." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -166,7 +166,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Menina Bonita.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Rosa bonito cremoso de qualidade profissional com excelente relação qualidade-preço." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Rosa bonito cremoso de qualidade profissional com excelente relação qualidade-preço." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -180,7 +180,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Na Ponta do Pé Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Rosa delicado cremoso perfeito para pés, muito mais acessível que esmaltes europeus." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Rosa delicado cremoso perfeito para pés, muito mais acessível que esmaltes europeus." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -194,7 +194,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Roça Rosa Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Rosa com charme caipira e durabilidade superior a preço muito competitivo." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Rosa com charme caipira e durabilidade superior a preço muito competitivo." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -208,7 +208,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Sabe que é Gostosa Cremoso_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Rosa gostoso cremoso com acabamento impecável a preço muito acessível." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Rosa gostoso cremoso com acabamento impecável a preço muito acessível." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -222,7 +222,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Toda Dengosa Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Rosa dengoso cremoso com ótima pigmentação, excelente custo-benefício." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Rosa dengoso cremoso com ótima pigmentação, excelente custo-benefício." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -236,7 +236,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-glitter",
     images: ["/images/products/esmaltes/Impala Viva Ame e Brilhe Glitter_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Glitter rosa vibrante para brilhar muito, preço muito melhor que esmaltes glitter europeus (€7-10)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Glitter rosa vibrante para brilhar muito, preço muito melhor que esmaltes glitter europeus (€7-10)." },
     badge: "BRASILEIRO",
     familiaCorr: "Rosa"
   },
@@ -252,7 +252,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Allure Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Vermelho clássico cremoso atemporal, muito mais acessível que vermelhos europeus premium (€5-8)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Vermelho clássico cremoso atemporal, muito mais acessível que vermelhos europeus premium (€5-8)." },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -266,7 +266,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Amante Perolado_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Vermelho perolado sofisticado com brilho elegante, preço excelente comparado a marcas europeias." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Vermelho perolado sofisticado com brilho elegante, preço excelente comparado a marcas europeias." },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -280,7 +280,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Amor Perolado_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Vermelho intenso perolado com pigmentação marcante, ótimo custo-benefício." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Vermelho intenso perolado com pigmentação marcante, ótimo custo-benefício." },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -294,7 +294,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Maria Cereja Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Vermelho cereja marcante e vibrante, muito mais em conta que esmaltes europeus similares." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Vermelho cereja marcante e vibrante, muito mais em conta que esmaltes europeus similares." },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -308,7 +308,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Querer Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Vermelho desejado cremoso de longa duração, preço muito competitivo." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Vermelho desejado cremoso de longa duração, preço muito competitivo." },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -322,7 +322,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Royal Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Vermelho real com acabamento de realeza, excelente valor comparado a vermelhos premium europeus." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Vermelho real com acabamento de realeza, excelente valor comparado a vermelhos premium europeus." },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -336,7 +336,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Vinho Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Vinho sofisticado cremoso perfeito para ocasiões especiais, preço muito acessível." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Vinho sofisticado cremoso perfeito para ocasiões especiais, preço muito acessível." },
     badge: "BRASILEIRO",
     familiaCorr: "Vermelho"
   },
@@ -352,7 +352,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Abrigo Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Azul marinho cremoso elegante e profissional, preço muito competitivo." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Azul marinho cremoso elegante e profissional, preço muito competitivo." },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -366,7 +366,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Flutua Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Azul claro refrescante e delicado, muito mais acessível que azuis europeus (€5-7)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Azul claro refrescante e delicado, muito mais acessível que azuis europeus (€5-7)." },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -380,7 +380,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Imensidão Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Azul profundo intenso com cobertura excepcional, ótimo custo-benefício." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Azul profundo intenso com cobertura excepcional, ótimo custo-benefício." },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -394,7 +394,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Laguna Cremoso_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Azul laguna tropical vibrante, preço excelente para tom tão especial." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Azul laguna tropical vibrante, preço excelente para tom tão especial." },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -408,7 +408,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Sossego_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Azul sossego calmante e relaxante, muito mais em conta que azuis europeus similares." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Azul sossego calmante e relaxante, muito mais em conta que azuis europeus similares." },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -422,7 +422,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-metalico",
     images: ["/images/products/esmaltes/Impala Confiante e Imprevisível Metal Likee.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Azul metálico moderno com acabamento inovador, preço muito melhor que metálicos europeus (€7-9)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Azul metálico moderno com acabamento inovador, preço muito melhor que metálicos europeus (€7-9)." },
     badge: "BRASILEIRO",
     familiaCorr: "Azul"
   },
@@ -438,7 +438,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Collant Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Nude rosado natural perfeito para uso diário, preço muito competitivo comparado a nudes europeus (€4-6)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Nude rosado natural perfeito para uso diário, preço muito competitivo comparado a nudes europeus (€4-6)." },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -452,7 +452,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Branco Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Branco clássico com alta cobertura profissional, excelente valor." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Branco clássico com alta cobertura profissional, excelente valor." },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -466,7 +466,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Essencial Cremoso_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Nude essencial versátil para qualquer ocasião, ótimo custo-benefício." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Nude essencial versátil para qualquer ocasião, ótimo custo-benefício." },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -480,7 +480,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Dádiva Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Nude rosé sofisticado cremoso, muito mais acessível que nudes premium europeus." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Nude rosé sofisticado cremoso, muito mais acessível que nudes premium europeus." },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -494,7 +494,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Inocense Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Nude inocente delicado perfeito para look natural, preço excelente." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Nude inocente delicado perfeito para look natural, preço excelente." },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -508,7 +508,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Jane Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Nude simples e elegante para todas as ocasiões, muito competitivo." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Nude simples e elegante para todas as ocasiões, muito competitivo." },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -522,7 +522,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Serena.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Nude sereno com acabamento pacífico, preço muito mais acessível que marcas europeias." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Nude sereno com acabamento pacífico, preço muito mais acessível que marcas europeias." },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -536,7 +536,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Sutileza Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Nude sutil elegante com durabilidade excepcional, excelente relação qualidade-preço." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Nude sutil elegante com durabilidade excepcional, excelente relação qualidade-preço." },
     badge: "BRASILEIRO",
     familiaCorr: "Neutro"
   },
@@ -552,7 +552,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Café Café Cremoso_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Marrom café terroso sofisticado, preço muito competitivo comparado a marrons europeus (€5-7)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Marrom café terroso sofisticado, preço muito competitivo comparado a marrons europeus (€5-7)." },
     badge: "BRASILEIRO",
     familiaCorr: "Marrom"
   },
@@ -566,7 +566,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Coffee Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Tom café intenso cremoso para look sofisticado, excelente custo-benefício." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Tom café intenso cremoso para look sofisticado, excelente custo-benefício." },
     badge: "BRASILEIRO",
     familiaCorr: "Marrom"
   },
@@ -580,7 +580,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Crochê Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Marrom artesanal com charme de crochê, muito mais acessível que marrons europeus." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Marrom artesanal com charme de crochê, muito mais acessível que marrons europeus." },
     badge: "BRASILEIRO",
     familiaCorr: "Marrom"
   },
@@ -594,7 +594,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Sofisticado Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Marrom sofisticado elegante para ocasiões especiais, preço excelente." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Marrom sofisticado elegante para ocasiões especiais, preço excelente." },
     badge: "BRASILEIRO",
     familiaCorr: "Marrom"
   },
@@ -608,7 +608,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Terra Molhada Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Tom terra molhada natural e autêntico, muito competitivo comparado a tons terrosos europeus." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Tom terra molhada natural e autêntico, muito competitivo comparado a tons terrosos europeus." },
     badge: "BRASILEIRO",
     familiaCorr: "Marrom"
   },
@@ -624,7 +624,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Acalanto Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Lilás suave delicado cremoso, preço muito melhor que lilás europeus (€5-7)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Lilás suave delicado cremoso, preço muito melhor que lilás europeus (€5-7)." },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -638,7 +638,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Lenny Perolado.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Roxo perolado sofisticado com brilho especial, excelente custo-benefício." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Roxo perolado sofisticado com brilho especial, excelente custo-benefício." },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -652,7 +652,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Dizeres Perolado.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Roxo perolado que fala por si, muito mais acessível que perolados europeus premium." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Roxo perolado que fala por si, muito mais acessível que perolados europeus premium." },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -666,7 +666,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Lembrança Perolado_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Roxo lembrança perolado marcante, preço excelente comparado a roxos europeus." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Roxo lembrança perolado marcante, preço excelente comparado a roxos europeus." },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -680,7 +680,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Lua Perolado_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Roxo lunar perolado inspirador, muito competitivo comparado a perolados europeus (€6-8)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Roxo lunar perolado inspirador, muito competitivo comparado a perolados europeus (€6-8)." },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -694,7 +694,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Sonho Perolado.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Roxo sonho perolado encantador, preço muito mais acessível que perolados premium europeus." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Roxo sonho perolado encantador, preço muito mais acessível que perolados premium europeus." },
     badge: "BRASILEIRO",
     familiaCorr: "Roxo"
   },
@@ -710,7 +710,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Equilíbrio Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Verde água refrescante e equilibrado, muito mais acessível que verdes europeus (€5-7)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Verde água refrescante e equilibrado, muito mais acessível que verdes europeus (€5-7)." },
     badge: "BRASILEIRO",
     familiaCorr: "Verde"
   },
@@ -724,7 +724,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-perolado",
     images: ["/images/products/esmaltes/Impala Semear Perolado.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Verde perolado elegante com brilho natural, preço excelente comparado a perolados europeus." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Verde perolado elegante com brilho natural, preço excelente comparado a perolados europeus." },
     badge: "BRASILEIRO",
     familiaCorr: "Verde"
   },
@@ -738,7 +738,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Solta o Agronejo Cremoso.jpg"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Verde agronejo divertido e autêntico, ótimo custo-benefício para tom tão especial." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Verde agronejo divertido e autêntico, ótimo custo-benefício para tom tão especial." },
     badge: "BRASILEIRO",
     familiaCorr: "Verde"
   },
@@ -754,7 +754,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Marilyn Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Rosa Marilyn elegante e clássico, muito mais acessível que esmaltes fashion europeus (€6-9)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Rosa Marilyn elegante e clássico, muito mais acessível que esmaltes fashion europeus (€6-9)." },
     badge: "BRASILEIRO",
     familiaCorr: "Fashion"
   },
@@ -768,7 +768,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Top Pop_.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Tom fashion pop moderno e vibrante, preço excelente para estilo tão atual." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Tom fashion pop moderno e vibrante, preço excelente para estilo tão atual." },
     badge: "BRASILEIRO",
     familiaCorr: "Fashion"
   },
@@ -782,7 +782,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Zaz.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Tom zaz com atitude e personalidade, ótimo custo-benefício comparado a esmaltes fashion europeus." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Tom zaz com atitude e personalidade, ótimo custo-benefício comparado a esmaltes fashion europeus." },
     badge: "BRASILEIRO",
     familiaCorr: "Fashion"
   },
@@ -798,7 +798,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "esmalte-cremoso",
     images: ["/images/products/esmaltes/Impala Preto Cremoso.webp"],
-    pricing: { basePrice: 6.45, ourPrice: 8.90, discountPrice: 7.90, margin: "28%", competitive: "Preto clássico com alta cobertura profissional, muito mais acessível que pretos europeus premium (€5-8)." },
+    pricing: { basePrice: 6.5, ourPrice: 9.99, discountPrice: 8.99, savings: 1.0, margin: "56%", competitive: "Preto clássico com alta cobertura profissional, muito mais acessível que pretos europeus premium (€5-8)." },
     badge: "BRASILEIRO",
     familiaCorr: "Clássico"
   },
@@ -814,7 +814,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "base-tratamento",
     images: ["/images/products/esmaltes/Impala Base Bomba Cremoso.webp"],
-    pricing: { basePrice: 7.45, ourPrice: 10.90, discountPrice: 9.90, margin: "32%", competitive: "Base fortalecedora profissional com resultado visível, preço muito melhor que tratamentos europeus (€9-15)." },
+    pricing: { basePrice: 7.45, ourPrice: 10.9, discountPrice: 9.9, savings: 1.0, margin: "32%", competitive: "Base fortalecedora profissional com resultado visível, preço muito melhor que tratamentos europeus (€9-15)." },
     badge: "TRATAMENTO",
     familiaCorr: "Tratamento"
   },
@@ -828,7 +828,7 @@ export const esmaltesImpala: EsmalteImpala[] = [
     categoria: "esmaltes",
     subcategoria: "base-tratamento",
     images: ["/images/products/esmaltes/Impala Base para Unhas Fracas Tratamento_.webp"],
-    pricing: { basePrice: 7.45, ourPrice: 10.90, discountPrice: 9.90, margin: "32%", competitive: "Base específica para unhas fracas com fórmula fortalecedora, muito mais acessível que tratamentos europeus." },
+    pricing: { basePrice: 7.45, ourPrice: 10.9, discountPrice: 9.9, savings: 1.0, margin: "32%", competitive: "Base específica para unhas fracas com fórmula fortalecedora, muito mais acessível que tratamentos europeus." },
     badge: "TRATAMENTO",
     familiaCorr: "Tratamento"
   }

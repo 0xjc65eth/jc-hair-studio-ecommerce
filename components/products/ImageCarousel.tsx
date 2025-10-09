@@ -9,9 +9,17 @@ interface ImageCarouselProps {
   images: string[];
   productName: string;
   className?: string;
+  priority?: boolean; // For above-the-fold images (LCP optimization)
+  loading?: 'lazy' | 'eager';
 }
 
-export default function ImageCarousel({ images, productName, className = '' }: ImageCarouselProps) {
+export default function ImageCarousel({
+  images,
+  productName,
+  className = '',
+  priority = false, // First 2-3 products should have priority=true for LCP
+  loading = 'lazy'
+}: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageErrors, setImageErrors] = useState<{ [key: string]: boolean }>({});
 
@@ -36,6 +44,9 @@ export default function ImageCarousel({ images, productName, className = '' }: I
             alt={productName}
             fill
             className="object-cover"
+            priority={priority}
+            loading={priority ? undefined : loading}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = handleImageError(0);
@@ -82,6 +93,9 @@ export default function ImageCarousel({ images, productName, className = '' }: I
             alt={`${productName} - Imagem ${currentIndex + 1}`}
             fill
             className="object-cover transition-opacity duration-300"
+            priority={priority && currentIndex === 0}
+            loading={priority && currentIndex === 0 ? undefined : loading}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             onError={() => setImageErrors(prev => ({ ...prev, [images[currentIndex]]: true }))}
           />
         ) : (
