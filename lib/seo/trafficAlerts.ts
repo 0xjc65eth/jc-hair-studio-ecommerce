@@ -3,7 +3,7 @@
  * Monitor traffic patterns and send alerts for significant changes
  */
 
-import { sendEmail } from '../email/sendEmail';
+import { sendEmail } from '@/lib/utils/email';
 
 interface TrafficData {
   date: Date;

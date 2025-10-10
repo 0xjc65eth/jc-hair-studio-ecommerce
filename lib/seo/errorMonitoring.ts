@@ -3,7 +3,7 @@
  * Track 404s, redirects, and broken links
  */
 
-import { sendEmail } from '../email/sendEmail';
+import { sendEmail } from '@/lib/utils/email';
 
 interface ErrorLog {
   url: string;
