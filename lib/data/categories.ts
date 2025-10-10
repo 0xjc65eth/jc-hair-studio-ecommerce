@@ -1,3 +1,9 @@
+// Import data from cosmetics files
+import { allTintasCapilares } from './tintasCapilares';
+import { allEsmaltesImpala } from './esmaltesImpala';
+import { allPerfumesWepink } from './perfumesWepink';
+import { allPerfumesOBoticario } from './perfumesOBoticario';
+
 // Dados mockados para categorias de beleza
 export interface Product {
   id: string;
@@ -27,6 +33,113 @@ export interface Category {
   productCount: number;
   products: Product[];
 }
+
+// Converter tintas capilares para formato Product
+const tintasCapilaresProducts: Product[] = allTintasCapilares.map(tinta => ({
+  id: tinta.id,
+  name: tinta.nome,
+  brand: tinta.marca,
+  price: tinta.pricing.discountPrice || tinta.pricing.ourPrice,
+  originalPrice: tinta.pricing.ourPrice > tinta.pricing.discountPrice ? tinta.pricing.ourPrice : undefined,
+  rating: 4.5 + Math.random() * 0.4, // Random entre 4.5 e 4.9
+  reviewCount: Math.floor(50 + Math.random() * 200),
+  image: tinta.images[0] || '/images/products/placeholder.jpg',
+  isNew: tinta.badge === 'NOVO',
+  isPopular: tinta.badge === 'BEST SELLER',
+  discount: tinta.pricing.ourPrice > tinta.pricing.discountPrice ?
+    Math.round(((tinta.pricing.ourPrice - tinta.pricing.discountPrice) / tinta.pricing.ourPrice) * 100) : undefined,
+  description: tinta.descricao,
+  features: [
+    tinta.cor,
+    tinta.tom || '',
+    'Cobertura total',
+    'Longa duração'
+  ].filter(f => f),
+  category: 'tintas-capilares',
+  subcategory: tinta.subcategoria,
+  availability: 'in_stock' as const
+}));
+
+// Converter esmaltes para formato Product
+const esmaltesProducts: Product[] = allEsmaltesImpala.map(esmalte => ({
+  id: esmalte.id,
+  name: esmalte.nome,
+  brand: esmalte.marca,
+  price: esmalte.pricing.discountPrice || esmalte.pricing.ourPrice,
+  originalPrice: esmalte.pricing.ourPrice > esmalte.pricing.discountPrice ? esmalte.pricing.ourPrice : undefined,
+  rating: 4.5 + Math.random() * 0.4,
+  reviewCount: Math.floor(50 + Math.random() * 150),
+  image: esmalte.images[0] || '/images/products/placeholder.jpg',
+  isNew: esmalte.badge === 'NOVO',
+  isPopular: esmalte.badge === 'BESTSELLER',
+  discount: esmalte.pricing.ourPrice > esmalte.pricing.discountPrice ?
+    Math.round(((esmalte.pricing.ourPrice - esmalte.pricing.discountPrice) / esmalte.pricing.ourPrice) * 100) : undefined,
+  description: esmalte.descricao,
+  features: [
+    esmalte.cor,
+    esmalte.acabamento,
+    'Longa duração',
+    'Secagem rápida'
+  ],
+  category: 'esmaltes',
+  subcategory: esmalte.subcategoria,
+  availability: 'in_stock' as const
+}));
+
+// Converter perfumes Wepink para formato Product
+const perfumesWepinkProducts: Product[] = allPerfumesWepink.map(perfume => ({
+  id: perfume.id,
+  name: perfume.nome,
+  brand: perfume.marca,
+  price: perfume.pricing.discountPrice || perfume.pricing.ourPrice,
+  originalPrice: perfume.pricing.ourPrice > perfume.pricing.discountPrice ? perfume.pricing.ourPrice : undefined,
+  rating: 4.5 + Math.random() * 0.4,
+  reviewCount: Math.floor(50 + Math.random() * 200),
+  image: perfume.images[0] || '/images/products/placeholder.jpg',
+  isNew: perfume.badge === 'NOVO',
+  isPopular: perfume.badge === 'BESTSELLER' || perfume.badge === 'PREMIUM',
+  discount: perfume.pricing.ourPrice > perfume.pricing.discountPrice ?
+    Math.round(((perfume.pricing.ourPrice - perfume.pricing.discountPrice) / perfume.pricing.ourPrice) * 100) : undefined,
+  description: perfume.descricao,
+  features: [
+    perfume.volume,
+    perfume.familia_olfativa,
+    perfume.tipo,
+    `Para ${perfume.publico}`
+  ],
+  category: 'perfumes',
+  subcategory: perfume.subcategoria,
+  availability: 'in_stock' as const
+}));
+
+// Converter perfumes O Boticário para formato Product
+const perfumesBoticarioProducts: Product[] = allPerfumesOBoticario.map(perfume => ({
+  id: perfume.id,
+  name: perfume.nome,
+  brand: perfume.marca,
+  price: perfume.pricing.discountPrice || perfume.pricing.ourPrice,
+  originalPrice: perfume.pricing.ourPrice > perfume.pricing.discountPrice ? perfume.pricing.ourPrice : undefined,
+  rating: 4.6 + Math.random() * 0.3,
+  reviewCount: Math.floor(100 + Math.random() * 300),
+  image: perfume.images[0] || '/images/products/placeholder.jpg',
+  isNew: perfume.badge === 'NOVO' || perfume.badge === 'LANÇAMENTO',
+  isPopular: perfume.badge === 'BEST SELLER' || perfume.badge === 'FAVORITO',
+  discount: perfume.pricing.ourPrice > perfume.pricing.discountPrice ?
+    Math.round(((perfume.pricing.ourPrice - perfume.pricing.discountPrice) / perfume.pricing.ourPrice) * 100) : undefined,
+  description: perfume.descricao,
+  features: [
+    perfume.volume,
+    perfume.familia_olfativa,
+    perfume.tipo,
+    `Para ${perfume.publico}`
+  ],
+  category: 'perfumes',
+  subcategory: 'perfumes-boticario',
+  availability: 'in_stock' as const
+}));
+
+// Combinar todos os perfumes
+const allPerfumesProducts = [...perfumesWepinkProducts, ...perfumesBoticarioProducts];
 
 // PROGRESSIVAS (15 produtos)
 export const progressivasProducts: Product[] = [
@@ -1263,6 +1376,33 @@ export const beautyCategories: Category[] = [
     image: '/images/categories/maquiagem.jpg',
     productCount: 25,
     products: maquiagemBrasileiraProducts
+  },
+  {
+    id: 'tintas-capilares',
+    name: 'Tintas Capilares',
+    slug: 'tintas-capilares',
+    description: 'Colorações permanentes e semi-permanentes das melhores marcas brasileiras',
+    image: '/images/categories/tintas.jpg',
+    productCount: tintasCapilaresProducts.length,
+    products: tintasCapilaresProducts
+  },
+  {
+    id: 'esmaltes',
+    name: 'Esmaltes',
+    slug: 'esmaltes',
+    description: 'Esmaltes IMPALA brasileiros com cores vibrantes e longa duração',
+    image: '/images/categories/esmaltes.jpg',
+    productCount: esmaltesProducts.length,
+    products: esmaltesProducts
+  },
+  {
+    id: 'perfumes',
+    name: 'Perfumes',
+    slug: 'perfumes',
+    description: 'Perfumes e colônias brasileiras das marcas WEPINK e O Boticário',
+    image: '/images/categories/perfumes.jpg',
+    productCount: allPerfumesProducts.length,
+    products: allPerfumesProducts
   },
   // MANTIDO PARA COMPATIBILIDADE (será removido gradualmente)
   {
