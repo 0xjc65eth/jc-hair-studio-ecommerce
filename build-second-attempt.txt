@@ -1,0 +1,301 @@
+
+> jc-hair-studio@1.0.0 prebuild
+> node scripts/generate-product-feed.mjs
+
+🔄 Generating Google Merchant product feed...
+
+✅ Loaded 107 products from catalog
+✅ Product feed generated: public/product-feed.xml
+📊 Total products in feed: 107
+🌐 Feed URL: https://jchairstudios62.xyz/product-feed.xml
+
+📋 Next Steps:
+1. Upload feed to your site (already done)
+2. Go to Google Merchant Center: https://merchants.google.com/
+3. Click "Products" → "Feeds" → "Add feed"
+4. Enter feed URL: https://jchairstudios62.xyz/product-feed.xml
+5. Set schedule to fetch daily
+6. Products will appear in Google Shopping within 24-48 hours
+
+💡 TIP: Re-run this script when products change
+    npm run seo:generate-feed
+
+
+> jc-hair-studio@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.33
+  - Environments: .env.local, .env.production
+  - Experiments (use with caution):
+    · cpus
+    · turbo
+    · optimizeCss
+
+   Creating an optimized production build ...
+ ⚠ Compiled with warnings
+
+./app/api/seo/dashboard/route.ts
+Attempted import error: 'connectToDatabase' is not exported from '@/lib/mongodb/connection' (imported as 'connectToDatabase').
+
+Import trace for requested module:
+./app/api/seo/dashboard/route.ts
+
+./app/api/seo/dashboard/route.ts
+Attempted import error: 'connectToDatabase' is not exported from '@/lib/mongodb/connection' (imported as 'connectToDatabase').
+
+Import trace for requested module:
+./app/api/seo/dashboard/route.ts
+
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+(node:44221) [MONGOOSE] Warning: `isNew` is a reserved schema pathname and may break some functionality. You are allowed to use it, but use at your own risk. To disable this warning pass `suppressReservedKeysWarning` as a schema option.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:44221) [MONGOOSE] Warning: Duplicate schema index on {"deliveryAddress.zipCode":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(node:44221) [MONGOOSE] Warning: Duplicate schema index on {"code":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(node:44221) [MONGOOSE] Warning: Duplicate schema index on {"name":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(node:44221) [MONGOOSE] Warning: Duplicate schema index on {"slug":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+   Generating static pages (0/267) ...
+[32mInlined 1.81 kB (10% of original 17.55 kB) of _next/static/css/cb5e3233a3640357.css.[39m
+Time 49.457625
+[32mInlined 1.81 kB (10% of original 17.55 kB) of _next/static/css/cb5e3233a3640357.css.[39m
+Time 34.520875
+   Generating static pages (66/267) 
+   Generating static pages (133/267) 
+   Generating static pages (200/267) 
+ ✓ Generating static pages (267/267)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                            Size     First Load JS
+┌ ○ /                                                  271 B           599 kB
+├ ○ /_not-found                                        228 B           580 kB
+├ ƒ /[locale]                                          284 B           599 kB
+├ ƒ /[locale]/botox-capilar                            6.26 kB         605 kB
+├ ƒ /[locale]/conta                                    2.11 kB         601 kB
+├ ƒ /[locale]/conta/configuracoes                      3.25 kB         602 kB
+├ ƒ /[locale]/conta/enderecos                          2.68 kB         602 kB
+├ ƒ /[locale]/conta/pagamento                          3.47 kB         602 kB
+├ ƒ /[locale]/conta/pedidos                            2.3 kB          601 kB
+├ ƒ /[locale]/conta/pontos                             3.84 kB         603 kB
+├ ƒ /[locale]/contato                                  5.28 kB         604 kB
+├ ƒ /[locale]/cosmeticos                               6.8 kB          606 kB
+├ ƒ /[locale]/faq                                      7.1 kB          587 kB
+├ ƒ /[locale]/favoritos                                2.58 kB         602 kB
+├ ƒ /[locale]/hidratacao-capilar-profunda              3.42 kB         602 kB
+├ ƒ /[locale]/maquiagens                               4.82 kB         604 kB
+├ ƒ /[locale]/mega-hair                                2.53 kB         602 kB
+├ ƒ /[locale]/produto/[id]                             3.6 kB          603 kB
+├ ƒ /[locale]/produtos                                 6.02 kB         605 kB
+├ ƒ /[locale]/produtos-cabelo-cacheado                 3.94 kB         603 kB
+├ ƒ /[locale]/produtos/ferramentas-profissionais       288 B           599 kB
+├ ƒ /[locale]/produtos/progressivas-alisamentos        228 B           599 kB
+├ ƒ /[locale]/produtos/shampoos-condicionadores        229 B           599 kB
+├ ƒ /[locale]/produtos/tratamentos-capilares           229 B           599 kB
+├ ƒ /[locale]/progressiva-brasileira                   5.78 kB         605 kB
+├ ƒ /[locale]/queratina-brasileira                     4.61 kB         604 kB
+├ ƒ /[locale]/reconstrucao-capilar                     3.36 kB         602 kB
+├ ƒ /[locale]/sobre                                    228 B           580 kB
+├ ƒ /[locale]/tintas-capilares-profissionais           4.2 kB          603 kB
+├ ƒ /[locale]/tratamentos-capilares                    229 B           599 kB
+├ ○ /acessorios                                        228 B           580 kB
+├ ○ /admin                                             16.9 kB         616 kB
+├ ○ /admin-simple                                      2.15 kB         601 kB
+├ ○ /admin/orders                                      2.28 kB         389 kB
+├ ○ /admin/pedidos                                     8.41 kB         414 kB
+├ ○ /admin/produtos                                    2.18 kB         389 kB
+├ ○ /admin/promo-codes                                 2.6 kB          602 kB
+├ ○ /admin/promo-codes/create                          2.58 kB         602 kB
+├ ○ /admin/seed                                        1.74 kB         388 kB
+├ ○ /admin/shipping                                    7.05 kB         606 kB
+├ ○ /ajuda/como-comprar                                228 B           580 kB
+├ ○ /ajuda/devolucoes                                  228 B           580 kB
+├ ○ /ajuda/envio                                       228 B           580 kB
+├ ○ /ajuda/pagamento                                   228 B           580 kB
+├ ƒ /api/admin/analytics                               0 B                0 B
+├ ƒ /api/admin/auth                                    0 B                0 B
+├ ƒ /api/admin/db-health                               0 B                0 B
+├ ƒ /api/admin/notification-logs                       0 B                0 B
+├ ƒ /api/admin/notifications                           0 B                0 B
+├ ƒ /api/admin/orders                                  0 B                0 B
+├ ƒ /api/admin/orders-simple                           0 B                0 B
+├ ƒ /api/admin/orders/[id]                             0 B                0 B
+├ ƒ /api/admin/products                                0 B                0 B
+├ ƒ /api/admin/shipping/create-label                   0 B                0 B
+├ ƒ /api/admin/shipping/international                  0 B                0 B
+├ ƒ /api/admin/shipping/labels                         0 B                0 B
+├ ƒ /api/admin/shipping/rates                          0 B                0 B
+├ ƒ /api/admin/shipping/returns                        0 B                0 B
+├ ƒ /api/admin/shipping/status                         0 B                0 B
+├ ƒ /api/admin/shipping/track                          0 B                0 B
+├ ƒ /api/admin/stats                                   0 B                0 B
+├ ƒ /api/admin/users                                   0 B                0 B
+├ ƒ /api/analytics                                     0 B                0 B
+├ ƒ /api/analytics/customers                           0 B                0 B
+├ ƒ /api/analytics/dashboard                           0 B                0 B
+├ ƒ /api/analytics/products                            0 B                0 B
+├ ƒ /api/analytics/real-time                           0 B                0 B
+├ ƒ /api/analytics/revenue                             0 B                0 B
+├ ƒ /api/auth/[...nextauth]                            0 B                0 B
+├ ƒ /api/auth/logout                                   0 B                0 B
+├ ƒ /api/auth/register                                 0 B                0 B
+├ ƒ /api/cart                                          0 B                0 B
+├ ƒ /api/cart-abandonment                              0 B                0 B
+├ ƒ /api/cart/[itemId]                                 0 B                0 B
+├ ƒ /api/cart/merge                                    0 B                0 B
+├ ƒ /api/categories                                    0 B                0 B
+├ ƒ /api/confirm-payment                               0 B                0 B
+├ ƒ /api/contact                                       0 B                0 B
+├ ƒ /api/create-payment-intent                         0 B                0 B
+├ ƒ /api/database/performance                          0 B                0 B
+├ ○ /api/debug-email-config                            0 B                0 B
+├ ƒ /api/debug/email                                   0 B                0 B
+├ ○ /api/debug/system-status                           0 B                0 B
+├ ƒ /api/debug/webhook-events                          0 B                0 B
+├ ƒ /api/get-client-ip                                 0 B                0 B
+├ ○ /api/health                                        0 B                0 B
+├ ƒ /api/health/comprehensive                          0 B                0 B
+├ ƒ /api/inventory                                     0 B                0 B
+├ ƒ /api/inventory/low-stock                           0 B                0 B
+├ ƒ /api/newsletter                                    0 B                0 B
+├ ƒ /api/notifications                                 0 B                0 B
+├ ƒ /api/notifications/stock                           0 B                0 B
+├ ƒ /api/notify-shipping                               0 B                0 B
+├ ƒ /api/payment-success                               0 B                0 B
+├ ƒ /api/points                                        0 B                0 B
+├ ƒ /api/points/redeem                                 0 B                0 B
+├ ƒ /api/points/rewards                                0 B                0 B
+├ ƒ /api/products                                      0 B                0 B
+├ ƒ /api/products/[id]                                 0 B                0 B
+├ ƒ /api/products/brands/[brand]                       0 B                0 B
+├ ƒ /api/products/brazilian-brands                     0 B                0 B
+├ ƒ /api/products/featured                             0 B                0 B
+├ ○ /api/products/popular                              0 B                0 B
+├ ƒ /api/products/professional                         0 B                0 B
+├ ƒ /api/products/promotions                           0 B                0 B
+├ ƒ /api/products/tags                                 0 B                0 B
+├ ƒ /api/promo                                         0 B                0 B
+├ ƒ /api/promo/[code]                                  0 B                0 B
+├ ƒ /api/promo/validate                                0 B                0 B
+├ ƒ /api/recommendations                               0 B                0 B
+├ ƒ /api/reports/inventory                             0 B                0 B
+├ ƒ /api/reviews                                       0 B                0 B
+├ ƒ /api/search                                        0 B                0 B
+├ ƒ /api/search/autocomplete                           0 B                0 B
+├ ƒ /api/seed                                          0 B                0 B
+├ ƒ /api/send-email                                    0 B                0 B
+├ ƒ /api/seo/dashboard                                 0 B                0 B
+├ ƒ /api/shipping/calculate                            0 B                0 B
+├ ƒ /api/shipping/track                                0 B                0 B
+├ ƒ /api/suppliers/sync                                0 B                0 B
+├ ƒ /api/tags                                          0 B                0 B
+├ ƒ /api/test-email-direto                             0 B                0 B
+├ ƒ /api/test-sendgrid-verified                        0 B                0 B
+├ ƒ /api/tracking                                      0 B                0 B
+├ ƒ /api/tracking/views                                0 B                0 B
+├ ƒ /api/update-order-status                           0 B                0 B
+├ ƒ /api/user/profile                                  0 B                0 B
+├ ƒ /api/webhooks/ping-engines                         0 B                0 B
+├ ƒ /api/webhooks/stripe                               0 B                0 B
+├ ƒ /api/wishlist                                      0 B                0 B
+├ ○ /auth/forgot-password                              1.88 kB         601 kB
+├ ○ /auth/login                                        717 B           580 kB
+├ ○ /auth/signin                                       3.94 kB         603 kB
+├ ○ /auth/signup                                       3.63 kB         603 kB
+├ ○ /blog                                              227 B           580 kB
+├ ○ /busca                                             5.9 kB          605 kB
+├ ○ /carrinho                                          3.66 kB         603 kB
+├ ○ /catalog-analytics                                 228 B           580 kB
+├ ○ /catalog-demo                                      499 B           387 kB
+├ ○ /catalogo-brasileiro                               8.33 kB         414 kB
+├ ƒ /categoria/[slug]                                  438 B           599 kB
+├ ○ /categorias                                        279 B           580 kB
+├ ○ /checkout                                          18.3 kB         617 kB
+├ ○ /como-comprar                                      3.62 kB         583 kB
+├ ○ /comparar-produtos                                 228 B           580 kB
+├ ○ /conta                                             2.12 kB         601 kB
+├ ○ /conta/configuracoes                               3.25 kB         602 kB
+├ ○ /conta/enderecos                                   2.67 kB         602 kB
+├ ○ /conta/pagamento                                   3.47 kB         602 kB
+├ ○ /conta/pedidos                                     2.3 kB          601 kB
+├ ○ /conta/pontos                                      3.84 kB         603 kB
+├ ○ /conta/referrals                                   3.83 kB         603 kB
+├ ○ /contato                                           5.2 kB          604 kB
+├ ○ /cosmeticos                                        3 kB            602 kB
+├ ○ /debug-products                                    1.11 kB         581 kB
+├ ○ /envio-entrega                                     3.26 kB         583 kB
+├ ○ /esmaltes                                          3.79 kB         603 kB
+├ ○ /esmaltes-impala-portugal                          228 B           580 kB
+├ ○ /espana-productos-brasileiros                      228 B           580 kB
+├ ○ /extensoes-naturais                                228 B           580 kB
+├ ○ /faq                                               6.99 kB         587 kB
+├ ○ /favoritos                                         2.57 kB         602 kB
+├ ○ /ferramentas-equipamentos                          229 B           599 kB
+├ ○ /filtros-demo                                      12.3 kB         611 kB
+├ ○ /formas-pagamento                                  3.76 kB         583 kB
+├ ○ /imprensa                                          228 B           580 kB
+├ ○ /kits-completos                                    228 B           580 kB
+├ ○ /legal/lgpd                                        228 B           580 kB
+├ ○ /legal/politica-cookies                            227 B           580 kB
+├ ○ /legal/politica-privacidade                        227 B           580 kB
+├ ○ /legal/termos-uso                                  228 B           580 kB
+├ ○ /maquiagens                                        1.89 kB         601 kB
+├ ○ /mari-maria-makeup-portugal                        228 B           580 kB
+├ ○ /mega-hair                                         17 kB           616 kB
+├ ○ /mega-hair-brasileiro                              227 B           580 kB
+├ ○ /mega-hair-catalog                                 4.84 kB         604 kB
+├ ƒ /mega-hair/[tipo]                                  2.56 kB         602 kB
+├ ○ /nossa-historia                                    228 B           580 kB
+├ ○ /pagamento-sucesso                                 228 B           580 kB
+├ ○ /perfumes                                          3.85 kB         603 kB
+├ ○ /perfumes-brasileiros                              227 B           580 kB
+├ ● /produto-example-isr/[id]                          285 B           580 kB
+├   ├ /produto-example-isr/cocochoco-original-premium
+├   ├ /produto-example-isr/cocochoco-gold-premium
+├   ├ /produto-example-isr/tzaha-diamante-total-liss
+├   └ [+97 more paths]
+├ ƒ /produto/[id]                                      3.34 kB         602 kB
+├ ○ /produtos                                          5.97 kB         605 kB
+├ ○ /produtos/ferramentas-profissionais                228 B           599 kB
+├ ○ /produtos/progressivas-alisamentos                 229 B           599 kB
+├ ○ /produtos/shampoos-condicionadores                 230 B           599 kB
+├ ○ /produtos/tratamentos-capilares                    229 B           599 kB
+├ ○ /progressiva-brasileira                            227 B           580 kB
+├ ○ /progressiva-vogue                                 4.59 kB         584 kB
+├ ○ /progressiva-vogue-portugal                        228 B           580 kB
+├ ○ /progressivas-btx                                  229 B           599 kB
+├ ƒ /ref/[code]                                        2.68 kB         602 kB
+├ ○ /shampoos-condicionadores                          229 B           599 kB
+├ ○ /skincare-brasileiro                               227 B           580 kB
+├ ○ /sobre                                             228 B           580 kB
+├ ○ /sobre/historia                                    227 B           580 kB
+├ ○ /test-catalog                                      20 kB           406 kB
+├ ○ /test-completo                                     3.58 kB         583 kB
+├ ○ /test-imagens-reais                                2.38 kB         582 kB
+├ ○ /test-produtos                                     2.56 kB         582 kB
+├ ○ /test-simple                                       228 B           580 kB
+├ ○ /trabalhe-conosco                                  6.01 kB         412 kB
+├ ○ /tratamentos-capilares                             229 B           599 kB
+├ ○ /trocas-devolucoes                                 3.99 kB         584 kB
+└ ○ /tutorials/mega-hair-aplicacao                     227 B           580 kB
++ First Load JS shared by all                          390 kB
+  ├ chunks/vendors-1012400f-489b2522b1bd3174.js        105 kB
+  ├ chunks/vendors-27161c75-62e5cd29c506e433.js        66 kB
+  ├ chunks/vendors-2882e66b-439cbf2c7dfeb52c.js        13.8 kB
+  ├ chunks/vendors-2ac4632b-e639acac5c58367e.js        25.1 kB
+  ├ chunks/vendors-362d063c-c119aa0b56add177.js        15.8 kB
+  ├ chunks/vendors-8787c537-de2458ec17d76edf.js        15.9 kB
+  ├ chunks/vendors-89d5c698-1c55fb35f5e476c5.js        19.4 kB
+  ├ chunks/vendors-95d7c366-068507d9ccb62444.js        45.7 kB
+  ├ chunks/vendors-aacc2dbb-8895cac488ab61b8.js        24.3 kB
+  ├ chunks/vendors-bc050c32-c23308758140174d.js        12.2 kB
+  ├ chunks/vendors-eb2fbf4c-eed7bdaefb44a6fe.js        14.4 kB
+  └ other shared chunks (total)                        32.3 kB
+
+
+ƒ Middleware                                           26.5 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses getStaticProps)
+ƒ  (Dynamic)  server-rendered on demand
+

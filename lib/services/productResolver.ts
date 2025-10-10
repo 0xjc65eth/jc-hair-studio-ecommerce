@@ -281,8 +281,10 @@ export class ProductResolver {
     }
 
     // ENHANCED METHOD 3: Makeup products with prefix validation
-    if (!product && (productId.includes('mari-maria') || productId.includes('bruna-tavares') || productId.includes('pam-by-pamella') || productId.includes('bt-'))) {
-      console.log(`🎯 ProductResolver: Makeup product pattern detected, searching makeup products...`);
+    if (!product && (productId.includes('mari-maria') || productId.includes('bruna-tavares') ||
+                     productId.includes('pam-by-pamella') || productId.includes('bt-') ||
+                     productId.includes('wepink-virginia') || productId.includes('base-fran'))) {
+      console.log(`🎯 ProductResolver: Makeup product pattern detected for "${productId}", searching makeup products...`);
       for (const mappedId of allPossibleIds) {
         product = getMakeupProductById(mappedId);
         if (product) {

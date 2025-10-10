@@ -1558,46 +1558,6 @@
           ]
         },
         {
-          "id": "teste-juliana",
-          "name": "Teste Juliana",
-          "slug": "teste-juliana",
-          "brand": "JC Hair Studio",
-          "shortDesc": "Produto de teste Juliana para validação do sistema",
-          "description": "Produto especial criado para teste do sistema de e-commerce. Perfeito para validar funcionalidades de compra, pagamento e notificações.",
-          "sku": "TJ-TEST-001",
-          "category": "Maquiagem Premium",
-          "subcategory": "Teste",
-          "finalidade": "Produto de teste para validação do sistema",
-          "cor": "Universal",
-          "volume": "1un",
-          "pricing": {
-            "basePrice": 1,
-            "ourPrice": 1,
-            "discountPrice": 1,
-            "savings": 0,
-            "margin": "0%",
-            "competitive": "PRODUTO TESTE - Valor especial para Juliana"
-          },
-          "tags": [
-            "teste",
-            "juliana",
-            "validação",
-            "sistema"
-          ],
-          "rating": 5,
-          "reviewsCount": 1,
-          "inStock": true,
-          "stockQuantity": 100,
-          "weight": 10,
-          "labels": [
-            "TESTE",
-            "ESPECIAL"
-          ],
-          "images": [
-            "/images/products/placeholder-product.jpg"
-          ]
-        },
-        {
           "id": "mari-maria-base-baunilha",
           "name": "Base Mari Maria - Tom Baunilha",
           "slug": "mari-maria-base-baunilha",
@@ -3319,45 +3279,6 @@
           ],
           "images": [
             "/images/products/produtos_diversos/IMG-8734.png"
-          ]
-        },
-        {
-          "id": "juliana-teste",
-          "name": "juliana teste",
-          "slug": "juliana-teste",
-          "brand": "JC Hair Studio",
-          "shortDesc": "Produto de teste Juliana - valor promocional 1 euro",
-          "description": "Produto especial de teste com nome Juliana. Valor promocional de 1 euro para testes do sistema.",
-          "sku": "JC-JULIANA-TEST-001",
-          "category": "Maquiagem Premium",
-          "subcategory": "Teste",
-          "finalidade": "Produto de teste Juliana",
-          "volume": "1 unidade",
-          "pricing": {
-            "basePrice": 1,
-            "ourPrice": 1,
-            "discountPrice": 1,
-            "savings": 0,
-            "margin": "0%",
-            "competitive": "Valor de teste especial"
-          },
-          "tags": [
-            "teste",
-            "juliana",
-            "promocional",
-            "especial"
-          ],
-          "rating": 5,
-          "reviewsCount": 1,
-          "inStock": true,
-          "stockQuantity": 999,
-          "weight": 10,
-          "labels": [
-            "TESTE",
-            "PROMOCIONAL"
-          ],
-          "images": [
-            "/placeholder-product.jpg"
           ]
         },
         {
