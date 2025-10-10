@@ -1,7 +1,7 @@
 'use client';
 
 import { forwardRef, HTMLAttributes } from 'react';
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 
 export interface SeparatorProps extends HTMLAttributes<HTMLDivElement> {
   orientation?: 'horizontal' | 'vertical';

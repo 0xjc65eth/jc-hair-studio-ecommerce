@@ -2,7 +2,7 @@
 
 import { forwardRef, useEffect, HTMLAttributes } from 'react';
 import { createPortal } from 'react-dom';
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import { X } from 'lucide-react';
 import { Button } from './Button';
 

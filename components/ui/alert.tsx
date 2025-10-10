@@ -1,7 +1,7 @@
 'use client';
 
 import { forwardRef, HTMLAttributes } from 'react';
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import { AlertTriangle, Info, CheckCircle, XCircle } from 'lucide-react';
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {

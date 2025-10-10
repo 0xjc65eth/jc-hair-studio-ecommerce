@@ -1,7 +1,7 @@
 'use client';
 
 import { forwardRef, HTMLAttributes } from 'react';
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 
 export interface BadgeProps extends HTMLAttributes<HTMLDivElement> {
   variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info';
