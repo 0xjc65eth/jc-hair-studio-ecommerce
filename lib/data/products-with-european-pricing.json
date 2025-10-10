@@ -17,24 +17,210 @@
       "icon": "💫",
       "products": [
         {
+          "id": "cocochoco-original-premium",
+          "name": "COCOCHOCO Original Premium Keratin Treatment 1000ML",
+          "slug": "cocochoco-original-premium-keratin-treatment-1000ml",
+          "brand": "COCOCHOCO PROFESSIONAL",
+          "shortDesc": "Tratamento premium de queratina com terapia de chocolate",
+          "description": "Tratamento premium de queratina com terapia de chocolate. Fórmula profissional que proporciona alisamento duradouro, brilho intenso e nutrição profunda para resultados excepcionais.",
+          "sku": "COCO-OP-1L",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Tratamento de queratina premium",
+          "volume": "1000ml",
+          "pricing": {
+            "basePrice": 124.89,
+            "ourPrice": 124.89,
+            "discountPrice": 124.89,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "Baseado em progressivas premium europeias"
+          },
+          "tags": [
+            "premium",
+            "queratina",
+            "chocolate",
+            "profissional"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 428,
+          "inStock": true,
+          "stockQuantity": 15,
+          "weight": 1000,
+          "labels": [
+            "BEST SELLER"
+          ],
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_1.JPG"
+          ]
+        },
+        {
+          "id": "cocochoco-gold-premium",
+          "name": "COCOCHOCO Gold Premium Keratin Treatment 250ML",
+          "slug": "cocochoco-gold-premium-keratin-treatment-250ml",
+          "brand": "COCOCHOCO PROFESSIONAL",
+          "shortDesc": "Queratina premium com ouro 24K",
+          "description": "Tratamento de queratina premium enriquecido com ouro 24K. Fórmula exclusiva que proporciona alisamento, brilho e nutrição intensa.",
+          "sku": "COCO-GP-250",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Tratamento premium com ouro",
+          "volume": "250ml",
+          "pricing": {
+            "basePrice": 43.30,
+            "ourPrice": 43.30,
+            "discountPrice": 43.30,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "Premium gold treatment"
+          },
+          "tags": [
+            "premium",
+            "ouro",
+            "queratina"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 215,
+          "inStock": true,
+          "stockQuantity": 20,
+          "weight": 250,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_2.JPG"
+          ]
+        },
+        {
+          "id": "nuance-liso-perfect",
+          "name": "Nuance LISO Perfect Brazilian Keratin",
+          "slug": "nuance-liso-perfect-brazilian-keratin",
+          "brand": "NUANCE",
+          "shortDesc": "Queratina brasileira com máscara",
+          "description": "Tratamento de queratina brasileira profissional. Sistema completo com máscara para alisamento perfeito e duradouro.",
+          "sku": "NUA-LP-1L",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Alisamento profissional brasileiro",
+          "volume": "1000ml",
+          "pricing": {
+            "basePrice": 234.90,
+            "ourPrice": 234.90,
+            "discountPrice": 234.90,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "Premium Brazilian keratin"
+          },
+          "tags": [
+            "premium",
+            "queratina",
+            "brasileiro"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 156,
+          "inStock": true,
+          "stockQuantity": 10,
+          "weight": 1000,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_3.JPG"
+          ]
+        },
+        {
+          "id": "ineya-professional-keratin",
+          "name": "INEYA Professional Keratin Smooth",
+          "slug": "ineya-professional-keratin-smooth",
+          "brand": "INEYA PROFESSIONAL",
+          "shortDesc": "Sistema profissional de queratina",
+          "description": "Sistema profissional de queratina para alisamento e tratamento intensivo. Fórmula avançada para resultados profissionais.",
+          "sku": "INE-PKS-1L",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Sistema profissional completo",
+          "volume": "1000ml",
+          "pricing": {
+            "basePrice": 219.90,
+            "ourPrice": 219.90,
+            "discountPrice": 219.90,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "Professional system"
+          },
+          "tags": [
+            "profissional",
+            "queratina",
+            "sistema"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 98,
+          "inStock": true,
+          "stockQuantity": 12,
+          "weight": 1000,
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_4.JPG"
+          ]
+        },
+        {
+          "id": "relaxamento-keratin-smooth",
+          "name": "Relaxamento Keratin Smooth Complex",
+          "slug": "relaxamento-keratin-smooth-complex",
+          "brand": "KERATIN SMOOTH",
+          "shortDesc": "Sistema de relaxamento com queratina",
+          "description": "Sistema completo de relaxamento com queratina. Fórmula suave e eficaz para alisamento progressivo.",
+          "sku": "KS-RSC-500",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Relaxamento progressivo",
+          "volume": "500ml",
+          "pricing": {
+            "basePrice": 84.90,
+            "ourPrice": 84.90,
+            "discountPrice": 84.90,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "Smoothing system"
+          },
+          "tags": [
+            "relaxamento",
+            "queratina",
+            "suave"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 132,
+          "inStock": true,
+          "stockQuantity": 18,
+          "weight": 500,
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_5.JPG"
+          ]
+        },
+        {
           "id": "cadiveu-professional-brasil-cacau-1l",
-          "name": "Cadiveu Professional Brasil Cacau Alisante 1L",
-          "slug": "cadiveu-professional-brasil-cacau-1l",
+          "name": "Brasil Cacau Progressiva 1L",
+          "slug": "brasil-cacau-progressiva-1l",
           "brand": "Cadiveu",
-          "shortDesc": "Progressiva profissional com óleo de cacau para cabelos lisos e sedosos",
-          "description": "Tratamento alisante profissional com óleo de cacau que proporciona cabelos lisos, sedosos e com brilho intenso. Reduz o volume e elimina o frizz por até 4 meses.",
-          "sku": "CAD-BC-1L-001",
+          "shortDesc": "Progressiva profissional Brasil Cacau 1L",
+          "description": "Progressiva profissional Brasil Cacau 1L - O best-seller absoluto na Europa! Alisamento perfeito com cacau brasileiro, alta demanda garantida. Resultado profissional duradouro até 4 meses.",
+          "sku": "CAD-BC-1L",
           "category": "Progressivas e BTX",
           "subcategory": "Progressivas",
           "finalidade": "Alisamento profissional de longa duração",
-          "volume": "1L",
+          "volume": "1000ml",
           "pricing": {
-            "basePrice": 222.27,
-            "ourPrice": 244.5,
-            "discountPrice": 195.6,
-            "savings": 48.9,
+            "basePrice": 195.60,
+            "ourPrice": 195.60,
+            "discountPrice": 175.90,
+            "savings": 19.70,
             "margin": "10%",
-            "competitive": "Baseado em Bellasil €222.27"
+            "competitive": "Preço competitivo vs mercado europeu"
           },
           "tags": [
             "profissional",
