@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Star, Heart, ShoppingCart, Eye, Zap, Gift } from 'lucide-react';
 import { Product } from '@/lib/data/categories';
 
@@ -48,89 +49,98 @@ function ProductCard({
   };
 
   return (
-    <div 
+    <div
       className="group relative bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Badges */}
-      <div className="absolute top-3 left-3 z-10 flex flex-col space-y-2">
-        {product.isNew && (
-          <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium flex items-center">
-            <Zap className="w-3 h-3 mr-1" />
-            Novo
-          </span>
-        )}
-        {product.isPopular && (
-          <span className="bg-purple-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-            Popular
-          </span>
-        )}
-        {discountPercentage > 0 && (
-          <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium flex items-center">
-            <Gift className="w-3 h-3 mr-1" />
-            -{discountPercentage}%
-          </span>
-        )}
-      </div>
+      <Link href={`/produto/${product.id}`} className="block">
+        {/* Badges */}
+        <div className="absolute top-3 left-3 z-10 flex flex-col space-y-2">
+          {product.isNew && (
+            <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full font-medium flex items-center">
+              <Zap className="w-3 h-3 mr-1" />
+              Novo
+            </span>
+          )}
+          {product.isPopular && (
+            <span className="bg-purple-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+              Popular
+            </span>
+          )}
+          {discountPercentage > 0 && (
+            <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium flex items-center">
+              <Gift className="w-3 h-3 mr-1" />
+              -{discountPercentage}%
+            </span>
+          )}
+        </div>
 
-      {/* Availability Badge */}
-      <div className="absolute top-3 right-3 z-10">
-        {product.availability === 'out_of_stock' && (
-          <span className="bg-gray-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-            Esgotado
-          </span>
-        )}
-        {product.availability === 'pre_order' && (
-          <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-medium">
-            Pré-venda
-          </span>
-        )}
-      </div>
+        {/* Availability Badge */}
+        <div className="absolute top-3 right-3 z-10">
+          {product.availability === 'out_of_stock' && (
+            <span className="bg-gray-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+              Esgotado
+            </span>
+          )}
+          {product.availability === 'pre_order' && (
+            <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+              Pré-venda
+            </span>
+          )}
+        </div>
 
-      {/* Product Image */}
-      <div className="relative aspect-square overflow-hidden bg-gray-100">
-        {isImageLoading && (
-          <div className="absolute inset-0 bg-gray-200 animate-pulse" />
-        )}
-        <Image
-          src={product.image}
-          alt={product.name}
-          fill
-          className={`object-cover transition-transform duration-300 ${
-            isHovered ? 'scale-110' : 'scale-100'
-          }`}
-          onLoadingComplete={() => setIsImageLoading(false)}
-          onError={() => setIsImageLoading(false)}
-        />
+        {/* Product Image */}
+        <div className="relative aspect-square overflow-hidden bg-gray-100">
+          {isImageLoading && (
+            <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+          )}
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className={`object-cover transition-transform duration-300 ${
+              isHovered ? 'scale-110' : 'scale-100'
+            }`}
+            onLoadingComplete={() => setIsImageLoading(false)}
+            onError={() => setIsImageLoading(false)}
+          />
         
-        {/* Overlay com ações */}
-        <div className={`
-          absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center
-          transition-opacity duration-300
-          ${isHovered ? 'opacity-100' : 'opacity-0'}
-        `}>
-          <div className="flex space-x-2">
-            <button
-              onClick={() => onQuickView?.(product.id)}
-              className="bg-white p-2 rounded-full hover:bg-gray-100 transition-colors"
-              title="Visualização rápida"
-            >
-              <Eye className="w-5 h-5 text-gray-700" />
-            </button>
-            <button
-              onClick={() => onAddToWishlist?.(product.id)}
-              className="bg-white p-2 rounded-full hover:bg-gray-100 transition-colors"
-              title="Adicionar aos favoritos"
-            >
-              <Heart className="w-5 h-5 text-gray-700" />
-            </button>
+          {/* Overlay com ações */}
+          <div className={`
+            absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center
+            transition-opacity duration-300
+            ${isHovered ? 'opacity-100' : 'opacity-0'}
+          `}>
+            <div className="flex space-x-2">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  onQuickView?.(product.id);
+                }}
+                className="bg-white p-2 rounded-full hover:bg-gray-100 transition-colors"
+                title="Visualização rápida"
+              >
+                <Eye className="w-5 h-5 text-gray-700" />
+              </button>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  onAddToWishlist?.(product.id);
+                }}
+                className="bg-white p-2 rounded-full hover:bg-gray-100 transition-colors"
+                title="Adicionar aos favoritos"
+              >
+                <Heart className="w-5 h-5 text-gray-700" />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Product Info */}
-      <div className="p-4 space-y-3">
+        {/* Product Info */}
+        <div className="p-4 space-y-3">
         {/* Brand */}
         <div className="text-sm text-gray-500 font-medium">
           {product.brand}
@@ -163,7 +173,7 @@ function ProductCard({
           <div className="text-xs text-gray-600">
             <div className="flex flex-wrap gap-1">
               {product.features.slice(0, 2).map((feature, index) => (
-                <span 
+                <span
                   key={index}
                   className="bg-gray-100 px-2 py-1 rounded-full"
                 >
@@ -178,10 +188,17 @@ function ProductCard({
             </div>
           </div>
         )}
+        </div>
+      </Link>
 
-        {/* Add to Cart Button */}
+      {/* Add to Cart Button - Outside Link */}
+      <div className="px-4 pb-4">
         <button
-          onClick={() => onAddToCart?.(product.id)}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            onAddToCart?.(product.id);
+          }}
           disabled={product.availability === 'out_of_stock'}
           className={`
             w-full py-2 px-4 rounded-lg font-medium transition-colors duration-200
@@ -194,8 +211,8 @@ function ProductCard({
         >
           <ShoppingCart className="w-4 h-4" />
           <span>
-            {product.availability === 'out_of_stock' 
-              ? 'Indisponível' 
+            {product.availability === 'out_of_stock'
+              ? 'Indisponível'
               : product.availability === 'pre_order'
               ? 'Pré-encomendar'
               : 'Adicionar ao carrinho'

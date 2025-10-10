@@ -157,70 +157,76 @@ export default function ProductCard({
   return (
     <>
     <ProductSchema product={productSchema} />
-    <div 
+    <div
       className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative">
-        {badge && (
-          <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold z-10 ${getBadgeColor(badge)}`}>
-            {badge}
-          </span>
-        )}
-        
-        <button className="absolute top-4 right-4 p-2 bg-white bg-opacity-90 rounded-full hover:bg-opacity-100 transition-all z-10">
-          <Heart className="w-4 h-4 text-gray-600 hover:text-red-500 transition-colors" />
-        </button>
+      <Link href={`/produto/${id}`}>
+        <div className="relative">
+          {badge && (
+            <span className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold z-10 ${getBadgeColor(badge)}`}>
+              {badge}
+            </span>
+          )}
 
-        <div className="aspect-square bg-gray-50 overflow-hidden">
-          <ImageCarousel
-            images={imagens}
-            productName={nome}
-            className="w-full h-full group-hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-      </div>
+          <button
+            className="absolute top-4 right-4 p-2 bg-white bg-opacity-90 rounded-full hover:bg-opacity-100 transition-all z-10"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
+          >
+            <Heart className="w-4 h-4 text-gray-600 hover:text-red-500 transition-colors" />
+          </button>
 
-      <div className="p-5">
-        <div className="text-amber-600 text-xs uppercase tracking-wider font-semibold mb-2">
-          {marca}
+          <div className="aspect-square bg-gray-50 overflow-hidden">
+            <ImageCarousel
+              images={imagens}
+              productName={nome}
+              className="w-full h-full group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
         </div>
-        
-        <Link
-          href={`/produto/${id}`}
-          className="group"
-          title={`Ver detalhes de ${nome}`}
-          aria-label={`Comprar ${nome} - ${marca}`}
-        >
+
+        <div className="p-5">
+          <div className="text-amber-600 text-xs uppercase tracking-wider font-semibold mb-2">
+            {marca}
+          </div>
+
           <h3 className="text-base font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-amber-600 transition-colors">
             {nome}
           </h3>
-        </Link>
-        
-        <p className="text-gray-600 text-sm mb-3 leading-relaxed line-clamp-2">
-          {descricao}
-        </p>
 
-        {pricing && pricing.discountPrice && (
-          <div className="mb-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice?.toFixed(2)}</span>
-              <span className="text-lg font-bold text-green-600">€{pricing.discountPrice?.toFixed(2)}</span>
-            </div>
-            {pricing.savings !== undefined && (
-              <div className="text-center">
-                <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
-                  Economize €{pricing.savings.toFixed(2)}
-                </span>
+          <p className="text-gray-600 text-sm mb-3 leading-relaxed line-clamp-2">
+            {descricao}
+          </p>
+
+          {pricing && pricing.discountPrice && (
+            <div className="mb-4">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice?.toFixed(2)}</span>
+                <span className="text-lg font-bold text-green-600">€{pricing.discountPrice?.toFixed(2)}</span>
               </div>
-            )}
-          </div>
-        )}
+              {pricing.savings !== undefined && (
+                <div className="text-center">
+                  <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
+                    Economize €{pricing.savings.toFixed(2)}
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </Link>
 
+      <div className="px-5 pb-5">
         <button
           className="w-full bg-gray-900 text-white py-2.5 rounded-lg hover:bg-amber-600 transition-colors font-medium text-sm tracking-wide transform hover:scale-105 transition-transform"
-          onClick={async () => {
+          onClick={async (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
             try {
               addItem({
                 productId: id,
