@@ -366,7 +366,23 @@ export class ProductResolver {
       }
     }
 
-    // METHOD 9: Legacy WEPINK perfumes (fallback)
+    // METHOD 9: Progressivas products with validation
+    if (!product && (productId.includes('cadiveu') || productId.includes('brasil-cacau') ||
+                     productId.includes('progressiva') || productId.includes('btx') ||
+                     productId.includes('forever-liss') || productId.includes('cocochoco'))) {
+      if (isDev) {
+        console.log(`🎯 ProductResolver: Progressiva pattern detected, searching progressivas...`);
+      }
+      product = progressivasProducts.find(p => p.id === productId);
+      if (product) {
+        source = 'progressivas-validated';
+        if (isDev) {
+          console.log(`✅ ProductResolver: Found progressiva product - ${product.nome}`);
+        }
+      }
+    }
+
+    // METHOD 10: Legacy WEPINK perfumes (fallback)
     if (!product && productId.includes('wepink-')) {
       if (isDev) {
         console.log(`🎯 ProductResolver: WEPINK legacy pattern detected, searching legacy perfumes...`);
