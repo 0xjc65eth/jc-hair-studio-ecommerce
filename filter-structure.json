@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "totalProducts": 81,
+    "totalCategories": 6,
+    "totalBrands": 43,
+    "priceRange": {
+      "min": 22,
+      "max": 385
+    },
+    "generated": "2025-09-19T15:39:00.000Z"
+  },
+  "categories": {
+    "Tratamentos": [
+      {
+        "key": "progressivas",
+        "name": "Progressivas",
+        "count": 21
+      },
+      {
+        "key": "botox",
+        "name": "Botox Capilar",
+        "count": 14
+      },
+      {
+        "key": "hidratacao",
+        "name": "Hidratação",
+        "count": 16
+      },
+      {
+        "key": "relaxamentos",
+        "name": "Relaxamentos",
+        "count": 11
+      },
+      {
+        "key": "selagem",
+        "name": "Selagem Capilar",
+        "count": 8
+      }
+    ],
+    "Maquiagem": [
+      {
+        "key": "mari-maria-bases",
+        "name": "Mari Maria - Bases",
+        "count": 11
+      }
+    ]
+  },
+  "filters": {
+    "brands": [
+      "Mari Maria",
+      "CocoCHOCO",
+      "T'ZAHA",
+      "Brazilicious",
+      "La Grace",
+      "Amazon Oil",
+      "Prohall",
+      "Plástica dos Fios",
+      "I Belo Capelo",
+      "Probelle",
+      "Nuance",
+      "Forever Liss",
+      "Inya",
+      "FT Cosmetics",
+      "Roffer",
+      "Luxury Professional",
+      "Cadiveu",
+      "Richée",
+      "Bonequinha",
+      "Maria Escandalosa",
+      "Empodera",
+      "TopVip",
+      "Genérico",
+      "Orgânico",
+      "Lanox",
+      "Versus",
+      "Rofer",
+      "Bóratx",
+      "Etna Hair",
+      "Embelleze",
+      "HairLife",
+      "Afro Hair",
+      "Salon Line",
+      "Nika Bella",
+      "Let Me Be",
+      "Lala Cosmetics",
+      "Dos Corações",
+      "FLO Lifetime",
+      "Tropicalis",
+      "Bórella",
+      "Lusty",
+      "Novex",
+      "Anaconda",
+      "Bio Extratus"
+    ],
+    "treatments": [
+      "Progressiva",
+      "Botox Capilar",
+      "Hidratação",
+      "Relaxamento",
+      "Selagem",
+      "Base Matte"
+    ],
+    "hairTypes": [
+      "Todos os tipos",
+      "Cacheado",
+      "Liso",
+      "Ondulado",
+      "Crespo"
+    ],
+    "formulas": [
+      "Livre de Formol",
+      "Orgânico",
+      "Vegano",
+      "Natural",
+      "Profissional",
+      "Sem Amônia"
+    ],
+    "priceRanges": [
+      {
+        "min": 0,
+        "max": 50,
+        "label": "Até R$ 50"
+      },
+      {
+        "min": 50,
+        "max": 100,
+        "label": "R$ 50 - R$ 100"
+      },
+      {
+        "min": 100,
+        "max": 200,
+        "label": "R$ 100 - R$ 200"
+      },
+      {
+        "min": 200,
+        "max": 400,
+        "label": "R$ 200 - R$ 400"
+      },
+      {
+        "min": 400,
+        "max": null,
+        "label": "Acima de R$ 400"
+      }
+    ]
+  }
+}
