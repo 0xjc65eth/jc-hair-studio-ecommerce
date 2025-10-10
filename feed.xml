@@ -5,7 +5,7 @@
     <link>https://jchairstudios62.xyz</link>
     <description>Premium Brazilian hair extensions, straightening treatments, and authentic Brazilian cosmetics. 100% human hair, professional salon quality.</description>
     <language>pt-PT</language>
-    <lastBuildDate>2025-10-10T11:51:08.568Z</lastBuildDate>
+    <lastBuildDate>2025-10-10T15:48:54.466Z</lastBuildDate>
     <item>
       <g:id>cadiveu-professional-brasil-cacau-1l</g:id>
       <g:title>Cadiveu Professional Brasil Cacau Alisante 1L</g:title>
@@ -1238,38 +1238,6 @@
       <g:product_type>maquiagem-premium</g:product_type>
       
       <g:mpn>MM-BASE-AMNDOA</g:mpn>
-      <g:item_group_id>maquiagem-premium</g:item_group_id>
-      
-      
-      <g:shipping>
-        <g:country>PT</g:country>
-        <g:service>Standard</g:service>
-        <g:price>4.90 EUR</g:price>
-      </g:shipping>
-      <g:shipping>
-        <g:country>PT</g:country>
-        <g:service>Free Shipping</g:service>
-        <g:price>0.00 EUR</g:price>
-        <g:min_order_value>50.00 EUR</g:min_order_value>
-      </g:shipping>
-    </item>
-
-    <item>
-      <g:id>teste-juliana</g:id>
-      <g:title>Teste Juliana</g:title>
-      <g:description>Produto especial criado para teste do sistema de e-commerce. Perfeito para validar funcionalidades de compra, pagamento e notificações.</g:description>
-      <g:link>https://jchairstudios62.xyz/produto/teste-juliana</g:link>
-      <g:image_link>https://jchairstudios62.xyz/images/products/placeholder-product.jpg</g:image_link>
-      
-      <g:availability>in stock</g:availability>
-      <g:price>1 EUR</g:price>
-      <g:sale_price>1 EUR</g:sale_price>
-      <g:brand>JC Hair Studio</g:brand>
-      <g:condition>new</g:condition>
-      <g:google_product_category>469 &gt; Health &amp; Beauty &gt; Personal Care</g:google_product_category>
-      <g:product_type>maquiagem-premium</g:product_type>
-      
-      <g:mpn>TJ-TEST-001</g:mpn>
       <g:item_group_id>maquiagem-premium</g:item_group_id>
       
       
@@ -2678,38 +2646,6 @@
       <g:product_type>maquiagem-premium</g:product_type>
       
       <g:mpn>TP-POC-008</g:mpn>
-      <g:item_group_id>maquiagem-premium</g:item_group_id>
-      
-      
-      <g:shipping>
-        <g:country>PT</g:country>
-        <g:service>Standard</g:service>
-        <g:price>4.90 EUR</g:price>
-      </g:shipping>
-      <g:shipping>
-        <g:country>PT</g:country>
-        <g:service>Free Shipping</g:service>
-        <g:price>0.00 EUR</g:price>
-        <g:min_order_value>50.00 EUR</g:min_order_value>
-      </g:shipping>
-    </item>
-
-    <item>
-      <g:id>juliana-teste</g:id>
-      <g:title>juliana teste</g:title>
-      <g:description>Produto especial de teste com nome Juliana. Valor promocional de 1 euro para testes do sistema.</g:description>
-      <g:link>https://jchairstudios62.xyz/produto/juliana-teste</g:link>
-      <g:image_link>https://jchairstudios62.xyz/placeholder-product.jpg</g:image_link>
-      
-      <g:availability>in stock</g:availability>
-      <g:price>1 EUR</g:price>
-      <g:sale_price>1 EUR</g:sale_price>
-      <g:brand>JC Hair Studio</g:brand>
-      <g:condition>new</g:condition>
-      <g:google_product_category>469 &gt; Health &amp; Beauty &gt; Personal Care</g:google_product_category>
-      <g:product_type>maquiagem-premium</g:product_type>
-      
-      <g:mpn>JC-JULIANA-TEST-001</g:mpn>
       <g:item_group_id>maquiagem-premium</g:item_group_id>
       
       
