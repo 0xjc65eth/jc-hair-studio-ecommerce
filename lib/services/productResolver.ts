@@ -11,6 +11,7 @@ import { allEsmaltesImpala, getEsmalteById } from '../data/esmaltesImpala';
 import { allPerfumesWepink, getPerfumeById } from '../data/perfumesWepink';
 import { allPerfumesOBoticario, getPerfumeOBoticarioById } from '../data/perfumesOBoticario';
 import { allPerfumesData } from '../data/perfumesProducts';
+import { progressivasProducts } from '../data/progressivasProducts';
 
 interface UnifiedProduct {
   id: string;
@@ -566,6 +567,14 @@ export class ProductResolver {
       const exists = allProducts.some(p => p.id === perfume.id);
       if (!exists) {
         allProducts.push(this.normalizeProduct(perfume, 'perfumes-legacy'));
+      }
+    });
+
+    // Progressivas products
+    progressivasProducts.forEach(progressiva => {
+      const exists = allProducts.some(p => p.id === progressiva.id);
+      if (!exists) {
+        allProducts.push(this.normalizeProduct(progressiva, 'progressivas'));
       }
     });
 
