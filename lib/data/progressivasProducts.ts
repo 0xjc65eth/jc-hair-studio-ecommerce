@@ -36,7 +36,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Brasil Cacau Progressiva 1L',
     marca: 'Cadiveu',
     descricao: 'Progressiva profissional Brasil Cacau 1L - O best-seller absoluto na Europa! Alisamento perfeito com cacau brasileiro, alta demanda garantida. Resultado profissional duradouro até 4 meses.',
-    imagens: ['/images/products/progressivas/brasil-cacau-1l.jpg'],
+    imagens: ['/images/products/cadiveu/cadiveu-1.png'],
     badge: 'BEST SELLER',
     pricing: {
       basePrice: 60.00,
@@ -59,7 +59,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Brasil Cacau Progressiva 300ml',
     marca: 'Cadiveu',
     descricao: 'Brasil Cacau 300ml - Tamanho travel perfeito para testes. Mesma qualidade profissional em formato menor, ideal para clientes que querem experimentar antes de comprar o litro.',
-    imagens: ['/images/products/progressivas/brasil-cacau-300ml.jpg'],
+    imagens: ['/images/products/cadiveu/cadiveu-2.png'],
     badge: 'TRAVEL SIZE',
     pricing: {
       basePrice: 20.00,
@@ -84,7 +84,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Forever Liss BTX Capilar 250g',
     marca: 'Forever Liss',
     descricao: 'BTX Capilar Forever Liss 250g - Produto entry-level com ótima margem. Reconstrução profunda, reduz volume e frizz, resultado botox sem formol. Ideal para iniciantes.',
-    imagens: ['/images/products/btx/forever-liss-250g.jpg'],
+    imagens: ['/images/products/forever-liss/forever-liss-1.png'],
     badge: 'ENTRY LEVEL',
     pricing: {
       basePrice: 13.64,
@@ -107,7 +107,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Forever Liss BTX Capilar 1kg Profissional',
     marca: 'Forever Liss',
     descricao: 'BTX Profissional 1kg Forever Liss - Tamanho salão com recompra frequente garantida. Tratamento intensivo de reconstrução, máxima economia para profissionais.',
-    imagens: ['/images/products/btx/forever-liss-1kg.jpg'],
+    imagens: ['/images/products/forever-liss/forever-liss-2.png'],
     badge: 'PROFISSIONAL',
     pricing: {
       basePrice: 40.00,
@@ -132,7 +132,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'BTX Professional 250g',
     marca: 'Genérico Pro',
     descricao: 'BTX Professional 250g - Possibilidade de marca própria com margem alta. Qualidade profissional garantida, ótima aceitação no mercado europeu.',
-    imagens: ['/images/products/btx/btx-professional-250g.jpg'],
+    imagens: ['/images/products/botox/botox_1.png'],
     pricing: {
       basePrice: 11.82,
       ourPrice: 52.90,
@@ -154,7 +154,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Progressiva Advanced 300ml',
     marca: 'Linha Pro',
     descricao: 'Progressiva Advanced 300ml - Alta rotatividade garantida. Fórmula avançada para alisamento perfeito, resultado profissional em casa.',
-    imagens: ['/images/products/progressivas/advanced-300ml.jpg'],
+    imagens: ['/images/products/progressivas_diversas/progressivas_diversas_7.png'],
     pricing: {
       basePrice: 17.27,
       ourPrice: 73.90,
@@ -176,7 +176,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'BTX Repair 250g',
     marca: 'Linha Pro',
     descricao: 'BTX Repair 250g - Reparação intensa com boa aceitação no mercado. Reconstrói fibra capilar danificada, reduz quebra e pontas duplas.',
-    imagens: ['/images/products/btx/repair-250g.jpg'],
+    imagens: ['/images/products/botox/botox_3.png'],
     pricing: {
       basePrice: 12.36,
       ourPrice: 52.90,
@@ -200,7 +200,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Progressiva Keratin Complex 300ml',
     marca: 'Keratin Complex',
     descricao: 'Progressiva com Queratina 300ml - Premium positioning. Enriquecida com queratina hidrolisada para máxima reconstrução e alisamento.',
-    imagens: ['/images/products/progressivas/keratin-300ml.jpg'],
+    imagens: ['/images/products/progressivas_diversas/progressivas_diversas_8.png'],
     badge: 'PREMIUM',
     pricing: {
       basePrice: 17.82,
@@ -223,7 +223,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'BTX Collagen 250g',
     marca: 'Collagen Line',
     descricao: 'BTX com Colágeno 250g - Ingrediente em alta no mercado. Colágeno marinho para máxima elasticidade e recuperação capilar.',
-    imagens: ['/images/products/btx/collagen-250g.jpg'],
+    imagens: ['/images/products/botox/botox_4.png'],
     badge: 'COLÁGENO',
     pricing: {
       basePrice: 12.73,
@@ -246,7 +246,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Progressiva Silk Protein 300ml',
     marca: 'Silk Protein',
     descricao: 'Progressiva Silk 300ml - Diferencial com proteína de seda natural. Alisamento com brilho intenso e toque sedoso incomparável.',
-    imagens: ['/images/products/progressivas/silk-300ml.jpg'],
+    imagens: ['/images/products/progressivas_diversas/progressivas_diversas_9.png'],
     badge: 'SILK',
     pricing: {
       basePrice: 16.73,
@@ -269,7 +269,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'BTX Vitamin Complex 250g',
     marca: 'Vitamin Complex',
     descricao: 'BTX Vitamínico 250g - Rico em complexo vitamínico. Vitaminas A, E, B5, C para nutrição profunda e fortalecimento.',
-    imagens: ['/images/products/btx/vitamin-250g.jpg'],
+    imagens: ['/images/products/botox/botox_6.png'],
     badge: 'VITAMINAS',
     pricing: {
       basePrice: 13.09,
@@ -294,7 +294,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Progressiva Nano Tech 300ml',
     marca: 'Nano Tech',
     descricao: 'Progressiva Nano 300ml - Tecnologia avançada com nanotecnologia. Partículas ultra pequenas penetram profundamente na fibra capilar.',
-    imagens: ['/images/products/progressivas/nano-300ml.jpg'],
+    imagens: ['/images/products/progressivas_diversas/progressivas_diversas_10.png'],
     badge: 'NANO TECH',
     pricing: {
       basePrice: 19.09,
@@ -317,7 +317,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'BTX Argan Oil 250g',
     marca: 'Argan Oil',
     descricao: 'BTX com Óleo de Argan Puro 250g - Argan marroquino autêntico. Máxima hidratação e reparação com óleo de argan 100% puro.',
-    imagens: ['/images/products/btx/argan-250g.jpg'],
+    imagens: ['/images/products/botox/botox_2.png'],
     badge: 'ARGAN PURO',
     pricing: {
       basePrice: 14.18,
@@ -340,7 +340,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Progressiva Diamond Line 300ml',
     marca: 'Diamond Line',
     descricao: 'Progressiva Diamond 300ml - Linha premium diamante. Partículas de diamante para brilho incomparável e proteção UV.',
-    imagens: ['/images/products/progressivas/diamond-300ml.jpg'],
+    imagens: ['/images/products/progressivas_diversas/progressivas_diversas_12.png'],
     badge: 'DIAMOND',
     pricing: {
       basePrice: 19.64,
@@ -365,7 +365,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Sistema Progressivo Completo 300ml',
     marca: 'Pro System',
     descricao: 'Sistema Progressivo 3 passos 300ml - Kit completo profissional. Pré-shampoo + Progressiva + Máscara seladora para resultado perfeito.',
-    imagens: ['/images/products/progressivas/sistema-completo.jpg'],
+    imagens: ['/images/products/progressivas_diversas/progressivas_diversas_13.png'],
     badge: 'KIT COMPLETO',
     pricing: {
       basePrice: 18.18,
@@ -388,7 +388,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'BTX Ultra 250g',
     marca: 'Ultra Line',
     descricao: 'BTX Ultra 250g - Resultado intenso máximo. Fórmula ultra concentrada para transformações dramáticas em cabelos muito danificados.',
-    imagens: ['/images/products/btx/ultra-250g.jpg'],
+    imagens: ['/images/products/botox/botox_7.png'],
     badge: 'ULTRA INTENSO',
     pricing: {
       basePrice: 13.64,
@@ -413,7 +413,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Luxury Progressive Gold System 300ml',
     marca: 'Gold System',
     descricao: 'Progressiva Luxury Gold 300ml - Posicionamento alto luxo. Ouro coloidal 24k + ácido hialurônico para resultado de salão VIP.',
-    imagens: ['/images/products/progressivas/luxury-gold.jpg'],
+    imagens: ['/images/products/progressivas_diversas/progressivas_diversas_14.png'],
     badge: 'LUXO',
     pricing: {
       basePrice: 20.36,
@@ -436,7 +436,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Professional BTX Advanced Pro 250g',
     marca: 'Advanced Pro',
     descricao: 'BTX Professional Advanced 250g - Fórmula profissional exclusiva. Desenvolvido para cabeleireiros exigentes, resultado de alta performance.',
-    imagens: ['/images/products/btx/professional-advanced.jpg'],
+    imagens: ['/images/products/botox/botox_8.png'],
     badge: 'PRO',
     pricing: {
       basePrice: 13.27,
@@ -459,7 +459,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Premium BTX Diamond Collection 250g',
     marca: 'Diamond Collection',
     descricao: 'BTX Premium Diamond 250g - Coleção especial diamante. Partículas de diamante + ceramidas para brilho espelhado duradouro.',
-    imagens: ['/images/products/btx/premium-diamond.jpg'],
+    imagens: ['/images/products/botox/botox_9.png'],
     badge: 'DIAMOND',
     pricing: {
       basePrice: 13.82,
@@ -482,7 +482,7 @@ export const progressivasProducts: ProgressivaProduct[] = [
     nome: 'Royal Progressive Platinum System 300ml',
     marca: 'Platinum System',
     descricao: 'Progressiva Royal Platinum 300ml - Top de linha absoluto. Platina coloidal + caviar + trufa negra para transformação imperial.',
-    imagens: ['/images/products/progressivas/royal-platinum.jpg'],
+    imagens: ['/images/products/progressivas_diversas/progressivas_diversas_15.png'],
     badge: 'ROYAL',
     pricing: {
       basePrice: 20.91,
