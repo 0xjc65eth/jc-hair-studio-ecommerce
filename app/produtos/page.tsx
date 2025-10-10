@@ -1,37 +1,37 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Button } from '../../components/ui/Button';
 import ProductCard from '../../components/products/SimpleProductCard';
 import { ShoppingBag, Search, Filter } from 'lucide-react';
 import { getAllAvailableProducts } from '../../lib/services/productResolver';
 
-// Get all products from resolver
-const allProducts = getAllAvailableProducts();
-
-// Filter products by category
-const progressivasProducts = allProducts.filter(p =>
-  p.category === 'Progressivas & BTX' ||
-  p.category === 'progressivas' ||
-  (p.name && (p.name.toLowerCase().includes('progressiva') ||
-              p.name.toLowerCase().includes('keratin') ||
-              p.name.toLowerCase().includes('alisamento')))
-);
-
-const tratamentosProducts = allProducts.filter(p =>
-  p.category === 'Botox Capilar' ||
-  p.category === 'Tratamento Capilar' ||
-  p.category === 'tratamentos' ||
-  (p.name && (p.name.toLowerCase().includes('botox') ||
-              p.name.toLowerCase().includes('hidrata') ||
-              p.name.toLowerCase().includes('máscara') ||
-              p.name.toLowerCase().includes('tratamento')))
-);
-
 export default function ProdutosPage() {
   const [activeTab, setActiveTab] = useState('progressivas');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+  // Get all products from resolver inside component
+  const allProducts = useMemo(() => getAllAvailableProducts(), []);
+
+  // Filter products by category
+  const progressivasProducts = useMemo(() => allProducts.filter(p =>
+    p.category === 'Progressivas & BTX' ||
+    p.category === 'progressivas' ||
+    (p.name && (p.name.toLowerCase().includes('progressiva') ||
+                p.name.toLowerCase().includes('keratin') ||
+                p.name.toLowerCase().includes('alisamento')))
+  ), [allProducts]);
+
+  const tratamentosProducts = useMemo(() => allProducts.filter(p =>
+    p.category === 'Botox Capilar' ||
+    p.category === 'Tratamento Capilar' ||
+    p.category === 'tratamentos' ||
+    (p.name && (p.name.toLowerCase().includes('botox') ||
+                p.name.toLowerCase().includes('hidrata') ||
+                p.name.toLowerCase().includes('máscara') ||
+                p.name.toLowerCase().includes('tratamento')))
+  ), [allProducts]);
 
   const currentProducts = activeTab === 'progressivas'
     ? progressivasProducts
