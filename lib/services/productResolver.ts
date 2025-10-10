@@ -507,29 +507,31 @@ export class ProductResolver {
   }
 
   // Get all available products from all sources
+  // PRIORITY ORDER: Products with European pricing first (from JSON)
   getAllAvailableProducts(): UnifiedProduct[] {
     const allProducts: UnifiedProduct[] = [];
 
-    // Static products
-    allProducts.push(...this.getAllStaticProducts());
+    // PRIORITY 1: Category products (JSON with European pricing)
+    const categoryProducts = categories.flatMap(category => category.products);
+    categoryProducts.forEach(product => {
+      allProducts.push(this.normalizeProduct(product, 'categories'));
+    });
 
-    // Makeup products
-    const makeupProducts = getAllMakeupProducts();
-    makeupProducts.forEach(product => {
-      // Avoid duplicates (check if already exists)
+    // PRIORITY 2: Static products (only if not already in categories)
+    const staticProducts = this.getAllStaticProducts();
+    staticProducts.forEach(product => {
       const exists = allProducts.some(p => p.id === product.id);
       if (!exists) {
-        allProducts.push(this.normalizeProduct(product, 'makeup'));
+        allProducts.push(product);
       }
     });
 
-    // Category products
-    const categoryProducts = categories.flatMap(category => category.products);
-    categoryProducts.forEach(product => {
-      // Avoid duplicates (check if already exists)
+    // PRIORITY 3: Makeup products
+    const makeupProducts = getAllMakeupProducts();
+    makeupProducts.forEach(product => {
       const exists = allProducts.some(p => p.id === product.id);
       if (!exists) {
-        allProducts.push(this.normalizeProduct(product, 'categories'));
+        allProducts.push(this.normalizeProduct(product, 'makeup'));
       }
     });
 
