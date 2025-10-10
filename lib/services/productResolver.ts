@@ -370,15 +370,14 @@ export class ProductResolver {
     if (!product && (productId.includes('cadiveu') || productId.includes('brasil-cacau') ||
                      productId.includes('progressiva') || productId.includes('btx') ||
                      productId.includes('forever-liss') || productId.includes('cocochoco'))) {
-      if (isDev) {
-        console.log(`🎯 ProductResolver: Progressiva pattern detected, searching progressivas...`);
-      }
+      console.log(`🎯 ProductResolver: Progressiva pattern detected for "${productId}", searching in ${progressivasProducts.length} progressivas...`);
       product = progressivasProducts.find(p => p.id === productId);
       if (product) {
         source = 'progressivas-validated';
-        if (isDev) {
-          console.log(`✅ ProductResolver: Found progressiva product - ${product.nome}`);
-        }
+        console.log(`✅ ProductResolver: Found progressiva product - ${product.nome}`);
+      } else {
+        console.log(`❌ ProductResolver: Progressiva "${productId}" not found in progressivasProducts`);
+        console.log(`   Available IDs:`, progressivasProducts.map(p => p.id).slice(0, 5).join(', '), '...');
       }
     }
 
