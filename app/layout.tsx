@@ -113,7 +113,7 @@ export const metadata: Metadata = {
     description: 'Mega hair brasileiro 100% humano, progressivas Vogue originais, maquiagem brasileira premium. Tradição familiar +40 anos. Entrega Europa.',
     images: ['/twitter-image-brasil.jpg'],
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
+  metadataBase: new URL('https://jchairstudios62.xyz'),
   manifest: '/manifest.json',
   icons: {
     icon: [

@@ -116,9 +116,14 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+
+  // Validar locale - apenas códigos de idioma válidos
+  const validLocales = ['pt', 'pt-PT', 'pt-BR', 'en', 'en-US', 'en-GB', 'es', 'es-ES', 'fr', 'fr-FR', 'de', 'de-DE', 'it', 'it-IT', 'nl', 'nl-NL', 'nl-BE'];
+  const langAttribute = validLocales.includes(locale) ? locale : 'pt';
+
   return (
     <html
-      lang={locale || 'pt-PT'}
+      lang={langAttribute}
       className={`${inter.variable} ${playfair.variable}`}
     >
       <head>
