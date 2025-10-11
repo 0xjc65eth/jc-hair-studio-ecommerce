@@ -109,6 +109,128 @@ export const organizationSchema = {
     'Brazilian Cosmetics',
     'Professional Hair Products',
     'Curly Hair Specialists'
+  ],
+
+  // Product Catalog (Featured Products)
+  hasOfferCatalog: [
+    {
+      '@type': 'OfferCatalog',
+      name: 'Mega Hair Brasileiro',
+      description: 'Extensões de cabelo 100% humano brasileiro',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Mega Hair Brasileiro 100% Humano',
+            description: 'Extensões de cabelo 100% humano brasileiro premium com +40 anos de tradição. Mega hair natural de alta qualidade para alongamento e volume.',
+            image: 'https://jchairstudios62.xyz/images/mega-hair-brasileiro.jpg',
+            url: 'https://jchairstudios62.xyz/mega-hair-brasileiro',
+            category: 'Hair Extensions',
+            brand: {
+              '@type': 'Brand',
+              name: 'JC Hair Studio\'s 62'
+            },
+            countryOfOrigin: {
+              '@type': 'Country',
+              name: 'BR'
+            },
+            material: 'Human Hair',
+            sku: 'MEGAHAIR-BR-001',
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'EUR',
+              price: '185.00',
+              priceValidUntil: '2026-12-31',
+              availability: 'https://schema.org/InStock',
+              url: 'https://jchairstudios62.xyz/mega-hair-brasileiro',
+              seller: {
+                '@type': 'Organization',
+                name: 'JC Hair Studio\'s 62'
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      '@type': 'OfferCatalog',
+      name: 'Progressivas Brasileiras',
+      description: 'Progressivas e tratamentos capilares brasileiros premium',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Progressiva Vogue Original',
+            description: 'Progressiva Vogue original brasileira para alisamento profissional duradouro. Tratamento capilar premium com tecnologia brasileira avançada.',
+            image: 'https://jchairstudios62.xyz/images/progressiva-vogue.jpg',
+            url: 'https://jchairstudios62.xyz/progressiva-vogue-portugal',
+            category: 'Hair Treatment',
+            brand: {
+              '@type': 'Brand',
+              name: 'Vogue'
+            },
+            countryOfOrigin: {
+              '@type': 'Country',
+              name: 'BR'
+            },
+            sku: 'VOGUE-PROG-001',
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'EUR',
+              price: '117.50',
+              priceValidUntil: '2026-12-31',
+              availability: 'https://schema.org/InStock',
+              url: 'https://jchairstudios62.xyz/progressiva-vogue-portugal',
+              seller: {
+                '@type': 'Organization',
+                name: 'JC Hair Studio\'s 62'
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      '@type': 'OfferCatalog',
+      name: 'Maquiagem Brasileira',
+      description: 'Cosméticos e maquiagem das melhores marcas brasileiras',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Maquiagem Brasileira Premium',
+            description: 'Maquiagem brasileira original das melhores marcas: Natura, Eudora, Avon, Ruby Rose. Cosméticos premium do Brasil com entrega em toda Europa.',
+            image: 'https://jchairstudios62.xyz/images/maquiagem-brasileira.jpg',
+            url: 'https://jchairstudios62.xyz/maquiagens',
+            category: 'Cosmetics',
+            brand: {
+              '@type': 'Brand',
+              name: 'Marcas Brasileiras'
+            },
+            countryOfOrigin: {
+              '@type': 'Country',
+              name: 'BR'
+            },
+            sku: 'MAKEUP-BR-001',
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'EUR',
+              price: '107.50',
+              priceValidUntil: '2026-12-31',
+              availability: 'https://schema.org/InStock',
+              url: 'https://jchairstudios62.xyz/maquiagens',
+              seller: {
+                '@type': 'Organization',
+                name: 'JC Hair Studio\'s 62'
+              }
+            }
+          }
+        }
+      ]
+    }
   ]
 };
 
