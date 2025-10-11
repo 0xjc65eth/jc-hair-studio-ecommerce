@@ -1,0 +1,45 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Produtos Capilares Brasileiros | Progressivas e Tratamentos | JC Hair Studio\'s 62',
+  description: 'Catálogo completo de produtos capilares brasileiros: progressivas Vogue, BTX capilar, tratamentos profissionais. +40 anos de tradição. Entrega Europa.',
+  keywords: [
+    'progressiva vogue portugal',
+    'btx capilar europa',
+    'tratamento capilar brasileiro',
+    'produtos capilares brasil',
+    'progressiva brasileira portugal',
+    'botox capilar',
+    'alisamento brasileiro'
+  ],
+  openGraph: {
+    title: 'Produtos Capilares Brasileiros | JC Hair Studio\'s 62',
+    description: 'Progressivas, BTX e tratamentos capilares brasileiros premium. Entrega Europa.',
+    url: 'https://jchairstudios62.xyz/produtos',
+    images: [
+      {
+        url: '/images/produtos-capilares.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Produtos Capilares Brasileiros Premium',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://jchairstudios62.xyz/produtos',
+    languages: {
+      'pt-PT': 'https://jchairstudios62.xyz/produtos',
+      'en': 'https://jchairstudios62.xyz/en/products',
+      'es': 'https://jchairstudios62.xyz/es/productos',
+      'fr': 'https://jchairstudios62.xyz/fr/produits',
+    },
+  },
+};
+
+export default function ProdutosLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
+}

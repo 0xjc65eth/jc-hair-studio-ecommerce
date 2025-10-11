@@ -96,8 +96,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'verification-code',
   },
+  // REMOVED: canonical tag from layout - each page should define its own
+  // This prevents all pages from pointing to homepage
   alternates: {
-    canonical: 'https://jchairstudios62.xyz',
     languages: {
       'pt-PT': 'https://jchairstudios62.xyz/pt-PT',
       'en': 'https://jchairstudios62.xyz/en',

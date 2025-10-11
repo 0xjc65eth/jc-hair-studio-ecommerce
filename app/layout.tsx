@@ -138,10 +138,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://jchairstudios62.xyz',
     languages: {
-      'pt-PT': '/pt',
-      'en-US': '/en', 
-      'es-ES': '/es',
-      'fr-FR': '/fr',
+      'pt-PT': 'https://jchairstudios62.xyz/pt',
+      'en-US': 'https://jchairstudios62.xyz/en',
+      'es-ES': 'https://jchairstudios62.xyz/es',
+      'fr-FR': 'https://jchairstudios62.xyz/fr',
     },
   },
 };
@@ -435,14 +435,30 @@ export default function RootLayout({ children }: RootLayoutProps) {
                       itemOffered: {
                         '@type': 'Product',
                         name: 'Mega Hair Brasileiro 100% Humano',
+                        description: 'Extensões de cabelo 100% humano brasileiro premium com +40 anos de tradição. Mega hair natural de alta qualidade para alongamento e volume.',
+                        image: 'https://jchairstudios62.xyz/images/mega-hair-brasileiro.jpg',
+                        url: 'https://jchairstudios62.xyz/mega-hair-brasileiro',
                         category: 'Hair Extensions',
-                        brand: 'JC Hair Studio\'s 62',
-                        countryOfOrigin: 'BR',
-                        material: 'Human Hair'
+                        brand: {
+                          '@type': 'Brand',
+                          name: 'JC Hair Studio\'s 62'
+                        },
+                        countryOfOrigin: {
+                          '@type': 'Country',
+                          name: 'BR'
+                        },
+                        material: 'Human Hair',
+                        sku: 'MEGAHAIR-BR-001'
                       },
                       priceCurrency: 'EUR',
-                      priceRange: '€85-€285',
-                      availability: 'https://schema.org/InStock'
+                      price: '185.00',
+                      priceValidUntil: '2026-12-31',
+                      availability: 'https://schema.org/InStock',
+                      url: 'https://jchairstudios62.xyz/mega-hair-brasileiro',
+                      seller: {
+                        '@type': 'Organization',
+                        name: 'JC Hair Studio\'s 62'
+                      }
                     }
                   ]
                 },
@@ -456,13 +472,29 @@ export default function RootLayout({ children }: RootLayoutProps) {
                       itemOffered: {
                         '@type': 'Product',
                         name: 'Progressiva Vogue Original',
+                        description: 'Progressiva Vogue original brasileira para alisamento profissional duradouro. Tratamento capilar premium com tecnologia brasileira avançada.',
+                        image: 'https://jchairstudios62.xyz/images/progressiva-vogue.jpg',
+                        url: 'https://jchairstudios62.xyz/progressiva-vogue-portugal',
                         category: 'Hair Treatment',
-                        brand: 'Vogue',
-                        countryOfOrigin: 'BR'
+                        brand: {
+                          '@type': 'Brand',
+                          name: 'Vogue'
+                        },
+                        countryOfOrigin: {
+                          '@type': 'Country',
+                          name: 'BR'
+                        },
+                        sku: 'VOGUE-PROG-001'
                       },
                       priceCurrency: 'EUR',
-                      priceRange: '€45-€190',
-                      availability: 'https://schema.org/InStock'
+                      price: '117.50',
+                      priceValidUntil: '2026-12-31',
+                      availability: 'https://schema.org/InStock',
+                      url: 'https://jchairstudios62.xyz/progressiva-vogue-portugal',
+                      seller: {
+                        '@type': 'Organization',
+                        name: 'JC Hair Studio\'s 62'
+                      }
                     }
                   ]
                 },
@@ -476,12 +508,29 @@ export default function RootLayout({ children }: RootLayoutProps) {
                       itemOffered: {
                         '@type': 'Product',
                         name: 'Maquiagem Brasileira Premium',
+                        description: 'Maquiagem brasileira original das melhores marcas: Natura, Eudora, Avon, Ruby Rose. Cosméticos premium do Brasil com entrega em toda Europa.',
+                        image: 'https://jchairstudios62.xyz/images/maquiagem-brasileira.jpg',
+                        url: 'https://jchairstudios62.xyz/maquiagens',
                         category: 'Cosmetics',
-                        countryOfOrigin: 'BR'
+                        brand: {
+                          '@type': 'Brand',
+                          name: 'Marcas Brasileiras'
+                        },
+                        countryOfOrigin: {
+                          '@type': 'Country',
+                          name: 'BR'
+                        },
+                        sku: 'MAKEUP-BR-001'
                       },
                       priceCurrency: 'EUR',
-                      priceRange: '€25-€190',
-                      availability: 'https://schema.org/InStock'
+                      price: '107.50',
+                      priceValidUntil: '2026-12-31',
+                      availability: 'https://schema.org/InStock',
+                      url: 'https://jchairstudios62.xyz/maquiagens',
+                      seller: {
+                        '@type': 'Organization',
+                        name: 'JC Hair Studio\'s 62'
+                      }
                     }
                   ]
                 }
