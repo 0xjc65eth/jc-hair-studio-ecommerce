@@ -115,6 +115,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://jchairstudios62.xyz'),
   manifest: '/manifest.json',
+  // Force metadata regeneration - updated 2025-01-12
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
