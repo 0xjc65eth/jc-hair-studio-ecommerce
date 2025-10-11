@@ -67,9 +67,9 @@
           "finalidade": "Tratamento premium com ouro",
           "volume": "250ml",
           "pricing": {
-            "basePrice": 43.30,
-            "ourPrice": 43.30,
-            "discountPrice": 43.30,
+            "basePrice": 43.3,
+            "ourPrice": 43.3,
+            "discountPrice": 43.3,
             "savings": 0,
             "margin": "0%",
             "competitive": "Premium gold treatment"
@@ -104,9 +104,9 @@
           "finalidade": "Alisamento profissional brasileiro",
           "volume": "1000ml",
           "pricing": {
-            "basePrice": 234.90,
-            "ourPrice": 234.90,
-            "discountPrice": 234.90,
+            "basePrice": 234.9,
+            "ourPrice": 234.9,
+            "discountPrice": 234.9,
             "savings": 0,
             "margin": "0%",
             "competitive": "Premium Brazilian keratin"
@@ -141,9 +141,9 @@
           "finalidade": "Sistema profissional completo",
           "volume": "1000ml",
           "pricing": {
-            "basePrice": 219.90,
-            "ourPrice": 219.90,
-            "discountPrice": 219.90,
+            "basePrice": 219.9,
+            "ourPrice": 219.9,
+            "discountPrice": 219.9,
             "savings": 0,
             "margin": "0%",
             "competitive": "Professional system"
@@ -178,9 +178,9 @@
           "finalidade": "Relaxamento progressivo",
           "volume": "500ml",
           "pricing": {
-            "basePrice": 84.90,
-            "ourPrice": 84.90,
-            "discountPrice": 84.90,
+            "basePrice": 84.9,
+            "ourPrice": 84.9,
+            "discountPrice": 84.9,
             "savings": 0,
             "margin": "0%",
             "competitive": "Smoothing system"
@@ -215,10 +215,10 @@
           "finalidade": "Alisamento profissional de longa duração",
           "volume": "1000ml",
           "pricing": {
-            "basePrice": 195.60,
-            "ourPrice": 195.60,
-            "discountPrice": 175.90,
-            "savings": 19.70,
+            "basePrice": 195.6,
+            "ourPrice": 195.6,
+            "discountPrice": 175.9,
+            "savings": 19.7,
             "margin": "10%",
             "competitive": "Preço competitivo vs mercado europeu"
           },
@@ -1039,7 +1039,7 @@
           "cor": "Cor premium 02",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 8.00,
+            "basePrice": 8,
             "ourPrice": 22,
             "discountPrice": 17.6,
             "savings": 4.4,
@@ -1279,7 +1279,7 @@
           "cor": "Cor master 08",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 9.80,
+            "basePrice": 9.8,
             "ourPrice": 26.95,
             "discountPrice": 21.56,
             "savings": 5.39,
@@ -3633,7 +3633,7 @@
           "finalidade": "Coloração professional com tecnologia anti-fade",
           "volume": "100ml",
           "pricing": {
-            "basePrice": 10.60,
+            "basePrice": 10.6,
             "ourPrice": 29.15,
             "discountPrice": 23.32,
             "savings": 5.83,
@@ -3718,7 +3718,7 @@
           "finalidade": "Hidratação profunda para cabelos ressecados",
           "volume": "500g",
           "pricing": {
-            "basePrice": 13.50,
+            "basePrice": 13.5,
             "ourPrice": 16.5,
             "discountPrice": 13.2,
             "savings": 3.3,
@@ -3835,7 +3835,7 @@
           "finalidade": "Reconstrução da fibra capilar",
           "volume": "200ml",
           "pricing": {
-            "basePrice": 19.80,
+            "basePrice": 19.8,
             "ourPrice": 24.2,
             "discountPrice": 19.36,
             "savings": 4.84,
@@ -3913,7 +3913,7 @@
           "finalidade": "Fortalecimento e prevenção da quebra",
           "volume": "12ml x 6 ampolas",
           "pricing": {
-            "basePrice": 22.50,
+            "basePrice": 22.5,
             "ourPrice": 27.5,
             "discountPrice": 22,
             "savings": 5.5,
@@ -4108,7 +4108,7 @@
           "finalidade": "Estimular crescimento capilar",
           "volume": "120ml",
           "pricing": {
-            "basePrice": 23.40,
+            "basePrice": 23.4,
             "ourPrice": 28.6,
             "discountPrice": 22.88,
             "savings": 5.72,
@@ -4303,7 +4303,7 @@
           "finalidade": "Reconstrução imediata de emergência",
           "volume": "15ml x 4 ampolas",
           "pricing": {
-            "basePrice": 28.80,
+            "basePrice": 28.8,
             "ourPrice": 35.2,
             "discountPrice": 28.16,
             "savings": 7.04,
