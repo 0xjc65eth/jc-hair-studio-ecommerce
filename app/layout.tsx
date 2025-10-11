@@ -448,16 +448,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
                           name: 'BR'
                         },
                         material: 'Human Hair',
-                        sku: 'MEGAHAIR-BR-001'
-                      },
-                      priceCurrency: 'EUR',
-                      price: '185.00',
-                      priceValidUntil: '2026-12-31',
-                      availability: 'https://schema.org/InStock',
-                      url: 'https://jchairstudios62.xyz/mega-hair-brasileiro',
-                      seller: {
-                        '@type': 'Organization',
-                        name: 'JC Hair Studio\'s 62'
+                        sku: 'MEGAHAIR-BR-001',
+                        offers: {
+                          '@type': 'Offer',
+                          priceCurrency: 'EUR',
+                          price: '185.00',
+                          priceValidUntil: '2026-12-31',
+                          availability: 'https://schema.org/InStock',
+                          url: 'https://jchairstudios62.xyz/mega-hair-brasileiro',
+                          seller: {
+                            '@type': 'Organization',
+                            name: 'JC Hair Studio\'s 62'
+                          }
+                        }
                       }
                     }
                   ]
@@ -484,16 +487,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
                           '@type': 'Country',
                           name: 'BR'
                         },
-                        sku: 'VOGUE-PROG-001'
-                      },
-                      priceCurrency: 'EUR',
-                      price: '117.50',
-                      priceValidUntil: '2026-12-31',
-                      availability: 'https://schema.org/InStock',
-                      url: 'https://jchairstudios62.xyz/progressiva-vogue-portugal',
-                      seller: {
-                        '@type': 'Organization',
-                        name: 'JC Hair Studio\'s 62'
+                        sku: 'VOGUE-PROG-001',
+                        offers: {
+                          '@type': 'Offer',
+                          priceCurrency: 'EUR',
+                          price: '117.50',
+                          priceValidUntil: '2026-12-31',
+                          availability: 'https://schema.org/InStock',
+                          url: 'https://jchairstudios62.xyz/progressiva-vogue-portugal',
+                          seller: {
+                            '@type': 'Organization',
+                            name: 'JC Hair Studio\'s 62'
+                          }
+                        }
                       }
                     }
                   ]
@@ -520,16 +526,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
                           '@type': 'Country',
                           name: 'BR'
                         },
-                        sku: 'MAKEUP-BR-001'
-                      },
-                      priceCurrency: 'EUR',
-                      price: '107.50',
-                      priceValidUntil: '2026-12-31',
-                      availability: 'https://schema.org/InStock',
-                      url: 'https://jchairstudios62.xyz/maquiagens',
-                      seller: {
-                        '@type': 'Organization',
-                        name: 'JC Hair Studio\'s 62'
+                        sku: 'MAKEUP-BR-001',
+                        offers: {
+                          '@type': 'Offer',
+                          priceCurrency: 'EUR',
+                          price: '107.50',
+                          priceValidUntil: '2026-12-31',
+                          availability: 'https://schema.org/InStock',
+                          url: 'https://jchairstudios62.xyz/maquiagens',
+                          seller: {
+                            '@type': 'Organization',
+                            name: 'JC Hair Studio\'s 62'
+                          }
+                        }
                       }
                     }
                   ]
