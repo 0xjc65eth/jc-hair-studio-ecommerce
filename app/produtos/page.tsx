@@ -14,23 +14,18 @@ export default function ProdutosPage() {
   // Get all products from resolver inside component
   const allProducts = useMemo(() => getAllAvailableProducts(), []);
 
-  // Filter products by category
+  // Filter products by category (using exact category field)
   const progressivasProducts = useMemo(() => allProducts.filter(p =>
+    p.category === 'Progressivas e BTX' ||
     p.category === 'Progressivas & BTX' ||
-    p.category === 'progressivas' ||
-    (p.name && (p.name.toLowerCase().includes('progressiva') ||
-                p.name.toLowerCase().includes('keratin') ||
-                p.name.toLowerCase().includes('alisamento')))
+    p.category === 'progressivas'
   ), [allProducts]);
 
   const tratamentosProducts = useMemo(() => allProducts.filter(p =>
     p.category === 'Botox Capilar' ||
     p.category === 'Tratamento Capilar' ||
-    p.category === 'tratamentos' ||
-    (p.name && (p.name.toLowerCase().includes('botox') ||
-                p.name.toLowerCase().includes('hidrata') ||
-                p.name.toLowerCase().includes('máscara') ||
-                p.name.toLowerCase().includes('tratamento')))
+    p.category === 'Tratamentos Capilares' ||
+    p.category === 'tratamentos'
   ), [allProducts]);
 
   const currentProducts = activeTab === 'progressivas'

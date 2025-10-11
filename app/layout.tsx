@@ -279,7 +279,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
 
         {/* Google Search Console Verification */}
-        <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || 'your-verification-code'} />
+        <meta name="google-site-verification" content="Sh-CUmRpluge16satbghZod1kZ9M0zLNk2px9OaCuio" />
 
         {/* Bing Webmaster Tools */}
         <meta name="msvalidate.01" content={process.env.NEXT_PUBLIC_BING_VERIFICATION || 'your-bing-verification'} />

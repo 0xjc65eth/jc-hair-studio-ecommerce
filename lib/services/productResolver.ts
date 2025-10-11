@@ -12,6 +12,7 @@ import { allPerfumesWepink, getPerfumeById } from '../data/perfumesWepink';
 import { allPerfumesOBoticario, getPerfumeOBoticarioById } from '../data/perfumesOBoticario';
 import { allPerfumesData } from '../data/perfumesProducts';
 import { progressivasProducts } from '../data/progressivasProducts';
+import { allEuropeanProducts, getEuropeanProductById } from '../data/europeanPricingProducts';
 
 interface UnifiedProduct {
   id: string;
@@ -232,6 +233,19 @@ export class ProductResolver {
     const allPossibleIds = this.getAllMappedIds(productId);
     if (isDev) {
       console.log(`🔗 ProductResolver: Mapped IDs for "${productId}": [${allPossibleIds.join(', ')}]`);
+    }
+
+    // PRIORITY 0: European pricing products (highest priority)
+    product = getEuropeanProductById(productId);
+    if (product) {
+      source = 'european-pricing';
+      if (isDev) {
+        console.log(`✅ ProductResolver: Found European pricing product - ${product.name}`);
+      }
+      const normalized = this.normalizeProduct(product, source);
+      // Cache the product
+      this.productCache.set(productId, normalized);
+      return normalized;
     }
 
     // ENHANCED METHOD 1: Strict namespace resolution for numeric IDs
@@ -511,10 +525,18 @@ export class ProductResolver {
   getAllAvailableProducts(): UnifiedProduct[] {
     const allProducts: UnifiedProduct[] = [];
 
+    // PRIORITY 0: European pricing products (from products-with-european-pricing.json)
+    allEuropeanProducts.forEach(product => {
+      allProducts.push(this.normalizeProduct(product, 'european-pricing'));
+    });
+
     // PRIORITY 1: Category products (JSON with European pricing)
     const categoryProducts = categories.flatMap(category => category.products);
     categoryProducts.forEach(product => {
-      allProducts.push(this.normalizeProduct(product, 'categories'));
+      const exists = allProducts.some(p => p.id === product.id);
+      if (!exists) {
+        allProducts.push(this.normalizeProduct(product, 'categories'));
+      }
     });
 
     // PRIORITY 2: Static products (only if not already in categories)
