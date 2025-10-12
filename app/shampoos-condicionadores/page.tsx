@@ -16,9 +16,13 @@ export const metadata: Metadata = {
     'condicionador hidratante',
     'produtos capilares'
   ],
+  alternates: {
+    canonical: 'https://jchairstudios62.xyz/shampoos-condicionadores',
+  },
   openGraph: {
     title: 'Shampoos e Condicionadores Profissionais - 62 Beauty\'s 62',
     description: 'Produtos de limpeza e condicionamento profissionais para todos os tipos de cabelo',
+    url: 'https://jchairstudios62.xyz/shampoos-condicionadores',
     images: ['/images/categories/shampoos.jpg'],
   },
 };

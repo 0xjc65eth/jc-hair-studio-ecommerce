@@ -22,9 +22,13 @@ export const metadata: Metadata = {
     'tradição brasileira cabelo',
     'jc hair studio 62'
   ],
+  alternates: {
+    canonical: 'https://jchairstudios62.xyz/mega-hair-brasileiro',
+  },
   openGraph: {
     title: 'Mega Hair Brasileiro 100% Humano Premium | JC Hair Studio\'s 62',
     description: 'Mega hair brasileiro 100% humano liso, cacheado, ondulado. Qualidade premium, tradição +40 anos. Entrega em toda Europa.',
+    url: 'https://jchairstudios62.xyz/mega-hair-brasileiro',
     images: [{
       url: '/og-mega-hair-brasileiro.jpg',
       width: 1200,

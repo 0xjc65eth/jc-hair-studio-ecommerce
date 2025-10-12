@@ -17,9 +17,13 @@ export const metadata: Metadata = {
     'cabelo liso',
     'redução de volume'
   ],
+  alternates: {
+    canonical: 'https://jchairstudios62.xyz/progressivas-btx',
+  },
   openGraph: {
     title: 'Progressivas e BTX Capilares - 62 Beauty\'s 62',
     description: 'Progressivas e tratamentos de botox capilar para alisamento e nutrição profunda',
+    url: 'https://jchairstudios62.xyz/progressivas-btx',
     images: ['/images/categories/progressivas-btx.jpg'],
   },
 };
