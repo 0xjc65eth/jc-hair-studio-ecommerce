@@ -52,7 +52,8 @@
           ],
           "images": [
             "/images/products/progressivas_diversas/progressivas_diversas_1.JPG"
-          ]
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_2.JPG"
         },
         {
           "id": "cocochoco-gold-premium",
@@ -89,7 +90,8 @@
           ],
           "images": [
             "/images/products/progressivas_diversas/progressivas_diversas_2.JPG"
-          ]
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_3.JPG"
         },
         {
           "id": "nuance-liso-perfect",
@@ -126,7 +128,8 @@
           ],
           "images": [
             "/images/products/progressivas_diversas/progressivas_diversas_3.JPG"
-          ]
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_12.png"
         },
         {
           "id": "ineya-professional-keratin",
@@ -163,7 +166,8 @@
           ],
           "images": [
             "/images/products/progressivas_diversas/progressivas_diversas_4.JPG"
-          ]
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_13.png"
         },
         {
           "id": "relaxamento-keratin-smooth",
@@ -200,7 +204,8 @@
           ],
           "images": [
             "/images/products/progressivas_diversas/progressivas_diversas_5.JPG"
-          ]
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_14.png"
         },
         {
           "id": "cadiveu-professional-brasil-cacau-1l",
@@ -239,7 +244,8 @@
           ],
           "images": [
             "/images/products/cadiveu/cadiveu-1.png"
-          ]
+          ],
+          "image": "/images/products/cadiveu/cadiveu-1.png"
         },
         {
           "id": "cadiveu-professional-brasil-cacau-300ml",
@@ -278,7 +284,8 @@
           ],
           "images": [
             "/images/products/cadiveu/cadiveu-2.png"
-          ]
+          ],
+          "image": "/images/products/cadiveu/cadiveu-2.png"
         },
         {
           "id": "forever-liss-btx-zero-formol-250g",
@@ -317,7 +324,8 @@
           ],
           "images": [
             "/images/products/botox/botox_1.png"
-          ]
+          ],
+          "image": "/images/products/forever-liss/forever-liss-1.png"
         },
         {
           "id": "forever-liss-btx-zero-formol-1kg",
@@ -356,7 +364,8 @@
           ],
           "images": [
             "/images/products/botox/botox_2.png"
-          ]
+          ],
+          "image": "/images/products/forever-liss/forever-liss-2.png"
         },
         {
           "id": "btx-professional-premium-01",
@@ -395,7 +404,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/IMG-8737.png"
-          ]
+          ],
+          "image": "/images/products/botox/botox_1.png"
         },
         {
           "id": "progressiva-advanced-02",
@@ -434,7 +444,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/IMG-8739.png"
-          ]
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_15.png"
         },
         {
           "id": "btx-repair-intensive-03",
@@ -473,7 +484,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/IMG-8740.png"
-          ]
+          ],
+          "image": "/images/products/botox/botox_2.png"
         },
         {
           "id": "progressiva-keratin-04",
@@ -512,7 +524,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/IMG-8741.png"
-          ]
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_16.png"
         },
         {
           "id": "btx-collagen-boost-05",
@@ -551,7 +564,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/IMG-8748.png"
-          ]
+          ],
+          "image": "/images/products/botox/botox_3.png"
         },
         {
           "id": "progressiva-silk-protein-06",
@@ -590,7 +604,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/IMG-8752.png"
-          ]
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_17.png"
         },
         {
           "id": "btx-vitamin-complex-07",
@@ -629,7 +644,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/IMG-8753.png"
-          ]
+          ],
+          "image": "/images/products/botox/botox_4.png"
         },
         {
           "id": "progressiva-nano-technology-08",
@@ -668,7 +684,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/IMG-8757.png"
-          ]
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_18.png"
         },
         {
           "id": "btx-argan-oil-09",
@@ -707,7 +724,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/IMG-8758.png"
-          ]
+          ],
+          "image": "/images/products/botox/botox_5.png"
         },
         {
           "id": "progressiva-diamond-shine-10",
@@ -746,7 +764,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/IMG-8759.png"
-          ]
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_19.png"
         },
         {
           "id": "advanced-progressive-system-11",
@@ -784,7 +803,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"
-          ]
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_20.png"
         },
         {
           "id": "btx-ultra-reconstruction-12",
@@ -1393,7 +1413,7 @@
           "shortDesc": "Sistema advanced treatment recovery para cabelos severamente danificados",
           "description": "Sistema de tratamento advanced recovery especialmente desenvolvido para cabelos severamente danificados. Tecnologia molecular que reconstrói, nutre e protege os fios em profundidade.",
           "sku": "ADV-TREAT-REC-16",
-          "category": "Tratamentos Capilares",
+          "category": "Coloração Capilar",
           "subcategory": "Recovery System",
           "finalidade": "Recovery system para cabelos danificados",
           "volume": "300ml",
@@ -1431,7 +1451,7 @@
           "shortDesc": "Terapia intensive repair com partículas de ouro para reparação profunda",
           "description": "Terapia de reparação intensiva enriquecida com micropartículas de ouro. Oferece reparação profunda, nutrição intensa e brilho dourado aos cabelos. Tecnologia premium.",
           "sku": "INT-REPAIR-GOLD-17",
-          "category": "Tratamentos Capilares",
+          "category": "Coloração Capilar",
           "subcategory": "Repair Therapy",
           "finalidade": "Terapia repair intensiva com ouro",
           "volume": "250ml",
@@ -1469,7 +1489,7 @@
           "shortDesc": "Complexo professional nutrition platinum para nutrição máxima dos fios",
           "description": "Complexo de nutrição profissional platinum com ingredientes nobres. Oferece nutrição máxima, maciez extrema e proteção duradoura. Fórmula exclusiva para salões.",
           "sku": "PROF-NUTR-PLAT-18",
-          "category": "Tratamentos Capilares",
+          "category": "Coloração Capilar",
           "subcategory": "Nutrition Complex",
           "finalidade": "Complexo nutrition platinum professional",
           "volume": "500ml",
@@ -1507,7 +1527,7 @@
           "shortDesc": "Terapia ultra hydration diamond para hidratação profunda e brilho extremo",
           "description": "Terapia de hidratação ultra diamond com tecnologia de brilho extremo. Oferece hidratação profunda, elimina o frizz e proporciona brilho diamante aos cabelos.",
           "sku": "ULTRA-HYDR-DIAM-19",
-          "category": "Tratamentos Capilares",
+          "category": "Coloração Capilar",
           "subcategory": "Hydration Therapy",
           "finalidade": "Terapia hydration ultra com brilho diamond",
           "volume": "300ml",
@@ -1545,7 +1565,7 @@
           "shortDesc": "Sistema regenerative treatment premium para regeneração total dos fios",
           "description": "Sistema de tratamento regenerativo premium que promove a regeneração total dos fios. Tecnologia avançada com células-tronco vegetais e aminoácidos essenciais.",
           "sku": "REGEN-TREAT-PREM-20",
-          "category": "Tratamentos Capilares",
+          "category": "Coloração Capilar",
           "subcategory": "Regenerative System",
           "finalidade": "Sistema regenerative premium com células-tronco",
           "volume": "250ml",
@@ -3702,282 +3722,9 @@
       "id": "tratamentos-capilares",
       "name": "Tratamentos Capilares",
       "slug": "tratamentos-capilares",
-      "description": "Produtos para hidratação, nutrição e reconstrução capilar",
+      "description": "Tratamentos capilares intensivos: hidratação, nutrição, reconstrução e controle de volume",
       "icon": "✨",
       "products": [
-        {
-          "id": "bio-extratus-hidratacao-intensiva",
-          "name": "Bio Extratus Hidratação Intensiva",
-          "slug": "bio-extratus-hidratacao-intensiva",
-          "brand": "Bio Extratus",
-          "shortDesc": "Máscara de hidratação intensiva para cabelos ressecados",
-          "description": "Tratamento intensivo de hidratação com extratos naturais. Ideal para cabelos ressecados e danificados.",
-          "sku": "BE-HID-INT-001",
-          "category": "Tratamentos Capilares",
-          "subcategory": "Hidratação",
-          "finalidade": "Hidratação profunda para cabelos ressecados",
-          "volume": "500g",
-          "pricing": {
-            "basePrice": 13.5,
-            "ourPrice": 16.5,
-            "discountPrice": 13.2,
-            "savings": 3.3,
-            "margin": "10%",
-            "competitive": "Estimativa baseada produtos brasileiros premium"
-          },
-          "tags": [
-            "hidratação",
-            "extratos naturais",
-            "cabelo ressecado",
-            "brasileiro"
-          ],
-          "rating": 4.6,
-          "reviewsCount": 189,
-          "inStock": true,
-          "stockQuantity": 45,
-          "weight": 500,
-          "labels": [
-            "HIDRATAÇÃO",
-            "NATURAL"
-          ],
-          "images": [
-            "/images/products/bio_extratus_produtos_/bio_extratus_produtos__1.PNG"
-          ]
-        },
-        {
-          "id": "premium-hidratacao-intensiva-1",
-          "name": "Hidratação Premium Intensiva Advanced",
-          "slug": "premium-hidratacao-intensiva-1",
-          "brand": "Premium Hair",
-          "shortDesc": "Tratamento de hidratação profunda com tecnologia avançada",
-          "description": "Máscara de hidratação intensiva com fórmula exclusiva que repõe nutrientes perdidos e restaura a maciez natural dos cabelos.",
-          "sku": "PHR-HID-001",
-          "category": "Tratamentos Capilares",
-          "subcategory": "Hidratação",
-          "finalidade": "Hidratação profunda e restauração capilar",
-          "volume": "300g",
-          "pricing": {
-            "basePrice": 16.65,
-            "ourPrice": 20.35,
-            "discountPrice": 16.28,
-            "savings": 4.07,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
-          },
-          "tags": [
-            "hidratação",
-            "premium",
-            "restauração",
-            "cabelo seco"
-          ],
-          "rating": 4.8,
-          "reviewsCount": 324,
-          "inStock": true,
-          "stockQuantity": 42,
-          "weight": 300,
-          "labels": [
-            "HIDRATAÇÃO",
-            "PREMIUM"
-          ],
-          "images": [
-            "/images/products/produtos_diversos/155-B6-F03-6326-45-F1-B128-C98-F218-F2-A23.png"
-          ]
-        },
-        {
-          "id": "nutricao-avancada-2",
-          "name": "Nutrição Avançada Repair System",
-          "slug": "nutricao-avancada-2",
-          "brand": "Advanced Care",
-          "shortDesc": "Sistema de nutrição profunda para cabelos danificados",
-          "description": "Tratamento nutritivo intensivo com complexo de vitaminas e proteínas que restaura a vitalidade dos fios danificados.",
-          "sku": "AC-NUT-002",
-          "category": "Tratamentos Capilares",
-          "subcategory": "Nutrição",
-          "finalidade": "Nutrição profunda e reparação de danos",
-          "volume": "250ml",
-          "pricing": {
-            "basePrice": 15.12,
-            "ourPrice": 18.48,
-            "discountPrice": 14.78,
-            "savings": 3.7,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
-          },
-          "tags": [
-            "nutrição",
-            "vitaminas",
-            "proteínas",
-            "reparação"
-          ],
-          "rating": 4.6,
-          "reviewsCount": 287,
-          "inStock": true,
-          "stockQuantity": 38,
-          "weight": 250,
-          "labels": [
-            "NUTRIÇÃO",
-            "REPARAÇÃO"
-          ],
-          "images": [
-            "/images/products/produtos_diversos/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"
-          ]
-        },
-        {
-          "id": "reconstrucao-total-3",
-          "name": "Reconstrução Total Protein Complex",
-          "slug": "reconstrucao-total-3",
-          "brand": "Total Repair",
-          "shortDesc": "Reconstrução capilar com complexo proteico avançado",
-          "description": "Tratamento reconstructor intensivo que repõe proteínas essenciais e reconstrói a fibra capilar de dentro para fora.",
-          "sku": "TR-REC-003",
-          "category": "Tratamentos Capilares",
-          "subcategory": "Reconstrução",
-          "finalidade": "Reconstrução da fibra capilar",
-          "volume": "200ml",
-          "pricing": {
-            "basePrice": 19.8,
-            "ourPrice": 24.2,
-            "discountPrice": 19.36,
-            "savings": 4.84,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
-          },
-          "tags": [
-            "reconstrução",
-            "proteínas",
-            "fibra capilar",
-            "intensivo"
-          ],
-          "rating": 4.9,
-          "reviewsCount": 456,
-          "inStock": true,
-          "stockQuantity": 35,
-          "weight": 200,
-          "labels": [
-            "RECONSTRUÇÃO",
-            "PROTEICO"
-          ],
-          "images": [
-            "/images/products/produtos_diversos/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"
-          ]
-        },
-        {
-          "id": "mascara-nutritiva-4",
-          "name": "Máscara Nutritiva Argan & Karité",
-          "slug": "mascara-nutritiva-4",
-          "brand": "Natural Essence",
-          "shortDesc": "Máscara nutritiva com óleo de argan e manteiga de karité",
-          "description": "Máscara enriquecida com óleos naturais que nutrem profundamente e proporcionam brilho intenso aos cabelos.",
-          "sku": "NE-MAS-004",
-          "category": "Tratamentos Capilares",
-          "subcategory": "Nutrição",
-          "finalidade": "Nutrição natural com óleos essenciais",
-          "volume": "500g",
-          "pricing": {
-            "basePrice": 17.55,
-            "ourPrice": 21.45,
-            "discountPrice": 17.16,
-            "savings": 4.29,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
-          },
-          "tags": [
-            "argan",
-            "karité",
-            "natural",
-            "brilho"
-          ],
-          "rating": 4.7,
-          "reviewsCount": 398,
-          "inStock": true,
-          "stockQuantity": 44,
-          "weight": 500,
-          "labels": [
-            "NATURAL",
-            "BRILHO"
-          ],
-          "images": [
-            "/images/products/produtos_diversos/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png"
-          ]
-        },
-        {
-          "id": "ampola-fortalecimento-5",
-          "name": "Ampola Fortalecimento Intensivo",
-          "slug": "ampola-fortalecimento-5",
-          "brand": "Intensive Care",
-          "shortDesc": "Ampola concentrada para fortalecimento capilar",
-          "description": "Tratamento intensivo em ampola que fortalece os fios desde a raiz, prevenindo quebra e queda.",
-          "sku": "IC-AMP-005",
-          "category": "Tratamentos Capilares",
-          "subcategory": "Fortalecimento",
-          "finalidade": "Fortalecimento e prevenção da quebra",
-          "volume": "12ml x 6 ampolas",
-          "pricing": {
-            "basePrice": 22.5,
-            "ourPrice": 27.5,
-            "discountPrice": 22,
-            "savings": 5.5,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
-          },
-          "tags": [
-            "fortalecimento",
-            "ampola",
-            "concentrado",
-            "raiz"
-          ],
-          "rating": 4.8,
-          "reviewsCount": 267,
-          "inStock": true,
-          "stockQuantity": 28,
-          "weight": 100,
-          "labels": [
-            "FORTALECIMENTO",
-            "CONCENTRADO"
-          ],
-          "images": [
-            "/images/products/produtos_diversos/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png"
-          ]
-        },
-        {
-          "id": "serum-anti-frizz-6",
-          "name": "Sérum Anti-Frizz Controle Total",
-          "slug": "serum-anti-frizz-6",
-          "brand": "Smooth Control",
-          "shortDesc": "Sérum para controle de frizz e definição",
-          "description": "Sérum avançado que controla o frizz, define os cachos e proporciona proteção térmica durante a escovação.",
-          "sku": "SC-SER-006",
-          "category": "Tratamentos Capilares",
-          "subcategory": "Controle",
-          "finalidade": "Controle de frizz e definição",
-          "volume": "100ml",
-          "pricing": {
-            "basePrice": 13.05,
-            "ourPrice": 15.95,
-            "discountPrice": 12.76,
-            "savings": 3.19,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
-          },
-          "tags": [
-            "anti-frizz",
-            "definição",
-            "proteção térmica",
-            "cachos"
-          ],
-          "rating": 4.5,
-          "reviewsCount": 189,
-          "inStock": true,
-          "stockQuantity": 52,
-          "weight": 100,
-          "labels": [
-            "ANTI-FRIZZ",
-            "DEFINIÇÃO"
-          ],
-          "images": [
-            "/images/products/produtos_diversos/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png"
-          ]
-        },
         {
           "id": "oleo-capilar-7",
           "name": "Óleo Capilar Multivitamínico",
@@ -3991,12 +3738,12 @@
           "finalidade": "Nutrição vitamínica e brilho",
           "volume": "60ml",
           "pricing": {
-            "basePrice": 15.48,
-            "ourPrice": 18.92,
-            "discountPrice": 15.14,
-            "savings": 3.78,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
+            "basePrice": 23.22,
+            "ourPrice": 28.38,
+            "discountPrice": 22.71,
+            "savings": 0.51,
+            "margin": "50%",
+            "competitive": "Markup 50% aplicado para margem premium"
           },
           "tags": [
             "vitaminas",
@@ -4015,7 +3762,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"
-          ]
+          ],
+          "image": "/images/products/wepink-tratamentos/booster-repair-oleo.png"
         },
         {
           "id": "creme-leave-in-8",
@@ -4030,12 +3778,12 @@
           "finalidade": "Proteção solar e térmica",
           "volume": "150ml",
           "pricing": {
-            "basePrice": 12.42,
-            "ourPrice": 15.18,
-            "discountPrice": 12.14,
-            "savings": 3.04,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
+            "basePrice": 18.63,
+            "ourPrice": 22.77,
+            "discountPrice": 18.21,
+            "savings": 0.42,
+            "margin": "50%",
+            "competitive": "Markup 50% aplicado para margem premium"
           },
           "tags": [
             "leave-in",
@@ -4054,46 +3802,8 @@
           ],
           "images": [
             "/images/products/produtos_diversos/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png"
-          ]
-        },
-        {
-          "id": "mascara-reparadora-9",
-          "name": "Máscara Reparadora Pós-Química",
-          "slug": "mascara-reparadora-9",
-          "brand": "Chemical Repair",
-          "shortDesc": "Máscara especial para cabelos quimicamente tratados",
-          "description": "Máscara desenvolvida especificamente para reparar danos causados por processos químicos como relaxamento e alisamento.",
-          "sku": "CR-MAS-009",
-          "category": "Tratamentos Capilares",
-          "subcategory": "Reparação",
-          "finalidade": "Reparação pós-procedimentos químicos",
-          "volume": "400g",
-          "pricing": {
-            "basePrice": 19.35,
-            "ourPrice": 23.65,
-            "discountPrice": 18.92,
-            "savings": 4.73,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
-          },
-          "tags": [
-            "pós-química",
-            "reparação",
-            "alisamento",
-            "relaxamento"
           ],
-          "rating": 4.8,
-          "reviewsCount": 378,
-          "inStock": true,
-          "stockQuantity": 33,
-          "weight": 400,
-          "labels": [
-            "PÓS-QUÍMICA",
-            "REPARAÇÃO"
-          ],
-          "images": [
-            "/images/products/produtos_diversos/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png"
-          ]
+          "image": "/images/products/wepink-tratamentos/leave-in-multifuncional.png"
         },
         {
           "id": "tonico-crescimento-10",
@@ -4108,12 +3818,12 @@
           "finalidade": "Estimular crescimento capilar",
           "volume": "120ml",
           "pricing": {
-            "basePrice": 23.4,
-            "ourPrice": 28.6,
-            "discountPrice": 22.88,
-            "savings": 5.72,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
+            "basePrice": 35.1,
+            "ourPrice": 42.9,
+            "discountPrice": 34.32,
+            "savings": 0.78,
+            "margin": "50%",
+            "competitive": "Markup 50% aplicado para margem premium"
           },
           "tags": [
             "crescimento",
@@ -4132,202 +3842,326 @@
           ],
           "images": [
             "/images/products/produtos_diversos/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png"
-          ]
+          ],
+          "image": "/images/products/wepink-tratamentos/hair-tonic-tonico.png"
         },
         {
-          "id": "spray-termoativo-11",
-          "name": "Spray Termoativo Proteção Máxima",
-          "slug": "spray-termoativo-11",
-          "brand": "Heat Shield",
-          "shortDesc": "Spray protetor térmico para modelagem",
-          "description": "Protetor térmico em spray que forma uma barreira protetiva contra o calor de secadores, chapinhas e babyliss.",
-          "sku": "HS-SPR-011",
+          "id": "hairlife-super-cachos-solto-natural",
+          "name": "HairLife Super Cachos Solto e Natural",
+          "slug": "hairlife-super-cachos-solto-natural",
+          "brand": "HairLife",
+          "shortDesc": "Creme de relaxamento para cabelos cacheados com extrato de girassol. Fórmula que solta os cachos man...",
+          "description": "Creme de relaxamento para cabelos cacheados com extrato de girassol. Fórmula que solta os cachos mantendo movimento natural e brilho saudável.",
+          "sku": "HL-001",
           "category": "Tratamentos Capilares",
-          "subcategory": "Proteção",
-          "finalidade": "Proteção térmica para modelagem",
-          "volume": "200ml",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Super Cachos",
+          "volume": "Kit Completo",
           "pricing": {
-            "basePrice": 14.04,
-            "ourPrice": 17.16,
-            "discountPrice": 13.73,
-            "savings": 3.43,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
+            "basePrice": 22.07,
+            "ourPrice": 22.07,
+            "discountPrice": 19.86,
+            "savings": 2.21,
+            "margin": "50%",
+            "competitive": "Markup 50% aplicado para margem premium"
           },
           "tags": [
-            "proteção térmica",
-            "spray",
-            "modelagem",
-            "chapinha"
+            "super-cachos",
+            "extrato-de-girassol",
+            "solto-e-natural",
+            "movimento-natural",
+            "brilho-saudável",
+            "kit-completo"
           ],
-          "rating": 4.6,
-          "reviewsCount": 567,
+          "rating": 4.4,
+          "reviewsCount": 187,
           "inStock": true,
-          "stockQuantity": 48,
-          "weight": 200,
-          "labels": [
-            "PROTEÇÃO TÉRMICA",
-            "MODELAGEM"
-          ],
+          "stockQuantity": 34,
+          "weight": 400,
+          "labels": [],
           "images": [
-            "/images/products/produtos_diversos/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png"
-          ]
+            "/images/products/relaxamentos_/relaxamentos__3.png"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__3.png"
         },
         {
-          "id": "condicionador-profundo-12",
-          "name": "Condicionador Profundo Restaurador",
-          "slug": "condicionador-profundo-12",
-          "brand": "Deep Restore",
-          "shortDesc": "Condicionador de ação profunda e restauradora",
-          "description": "Condicionador intensivo que penetra profundamente na fibra capilar, restaurando maciez e elasticidade.",
-          "sku": "DR-CON-012",
+          "id": "hairlife-liso-laminado-bondplex",
+          "name": "HairLife Liso Laminado BondPlex com Óleo de Argan",
+          "slug": "hairlife-liso-laminado-bondplex",
+          "brand": "HairLife",
+          "shortDesc": "Creme alisante com tecnologia BondPlex e óleo de argan. Repara danos químicos anteriores proporciona...",
+          "description": "Creme alisante com tecnologia BondPlex e óleo de argan. Repara danos químicos anteriores proporcionando liso perfeito por até 10 semanas com brilho espelhado.",
+          "sku": "HL-002",
           "category": "Tratamentos Capilares",
-          "subcategory": "Hidratação",
-          "finalidade": "Condicionamento profundo e restauração",
-          "volume": "350ml",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Tecnologia BondPlex",
+          "volume": "Kit Completo",
           "pricing": {
-            "basePrice": 14.58,
-            "ourPrice": 17.82,
-            "discountPrice": 14.26,
-            "savings": 3.56,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
+            "basePrice": 31.79,
+            "ourPrice": 31.79,
+            "discountPrice": 28.61,
+            "savings": 3.18,
+            "margin": "50%",
+            "competitive": "Markup 50% aplicado para margem premium"
           },
           "tags": [
-            "condicionador",
-            "profundo",
-            "elasticidade",
-            "maciez"
+            "tecnologia-bondplex",
+            "óleo-de-argan",
+            "manteiga-de-karité",
+            "10-semanas-duração",
+            "brilho-espelhado",
+            "repara-danos"
           ],
           "rating": 4.7,
-          "reviewsCount": 423,
-          "inStock": true,
-          "stockQuantity": 56,
-          "weight": 350,
-          "labels": [
-            "PROFUNDO",
-            "RESTAURADOR"
-          ],
-          "images": [
-            "/images/products/produtos_diversos/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png"
-          ]
-        },
-        {
-          "id": "serum-antiqueda-13",
-          "name": "Sérum Antiqueda Fortalecedor",
-          "slug": "serum-antiqueda-13",
-          "brand": "Hair Defense",
-          "shortDesc": "Sérum concentrado contra queda capilar",
-          "description": "Sérum com ativos que fortalecem a raiz, reduzem a queda e estimulam o crescimento de fios mais fortes.",
-          "sku": "HD-SER-013",
-          "category": "Tratamentos Capilares",
-          "subcategory": "Antiqueda",
-          "finalidade": "Prevenção de queda e fortalecimento",
-          "volume": "50ml",
-          "pricing": {
-            "basePrice": 25.65,
-            "ourPrice": 31.35,
-            "discountPrice": 25.08,
-            "savings": 6.27,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
-          },
-          "tags": [
-            "antiqueda",
-            "fortalecedor",
-            "raiz",
-            "crescimento"
-          ],
-          "rating": 4.9,
-          "reviewsCount": 689,
+          "reviewsCount": 256,
           "inStock": true,
           "stockQuantity": 22,
-          "weight": 50,
+          "weight": 400,
           "labels": [
-            "ANTIQUEDA",
-            "FORTALECEDOR"
+            "POPULAR"
           ],
           "images": [
-            "/images/products/produtos_diversos/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"
-          ]
+            "/images/products/relaxamentos_/relaxamentos__1.webp"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__1.webp"
         },
         {
-          "id": "mascara-detox-14",
-          "name": "Máscara Detox Purificante",
-          "slug": "mascara-detox-14",
-          "brand": "Clean Hair",
-          "shortDesc": "Máscara detox para limpeza profunda",
-          "description": "Máscara purificante que remove resíduos e impurezas, devolvendo leveza e movimento aos cabelos.",
-          "sku": "CH-MAS-014",
+          "id": "hairlife-cacho-natural-relaxamento-ondulamento",
+          "name": "HairLife Cacho & Natural - Creme Relaxamento e Ondulamento",
+          "slug": "hairlife-cacho-natural-relaxamento-ondulamento",
+          "brand": "HairLife",
+          "shortDesc": "Creme para relaxamento e ondulamento que transforma cabelos ressecados em cachos naturalmente bonito...",
+          "description": "Creme para relaxamento e ondulamento que transforma cabelos ressecados em cachos naturalmente bonitos. Fórmula especial para cabelos cacheados.",
+          "sku": "HL-003",
           "category": "Tratamentos Capilares",
-          "subcategory": "Limpeza",
-          "finalidade": "Detox e purificação capilar",
-          "volume": "250g",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Relaxamento + Ondulamento",
+          "volume": "Kit Completo",
           "pricing": {
-            "basePrice": 16.92,
-            "ourPrice": 20.68,
-            "discountPrice": 16.54,
-            "savings": 4.14,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
+            "basePrice": 20.75,
+            "ourPrice": 20.75,
+            "discountPrice": 18.67,
+            "savings": 2.08,
+            "margin": "50%",
+            "competitive": "Markup 50% aplicado para margem premium"
           },
           "tags": [
-            "detox",
-            "purificante",
-            "limpeza",
-            "leveza"
+            "relaxamento-+-ondulamento",
+            "para-cabelos-cacheados",
+            "transforma-ressecados",
+            "cachos-naturais",
+            "fórmula-especial",
+            "kit-completo"
           ],
           "rating": 4.5,
-          "reviewsCount": 356,
+          "reviewsCount": 134,
           "inStock": true,
-          "stockQuantity": 39,
-          "weight": 250,
+          "stockQuantity": 31,
+          "weight": 400,
           "labels": [
-            "DETOX",
-            "PURIFICANTE"
+            "POPULAR"
           ],
           "images": [
-            "/images/products/produtos_diversos/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png"
-          ]
+            "/images/products/relaxamentos_/relaxamentos__4.png"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__4.png"
         },
         {
-          "id": "ampola-shock-15",
-          "name": "Ampola Shock Reconstruction",
-          "slug": "ampola-shock-15",
-          "brand": "Shock Therapy",
-          "shortDesc": "Ampola de reconstrução intensiva imediata",
-          "description": "Tratamento de choque que reconstrói instantaneamente cabelos extremamente danificados em uma única aplicação.",
-          "sku": "ST-AMP-015",
+          "id": "hairlife-liso-natural-creme-alisamento",
+          "name": "HairLife Liso & Natural Creme para Alisamento",
+          "slug": "hairlife-liso-natural-creme-alisamento",
+          "brand": "HairLife",
+          "shortDesc": "Creme alisante que transforma cabelos em liso perfeito mantendo aspecto natural. Fórmula balanceada ...",
+          "description": "Creme alisante que transforma cabelos em liso perfeito mantendo aspecto natural. Fórmula balanceada para alisamento sem agressão excessiva aos fios.",
+          "sku": "HL-004",
           "category": "Tratamentos Capilares",
-          "subcategory": "Reconstrução",
-          "finalidade": "Reconstrução imediata de emergência",
-          "volume": "15ml x 4 ampolas",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Liso Natural",
+          "volume": "Kit Completo",
           "pricing": {
-            "basePrice": 28.8,
-            "ourPrice": 35.2,
-            "discountPrice": 28.16,
-            "savings": 7.04,
-            "margin": "10%",
-            "competitive": "Baseado em tratamentos premium europeus"
+            "basePrice": 19.41,
+            "ourPrice": 19.41,
+            "discountPrice": 17.48,
+            "savings": 1.93,
+            "margin": "50%",
+            "competitive": "Markup 50% aplicado para margem premium"
           },
           "tags": [
-            "shock",
-            "reconstrução",
-            "emergência",
-            "imediato"
+            "liso-natural",
+            "sem-agressão-excessiva",
+            "aspecto-natural",
+            "fórmula-balanceada",
+            "alisamento-perfeito",
+            "kit-completo"
           ],
-          "rating": 4.8,
-          "reviewsCount": 445,
+          "rating": 4.3,
+          "reviewsCount": 198,
           "inStock": true,
-          "stockQuantity": 18,
-          "weight": 80,
+          "stockQuantity": 26,
+          "weight": 400,
+          "labels": [],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__5.png"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__5.png"
+        },
+        {
+          "id": "hairlife-relaxin-natural-creme-relaxamento",
+          "name": "HairLife Relaxin' & Natural Creme para Relaxamento",
+          "slug": "hairlife-relaxin-natural-creme-relaxamento",
+          "brand": "HairLife",
+          "shortDesc": "Creme para relaxamento capilar que proporciona ondas naturais e relaxadas. Ideal para quem busca red...",
+          "description": "Creme para relaxamento capilar que proporciona ondas naturais e relaxadas. Ideal para quem busca reduzir volume mantendo movimento e naturalidade dos fios.",
+          "sku": "HL-005",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Ondas Naturais",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 20.12,
+            "ourPrice": 20.12,
+            "discountPrice": 18.11,
+            "savings": 2.01,
+            "margin": "50%",
+            "competitive": "Markup 50% aplicado para margem premium"
+          },
+          "tags": [
+            "ondas-naturais",
+            "relaxamento-suave",
+            "reduz-volume",
+            "mantém-movimento",
+            "naturalidade",
+            "kit-completo"
+          ],
+          "rating": 4.4,
+          "reviewsCount": 167,
+          "inStock": true,
+          "stockQuantity": 29,
+          "weight": 400,
+          "labels": [],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__6.png"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__6.png"
+        },
+        {
+          "id": "hairlife-mel-amendoas-sem-amonia",
+          "name": "HairLife Mel & Amêndoas Creme Alisamento Sem Amônia",
+          "slug": "hairlife-mel-amendoas-sem-amonia",
+          "brand": "HairLife",
+          "shortDesc": "Creme alisante enriquecido com mel e amêndoas, livre de amônia. Fórmula suave que alisa protegendo a...",
+          "description": "Creme alisante enriquecido com mel e amêndoas, livre de amônia. Fórmula suave que alisa protegendo a fibra capilar com nutrição intensa e brilho natural.",
+          "sku": "HL-006",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Mel + Amêndoas",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 21.84,
+            "ourPrice": 21.84,
+            "discountPrice": 19.65,
+            "savings": 2.19,
+            "margin": "50%",
+            "competitive": "Markup 50% aplicado para margem premium"
+          },
+          "tags": [
+            "mel-+-amêndoas",
+            "sem-amônia",
+            "fórmula-suave",
+            "protege-fibra-capilar",
+            "nutrição-intensa",
+            "brilho-natural"
+          ],
+          "rating": 4.5,
+          "reviewsCount": 223,
+          "inStock": true,
+          "stockQuantity": 33,
+          "weight": 400,
           "labels": [
-            "SHOCK",
-            "EMERGÊNCIA"
+            "POPULAR"
           ],
           "images": [
-            "/images/products/produtos_diversos/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png"
-          ]
+            "/images/products/relaxamentos_/relaxamentos__8.png"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__8.png"
+        },
+        {
+          "id": "hairlife-relaxin-natural-girassol",
+          "name": "HairLife Relaxin' & Natural com Extrato de Girassol",
+          "slug": "hairlife-relaxin-natural-girassol",
+          "brand": "HairLife",
+          "shortDesc": "Creme relaxante enriquecido com extrato de girassol para cabelos que buscam charme e delicadeza. Fór...",
+          "description": "Creme relaxante enriquecido com extrato de girassol para cabelos que buscam charme e delicadeza. Fórmula que relaxa suavemente mantendo movimento natural.",
+          "sku": "HL-007",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Extrato de Girassol",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 19.63,
+            "ourPrice": 19.63,
+            "discountPrice": 17.67,
+            "savings": 1.96,
+            "margin": "50%",
+            "competitive": "Markup 50% aplicado para margem premium"
+          },
+          "tags": [
+            "extrato-de-girassol",
+            "charme-e-delicadeza",
+            "relaxamento-suave",
+            "movimento-natural",
+            "fórmula-enriquecida",
+            "kit-completo"
+          ],
+          "rating": 4.3,
+          "reviewsCount": 178,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 400,
+          "labels": [],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__10.jpg"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__10.jpg"
+        },
+        {
+          "id": "hairlife-cacho-natural-encacheamento",
+          "name": "HairLife Cacho & Natural Creme para Encacheamento",
+          "slug": "hairlife-cacho-natural-encacheamento",
+          "brand": "HairLife",
+          "shortDesc": "Creme especial para encacheamento com extrato de girassol. Transforma cabelos ressecados em cachos d...",
+          "description": "Creme especial para encacheamento com extrato de girassol. Transforma cabelos ressecados em cachos definidos e naturalmente encantadores com balanço e movimento.",
+          "sku": "HL-008",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Para Encacheamento",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 21.18,
+            "ourPrice": 21.18,
+            "discountPrice": 19.07,
+            "savings": 2.11,
+            "margin": "50%",
+            "competitive": "Markup 50% aplicado para margem premium"
+          },
+          "tags": [
+            "para-encacheamento",
+            "extrato-de-girassol",
+            "cachos-definidos",
+            "naturalmente-encantadores",
+            "balanço-e-movimento",
+            "20%-mais-produtos"
+          ],
+          "rating": 4.4,
+          "reviewsCount": 194,
+          "inStock": true,
+          "stockQuantity": 30,
+          "weight": 400,
+          "labels": [],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__11.webp"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__11.webp"
         }
       ]
     }
