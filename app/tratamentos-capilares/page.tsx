@@ -16,9 +16,13 @@ export const metadata: Metadata = {
     'tônico capilar',
     'wepink'
   ],
+  alternates: {
+    canonical: 'https://jchairstudios62.xyz/tratamentos-capilares',
+  },
   openGraph: {
     title: 'Tratamentos Capilares Profissionais - JC Hair Studio',
     description: 'Máscaras, ampolas, óleos e tratamentos intensivos para todos os tipos de cabelo',
+    url: 'https://jchairstudios62.xyz/tratamentos-capilares',
     images: ['/images/categories/tratamentos.jpg'],
   },
 };
