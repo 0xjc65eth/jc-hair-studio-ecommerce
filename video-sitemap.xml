@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url>
+<loc>https://jchairstudios62.xyz</loc>
+<video:video>
+<video:thumbnail_loc>https://jchairstudios62.xyz/images/hero-banner.jpg</video:thumbnail_loc>
+<video:title>JC Hair Studio - Premium Hair Extensions</video:title>
+<video:description>Discover our premium collection of Brazilian hair extensions</video:description>
+<video:content_loc>https://jchairstudios62.xyz/video/intro.mp4</video:content_loc>
+<video:duration>180</video:duration>
+<video:publication_date>2025-10-14</video:publication_date>
+</video:video>
+</url>
+</urlset>
