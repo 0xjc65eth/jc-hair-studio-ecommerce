@@ -1,0 +1,45 @@
+{
+  "countdown": {
+    "enabled": true,
+    "duration": 24,
+    "message": "⏰ OFERTA EXPIRA EM {time}!"
+  },
+  "stockAlert": {
+    "enabled": true,
+    "threshold": 10,
+    "message": "🔥 APENAS {stock} UNIDADES RESTANTES!"
+  },
+  "viewingAlert": {
+    "enabled": true,
+    "minViews": 5,
+    "maxViews": 25,
+    "message": "👀 {views} pessoas estão vendo este produto agora"
+  },
+  "recentPurchase": {
+    "enabled": true,
+    "interval": 300,
+    "message": "✅ {name} de {city} comprou há {time} minutos"
+  },
+  "freeShipping": {
+    "enabled": true,
+    "threshold": 50,
+    "message": "🚚 FRETE GRÁTIS para pedidos acima de €{value}!"
+  },
+  "discountCodes": [
+    {
+      "code": "PRIMEIRA10",
+      "discount": 10,
+      "message": "Primeira compra? Use PRIMEIRA10 para 10% OFF!"
+    },
+    {
+      "code": "HOJE15",
+      "discount": 15,
+      "message": "HOJE APENAS: 15% OFF com código HOJE15"
+    },
+    {
+      "code": "VIP20",
+      "discount": 20,
+      "message": "Cliente VIP? 20% OFF com código VIP20"
+    }
+  ]
+}
