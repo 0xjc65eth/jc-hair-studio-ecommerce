@@ -12,6 +12,7 @@ import GoogleAnalytics from '../components/analytics/GoogleAnalytics';
 import GoogleTagManager from '../components/analytics/GoogleTagManager';
 import LiveChat from '../components/ui/LiveChat';
 import { Analytics } from '@vercel/analytics/next';
+import { getMetaTagsForNextJS } from '../lib/config/comprehensive-meta-tags';
 // REMOVED: PerformanceOptimizer - fought Next.js optimizations, caused hydration errors
 // WHY: Next.js 14 already optimizes images, fonts, prefetching, and caching
 // HOW: Component mutated DOM during render, duplicated Next.js features
@@ -30,6 +31,8 @@ const playfair = Playfair_Display({
   variable: '--font-playfair',
 });
 
+// COMPREHENSIVE METADATA - MAXIMUM SEO INDEXATION
+// ALL possible meta tags for maximum search engine visibility
 export const metadata: Metadata = {
   title: {
     default: 'JC Hair Studio\'s 62 - Produtos Capilares Brasileiros Premium | Mega Hair, Progressivas',
@@ -37,73 +40,86 @@ export const metadata: Metadata = {
   },
   description: 'Loja online de produtos capilares brasileiros premium com +40 anos de tradição familiar. Mega hair 100% humano, progressivas Vogue, BTX capilar, tratamentos e maquiagem brasileira. Entrega Europa.',
   keywords: [
-    // Mega Hair - Termos principais
-    'mega hair brasileiro',
-    'extensão cabelo humano',
-    'mega hair natural',
-    'cabelo brasileiro premium',
-    'extensão capilar 100% humano',
-    'mega hair liso cacheado ondulado',
-
-    // Progressivas e Tratamentos
-    'progressiva vogue original',
-    'progressiva brasileira premium',
-    'btx capilar profissional',
-    'tratamento capilar brasileiro',
-    'botox capilar',
-    'alisamento capilar',
-
-    // Maquiagem Brasileira
-    'maquiagem brasileira original',
-    'cosméticos brasil',
-    'natura eudora avon',
-    'ruby rose quem disse berenice',
-    'produtos beleza brasil',
-
-    // Localização e Entrega
-    'produtos brasileiros portugal',
-    'cosméticos brasil europa',
-    'mega hair entrega europa',
-    'loja brasileira portugal',
-    'produtos brasil bélgica',
-
-    // Marca e Qualidade
-    'jc hair studio 62',
-    'tradição familiar 40 anos',
-    'cabeleireiro brasileiro portugal',
-    'produtos autênticos brasil',
+    'mega hair brasileiro', 'extensão cabelo humano', 'mega hair natural', 'cabelo brasileiro premium',
+    'extensão capilar 100% humano', 'mega hair liso cacheado ondulado', 'progressiva vogue original',
+    'progressiva brasileira premium', 'btx capilar profissional', 'tratamento capilar brasileiro',
+    'botox capilar', 'alisamento capilar', 'maquiagem brasileira original', 'cosméticos brasil',
+    'natura eudora avon', 'ruby rose quem disse berenice', 'produtos beleza brasil',
+    'produtos brasileiros portugal', 'cosméticos brasil europa', 'mega hair entrega europa',
+    'loja brasileira portugal', 'produtos brasil bélgica', 'jc hair studio 62',
+    'tradição familiar 40 anos', 'cabeleireiro brasileiro portugal', 'produtos autênticos brasil',
     'qualidade premium brasil'
   ],
-  authors: [{ name: '62 Beauty' }],
-  creator: '62 Beauty',
-  publisher: '62 Beauty',
+  authors: [
+    { name: 'JC Hair Studio\'s 62', url: 'https://jchairstudios62.xyz' },
+    { name: 'Julio César' },
+    { name: '62 Beauty' }
+  ],
+  creator: 'JC Hair Studio\'s 62 - Produtos Brasileiros Premium',
+  publisher: 'JC Hair Studio\'s 62',
+  applicationName: 'JC Hair Studio\'s 62',
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    noarchive: false,
+    noimageindex: false,
+    nosnippet: false,
+    notranslate: false,
     googleBot: {
       index: true,
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
+      noimageindex: false,
     },
   },
   openGraph: {
     type: 'website',
     locale: 'pt_PT',
-    alternateLocale: ['pt_BR', 'en_US', 'es_ES', 'fr_FR', 'nl_BE'],
+    alternateLocale: ['pt_BR', 'en_US', 'en_GB', 'es_ES', 'fr_FR', 'nl_BE', 'nl_NL', 'de_DE', 'it_IT'],
     url: 'https://jchairstudios62.xyz',
     siteName: 'JC Hair Studio\'s 62 - Produtos Brasileiros',
     title: 'JC Hair Studio\'s 62 - Produtos Capilares Brasileiros Premium',
     description: 'Loja online de produtos capilares brasileiros premium. Mega hair 100% humano, progressivas Vogue, maquiagem brasileira. +40 anos tradição familiar. Entrega Europa.',
     images: [
       {
-        url: '/og-image-brasil.jpg',
+        url: 'https://jchairstudios62.xyz/og-image-brasil.jpg',
+        secureUrl: 'https://jchairstudios62.xyz/og-image-brasil.jpg',
         width: 1200,
         height: 630,
         alt: 'JC Hair Studio\'s 62 - Produtos Capilares Brasileiros Premium',
+        type: 'image/jpeg',
+      },
+      {
+        url: 'https://jchairstudios62.xyz/og-image-square.jpg',
+        secureUrl: 'https://jchairstudios62.xyz/og-image-square.jpg',
+        width: 800,
+        height: 800,
+        alt: 'JC Hair Studio\'s 62 - Logo Premium',
+        type: 'image/jpeg',
       },
     ],
+    videos: [
+      {
+        url: 'https://jchairstudios62.xyz/videos/brand-story.mp4',
+        secureUrl: 'https://jchairstudios62.xyz/videos/brand-story.mp4',
+        type: 'video/mp4',
+        width: 1280,
+        height: 720,
+      },
+    ],
+    audio: [
+      {
+        url: 'https://jchairstudios62.xyz/audio/brand-anthem.mp3',
+        secureUrl: 'https://jchairstudios62.xyz/audio/brand-anthem.mp3',
+        type: 'audio/mpeg',
+      },
+    ],
+    emails: ['contato@jchairstudios62.xyz'],
+    phoneNumbers: ['+351928375226', '+32472384027'],
+    countryName: 'Portugal',
   },
   twitter: {
     card: 'summary_large_image',
@@ -111,40 +127,86 @@ export const metadata: Metadata = {
     creator: '@jchairstudios62',
     title: 'JC Hair Studio\'s 62 - Produtos Capilares Brasileiros Premium',
     description: 'Mega hair brasileiro 100% humano, progressivas Vogue originais, maquiagem brasileira premium. Tradição familiar +40 anos. Entrega Europa.',
-    images: ['/twitter-image-brasil.jpg'],
+    images: {
+      url: 'https://jchairstudios62.xyz/twitter-image-brasil.jpg',
+      alt: 'JC Hair Studio\'s 62 - Produtos Brasileiros Premium',
+    },
+    app: {
+      name: {
+        iphone: 'JC Hair Studio\'s 62',
+        ipad: 'JC Hair Studio\'s 62',
+        googleplay: 'JC Hair Studio\'s 62',
+      },
+      id: {
+        iphone: '123456789',
+        ipad: '123456789',
+        googleplay: 'com.jchairstudio.app',
+      },
+      url: {
+        iphone: 'https://jchairstudios62.xyz/app',
+        ipad: 'https://jchairstudios62.xyz/app',
+        googleplay: 'https://jchairstudios62.xyz/app',
+      },
+    },
   },
   metadataBase: new URL('https://jchairstudios62.xyz'),
   manifest: '/manifest.json',
-  // Force metadata regeneration - updated 2025-01-12
+  // Force metadata regeneration - UPDATED 2025-01-14
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon-152x152.png', sizes: '152x152', type: 'image/png' },
     ],
     other: [
       {
         rel: 'mask-icon',
         url: '/safari-pinned-tab.svg',
-        color: '#1a1a1a',
+        color: '#d97706',
       },
     ],
   },
   verification: {
-    google: 'verification_token_google',
+    google: 'Sh-CUmRpluge16satbghZod1kZ9M0zLNk2px9OaCuio',
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+    other: {
+      'msvalidate.01': process.env.NEXT_PUBLIC_BING_VERIFICATION || '',
+      'p:domain_verify': process.env.NEXT_PUBLIC_PINTEREST_VERIFICATION || '',
+      'facebook-domain-verification': process.env.NEXT_PUBLIC_FACEBOOK_VERIFICATION || '',
+    },
   },
-  category: 'e-commerce',
+  category: 'Beauty & Personal Care',
+  classification: 'E-commerce, Beauty Products, Hair Extensions, Brazilian Cosmetics',
   alternates: {
     canonical: 'https://jchairstudios62.xyz',
     languages: {
-      'pt-PT': 'https://jchairstudios62.xyz/pt',
+      'pt-PT': 'https://jchairstudios62.xyz',
+      'pt-BR': 'https://jchairstudios62.xyz/pt-BR',
       'en-US': 'https://jchairstudios62.xyz/en',
+      'en-GB': 'https://jchairstudios62.xyz/en-GB',
       'es-ES': 'https://jchairstudios62.xyz/es',
       'fr-FR': 'https://jchairstudios62.xyz/fr',
+      'de-DE': 'https://jchairstudios62.xyz/de',
+      'it-IT': 'https://jchairstudios62.xyz/it',
+      'nl-BE': 'https://jchairstudios62.xyz/nl',
+      'nl-NL': 'https://jchairstudios62.xyz/nl-NL',
+      'x-default': 'https://jchairstudios62.xyz',
+    },
+    types: {
+      'application/rss+xml': [
+        { url: '/feed.xml', title: 'JC Hair Studio\'s 62 - Feed RSS de Produtos' },
+      ],
+      'application/atom+xml': [
+        { url: '/feed.xml', title: 'JC Hair Studio\'s 62 - Feed Atom de Produtos' },
+      ],
     },
   },
+  // ALL ADDITIONAL META TAGS - MAXIMUM INDEXATION
+  other: getMetaTagsForNextJS({ pageType: 'website' }),
 };
 
 interface RootLayoutProps {
@@ -163,6 +225,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
       suppressHydrationWarning
     >
       <head>
+        {/* AGGRESSIVE SEO - Force indexation on ALL pages */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
         {/* CORE WEB VITALS: Preconnect to critical origins for faster LCP */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

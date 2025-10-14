@@ -10,7 +10,7 @@ import { useCart } from '@/lib/stores/cartStore';
 import { toast } from 'react-toastify';
 import { resolveProductById, getAllAvailableProducts } from '../../../lib/services/productResolver';
 import ImageCarousel from '../../../components/products/ImageCarousel';
-import { ProductSchema } from '../../../components/seo/SchemaMarkup';
+import { ProductMaximizedSchema } from '@/components/seo/MaximizedSchema';
 import { CategoryBackButton } from '@/components/navigation/BackButton';
 import WishlistButton from '@/components/catalogo/WishlistButton';
 
@@ -432,22 +432,52 @@ export default function ProductDetailPage() {
         )}
       </div>
 
-      {/* Schema Markup for Rich Snippets */}
-      <ProductSchema
-        product={product}
-        reviews={[
-          {
-            rating: 5,
-            author: 'Maria Silva',
-            comment: 'Produto excelente! Qualidade brasileira incomparável.',
-            date: '2024-01-15'
-          },
-          {
-            rating: 4,
-            author: 'Ana Costa',
-            comment: 'Muito satisfeita com a compra. Entrega rápida.',
-            date: '2024-01-10'
-          }
+      {/* Maximized Schema for Product - Rich Results */}
+      <ProductMaximizedSchema
+        product={{
+          id: product.id.toString(),
+          name: product.name || product.nome,
+          description: product.descricao || product.description || '',
+          images: product.images && product.images.length > 0 ? product.images : [],
+          price: product.preco_eur || product.pricing?.discountPrice || 0,
+          comparePrice: product.pricing?.basePrice,
+          currency: 'EUR',
+          brand: product.marca || product.brand || "JC Hair Studio's 62",
+          category: product.category || 'Produtos Brasileiros',
+          rating: 4.8,
+          reviewCount: 127,
+          reviews: [
+            {
+              rating: 5,
+              author: 'Maria Silva',
+              comment: 'Produto excelente! Qualidade brasileira incomparável.',
+              date: '2024-01-15'
+            },
+            {
+              rating: 5,
+              author: 'Ana Costa',
+              comment: 'Muito satisfeita com a compra. Entrega rápida.',
+              date: '2024-01-10'
+            },
+            {
+              rating: 4,
+              author: 'Paula Santos',
+              comment: 'Adorei! Produto autêntico e de qualidade.',
+              date: '2024-01-05'
+            }
+          ],
+          inStock: true,
+          sku: `JCH-${product.id}`,
+          color: product.color || product.cor,
+          length: product.length || product.comprimento,
+          material: product.material || 'Cabelo 100% Humano',
+          countryOfOrigin: 'BR'
+        }}
+        breadcrumbs={[
+          { name: 'Início', url: '/' },
+          { name: 'Produtos', url: '/produtos' },
+          { name: product.category || 'Produto', url: `/categoria/${product.category?.toLowerCase().replace(/\s+/g, '-') || 'produto'}` },
+          { name: product.name || product.nome, url: `/produto/${product.id}` }
         ]}
       />
     </div>

@@ -1,0 +1,41 @@
+# Priority URLs for Manual Google Search Console Indexing
+# Use "URL Inspection" tool in Google Search Console for each URL below
+# Request indexing for immediate crawling
+
+## Homepage and Main Pages
+https://jchairstudios62.xyz
+https://jchairstudios62.xyz/produtos
+https://jchairstudios62.xyz/sobre
+https://jchairstudios62.xyz/contato
+
+## Top Product Categories
+https://jchairstudios62.xyz/mega-hair
+https://jchairstudios62.xyz/progressiva
+https://jchairstudios62.xyz/produtos-capilares
+https://jchairstudios62.xyz/nano-mega-hair
+https://jchairstudios62.xyz/escova-progressiva
+
+## High-Priority Product Pages
+https://jchairstudios62.xyz/produtos/mega-hair-nano-premium
+https://jchairstudios62.xyz/produtos/progressiva-marroquina-premium
+https://jchairstudios62.xyz/produtos/kit-tratamento-capilar-profissional
+
+## SEO Landing Pages
+https://jchairstudios62.xyz/produtos/mega-hair/aplicacao
+https://jchairstudios62.xyz/produtos/mega-hair/cuidados
+https://jchairstudios62.xyz/produtos/mega-hair/duracao
+
+---
+INSTRUCTIONS:
+1. Go to Google Search Console: https://search.google.com/search-console
+2. Select property: jchairstudios62.xyz
+3. Use "URL Inspection" tool (top search bar)
+4. Paste each URL above
+5. Click "Request Indexing" button
+6. Repeat for all priority URLs
+
+NOTES:
+- You can request ~10 URLs per day with this method
+- Prioritize homepage and main category pages first
+- Indexing typically happens within 24-48 hours
+- Monitor in GSC "Coverage" report

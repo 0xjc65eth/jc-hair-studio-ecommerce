@@ -6,23 +6,35 @@ import { ArrowRight, Star, TrendingUp, Package } from 'lucide-react';
 import { beautyCategories } from '@/lib/data/categories';
 
 export const metadata: Metadata = {
-  title: 'Categorias de Beleza - 62 Beauty\'s 62',
-  description: 'Explore todas as categorias de produtos de beleza: progressivas, tratamentos capilares, maquiagem brasileira e muito mais.',
+  title: 'Índice de Categorias - JC Hair Studio | Produtos Brasileiros em Portugal',
+  description: `Explore todas as categorias: progressivas, mega hair, tratamentos capilares, maquiagem brasileira. Atualizado ${new Date().toISOString()}`,
   keywords: [
     'categorias beleza',
-    'produtos beleza',
-    'progressivas',
+    'produtos brasileiros',
+    'progressivas brasileiras',
+    'mega hair natural',
     'tratamentos capilares',
-    'maquiagem',
-    'ferramentas beleza',
-    'e-commerce beleza'
+    'maquiagem brasileira',
+    'perfumes brasil',
+    'esmaltes impala'
   ],
+  alternates: {
+    canonical: 'https://jchairstudios62.xyz/categorias'
+  },
   openGraph: {
-    title: 'Categorias de Beleza - 62 Beauty\'s 62',
-    description: 'Explore todas as categorias de produtos de beleza disponíveis',
+    title: 'Categorias de Produtos Brasileiros - JC Hair Studio',
+    description: 'Índice completo de categorias de produtos brasileiros em Portugal',
+    url: 'https://jchairstudios62.xyz/categorias',
     images: ['/images/categories-overview.jpg'],
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large'
+  }
 };
+
+export const revalidate = 3600; // Revalidate hourly
 
 function CategoryCard({ category }: { category: typeof beautyCategories[0] }) {
   const totalProducts = category.products.length;

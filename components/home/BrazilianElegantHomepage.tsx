@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import VideoHeroCarousel from './VideoHeroCarousel';
 import { getLegacyCompatibleProducts } from '@/lib/data/megaHairProducts';
+import { HomepageMaximizedSchema } from '@/components/seo/MaximizedSchema';
 import {
   Star,
   ShoppingBag,
@@ -44,6 +45,13 @@ export default function BrazilianElegantHomepage() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Maximized Schema for Homepage - SEO Boost */}
+      <HomepageMaximizedSchema
+        breadcrumbs={[
+          { name: 'Início', url: '/' }
+        ]}
+      />
+
       {/* Video Hero - Indispensável */}
       <VideoHeroCarousel
         videos={[

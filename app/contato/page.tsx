@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Clock, Globe, MessageCircle, Send, FileImage, HelpCircle, ShoppingCart, Truck, CreditCard } from 'lucide-react';
+import { ContactMaximizedSchema } from '@/components/seo/MaximizedSchema';
 
 // Metadata would need to be moved to a separate file for client components
 // For now, keeping the component structure
@@ -159,6 +160,14 @@ export default function ContatoPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Maximized Schema for Contact/LocalBusiness - Rich Results */}
+      <ContactMaximizedSchema
+        breadcrumbs={[
+          { name: 'Início', url: '/' },
+          { name: 'Contato', url: '/contato' }
+        ]}
+      />
+
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="max-w-6xl mx-auto px-4">

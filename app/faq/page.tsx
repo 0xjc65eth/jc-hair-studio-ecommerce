@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { FAQMaximizedSchema } from '@/components/seo/MaximizedSchema'
 
 export default function FaqPage() {
   const [activeCategory, setActiveCategory] = useState('produtos')
@@ -223,8 +224,20 @@ export default function FaqPage() {
     setOpenFaq(openFaq === index ? null : index)
   }
 
+  // Flatten all FAQs for schema
+  const allFaqsForSchema = Object.values(faqs).flat();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Maximized Schema for FAQ - Rich Results */}
+      <FAQMaximizedSchema
+        faqs={allFaqsForSchema}
+        breadcrumbs={[
+          { name: 'Início', url: '/' },
+          { name: 'FAQ', url: '/faq' }
+        ]}
+      />
+
       {/* Header */}
       <header className="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">

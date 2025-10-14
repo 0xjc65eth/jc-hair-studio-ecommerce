@@ -1,3 +1,56 @@
+# ============================================================================
+# AGGRESSIVE SEO HEADERS - MAXIMUM INDEXATION
+# Generated: 2025-10-14
+# Purpose: Force search engine indexation across all pages
+# ============================================================================
+
+# ALL PAGES - Maximum SEO indexation
+/*
+  X-Robots-Tag: index, follow, all
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: public, max-age=0, must-revalidate
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-DNS-Prefetch-Control: on
+
+# Product Pages - Maximum priority for search engines
+/produto/*
+  X-Robots-Tag: index, follow, all, max-snippet:-1, max-image-preview:large, max-video-preview:-1
+  Cache-Control: public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400
+
+# Category Pages - High priority
+/produtos
+  X-Robots-Tag: index, follow, all, max-snippet:-1, max-image-preview:large
+  Cache-Control: public, max-age=1800, s-maxage=1800, stale-while-revalidate=43200
+
+/mega-hair
+  X-Robots-Tag: index, follow, all, max-snippet:-1, max-image-preview:large
+  Cache-Control: public, max-age=1800, s-maxage=1800, stale-while-revalidate=43200
+
+/maquiagens
+  X-Robots-Tag: index, follow, all, max-snippet:-1, max-image-preview:large
+  Cache-Control: public, max-age=1800, s-maxage=1800, stale-while-revalidate=43200
+
+/cosmeticos
+  X-Robots-Tag: index, follow, all, max-snippet:-1, max-image-preview:large
+  Cache-Control: public, max-age=1800, s-maxage=1800, stale-while-revalidate=43200
+
+# SEO Landing Pages - Maximum priority
+/mega-hair-brasileiro
+  X-Robots-Tag: index, follow, all, max-snippet:-1, max-image-preview:large
+  Cache-Control: public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400
+
+/progressiva-vogue-portugal
+  X-Robots-Tag: index, follow, all, max-snippet:-1, max-image-preview:large
+  Cache-Control: public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400
+
+/progressiva-brasileira
+  X-Robots-Tag: index, follow, all, max-snippet:-1, max-image-preview:large
+  Cache-Control: public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400
+
+# XML Feeds - Maximum crawlability
 /product-feed.xml
   Content-Type: application/xml; charset=utf-8
   Cache-Control: public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400
@@ -9,3 +62,58 @@
   Cache-Control: public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400
   X-Content-Type-Options: nosniff
   X-Robots-Tag: all
+
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400
+  X-Robots-Tag: all
+
+/sitemap-index.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400
+  X-Robots-Tag: all
+
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+
+# Static Assets - Long cache
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# Fonts - Long cache
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# JavaScript and CSS - Shorter cache for updates
+/*.js
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/*.css
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400

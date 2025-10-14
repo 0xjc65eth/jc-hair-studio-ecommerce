@@ -127,6 +127,11 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${playfair.variable}`}
     >
       <head>
+        {/* AGGRESSIVE SEO - Force indexation on ALL pages */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
         <GoogleAnalytics />
         <FacebookPixel />
         <OrganizationSchema />

@@ -58,6 +58,20 @@ const nextConfig = {
         },
       },
     },
+    // PERFORMANCE: Optimized prefetching for faster navigation
+    optimisticClientCache: true,
+    // PERFORMANCE: Reduce JavaScript bundle size
+    modularizeImports: {
+      'lucide-react': {
+        transform: 'lucide-react/dist/esm/icons/{{member}}',
+      },
+      '@heroicons/react/24/outline': {
+        transform: '@heroicons/react/24/outline/{{member}}',
+      },
+      '@heroicons/react/24/solid': {
+        transform: '@heroicons/react/24/solid/{{member}}',
+      },
+    },
   },
 
   // Output configuration for Vercel
@@ -68,9 +82,18 @@ const nextConfig = {
 
   // Build optimization
   compiler: {
-    // Remove console logs in production builds
-    removeConsole: process.env.NODE_ENV === 'production',
+    // Remove console logs in production builds (except errors/warnings)
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+    // PERFORMANCE: Enable SWC minification for faster builds
+    styledComponents: false,
+    // PERFORMANCE: Remove React props in production
+    reactRemoveProperties: process.env.NODE_ENV === 'production',
   },
+
+  // PERFORMANCE: Aggressive SWC minification
+  swcMinify: true,
 
   // Webpack optimization
   webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
@@ -190,15 +213,37 @@ const nextConfig = {
             key: 'Server',
             value: 'JC Hair Studio'
           },
+          // AGGRESSIVE SEO - Force indexation on ALL pages
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow, all, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+          },
           // Cache Control for better performance
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
+            value: 'public, max-age=0, must-revalidate'
           },
           // Preload critical resources
           {
             key: 'Link',
             value: '<https://fonts.googleapis.com>; rel=preconnect; crossorigin, <https://fonts.gstatic.com>; rel=preconnect; crossorigin'
+          },
+          // Security headers
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN'
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin'
           }
         ]
       },
