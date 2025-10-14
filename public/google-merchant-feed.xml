@@ -1,8 +1,1209 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
-  <channel>
-    <title>JC Hair Studio's 62</title>
-    <link>https://jchairstudios62.xyz</link>
-    <description>Feed Redirection</description>
-  </channel>
+<channel>
+<title>JC Hair Studio - Produtos Brasileiros em Portugal</title>
+<link>https://jchairstudios62.xyz</link>
+<description>Os melhores produtos brasileiros de beleza em Portugal</description>
+
+<item>
+    <g:id>cocochoco-original-premium</g:id>
+    <title>COCOCHOCO Original Premium Keratin Treatment 1000ML</title>
+    <description>Tratamento premium de queratina com terapia de chocolate. Fórmula profissional que proporciona alisamento duradouro, brilho intenso e nutrição profunda para resultados excepcionais.</description>
+    <link>https://jchairstudios62.xyz/produto/cocochoco-original-premium-keratin-treatment-1000ml</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_2.JPG</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>124.89 EUR</g:price>
+    <g:brand>COCOCHOCO PROFESSIONAL</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>cocochoco-gold-premium</g:id>
+    <title>COCOCHOCO Gold Premium Keratin Treatment 250ML</title>
+    <description>Tratamento de queratina premium enriquecido com ouro 24K. Fórmula exclusiva que proporciona alisamento, brilho e nutrição intensa.</description>
+    <link>https://jchairstudios62.xyz/produto/cocochoco-gold-premium-keratin-treatment-250ml</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_3.JPG</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>43.30 EUR</g:price>
+    <g:brand>COCOCHOCO PROFESSIONAL</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>nuance-liso-perfect</g:id>
+    <title>Nuance LISO Perfect Brazilian Keratin</title>
+    <description>Tratamento de queratina brasileira profissional. Sistema completo com máscara para alisamento perfeito e duradouro.</description>
+    <link>https://jchairstudios62.xyz/produto/nuance-liso-perfect-brazilian-keratin</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_12.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>234.90 EUR</g:price>
+    <g:brand>NUANCE</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>ineya-professional-keratin</g:id>
+    <title>INEYA Professional Keratin Smooth</title>
+    <description>Sistema profissional de queratina para alisamento e tratamento intensivo. Fórmula avançada para resultados profissionais.</description>
+    <link>https://jchairstudios62.xyz/produto/ineya-professional-keratin-smooth</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_13.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>219.90 EUR</g:price>
+    <g:brand>INEYA PROFESSIONAL</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>relaxamento-keratin-smooth</g:id>
+    <title>Relaxamento Keratin Smooth Complex</title>
+    <description>Sistema completo de relaxamento com queratina. Fórmula suave e eficaz para alisamento progressivo.</description>
+    <link>https://jchairstudios62.xyz/produto/relaxamento-keratin-smooth-complex</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_14.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>84.90 EUR</g:price>
+    <g:brand>KERATIN SMOOTH</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>cadiveu-professional-brasil-cacau-1l</g:id>
+    <title>Brasil Cacau Progressiva 1L</title>
+    <description>Progressiva profissional Brasil Cacau 1L - O best-seller absoluto na Europa! Alisamento perfeito com cacau brasileiro, alta demanda garantida. Resultado profissional duradouro até 4 meses.</description>
+    <link>https://jchairstudios62.xyz/produto/brasil-cacau-progressiva-1l</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/cadiveu/cadiveu-1.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>195.60 EUR</g:price>
+    <g:brand>Cadiveu</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>cadiveu-professional-brasil-cacau-300ml</g:id>
+    <title>Cadiveu Professional Brasil Cacau Alisante 300ml</title>
+    <description>Versão trial do tratamento alisante profissional com óleo de cacau. Ideal para testar o produto ou cabelos mais curtos.</description>
+    <link>https://jchairstudios62.xyz/produto/cadiveu-professional-brasil-cacau-300ml</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/cadiveu/cadiveu-2.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>155.97 EUR</g:price>
+    <g:brand>Cadiveu</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>forever-liss-btx-zero-formol-250g</g:id>
+    <title>Forever Liss BTX Zero Formol 250g</title>
+    <description>Botox capilar zero formol que alisa, reconstrói e hidrata profundamente os fios. Resultado natural com redução de volume e frizz.</description>
+    <link>https://jchairstudios62.xyz/produto/forever-liss-btx-zero-formol-250g</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/forever-liss/forever-liss-1.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>25.19 EUR</g:price>
+    <g:brand>Forever Liss</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>forever-liss-btx-zero-formol-1kg</g:id>
+    <title>Forever Liss BTX Zero Formol 1Kg Profissional</title>
+    <description>Botox capilar zero formol em tamanho profissional. Ideal para salões e uso intensivo. Alisa, reconstrói e hidrata profundamente os fios.</description>
+    <link>https://jchairstudios62.xyz/produto/forever-liss-btx-zero-formol-1kg</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/forever-liss/forever-liss-2.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>146.19 EUR</g:price>
+    <g:brand>Forever Liss</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>btx-professional-premium-01</g:id>
+    <title>BTX Professional Premium Reconstruction 01</title>
+    <description>Botox capilar premium que reconstrói, alisa e revitaliza os fios intensamente. Fórmula avançada sem formol.</description>
+    <link>https://jchairstudios62.xyz/produto/btx-professional-premium-01</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/botox/botox_1.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>39.05 EUR</g:price>
+    <g:brand>BTX Pro</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>progressiva-advanced-02</g:id>
+    <title>Progressiva Advanced Smooth System 02</title>
+    <description>Sistema de alisamento avançado que proporciona cabelos perfeitamente lisos com brilho intenso e proteção.</description>
+    <link>https://jchairstudios62.xyz/produto/progressiva-advanced-02</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_15.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>181.50 EUR</g:price>
+    <g:brand>Smooth System</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>btx-repair-intensive-03</g:id>
+    <title>BTX Repair Intensive Treatment 03</title>
+    <description>Tratamento BTX intensivo especialmente desenvolvido para reparar cabelos extremamente danificados e ressecados.</description>
+    <link>https://jchairstudios62.xyz/produto/btx-repair-intensive-03</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/botox/botox_2.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>47.08 EUR</g:price>
+    <g:brand>Repair Intensive</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>progressiva-keratin-04</g:id>
+    <title>Progressiva Keratin Complex Professional 04</title>
+    <description>Progressiva enriquecida com complexo de queratina que proporciona máxima suavidade e controle de frizz.</description>
+    <link>https://jchairstudios62.xyz/produto/progressiva-keratin-04</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_16.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>160.16 EUR</g:price>
+    <g:brand>Keratin Complex</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>btx-collagen-boost-05</g:id>
+    <title>BTX Collagen Boost Reconstruction 05</title>
+    <description>BTX enriquecido com colágeno que reconstrói a fibra capilar e proporciona firmeza e elasticidade aos fios.</description>
+    <link>https://jchairstudios62.xyz/produto/btx-collagen-boost-05</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/botox/botox_3.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>42.79 EUR</g:price>
+    <g:brand>Collagen Boost</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>progressiva-silk-protein-06</g:id>
+    <title>Progressiva Silk Protein Advanced 06</title>
+    <description>Progressiva avançada com proteína da seda que deixa os cabelos extremamente sedosos e com brilho natural.</description>
+    <link>https://jchairstudios62.xyz/produto/progressiva-silk-protein-06</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_17.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>138.05 EUR</g:price>
+    <g:brand>Silk Protein</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>btx-vitamin-complex-07</g:id>
+    <title>BTX Vitamin Complex Revitalizing 07</title>
+    <description>BTX enriquecido com complexo vitamínico que revitaliza, nutre e reconstrói os fios de forma profunda.</description>
+    <link>https://jchairstudios62.xyz/produto/btx-vitamin-complex-07</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/botox/botox_4.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>48.62 EUR</g:price>
+    <g:brand>Vitamin Complex</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>progressiva-nano-technology-08</g:id>
+    <title>Progressiva Nano Technology Ultra 08</title>
+    <description>Progressiva com nanotecnologia avançada que penetra profundamente na fibra capilar para resultados excepcionais.</description>
+    <link>https://jchairstudios62.xyz/produto/progressiva-nano-technology-08</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_18.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>203.50 EUR</g:price>
+    <g:brand>Nano Tech</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>btx-argan-oil-09</g:id>
+    <title>BTX Argan Oil Luxury Treatment 09</title>
+    <description>BTX premium enriquecido com óleo de argan puro que proporciona nutrição intensa e brilho excepcional.</description>
+    <link>https://jchairstudios62.xyz/produto/btx-argan-oil-09</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/botox/botox_5.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>58.08 EUR</g:price>
+    <g:brand>Argan Luxury</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>progressiva-diamond-shine-10</g:id>
+    <title>Progressiva Diamond Shine Professional 10</title>
+    <description>Progressiva premium que proporciona brilho diamante aos cabelos, deixando-os luminosos e perfeitamente lisos.</description>
+    <link>https://jchairstudios62.xyz/produto/progressiva-diamond-shine-10</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_19.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>215.05 EUR</g:price>
+    <g:brand>Diamond Shine</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>advanced-progressive-system-11</g:id>
+    <title>Sistema Progressivo Advanced Premium 11</title>
+    <description>Sistema progressivo completo com tecnologia brasileira avançada. Oferece alisamento natural, redução de volume e proteção térmica. Resultados duradouros por até 5 meses.</description>
+    <link>https://jchairstudios62.xyz/produto/advanced-progressive-system-11</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_20.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>42.68 EUR</g:price>
+    <g:brand>Advanced System</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>btx-ultra-reconstruction-12</g:id>
+    <title>BTX Ultra Reconstruction Therapy 12</title>
+    <description>Terapia BTX ultra reconstruction especialmente desenvolvida para cabelos extremamente danificados. Tecnologia molecular que reconstrói a fibra capilar, oferece alisamento suave e proteção máxima.</description>
+    <link>https://jchairstudios62.xyz/produto/btx-ultra-reconstruction-12</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>53.79 EUR</g:price>
+    <g:brand>Ultra BTX</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>luxury-progressive-gold-13</g:id>
+    <title>Luxury Progressive Gold System 13</title>
+    <description>Sistema progressivo luxury com micropartículas de ouro. Oferece alisamento premium, brilho extremo e nutrição profunda. Tecnologia exclusiva para resultados profissionais de salão.</description>
+    <link>https://jchairstudios62.xyz/produto/luxury-progressive-gold-13</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>57.53 EUR</g:price>
+    <g:brand>Luxury Gold</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>professional-btx-therapy-14</g:id>
+    <title>Professional BTX Therapy Advanced 14</title>
+    <description>Tratamento BTX therapy profissional enriquecido com aminoácidos essenciais. Reconstrói totalmente a estrutura capilar, oferece alisamento natural e proteção contra danos futuros.</description>
+    <link>https://jchairstudios62.xyz/produto/professional-btx-therapy-14</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>45.32 EUR</g:price>
+    <g:brand>BTX Therapy</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>premium-btx-diamond-15</g:id>
+    <title>Premium BTX Diamond Collection 15</title>
+    <description>Coleção BTX premium diamond com tecnologia de brilho diamante. Oferece reconstrução profunda, alisamento suave e brilho intenso. Fórmula exclusiva com proteínas nobres.</description>
+    <link>https://jchairstudios62.xyz/produto/premium-btx-diamond-15</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>61.16 EUR</g:price>
+    <g:brand>Diamond BTX</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>royal-progressive-platinum-16</g:id>
+    <title>Royal Progressive Platinum System 16</title>
+    <description>Sistema progressivo royal platinum especialmente desenvolvido para cabelos maduros. Tecnologia anti-age que revitaliza, alisa e protege os fios. Resultados profissionais duradouros.</description>
+    <link>https://jchairstudios62.xyz/produto/royal-progressive-platinum-16</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>54.78 EUR</g:price>
+    <g:brand>Royal Platinum</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>professional-color-01</g:id>
+    <title>Coloração Profissional Advanced Color 01</title>
+    <description>Coloração profissional de alta performance com cobertura total e cor duradoura. Fórmula enriquecida com óleos naturais.</description>
+    <link>https://jchairstudios62.xyz/produto/professional-color-01</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>21.78 EUR</g:price>
+    <g:brand>Advanced Color</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>professional-color-02</g:id>
+    <title>Coloração Profissional Advanced Color 02</title>
+    <description>Coloração profissional de alta performance com cobertura total e cor duradoura. Fórmula enriquecida com óleos naturais.</description>
+    <link>https://jchairstudios62.xyz/produto/professional-color-02</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>22.00 EUR</g:price>
+    <g:brand>Advanced Color</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>professional-color-03</g:id>
+    <title>Coloração Profissional Advanced Color 03</title>
+    <description>Coloração profissional de alta performance com cobertura total e cor duradoura. Fórmula enriquecida com óleos naturais.</description>
+    <link>https://jchairstudios62.xyz/produto/professional-color-03</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>22.22 EUR</g:price>
+    <g:brand>Advanced Color</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>professional-color-04</g:id>
+    <title>Coloração Profissional Advanced Color 04</title>
+    <description>Coloração profissional de alta performance com cobertura total e cor duradoura. Fórmula enriquecida com óleos naturais.</description>
+    <link>https://jchairstudios62.xyz/produto/professional-color-04</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>22.44 EUR</g:price>
+    <g:brand>Advanced Color</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>intensive-color-05</g:id>
+    <title>Coloração Intensiva Professional 05</title>
+    <description>Coloração de alta intensidade que proporciona cores vibrantes e cobertura excepcional. Ideal para profissionais.</description>
+    <link>https://jchairstudios62.xyz/produto/intensive-color-05</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>20.46 EUR</g:price>
+    <g:brand>Intensive Pro</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>salon-grade-color-06</g:id>
+    <title>Coloração Salon Grade Professional 06</title>
+    <description>Coloração de qualidade de salão que oferece resultados consistentes e cores perfeitas. Desenvolvida para profissionais.</description>
+    <link>https://jchairstudios62.xyz/produto/salon-grade-color-06</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>23.32 EUR</g:price>
+    <g:brand>Salon Grade</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>ultra-color-07</g:id>
+    <title>Ultra Color Professional 07</title>
+    <description>Coloração com tecnologia ultra avançada que garante máxima durabilidade e cores extraordinárias.</description>
+    <link>https://jchairstudios62.xyz/produto/ultra-color-07</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>25.08 EUR</g:price>
+    <g:brand>Ultra Pro</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>master-color-08</g:id>
+    <title>Master Color Professional 08</title>
+    <description>Coloração desenvolvida especialmente para mestres cabeleireiros que exigem perfeição em cada aplicação.</description>
+    <link>https://jchairstudios62.xyz/produto/master-color-08</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>26.95 EUR</g:price>
+    <g:brand>Master Pro</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>elite-color-09</g:id>
+    <title>Elite Color Professional 09</title>
+    <description>Coloração da linha elite que proporciona resultados excepcionais com cores ricas e vibrantes.</description>
+    <link>https://jchairstudios62.xyz/produto/elite-color-09</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>27.72 EUR</g:price>
+    <g:brand>Elite Pro</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>platinum-color-10</g:id>
+    <title>Platinum Color Professional 10</title>
+    <description>Coloração platinum que representa o máximo em qualidade e performance para profissionais exigentes.</description>
+    <link>https://jchairstudios62.xyz/produto/platinum-color-10</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>29.48 EUR</g:price>
+    <g:brand>Platinum Pro</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>advanced-treatment-system-16</g:id>
+    <title>Advanced Treatment System Recovery 16</title>
+    <description>Sistema de tratamento advanced recovery especialmente desenvolvido para cabelos severamente danificados. Tecnologia molecular que reconstrói, nutre e protege os fios em profundidade.</description>
+    <link>https://jchairstudios62.xyz/produto/advanced-treatment-system-16</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>32.78 EUR</g:price>
+    <g:brand>Advanced Treatment</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>intensive-repair-therapy-17</g:id>
+    <title>Intensive Repair Therapy Gold 17</title>
+    <description>Terapia de reparação intensiva enriquecida com micropartículas de ouro. Oferece reparação profunda, nutrição intensa e brilho dourado aos cabelos. Tecnologia premium.</description>
+    <link>https://jchairstudios62.xyz/produto/intensive-repair-therapy-17</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>39.16 EUR</g:price>
+    <g:brand>Repair Therapy</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>professional-nutrition-complex-18</g:id>
+    <title>Professional Nutrition Complex Platinum 18</title>
+    <description>Complexo de nutrição profissional platinum com ingredientes nobres. Oferece nutrição máxima, maciez extrema e proteção duradoura. Fórmula exclusiva para salões.</description>
+    <link>https://jchairstudios62.xyz/produto/professional-nutrition-complex-18</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>46.53 EUR</g:price>
+    <g:brand>Nutrition Complex</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>ultra-hydration-therapy-19</g:id>
+    <title>Ultra Hydration Therapy Diamond 19</title>
+    <description>Terapia de hidratação ultra diamond com tecnologia de brilho extremo. Oferece hidratação profunda, elimina o frizz e proporciona brilho diamante aos cabelos.</description>
+    <link>https://jchairstudios62.xyz/produto/ultra-hydration-therapy-19</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>42.79 EUR</g:price>
+    <g:brand>Hydration Therapy</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>regenerative-treatment-premium-20</g:id>
+    <title>Regenerative Treatment Premium System 20</title>
+    <description>Sistema de tratamento regenerativo premium que promove a regeneração total dos fios. Tecnologia avançada com células-tronco vegetais e aminoácidos essenciais.</description>
+    <link>https://jchairstudios62.xyz/produto/regenerative-treatment-premium-20</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>50.38 EUR</g:price>
+    <g:brand>Regenerative Pro</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-d30</g:id>
+    <title>Base BT Skin D30 - Tom Escuro</title>
+    <description>Base líquida BT Skin com fórmula avançada, cobertura natural e alta pigmentação. Desenvolvida com ácido hialurônico para hidratação prolongada e ativos que aumentam a energia celular.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-d30</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>30.25 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-f10</g:id>
+    <title>Base BT Skin F10 - Tom Claro</title>
+    <description>Base líquida BT Skin especialmente desenvolvida para peles claras com subtom frio. Fórmula com ácido hialurônico e proteção contra luz azul.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-f10</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>30.25 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-m20</g:id>
+    <title>Base BT Skin M20 - Tom Médio</title>
+    <description>Base líquida BT Skin para peles médias com subtom quente. Acabamento natural aveludado com tecnologia brasileira de ponta.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-m20</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>30.25 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>mari-maria-base-amndoa</g:id>
+    <title>Base Mari Maria - Tom Amêndoa</title>
+    <description>Base líquida profissional Mari Maria no tom Amêndoa. Acabamento natural e cobertura modulável para todos os tipos de pele.</description>
+    <link>https://jchairstudios62.xyz/produto/mari-maria-base-amndoa</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>1.00 EUR</g:price>
+    <g:brand>Mari Maria</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>mari-maria-base-baunilha</g:id>
+    <title>Base Mari Maria - Tom Baunilha</title>
+    <description>Base líquida profissional Mari Maria no tom Baunilha. Acabamento natural e cobertura modulável para todos os tipos de pele.</description>
+    <link>https://jchairstudios62.xyz/produto/mari-maria-base-baunilha</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>35.70 EUR</g:price>
+    <g:brand>Mari Maria</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>mari-maria-base-bege-claro</g:id>
+    <title>Base Mari Maria - Tom Bege Claro</title>
+    <description>Base líquida profissional Mari Maria no tom Bege Claro. Acabamento natural e cobertura modulável para todos os tipos de pele.</description>
+    <link>https://jchairstudios62.xyz/produto/mari-maria-base-bege-claro</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>36.70 EUR</g:price>
+    <g:brand>Mari Maria</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>mari-maria-base-bege-escuro</g:id>
+    <title>Base Mari Maria - Tom Bege Escuro</title>
+    <description>Base líquida profissional Mari Maria no tom Bege Escuro. Acabamento natural e cobertura modulável para todos os tipos de pele.</description>
+    <link>https://jchairstudios62.xyz/produto/mari-maria-base-bege-escuro</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>37.20 EUR</g:price>
+    <g:brand>Mari Maria</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>mari-maria-base-bege-medio</g:id>
+    <title>Base Mari Maria - Tom Bege Médio</title>
+    <description>Base líquida profissional Mari Maria no tom Bege Médio. Acabamento natural e cobertura modulável para todos os tipos de pele.</description>
+    <link>https://jchairstudios62.xyz/produto/mari-maria-base-bege-medio</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>37.70 EUR</g:price>
+    <g:brand>Mari Maria</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>mari-maria-base-cacau</g:id>
+    <title>Base Mari Maria - Tom Cacau</title>
+    <description>Base líquida profissional Mari Maria no tom Cacau. Acabamento natural e cobertura modulável para todos os tipos de pele.</description>
+    <link>https://jchairstudios62.xyz/produto/mari-maria-base-cacau</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>38.20 EUR</g:price>
+    <g:brand>Mari Maria</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>mari-maria-base-canela</g:id>
+    <title>Base Mari Maria - Tom Canela</title>
+    <description>Base líquida profissional Mari Maria no tom Canela. Acabamento natural e cobertura modulável para todos os tipos de pele.</description>
+    <link>https://jchairstudios62.xyz/produto/mari-maria-base-canela</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>38.70 EUR</g:price>
+    <g:brand>Mari Maria</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>mari-maria-base-caramelo</g:id>
+    <title>Base Mari Maria - Tom Caramelo</title>
+    <description>Base líquida profissional Mari Maria no tom Caramelo. Acabamento natural e cobertura modulável para todos os tipos de pele.</description>
+    <link>https://jchairstudios62.xyz/produto/mari-maria-base-caramelo</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>39.20 EUR</g:price>
+    <g:brand>Mari Maria</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>mari-maria-base-chocolate</g:id>
+    <title>Base Mari Maria - Tom Chocolate</title>
+    <description>Base líquida profissional Mari Maria no tom Chocolate. Acabamento natural e cobertura modulável para todos os tipos de pele.</description>
+    <link>https://jchairstudios62.xyz/produto/mari-maria-base-chocolate</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>39.70 EUR</g:price>
+    <g:brand>Mari Maria</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>mari-maria-base-nude</g:id>
+    <title>Base Mari Maria - Tom Nude</title>
+    <description>Base líquida profissional Mari Maria no tom Nude. Acabamento natural e cobertura modulável para todos os tipos de pele.</description>
+    <link>https://jchairstudios62.xyz/produto/mari-maria-base-nude</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>40.20 EUR</g:price>
+    <g:brand>Mari Maria</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-d10</g:id>
+    <title>Base BT Skin D10 - Tom Dourado</title>
+    <description>Base líquida BT Skin para peles de tom dourado. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-d10</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>27.50 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-d20</g:id>
+    <title>Base BT Skin D20 - Tom Dourado</title>
+    <description>Base líquida BT Skin para peles de tom dourado. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-d20</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>27.80 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-d40</g:id>
+    <title>Base BT Skin D40 - Tom Dourado</title>
+    <description>Base líquida BT Skin para peles de tom dourado. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-d40</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>28.40 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-d50</g:id>
+    <title>Base BT Skin D50 - Tom Dourado</title>
+    <description>Base líquida BT Skin para peles de tom dourado. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-d50</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>28.70 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-d60</g:id>
+    <title>Base BT Skin D60 - Tom Dourado</title>
+    <description>Base líquida BT Skin para peles de tom dourado. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-d60</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>29.00 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-f20</g:id>
+    <title>Base BT Skin F20 - Tom Frio</title>
+    <description>Base líquida BT Skin para peles de tom frio. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-f20</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>27.80 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-f30</g:id>
+    <title>Base BT Skin F30 - Tom Frio</title>
+    <description>Base líquida BT Skin para peles de tom frio. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-f30</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>28.10 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-f40</g:id>
+    <title>Base BT Skin F40 - Tom Frio</title>
+    <description>Base líquida BT Skin para peles de tom frio. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-f40</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>28.40 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-f50</g:id>
+    <title>Base BT Skin F50 - Tom Frio</title>
+    <description>Base líquida BT Skin para peles de tom frio. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-f50</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>28.70 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-f60</g:id>
+    <title>Base BT Skin F60 - Tom Frio</title>
+    <description>Base líquida BT Skin para peles de tom frio. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-f60</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>29.00 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-l10</g:id>
+    <title>Base BT Skin L10 - Tom Livre</title>
+    <description>Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-l10</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>29.30 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-l20</g:id>
+    <title>Base BT Skin L20 - Tom Livre</title>
+    <description>Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-l20</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>29.60 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-l30</g:id>
+    <title>Base BT Skin L30 - Tom Livre</title>
+    <description>Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-l30</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>29.90 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-l40</g:id>
+    <title>Base BT Skin L40 - Tom Livre</title>
+    <description>Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-l40</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>30.20 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-l50</g:id>
+    <title>Base BT Skin L50 - Tom Livre</title>
+    <description>Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-l50</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>30.50 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-l60</g:id>
+    <title>Base BT Skin L60 - Tom Livre</title>
+    <description>Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-l60</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>30.80 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-m10</g:id>
+    <title>Base BT Skin M10 - Tom Médio</title>
+    <description>Base líquida BT Skin para peles de tom médio. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-m10</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>31.10 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-m30</g:id>
+    <title>Base BT Skin M30 - Tom Médio</title>
+    <description>Base líquida BT Skin para peles de tom médio. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-m30</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>31.40 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-m40</g:id>
+    <title>Base BT Skin M40 - Tom Médio</title>
+    <description>Base líquida BT Skin para peles de tom médio. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-m40</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>31.70 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-m50</g:id>
+    <title>Base BT Skin M50 - Tom Médio</title>
+    <description>Base líquida BT Skin para peles de tom médio. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-m50</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>32.00 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-m60</g:id>
+    <title>Base BT Skin M60 - Tom Médio</title>
+    <description>Base líquida BT Skin para peles de tom médio. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-m60</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>32.30 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-t10</g:id>
+    <title>Base BT Skin T10 - Tom Tropicália</title>
+    <description>Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-t10</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>32.60 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-t20</g:id>
+    <title>Base BT Skin T20 - Tom Tropicália</title>
+    <description>Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-t20</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>32.90 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-t30</g:id>
+    <title>Base BT Skin T30 - Tom Tropicália</title>
+    <description>Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-t30</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>33.20 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-t40</g:id>
+    <title>Base BT Skin T40 - Tom Tropicália</title>
+    <description>Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-t40</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>33.50 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-t50</g:id>
+    <title>Base BT Skin T50 - Tom Tropicália</title>
+    <description>Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-t50</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>33.80 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>bruna-tavares-bt-skin-t60</g:id>
+    <title>Base BT Skin T60 - Tom Tropicália</title>
+    <description>Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.</description>
+    <link>https://jchairstudios62.xyz/produto/bruna-tavares-bt-skin-t60</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>34.10 EUR</g:price>
+    <g:brand>Bruna Tavares</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>premium-lipstick-01</g:id>
+    <title>Batom Premium Matte Luxo 01</title>
+    <description>Batom de alta pigmentação com acabamento matte e textura aveludada. Longa duração e conforto durante todo o dia.</description>
+    <link>https://jchairstudios62.xyz/produto/premium-lipstick-01</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>35.75 EUR</g:price>
+    <g:brand>Luxo Makeup</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>premium-foundation-02</g:id>
+    <title>Base Líquida Premium Full Coverage 02</title>
+    <description>Base líquida de cobertura total que proporciona acabamento natural e duração de até 16 horas.</description>
+    <link>https://jchairstudios62.xyz/produto/premium-foundation-02</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>41.80 EUR</g:price>
+    <g:brand>Full Cover</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>premium-concealer-03</g:id>
+    <title>Corretivo Premium High Definition 03</title>
+    <description>Corretivo de alta definição que oferece cobertura perfeita para olheiras e imperfeições.</description>
+    <link>https://jchairstudios62.xyz/produto/premium-concealer-03</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>31.35 EUR</g:price>
+    <g:brand>HD Makeup</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>premium-mascara-04</g:id>
+    <title>Máscara para Cílios Premium Volume 04</title>
+    <description>Máscara para cílios que proporciona volume extremo e separação perfeita, sem grumos.</description>
+    <link>https://jchairstudios62.xyz/produto/premium-mascara-04</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>29.48 EUR</g:price>
+    <g:brand>Volume Max</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>premium-eyeshadow-05</g:id>
+    <title>Paleta de Sombras Premium Luxury 05</title>
+    <description>Paleta com 12 sombras altamente pigmentadas em acabamentos matte e shimmer para looks versáteis.</description>
+    <link>https://jchairstudios62.xyz/produto/premium-eyeshadow-05</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>49.50 EUR</g:price>
+    <g:brand>Luxury Eyes</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>premium-blush-06</g:id>
+    <title>Blush Premium Glow Natural 06</title>
+    <description>Blush de textura sedosa que proporciona cor natural e luminosidade saudável às bochechas.</description>
+    <link>https://jchairstudios62.xyz/produto/premium-blush-06</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>26.95 EUR</g:price>
+    <g:brand>Natural Glow</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>premium-eyeliner-07</g:id>
+    <title>Delineador Premium Precision 07</title>
+    <description>Delineador líquido de alta precisão que permite traços perfeitos e duração prolongada.</description>
+    <link>https://jchairstudios62.xyz/produto/premium-eyeliner-07</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>25.08 EUR</g:price>
+    <g:brand>Precision Line</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>premium-powder-08</g:id>
+    <title>Pó Compacto Premium Translúcido 08</title>
+    <description>Pó compacto translúcido que fixa a maquiagem sem alterar as cores, com acabamento natural.</description>
+    <link>https://jchairstudios62.xyz/produto/premium-powder-08</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>28.60 EUR</g:price>
+    <g:brand>Translucent Pro</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>produto-teste-001</g:id>
+    <title>🧪 Produto Teste - Email System</title>
+    <description>Produto específico para testar o sistema de emails de confirmação. Valor mínimo para facilitar testes de pagamento e notificações.</description>
+    <link>https://jchairstudios62.xyz/produto/produto-teste-email-system</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>1.00 EUR</g:price>
+    <g:brand>JC Hair Studio</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>elite-coloracao-premium-11</g:id>
+    <title>Elite Coloração Premium Pro 11</title>
+    <description>Coloração profissional elite premium com tecnologia advanced. Oferece cobertura total, durabilidade superior e brilho intenso. Fórmula enriquecida com óleos nutritivos.</description>
+    <link>https://jchairstudios62.xyz/produto/elite-coloracao-premium-11</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>24.64 EUR</g:price>
+    <g:brand>Elite Pro</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>supreme-color-intensive-12</g:id>
+    <title>Supreme Color Intensive System 12</title>
+    <description>Sistema de coloração supreme intensive com proteção UV e complexo antioxidante. Oferece cor vibrante, proteção solar e longa duração. Tecnologia profissional avançada.</description>
+    <link>https://jchairstudios62.xyz/produto/supreme-color-intensive-12</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>28.38 EUR</g:price>
+    <g:brand>Supreme Color</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>luxury-color-diamond-13</g:id>
+    <title>Luxury Color Diamond Collection 13</title>
+    <description>Coleção luxury de coloração diamond com tecnologia de brilho extremo. Oferece cor intensa, brilho diamante e nutrição profunda. Fórmula exclusiva com proteínas nobres.</description>
+    <link>https://jchairstudios62.xyz/produto/luxury-color-diamond-13</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>31.79 EUR</g:price>
+    <g:brand>Diamond Color</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>professional-color-platinum-14</g:id>
+    <title>Professional Color Platinum Advanced 14</title>
+    <description>Coloração professional platinum com tecnologia anti-fade. Oferece cores duradouras, cobertura uniforme e proteção contra desbotamento. Sistema profissional avançado.</description>
+    <link>https://jchairstudios62.xyz/produto/professional-color-platinum-14</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>29.15 EUR</g:price>
+    <g:brand>Platinum Pro</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>royal-color-exclusive-15</g:id>
+    <title>Royal Color Exclusive Edition 15</title>
+    <description>Coloração royal exclusive edition desenvolvida para salões de luxo. Fórmula premium com ingredientes nobres, cobertura excepcional e resultados profissionais únicos.</description>
+    <link>https://jchairstudios62.xyz/produto/royal-color-exclusive-15</link>
+    <g:image_link>https://jchairstudios62.xyz/images/placeholder.jpg</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>35.42 EUR</g:price>
+    <g:brand>Royal Exclusive</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>oleo-capilar-7</g:id>
+    <title>Óleo Capilar Multivitamínico</title>
+    <description>Óleo capilar enriquecido com vitaminas A, C e E que nutrem, hidratam e proporcionam brilho extraordinário.</description>
+    <link>https://jchairstudios62.xyz/produto/oleo-capilar-7</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/wepink-tratamentos/booster-repair-oleo.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>28.38 EUR</g:price>
+    <g:brand>Vitamin Hair</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>creme-leave-in-8</g:id>
+    <title>Creme Leave-in Proteção Total</title>
+    <description>Creme sem enxágue que protege os cabelos dos raios UV e do calor das ferramentas de modelagem.</description>
+    <link>https://jchairstudios62.xyz/produto/creme-leave-in-8</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/wepink-tratamentos/leave-in-multifuncional.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>22.77 EUR</g:price>
+    <g:brand>All Day Protection</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>tonico-crescimento-10</g:id>
+    <title>Tônico Crescimento Acelerado</title>
+    <description>Tônico com ativos que estimulam a circulação do couro cabeludo e aceleram o crescimento natural dos fios.</description>
+    <link>https://jchairstudios62.xyz/produto/tonico-crescimento-10</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/wepink-tratamentos/hair-tonic-tonico.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>42.90 EUR</g:price>
+    <g:brand>Growth Boost</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>hairlife-super-cachos-solto-natural</g:id>
+    <title>HairLife Super Cachos Solto e Natural</title>
+    <description>Creme de relaxamento para cabelos cacheados com extrato de girassol. Fórmula que solta os cachos mantendo movimento natural e brilho saudável.</description>
+    <link>https://jchairstudios62.xyz/produto/hairlife-super-cachos-solto-natural</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/relaxamentos_/relaxamentos__3.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>22.07 EUR</g:price>
+    <g:brand>HairLife</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>hairlife-liso-laminado-bondplex</g:id>
+    <title>HairLife Liso Laminado BondPlex com Óleo de Argan</title>
+    <description>Creme alisante com tecnologia BondPlex e óleo de argan. Repara danos químicos anteriores proporcionando liso perfeito por até 10 semanas com brilho espelhado.</description>
+    <link>https://jchairstudios62.xyz/produto/hairlife-liso-laminado-bondplex</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/relaxamentos_/relaxamentos__1.webp</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>31.79 EUR</g:price>
+    <g:brand>HairLife</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+<item>
+    <g:id>hairlife-cacho-natural-relaxamento-ondulamento</g:id>
+    <title>HairLife Cacho & Natural - Creme Relaxamento e Ondulamento</title>
+    <description>Creme para relaxamento e ondulamento que transforma cabelos ressecados em cachos naturalmente bonitos. Fórmula especial para cabelos cacheados.</description>
+    <link>https://jchairstudios62.xyz/produto/hairlife-cacho-natural-relaxamento-ondulamento</link>
+    <g:image_link>https://jchairstudios62.xyz/images/products/relaxamentos_/relaxamentos__4.png</g:image_link>
+    <g:condition>new</g:condition>
+    <g:availability>in stock</g:availability>
+    <g:price>20.75 EUR</g:price>
+    <g:brand>HairLife</g:brand>
+    <g:google_product_category>Health &amp; Beauty</g:google_product_category>
+</item>
+</channel>
 </rss>
