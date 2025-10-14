@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Produtos Capilares Brasileiros | Progressivas e Tratamentos | JC Hair Studio\'s 62',
-  description: 'Catálogo completo de produtos capilares brasileiros: progressivas Vogue, BTX capilar, tratamentos profissionais. +40 anos de tradição. Entrega Europa.',
+  title: 'Produtos Capilares Brasileiros | Progressivas e Relaxamentos | JC Hair Studio\'s 62',
+  description: 'Catálogo completo de produtos capilares brasileiros: progressivas Vogue, BTX capilar, relaxamentos profissionais. +40 anos de tradição. Entrega Europa.',
   keywords: [
     'progressiva vogue portugal',
     'btx capilar europa',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Produtos Capilares Brasileiros | JC Hair Studio\'s 62',
-    description: 'Progressivas, BTX e tratamentos capilares brasileiros premium. Entrega Europa.',
+    description: 'Progressivas, BTX e relaxamentos capilares brasileiros premium. Entrega Europa.',
     url: 'https://jchairstudios62.xyz/produtos',
     images: [
       {

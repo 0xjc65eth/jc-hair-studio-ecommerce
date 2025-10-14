@@ -1,0 +1,4191 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-09-19T12:15:00.000Z",
+    "pricingStrategy": "European market research + 10% margin for coupons and loyalty program",
+    "currency": "EUR",
+    "basePricing": "Competitive analysis from Bellasil, Cacau Chic, L'Oreal Europe",
+    "marginApplied": "10%",
+    "description": "Complete product catalog with European pricing strategy"
+  },
+  "categories": [
+    {
+      "id": "progressivas-btx",
+      "name": "Progressivas e BTX",
+      "slug": "progressivas-btx",
+      "description": "Progressivas, BTX e tratamentos de alisamento profissionais",
+      "icon": "💫",
+      "products": [
+        {
+          "id": "cocochoco-original-premium",
+          "name": "COCOCHOCO Original Premium Keratin Treatment 1000ML",
+          "slug": "cocochoco-original-premium-keratin-treatment-1000ml",
+          "brand": "COCOCHOCO PROFESSIONAL",
+          "shortDesc": "Tratamento premium de queratina com terapia de chocolate",
+          "description": "Tratamento premium de queratina com terapia de chocolate. Fórmula profissional que proporciona alisamento duradouro, brilho intenso e nutrição profunda para resultados excepcionais.",
+          "sku": "COCO-OP-1L",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Tratamento de queratina premium",
+          "volume": "1000ml",
+          "pricing": {
+            "basePrice": 124.89,
+            "ourPrice": 124.89,
+            "discountPrice": 124.89,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "Baseado em progressivas premium europeias"
+          },
+          "tags": [
+            "premium",
+            "queratina",
+            "chocolate",
+            "profissional"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 428,
+          "inStock": true,
+          "stockQuantity": 15,
+          "weight": 1000,
+          "labels": [
+            "BEST SELLER"
+          ],
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_1.JPG"
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_2.JPG"
+        },
+        {
+          "id": "cocochoco-gold-premium",
+          "name": "COCOCHOCO Gold Premium Keratin Treatment 250ML",
+          "slug": "cocochoco-gold-premium-keratin-treatment-250ml",
+          "brand": "COCOCHOCO PROFESSIONAL",
+          "shortDesc": "Queratina premium com ouro 24K",
+          "description": "Tratamento de queratina premium enriquecido com ouro 24K. Fórmula exclusiva que proporciona alisamento, brilho e nutrição intensa.",
+          "sku": "COCO-GP-250",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Tratamento premium com ouro",
+          "volume": "250ml",
+          "pricing": {
+            "basePrice": 43.3,
+            "ourPrice": 43.3,
+            "discountPrice": 43.3,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "Premium gold treatment"
+          },
+          "tags": [
+            "premium",
+            "ouro",
+            "queratina"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 215,
+          "inStock": true,
+          "stockQuantity": 20,
+          "weight": 250,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_2.JPG"
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_3.JPG"
+        },
+        {
+          "id": "nuance-liso-perfect",
+          "name": "Nuance LISO Perfect Brazilian Keratin",
+          "slug": "nuance-liso-perfect-brazilian-keratin",
+          "brand": "NUANCE",
+          "shortDesc": "Queratina brasileira com máscara",
+          "description": "Tratamento de queratina brasileira profissional. Sistema completo com máscara para alisamento perfeito e duradouro.",
+          "sku": "NUA-LP-1L",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Alisamento profissional brasileiro",
+          "volume": "1000ml",
+          "pricing": {
+            "basePrice": 234.9,
+            "ourPrice": 234.9,
+            "discountPrice": 234.9,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "Premium Brazilian keratin"
+          },
+          "tags": [
+            "premium",
+            "queratina",
+            "brasileiro"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 156,
+          "inStock": true,
+          "stockQuantity": 10,
+          "weight": 1000,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_3.JPG"
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_12.png"
+        },
+        {
+          "id": "ineya-professional-keratin",
+          "name": "INEYA Professional Keratin Smooth",
+          "slug": "ineya-professional-keratin-smooth",
+          "brand": "INEYA PROFESSIONAL",
+          "shortDesc": "Sistema profissional de queratina",
+          "description": "Sistema profissional de queratina para alisamento e tratamento intensivo. Fórmula avançada para resultados profissionais.",
+          "sku": "INE-PKS-1L",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Sistema profissional completo",
+          "volume": "1000ml",
+          "pricing": {
+            "basePrice": 219.9,
+            "ourPrice": 219.9,
+            "discountPrice": 219.9,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "Professional system"
+          },
+          "tags": [
+            "profissional",
+            "queratina",
+            "sistema"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 98,
+          "inStock": true,
+          "stockQuantity": 12,
+          "weight": 1000,
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_4.JPG"
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_13.png"
+        },
+        {
+          "id": "relaxamento-keratin-smooth",
+          "name": "Relaxamento Keratin Smooth Complex",
+          "slug": "relaxamento-keratin-smooth-complex",
+          "brand": "KERATIN SMOOTH",
+          "shortDesc": "Sistema de relaxamento com queratina",
+          "description": "Sistema completo de relaxamento com queratina. Fórmula suave e eficaz para alisamento progressivo.",
+          "sku": "KS-RSC-500",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Relaxamento progressivo",
+          "volume": "500ml",
+          "pricing": {
+            "basePrice": 84.9,
+            "ourPrice": 84.9,
+            "discountPrice": 84.9,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "Smoothing system"
+          },
+          "tags": [
+            "relaxamento",
+            "queratina",
+            "suave"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 132,
+          "inStock": true,
+          "stockQuantity": 18,
+          "weight": 500,
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/progressivas_diversas/progressivas_diversas_5.JPG"
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_14.png"
+        },
+        {
+          "id": "cadiveu-professional-brasil-cacau-1l",
+          "name": "Brasil Cacau Progressiva 1L",
+          "slug": "brasil-cacau-progressiva-1l",
+          "brand": "Cadiveu",
+          "shortDesc": "Progressiva profissional Brasil Cacau 1L",
+          "description": "Progressiva profissional Brasil Cacau 1L - O best-seller absoluto na Europa! Alisamento perfeito com cacau brasileiro, alta demanda garantida. Resultado profissional duradouro até 4 meses.",
+          "sku": "CAD-BC-1L",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Alisamento profissional de longa duração",
+          "volume": "1000ml",
+          "pricing": {
+            "basePrice": 195.6,
+            "ourPrice": 195.6,
+            "discountPrice": 175.9,
+            "savings": 19.7,
+            "margin": "10%",
+            "competitive": "Preço competitivo vs mercado europeu"
+          },
+          "tags": [
+            "profissional",
+            "longa duração",
+            "cacau",
+            "anti-frizz"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 342,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 1000,
+          "labels": [
+            "DESTAQUE",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/cadiveu/cadiveu-1.png"
+          ],
+          "image": "/images/products/cadiveu/cadiveu-1.png"
+        },
+        {
+          "id": "cadiveu-professional-brasil-cacau-300ml",
+          "name": "Cadiveu Professional Brasil Cacau Alisante 300ml",
+          "slug": "cadiveu-professional-brasil-cacau-300ml",
+          "brand": "Cadiveu",
+          "shortDesc": "Progressiva profissional com óleo de cacau - tamanho trial",
+          "description": "Versão trial do tratamento alisante profissional com óleo de cacau. Ideal para testar o produto ou cabelos mais curtos.",
+          "sku": "CAD-BC-300-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Alisamento profissional - trial size",
+          "volume": "300ml",
+          "pricing": {
+            "basePrice": 141.79,
+            "ourPrice": 155.97,
+            "discountPrice": 124.77,
+            "savings": 31.2,
+            "margin": "10%",
+            "competitive": "Baseado em Bellasil Brasil Cacau Eco Keratin €141.79"
+          },
+          "tags": [
+            "profissional",
+            "trial",
+            "cacau",
+            "anti-frizz"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 156,
+          "inStock": true,
+          "stockQuantity": 35,
+          "weight": 300,
+          "labels": [
+            "TRIAL",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/cadiveu/cadiveu-2.png"
+          ],
+          "image": "/images/products/cadiveu/cadiveu-2.png"
+        },
+        {
+          "id": "forever-liss-btx-zero-formol-250g",
+          "name": "Forever Liss BTX Zero Formol 250g",
+          "slug": "forever-liss-btx-zero-formol-250g",
+          "brand": "Forever Liss",
+          "shortDesc": "BTX capilar sem formol para alisamento natural e reconstrução",
+          "description": "Botox capilar zero formol que alisa, reconstrói e hidrata profundamente os fios. Resultado natural com redução de volume e frizz.",
+          "sku": "FL-BTX-250-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX",
+          "finalidade": "Botox capilar sem formol - reconstrução e alisamento",
+          "volume": "250g",
+          "pricing": {
+            "basePrice": 22.9,
+            "ourPrice": 25.19,
+            "discountPrice": 20.15,
+            "savings": 5.04,
+            "margin": "10%",
+            "competitive": "Baseado preço brasileiro R$22.90 convertido + margem importação"
+          },
+          "tags": [
+            "sem formol",
+            "reconstrução",
+            "natural",
+            "hidratação"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 198,
+          "inStock": true,
+          "stockQuantity": 30,
+          "weight": 250,
+          "labels": [
+            "NOVO",
+            "SEM FORMOL"
+          ],
+          "images": [
+            "/images/products/botox/botox_1.png"
+          ],
+          "image": "/images/products/forever-liss/forever-liss-1.png"
+        },
+        {
+          "id": "forever-liss-btx-zero-formol-1kg",
+          "name": "Forever Liss BTX Zero Formol 1Kg Profissional",
+          "slug": "forever-liss-btx-zero-formol-1kg",
+          "brand": "Forever Liss",
+          "shortDesc": "BTX capilar sem formol tamanho profissional para salões",
+          "description": "Botox capilar zero formol em tamanho profissional. Ideal para salões e uso intensivo. Alisa, reconstrói e hidrata profundamente os fios.",
+          "sku": "FL-BTX-1K-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX",
+          "finalidade": "Botox capilar profissional sem formol",
+          "volume": "1Kg",
+          "pricing": {
+            "basePrice": 132.9,
+            "ourPrice": 146.19,
+            "discountPrice": 116.95,
+            "savings": 29.24,
+            "margin": "10%",
+            "competitive": "Baseado preço brasileiro R$132.90 convertido + margem importação"
+          },
+          "tags": [
+            "sem formol",
+            "profissional",
+            "salão",
+            "1kg"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 89,
+          "inStock": true,
+          "stockQuantity": 15,
+          "weight": 1000,
+          "labels": [
+            "PROFISSIONAL",
+            "SEM FORMOL"
+          ],
+          "images": [
+            "/images/products/botox/botox_2.png"
+          ],
+          "image": "/images/products/forever-liss/forever-liss-2.png"
+        },
+        {
+          "id": "btx-professional-premium-01",
+          "name": "BTX Professional Premium Reconstruction 01",
+          "slug": "btx-professional-premium-01",
+          "brand": "BTX Pro",
+          "shortDesc": "BTX profissional premium para reconstrução capilar",
+          "description": "Botox capilar premium que reconstrói, alisa e revitaliza os fios intensamente. Fórmula avançada sem formol.",
+          "sku": "BP-BTX-001",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX",
+          "finalidade": "BTX reconstrução premium",
+          "volume": "500g",
+          "pricing": {
+            "basePrice": 35.5,
+            "ourPrice": 39.05,
+            "discountPrice": 31.24,
+            "savings": 7.81,
+            "margin": "10%",
+            "competitive": "Baseado em BTX premium europeus"
+          },
+          "tags": [
+            "premium",
+            "reconstrução",
+            "sem formol",
+            "profissional"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 445,
+          "inStock": true,
+          "stockQuantity": 32,
+          "weight": 500,
+          "labels": [
+            "PREMIUM",
+            "SEM FORMOL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8737.png"
+          ],
+          "image": "/images/products/botox/botox_1.png"
+        },
+        {
+          "id": "progressiva-advanced-02",
+          "name": "Progressiva Advanced Smooth System 02",
+          "slug": "progressiva-advanced-02",
+          "brand": "Smooth System",
+          "shortDesc": "Progressiva avançada para alisamento profissional",
+          "description": "Sistema de alisamento avançado que proporciona cabelos perfeitamente lisos com brilho intenso e proteção.",
+          "sku": "SS-PRO-002",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Alisamento profissional avançado",
+          "volume": "1L",
+          "pricing": {
+            "basePrice": 165,
+            "ourPrice": 181.5,
+            "discountPrice": 145.2,
+            "savings": 36.3,
+            "margin": "10%",
+            "competitive": "Baseado em progressivas premium europeias"
+          },
+          "tags": [
+            "avançado",
+            "profissional",
+            "brilho",
+            "proteção"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 298,
+          "inStock": true,
+          "stockQuantity": 18,
+          "weight": 1000,
+          "labels": [
+            "AVANÇADO",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8739.png"
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_15.png"
+        },
+        {
+          "id": "btx-repair-intensive-03",
+          "name": "BTX Repair Intensive Treatment 03",
+          "slug": "btx-repair-intensive-03",
+          "brand": "Repair Intensive",
+          "shortDesc": "BTX reparador intensivo para cabelos danificados",
+          "description": "Tratamento BTX intensivo especialmente desenvolvido para reparar cabelos extremamente danificados e ressecados.",
+          "sku": "RI-BTX-003",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX",
+          "finalidade": "BTX reparação intensiva",
+          "volume": "300g",
+          "pricing": {
+            "basePrice": 42.8,
+            "ourPrice": 47.08,
+            "discountPrice": 37.66,
+            "savings": 9.42,
+            "margin": "10%",
+            "competitive": "Baseado em BTX premium europeus"
+          },
+          "tags": [
+            "reparador",
+            "intensivo",
+            "danificados",
+            "ressecados"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 623,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 300,
+          "labels": [
+            "REPARADOR",
+            "INTENSIVO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8740.png"
+          ],
+          "image": "/images/products/botox/botox_2.png"
+        },
+        {
+          "id": "progressiva-keratin-04",
+          "name": "Progressiva Keratin Complex Professional 04",
+          "slug": "progressiva-keratin-04",
+          "brand": "Keratin Complex",
+          "shortDesc": "Progressiva com complexo de queratina para máxima suavidade",
+          "description": "Progressiva enriquecida com complexo de queratina que proporciona máxima suavidade e controle de frizz.",
+          "sku": "KC-PRO-004",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Progressiva queratina suavidade máxima",
+          "volume": "800ml",
+          "pricing": {
+            "basePrice": 145.6,
+            "ourPrice": 160.16,
+            "discountPrice": 128.13,
+            "savings": 32.03,
+            "margin": "10%",
+            "competitive": "Baseado em progressivas premium europeias"
+          },
+          "tags": [
+            "queratina",
+            "suavidade",
+            "anti-frizz",
+            "complexo"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 367,
+          "inStock": true,
+          "stockQuantity": 22,
+          "weight": 800,
+          "labels": [
+            "QUERATINA",
+            "SUAVIDADE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8741.png"
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_16.png"
+        },
+        {
+          "id": "btx-collagen-boost-05",
+          "name": "BTX Collagen Boost Reconstruction 05",
+          "slug": "btx-collagen-boost-05",
+          "brand": "Collagen Boost",
+          "shortDesc": "BTX com colágeno para reconstrução e firmeza",
+          "description": "BTX enriquecido com colágeno que reconstrói a fibra capilar e proporciona firmeza e elasticidade aos fios.",
+          "sku": "CB-BTX-005",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX",
+          "finalidade": "BTX colágeno reconstrução firmeza",
+          "volume": "400g",
+          "pricing": {
+            "basePrice": 38.9,
+            "ourPrice": 42.79,
+            "discountPrice": 34.23,
+            "savings": 8.56,
+            "margin": "10%",
+            "competitive": "Baseado em BTX premium europeus"
+          },
+          "tags": [
+            "colágeno",
+            "firmeza",
+            "elasticidade",
+            "reconstrução"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 234,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 400,
+          "labels": [
+            "COLÁGENO",
+            "FIRMEZA"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8748.png"
+          ],
+          "image": "/images/products/botox/botox_3.png"
+        },
+        {
+          "id": "progressiva-silk-protein-06",
+          "name": "Progressiva Silk Protein Advanced 06",
+          "slug": "progressiva-silk-protein-06",
+          "brand": "Silk Protein",
+          "shortDesc": "Progressiva com proteína da seda para cabelos sedosos",
+          "description": "Progressiva avançada com proteína da seda que deixa os cabelos extremamente sedosos e com brilho natural.",
+          "sku": "SP-PRO-006",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Progressiva proteína seda sedosidade",
+          "volume": "600ml",
+          "pricing": {
+            "basePrice": 125.5,
+            "ourPrice": 138.05,
+            "discountPrice": 110.44,
+            "savings": 27.61,
+            "margin": "10%",
+            "competitive": "Baseado em progressivas premium europeias"
+          },
+          "tags": [
+            "proteína seda",
+            "sedoso",
+            "brilho natural",
+            "avançado"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 456,
+          "inStock": true,
+          "stockQuantity": 19,
+          "weight": 600,
+          "labels": [
+            "PROTEÍNA SEDA",
+            "SEDOSIDADE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8752.png"
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_17.png"
+        },
+        {
+          "id": "btx-vitamin-complex-07",
+          "name": "BTX Vitamin Complex Revitalizing 07",
+          "slug": "btx-vitamin-complex-07",
+          "brand": "Vitamin Complex",
+          "shortDesc": "BTX com complexo vitamínico revitalizante",
+          "description": "BTX enriquecido com complexo vitamínico que revitaliza, nutre e reconstrói os fios de forma profunda.",
+          "sku": "VC-BTX-007",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX",
+          "finalidade": "BTX vitamínico revitalizante",
+          "volume": "350g",
+          "pricing": {
+            "basePrice": 44.2,
+            "ourPrice": 48.62,
+            "discountPrice": 38.9,
+            "savings": 9.72,
+            "margin": "10%",
+            "competitive": "Baseado em BTX premium europeus"
+          },
+          "tags": [
+            "vitamínico",
+            "revitalizante",
+            "nutritivo",
+            "profundo"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 389,
+          "inStock": true,
+          "stockQuantity": 31,
+          "weight": 350,
+          "labels": [
+            "VITAMÍNICO",
+            "REVITALIZANTE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8753.png"
+          ],
+          "image": "/images/products/botox/botox_4.png"
+        },
+        {
+          "id": "progressiva-nano-technology-08",
+          "name": "Progressiva Nano Technology Ultra 08",
+          "slug": "progressiva-nano-technology-08",
+          "brand": "Nano Tech",
+          "shortDesc": "Progressiva com nanotecnologia para resultados superiores",
+          "description": "Progressiva com nanotecnologia avançada que penetra profundamente na fibra capilar para resultados excepcionais.",
+          "sku": "NT-PRO-008",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Progressiva nanotecnologia superior",
+          "volume": "750ml",
+          "pricing": {
+            "basePrice": 185,
+            "ourPrice": 203.5,
+            "discountPrice": 162.8,
+            "savings": 40.7,
+            "margin": "10%",
+            "competitive": "Baseado em progressivas premium europeias"
+          },
+          "tags": [
+            "nanotecnologia",
+            "superior",
+            "penetração",
+            "excepcional"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 678,
+          "inStock": true,
+          "stockQuantity": 15,
+          "weight": 750,
+          "labels": [
+            "NANOTECNOLOGIA",
+            "SUPERIOR"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8757.png"
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_18.png"
+        },
+        {
+          "id": "btx-argan-oil-09",
+          "name": "BTX Argan Oil Luxury Treatment 09",
+          "slug": "btx-argan-oil-09",
+          "brand": "Argan Luxury",
+          "shortDesc": "BTX com óleo de argan para tratamento de luxo",
+          "description": "BTX premium enriquecido com óleo de argan puro que proporciona nutrição intensa e brilho excepcional.",
+          "sku": "AL-BTX-009",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX",
+          "finalidade": "BTX argan tratamento luxo",
+          "volume": "450g",
+          "pricing": {
+            "basePrice": 52.8,
+            "ourPrice": 58.08,
+            "discountPrice": 46.46,
+            "savings": 11.62,
+            "margin": "10%",
+            "competitive": "Baseado em BTX premium europeus"
+          },
+          "tags": [
+            "argan",
+            "luxo",
+            "nutrição intensa",
+            "brilho excepcional"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 567,
+          "inStock": true,
+          "stockQuantity": 24,
+          "weight": 450,
+          "labels": [
+            "ARGAN",
+            "LUXO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8758.png"
+          ],
+          "image": "/images/products/botox/botox_5.png"
+        },
+        {
+          "id": "progressiva-diamond-shine-10",
+          "name": "Progressiva Diamond Shine Professional 10",
+          "slug": "progressiva-diamond-shine-10",
+          "brand": "Diamond Shine",
+          "shortDesc": "Progressiva com brilho diamante para cabelos luminosos",
+          "description": "Progressiva premium que proporciona brilho diamante aos cabelos, deixando-os luminosos e perfeitamente lisos.",
+          "sku": "DS-PRO-010",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas",
+          "finalidade": "Progressiva brilho diamante luminoso",
+          "volume": "900ml",
+          "pricing": {
+            "basePrice": 195.5,
+            "ourPrice": 215.05,
+            "discountPrice": 172.04,
+            "savings": 43.01,
+            "margin": "10%",
+            "competitive": "Baseado em progressivas premium europeias"
+          },
+          "tags": [
+            "brilho diamante",
+            "luminoso",
+            "premium",
+            "perfeito"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 434,
+          "inStock": true,
+          "stockQuantity": 12,
+          "weight": 900,
+          "labels": [
+            "BRILHO DIAMANTE",
+            "LUMINOSO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8759.png"
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_19.png"
+        },
+        {
+          "id": "advanced-progressive-system-11",
+          "name": "Sistema Progressivo Advanced Premium 11",
+          "slug": "advanced-progressive-system-11",
+          "brand": "Advanced System",
+          "shortDesc": "Sistema progressivo advanced com tecnologia brasileira de alta performance",
+          "description": "Sistema progressivo completo com tecnologia brasileira avançada. Oferece alisamento natural, redução de volume e proteção térmica. Resultados duradouros por até 5 meses.",
+          "sku": "ADV-PROG-SYS-11",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas Premium",
+          "finalidade": "Alisamento progressivo de longa duração",
+          "volume": "500ml",
+          "pricing": {
+            "basePrice": 38.8,
+            "ourPrice": 42.68,
+            "discountPrice": 34.14,
+            "savings": 8.54,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "progressiva",
+            "premium",
+            "advanced",
+            "brasileira"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 225,
+          "inStock": true,
+          "stockQuantity": 22,
+          "weight": 500,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/16-B50655-4465-477-A-95-C5-48-FC08-AAEAC1.png"
+          ],
+          "image": "/images/products/progressivas_diversas/progressivas_diversas_20.png"
+        },
+        {
+          "id": "btx-ultra-reconstruction-12",
+          "name": "BTX Ultra Reconstruction Therapy 12",
+          "slug": "btx-ultra-reconstruction-12",
+          "brand": "Ultra BTX",
+          "shortDesc": "BTX ultra reconstruction therapy para cabelos extremamente danificados",
+          "description": "Terapia BTX ultra reconstruction especialmente desenvolvida para cabelos extremamente danificados. Tecnologia molecular que reconstrói a fibra capilar, oferece alisamento suave e proteção máxima.",
+          "sku": "ULTRA-BTX-REC-12",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX Reconstruction",
+          "finalidade": "Reconstrução ultra para cabelos muito danificados",
+          "volume": "1L",
+          "pricing": {
+            "basePrice": 48.9,
+            "ourPrice": 53.79,
+            "discountPrice": 43.03,
+            "savings": 10.76,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "btx",
+            "ultra",
+            "reconstruction",
+            "therapy"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 195,
+          "inStock": true,
+          "stockQuantity": 15,
+          "weight": 1000,
+          "labels": [
+            "ULTRA"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/1605-BFB8-97-D1-4-EAA-8-EEB-AD95-AD1657-B7.png"
+          ]
+        },
+        {
+          "id": "luxury-progressive-gold-13",
+          "name": "Luxury Progressive Gold System 13",
+          "slug": "luxury-progressive-gold-13",
+          "brand": "Luxury Gold",
+          "shortDesc": "Sistema progressivo luxury gold com partículas de ouro para brilho extremo",
+          "description": "Sistema progressivo luxury com micropartículas de ouro. Oferece alisamento premium, brilho extremo e nutrição profunda. Tecnologia exclusiva para resultados profissionais de salão.",
+          "sku": "LUX-GOLD-PROG-13",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas Luxury",
+          "finalidade": "Alisamento luxury com partículas de ouro",
+          "volume": "500ml",
+          "pricing": {
+            "basePrice": 52.3,
+            "ourPrice": 57.53,
+            "discountPrice": 46.02,
+            "savings": 11.51,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "luxury",
+            "gold",
+            "progressiva",
+            "premium"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 165,
+          "inStock": true,
+          "stockQuantity": 12,
+          "weight": 500,
+          "labels": [
+            "LUXURY"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/2-A39-E03-E-0-A0-D-4-F86-8-D5-D-F92-D6-DFE0-DF8.png"
+          ]
+        },
+        {
+          "id": "professional-btx-therapy-14",
+          "name": "Professional BTX Therapy Advanced 14",
+          "slug": "professional-btx-therapy-14",
+          "brand": "BTX Therapy",
+          "shortDesc": "BTX therapy professional com aminoácidos para reconstrução total",
+          "description": "Tratamento BTX therapy profissional enriquecido com aminoácidos essenciais. Reconstrói totalmente a estrutura capilar, oferece alisamento natural e proteção contra danos futuros.",
+          "sku": "BTX-THERAPY-ADV-14",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX Therapy",
+          "finalidade": "Therapy reconstruction com aminoácidos",
+          "volume": "1L",
+          "pricing": {
+            "basePrice": 41.2,
+            "ourPrice": 45.32,
+            "discountPrice": 36.26,
+            "savings": 9.06,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "btx",
+            "therapy",
+            "aminoacidos",
+            "professional"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 210,
+          "inStock": true,
+          "stockQuantity": 20,
+          "weight": 1000,
+          "labels": [
+            "PROFESSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/34-E687-F6-9783-48-DD-BCEF-03743-D43-FD26.png"
+          ]
+        },
+        {
+          "id": "premium-btx-diamond-15",
+          "name": "Premium BTX Diamond Collection 15",
+          "slug": "premium-btx-diamond-15",
+          "brand": "Diamond BTX",
+          "shortDesc": "BTX premium diamond collection com brilho diamante e reconstrução profunda",
+          "description": "Coleção BTX premium diamond com tecnologia de brilho diamante. Oferece reconstrução profunda, alisamento suave e brilho intenso. Fórmula exclusiva com proteínas nobres.",
+          "sku": "DIAMOND-BTX-PREM-15",
+          "category": "Progressivas e BTX",
+          "subcategory": "BTX Diamond",
+          "finalidade": "BTX premium com brilho diamante",
+          "volume": "1L",
+          "pricing": {
+            "basePrice": 55.6,
+            "ourPrice": 61.16,
+            "discountPrice": 48.93,
+            "savings": 12.23,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "btx",
+            "diamond",
+            "premium",
+            "brilho"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 145,
+          "inStock": true,
+          "stockQuantity": 10,
+          "weight": 1000,
+          "labels": [
+            "DIAMOND"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/4-A0-CB406-3-AFE-43-B6-AFAB-6-D330-F38323-D.png"
+          ]
+        },
+        {
+          "id": "royal-progressive-platinum-16",
+          "name": "Royal Progressive Platinum System 16",
+          "slug": "royal-progressive-platinum-16",
+          "brand": "Royal Platinum",
+          "shortDesc": "Sistema progressivo royal platinum com tecnologia anti-age para cabelos maduros",
+          "description": "Sistema progressivo royal platinum especialmente desenvolvido para cabelos maduros. Tecnologia anti-age que revitaliza, alisa e protege os fios. Resultados profissionais duradouros.",
+          "sku": "ROYAL-PLAT-PROG-16",
+          "category": "Progressivas e BTX",
+          "subcategory": "Progressivas Royal",
+          "finalidade": "Progressivo royal com tecnologia anti-age",
+          "volume": "500ml",
+          "pricing": {
+            "basePrice": 49.8,
+            "ourPrice": 54.78,
+            "discountPrice": 43.82,
+            "savings": 10.96,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "royal",
+            "platinum",
+            "anti-age",
+            "progressiva"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 185,
+          "inStock": true,
+          "stockQuantity": 14,
+          "weight": 500,
+          "labels": [
+            "ROYAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coloracao-capilar",
+      "name": "Coloração Capilar",
+      "slug": "coloracao-capilar",
+      "description": "Tintas e colorações profissionais para todos os tipos de cabelo",
+      "icon": "🎨",
+      "products": [
+        {
+          "id": "professional-color-01",
+          "name": "Coloração Profissional Advanced Color 01",
+          "slug": "professional-color-01",
+          "brand": "Advanced Color",
+          "shortDesc": "Coloração premium com tecnologia de ponta",
+          "description": "Coloração profissional de alta performance com cobertura total e cor duradoura. Fórmula enriquecida com óleos naturais.",
+          "sku": "AC-COL-001",
+          "category": "Coloração Capilar",
+          "subcategory": "Premium",
+          "finalidade": "Coloração profissional de alta cobertura",
+          "cor": "Cor premium 01",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 7.92,
+            "ourPrice": 21.78,
+            "discountPrice": 17.42,
+            "savings": 4.36,
+            "margin": "10%",
+            "competitive": "Baseado em colorações premium europeias"
+          },
+          "tags": [
+            "premium",
+            "profissional",
+            "alta cobertura",
+            "duradoura"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 423,
+          "inStock": true,
+          "stockQuantity": 45,
+          "weight": 80,
+          "labels": [
+            "PREMIUM",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png.png"
+          ]
+        },
+        {
+          "id": "professional-color-02",
+          "name": "Coloração Profissional Advanced Color 02",
+          "slug": "professional-color-02",
+          "brand": "Advanced Color",
+          "shortDesc": "Coloração premium com tecnologia de ponta",
+          "description": "Coloração profissional de alta performance com cobertura total e cor duradoura. Fórmula enriquecida com óleos naturais.",
+          "sku": "AC-COL-002",
+          "category": "Coloração Capilar",
+          "subcategory": "Premium",
+          "finalidade": "Coloração profissional de alta cobertura",
+          "cor": "Cor premium 02",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 8,
+            "ourPrice": 22,
+            "discountPrice": 17.6,
+            "savings": 4.4,
+            "margin": "10%",
+            "competitive": "Baseado em colorações premium europeias"
+          },
+          "tags": [
+            "premium",
+            "profissional",
+            "alta cobertura",
+            "duradoura"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 387,
+          "inStock": true,
+          "stockQuantity": 42,
+          "weight": 80,
+          "labels": [
+            "PREMIUM",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png-1.png"
+          ]
+        },
+        {
+          "id": "professional-color-03",
+          "name": "Coloração Profissional Advanced Color 03",
+          "slug": "professional-color-03",
+          "brand": "Advanced Color",
+          "shortDesc": "Coloração premium com tecnologia de ponta",
+          "description": "Coloração profissional de alta performance com cobertura total e cor duradoura. Fórmula enriquecida com óleos naturais.",
+          "sku": "AC-COL-003",
+          "category": "Coloração Capilar",
+          "subcategory": "Premium",
+          "finalidade": "Coloração profissional de alta cobertura",
+          "cor": "Cor premium 03",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 8.08,
+            "ourPrice": 22.22,
+            "discountPrice": 17.78,
+            "savings": 4.44,
+            "margin": "10%",
+            "competitive": "Baseado em colorações premium europeias"
+          },
+          "tags": [
+            "premium",
+            "profissional",
+            "alta cobertura",
+            "duradoura"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 445,
+          "inStock": true,
+          "stockQuantity": 47,
+          "weight": 80,
+          "labels": [
+            "PREMIUM",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png-2.png"
+          ]
+        },
+        {
+          "id": "professional-color-04",
+          "name": "Coloração Profissional Advanced Color 04",
+          "slug": "professional-color-04",
+          "brand": "Advanced Color",
+          "shortDesc": "Coloração premium com tecnologia de ponta",
+          "description": "Coloração profissional de alta performance com cobertura total e cor duradoura. Fórmula enriquecida com óleos naturais.",
+          "sku": "AC-COL-004",
+          "category": "Coloração Capilar",
+          "subcategory": "Premium",
+          "finalidade": "Coloração profissional de alta cobertura",
+          "cor": "Cor premium 04",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 8.16,
+            "ourPrice": 22.44,
+            "discountPrice": 17.95,
+            "savings": 4.49,
+            "margin": "10%",
+            "competitive": "Baseado em colorações premium europeias"
+          },
+          "tags": [
+            "premium",
+            "profissional",
+            "alta cobertura",
+            "duradoura"
+          ],
+          "rating": 4.5,
+          "reviewsCount": 312,
+          "inStock": true,
+          "stockQuantity": 39,
+          "weight": 80,
+          "labels": [
+            "PREMIUM",
+            "PROFISSIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png-3.png"
+          ]
+        },
+        {
+          "id": "intensive-color-05",
+          "name": "Coloração Intensiva Professional 05",
+          "slug": "intensive-color-05",
+          "brand": "Intensive Pro",
+          "shortDesc": "Coloração intensiva para resultados profissionais",
+          "description": "Coloração de alta intensidade que proporciona cores vibrantes e cobertura excepcional. Ideal para profissionais.",
+          "sku": "IP-COL-005",
+          "category": "Coloração Capilar",
+          "subcategory": "Intensiva",
+          "finalidade": "Coloração intensiva profissional",
+          "cor": "Cor intensiva 05",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 7.44,
+            "ourPrice": 20.46,
+            "discountPrice": 16.37,
+            "savings": 4.09,
+            "margin": "10%",
+            "competitive": "Baseado em colorações premium europeias"
+          },
+          "tags": [
+            "intensiva",
+            "vibrante",
+            "profissional",
+            "cobertura"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 567,
+          "inStock": true,
+          "stockQuantity": 52,
+          "weight": 80,
+          "labels": [
+            "INTENSIVA",
+            "VIBRANTE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/E50589-AE-AFCE-4-FD5-8-D43-C27-A34-DDEEE0.png"
+          ]
+        },
+        {
+          "id": "salon-grade-color-06",
+          "name": "Coloração Salon Grade Professional 06",
+          "slug": "salon-grade-color-06",
+          "brand": "Salon Grade",
+          "shortDesc": "Coloração nível salão para uso profissional",
+          "description": "Coloração de qualidade de salão que oferece resultados consistentes e cores perfeitas. Desenvolvida para profissionais.",
+          "sku": "SG-COL-006",
+          "category": "Coloração Capilar",
+          "subcategory": "Salão",
+          "finalidade": "Coloração nível salão",
+          "cor": "Cor salão 06",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 8.48,
+            "ourPrice": 23.32,
+            "discountPrice": 18.66,
+            "savings": 4.66,
+            "margin": "10%",
+            "competitive": "Baseado em colorações premium europeias"
+          },
+          "tags": [
+            "salão",
+            "consistente",
+            "profissional",
+            "qualidade"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 398,
+          "inStock": true,
+          "stockQuantity": 35,
+          "weight": 80,
+          "labels": [
+            "SALÃO",
+            "QUALIDADE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/E56-EA869-F48-B-4925-A000-3-D712-D35-B1-C2.png"
+          ]
+        },
+        {
+          "id": "ultra-color-07",
+          "name": "Ultra Color Professional 07",
+          "slug": "ultra-color-07",
+          "brand": "Ultra Pro",
+          "shortDesc": "Coloração ultra profissional com tecnologia avançada",
+          "description": "Coloração com tecnologia ultra avançada que garante máxima durabilidade e cores extraordinárias.",
+          "sku": "UP-COL-007",
+          "category": "Coloração Capilar",
+          "subcategory": "Ultra",
+          "finalidade": "Coloração ultra profissional",
+          "cor": "Cor ultra 07",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 9.12,
+            "ourPrice": 25.08,
+            "discountPrice": 20.06,
+            "savings": 5.02,
+            "margin": "10%",
+            "competitive": "Baseado em colorações premium europeias"
+          },
+          "tags": [
+            "ultra",
+            "avançado",
+            "durabilidade",
+            "extraordinário"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 489,
+          "inStock": true,
+          "stockQuantity": 41,
+          "weight": 80,
+          "labels": [
+            "ULTRA",
+            "AVANÇADO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/EE902623-2-BC1-445-D-9-D31-071404310-ADE.png"
+          ]
+        },
+        {
+          "id": "master-color-08",
+          "name": "Master Color Professional 08",
+          "slug": "master-color-08",
+          "brand": "Master Pro",
+          "shortDesc": "Coloração master para mestres cabeleireiros",
+          "description": "Coloração desenvolvida especialmente para mestres cabeleireiros que exigem perfeição em cada aplicação.",
+          "sku": "MP-COL-008",
+          "category": "Coloração Capilar",
+          "subcategory": "Master",
+          "finalidade": "Coloração para mestres profissionais",
+          "cor": "Cor master 08",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 9.8,
+            "ourPrice": 26.95,
+            "discountPrice": 21.56,
+            "savings": 5.39,
+            "margin": "10%",
+            "competitive": "Baseado em colorações premium europeias"
+          },
+          "tags": [
+            "master",
+            "perfeição",
+            "mestres",
+            "profissional"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 623,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 80,
+          "labels": [
+            "MASTER",
+            "PERFEIÇÃO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8698.png"
+          ]
+        },
+        {
+          "id": "elite-color-09",
+          "name": "Elite Color Professional 09",
+          "slug": "elite-color-09",
+          "brand": "Elite Pro",
+          "shortDesc": "Coloração elite para resultados excepcionais",
+          "description": "Coloração da linha elite que proporciona resultados excepcionais com cores ricas e vibrantes.",
+          "sku": "EP-COL-009",
+          "category": "Coloração Capilar",
+          "subcategory": "Elite",
+          "finalidade": "Coloração elite excepcional",
+          "cor": "Cor elite 09",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 10.08,
+            "ourPrice": 27.72,
+            "discountPrice": 22.18,
+            "savings": 5.54,
+            "margin": "10%",
+            "competitive": "Baseado em colorações premium europeias"
+          },
+          "tags": [
+            "elite",
+            "excepcional",
+            "rico",
+            "vibrante"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 445,
+          "inStock": true,
+          "stockQuantity": 33,
+          "weight": 80,
+          "labels": [
+            "ELITE",
+            "EXCEPCIONAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8711.png"
+          ]
+        },
+        {
+          "id": "platinum-color-10",
+          "name": "Platinum Color Professional 10",
+          "slug": "platinum-color-10",
+          "brand": "Platinum Pro",
+          "shortDesc": "Coloração platinum para excelência absoluta",
+          "description": "Coloração platinum que representa o máximo em qualidade e performance para profissionais exigentes.",
+          "sku": "PP-COL-010",
+          "category": "Coloração Capilar",
+          "subcategory": "Platinum",
+          "finalidade": "Coloração platinum de excelência",
+          "cor": "Cor platinum 10",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 10.72,
+            "ourPrice": 29.48,
+            "discountPrice": 23.58,
+            "savings": 5.9,
+            "margin": "10%",
+            "competitive": "Baseado em colorações premium europeias"
+          },
+          "tags": [
+            "platinum",
+            "excelência",
+            "qualidade",
+            "performance"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 578,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 80,
+          "labels": [
+            "PLATINUM",
+            "EXCELÊNCIA"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8712.png"
+          ]
+        },
+        {
+          "id": "advanced-treatment-system-16",
+          "name": "Advanced Treatment System Recovery 16",
+          "slug": "advanced-treatment-system-16",
+          "brand": "Advanced Treatment",
+          "shortDesc": "Sistema advanced treatment recovery para cabelos severamente danificados",
+          "description": "Sistema de tratamento advanced recovery especialmente desenvolvido para cabelos severamente danificados. Tecnologia molecular que reconstrói, nutre e protege os fios em profundidade.",
+          "sku": "ADV-TREAT-REC-16",
+          "category": "Coloração Capilar",
+          "subcategory": "Recovery System",
+          "finalidade": "Recovery system para cabelos danificados",
+          "volume": "300ml",
+          "pricing": {
+            "basePrice": 29.8,
+            "ourPrice": 32.78,
+            "discountPrice": 26.22,
+            "savings": 6.56,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "advanced",
+            "recovery",
+            "system",
+            "danificados"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 285,
+          "inStock": true,
+          "stockQuantity": 22,
+          "weight": 320,
+          "labels": [
+            "RECOVERY"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/A34-CFBA7-444-D-42-D8-999-F-F0-F4-CBCC9-FDE.png"
+          ]
+        },
+        {
+          "id": "intensive-repair-therapy-17",
+          "name": "Intensive Repair Therapy Gold 17",
+          "slug": "intensive-repair-therapy-17",
+          "brand": "Repair Therapy",
+          "shortDesc": "Terapia intensive repair com partículas de ouro para reparação profunda",
+          "description": "Terapia de reparação intensiva enriquecida com micropartículas de ouro. Oferece reparação profunda, nutrição intensa e brilho dourado aos cabelos. Tecnologia premium.",
+          "sku": "INT-REPAIR-GOLD-17",
+          "category": "Coloração Capilar",
+          "subcategory": "Repair Therapy",
+          "finalidade": "Terapia repair intensiva com ouro",
+          "volume": "250ml",
+          "pricing": {
+            "basePrice": 35.6,
+            "ourPrice": 39.16,
+            "discountPrice": 31.33,
+            "savings": 7.83,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "intensive",
+            "repair",
+            "gold",
+            "premium"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 195,
+          "inStock": true,
+          "stockQuantity": 18,
+          "weight": 270,
+          "labels": [
+            "GOLD"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/C169-E200-8976-49-A0-A11-D-1-CE29-D126301.png"
+          ]
+        },
+        {
+          "id": "professional-nutrition-complex-18",
+          "name": "Professional Nutrition Complex Platinum 18",
+          "slug": "professional-nutrition-complex-18",
+          "brand": "Nutrition Complex",
+          "shortDesc": "Complexo professional nutrition platinum para nutrição máxima dos fios",
+          "description": "Complexo de nutrição profissional platinum com ingredientes nobres. Oferece nutrição máxima, maciez extrema e proteção duradoura. Fórmula exclusiva para salões.",
+          "sku": "PROF-NUTR-PLAT-18",
+          "category": "Coloração Capilar",
+          "subcategory": "Nutrition Complex",
+          "finalidade": "Complexo nutrition platinum professional",
+          "volume": "500ml",
+          "pricing": {
+            "basePrice": 42.3,
+            "ourPrice": 46.53,
+            "discountPrice": 37.22,
+            "savings": 9.31,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "professional",
+            "nutrition",
+            "platinum",
+            "complex"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 325,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 520,
+          "labels": [
+            "PLATINUM"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/CEC1-A0-BB-3-DC0-4-B31-AD8-B-B89-A11-A599-AD.png"
+          ]
+        },
+        {
+          "id": "ultra-hydration-therapy-19",
+          "name": "Ultra Hydration Therapy Diamond 19",
+          "slug": "ultra-hydration-therapy-19",
+          "brand": "Hydration Therapy",
+          "shortDesc": "Terapia ultra hydration diamond para hidratação profunda e brilho extremo",
+          "description": "Terapia de hidratação ultra diamond com tecnologia de brilho extremo. Oferece hidratação profunda, elimina o frizz e proporciona brilho diamante aos cabelos.",
+          "sku": "ULTRA-HYDR-DIAM-19",
+          "category": "Coloração Capilar",
+          "subcategory": "Hydration Therapy",
+          "finalidade": "Terapia hydration ultra com brilho diamond",
+          "volume": "300ml",
+          "pricing": {
+            "basePrice": 38.9,
+            "ourPrice": 42.79,
+            "discountPrice": 34.23,
+            "savings": 8.56,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "ultra",
+            "hydration",
+            "diamond",
+            "therapy"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 265,
+          "inStock": true,
+          "stockQuantity": 20,
+          "weight": 320,
+          "labels": [
+            "DIAMOND"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png-1.png"
+          ]
+        },
+        {
+          "id": "regenerative-treatment-premium-20",
+          "name": "Regenerative Treatment Premium System 20",
+          "slug": "regenerative-treatment-premium-20",
+          "brand": "Regenerative Pro",
+          "shortDesc": "Sistema regenerative treatment premium para regeneração total dos fios",
+          "description": "Sistema de tratamento regenerativo premium que promove a regeneração total dos fios. Tecnologia avançada com células-tronco vegetais e aminoácidos essenciais.",
+          "sku": "REGEN-TREAT-PREM-20",
+          "category": "Coloração Capilar",
+          "subcategory": "Regenerative System",
+          "finalidade": "Sistema regenerative premium com células-tronco",
+          "volume": "250ml",
+          "pricing": {
+            "basePrice": 45.8,
+            "ourPrice": 50.38,
+            "discountPrice": 40.3,
+            "savings": 10.08,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "regenerative",
+            "premium",
+            "células-tronco",
+            "system"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 155,
+          "inStock": true,
+          "stockQuantity": 15,
+          "weight": 270,
+          "labels": [
+            "REGENERATIVE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/Design-sem-nome-png-2.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maquiagem-premium",
+      "name": "Maquiagem Premium",
+      "slug": "maquiagem-premium",
+      "description": "Maquiagem profissional brasileira com qualidade internacional",
+      "icon": "💄",
+      "products": [
+        {
+          "id": "bruna-tavares-bt-skin-d30",
+          "name": "Base BT Skin D30 - Tom Escuro",
+          "slug": "bruna-tavares-bt-skin-d30",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base líquida com cobertura natural, alta pigmentação e acabamento aveludado",
+          "description": "Base líquida BT Skin com fórmula avançada, cobertura natural e alta pigmentação. Desenvolvida com ácido hialurônico para hidratação prolongada e ativos que aumentam a energia celular.",
+          "sku": "BT-SKIN-D30-001",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida para peles escuras com subtom quente",
+          "cor": "D30 - Deep 30",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 23.38,
+            "ourPrice": 30.25,
+            "discountPrice": 24.2,
+            "savings": 6.05,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "brasileira",
+            "ácido hialurônico",
+            "longa duração",
+            "pele escura"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 432,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 50,
+          "labels": [
+            "PREMIUM",
+            "BRASILEIRO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D30 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-f10",
+          "name": "Base BT Skin F10 - Tom Claro",
+          "slug": "bruna-tavares-bt-skin-f10",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base líquida para peles claras com subtom frio",
+          "description": "Base líquida BT Skin especialmente desenvolvida para peles claras com subtom frio. Fórmula com ácido hialurônico e proteção contra luz azul.",
+          "sku": "BT-SKIN-F10-001",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida para peles claras com subtom frio",
+          "cor": "F10 - Fair 10",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 23.38,
+            "ourPrice": 30.25,
+            "discountPrice": 24.2,
+            "savings": 6.05,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "brasileira",
+            "pele clara",
+            "subtom frio",
+            "proteção luz azul"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 298,
+          "inStock": true,
+          "stockQuantity": 30,
+          "weight": 50,
+          "labels": [
+            "PREMIUM",
+            "PELE CLARA"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F10 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-m20",
+          "name": "Base BT Skin M20 - Tom Médio",
+          "slug": "bruna-tavares-bt-skin-m20",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom médio com acabamento natural e longa duração",
+          "description": "Base líquida BT Skin para peles médias com subtom quente. Acabamento natural aveludado com tecnologia brasileira de ponta.",
+          "sku": "BT-SKIN-M20-001",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida para peles médias",
+          "cor": "M20 - Medium 20",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 23.38,
+            "ourPrice": 30.25,
+            "discountPrice": 24.2,
+            "savings": 6.05,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "brasileira",
+            "pele média",
+            "acabamento natural",
+            "tom médio"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 387,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 50,
+          "labels": [
+            "PREMIUM",
+            "TOM MÉDIO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M20 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "mari-maria-base-amndoa",
+          "name": "Base Mari Maria - Tom Amêndoa",
+          "slug": "mari-maria-base-amndoa",
+          "brand": "Mari Maria",
+          "shortDesc": "Base líquida Mari Maria tom Amêndoa com cobertura natural",
+          "description": "Base líquida profissional Mari Maria no tom Amêndoa. Acabamento natural e cobertura modulável para todos os tipos de pele.",
+          "sku": "MM-BASE-AMNDOA",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Amêndoa",
+          "cor": "Amêndoa",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 32,
+            "ourPrice": 1,
+            "discountPrice": 1,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "PRODUTO TESTE - Valor mínimo para testar notificações"
+          },
+          "tags": [
+            "mari maria",
+            "base",
+            "amêndoa",
+            "profissional"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 320,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 50,
+          "labels": [
+            "BESTSELLER"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-amndoa.png"
+          ]
+        },
+        {
+          "id": "mari-maria-base-baunilha",
+          "name": "Base Mari Maria - Tom Baunilha",
+          "slug": "mari-maria-base-baunilha",
+          "brand": "Mari Maria",
+          "shortDesc": "Base líquida Mari Maria tom Baunilha com cobertura natural",
+          "description": "Base líquida profissional Mari Maria no tom Baunilha. Acabamento natural e cobertura modulável para todos os tipos de pele.",
+          "sku": "MM-BASE-BAUNILHA",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Baunilha",
+          "cor": "Baunilha",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 32.5,
+            "ourPrice": 35.7,
+            "discountPrice": 28.56,
+            "savings": 7.14,
+            "margin": "10%",
+            "competitive": "Baseado em bases premium do mercado europeu"
+          },
+          "tags": [
+            "mari maria",
+            "base",
+            "baunilha",
+            "profissional"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 201,
+          "inStock": true,
+          "stockQuantity": 37,
+          "weight": 50,
+          "labels": [
+            "BESTSELLER"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-baunilha.png"
+          ]
+        },
+        {
+          "id": "mari-maria-base-bege-claro",
+          "name": "Base Mari Maria - Tom Bege Claro",
+          "slug": "mari-maria-base-bege-claro",
+          "brand": "Mari Maria",
+          "shortDesc": "Base líquida Mari Maria tom Bege Claro com cobertura natural",
+          "description": "Base líquida profissional Mari Maria no tom Bege Claro. Acabamento natural e cobertura modulável para todos os tipos de pele.",
+          "sku": "MM-BASE-BEGE-CLARO",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Bege Claro",
+          "cor": "Bege Claro",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 33.5,
+            "ourPrice": 36.7,
+            "discountPrice": 29.36,
+            "savings": 7.34,
+            "margin": "10%",
+            "competitive": "Baseado em bases premium do mercado europeu"
+          },
+          "tags": [
+            "mari maria",
+            "base",
+            "bege claro",
+            "profissional"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 211,
+          "inStock": true,
+          "stockQuantity": 26,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-bege-claro.png"
+          ]
+        },
+        {
+          "id": "mari-maria-base-bege-escuro",
+          "name": "Base Mari Maria - Tom Bege Escuro",
+          "slug": "mari-maria-base-bege-escuro",
+          "brand": "Mari Maria",
+          "shortDesc": "Base líquida Mari Maria tom Bege Escuro com cobertura natural",
+          "description": "Base líquida profissional Mari Maria no tom Bege Escuro. Acabamento natural e cobertura modulável para todos os tipos de pele.",
+          "sku": "MM-BASE-BEGE-ESCURO",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Bege Escuro",
+          "cor": "Bege Escuro",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 34,
+            "ourPrice": 37.2,
+            "discountPrice": 29.76,
+            "savings": 7.44,
+            "margin": "10%",
+            "competitive": "Baseado em bases premium do mercado europeu"
+          },
+          "tags": [
+            "mari maria",
+            "base",
+            "bege escuro",
+            "profissional"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 368,
+          "inStock": true,
+          "stockQuantity": 18,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-bege-escuro.png"
+          ]
+        },
+        {
+          "id": "mari-maria-base-bege-medio",
+          "name": "Base Mari Maria - Tom Bege Médio",
+          "slug": "mari-maria-base-bege-medio",
+          "brand": "Mari Maria",
+          "shortDesc": "Base líquida Mari Maria tom Bege Médio com cobertura natural",
+          "description": "Base líquida profissional Mari Maria no tom Bege Médio. Acabamento natural e cobertura modulável para todos os tipos de pele.",
+          "sku": "MM-BASE-BEGE-MEDIO",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Bege Médio",
+          "cor": "Bege Médio",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 34.5,
+            "ourPrice": 37.7,
+            "discountPrice": 30.16,
+            "savings": 7.54,
+            "margin": "10%",
+            "competitive": "Baseado em bases premium do mercado europeu"
+          },
+          "tags": [
+            "mari maria",
+            "base",
+            "bege médio",
+            "profissional"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 196,
+          "inStock": true,
+          "stockQuantity": 19,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-bege-mdio.png"
+          ]
+        },
+        {
+          "id": "mari-maria-base-cacau",
+          "name": "Base Mari Maria - Tom Cacau",
+          "slug": "mari-maria-base-cacau",
+          "brand": "Mari Maria",
+          "shortDesc": "Base líquida Mari Maria tom Cacau com cobertura natural",
+          "description": "Base líquida profissional Mari Maria no tom Cacau. Acabamento natural e cobertura modulável para todos os tipos de pele.",
+          "sku": "MM-BASE-CACAU",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Cacau",
+          "cor": "Cacau",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 35,
+            "ourPrice": 38.2,
+            "discountPrice": 30.56,
+            "savings": 7.64,
+            "margin": "10%",
+            "competitive": "Baseado em bases premium do mercado europeu"
+          },
+          "tags": [
+            "mari maria",
+            "base",
+            "cacau",
+            "profissional"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 178,
+          "inStock": true,
+          "stockQuantity": 17,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-cacau.png"
+          ]
+        },
+        {
+          "id": "mari-maria-base-canela",
+          "name": "Base Mari Maria - Tom Canela",
+          "slug": "mari-maria-base-canela",
+          "brand": "Mari Maria",
+          "shortDesc": "Base líquida Mari Maria tom Canela com cobertura natural",
+          "description": "Base líquida profissional Mari Maria no tom Canela. Acabamento natural e cobertura modulável para todos os tipos de pele.",
+          "sku": "MM-BASE-CANELA",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Canela",
+          "cor": "Canela",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 35.5,
+            "ourPrice": 38.7,
+            "discountPrice": 30.96,
+            "savings": 7.74,
+            "margin": "10%",
+            "competitive": "Baseado em bases premium do mercado europeu"
+          },
+          "tags": [
+            "mari maria",
+            "base",
+            "canela",
+            "profissional"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 394,
+          "inStock": true,
+          "stockQuantity": 37,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-canela.png"
+          ]
+        },
+        {
+          "id": "mari-maria-base-caramelo",
+          "name": "Base Mari Maria - Tom Caramelo",
+          "slug": "mari-maria-base-caramelo",
+          "brand": "Mari Maria",
+          "shortDesc": "Base líquida Mari Maria tom Caramelo com cobertura natural",
+          "description": "Base líquida profissional Mari Maria no tom Caramelo. Acabamento natural e cobertura modulável para todos os tipos de pele.",
+          "sku": "MM-BASE-CARAMELO",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Caramelo",
+          "cor": "Caramelo",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 36,
+            "ourPrice": 39.2,
+            "discountPrice": 31.36,
+            "savings": 7.84,
+            "margin": "10%",
+            "competitive": "Baseado em bases premium do mercado europeu"
+          },
+          "tags": [
+            "mari maria",
+            "base",
+            "caramelo",
+            "profissional"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 236,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-caramelo.png"
+          ]
+        },
+        {
+          "id": "mari-maria-base-chocolate",
+          "name": "Base Mari Maria - Tom Chocolate",
+          "slug": "mari-maria-base-chocolate",
+          "brand": "Mari Maria",
+          "shortDesc": "Base líquida Mari Maria tom Chocolate com cobertura natural",
+          "description": "Base líquida profissional Mari Maria no tom Chocolate. Acabamento natural e cobertura modulável para todos os tipos de pele.",
+          "sku": "MM-BASE-CHOCOLATE",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Chocolate",
+          "cor": "Chocolate",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 36.5,
+            "ourPrice": 39.7,
+            "discountPrice": 31.76,
+            "savings": 7.94,
+            "margin": "10%",
+            "competitive": "Baseado em bases premium do mercado europeu"
+          },
+          "tags": [
+            "mari maria",
+            "base",
+            "chocolate",
+            "profissional"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 318,
+          "inStock": true,
+          "stockQuantity": 17,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-chocolate.png"
+          ]
+        },
+        {
+          "id": "mari-maria-base-nude",
+          "name": "Base Mari Maria - Tom Nude",
+          "slug": "mari-maria-base-nude",
+          "brand": "Mari Maria",
+          "shortDesc": "Base líquida Mari Maria tom Nude com cobertura natural",
+          "description": "Base líquida profissional Mari Maria no tom Nude. Acabamento natural e cobertura modulável para todos os tipos de pele.",
+          "sku": "MM-BASE-NUDE",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Nude",
+          "cor": "Nude",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 37,
+            "ourPrice": 40.2,
+            "discountPrice": 32.16,
+            "savings": 8.04,
+            "margin": "10%",
+            "competitive": "Baseado em bases premium do mercado europeu"
+          },
+          "tags": [
+            "mari maria",
+            "base",
+            "nude",
+            "profissional"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 459,
+          "inStock": true,
+          "stockQuantity": 37,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/mari-maria-bases/mari-maria-base-nude.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-d10",
+          "name": "Base BT Skin D10 - Tom Dourado",
+          "slug": "bruna-tavares-bt-skin-d10",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Dourado 10 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom dourado. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-D10",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Dourado 10",
+          "cor": "D10 - Dourado",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 21.25,
+            "ourPrice": 27.5,
+            "discountPrice": 22,
+            "savings": 5.5,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "dourado",
+            "brasileira"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 427,
+          "inStock": true,
+          "stockQuantity": 42,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D10 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-d20",
+          "name": "Base BT Skin D20 - Tom Dourado",
+          "slug": "bruna-tavares-bt-skin-d20",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Dourado 20 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom dourado. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-D20",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Dourado 20",
+          "cor": "D20 - Dourado",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 21.51,
+            "ourPrice": 27.8,
+            "discountPrice": 22.25,
+            "savings": 5.55,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "dourado",
+            "brasileira"
+          ],
+          "rating": 4.5,
+          "reviewsCount": 299,
+          "inStock": true,
+          "stockQuantity": 33,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D20 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-d40",
+          "name": "Base BT Skin D40 - Tom Dourado",
+          "slug": "bruna-tavares-bt-skin-d40",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Dourado 40 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom dourado. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-D40",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Dourado 40",
+          "cor": "D40 - Dourado",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 22.02,
+            "ourPrice": 28.4,
+            "discountPrice": 22.75,
+            "savings": 5.65,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "dourado",
+            "brasileira"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 130,
+          "inStock": true,
+          "stockQuantity": 31,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D40 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-d50",
+          "name": "Base BT Skin D50 - Tom Dourado",
+          "slug": "bruna-tavares-bt-skin-d50",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Dourado 50 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom dourado. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-D50",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Dourado 50",
+          "cor": "D50 - Dourado",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 22.27,
+            "ourPrice": 28.7,
+            "discountPrice": 23,
+            "savings": 5.7,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "dourado",
+            "brasileira"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 276,
+          "inStock": true,
+          "stockQuantity": 36,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D50 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-d60",
+          "name": "Base BT Skin D60 - Tom Dourado",
+          "slug": "bruna-tavares-bt-skin-d60",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Dourado 60 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom dourado. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-D60",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Dourado 60",
+          "cor": "D60 - Dourado",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 22.53,
+            "ourPrice": 29,
+            "discountPrice": 23.25,
+            "savings": 5.75,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "dourado",
+            "brasileira"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 345,
+          "inStock": true,
+          "stockQuantity": 31,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin D60 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-f20",
+          "name": "Base BT Skin F20 - Tom Frio",
+          "slug": "bruna-tavares-bt-skin-f20",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Frio 20 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom frio. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-F20",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Frio 20",
+          "cor": "F20 - Frio",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 21.51,
+            "ourPrice": 27.8,
+            "discountPrice": 22.25,
+            "savings": 5.55,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "frio",
+            "brasileira"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 101,
+          "inStock": true,
+          "stockQuantity": 21,
+          "weight": 50,
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F20 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-f30",
+          "name": "Base BT Skin F30 - Tom Frio",
+          "slug": "bruna-tavares-bt-skin-f30",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Frio 30 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom frio. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-F30",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Frio 30",
+          "cor": "F30 - Frio",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 21.76,
+            "ourPrice": 28.1,
+            "discountPrice": 22.5,
+            "savings": 5.6,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "frio",
+            "brasileira"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 152,
+          "inStock": true,
+          "stockQuantity": 22,
+          "weight": 50,
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F30 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-f40",
+          "name": "Base BT Skin F40 - Tom Frio",
+          "slug": "bruna-tavares-bt-skin-f40",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Frio 40 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom frio. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-F40",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Frio 40",
+          "cor": "F40 - Frio",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 22.02,
+            "ourPrice": 28.4,
+            "discountPrice": 22.75,
+            "savings": 5.65,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "frio",
+            "brasileira"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 203,
+          "inStock": true,
+          "stockQuantity": 23,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F40 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-f50",
+          "name": "Base BT Skin F50 - Tom Frio",
+          "slug": "bruna-tavares-bt-skin-f50",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Frio 50 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom frio. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-F50",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Frio 50",
+          "cor": "F50 - Frio",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 22.27,
+            "ourPrice": 28.7,
+            "discountPrice": 23,
+            "savings": 5.7,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "frio",
+            "brasileira"
+          ],
+          "rating": 4.5,
+          "reviewsCount": 254,
+          "inStock": true,
+          "stockQuantity": 24,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F50 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-f60",
+          "name": "Base BT Skin F60 - Tom Frio",
+          "slug": "bruna-tavares-bt-skin-f60",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Frio 60 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom frio. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-F60",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Frio 60",
+          "cor": "F60 - Frio",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 22.53,
+            "ourPrice": 29,
+            "discountPrice": 23.25,
+            "savings": 5.75,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "frio",
+            "brasileira"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 305,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin F60 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-l10",
+          "name": "Base BT Skin L10 - Tom Livre",
+          "slug": "bruna-tavares-bt-skin-l10",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Livre 10 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-L10",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Livre 10",
+          "cor": "L10 - Livre",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 22.78,
+            "ourPrice": 29.3,
+            "discountPrice": 23.5,
+            "savings": 5.8,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 356,
+          "inStock": true,
+          "stockQuantity": 26,
+          "weight": 50,
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L10 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-l20",
+          "name": "Base BT Skin L20 - Tom Livre",
+          "slug": "bruna-tavares-bt-skin-l20",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Livre 20 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-L20",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Livre 20",
+          "cor": "L20 - Livre",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 23.04,
+            "ourPrice": 29.6,
+            "discountPrice": 23.75,
+            "savings": 5.85,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 407,
+          "inStock": true,
+          "stockQuantity": 27,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L20 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-l30",
+          "name": "Base BT Skin L30 - Tom Livre",
+          "slug": "bruna-tavares-bt-skin-l30",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Livre 30 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-L30",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Livre 30",
+          "cor": "L30 - Livre",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 23.29,
+            "ourPrice": 29.9,
+            "discountPrice": 24,
+            "savings": 5.9,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 458,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L30 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-l40",
+          "name": "Base BT Skin L40 - Tom Livre",
+          "slug": "bruna-tavares-bt-skin-l40",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Livre 40 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-L40",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Livre 40",
+          "cor": "L40 - Livre",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 23.55,
+            "ourPrice": 30.2,
+            "discountPrice": 24.25,
+            "savings": 5.95,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 509,
+          "inStock": true,
+          "stockQuantity": 29,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L40 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-l50",
+          "name": "Base BT Skin L50 - Tom Livre",
+          "slug": "bruna-tavares-bt-skin-l50",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Livre 50 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-L50",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Livre 50",
+          "cor": "L50 - Livre",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 23.8,
+            "ourPrice": 30.5,
+            "discountPrice": 24.5,
+            "savings": 6,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 560,
+          "inStock": true,
+          "stockQuantity": 30,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L50 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-l60",
+          "name": "Base BT Skin L60 - Tom Livre",
+          "slug": "bruna-tavares-bt-skin-l60",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Livre 60 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom livre. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-L60",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Livre 60",
+          "cor": "L60 - Livre",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 24.06,
+            "ourPrice": 30.8,
+            "discountPrice": 24.75,
+            "savings": 6.05,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "livre",
+            "brasileira"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 611,
+          "inStock": true,
+          "stockQuantity": 31,
+          "weight": 50,
+          "labels": [
+            "BESTSELLER"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin L60 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-m10",
+          "name": "Base BT Skin M10 - Tom Médio",
+          "slug": "bruna-tavares-bt-skin-m10",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Médio 10 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom médio. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-M10",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Médio 10",
+          "cor": "M10 - Médio",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 24.31,
+            "ourPrice": 31.1,
+            "discountPrice": 25,
+            "savings": 6.1,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "médio",
+            "brasileira"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 662,
+          "inStock": true,
+          "stockQuantity": 32,
+          "weight": 50,
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M10 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-m30",
+          "name": "Base BT Skin M30 - Tom Médio",
+          "slug": "bruna-tavares-bt-skin-m30",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Médio 30 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom médio. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-M30",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Médio 30",
+          "cor": "M30 - Médio",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 24.57,
+            "ourPrice": 31.4,
+            "discountPrice": 25.25,
+            "savings": 6.15,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "médio",
+            "brasileira"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 713,
+          "inStock": true,
+          "stockQuantity": 33,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M30 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-m40",
+          "name": "Base BT Skin M40 - Tom Médio",
+          "slug": "bruna-tavares-bt-skin-m40",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Médio 40 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom médio. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-M40",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Médio 40",
+          "cor": "M40 - Médio",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 24.82,
+            "ourPrice": 31.7,
+            "discountPrice": 25.5,
+            "savings": 6.2,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "médio",
+            "brasileira"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 764,
+          "inStock": true,
+          "stockQuantity": 34,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M40 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-m50",
+          "name": "Base BT Skin M50 - Tom Médio",
+          "slug": "bruna-tavares-bt-skin-m50",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Médio 50 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom médio. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-M50",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Médio 50",
+          "cor": "M50 - Médio",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 25.08,
+            "ourPrice": 32,
+            "discountPrice": 25.75,
+            "savings": 6.25,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "médio",
+            "brasileira"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 815,
+          "inStock": true,
+          "stockQuantity": 35,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M50 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-m60",
+          "name": "Base BT Skin M60 - Tom Médio",
+          "slug": "bruna-tavares-bt-skin-m60",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Médio 60 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom médio. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-M60",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Médio 60",
+          "cor": "M60 - Médio",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 25.33,
+            "ourPrice": 32.3,
+            "discountPrice": 26,
+            "savings": 6.3,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "médio",
+            "brasileira"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 866,
+          "inStock": true,
+          "stockQuantity": 36,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin M60 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-t10",
+          "name": "Base BT Skin T10 - Tom Tropicália",
+          "slug": "bruna-tavares-bt-skin-t10",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Tropicália 10 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-T10",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Tropicália 10",
+          "cor": "T10 - Tropicália",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 25.59,
+            "ourPrice": 32.6,
+            "discountPrice": 26.25,
+            "savings": 6.35,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 917,
+          "inStock": true,
+          "stockQuantity": 37,
+          "weight": 50,
+          "labels": [
+            "NOVO"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T10 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-t20",
+          "name": "Base BT Skin T20 - Tom Tropicália",
+          "slug": "bruna-tavares-bt-skin-t20",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Tropicália 20 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-T20",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Tropicália 20",
+          "cor": "T20 - Tropicália",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 25.84,
+            "ourPrice": 32.9,
+            "discountPrice": 26.5,
+            "savings": 6.4,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 968,
+          "inStock": true,
+          "stockQuantity": 38,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T20 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-t30",
+          "name": "Base BT Skin T30 - Tom Tropicália",
+          "slug": "bruna-tavares-bt-skin-t30",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Tropicália 30 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-T30",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Tropicália 30",
+          "cor": "T30 - Tropicália",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 26.1,
+            "ourPrice": 33.2,
+            "discountPrice": 26.75,
+            "savings": 6.45,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 1019,
+          "inStock": true,
+          "stockQuantity": 39,
+          "weight": 50,
+          "labels": [
+            "DESTAQUE"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T30 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-t40",
+          "name": "Base BT Skin T40 - Tom Tropicália",
+          "slug": "bruna-tavares-bt-skin-t40",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Tropicália 40 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-T40",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Tropicália 40",
+          "cor": "T40 - Tropicália",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 26.35,
+            "ourPrice": 33.5,
+            "discountPrice": 27,
+            "savings": 6.5,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 1070,
+          "inStock": true,
+          "stockQuantity": 40,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T40 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-t50",
+          "name": "Base BT Skin T50 - Tom Tropicália",
+          "slug": "bruna-tavares-bt-skin-t50",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Tropicália 50 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-T50",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Tropicália 50",
+          "cor": "T50 - Tropicália",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 26.61,
+            "ourPrice": 33.8,
+            "discountPrice": 27.25,
+            "savings": 6.55,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 1121,
+          "inStock": true,
+          "stockQuantity": 41,
+          "weight": 50,
+          "labels": [
+            "PREMIUM"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T50 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "bruna-tavares-bt-skin-t60",
+          "name": "Base BT Skin T60 - Tom Tropicália",
+          "slug": "bruna-tavares-bt-skin-t60",
+          "brand": "Bruna Tavares",
+          "shortDesc": "Base BT Skin tom Tropicália 60 com acabamento natural",
+          "description": "Base líquida BT Skin para peles de tom tropicália. Tecnologia brasileira com acabamento natural aveludado e longa duração.",
+          "sku": "BT-SKIN-T60",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida tom Tropicália 60",
+          "cor": "T60 - Tropicália",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 26.86,
+            "ourPrice": 34.1,
+            "discountPrice": 27.5,
+            "savings": 6.6,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "bruna tavares",
+            "bt skin",
+            "tropicália",
+            "brasileira"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 1172,
+          "inStock": true,
+          "stockQuantity": 42,
+          "weight": 50,
+          "labels": [
+            "BESTSELLER"
+          ],
+          "images": [
+            "/images/products/bruna-tavares-bt-skin/BT Skin T60 Base Bruna Tavares.png"
+          ]
+        },
+        {
+          "id": "premium-lipstick-01",
+          "name": "Batom Premium Matte Luxo 01",
+          "slug": "premium-lipstick-01",
+          "brand": "Luxo Makeup",
+          "shortDesc": "Batom matte premium com textura aveludada",
+          "description": "Batom de alta pigmentação com acabamento matte e textura aveludada. Longa duração e conforto durante todo o dia.",
+          "sku": "LM-BAT-001",
+          "category": "Maquiagem Premium",
+          "subcategory": "Batom",
+          "finalidade": "Batom matte de alta performance",
+          "cor": "Vermelho Premium 01",
+          "volume": "3.5g",
+          "pricing": {
+            "basePrice": 32.5,
+            "ourPrice": 35.75,
+            "discountPrice": 28.6,
+            "savings": 7.15,
+            "margin": "10%",
+            "competitive": "Baseado em batons premium europeus"
+          },
+          "tags": [
+            "matte",
+            "premium",
+            "pigmentação",
+            "duradoura"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 567,
+          "inStock": true,
+          "stockQuantity": 45,
+          "weight": 15,
+          "labels": [
+            "PREMIUM",
+            "MATTE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8713.png"
+          ]
+        },
+        {
+          "id": "premium-foundation-02",
+          "name": "Base Líquida Premium Full Coverage 02",
+          "slug": "premium-foundation-02",
+          "brand": "Full Cover",
+          "shortDesc": "Base líquida com cobertura total e acabamento natural",
+          "description": "Base líquida de cobertura total que proporciona acabamento natural e duração de até 16 horas.",
+          "sku": "FC-BAS-002",
+          "category": "Maquiagem Premium",
+          "subcategory": "Base",
+          "finalidade": "Base líquida cobertura total",
+          "cor": "Tom Natural 02",
+          "volume": "30ml",
+          "pricing": {
+            "basePrice": 38,
+            "ourPrice": 41.8,
+            "discountPrice": 33.44,
+            "savings": 8.36,
+            "margin": "10%",
+            "competitive": "Baseado em bases premium europeias"
+          },
+          "tags": [
+            "cobertura total",
+            "16 horas",
+            "natural",
+            "premium"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 423,
+          "inStock": true,
+          "stockQuantity": 38,
+          "weight": 50,
+          "labels": [
+            "FULL COVERAGE",
+            "LONGA DURAÇÃO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8716.png"
+          ]
+        },
+        {
+          "id": "premium-concealer-03",
+          "name": "Corretivo Premium High Definition 03",
+          "slug": "premium-concealer-03",
+          "brand": "HD Makeup",
+          "shortDesc": "Corretivo alta definição com cobertura perfeita",
+          "description": "Corretivo de alta definição que oferece cobertura perfeita para olheiras e imperfeições.",
+          "sku": "HD-COR-003",
+          "category": "Maquiagem Premium",
+          "subcategory": "Corretivo",
+          "finalidade": "Corretivo alta definição",
+          "cor": "Tom HD 03",
+          "volume": "6ml",
+          "pricing": {
+            "basePrice": 28.5,
+            "ourPrice": 31.35,
+            "discountPrice": 25.08,
+            "savings": 6.27,
+            "margin": "10%",
+            "competitive": "Baseado em corretivos premium europeus"
+          },
+          "tags": [
+            "alta definição",
+            "olheiras",
+            "imperfeições",
+            "premium"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 298,
+          "inStock": true,
+          "stockQuantity": 52,
+          "weight": 25,
+          "labels": [
+            "HD",
+            "COBERTURA PERFEITA"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8718.png"
+          ]
+        },
+        {
+          "id": "premium-mascara-04",
+          "name": "Máscara para Cílios Premium Volume 04",
+          "slug": "premium-mascara-04",
+          "brand": "Volume Max",
+          "shortDesc": "Máscara volumizadora de alta performance",
+          "description": "Máscara para cílios que proporciona volume extremo e separação perfeita, sem grumos.",
+          "sku": "VM-MAS-004",
+          "category": "Maquiagem Premium",
+          "subcategory": "Máscara",
+          "finalidade": "Máscara volumizadora extrema",
+          "cor": "Preto Intenso",
+          "volume": "8ml",
+          "pricing": {
+            "basePrice": 24.12,
+            "ourPrice": 29.48,
+            "discountPrice": 23.58,
+            "savings": 5.9,
+            "margin": "10%",
+            "competitive": "Baseado em máscaras premium europeias"
+          },
+          "tags": [
+            "volume extremo",
+            "separação",
+            "sem grumos",
+            "intenso"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 445,
+          "inStock": true,
+          "stockQuantity": 41,
+          "weight": 30,
+          "labels": [
+            "VOLUME EXTREMO",
+            "SEM GRUMOS"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8720.png"
+          ]
+        },
+        {
+          "id": "premium-eyeshadow-05",
+          "name": "Paleta de Sombras Premium Luxury 05",
+          "slug": "premium-eyeshadow-05",
+          "brand": "Luxury Eyes",
+          "shortDesc": "Paleta de sombras premium com 12 cores",
+          "description": "Paleta com 12 sombras altamente pigmentadas em acabamentos matte e shimmer para looks versáteis.",
+          "sku": "LE-PAL-005",
+          "category": "Maquiagem Premium",
+          "subcategory": "Sombra",
+          "finalidade": "Paleta de sombras versátil",
+          "cor": "Mix Premium 05",
+          "volume": "12 x 2g",
+          "pricing": {
+            "basePrice": 45,
+            "ourPrice": 49.5,
+            "discountPrice": 39.6,
+            "savings": 9.9,
+            "margin": "10%",
+            "competitive": "Baseado em paletas premium europeias"
+          },
+          "tags": [
+            "12 cores",
+            "pigmentada",
+            "matte",
+            "shimmer"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 678,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 80,
+          "labels": [
+            "12 CORES",
+            "ALTA PIGMENTAÇÃO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8725.png"
+          ]
+        },
+        {
+          "id": "premium-blush-06",
+          "name": "Blush Premium Glow Natural 06",
+          "slug": "premium-blush-06",
+          "brand": "Natural Glow",
+          "shortDesc": "Blush premium com efeito natural e luminoso",
+          "description": "Blush de textura sedosa que proporciona cor natural e luminosidade saudável às bochechas.",
+          "sku": "NG-BLU-006",
+          "category": "Maquiagem Premium",
+          "subcategory": "Blush",
+          "finalidade": "Blush efeito natural luminoso",
+          "cor": "Rosa Natural 06",
+          "volume": "8g",
+          "pricing": {
+            "basePrice": 24.5,
+            "ourPrice": 26.95,
+            "discountPrice": 21.56,
+            "savings": 5.39,
+            "margin": "10%",
+            "competitive": "Baseado em blushes premium europeus"
+          },
+          "tags": [
+            "natural",
+            "luminoso",
+            "sedoso",
+            "saudável"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 334,
+          "inStock": true,
+          "stockQuantity": 46,
+          "weight": 35,
+          "labels": [
+            "NATURAL",
+            "LUMINOSO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8727.png"
+          ]
+        },
+        {
+          "id": "premium-eyeliner-07",
+          "name": "Delineador Premium Precision 07",
+          "slug": "premium-eyeliner-07",
+          "brand": "Precision Line",
+          "shortDesc": "Delineador de precisão com aplicação perfeita",
+          "description": "Delineador líquido de alta precisão que permite traços perfeitos e duração prolongada.",
+          "sku": "PL-DEL-007",
+          "category": "Maquiagem Premium",
+          "subcategory": "Delineador",
+          "finalidade": "Delineador alta precisão",
+          "cor": "Preto Precision",
+          "volume": "2ml",
+          "pricing": {
+            "basePrice": 18.24,
+            "ourPrice": 25.08,
+            "discountPrice": 20.06,
+            "savings": 5.02,
+            "margin": "10%",
+            "competitive": "Baseado em delineadores premium europeus"
+          },
+          "tags": [
+            "precisão",
+            "traços perfeitos",
+            "duração",
+            "líquido"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 412,
+          "inStock": true,
+          "stockQuantity": 55,
+          "weight": 20,
+          "labels": [
+            "PRECISION",
+            "TRAÇOS PERFEITOS"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8733.png"
+          ]
+        },
+        {
+          "id": "premium-powder-08",
+          "name": "Pó Compacto Premium Translúcido 08",
+          "slug": "premium-powder-08",
+          "brand": "Translucent Pro",
+          "shortDesc": "Pó compacto translúcido para fixação perfeita",
+          "description": "Pó compacto translúcido que fixa a maquiagem sem alterar as cores, com acabamento natural.",
+          "sku": "TP-POC-008",
+          "category": "Maquiagem Premium",
+          "subcategory": "Pó",
+          "finalidade": "Pó fixador translúcido",
+          "cor": "Translúcido Universal",
+          "volume": "10g",
+          "pricing": {
+            "basePrice": 26,
+            "ourPrice": 28.6,
+            "discountPrice": 22.88,
+            "savings": 5.72,
+            "margin": "10%",
+            "competitive": "Baseado em pós premium europeus"
+          },
+          "tags": [
+            "translúcido",
+            "fixação",
+            "natural",
+            "universal"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 287,
+          "inStock": true,
+          "stockQuantity": 43,
+          "weight": 40,
+          "labels": [
+            "TRANSLÚCIDO",
+            "FIXAÇÃO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/IMG-8734.png"
+          ]
+        },
+        {
+          "id": "produto-teste-001",
+          "name": "🧪 Produto Teste - Email System",
+          "slug": "produto-teste-email-system",
+          "brand": "JC Hair Studio",
+          "shortDesc": "Produto específico para testar o sistema de emails de confirmação",
+          "description": "Produto específico para testar o sistema de emails de confirmação. Valor mínimo para facilitar testes de pagamento e notificações.",
+          "sku": "TEST-EMAIL-001",
+          "category": "Maquiagem Premium",
+          "subcategory": "Produtos de Teste",
+          "finalidade": "Testar sistema de emails",
+          "volume": "Digital",
+          "pricing": {
+            "basePrice": 1,
+            "ourPrice": 1,
+            "discountPrice": 1,
+            "savings": 0,
+            "margin": "0%",
+            "competitive": "Valor mínimo para testes"
+          },
+          "tags": [
+            "teste",
+            "email",
+            "pagamento",
+            "confirmacao"
+          ],
+          "rating": 5,
+          "reviewsCount": 1,
+          "inStock": true,
+          "stockQuantity": 999,
+          "weight": 0,
+          "labels": [
+            "TESTE",
+            "EMAIL"
+          ],
+          "images": [
+            "/placeholder-product.jpg"
+          ]
+        },
+        {
+          "id": "elite-coloracao-premium-11",
+          "name": "Elite Coloração Premium Pro 11",
+          "slug": "elite-coloracao-premium-11",
+          "brand": "Elite Pro",
+          "shortDesc": "Coloração elite premium com tecnologia advanced para cobertura total",
+          "description": "Coloração profissional elite premium com tecnologia advanced. Oferece cobertura total, durabilidade superior e brilho intenso. Fórmula enriquecida com óleos nutritivos.",
+          "sku": "ELITE-COLOR-PREM-11",
+          "category": "Coloração Capilar",
+          "subcategory": "Coloração Premium",
+          "finalidade": "Coloração premium com cobertura total",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 8.96,
+            "ourPrice": 24.64,
+            "discountPrice": 19.71,
+            "savings": 4.93,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "elite",
+            "premium",
+            "cobertura",
+            "professional"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 195,
+          "inStock": true,
+          "stockQuantity": 28,
+          "weight": 80,
+          "labels": [
+            "ELITE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png"
+          ]
+        },
+        {
+          "id": "supreme-color-intensive-12",
+          "name": "Supreme Color Intensive System 12",
+          "slug": "supreme-color-intensive-12",
+          "brand": "Supreme Color",
+          "shortDesc": "Sistema coloração supreme intensive com proteção UV e antioxidantes",
+          "description": "Sistema de coloração supreme intensive com proteção UV e complexo antioxidante. Oferece cor vibrante, proteção solar e longa duração. Tecnologia profissional avançada.",
+          "sku": "SUP-COLOR-INT-12",
+          "category": "Coloração Capilar",
+          "subcategory": "Coloração Supreme",
+          "finalidade": "Coloração supreme com proteção UV",
+          "volume": "100ml",
+          "pricing": {
+            "basePrice": 10.32,
+            "ourPrice": 28.38,
+            "discountPrice": 22.7,
+            "savings": 5.68,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "supreme",
+            "intensive",
+            "proteção uv",
+            "antioxidante"
+          ],
+          "rating": 4.8,
+          "reviewsCount": 245,
+          "inStock": true,
+          "stockQuantity": 32,
+          "weight": 120,
+          "labels": [
+            "SUPREME"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/65408488-2-F2-B-4-C34-8265-4953-FBF033-C8.png"
+          ]
+        },
+        {
+          "id": "luxury-color-diamond-13",
+          "name": "Luxury Color Diamond Collection 13",
+          "slug": "luxury-color-diamond-13",
+          "brand": "Diamond Color",
+          "shortDesc": "Coloração luxury diamond com brilho extremo e nutrição profunda",
+          "description": "Coleção luxury de coloração diamond com tecnologia de brilho extremo. Oferece cor intensa, brilho diamante e nutrição profunda. Fórmula exclusiva com proteínas nobres.",
+          "sku": "LUX-COLOR-DIAM-13",
+          "category": "Coloração Capilar",
+          "subcategory": "Coloração Diamond",
+          "finalidade": "Coloração luxury com brilho diamante",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 11.56,
+            "ourPrice": 31.79,
+            "discountPrice": 25.43,
+            "savings": 6.36,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "luxury",
+            "diamond",
+            "brilho",
+            "premium"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 175,
+          "inStock": true,
+          "stockQuantity": 18,
+          "weight": 80,
+          "labels": [
+            "DIAMOND"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png"
+          ]
+        },
+        {
+          "id": "professional-color-platinum-14",
+          "name": "Professional Color Platinum Advanced 14",
+          "slug": "professional-color-platinum-14",
+          "brand": "Platinum Pro",
+          "shortDesc": "Coloração professional platinum com tecnologia anti-fade para cores duradouras",
+          "description": "Coloração professional platinum com tecnologia anti-fade. Oferece cores duradouras, cobertura uniforme e proteção contra desbotamento. Sistema profissional avançado.",
+          "sku": "PROF-COLOR-PLAT-14",
+          "category": "Coloração Capilar",
+          "subcategory": "Coloração Platinum",
+          "finalidade": "Coloração professional com tecnologia anti-fade",
+          "volume": "100ml",
+          "pricing": {
+            "basePrice": 10.6,
+            "ourPrice": 29.15,
+            "discountPrice": 23.32,
+            "savings": 5.83,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "professional",
+            "platinum",
+            "anti-fade",
+            "duradoura"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 220,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 120,
+          "labels": [
+            "PLATINUM"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/8-AF9-EB77-A783-417-B-82-E8-0-B1-D0268-DA00.png"
+          ]
+        },
+        {
+          "id": "royal-color-exclusive-15",
+          "name": "Royal Color Exclusive Edition 15",
+          "slug": "royal-color-exclusive-15",
+          "brand": "Royal Exclusive",
+          "shortDesc": "Coloração royal exclusive edition com fórmula premium para salões de luxo",
+          "description": "Coloração royal exclusive edition desenvolvida para salões de luxo. Fórmula premium com ingredientes nobres, cobertura excepcional e resultados profissionais únicos.",
+          "sku": "ROYAL-COLOR-EXC-15",
+          "category": "Coloração Capilar",
+          "subcategory": "Coloração Royal",
+          "finalidade": "Coloração royal exclusive para salões premium",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 12.88,
+            "ourPrice": 35.42,
+            "discountPrice": 28.34,
+            "savings": 7.08,
+            "margin": "10%",
+            "competitive": "Baseado em catálogo existente + pesquisa Europa"
+          },
+          "tags": [
+            "royal",
+            "exclusive",
+            "luxury",
+            "premium"
+          ],
+          "rating": 4.9,
+          "reviewsCount": 155,
+          "inStock": true,
+          "stockQuantity": 15,
+          "weight": 80,
+          "labels": [
+            "ROYAL"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/96-E697-A3-2080-4-A09-A985-2-BE379-F8-D8-C0.png"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tratamentos-capilares",
+      "name": "Tratamentos Capilares",
+      "slug": "tratamentos-capilares",
+      "description": "Tratamentos capilares intensivos: hidratação, nutrição, reconstrução e controle de volume",
+      "icon": "✨",
+      "products": [
+        {
+          "id": "oleo-capilar-7",
+          "name": "Óleo Capilar Multivitamínico",
+          "slug": "oleo-capilar-7",
+          "brand": "Vitamin Hair",
+          "shortDesc": "Óleo multivitamínico para nutrição e brilho",
+          "description": "Óleo capilar enriquecido com vitaminas A, C e E que nutrem, hidratam e proporcionam brilho extraordinário.",
+          "sku": "VH-OLE-007",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Nutrição",
+          "finalidade": "Nutrição vitamínica e brilho",
+          "volume": "60ml",
+          "pricing": {
+            "basePrice": 15.48,
+            "ourPrice": 18.92,
+            "discountPrice": 15.14,
+            "savings": 3.78,
+            "margin": "10%",
+            "competitive": "Baseado em tratamentos premium europeus"
+          },
+          "tags": [
+            "vitaminas",
+            "óleo",
+            "brilho",
+            "nutrição"
+          ],
+          "rating": 4.6,
+          "reviewsCount": 312,
+          "inStock": true,
+          "stockQuantity": 41,
+          "weight": 60,
+          "labels": [
+            "VITAMÍNICO",
+            "BRILHO"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/4-EFFA98-F-1-FFA-4-A43-97-CA-CE7080-D29-A94.png"
+          ],
+          "image": "/images/products/wepink-tratamentos/booster-repair-oleo.png"
+        },
+        {
+          "id": "creme-leave-in-8",
+          "name": "Creme Leave-in Proteção Total",
+          "slug": "creme-leave-in-8",
+          "brand": "All Day Protection",
+          "shortDesc": "Leave-in com proteção solar e térmica",
+          "description": "Creme sem enxágue que protege os cabelos dos raios UV e do calor das ferramentas de modelagem.",
+          "sku": "ADP-LEA-008",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Proteção",
+          "finalidade": "Proteção solar e térmica",
+          "volume": "150ml",
+          "pricing": {
+            "basePrice": 12.42,
+            "ourPrice": 15.18,
+            "discountPrice": 12.14,
+            "savings": 3.04,
+            "margin": "10%",
+            "competitive": "Baseado em tratamentos premium europeus"
+          },
+          "tags": [
+            "leave-in",
+            "proteção solar",
+            "proteção térmica",
+            "sem enxágue"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 445,
+          "inStock": true,
+          "stockQuantity": 59,
+          "weight": 150,
+          "labels": [
+            "PROTEÇÃO",
+            "LEAVE-IN"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/514342-F6-CCD2-48-B5-96-CE-2-A3-E48-F4485-D.png"
+          ],
+          "image": "/images/products/wepink-tratamentos/leave-in-multifuncional.png"
+        },
+        {
+          "id": "tonico-crescimento-10",
+          "name": "Tônico Crescimento Acelerado",
+          "slug": "tonico-crescimento-10",
+          "brand": "Growth Boost",
+          "shortDesc": "Tônico estimulante para crescimento capilar",
+          "description": "Tônico com ativos que estimulam a circulação do couro cabeludo e aceleram o crescimento natural dos fios.",
+          "sku": "GB-TON-010",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Crescimento",
+          "finalidade": "Estimular crescimento capilar",
+          "volume": "120ml",
+          "pricing": {
+            "basePrice": 23.4,
+            "ourPrice": 28.6,
+            "discountPrice": 22.88,
+            "savings": 5.72,
+            "margin": "10%",
+            "competitive": "Baseado em tratamentos premium europeus"
+          },
+          "tags": [
+            "crescimento",
+            "estimulante",
+            "couro cabeludo",
+            "circulação"
+          ],
+          "rating": 4.4,
+          "reviewsCount": 234,
+          "inStock": true,
+          "stockQuantity": 27,
+          "weight": 120,
+          "labels": [
+            "CRESCIMENTO",
+            "ESTIMULANTE"
+          ],
+          "images": [
+            "/images/products/produtos_diversos/70845531-B3-EB-40-FA-A4-D3-D29350848-B87.png"
+          ],
+          "image": "/images/products/wepink-tratamentos/hair-tonic-tonico.png"
+        },
+        {
+          "id": "hairlife-super-cachos-solto-natural",
+          "name": "HairLife Super Cachos Solto e Natural",
+          "slug": "hairlife-super-cachos-solto-natural",
+          "brand": "HairLife",
+          "shortDesc": "Creme de relaxamento para cabelos cacheados com extrato de girassol. Fórmula que solta os cachos man...",
+          "description": "Creme de relaxamento para cabelos cacheados com extrato de girassol. Fórmula que solta os cachos mantendo movimento natural e brilho saudável.",
+          "sku": "HL-001",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Super Cachos",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 14.71,
+            "ourPrice": 14.71,
+            "discountPrice": 13.24,
+            "savings": 1.47,
+            "margin": "51%",
+            "competitive": "Preço competitivo para produtos de relaxamento premium"
+          },
+          "tags": [
+            "super-cachos",
+            "extrato-de-girassol",
+            "solto-e-natural",
+            "movimento-natural",
+            "brilho-saudável",
+            "kit-completo"
+          ],
+          "rating": 4.4,
+          "reviewsCount": 187,
+          "inStock": true,
+          "stockQuantity": 34,
+          "weight": 400,
+          "labels": [],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__3.png"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__3.png"
+        },
+        {
+          "id": "hairlife-liso-laminado-bondplex",
+          "name": "HairLife Liso Laminado BondPlex com Óleo de Argan",
+          "slug": "hairlife-liso-laminado-bondplex",
+          "brand": "HairLife",
+          "shortDesc": "Creme alisante com tecnologia BondPlex e óleo de argan. Repara danos químicos anteriores proporciona...",
+          "description": "Creme alisante com tecnologia BondPlex e óleo de argan. Repara danos químicos anteriores proporcionando liso perfeito por até 10 semanas com brilho espelhado.",
+          "sku": "HL-002",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Tecnologia BondPlex",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 21.19,
+            "ourPrice": 21.19,
+            "discountPrice": 19.07,
+            "savings": 2.12,
+            "margin": "51%",
+            "competitive": "Preço competitivo para produtos de relaxamento premium"
+          },
+          "tags": [
+            "tecnologia-bondplex",
+            "óleo-de-argan",
+            "manteiga-de-karité",
+            "10-semanas-duração",
+            "brilho-espelhado",
+            "repara-danos"
+          ],
+          "rating": 4.7,
+          "reviewsCount": 256,
+          "inStock": true,
+          "stockQuantity": 22,
+          "weight": 400,
+          "labels": [
+            "POPULAR"
+          ],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__1.webp"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__1.webp"
+        },
+        {
+          "id": "hairlife-cacho-natural-relaxamento-ondulamento",
+          "name": "HairLife Cacho & Natural - Creme Relaxamento e Ondulamento",
+          "slug": "hairlife-cacho-natural-relaxamento-ondulamento",
+          "brand": "HairLife",
+          "shortDesc": "Creme para relaxamento e ondulamento que transforma cabelos ressecados em cachos naturalmente bonito...",
+          "description": "Creme para relaxamento e ondulamento que transforma cabelos ressecados em cachos naturalmente bonitos. Fórmula especial para cabelos cacheados.",
+          "sku": "HL-003",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Relaxamento + Ondulamento",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 13.83,
+            "ourPrice": 13.83,
+            "discountPrice": 12.45,
+            "savings": 1.38,
+            "margin": "51%",
+            "competitive": "Preço competitivo para produtos de relaxamento premium"
+          },
+          "tags": [
+            "relaxamento-+-ondulamento",
+            "para-cabelos-cacheados",
+            "transforma-ressecados",
+            "cachos-naturais",
+            "fórmula-especial",
+            "kit-completo"
+          ],
+          "rating": 4.5,
+          "reviewsCount": 134,
+          "inStock": true,
+          "stockQuantity": 31,
+          "weight": 400,
+          "labels": [
+            "POPULAR"
+          ],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__4.png"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__4.png"
+        },
+        {
+          "id": "hairlife-liso-natural-creme-alisamento",
+          "name": "HairLife Liso & Natural Creme para Alisamento",
+          "slug": "hairlife-liso-natural-creme-alisamento",
+          "brand": "HairLife",
+          "shortDesc": "Creme alisante que transforma cabelos em liso perfeito mantendo aspecto natural. Fórmula balanceada ...",
+          "description": "Creme alisante que transforma cabelos em liso perfeito mantendo aspecto natural. Fórmula balanceada para alisamento sem agressão excessiva aos fios.",
+          "sku": "HL-004",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Liso Natural",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 12.94,
+            "ourPrice": 12.94,
+            "discountPrice": 11.65,
+            "savings": 1.29,
+            "margin": "51%",
+            "competitive": "Preço competitivo para produtos de relaxamento premium"
+          },
+          "tags": [
+            "liso-natural",
+            "sem-agressão-excessiva",
+            "aspecto-natural",
+            "fórmula-balanceada",
+            "alisamento-perfeito",
+            "kit-completo"
+          ],
+          "rating": 4.3,
+          "reviewsCount": 198,
+          "inStock": true,
+          "stockQuantity": 26,
+          "weight": 400,
+          "labels": [],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__5.png"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__5.png"
+        },
+        {
+          "id": "hairlife-relaxin-natural-creme-relaxamento",
+          "name": "HairLife Relaxin' & Natural Creme para Relaxamento",
+          "slug": "hairlife-relaxin-natural-creme-relaxamento",
+          "brand": "HairLife",
+          "shortDesc": "Creme para relaxamento capilar que proporciona ondas naturais e relaxadas. Ideal para quem busca red...",
+          "description": "Creme para relaxamento capilar que proporciona ondas naturais e relaxadas. Ideal para quem busca reduzir volume mantendo movimento e naturalidade dos fios.",
+          "sku": "HL-005",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Ondas Naturais",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 13.41,
+            "ourPrice": 13.41,
+            "discountPrice": 12.07,
+            "savings": 1.34,
+            "margin": "51%",
+            "competitive": "Preço competitivo para produtos de relaxamento premium"
+          },
+          "tags": [
+            "ondas-naturais",
+            "relaxamento-suave",
+            "reduz-volume",
+            "mantém-movimento",
+            "naturalidade",
+            "kit-completo"
+          ],
+          "rating": 4.4,
+          "reviewsCount": 167,
+          "inStock": true,
+          "stockQuantity": 29,
+          "weight": 400,
+          "labels": [],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__6.png"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__6.png"
+        },
+        {
+          "id": "hairlife-mel-amendoas-sem-amonia",
+          "name": "HairLife Mel & Amêndoas Creme Alisamento Sem Amônia",
+          "slug": "hairlife-mel-amendoas-sem-amonia",
+          "brand": "HairLife",
+          "shortDesc": "Creme alisante enriquecido com mel e amêndoas, livre de amônia. Fórmula suave que alisa protegendo a...",
+          "description": "Creme alisante enriquecido com mel e amêndoas, livre de amônia. Fórmula suave que alisa protegendo a fibra capilar com nutrição intensa e brilho natural.",
+          "sku": "HL-006",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Mel + Amêndoas",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 14.56,
+            "ourPrice": 14.56,
+            "discountPrice": 13.1,
+            "savings": 1.46,
+            "margin": "51%",
+            "competitive": "Preço competitivo para produtos de relaxamento premium"
+          },
+          "tags": [
+            "mel-+-amêndoas",
+            "sem-amônia",
+            "fórmula-suave",
+            "protege-fibra-capilar",
+            "nutrição-intensa",
+            "brilho-natural"
+          ],
+          "rating": 4.5,
+          "reviewsCount": 223,
+          "inStock": true,
+          "stockQuantity": 33,
+          "weight": 400,
+          "labels": [
+            "POPULAR"
+          ],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__8.png"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__8.png"
+        },
+        {
+          "id": "hairlife-relaxin-natural-girassol",
+          "name": "HairLife Relaxin' & Natural com Extrato de Girassol",
+          "slug": "hairlife-relaxin-natural-girassol",
+          "brand": "HairLife",
+          "shortDesc": "Creme relaxante enriquecido com extrato de girassol para cabelos que buscam charme e delicadeza. Fór...",
+          "description": "Creme relaxante enriquecido com extrato de girassol para cabelos que buscam charme e delicadeza. Fórmula que relaxa suavemente mantendo movimento natural.",
+          "sku": "HL-007",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Extrato de Girassol",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 13.09,
+            "ourPrice": 13.09,
+            "discountPrice": 11.78,
+            "savings": 1.31,
+            "margin": "51%",
+            "competitive": "Preço competitivo para produtos de relaxamento premium"
+          },
+          "tags": [
+            "extrato-de-girassol",
+            "charme-e-delicadeza",
+            "relaxamento-suave",
+            "movimento-natural",
+            "fórmula-enriquecida",
+            "kit-completo"
+          ],
+          "rating": 4.3,
+          "reviewsCount": 178,
+          "inStock": true,
+          "stockQuantity": 25,
+          "weight": 400,
+          "labels": [],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__10.jpg"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__10.jpg"
+        },
+        {
+          "id": "hairlife-cacho-natural-encacheamento",
+          "name": "HairLife Cacho & Natural Creme para Encacheamento",
+          "slug": "hairlife-cacho-natural-encacheamento",
+          "brand": "HairLife",
+          "shortDesc": "Creme especial para encacheamento com extrato de girassol. Transforma cabelos ressecados em cachos d...",
+          "description": "Creme especial para encacheamento com extrato de girassol. Transforma cabelos ressecados em cachos definidos e naturalmente encantadores com balanço e movimento.",
+          "sku": "HL-008",
+          "category": "Tratamentos Capilares",
+          "subcategory": "Relaxamentos",
+          "finalidade": "Para Encacheamento",
+          "volume": "Kit Completo",
+          "pricing": {
+            "basePrice": 14.12,
+            "ourPrice": 14.12,
+            "discountPrice": 12.71,
+            "savings": 1.41,
+            "margin": "51%",
+            "competitive": "Preço competitivo para produtos de relaxamento premium"
+          },
+          "tags": [
+            "para-encacheamento",
+            "extrato-de-girassol",
+            "cachos-definidos",
+            "naturalmente-encantadores",
+            "balanço-e-movimento",
+            "20%-mais-produtos"
+          ],
+          "rating": 4.4,
+          "reviewsCount": 194,
+          "inStock": true,
+          "stockQuantity": 30,
+          "weight": 400,
+          "labels": [],
+          "images": [
+            "/images/products/relaxamentos_/relaxamentos__11.webp"
+          ],
+          "image": "/images/products/relaxamentos_/relaxamentos__11.webp"
+        }
+      ]
+    }
+  ],
+  "discountRules": {
+    "welcomeDiscount": {
+      "percentage": 20,
+      "description": "20% desconto na primeira compra",
+      "code": "BEMVINDO20"
+    },
+    "loyaltyDiscount": {
+      "percentage": 15,
+      "description": "15% desconto para clientes fidelidade",
+      "minPoints": 100
+    },
+    "bulkDiscount": {
+      "percentage": 12,
+      "description": "12% desconto em compras acima de €100",
+      "minAmount": 100
+    }
+  },
+  "loyaltyProgram": {
+    "pointsPerEuro": 1,
+    "euroPerPoint": 0.01,
+    "description": "Ganhe 1 ponto por cada euro gasto, troque 100 pontos por €1"
+  }
+}

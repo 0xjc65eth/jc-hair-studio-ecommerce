@@ -982,7 +982,7 @@ export default function ProdutosPage() {
               Produtos Capilares
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Progressivas, Tratamentos e Alisamentos Profissionais para Transformação Capilar
+              Progressivas, Relaxamentos e Alisamentos Profissionais para Transformação Capilar
             </p>
           </div>
         </div>
@@ -1011,7 +1011,7 @@ export default function ProdutosPage() {
                     : 'text-gray-600 hover:text-amber-600'
                 }`}
               >
-                🌊 Relaxamentos ({relaxamentosData.length})
+                💆 Relaxamentos ({relaxamentosData.length})
               </button>
             </div>
 
@@ -1051,7 +1051,7 @@ export default function ProdutosPage() {
           <p className="text-gray-600">
             {activeTab === 'progressivas'
               ? 'Transforme seus cabelos com nossas progressivas de alta qualidade'
-              : 'Relaxantes seguros e eficazes para todos os tipos de cabelo'
+              : 'Relaxamentos intensivos para hidratação, nutrição, reconstrução e controle de volume capilar'
             }
           </p>
         </div>

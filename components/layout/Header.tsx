@@ -55,8 +55,8 @@ export default function Header({ className = '' }: HeaderProps) {
     { name: 'Início', href: '/', active: pathname === '/' },
     {
       name: 'Produtos Capilares',
-      href: '/produtos',
-      active: pathname.startsWith('/produtos') && !pathname.startsWith('/produto/'),
+      href: '/categoria/tratamentos-capilares',
+      active: pathname.startsWith('/categoria/tratamentos-capilares'),
       hasDropdown: true,
       dropdownItems: [
         { name: 'Progressivas & Alisamentos', href: '/categoria/progressivas-alisamentos' },

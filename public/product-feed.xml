@@ -5,23 +5,183 @@
     <link>https://jchairstudios62.xyz</link>
     <description>Premium Brazilian hair extensions, straightening treatments, and authentic Brazilian cosmetics. 100% human hair, professional salon quality.</description>
     <language>pt-PT</language>
-    <lastBuildDate>2025-10-10T15:48:08.621Z</lastBuildDate>
+    <lastBuildDate>2025-10-11T22:29:29.887Z</lastBuildDate>
+    <item>
+      <g:id>cocochoco-original-premium</g:id>
+      <g:title>COCOCHOCO Original Premium Keratin Treatment 1000ML</g:title>
+      <g:description>Tratamento premium de queratina com terapia de chocolate. Fórmula profissional que proporciona alisamento duradouro, brilho intenso e nutrição profunda para resultados excepcionais.</g:description>
+      <g:link>https://jchairstudios62.xyz/produto/cocochoco-original-premium-keratin-treatment-1000ml</g:link>
+      <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_1.JPG</g:image_link>
+      
+      <g:availability>in stock</g:availability>
+      <g:price>124.89 EUR</g:price>
+      <g:sale_price>124.89 EUR</g:sale_price>
+      <g:brand>COCOCHOCO PROFESSIONAL</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>469 &gt; Health &amp; Beauty &gt; Personal Care</g:google_product_category>
+      <g:product_type>progressivas-btx</g:product_type>
+      
+      <g:mpn>COCO-OP-1L</g:mpn>
+      <g:item_group_id>progressivas-btx</g:item_group_id>
+      
+      
+      <g:shipping>
+        <g:country>PT</g:country>
+        <g:service>Standard</g:service>
+        <g:price>4.90 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>PT</g:country>
+        <g:service>Free Shipping</g:service>
+        <g:price>0.00 EUR</g:price>
+        <g:min_order_value>50.00 EUR</g:min_order_value>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>cocochoco-gold-premium</g:id>
+      <g:title>COCOCHOCO Gold Premium Keratin Treatment 250ML</g:title>
+      <g:description>Tratamento de queratina premium enriquecido com ouro 24K. Fórmula exclusiva que proporciona alisamento, brilho e nutrição intensa.</g:description>
+      <g:link>https://jchairstudios62.xyz/produto/cocochoco-gold-premium-keratin-treatment-250ml</g:link>
+      <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_2.JPG</g:image_link>
+      
+      <g:availability>in stock</g:availability>
+      <g:price>43.3 EUR</g:price>
+      <g:sale_price>43.3 EUR</g:sale_price>
+      <g:brand>COCOCHOCO PROFESSIONAL</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>469 &gt; Health &amp; Beauty &gt; Personal Care</g:google_product_category>
+      <g:product_type>progressivas-btx</g:product_type>
+      
+      <g:mpn>COCO-GP-250</g:mpn>
+      <g:item_group_id>progressivas-btx</g:item_group_id>
+      
+      
+      <g:shipping>
+        <g:country>PT</g:country>
+        <g:service>Standard</g:service>
+        <g:price>4.90 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>PT</g:country>
+        <g:service>Free Shipping</g:service>
+        <g:price>0.00 EUR</g:price>
+        <g:min_order_value>50.00 EUR</g:min_order_value>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>nuance-liso-perfect</g:id>
+      <g:title>Nuance LISO Perfect Brazilian Keratin</g:title>
+      <g:description>Tratamento de queratina brasileira profissional. Sistema completo com máscara para alisamento perfeito e duradouro.</g:description>
+      <g:link>https://jchairstudios62.xyz/produto/nuance-liso-perfect-brazilian-keratin</g:link>
+      <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_3.JPG</g:image_link>
+      
+      <g:availability>in stock</g:availability>
+      <g:price>234.9 EUR</g:price>
+      <g:sale_price>234.9 EUR</g:sale_price>
+      <g:brand>NUANCE</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>469 &gt; Health &amp; Beauty &gt; Personal Care</g:google_product_category>
+      <g:product_type>progressivas-btx</g:product_type>
+      
+      <g:mpn>NUA-LP-1L</g:mpn>
+      <g:item_group_id>progressivas-btx</g:item_group_id>
+      
+      
+      <g:shipping>
+        <g:country>PT</g:country>
+        <g:service>Standard</g:service>
+        <g:price>4.90 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>PT</g:country>
+        <g:service>Free Shipping</g:service>
+        <g:price>0.00 EUR</g:price>
+        <g:min_order_value>50.00 EUR</g:min_order_value>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>ineya-professional-keratin</g:id>
+      <g:title>INEYA Professional Keratin Smooth</g:title>
+      <g:description>Sistema profissional de queratina para alisamento e tratamento intensivo. Fórmula avançada para resultados profissionais.</g:description>
+      <g:link>https://jchairstudios62.xyz/produto/ineya-professional-keratin-smooth</g:link>
+      <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_4.JPG</g:image_link>
+      
+      <g:availability>in stock</g:availability>
+      <g:price>219.9 EUR</g:price>
+      <g:sale_price>219.9 EUR</g:sale_price>
+      <g:brand>INEYA PROFESSIONAL</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>469 &gt; Health &amp; Beauty &gt; Personal Care</g:google_product_category>
+      <g:product_type>progressivas-btx</g:product_type>
+      
+      <g:mpn>INE-PKS-1L</g:mpn>
+      <g:item_group_id>progressivas-btx</g:item_group_id>
+      
+      
+      <g:shipping>
+        <g:country>PT</g:country>
+        <g:service>Standard</g:service>
+        <g:price>4.90 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>PT</g:country>
+        <g:service>Free Shipping</g:service>
+        <g:price>0.00 EUR</g:price>
+        <g:min_order_value>50.00 EUR</g:min_order_value>
+      </g:shipping>
+    </item>
+
+    <item>
+      <g:id>relaxamento-keratin-smooth</g:id>
+      <g:title>Relaxamento Keratin Smooth Complex</g:title>
+      <g:description>Sistema completo de relaxamento com queratina. Fórmula suave e eficaz para alisamento progressivo.</g:description>
+      <g:link>https://jchairstudios62.xyz/produto/relaxamento-keratin-smooth-complex</g:link>
+      <g:image_link>https://jchairstudios62.xyz/images/products/progressivas_diversas/progressivas_diversas_5.JPG</g:image_link>
+      
+      <g:availability>in stock</g:availability>
+      <g:price>84.9 EUR</g:price>
+      <g:sale_price>84.9 EUR</g:sale_price>
+      <g:brand>KERATIN SMOOTH</g:brand>
+      <g:condition>new</g:condition>
+      <g:google_product_category>469 &gt; Health &amp; Beauty &gt; Personal Care</g:google_product_category>
+      <g:product_type>progressivas-btx</g:product_type>
+      
+      <g:mpn>KS-RSC-500</g:mpn>
+      <g:item_group_id>progressivas-btx</g:item_group_id>
+      
+      
+      <g:shipping>
+        <g:country>PT</g:country>
+        <g:service>Standard</g:service>
+        <g:price>4.90 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>PT</g:country>
+        <g:service>Free Shipping</g:service>
+        <g:price>0.00 EUR</g:price>
+        <g:min_order_value>50.00 EUR</g:min_order_value>
+      </g:shipping>
+    </item>
+
     <item>
       <g:id>cadiveu-professional-brasil-cacau-1l</g:id>
-      <g:title>Cadiveu Professional Brasil Cacau Alisante 1L</g:title>
-      <g:description>Tratamento alisante profissional com óleo de cacau que proporciona cabelos lisos, sedosos e com brilho intenso. Reduz o volume e elimina o frizz por até 4 meses.</g:description>
-      <g:link>https://jchairstudios62.xyz/produto/cadiveu-professional-brasil-cacau-1l</g:link>
+      <g:title>Brasil Cacau Progressiva 1L</g:title>
+      <g:description>Progressiva profissional Brasil Cacau 1L - O best-seller absoluto na Europa! Alisamento perfeito com cacau brasileiro, alta demanda garantida. Resultado profissional duradouro até 4 meses.</g:description>
+      <g:link>https://jchairstudios62.xyz/produto/brasil-cacau-progressiva-1l</g:link>
       <g:image_link>https://jchairstudios62.xyz/images/products/cadiveu/cadiveu-1.png</g:image_link>
       
       <g:availability>in stock</g:availability>
-      <g:price>244.5 EUR</g:price>
-      <g:sale_price>195.6 EUR</g:sale_price>
+      <g:price>195.6 EUR</g:price>
+      <g:sale_price>175.9 EUR</g:sale_price>
       <g:brand>Cadiveu</g:brand>
       <g:condition>new</g:condition>
       <g:google_product_category>469 &gt; Health &amp; Beauty &gt; Personal Care</g:google_product_category>
       <g:product_type>progressivas-btx</g:product_type>
       
-      <g:mpn>CAD-BC-1L-001</g:mpn>
+      <g:mpn>CAD-BC-1L</g:mpn>
       <g:item_group_id>progressivas-btx</g:item_group_id>
       
       

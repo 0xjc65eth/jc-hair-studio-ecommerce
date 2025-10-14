@@ -21,16 +21,15 @@ export default function ProdutosPage() {
     p.category === 'progressivas'
   ), [allProducts]);
 
-  const tratamentosProducts = useMemo(() => allProducts.filter(p =>
+  const relaxamentosProducts = useMemo(() => allProducts.filter(p =>
     p.category === 'Botox Capilar' ||
-    p.category === 'Tratamento Capilar' ||
-    p.category === 'Tratamentos Capilares' ||
-    p.category === 'tratamentos'
+    p.category === 'Relaxamentos' ||
+    p.category === 'relaxamentos'
   ), [allProducts]);
 
   const currentProducts = activeTab === 'progressivas'
     ? progressivasProducts
-    : tratamentosProducts;
+    : relaxamentosProducts;
 
   const filteredProducts = currentProducts.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -48,7 +47,7 @@ export default function ProdutosPage() {
               Produtos Capilares
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Progressivas, Tratamentos e Alisamentos Profissionais para Transformação Capilar
+              Progressivas, Relaxamentos e Alisamentos Profissionais para Transformação Capilar
             </p>
           </div>
         </div>
@@ -70,14 +69,14 @@ export default function ProdutosPage() {
                 ✨ Progressivas ({progressivasProducts.length})
               </button>
               <button
-                onClick={() => setActiveTab('tratamentos')}
+                onClick={() => setActiveTab('relaxamentos')}
                 className={`px-4 py-2 font-medium transition-colors ${
-                  activeTab === 'tratamentos'
+                  activeTab === 'relaxamentos'
                     ? 'text-amber-600 border-b-2 border-amber-600'
                     : 'text-gray-600 hover:text-amber-600'
                 }`}
               >
-                🌊 Tratamentos ({tratamentosProducts.length})
+                💆 Relaxamentos ({relaxamentosProducts.length})
               </button>
             </div>
 
@@ -111,13 +110,13 @@ export default function ProdutosPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             {activeTab === 'progressivas'
               ? 'Progressivas Profissionais'
-              : 'Tratamentos Capilares'
+              : 'Relaxamentos Capilares'
             }
           </h2>
           <p className="text-gray-600">
             {activeTab === 'progressivas'
               ? 'Transforme seus cabelos com nossas progressivas de alta qualidade'
-              : 'Tratamentos intensivos para hidratação, nutrição e reconstrução capilar'
+              : 'Relaxamentos intensivos para hidratação, nutrição, reconstrução e controle de volume capilar'
             }
           </p>
         </div>

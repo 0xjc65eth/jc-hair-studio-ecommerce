@@ -3,6 +3,7 @@ import { allTintasCapilares } from './tintasCapilares';
 import { allEsmaltesImpala } from './esmaltesImpala';
 import { allPerfumesWepink } from './perfumesWepink';
 import { allPerfumesOBoticario } from './perfumesOBoticario';
+import { getEuropeanProductsByCategory } from './europeanPricingProducts';
 
 // Dados mockados para categorias de beleza
 export interface Product {
@@ -661,135 +662,27 @@ export const botoxSelagemProducts: Product[] = [
 // MANTIDO PARA COMPATIBILIDADE (será removido gradualmente)
 export const progressivasBtxProducts: Product[] = [...progressivasProducts, ...botoxSelagemProducts];
 
-// TRATAMENTOS CAPILARES - removidos produtos placeholder conforme solicitado
-export const tratamentosCapilaresProducts: Product[] = [
-  // PRODUTOS WEPINK - TRATAMENTOS CAPILARES
-  {
-    id: 'wepink-trat-001',
-    name: 'Booster Repair Óleo Capilar 30ml',
-    brand: 'Wepink',
-    price: 31.51,
-    originalPrice: 38.90,
-    rating: 4.8,
-    reviewCount: 145,
-    image: '/images/products/wepink-tratamentos/booster-repair-oleo.png',
-    isNew: true,
-    discount: 10,
-    description: 'Óleo capilar concentrado Booster Repair para reparação intensiva dos fios',
-    features: ['Reparação profunda', 'Óleo concentrado', 'Nutrição intensa', 'Brilho extremo'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'wepink-trat-002',
-    name: 'Hair Mist Liberté Desodorante Capilar 50ml',
-    brand: 'Wepink',
-    price: 24.22,
-    originalPrice: 29.90,
-    rating: 4.6,
-    reviewCount: 198,
-    image: '/images/products/wepink-tratamentos/hair-mist-liberte.png',
-    isPopular: true,
-    discount: 10,
-    description: 'Hair Mist Liberté com fragrância exclusiva para perfumar e proteger os cabelos',
-    features: ['Fragrância exclusiva', 'Proteção capilar', 'Longa duração', 'Frescor'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'wepink-trat-003',
-    name: 'Hair Mist Liberté Premium Desodorante Capilar 50ml',
-    brand: 'Wepink',
-    price: 26.65,
-    originalPrice: 32.90,
-    rating: 4.7,
-    reviewCount: 176,
-    image: '/images/products/wepink-tratamentos/hair-mist-liberte-2.png',
-    discount: 10,
-    description: 'Hair Mist Liberté Premium com fórmula enriquecida e fragrância sofisticada',
-    features: ['Fórmula premium', 'Fragrância sofisticada', 'Hidratação leve', 'Proteção UV'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'wepink-trat-004',
-    name: 'Hair Mist Liberté Exclusif Desodorante Capilar 50ml',
-    brand: 'Wepink',
-    price: 28.27,
-    originalPrice: 34.90,
-    rating: 4.9,
-    reviewCount: 234,
-    image: '/images/products/wepink-tratamentos/hair-mist-liberte-exclusif.png',
-    isPopular: true,
-    discount: 10,
-    description: 'Hair Mist Liberté Exclusif com fragrância limitada e ingredientes premium',
-    features: ['Edição exclusiva', 'Fragrância limitada', 'Ingredientes premium', 'Luxo acessível'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'wepink-trat-005',
-    name: 'Hair Mist Obsessed Desodorante Capilar 50ml',
-    brand: 'Wepink',
-    price: 25.84,
-    originalPrice: 31.90,
-    rating: 4.5,
-    reviewCount: 189,
-    image: '/images/products/wepink-tratamentos/hair-mist-obsessed.png',
-    discount: 10,
-    description: 'Hair Mist Obsessed com fragrância envolvente e proteção antioxidante',
-    features: ['Fragrância envolvente', 'Proteção antioxidante', 'Fixação prolongada', 'Frescor duradouro'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'wepink-trat-006',
-    name: 'Hair Mist Red Desodorante Capilar 50ml',
-    brand: 'Wepink',
-    price: 27.46,
-    originalPrice: 33.90,
-    rating: 4.8,
-    reviewCount: 212,
-    image: '/images/products/wepink-tratamentos/hair-mist-red.png',
-    isNew: true,
-    discount: 10,
-    description: 'Hair Mist Red com fragrância marcante e proteção contra poluição urbana',
-    features: ['Fragrância marcante', 'Anti-poluição', 'Proteção térmica', 'Elegância urbana'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'wepink-trat-007',
-    name: 'Hair Tonic - Tônico Capilar 120ml',
-    brand: 'Wepink',
-    price: 34.75,
-    originalPrice: 42.90,
-    rating: 4.7,
-    reviewCount: 167,
-    image: '/images/products/wepink-tratamentos/hair-tonic-tonico.png',
-    discount: 10,
-    description: 'Tônico capilar revitalizante Hair Tonic para estimular o crescimento e fortalecer',
-    features: ['Estimula crescimento', 'Fortalecimento', 'Revitalização', 'Aplicação prática'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  },
-  {
-    id: 'wepink-trat-008',
-    name: 'Leave-in Capilar Multifuncional 120ml',
-    brand: 'Wepink',
-    price: 32.32,
-    originalPrice: 39.90,
-    rating: 4.9,
-    reviewCount: 298,
-    image: '/images/products/wepink-tratamentos/leave-in-multifuncional.png',
-    isPopular: true,
-    discount: 10,
-    description: 'Leave-in multifuncional com 10 benefícios em 1 produto para todos os tipos de cabelo',
-    features: ['10 benefícios em 1', 'Multifuncional', 'Proteção térmica', 'Hidratação prolongada'],
-    category: 'tratamentos-capilares',
-    availability: 'in_stock'
-  }
-];
+// TRATAMENTOS CAPILARES - Carregado dinamicamente do JSON com produtos HairLife
+const europeanTratamentosProducts = getEuropeanProductsByCategory('Tratamentos Capilares');
+export const tratamentosCapilaresProducts: Product[] = europeanTratamentosProducts.map(product => ({
+  id: product.id,
+  name: product.name,
+  brand: product.brand,
+  price: product.pricing.discountPrice || product.pricing.ourPrice,
+  originalPrice: product.pricing.basePrice > product.pricing.discountPrice ? product.pricing.basePrice : undefined,
+  rating: product.rating || 4.5,
+  reviewCount: product.reviewsCount || 100,
+  image: product.image || (product.images && product.images[0]) || '/images/products/placeholder.jpg',
+  isNew: product.labels?.includes('NOVO') || false,
+  isPopular: product.labels?.includes('POPULAR') || product.rating >= 4.5,
+  discount: product.pricing.basePrice > product.pricing.discountPrice ?
+    Math.round(((product.pricing.basePrice - product.pricing.discountPrice) / product.pricing.basePrice) * 100) : undefined,
+  description: product.description,
+  features: product.tags?.slice(0, 4) || ['Tratamento profissional'],
+  category: 'tratamentos-capilares',
+  subcategory: product.subcategory,
+  availability: product.inStock ? 'in_stock' : 'out_of_stock'
+}));
 
 // SHAMPOOS E CONDICIONADORES WEPINK (4 produtos)
 export const shampoosCondicionadoresProducts: Product[] = [
@@ -1352,11 +1245,11 @@ export const beautyCategories: Category[] = [
   },
   {
     id: 'tratamentos-capilares',
-    name: 'Tratamento Capilar',
+    name: 'Tratamentos Capilares',
     slug: 'tratamentos-capilares',
-    description: 'Tratamentos intensivos: óleos, tônicos, leave-ins e desodorantes capilares',
-    image: '/images/categories/tratamentos.jpg',
-    productCount: 8,
+    description: 'Tratamentos capilares intensivos: hidratação, nutrição, reconstrução e controle de volume capilar',
+    image: '/images/categories/tratamentos-capilares.jpg',
+    productCount: tratamentosCapilaresProducts.length,
     products: tratamentosCapilaresProducts
   },
   {

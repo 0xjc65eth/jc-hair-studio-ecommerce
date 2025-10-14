@@ -30,6 +30,24 @@ interface PromoCodeData {
 }
 
 const promoCodes: PromoCodeData[] = [
+  // 0. WELCOME20 - 20% off para novos clientes (CUPOM PRINCIPAL)
+  {
+    code: 'WELCOME20',
+    type: PromoCodeType.PERCENTAGE,
+    description: '20% de desconto de boas-vindas',
+    discountValue: 20,
+    maxDiscount: 100, // Máximo €100 de desconto
+    minPurchase: 0, // Sem compra mínima
+    freeShipping: false,
+    maxUses: -1, // Ilimitado
+    maxUsesPerUser: 1, // Apenas 1 vez por usuário
+    validFrom: new Date('2025-01-01'),
+    validTo: new Date('2025-12-31'),
+    firstPurchaseOnly: false, // Não restrito apenas à primeira compra
+    createdBy: 'system',
+    isActive: true
+  },
+
   // 1. PRIMEIRA-COMPRA - 10% off na primeira compra
   {
     code: 'PRIMEIRA-COMPRA',

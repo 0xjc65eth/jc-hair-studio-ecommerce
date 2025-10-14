@@ -1,0 +1,378 @@
+{
+  "metadata": {
+    "fase": "FASE 2",
+    "data": "2025-10-12",
+    "descricao": "Mapeamento correto produto→imagem baseado em análise de marcas, nomes e imagens disponíveis",
+    "status": "PROPOSTA - Aguardando confirmação"
+  },
+  "progressivas_btx": {
+    "categoria": "Progressivas e BTX",
+    "totalProdutos": 25,
+    "produtosSemImagem": 20,
+    "imagensDisponiveis": {
+      "cadiveu": 6,
+      "forever-liss": 4,
+      "g-hair": 7,
+      "honma-tokyo": 4,
+      "inoar": 1,
+      "felps": 2,
+      "vogue": 4,
+      "karssel": 1,
+      "maria-escandalosa": 1,
+      "progressivas_diversas": 31,
+      "botox": 18
+    },
+    "mapeamento": [
+      {
+        "produtoId": "cadiveu-professional-brasil-cacau-1l",
+        "produtoNome": "Brasil Cacau Progressiva 1L",
+        "marca": "Cadiveu",
+        "volume": "1000ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/cadiveu/cadiveu-1.png",
+        "justificativa": "Produto Cadiveu 1L - imagem principal da marca"
+      },
+      {
+        "produtoId": "cadiveu-professional-brasil-cacau-300ml",
+        "produtoNome": "Cadiveu Professional Brasil Cacau Alisante 300ml",
+        "marca": "Cadiveu",
+        "volume": "300ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/cadiveu/cadiveu-2.png",
+        "justificativa": "Produto Cadiveu 300ml - segunda imagem da marca para volume menor"
+      },
+      {
+        "produtoId": "forever-liss-btx-zero-formol-250g",
+        "produtoNome": "Forever Liss BTX Zero Formol 250g",
+        "marca": "Forever Liss",
+        "volume": "250g",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/forever-liss/forever-liss-1.png",
+        "justificativa": "Produto Forever Liss BTX 250g - imagem principal"
+      },
+      {
+        "produtoId": "forever-liss-btx-zero-formol-1kg",
+        "produtoNome": "Forever Liss BTX Zero Formol 1Kg Profissional",
+        "marca": "Forever Liss",
+        "volume": "1Kg",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/forever-liss/forever-liss-2.png",
+        "justificativa": "Produto Forever Liss BTX 1kg - imagem para tamanho profissional"
+      },
+      {
+        "produtoId": "cocochoco-original-premium",
+        "produtoNome": "COCOCHOCO Original Premium Keratin Treatment 1000ML",
+        "marca": "COCOCHOCO PROFESSIONAL",
+        "volume": "1000ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/progressivas_diversas/progressivas_diversas_2.JPG",
+        "justificativa": "COCOCHOCO - usar imagem genérica progressivas até conseguir imagem específica"
+      },
+      {
+        "produtoId": "cocochoco-gold-premium",
+        "produtoNome": "COCOCHOCO Gold Premium Keratin Treatment 250ML",
+        "marca": "COCOCHOCO PROFESSIONAL",
+        "volume": "250ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/progressivas_diversas/progressivas_diversas_3.JPG",
+        "justificativa": "COCOCHOCO Gold - usar imagem genérica progressivas até conseguir imagem específica"
+      },
+      {
+        "produtoId": "nuance-liso-perfect",
+        "produtoNome": "Nuance LISO Perfect Brazilian Keratin",
+        "marca": "NUANCE",
+        "volume": "1000ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/progressivas_diversas/progressivas_diversas_12.png",
+        "justificativa": "Nuance - imagem genérica de progressiva brasileira"
+      },
+      {
+        "produtoId": "ineya-professional-keratin",
+        "produtoNome": "INEYA Professional Keratin Smooth",
+        "marca": "INEYA PROFESSIONAL",
+        "volume": "1000ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/progressivas_diversas/progressivas_diversas_13.png",
+        "justificativa": "INEYA - imagem genérica de queratina profissional"
+      },
+      {
+        "produtoId": "relaxamento-keratin-smooth",
+        "produtoNome": "Relaxamento Keratin Smooth Complex",
+        "marca": "KERATIN SMOOTH",
+        "volume": "500ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/progressivas_diversas/progressivas_diversas_14.png",
+        "justificativa": "Relaxamento Keratin - imagem de relaxamento"
+      },
+      {
+        "produtoId": "btx-professional-premium-01",
+        "produtoNome": "BTX Professional Premium Reconstruction 01",
+        "marca": "BTX Pro",
+        "volume": "500g",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/botox/botox_1.png",
+        "justificativa": "BTX Professional - primeira imagem de botox"
+      },
+      {
+        "produtoId": "progressiva-advanced-02",
+        "produtoNome": "Progressiva Advanced Smooth System 02",
+        "marca": "Smooth System",
+        "volume": "1L",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/progressivas_diversas/progressivas_diversas_15.png",
+        "justificativa": "Progressiva Advanced - imagem de sistema avançado"
+      },
+      {
+        "produtoId": "btx-repair-intensive-03",
+        "produtoNome": "BTX Repair Intensive Treatment 03",
+        "marca": "Repair Intensive",
+        "volume": "300g",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/botox/botox_2.png",
+        "justificativa": "BTX Repair - segunda imagem de botox"
+      },
+      {
+        "produtoId": "progressiva-keratin-04",
+        "produtoNome": "Progressiva Keratin Complex Professional 04",
+        "marca": "Keratin Complex",
+        "volume": "800ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/progressivas_diversas/progressivas_diversas_16.png",
+        "justificativa": "Progressiva Keratin Complex"
+      },
+      {
+        "produtoId": "btx-collagen-boost-05",
+        "produtoNome": "BTX Collagen Boost Reconstruction 05",
+        "marca": "Collagen Boost",
+        "volume": "400g",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/botox/botox_3.png",
+        "justificativa": "BTX Collagen - terceira imagem de botox"
+      },
+      {
+        "produtoId": "progressiva-silk-protein-06",
+        "produtoNome": "Progressiva Silk Protein Advanced 06",
+        "marca": "Silk Protein",
+        "volume": "600ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/progressivas_diversas/progressivas_diversas_17.png",
+        "justificativa": "Progressiva Silk Protein"
+      },
+      {
+        "produtoId": "btx-vitamin-complex-07",
+        "produtoNome": "BTX Vitamin Complex Revitalizing 07",
+        "marca": "Vitamin Complex",
+        "volume": "350g",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/botox/botox_4.png",
+        "justificativa": "BTX Vitamin Complex"
+      },
+      {
+        "produtoId": "progressiva-nano-technology-08",
+        "produtoNome": "Progressiva Nano Technology Ultra 08",
+        "marca": "Nano Tech",
+        "volume": "750ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/progressivas_diversas/progressivas_diversas_18.png",
+        "justificativa": "Progressiva Nano Technology"
+      },
+      {
+        "produtoId": "btx-argan-oil-09",
+        "produtoNome": "BTX Argan Oil Luxury Treatment 09",
+        "marca": "Argan Luxury",
+        "volume": "450g",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/botox/botox_5.png",
+        "justificativa": "BTX Argan Oil"
+      },
+      {
+        "produtoId": "progressiva-diamond-shine-10",
+        "produtoNome": "Progressiva Diamond Shine Professional 10",
+        "marca": "Diamond Shine",
+        "volume": "900ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/progressivas_diversas/progressivas_diversas_19.png",
+        "justificativa": "Progressiva Diamond Shine"
+      },
+      {
+        "produtoId": "advanced-progressive-system-11",
+        "produtoNome": "Sistema Progressivo Advanced Premium 11",
+        "marca": "Advanced System",
+        "volume": "500ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/progressivas_diversas/progressivas_diversas_20.png",
+        "justificativa": "Sistema Progressivo Advanced"
+      }
+    ]
+  },
+  "tratamentos_capilares": {
+    "categoria": "Tratamentos Capilares (deve ser renomeado para Relaxamentos)",
+    "totalProdutos": 16,
+    "produtosSemImagem": 11,
+    "imagensDisponiveis": {
+      "relaxamentos_": 11,
+      "bio_extratus_produtos_": 16,
+      "wepink-tratamentos": 8,
+      "produtos_de_hidratacao": 34
+    },
+    "mapeamento": [
+      {
+        "produtoId": "bio-extratus-hidratacao-intensiva",
+        "produtoNome": "Bio Extratus Hidratação Intensiva",
+        "marca": "Bio Extratus",
+        "volume": "500g",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/bio_extratus_produtos_/bio_extratus_produtos__1.png",
+        "justificativa": "Produto Bio Extratus - usar primeira imagem da marca"
+      },
+      {
+        "produtoId": "premium-hidratacao-intensiva-1",
+        "produtoNome": "Hidratação Premium Intensiva Advanced",
+        "marca": "Premium Hair",
+        "volume": "300g",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_1.webp",
+        "justificativa": "Hidratação Premium - usar pasta de hidratação"
+      },
+      {
+        "produtoId": "nutricao-avancada-2",
+        "produtoNome": "Nutrição Avançada Repair System",
+        "marca": "Advanced Care",
+        "volume": "250ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_2.webp",
+        "justificativa": "Nutrição - pasta de hidratação/nutrição"
+      },
+      {
+        "produtoId": "reconstrucao-total-3",
+        "produtoNome": "Reconstrução Total Protein Complex",
+        "marca": "Total Repair",
+        "volume": "200ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/relaxamentos_/relaxamentos__1.webp",
+        "justificativa": "Reconstrução Total - usar pasta relaxamentos"
+      },
+      {
+        "produtoId": "mascara-nutritiva-4",
+        "produtoNome": "Máscara Nutritiva Argan & Karité",
+        "marca": "Natural Essence",
+        "volume": "500g",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/produtos_de_hidratacao/produtos_de_hidratacao_3.webp",
+        "justificativa": "Máscara Nutritiva"
+      },
+      {
+        "produtoId": "ampola-fortalecimento-5",
+        "produtoNome": "Ampola Fortalecimento Intensivo",
+        "marca": "Intensive Care",
+        "volume": "12ml x 6 ampolas",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/relaxamentos_/relaxamentos__2.png",
+        "justificativa": "Ampola - pasta relaxamentos"
+      },
+      {
+        "produtoId": "serum-anti-frizz-6",
+        "produtoNome": "Sérum Anti-Frizz Controle Total",
+        "marca": "Smooth Control",
+        "volume": "100ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/relaxamentos_/relaxamentos__3.png",
+        "justificativa": "Sérum - pasta relaxamentos"
+      },
+      {
+        "produtoId": "oleo-capilar-7",
+        "produtoNome": "Óleo Capilar Multivitamínico",
+        "marca": "Vitamin Hair",
+        "volume": "60ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/wepink-tratamentos/booster-repair-oleo.png",
+        "justificativa": "Óleo Capilar - produto Wepink tratamentos"
+      },
+      {
+        "produtoId": "creme-leave-in-8",
+        "produtoNome": "Creme Leave-in Proteção Total",
+        "marca": "All Day Protection",
+        "volume": "150ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/wepink-tratamentos/leave-in-multifuncional.png",
+        "justificativa": "Leave-in - produto Wepink tratamentos"
+      },
+      {
+        "produtoId": "mascara-reparadora-9",
+        "produtoNome": "Máscara Reparadora Pós-Química",
+        "marca": "Chemical Repair",
+        "volume": "400g",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/relaxamentos_/relaxamentos__4.png",
+        "justificativa": "Máscara Reparadora"
+      },
+      {
+        "produtoId": "tonico-crescimento-10",
+        "produtoNome": "Tônico Crescimento Acelerado",
+        "marca": "Growth Boost",
+        "volume": "120ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/wepink-tratamentos/hair-tonic-tonico.png",
+        "justificativa": "Tônico - produto Wepink tratamentos"
+      },
+      {
+        "produtoId": "spray-termoativo-11",
+        "produtoNome": "Spray Termoativo Proteção Máxima",
+        "marca": "Heat Shield",
+        "volume": "200ml",
+        "imagemAtual": null,
+        "imagemNova": "/images/products/relaxamentos_/relaxamentos__5.png",
+        "justificativa": "Spray Termoativo"
+      }
+    ]
+  },
+  "resumo": {
+    "totalProdutosMapeados": 31,
+    "progressivasBtx": 20,
+    "tratamentosCapilares": 11,
+    "imagensUsadas": {
+      "cadiveu": 2,
+      "forever-liss": 2,
+      "progressivas_diversas": 10,
+      "botox": 9,
+      "relaxamentos_": 5,
+      "bio_extratus_produtos_": 1,
+      "wepink-tratamentos": 3,
+      "produtos_de_hidratacao": 4
+    },
+    "imagensAindaDisponiveis": {
+      "cadiveu": 4,
+      "forever-liss": 2,
+      "g-hair": 7,
+      "honma-tokyo": 4,
+      "inoar": 1,
+      "felps": 2,
+      "vogue": 4,
+      "karssel": 1,
+      "maria-escandalosa": 1,
+      "progressivas_diversas": 21,
+      "botox": 9,
+      "relaxamentos_": 6,
+      "bio_extratus_produtos_": 15,
+      "wepink-tratamentos": 5,
+      "produtos_de_hidratacao": 30
+    }
+  },
+  "observacoes": [
+    "Mapeamento baseado em marcas, nomes e volumes dos produtos",
+    "Produtos com marcas específicas (Cadiveu, Forever Liss) mapeados para pastas da marca",
+    "Produtos genéricos mapeados para pasta progressivas_diversas ou botox",
+    "Produtos de tratamentos mapeados para relaxamentos_, bio_extratus e wepink-tratamentos",
+    "Ainda há 5+ produtos sem mapeamento - precisam de mais imagens ou confirmação",
+    "Pasta relaxamentos_ tem 11 imagens - 5 foram usadas, 6 ainda disponíveis",
+    "Categoria 'tratamentos-capilares' DEVE ser renomeada para 'relaxamentos'"
+  ],
+  "proximosPasses": [
+    "Validar mapeamento com o usuário",
+    "Aplicar mapeamento ao arquivo products-with-european-pricing.json",
+    "Renomear categoria de 'tratamentos-capilares' para 'relaxamentos'",
+    "Atualizar abas em /produtos/page.tsx",
+    "Adicionar produtos restantes com imagens disponíveis",
+    "Validar todas as imagens existem nos caminhos especificados"
+  ]
+}

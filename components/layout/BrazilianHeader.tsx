@@ -57,8 +57,8 @@ export default function BrazilianHeader({ className = '' }: BrazilianHeaderProps
     { name: 'Início', href: '/', active: pathname === '/' },
     {
       name: 'Produtos Brasileiros',
-      href: '/produtos',
-      active: pathname.startsWith('/produtos') && !pathname.startsWith('/produto/'),
+      href: '/categoria/tratamentos-capilares',
+      active: pathname.startsWith('/categoria/tratamentos-capilares'),
       hasDropdown: true,
       dropdownItems: [
         {
@@ -74,9 +74,9 @@ export default function BrazilianHeader({ className = '' }: BrazilianHeaderProps
           featured: true
         },
         {
-          name: 'BTX & Tratamentos',
+          name: 'Tratamentos Capilares',
           href: '/categoria/tratamentos-capilares',
-          description: 'Botox capilar e reconstrução'
+          description: 'Hidratação, nutrição e reconstrução'
         },
         {
           name: 'Maquiagem Brasileira',

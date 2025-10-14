@@ -127,13 +127,17 @@ export default function ProductCard({
           </p>
           
           <div className="flex items-center justify-between">
-            {pricing && pricing.discountPrice && (
+            {pricing && (
               <div className="flex flex-col">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice.toFixed(2)}</span>
-                  <span className="text-lg font-bold text-green-600">€{pricing.discountPrice.toFixed(2)}</span>
+                  {pricing.savings > 0 && (
+                    <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice.toFixed(2)}</span>
+                  )}
+                  <span className={`text-lg font-bold ${pricing.savings > 0 ? 'text-green-600' : 'text-gray-900'}`}>
+                    €{(pricing.discountPrice || pricing.ourPrice || 0).toFixed(2)}
+                  </span>
                 </div>
-                {pricing.savings !== undefined && (
+                {pricing.savings !== undefined && pricing.savings > 0 && (
                   <span className="text-xs text-green-600 font-medium">Economize €{pricing.savings.toFixed(2)}</span>
                 )}
               </div>
@@ -202,13 +206,17 @@ export default function ProductCard({
             {descricao}
           </p>
 
-          {pricing && pricing.discountPrice && (
+          {pricing && (
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice?.toFixed(2)}</span>
-                <span className="text-lg font-bold text-green-600">€{pricing.discountPrice?.toFixed(2)}</span>
+                {pricing.savings > 0 && (
+                  <span className="text-sm text-gray-500 line-through">€{pricing.ourPrice?.toFixed(2)}</span>
+                )}
+                <span className={`text-lg font-bold ${pricing.savings > 0 ? 'text-green-600' : 'text-gray-900'}`}>
+                  €{(pricing.discountPrice || pricing.ourPrice || 0).toFixed(2)}
+                </span>
               </div>
-              {pricing.savings !== undefined && (
+              {pricing.savings !== undefined && pricing.savings > 0 && (
                 <div className="text-center">
                   <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
                     Economize €{pricing.savings.toFixed(2)}
