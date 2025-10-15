@@ -60,17 +60,18 @@ const nextConfig = {
     },
     // PERFORMANCE: Optimized prefetching for faster navigation
     optimisticClientCache: true,
-    // PERFORMANCE: Reduce JavaScript bundle size
-    modularizeImports: {
-      'lucide-react': {
-        transform: 'lucide-react/dist/esm/icons/{{member}}',
-      },
-      '@heroicons/react/24/outline': {
-        transform: '@heroicons/react/24/outline/{{member}}',
-      },
-      '@heroicons/react/24/solid': {
-        transform: '@heroicons/react/24/solid/{{member}}',
-      },
+  },
+
+  // PERFORMANCE: Reduce JavaScript bundle size
+  modularizeImports: {
+    'lucide-react': {
+      transform: 'lucide-react/dist/esm/icons/{{member}}',
+    },
+    '@heroicons/react/24/outline': {
+      transform: '@heroicons/react/24/outline/{{member}}',
+    },
+    '@heroicons/react/24/solid': {
+      transform: '@heroicons/react/24/solid/{{member}}',
     },
   },
 
@@ -302,7 +303,40 @@ const nextConfig = {
 
   // Redirects and rewrites optimization
   async redirects() {
-    return [];
+    return [
+      // Redirecionar todas as versões com locale para versão sem locale
+      // Isso resolve o problema de duplicação reportado pelo Google
+      {
+        source: '/:locale(pt|en|es|pt-PT|pt-BR|en-US|en-GB|es-ES|fr-FR|de-DE|it-IT|nl-NL|nl-BE)/produtos',
+        destination: '/produtos',
+        permanent: true,
+      },
+      {
+        source: '/:locale(pt|en|es|pt-PT|pt-BR|en-US|en-GB|es-ES|fr-FR|de-DE|it-IT|nl-NL|nl-BE)/produtos/:path*',
+        destination: '/produtos/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:locale(pt|en|es|pt-PT|pt-BR|en-US|en-GB|es-ES|fr-FR|de-DE|it-IT|nl-NL|nl-BE)/mega-hair',
+        destination: '/mega-hair',
+        permanent: true,
+      },
+      {
+        source: '/:locale(pt|en|es|pt-PT|pt-BR|en-US|en-GB|es-ES|fr-FR|de-DE|it-IT|nl-NL|nl-BE)/mega-hair/:path*',
+        destination: '/mega-hair/:path*',
+        permanent: true,
+      },
+      {
+        source: '/:locale(pt|en|es|pt-PT|pt-BR|en-US|en-GB|es-ES|fr-FR|de-DE|it-IT|nl-NL|nl-BE)/maquiagens',
+        destination: '/maquiagens',
+        permanent: true,
+      },
+      {
+        source: '/:locale(pt|en|es|pt-PT|pt-BR|en-US|en-GB|es-ES|fr-FR|de-DE|it-IT|nl-NL|nl-BE)/maquiagens/:path*',
+        destination: '/maquiagens/:path*',
+        permanent: true,
+      },
+    ];
   },
 
   async rewrites() {
