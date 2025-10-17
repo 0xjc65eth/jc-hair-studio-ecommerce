@@ -1,28 +1,70 @@
-# ROBOTS.TXT - OTIMIZADO PARA INDEXAÇÃO RÁPIDA
+# Robots.txt ultra-otimizado para indexação rápida
+# Última atualização: 2025-10-17 23:11:26
+
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /pt/
-Disallow: /en/
-Disallow: /es/
+Crawl-delay: 0
 
-# Googlebot específico
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
-Request-rate: 100/1m
+Request-rate: 1/0
 
-# URLs principais para indexar
-Allow: /produtos
-Allow: /mega-hair
-Allow: /mega-hair-brasileiro
-Allow: /maquiagens
-Allow: /tratamentos-capilares
-Allow: /progressivas-btx
-Allow: /shampoos-condicionadores
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Applebot
+Allow: /
 
 # Sitemaps
 Sitemap: https://jchairstudios62.xyz/sitemap.xml
-Sitemap: https://jchairstudios62.xyz/sitemap-products.xml
-Sitemap: https://jchairstudios62.xyz/sitemap-categories.xml
+Sitemap: https://jchairstudios62.xyz/news-sitemap.xml
+Sitemap: https://jchairstudios62.xyz/image-sitemap.xml
+Sitemap: https://jchairstudios62.xyz/video-sitemap.xml
+Sitemap: https://jchairstudios62.xyz/product-feed.xml
+Sitemap: https://jchairstudios62.xyz/ultra-feed.xml
+Sitemap: https://jchairstudios62.xyz/atom-feed.xml
+
+# Cache info
+# Last-Modified: Fri, 17 Oct 2025 23:11:26 +0200
+# Cache-Control: no-cache

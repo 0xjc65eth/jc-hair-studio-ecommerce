@@ -1,26 +1,26 @@
 JC HAIR STUDIO - CHANGELOG
 ===========================
-Última atualização: 2025-10-15 00:51:09
+Última atualização: 2025-10-17 23:11:26
 
 MUDANÇAS RECENTES:
 ------------------
- - Produto #63 atualizado - Novo preço: €200
- - Produto #27 atualizado - Novo preço: €132
- - Produto #29 atualizado - Novo preço: €231
- - Produto #54 atualizado - Novo preço: €117
- - Produto #51 atualizado - Novo preço: €238
- - Produto #75 atualizado - Novo preço: €114
- - Produto #51 atualizado - Novo preço: €193
- - Produto #83 atualizado - Novo preço: €91
- - Produto #98 atualizado - Novo preço: €238
- - Produto #81 atualizado - Novo preço: €119
- - Produto #2 atualizado - Novo preço: €140
- - Produto #88 atualizado - Novo preço: €201
- - Produto #15 atualizado - Novo preço: €141
- - Produto #16 atualizado - Novo preço: €79
- - Produto #41 atualizado - Novo preço: €175
- - Produto #8 atualizado - Novo preço: €132
- - Produto #47 atualizado - Novo preço: €166
- - Produto #46 atualizado - Novo preço: €202
- - Produto #85 atualizado - Novo preço: €238
- - Produto #92 atualizado - Novo preço: €66
+ - Produto #38 atualizado - Novo preço: €228
+ - Produto #28 atualizado - Novo preço: €161
+ - Produto #20 atualizado - Novo preço: €87
+ - Produto #79 atualizado - Novo preço: €128
+ - Produto #86 atualizado - Novo preço: €59
+ - Produto #98 atualizado - Novo preço: €152
+ - Produto #67 atualizado - Novo preço: €227
+ - Produto #82 atualizado - Novo preço: €189
+ - Produto #62 atualizado - Novo preço: €244
+ - Produto #64 atualizado - Novo preço: €153
+ - Produto #19 atualizado - Novo preço: €187
+ - Produto #47 atualizado - Novo preço: €157
+ - Produto #44 atualizado - Novo preço: €231
+ - Produto #67 atualizado - Novo preço: €138
+ - Produto #43 atualizado - Novo preço: €221
+ - Produto #88 atualizado - Novo preço: €165
+ - Produto #87 atualizado - Novo preço: €72
+ - Produto #75 atualizado - Novo preço: €158
+ - Produto #94 atualizado - Novo preço: €158
+ - Produto #7 atualizado - Novo preço: €87
