@@ -90,6 +90,7 @@
     "seo:indexnow": "node scripts/submit-indexnow.mjs",
     "seo:prepare-photos": "node scripts/prepare-google-business-photos.mjs",
     "seo:all": "npm run seo:generate-feed && npm run seo:generate-csv && npm run seo:submit",
+    "seo:europe": "node scripts/submit-european-indexing.mjs",
     "seo:auto": "node scripts/auto-seo-complete.mjs"
   },
   "keywords": [

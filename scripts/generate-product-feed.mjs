@@ -139,13 +139,52 @@ function generateProductXml(product) {
       <g:shipping>
         <g:country>PT</g:country>
         <g:service>Standard</g:service>
-        <g:price>4.90 EUR</g:price>
+        <g:price>0.00 EUR</g:price>
       </g:shipping>
       <g:shipping>
-        <g:country>PT</g:country>
-        <g:service>Free Shipping</g:service>
-        <g:price>0.00 EUR</g:price>
-        <g:min_order_value>50.00 EUR</g:min_order_value>
+        <g:country>ES</g:country>
+        <g:service>Standard</g:service>
+        <g:price>9.99 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>FR</g:country>
+        <g:service>Standard</g:service>
+        <g:price>12.99 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>DE</g:country>
+        <g:service>Standard</g:service>
+        <g:price>14.99 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>IT</g:country>
+        <g:service>Standard</g:service>
+        <g:price>14.99 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Standard</g:service>
+        <g:price>19.99 GBP</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>NL</g:country>
+        <g:service>Standard</g:service>
+        <g:price>14.99 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>BE</g:country>
+        <g:service>Standard</g:service>
+        <g:price>14.99 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>AT</g:country>
+        <g:service>Standard</g:service>
+        <g:price>14.99 EUR</g:price>
+      </g:shipping>
+      <g:shipping>
+        <g:country>PL</g:country>
+        <g:service>Standard</g:service>
+        <g:price>19.99 EUR</g:price>
       </g:shipping>
     </item>`;
 }
