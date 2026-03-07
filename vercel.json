@@ -1,8 +1,18 @@
 {
+  "crons": [
+    {
+      "path": "/api/cron/cart-abandonment",
+      "schedule": "0 */4 * * *"
+    }
+  ],
   "rewrites": [
     {
       "source": "/feed",
-      "destination": "/product-feed.xml"
+      "destination": "/api/feeds/google-shopping"
+    },
+    {
+      "source": "/feed.xml",
+      "destination": "/api/feeds/google-shopping"
     }
   ],
   "headers": [
