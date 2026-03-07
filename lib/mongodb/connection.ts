@@ -27,6 +27,9 @@ import {
 } from './environment-config';
 import { recordConnectionAttempt, startHealthMonitoring } from './health-monitor';
 
+// Extract MONGODB_URI from centralized ENV config
+const MONGODB_URI = ENV.MONGODB_URI;
+
 // Validate environment on import
 const envValidation = validateEnvironment();
 if (!envValidation.isValid && !IS_BUILD_TIME) {
