@@ -91,7 +91,19 @@
     "seo:prepare-photos": "node scripts/prepare-google-business-photos.mjs",
     "seo:all": "npm run seo:generate-feed && npm run seo:generate-csv && npm run seo:submit",
     "seo:europe": "node scripts/submit-european-indexing.mjs",
-    "seo:auto": "node scripts/auto-seo-complete.mjs"
+    "seo:auto": "node scripts/auto-seo-complete.mjs",
+    "paperclip:setup": "node paperclip/setup.mjs",
+    "paperclip:setup:dry": "node paperclip/setup.mjs --dry-run",
+    "paperclip:agents": "node paperclip/scripts/run-all-agents.mjs",
+    "paperclip:agents:parallel": "node paperclip/scripts/run-all-agents.mjs --parallel",
+    "paperclip:marketing": "node paperclip/agents/marketing-agent.mjs",
+    "paperclip:sales": "node paperclip/agents/sales-agent.mjs",
+    "paperclip:operations": "node paperclip/agents/operations-agent.mjs",
+    "paperclip:customer": "node paperclip/agents/customer-care-agent.mjs",
+    "paperclip:analytics": "node paperclip/agents/analytics-agent.mjs",
+    "paperclip:start": "docker compose -f paperclip/docker-compose.paperclip.yml up -d",
+    "paperclip:stop": "docker compose -f paperclip/docker-compose.paperclip.yml down",
+    "paperclip:logs": "docker compose -f paperclip/docker-compose.paperclip.yml logs -f"
   },
   "keywords": [
     "ecommerce",

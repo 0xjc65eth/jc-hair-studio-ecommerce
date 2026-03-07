@@ -1,0 +1,225 @@
+{
+  "agents": [
+    {
+      "id": "ceo-strategist",
+      "name": "CEO Estrategista",
+      "role": "CEO",
+      "department": null,
+      "runtime": "claude",
+      "description": "Agente executivo principal. Define estratégia geral, aprova decisões de alto impacto, coordena entre departamentos e garante alinhamento com a missão da empresa.",
+      "capabilities": [
+        "strategic_planning",
+        "decision_making",
+        "cross_department_coordination",
+        "budget_approval",
+        "performance_review"
+      ],
+      "schedule": {
+        "heartbeat_interval": "8h",
+        "active_hours": "08:00-22:00",
+        "timezone": "Europe/Paris"
+      },
+      "budget": {
+        "monthly_token_limit": 5000000,
+        "warning_threshold": 0.8
+      },
+      "reports_to": null
+    },
+    {
+      "id": "cmo-marketing",
+      "name": "CMO Marketing Digital",
+      "role": "CMO",
+      "department": "marketing",
+      "runtime": "claude",
+      "description": "Responsável por toda estratégia de marketing digital. Gerencia SEO, Google Ads, redes sociais, email marketing e campanhas de aquisição de clientes.",
+      "capabilities": [
+        "seo_optimization",
+        "social_media_management",
+        "email_campaigns",
+        "google_ads_management",
+        "content_strategy",
+        "market_research",
+        "competitor_analysis"
+      ],
+      "schedule": {
+        "heartbeat_interval": "4h",
+        "active_hours": "06:00-23:00",
+        "timezone": "Europe/Paris"
+      },
+      "budget": {
+        "monthly_token_limit": 8000000,
+        "warning_threshold": 0.8
+      },
+      "reports_to": "ceo-strategist",
+      "integrations": [
+        "sendgrid",
+        "google_analytics",
+        "google_ads",
+        "instagram_api",
+        "facebook_api",
+        "tiktok_api"
+      ]
+    },
+    {
+      "id": "sales-optimizer",
+      "name": "Gestor de Vendas & Conversão",
+      "role": "Sales Director",
+      "department": "sales",
+      "runtime": "claude",
+      "description": "Otimiza funil de vendas, gerencia catálogo de produtos, define preços e promoções, melhora taxa de conversão e implementa estratégias de cross-selling e upselling.",
+      "capabilities": [
+        "catalog_management",
+        "pricing_strategy",
+        "promotion_management",
+        "conversion_optimization",
+        "cross_selling",
+        "upselling",
+        "ab_testing",
+        "cart_abandonment_recovery"
+      ],
+      "schedule": {
+        "heartbeat_interval": "4h",
+        "active_hours": "08:00-22:00",
+        "timezone": "Europe/Paris"
+      },
+      "budget": {
+        "monthly_token_limit": 6000000,
+        "warning_threshold": 0.8
+      },
+      "reports_to": "ceo-strategist",
+      "integrations": [
+        "stripe",
+        "mongodb",
+        "google_analytics"
+      ]
+    },
+    {
+      "id": "ops-manager",
+      "name": "Gestor de Operações",
+      "role": "COO",
+      "department": "operations",
+      "runtime": "claude",
+      "description": "Gerencia estoque, processamento de pedidos, logística de envio, relações com fornecedores e controle de qualidade.",
+      "capabilities": [
+        "inventory_management",
+        "order_processing",
+        "shipping_logistics",
+        "supplier_management",
+        "quality_control",
+        "demand_forecasting"
+      ],
+      "schedule": {
+        "heartbeat_interval": "4h",
+        "active_hours": "07:00-21:00",
+        "timezone": "Europe/Paris"
+      },
+      "budget": {
+        "monthly_token_limit": 4000000,
+        "warning_threshold": 0.8
+      },
+      "reports_to": "ceo-strategist",
+      "integrations": [
+        "mongodb",
+        "shipping_api",
+        "stripe"
+      ]
+    },
+    {
+      "id": "customer-care",
+      "name": "Agente de Atendimento ao Cliente",
+      "role": "Customer Service Manager",
+      "department": "customer_service",
+      "runtime": "claude",
+      "description": "Gerencia atendimento ao cliente multilingue (PT, EN, FR, ES), responde dúvidas, processa devoluções, gerencia reclamações e implementa programas de fidelização.",
+      "capabilities": [
+        "customer_support",
+        "multilingual_communication",
+        "returns_management",
+        "loyalty_programs",
+        "review_management",
+        "complaint_resolution",
+        "faq_management"
+      ],
+      "schedule": {
+        "heartbeat_interval": "2h",
+        "active_hours": "08:00-23:00",
+        "timezone": "Europe/Paris"
+      },
+      "budget": {
+        "monthly_token_limit": 6000000,
+        "warning_threshold": 0.8
+      },
+      "reports_to": "ceo-strategist",
+      "integrations": [
+        "sendgrid",
+        "mongodb",
+        "whatsapp_api"
+      ]
+    },
+    {
+      "id": "content-creator",
+      "name": "Criador de Conteúdo",
+      "role": "Content Director",
+      "department": "content",
+      "runtime": "claude",
+      "description": "Cria conteúdo otimizado para SEO em múltiplos idiomas: descrições de produtos, posts de blog, legendas para redes sociais, newsletters e materiais promocionais.",
+      "capabilities": [
+        "product_descriptions",
+        "blog_writing",
+        "social_media_content",
+        "newsletter_creation",
+        "seo_content",
+        "multilingual_content",
+        "promotional_materials",
+        "video_scripts"
+      ],
+      "schedule": {
+        "heartbeat_interval": "6h",
+        "active_hours": "08:00-20:00",
+        "timezone": "Europe/Paris"
+      },
+      "budget": {
+        "monthly_token_limit": 7000000,
+        "warning_threshold": 0.8
+      },
+      "reports_to": "cmo-marketing",
+      "integrations": [
+        "sendgrid",
+        "cloudinary"
+      ]
+    },
+    {
+      "id": "data-analyst",
+      "name": "Analista de Dados",
+      "role": "Data Analyst",
+      "department": "analytics",
+      "runtime": "claude",
+      "description": "Analisa métricas de vendas, tráfego, conversão e comportamento do cliente. Gera relatórios e insights acionáveis para otimizar a operação.",
+      "capabilities": [
+        "sales_analytics",
+        "traffic_analysis",
+        "conversion_tracking",
+        "customer_behavior_analysis",
+        "market_trends",
+        "demand_forecasting",
+        "reporting",
+        "kpi_monitoring"
+      ],
+      "schedule": {
+        "heartbeat_interval": "8h",
+        "active_hours": "08:00-20:00",
+        "timezone": "Europe/Paris"
+      },
+      "budget": {
+        "monthly_token_limit": 3000000,
+        "warning_threshold": 0.8
+      },
+      "reports_to": "ceo-strategist",
+      "integrations": [
+        "google_analytics",
+        "stripe",
+        "mongodb"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+version: '3.8'
+
+# JC Hair Studio - Paperclip AI Orchestration Stack
+# Executa o Paperclip AI junto com o e-commerce existente
+
+services:
+  # Paperclip AI Server
+  paperclip:
+    image: node:20-alpine
+    container_name: jc-paperclip
+    working_dir: /app
+    command: >
+      sh -c "
+        npm install -g pnpm &&
+        git clone https://github.com/paperclipai/paperclip.git /app/paperclip 2>/dev/null || true &&
+        cd /app/paperclip &&
+        pnpm install &&
+        pnpm dev
+      "
+    ports:
+      - "3100:3100"
+    environment:
+      - NODE_ENV=production
+      - PAPERCLIP_HOME=/data/paperclip
+      - PAPERCLIP_INSTANCE_ID=jc-hair-studio
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    volumes:
+      - paperclip_data:/data/paperclip
+      - ./paperclip/config:/app/config
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3100/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - jc-network
+
+  # Agent Scheduler - Runs AI agents on schedule
+  agent-scheduler:
+    image: node:20-alpine
+    container_name: jc-agent-scheduler
+    working_dir: /app
+    command: >
+      sh -c "
+        echo '*/240 * * * * node /app/agents/marketing-agent.mjs' >> /etc/crontabs/root &&
+        echo '*/240 * * * * node /app/agents/sales-agent.mjs' >> /etc/crontabs/root &&
+        echo '*/240 * * * * node /app/agents/operations-agent.mjs' >> /etc/crontabs/root &&
+        echo '*/120 * * * * node /app/agents/customer-care-agent.mjs' >> /etc/crontabs/root &&
+        echo '*/480 * * * * node /app/agents/analytics-agent.mjs' >> /etc/crontabs/root &&
+        crond -f -l 2
+      "
+    environment:
+      - PAPERCLIP_API_URL=http://paperclip:3100
+      - NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-http://localhost:3001}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    volumes:
+      - ./paperclip/agents:/app/agents:ro
+      - ./paperclip/config:/app/config:ro
+    depends_on:
+      paperclip:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - jc-network
+
+volumes:
+  paperclip_data:
+    driver: local
+
+networks:
+  jc-network:
+    name: jc-hair-studio-network
+    driver: bridge

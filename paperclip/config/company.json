@@ -1,0 +1,62 @@
+{
+  "company": {
+    "name": "JC Hair Studio's 62",
+    "description": "Loja online de extensões de cabelo, produtos brasileiros de beleza e cuidados capilares. Especializada em mega hair, apliques, perucas, cosméticos brasileiros e acessórios de cabelo para o mercado europeu.",
+    "mission": "Ser a referência número 1 em produtos brasileiros de cabelo e beleza na Europa, oferecendo qualidade premium com atendimento personalizado e entregas rápidas.",
+    "industry": "E-commerce / Beauty & Hair Products",
+    "website": "https://jchairstudios62.xyz",
+    "locale": "pt-BR",
+    "target_markets": ["Portugal", "France", "Germany", "Spain", "Italy", "UK", "Netherlands", "Belgium"],
+    "currency": "EUR",
+    "timezone": "Europe/Paris"
+  },
+  "departments": [
+    {
+      "id": "marketing",
+      "name": "Marketing & Growth",
+      "description": "Responsável por SEO, campanhas de marketing digital, redes sociais, email marketing e aquisição de clientes"
+    },
+    {
+      "id": "sales",
+      "name": "Vendas & Conversão",
+      "description": "Otimização de conversão, gestão de catálogo, precificação, promoções e cross-selling"
+    },
+    {
+      "id": "operations",
+      "name": "Operações & Logística",
+      "description": "Gestão de estoque, processamento de pedidos, envio, controle de qualidade e fornecedores"
+    },
+    {
+      "id": "customer_service",
+      "name": "Atendimento ao Cliente",
+      "description": "Suporte ao cliente, pós-venda, gestão de devoluções e fidelização"
+    },
+    {
+      "id": "content",
+      "name": "Conteúdo & Criação",
+      "description": "Criação de conteúdo para blog, redes sociais, descrições de produtos e materiais visuais"
+    },
+    {
+      "id": "analytics",
+      "name": "Dados & Analytics",
+      "description": "Análise de métricas, relatórios de performance, insights de mercado e previsões de demanda"
+    }
+  ],
+  "brand": {
+    "name": "JC Hair Studio's 62",
+    "tagline": "Beleza Brasileira na Europa",
+    "voice": "Profissional mas acolhedor, especialista em cabelos, com toque brasileiro caloroso",
+    "colors": {
+      "primary": "#D4AF37",
+      "secondary": "#1a1a2e",
+      "accent": "#e94560"
+    },
+    "values": [
+      "Qualidade Premium",
+      "Autenticidade Brasileira",
+      "Atendimento Personalizado",
+      "Entrega Rápida",
+      "Satisfação Garantida"
+    ]
+  }
+}

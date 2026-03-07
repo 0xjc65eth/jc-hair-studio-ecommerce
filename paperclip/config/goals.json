@@ -1,0 +1,156 @@
+{
+  "goals": {
+    "mission": {
+      "id": "company-mission",
+      "title": "Ser a loja #1 de produtos brasileiros de cabelo e beleza na Europa",
+      "description": "Conquistar liderança de mercado em produtos brasileiros de cabelo no mercado europeu, atingindo €50.000/mês em vendas até dezembro de 2026.",
+      "type": "mission",
+      "kpis": [
+        { "name": "revenue_monthly", "target": 50000, "unit": "EUR" },
+        { "name": "active_customers", "target": 5000, "unit": "count" },
+        { "name": "market_share_europe", "target": 15, "unit": "percent" }
+      ]
+    },
+    "strategic": [
+      {
+        "id": "grow-online-sales",
+        "title": "Crescer vendas online para €20.000/mês",
+        "parent": "company-mission",
+        "owner": "sales-optimizer",
+        "deadline": "2026-09-30",
+        "kpis": [
+          { "name": "monthly_revenue", "target": 20000, "unit": "EUR" },
+          { "name": "conversion_rate", "target": 3.5, "unit": "percent" },
+          { "name": "average_order_value", "target": 85, "unit": "EUR" },
+          { "name": "cart_abandonment_rate", "target": 30, "unit": "percent" }
+        ]
+      },
+      {
+        "id": "build-brand-presence",
+        "title": "Construir presença de marca forte em 8 países europeus",
+        "parent": "company-mission",
+        "owner": "cmo-marketing",
+        "deadline": "2026-12-31",
+        "kpis": [
+          { "name": "organic_traffic_monthly", "target": 50000, "unit": "visits" },
+          { "name": "social_media_followers", "target": 25000, "unit": "count" },
+          { "name": "brand_mentions", "target": 500, "unit": "monthly" },
+          { "name": "email_subscribers", "target": 10000, "unit": "count" }
+        ]
+      },
+      {
+        "id": "operational-excellence",
+        "title": "Excelência operacional: entrega rápida e satisfação do cliente",
+        "parent": "company-mission",
+        "owner": "ops-manager",
+        "deadline": "2026-06-30",
+        "kpis": [
+          { "name": "order_fulfillment_time", "target": 24, "unit": "hours" },
+          { "name": "customer_satisfaction", "target": 4.8, "unit": "rating_5" },
+          { "name": "return_rate", "target": 3, "unit": "percent" },
+          { "name": "inventory_accuracy", "target": 98, "unit": "percent" }
+        ]
+      }
+    ],
+    "tactical": [
+      {
+        "id": "seo-domination",
+        "title": "Dominar SEO para palavras-chave de cabelo brasileiro na Europa",
+        "parent": "build-brand-presence",
+        "owner": "cmo-marketing",
+        "tasks": [
+          "Otimizar todas as páginas de produto para SEO multilíngue (PT, EN, FR, ES, DE, IT)",
+          "Criar 50 blog posts otimizados sobre cuidados com cabelo e extensões",
+          "Construir 200 backlinks de qualidade em sites de beleza europeus",
+          "Implementar schema markup para todos os produtos",
+          "Submeter sitemap para Google, Bing e motores de busca europeus",
+          "Criar conteúdo localizado para cada mercado-alvo"
+        ]
+      },
+      {
+        "id": "social-media-growth",
+        "title": "Crescer presença em redes sociais para 25K seguidores",
+        "parent": "build-brand-presence",
+        "owner": "content-creator",
+        "tasks": [
+          "Postar 3x/dia no Instagram com conteúdo de cabelo e beleza",
+          "Criar 5 Reels/TikToks por semana com tutoriais de cabelo",
+          "Gerenciar comunidade e responder comentários em 30 minutos",
+          "Criar campanhas com influenciadoras de cabelo europeias",
+          "Implementar calendário editorial mensal",
+          "Criar stories diários mostrando produtos e bastidores"
+        ]
+      },
+      {
+        "id": "email-marketing-automation",
+        "title": "Automatizar email marketing para 10K inscritos",
+        "parent": "build-brand-presence",
+        "owner": "cmo-marketing",
+        "tasks": [
+          "Criar sequência de boas-vindas (5 emails)",
+          "Implementar emails de carrinho abandonado",
+          "Newsletter semanal com novidades e promoções",
+          "Segmentação por tipo de cabelo e interesse",
+          "Campanhas sazonais (Natal, Black Friday, Dia das Mães)",
+          "Emails de recompra automáticos baseados em ciclo do produto"
+        ]
+      },
+      {
+        "id": "conversion-optimization",
+        "title": "Otimizar taxa de conversão para 3.5%",
+        "parent": "grow-online-sales",
+        "owner": "sales-optimizer",
+        "tasks": [
+          "Implementar testes A/B nas páginas de produto",
+          "Otimizar checkout para reduzir abandono",
+          "Adicionar reviews e depoimentos de clientes",
+          "Implementar sistema de recomendações personalizadas",
+          "Criar bundles e kits de produtos populares",
+          "Otimizar imagens e tempo de carregamento"
+        ]
+      },
+      {
+        "id": "customer-loyalty",
+        "title": "Implementar programa de fidelidade e retenção",
+        "parent": "grow-online-sales",
+        "owner": "customer-care",
+        "tasks": [
+          "Criar programa de pontos por compra",
+          "Implementar sistema de referência (indique e ganhe)",
+          "Follow-up pós-venda automatizado",
+          "Pesquisas de satisfação após entrega",
+          "Programa VIP para clientes recorrentes",
+          "Sistema de suporte via WhatsApp"
+        ]
+      },
+      {
+        "id": "marketplace-expansion",
+        "title": "Expandir para Amazon e outros marketplaces europeus",
+        "parent": "grow-online-sales",
+        "owner": "ops-manager",
+        "tasks": [
+          "Configurar seller account na Amazon Europa",
+          "Sincronizar catálogo com Amazon",
+          "Otimizar listings para Amazon SEO",
+          "Implementar FBA (Fulfillment by Amazon)",
+          "Explorar Cdiscount (França) e Otto (Alemanha)",
+          "Gerenciar reviews e reputação nos marketplaces"
+        ]
+      },
+      {
+        "id": "data-driven-decisions",
+        "title": "Implementar análise de dados para decisões inteligentes",
+        "parent": "operational-excellence",
+        "owner": "data-analyst",
+        "tasks": [
+          "Configurar dashboard de KPIs em tempo real",
+          "Implementar tracking de funil de conversão completo",
+          "Análise semanal de produtos mais vendidos e tendências",
+          "Previsão de demanda por categoria de produto",
+          "Análise de cohort de clientes",
+          "Relatório mensal de performance por mercado"
+        ]
+      }
+    ]
+  }
+}
