@@ -27,8 +27,11 @@ import {
 } from './environment-config';
 import { recordConnectionAttempt, startHealthMonitoring } from './health-monitor';
 
-// Extract MONGODB_URI from centralized ENV config
+// Extract variables from centralized ENV config
 const MONGODB_URI = ENV.MONGODB_URI;
+const DATABASE_NAME = ENV.MONGODB_DB_NAME;
+const isProduction = IS_PRODUCTION;
+const isVercel = ENV.VERCEL;
 
 // Validate environment on import
 const envValidation = validateEnvironment();
