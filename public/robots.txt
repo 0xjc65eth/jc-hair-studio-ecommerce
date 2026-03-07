@@ -1,6 +1,6 @@
 # Robots.txt - JC Hair Studio's 62
-# Generated: 2025-10-03
-# Purpose: SEO optimization for Google, Bing, and other search engines
+# Updated: 2026-03-07
+# Pan-European E-commerce - SEO optimized
 
 # Allow all good bots to index public content
 User-agent: *
@@ -16,18 +16,30 @@ Allow: /tintas-wella-portugal
 Allow: /esmaltes-impala-portugal
 Allow: /mari-maria-makeup-portugal
 Allow: /contato
+Allow: /sobre
 Allow: /legal/
 Allow: /images/
-Allow: /pt/
-Allow: /en/
-Allow: /es/
-Allow: /fr/
+
+# European locale paths
+Allow: /pt-PT/
+Allow: /en-GB/
+Allow: /es-ES/
+Allow: /fr-FR/
+Allow: /de-DE/
+Allow: /it-IT/
+Allow: /nl-NL/
+Allow: /pl-PL/
+Allow: /ro-RO/
+Allow: /sv-SE/
+Allow: /da-DK/
+Allow: /fi-FI/
+Allow: /el-GR/
+Allow: /cs-CZ/
+Allow: /hu-HU/
 
 # Disallow private/admin areas
 Disallow: /admin/
-Disallow: /api/admin/
-Disallow: /api/auth/
-Disallow: /api/webhook/
+Disallow: /api/
 Disallow: /conta/
 Disallow: /checkout/
 Disallow: /carrinho/
@@ -38,34 +50,15 @@ Disallow: /catalog-*
 Disallow: /*?*utm_
 Disallow: /*?*fbclid
 Disallow: /*?*gclid
-Disallow: /api/inventory/
-Disallow: /api/orders/
-Disallow: /api/notifications/
 Disallow: /_next/
 Disallow: /private/
 Disallow: /temp/
 
-# Crawl delay for all bots (1 second)
 Crawl-delay: 1
 
-# Special rules for Googlebot (faster crawl)
+# Googlebot - faster crawl, priority bot
 User-agent: Googlebot
 Allow: /
-Allow: /mega-hair
-Allow: /maquiagem
-Allow: /cosmeticos
-Allow: /produtos
-Allow: /produto/
-Allow: /categoria/
-Allow: /progressiva-vogue-portugal
-Allow: /tintas-wella-portugal
-Allow: /esmaltes-impala-portugal
-Allow: /mari-maria-makeup-portugal
-Allow: /images/
-Allow: /pt/
-Allow: /en/
-Allow: /es/
-Allow: /fr/
 Disallow: /admin/
 Disallow: /api/
 Disallow: /conta/
@@ -75,18 +68,39 @@ Disallow: /auth/
 Disallow: /test-*
 Crawl-delay: 0
 
-# Block bad bots and scrapers
+# Bingbot - important for European markets
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /conta/
+Disallow: /checkout/
+Disallow: /auth/
+Crawl-delay: 1
+
+# Block aggressive scrapers
 User-agent: SemrushBot
-User-agent: AhrefsBot
-User-agent: MJ12bot
-User-agent: DotBot
-User-agent: BLEXBot
-User-agent: DataForSeoBot
-User-agent: PetalBot
-User-agent: YandexBot
 Disallow: /
 
-# Sitemap location
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# Sitemaps
 Sitemap: https://jchairstudios62.xyz/sitemap.xml
 Sitemap: https://jchairstudios62.xyz/product-feed.xml
 

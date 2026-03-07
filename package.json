@@ -8,7 +8,7 @@
     "prebuild": "node scripts/generate-product-feed.mjs",
     "build": "next build",
     "build:production": "NODE_ENV=production npm run build:pre-check && npm run build:optimized",
-    "build:vercel": "echo 'Starting Vercel optimized build...' && NODE_OPTIONS='--max-old-space-size=8192' SKIP_TYPE_CHECK=true SKIP_LINT=true NEXT_TELEMETRY_DISABLED=1 next build",
+    "build:vercel": "echo 'Starting Vercel optimized build...' && NODE_OPTIONS='--max-old-space-size=8192' NEXT_TELEMETRY_DISABLED=1 next build",
     "build:optimized": "npm run optimize:build && npm run build:vercel",
     "build:check": "npm run type-check:safe && npm run lint:safe",
     "build:pre-check": "echo 'Running pre-build checks...' && npm run type-check:production && npm run lint:production",

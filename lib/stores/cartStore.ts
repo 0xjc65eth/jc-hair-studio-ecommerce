@@ -224,38 +224,30 @@ export const useCartStore = create<CartState>((set, get) => ({
   },
 }));
 
-// Global flag to prevent multiple initializations
-let cartInitialized = false;
+// Use a ref-like approach instead of global variable to prevent
+// race conditions during SSR/hydration
+const initState = { initialized: false };
 
 // Hook to initialize cart from localStorage
 export const useCartInitializer = () => {
-  const { items } = useCartStore();
-
   // Load from localStorage on first render - use useEffect for proper timing
   useEffect(() => {
-    // Prevent multiple initializations
-    if (cartInitialized || typeof window === 'undefined') {
+    // Prevent multiple initializations using closure-safe check
+    if (initState.initialized || typeof window === 'undefined') {
       return;
     }
 
+    // Mark as initialized immediately to prevent race conditions
+    initState.initialized = true;
+
     const savedItems = loadFromStorage();
-    console.log('🔍 CART INITIALIZER DEBUG:', {
-      savedItemsLength: savedItems.length,
-      savedItems
-    });
 
     if (savedItems.length > 0) {
       const subtotal = calculateSubtotal(savedItems);
-      const itemsCount = savedItems.reduce((count, item) => count + item.quantity, 0);
+      const itemsCount = savedItems.reduce((count: number, item: CartItem) => count + item.quantity, 0);
 
       // Only update if current items are empty to avoid overwriting
       const currentItems = useCartStore.getState().items;
-      console.log('🔄 UPDATING CART STATE:', {
-        currentItemsLength: currentItems.length,
-        newItemsLength: savedItems.length,
-        newSubtotal: subtotal,
-        newItemsCount: itemsCount
-      });
 
       if (currentItems.length === 0) {
         useCartStore.setState({
@@ -264,16 +256,8 @@ export const useCartInitializer = () => {
           itemsCount,
           isEmpty: false,
         });
-        console.log('✅ CART STATE UPDATED FROM LOCALSTORAGE');
-      } else {
-        console.log('⚠️ CART ALREADY HAS ITEMS, SKIPPING UPDATE');
       }
-    } else {
-      console.log('📭 NO SAVED ITEMS IN LOCALSTORAGE');
     }
-
-    // Mark as initialized
-    cartInitialized = true;
   }, []); // Run only once on mount
 };
 

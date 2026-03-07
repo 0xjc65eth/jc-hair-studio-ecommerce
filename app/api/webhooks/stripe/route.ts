@@ -16,17 +16,36 @@ const stripe = process.env.STRIPE_SECRET_KEY ? new Stripe(process.env.STRIPE_SEC
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 // ==================== WEBHOOK TESTING ENDPOINT ====================
+// SECURITY: Test endpoint is only available in development environment
+// In production, this returns 404 to prevent unauthorized access
 
 export async function GET(request: NextRequest) {
+  // Block test endpoint in production - CRITICAL SECURITY FIX
+  if (process.env.NODE_ENV === 'production') {
+    return NextResponse.json(
+      { error: 'Not found' },
+      { status: 404 }
+    );
+  }
+
+  // Additional security: require a test secret key
+  const testSecret = request.headers.get('x-test-secret');
+  if (testSecret !== process.env.WEBHOOK_TEST_SECRET) {
+    return NextResponse.json(
+      { error: 'Unauthorized - invalid test secret' },
+      { status: 401 }
+    );
+  }
+
   const { searchParams } = new URL(request.url);
   const testType = searchParams.get('test');
   const requestId = `test_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
-  logger.info(`🧪 [${requestId}] Webhook test request: ${testType}`);
+  logger.info(`[${requestId}] Webhook test request: ${testType}`);
 
   if (!testType) {
     return NextResponse.json({
-      message: 'Webhook Test Endpoint',
+      message: 'Webhook Test Endpoint (development only)',
       availableTests: [
         'payment_success',
         'payment_failed',
@@ -60,8 +79,8 @@ export async function GET(request: NextRequest) {
       message: `Test ${testType} completed successfully`,
       requestId
     });
-  } catch (error) {
-    logger.error(`❌ [${requestId}] Test failed:`, error);
+  } catch (error: any) {
+    logger.error(`[${requestId}] Test failed:`, error);
     return NextResponse.json({
       success: false,
       message: `Test ${testType} failed: ${error.message}`,
@@ -245,7 +264,7 @@ export async function POST(request: NextRequest) {
 
 // ==================== HANDLERS DOS EVENTOS ====================
 
-async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent, requestId: string) {
+async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent, requestId: string, isTest: boolean = false) {
   logger.info(`🎉 [${requestId}] Payment succeeded: ${paymentIntent.id}`);
 
   const orderId = paymentIntent.id;
@@ -300,7 +319,7 @@ async function handlePaymentSuccess(paymentIntent: Stripe.PaymentIntent, request
   }
 }
 
-async function handlePaymentFailed(paymentIntent: Stripe.PaymentIntent, requestId: string) {
+async function handlePaymentFailed(paymentIntent: Stripe.PaymentIntent, requestId: string, isTest: boolean = false) {
   logger.info(`❌ [${requestId}] Payment failed: ${paymentIntent.id}`);
 
   const customerEmail = paymentIntent.metadata.customerEmail;
@@ -326,7 +345,7 @@ async function handlePaymentFailed(paymentIntent: Stripe.PaymentIntent, requestI
   }
 }
 
-async function handleDispute(dispute: Stripe.Dispute, requestId: string) {
+async function handleDispute(dispute: Stripe.Dispute, requestId: string, isTest: boolean = false) {
   logger.info(`⚠️ [${requestId}] Dispute created: ${dispute.id}`);
 
   await sendEmailWithRetry({

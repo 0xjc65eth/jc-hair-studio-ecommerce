@@ -88,7 +88,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'pt_PT',
-    alternateLocale: ['pt_BR', 'en_US', 'es_ES', 'fr_FR', 'nl_BE'],
+    alternateLocale: ['pt_BR', 'en_GB', 'es_ES', 'fr_FR', 'de_DE', 'it_IT', 'nl_NL', 'pl_PL'],
     url: 'https://jchairstudios62.xyz',
     siteName: 'JC Hair Studio\'s 62 - Produtos Brasileiros',
     title: 'JC Hair Studio\'s 62 - Produtos Capilares Brasileiros Premium',
@@ -110,7 +110,7 @@ export const metadata: Metadata = {
     description: 'Mega hair brasileiro 100% humano, progressivas Vogue originais, maquiagem brasileira premium. Tradição familiar +40 anos. Entrega Europa.',
     images: ['/twitter-image-brasil.jpg'],
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://jchairstudios62.xyz'),
   manifest: '/manifest.json',
   icons: {
     icon: [
@@ -129,16 +129,21 @@ export const metadata: Metadata = {
     ],
   },
   verification: {
-    google: 'verification_token_google',
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   },
   category: 'e-commerce',
   alternates: {
     canonical: 'https://jchairstudios62.xyz',
     languages: {
-      'pt-PT': '/pt',
-      'en-US': '/en', 
-      'es-ES': '/es',
-      'fr-FR': '/fr',
+      'pt-PT': '/pt-PT',
+      'en-GB': '/en-GB',
+      'es-ES': '/es-ES',
+      'fr-FR': '/fr-FR',
+      'de-DE': '/de-DE',
+      'it-IT': '/it-IT',
+      'nl-NL': '/nl-NL',
+      'pl-PL': '/pl-PL',
+      'x-default': '/',
     },
   },
 };
@@ -163,10 +168,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* PWA Configuration */}
-        <meta name="application-name" content="62 Beauty's 62" />
+        <meta name="application-name" content="JC Hair Studio's 62" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="62 Beauty's 62" />
+        <meta name="apple-mobile-web-app-title" content="JC Hair Studio's 62" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
@@ -174,7 +179,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="msapplication-tap-highlight" content="no" />
         
         {/* Schema.org markup for Google+ */}
-        <meta itemProp="name" content="62 Beauty's 62" />
+        <meta itemProp="name" content="JC Hair Studio's 62" />
         <meta itemProp="description" content="E-commerce especializado em extensões de cabelo de alta qualidade" />
         <meta itemProp="image" content="/og-image.jpg" />
         
@@ -255,20 +260,22 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </>
         )}
 
-        {/* Google Search Console Verification */}
-        <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || 'your-verification-code'} />
-
-        {/* Bing Webmaster Tools */}
-        <meta name="msvalidate.01" content={process.env.NEXT_PUBLIC_BING_VERIFICATION || 'your-bing-verification'} />
-
-        {/* Yandex Verification (para alcance europeu) */}
-        <meta name="yandex-verification" content={process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || 'your-yandex-verification'} />
-
-        {/* Pinterest domain verification */}
-        <meta name="p:domain_verify" content={process.env.NEXT_PUBLIC_PINTEREST_VERIFICATION || 'your-pinterest-verification'} />
-
-        {/* Facebook Domain Verification */}
-        <meta name="facebook-domain-verification" content={process.env.NEXT_PUBLIC_FACEBOOK_VERIFICATION || 'your-facebook-verification'} />
+        {/* Search Engine Verification Tags - only render when env vars are set */}
+        {process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && (
+          <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION} />
+        )}
+        {process.env.NEXT_PUBLIC_BING_VERIFICATION && (
+          <meta name="msvalidate.01" content={process.env.NEXT_PUBLIC_BING_VERIFICATION} />
+        )}
+        {process.env.NEXT_PUBLIC_YANDEX_VERIFICATION && (
+          <meta name="yandex-verification" content={process.env.NEXT_PUBLIC_YANDEX_VERIFICATION} />
+        )}
+        {process.env.NEXT_PUBLIC_PINTEREST_VERIFICATION && (
+          <meta name="p:domain_verify" content={process.env.NEXT_PUBLIC_PINTEREST_VERIFICATION} />
+        )}
+        {process.env.NEXT_PUBLIC_FACEBOOK_VERIFICATION && (
+          <meta name="facebook-domain-verification" content={process.env.NEXT_PUBLIC_FACEBOOK_VERIFICATION} />
+        )}
       </head>
       <body className={`${inter.className} antialiased bg-white text-gray-900`}>
         {/* Skip to main content for accessibility */}

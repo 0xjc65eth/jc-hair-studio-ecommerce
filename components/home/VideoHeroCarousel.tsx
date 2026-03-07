@@ -40,7 +40,17 @@ export default function VideoHeroCarousel({
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
   const [isAutoplay, setIsAutoplay] = useState(true);
+  const [videoErrors, setVideoErrors] = useState<Set<number>>(new Set());
   const videoRefs = useRef<(HTMLVideoElement | null)[]>(new Array(videos.length).fill(null));
+
+  // Track video load errors
+  const handleVideoError = (index: number) => {
+    setVideoErrors(prev => {
+      const next = new Set(prev);
+      next.add(index);
+      return next;
+    });
+  };
 
   // Auto-advance carousel
   useEffect(() => {
@@ -111,20 +121,25 @@ export default function VideoHeroCarousel({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <video
-              ref={(el) => {
-                videoRefs.current[currentIndex] = el;
-              }}
-              src={videos[currentIndex].src}
-              className="w-full h-full object-cover"
-              loop
-              muted={isMuted}
-              playsInline
-              preload="metadata"
-              onError={(e) => {
-                console.error('Video error:', e);
-              }}
-            />
+            {videoErrors.has(currentIndex) ? (
+              /* Fallback gradient background when video fails to load */
+              <div className="w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center">
+                <div className="absolute inset-0 bg-[url('/images/hero-fallback.jpg')] bg-cover bg-center opacity-60" />
+              </div>
+            ) : (
+              <video
+                ref={(el) => {
+                  videoRefs.current[currentIndex] = el;
+                }}
+                src={videos[currentIndex].src}
+                className="w-full h-full object-cover"
+                loop
+                muted={isMuted}
+                playsInline
+                preload="metadata"
+                onError={() => handleVideoError(currentIndex)}
+              />
+            )}
 
             {/* Dark Overlay for Better Text Readability */}
             <div className="absolute inset-0 bg-black bg-opacity-30" />

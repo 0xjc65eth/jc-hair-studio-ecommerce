@@ -36,7 +36,7 @@ const locales = [
 ];
 
 // Country to language mapping
-const countryToLocale = {
+const countryToLocale: Record<string, string> = {
   'PT': 'pt-PT',
   'ES': 'es-ES',
   'FR': 'fr-FR',
@@ -104,7 +104,7 @@ const getCurrency = (locale: string, country?: string) => {
 
   if (country && eurozoneCountries.includes(country)) return 'EUR';
 
-  const currencyMap = {
+  const currencyMap: Record<string, string> = {
     'en-GB': 'GBP',
     'en-IE': 'EUR',
     'de-CH': 'CHF',
@@ -123,8 +123,64 @@ const getCurrency = (locale: string, country?: string) => {
 };
 
 export function middleware(request: NextRequest) {
-  // Temporarily disabled to restore original functionality
-  return NextResponse.next();
+  const pathname = request.nextUrl.pathname;
+
+  // Skip middleware for static assets, API routes, and special paths
+  if (
+    pathname.startsWith('/api') ||
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/favicon') ||
+    pathname.includes('.') // Static files
+  ) {
+    return NextResponse.next();
+  }
+
+  // Check if pathname already has a locale prefix
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  if (pathnameHasLocale) {
+    // Extract locale from path and set currency header
+    const pathLocale = locales.find(
+      (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    );
+    const country = request.headers.get('CF-IPCountry') ||
+                   request.headers.get('X-Vercel-IP-Country') || undefined;
+    const currency = getCurrency(pathLocale || defaultLocale, country);
+
+    const response = NextResponse.next();
+    response.headers.set('x-locale', pathLocale || defaultLocale);
+    response.headers.set('x-currency', currency);
+    response.headers.set('x-country', country || '');
+    return response;
+  }
+
+  // Detect locale for the user
+  const locale = getLocale(request);
+  const country = request.headers.get('CF-IPCountry') ||
+                 request.headers.get('X-Vercel-IP-Country') || undefined;
+  const currency = getCurrency(locale, country);
+
+  // For the default locale (pt-PT), don't redirect - serve at root
+  // This keeps the main site at / without locale prefix for Portuguese users
+  if (locale === 'pt-PT' || locale === defaultLocale) {
+    const response = NextResponse.next();
+    response.headers.set('x-locale', locale);
+    response.headers.set('x-currency', currency);
+    response.headers.set('x-country', country || '');
+    return response;
+  }
+
+  // Redirect non-default locale users to locale-prefixed URL
+  const url = request.nextUrl.clone();
+  url.pathname = `/${locale}${pathname}`;
+
+  const response = NextResponse.redirect(url);
+  response.headers.set('x-locale', locale);
+  response.headers.set('x-currency', currency);
+  response.headers.set('x-country', country || '');
+  return response;
 }
 
 export const config = {
