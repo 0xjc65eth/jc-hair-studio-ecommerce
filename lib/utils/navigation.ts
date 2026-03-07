@@ -260,7 +260,8 @@ export function shouldUseHistoryBack(
  * @returns Locale extraído ou undefined
  */
 export function getLocaleFromPath(pathname: string): string | undefined {
-  const localeRegex = /^\/(pt|en|es|fr)\//
+  // Match both short locale codes (pt, en, es, fr) and full codes (pt-PT, fr-BE, en-GB, etc.)
+  const localeRegex = /^\/([a-z]{2}(?:-[A-Z]{2})?)\//
   const match = pathname.match(localeRegex)
   return match ? match[1] : undefined
 }
